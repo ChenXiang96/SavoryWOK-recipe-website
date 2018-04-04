@@ -1,13 +1,13 @@
 /* ============================================================
   HOME NAVIGATION
-============================================================ */
-/*xdasdasda*/
+============================================================
 nav.cmn-tile-nav {
   display: none;
 }
 nav.cmn-tile-nav.open {
   display: block;
 }
+
 nav.cmn-tile-nav ul {
   list-style: none;
 }
