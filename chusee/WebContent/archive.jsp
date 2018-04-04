@@ -73,12 +73,12 @@
     <a href="#" class="nav-toggle">Toggle Navigation</a>
     <nav class="cmn-tile-nav">
 		<ul class="clearfix">
-			<li class="colour-1"><a href="index.html">主页</a></li>
+			<li class="colour-1"><a href="index.jsp">主页</a></li>
 			<li class="colour-2"><a href="menu.html">菜谱</a></li>
 			<li class="colour-3"><a href="location.html">食材</a></li>
-			<li class="colour-4"><a href="archive.html">珍选</a></li>
+			<li class="colour-4"><a href="archive.jsp">珍选</a></li>
 			<li class="colour-5"><a href="reservation.html">专题</a></li>
-			<li class="colour-6"><a href="staff.html">社区</a></li>
+			<li class="colour-6"><a href="staff.jsp">社区</a></li>
 			<li class="colour-7"><a href="news.html">话题</a></li>
 			<li class="colour-8"><a href="gallery.html">菜谱</a></li>
 		</ul>
