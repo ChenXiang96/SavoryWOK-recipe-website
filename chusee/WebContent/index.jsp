@@ -65,6 +65,7 @@
 }
 
 </style>
+
 </head>
 <body>
 
@@ -82,7 +83,8 @@
    <div class="container">
 
 	   <div class="bp-hs" id="demo-default">
-		 <div class="bp-hs_inner">
+		 <div class="bp-hs_inner" >
+		   
 			<div class="bp-hs_inner__item" data-transform="scale">
 				<img src="images/SMZ.jpg" alt="Boompx Hero Slider 01"/>
 			</div>
