@@ -114,7 +114,7 @@
 		<section class="content-box box-1">
 			<div class="zerogrid">
 				<div class="row box-item"><!--Start Box-->
-					<h2>“we have the best food around”</h2>
+					<h2>“开启属于我的美食之旅”</h2>
 				</div>
 			</div>
 		</section>
@@ -127,70 +127,197 @@
 						<hr class="line">
 						<span>这是为您推荐的菜单</span>
 					</div>
+					
 					<div class="row">
 						<div class="col-1-3">
 							<div class="wrap-col">
 								<div class="box-item">
-									<span class="ribbon">Menu Card<b></b></span>
+									<span class="ribbon">健康·食疗<b></b></span>
 									<img src="images/menu.jpg" alt="">
-									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
-									<a href="#" class="button button-1">Detail</a>
+									<p>
+									   <li><a href="#" style="color:red">牙齿不好就别吃这5种食物！</a></li>
+									   <li><a href="#">清理血管，让血管年轻起来！</a></li>
+									   <li><a href="#">脸上还有痘痘？6种方法帮你摆脱</a></li>
+									   <li><a href="#">专题：那些美颜食物的神级吃法</a></li>
+									   <li><a href="#">专题：低卡减肥餐，让你瘦到飞起来</a></li>
+                                       <li><a href="#">提高脑力，这些食物少不了！</a></li>
+                                    </p>
+									<a href="#" class="button button-1">更多</a>
 								</div>
 							</div>
 						</div>
 						<div class="col-1-3">
 							<div class="wrap-col">
 								<div class="box-item">
-									<span class="ribbon">Fast Food<b></b></span>
+									<span class="ribbon">烘焙·食谱<b></b></span>
 									<img src="images/fast-food.jpg" alt="">
-									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
-									<a href="#" class="button button-1">Detail</a>
+									<p>
+									   <li><a href="#" style="color:red">象征丰收和满载的水果</a></li>
+									   <li><a href="#">自制美味的花生牛轧糖</a></li>
+									   <li><a href="#">内藏惊喜的彩虹戚风蛋糕</a></li>
+									   <li><a href="#">消耗蛋挞皮 - 简单版红薯酥</a></li>
+									   <li><a href="#">菜单：奥利奥的N种百搭吃法</a></li>
+                                       <li><a href="#">专题：另类咸香口儿，满足你的味蕾</a></li>
+                                    </p>
+									<a href="#" class="button button-1">更多</a>
 								</div>
 							</div>
 						</div>
 						<div class="col-1-3">
 							<div class="wrap-col">
 								<div class="box-item">
-									<span class="ribbon">Reservation<b></b></span>
+									<span class="ribbon">为您推荐<b></b></span>
 									<img src="images/reservation.jpg" alt="">
-									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
-									<a href="#" class="button button-1">Detail</a>
+									<p>
+									   <li><a href="#" style="color:red">春天易上火，5款食疗降春火</a></li>
+									   <li><a href="#">划重点！食物降血脂这些更有效</a></li>
+									   <li><a href="#">粗粮细作：健康能量燕麦甜品</a></li>
+									   <li><a href="#">妈妈派：童趣童味，儿童创意餐点</a></li>
+									   <li><a href="#">ACA多功能辅食料理机</a></li>
+                                       <li><a href="#">免费抽奖，孩儿智能烤箱</a></li>
+                                    </p>
+									<a href="#" class="button button-1">更多</a>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-1-3">
-							<div class="wrap-col">
-								<div class="box-item">
-									<span class="ribbon">Chef<b></b></span>
-									<img src="images/chef.jpg" alt="">
-									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
-									<a href="#" class="button button-1">Detail</a>
-								</div>
-							</div>
+					
+					<div class="w5">
+
+               <div id="main-content">
+			<div class="wrap-content">
+	<div class="row">
+					<div class="col-1-4">
+						<div class="zoom-container">
+							<a href="#">
+								<span class="zoom-caption">
+									<span>
+									酱牛肉
+									</span>
+								</span>
+								<img src="images/8.jpg" />
+							</a>
 						</div>
-						<div class="col-1-3">
-							<div class="wrap-col">
-								<div class="box-item">
-									<span class="ribbon">Preview<b></b></span>
-									<img src="images/preview.jpg" alt="">
-									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
-									<a href="#" class="button button-1">Detail</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-1-3">
-							<div class="wrap-col">
-								<div class="box-item">
-									<span class="ribbon">Text Heading<b></b></span>
-									<img src="images/reservation.jpg" alt="">
-									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
-									<a href="#" class="button button-1">Detail</a>
-								</div>
-							</div>
+						
+					</div>
+					<div class="col-1-4">
+						<div class="zoom-container">
+							<a href="#">
+								<span class="zoom-caption">
+									<span>娃娃菜烩丸子</span>
+								</span>
+								<img src="images/9.jpg" />
+							</a>
 						</div>
 					</div>
+					<div class="col-1-4">
+						<div class="zoom-container">
+							<a href="#">
+								<span class="zoom-caption">
+									<span>麻辣千页豆腐</span>
+								</span>
+								<img src="images/10.jpg" />
+							</a>
+						</div>
+					</div>
+					<div class="col-1-4">
+						<div class="zoom-container">
+							<a href="#">
+								<span class="zoom-caption">
+									<span>凉拌皮蛋豆腐</span>
+								</span>
+								<img src="images/11.jpg" />
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-1-4">
+						<div class="zoom-container">
+							<a href="#">
+								<span class="zoom-caption">
+									<span>黄金炸鸡排</span>
+								</span>
+								<img src="images/8.jpg" />
+							</a>
+						</div>
+					</div>
+					<div class="col-1-4">
+						<div class="zoom-container">
+							<a href="#">
+								<span class="zoom-caption">
+									<span>清蒸鮰鱼</span>
+								</span>
+								<img src="images/9.jpg" />
+							</a>
+						</div>
+					</div>
+					<div class="col-1-4">
+						<div class="zoom-container">
+							<a href="#">
+								<span class="zoom-caption">
+									<span>豆角焖面</span>
+								</span>
+								<img src="images/10.jpg" />
+							</a>
+						</div>
+					</div>
+					<div class="col-1-4">
+						<div class="zoom-container">
+							<a href="#">
+								<span class="zoom-caption">
+									<span>锅包肉</span>
+								</span>
+								<img src="images/11.jpg" />
+							</a>
+						</div>
+					</div>
+				</div>
+               	<div class="row">
+					<div class="col-1-4">
+						<div class="zoom-container">
+							<a href="#">
+								<span class="zoom-caption">
+									<span>蒜泥茄子</span>
+								</span>
+								<img src="images/8.jpg" />
+							</a>
+						</div>
+					</div>
+					<div class="col-1-4">
+						<div class="zoom-container">
+							<a href="#">
+								<span class="zoom-caption">
+									<span>红烧肉</span>
+								</span>
+								<img src="images/9.jpg" />
+							</a>
+						</div>
+					</div>
+					<div class="col-1-4">
+						<div class="zoom-container">
+							<a href="#">
+								<span class="zoom-caption">
+									<span>宫保鸡丁</span>
+								</span>
+								<img src="images/10.jpg" />
+							</a>
+						</div>
+					</div>
+					<div class="col-1-4">
+						<div class="zoom-container">
+							<a href="#">
+								<span class="zoom-caption">
+									<span>二十四桥明月夜</span>
+								</span>
+								<img src="images/11.jpg" />
+							</a>
+						</div>
+					</div>
+				</div>
+				
+				
+					
 				</div>
 			</div>
 		</section>
