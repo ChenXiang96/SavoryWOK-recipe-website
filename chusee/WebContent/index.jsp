@@ -195,7 +195,7 @@
 									酱牛肉
 									</span>
 								</span>
-								<img src="images/8.jpg" />
+								<img src="images/JNR.jpg" />
 							</a>
 						</div>
 						
@@ -204,9 +204,9 @@
 						<div class="zoom-container">
 							<a href="#">
 								<span class="zoom-caption">
-									<span>娃娃菜烩丸子</span>
+									<span>水晶虾饺</span>
 								</span>
-								<img src="images/9.jpg" />
+								<img src="images/XJ.jpg" />
 							</a>
 						</div>
 					</div>
@@ -216,7 +216,7 @@
 								<span class="zoom-caption">
 									<span>麻辣千页豆腐</span>
 								</span>
-								<img src="images/10.jpg" />
+								<img src="images/QY.jpg" />
 							</a>
 						</div>
 					</div>
@@ -226,7 +226,7 @@
 								<span class="zoom-caption">
 									<span>凉拌皮蛋豆腐</span>
 								</span>
-								<img src="images/11.jpg" />
+								<img src="images/PD.jpg" />
 							</a>
 						</div>
 					</div>
@@ -238,7 +238,7 @@
 								<span class="zoom-caption">
 									<span>黄金炸鸡排</span>
 								</span>
-								<img src="images/8.jpg" />
+								<img src="images/JP.jpg" />
 							</a>
 						</div>
 					</div>
@@ -248,7 +248,7 @@
 								<span class="zoom-caption">
 									<span>清蒸鮰鱼</span>
 								</span>
-								<img src="images/9.jpg" />
+								<img src="images/HY.jpg" />
 							</a>
 						</div>
 					</div>
@@ -258,7 +258,7 @@
 								<span class="zoom-caption">
 									<span>豆角焖面</span>
 								</span>
-								<img src="images/10.jpg" />
+								<img src="images/MM.jpg" />
 							</a>
 						</div>
 					</div>
@@ -268,7 +268,7 @@
 								<span class="zoom-caption">
 									<span>锅包肉</span>
 								</span>
-								<img src="images/11.jpg" />
+								<img src="images/GBR.jpg" />
 							</a>
 						</div>
 					</div>
@@ -280,7 +280,7 @@
 								<span class="zoom-caption">
 									<span>蒜泥茄子</span>
 								</span>
-								<img src="images/8.jpg" />
+								<img src="images/QZ.jpg" />
 							</a>
 						</div>
 					</div>
@@ -290,7 +290,7 @@
 								<span class="zoom-caption">
 									<span>红烧肉</span>
 								</span>
-								<img src="images/9.jpg" />
+								<img src="images/HSR.jpg" />
 							</a>
 						</div>
 					</div>
@@ -300,7 +300,7 @@
 								<span class="zoom-caption">
 									<span>宫保鸡丁</span>
 								</span>
-								<img src="images/10.jpg" />
+								<img src="images/GBJD.jpg" />
 							</a>
 						</div>
 					</div>
@@ -308,9 +308,9 @@
 						<div class="zoom-container">
 							<a href="#">
 								<span class="zoom-caption">
-									<span>二十四桥明月夜</span>
+									<span>红焖大虾</span>
 								</span>
-								<img src="images/11.jpg" />
+								<img src="images/DX.jpg" />
 							</a>
 						</div>
 					</div>
