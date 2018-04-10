@@ -52,8 +52,8 @@
 	<div class="wrap-container zerogrid">
 		<div class="crumbs">
 			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="archive.html">Blog</a></li>
+				<li><a href="index.html">主页</a></li>
+				<li><a href="archive.html">甄选</a></li>
 			</ul>
 		</div>
 		<div id="main-content" class="col-2-3">
