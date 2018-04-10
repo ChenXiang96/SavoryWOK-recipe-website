@@ -1,13 +1,12 @@
 /* ============================================================
   HOME NAVIGATION
-============================================================
+============================================================ */
 nav.cmn-tile-nav {
   display: none;
 }
 nav.cmn-tile-nav.open {
   display: block;
 }
-
 nav.cmn-tile-nav ul {
   list-style: none;
 }
@@ -257,57 +256,4 @@ a.nav-toggle:hover {
   a.nav-toggle {
     display: none;
   }
-}
-
-.list-l{
-  width:100%;
-  height:220px;
-}
-.up{
-  width:100%;
-  height:60px;
-}
-.aa{
-  width:50px;
-  height:50px;
-  float:left;
-  border-radius: 50px;
-  margin-left:10px;
-  margin-top:5px;
-  background-image: url(../images/11.jpg);
-}
-.bb{
-  float:left;
-}
-.user{
-  margin-left:15px;
-  margin-top: 10px;
-  font-weight:bolder;
-}
-.time{
-  font-size:9px;
-  color:gray;
-  padding-top:5px;
-  line-height:10px;
-  margin-left:17px;
-}
-.c{
-  width:100%;
-  height:160px;
-}
-.font-f{
-  margin-left:20px;
-  padding-left:40px;
-}
-.tupian{
-  width:100%;
-  height:100px;
-  margin-left:58px;
-}
-.hua{
-  width:120px;
-  height:120px;
-  margin-right:10px;
-  float:left;
-  background-image: url(../images/11.jpg);
 }
