@@ -37,7 +37,31 @@
 		<script src="js/html5.js"></script>
 		<script src="js/css3-mediaqueries.js"></script>
 	<![endif]-->
+    <style>
     
+.c{
+  width:100%;
+  height:160px;
+}
+.font-f{
+  margin-left:20px;
+  padding-left:40px;
+}
+.tupian{
+  width:100%;
+  height:100px;
+  margin-left:58px;
+}
+.hua{
+  width:120px;
+  height:120px;
+  margin-right:10px;
+  float:left;
+  background-image: url(images/12.jpg);
+}
+    
+    
+    </style>
 </head>
 <body>
 <div class="wrap-body">
