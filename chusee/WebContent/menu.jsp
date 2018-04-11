@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <style>
+     .row1{
+       margin-right:100px;
+     }
+
+    </style>
     <!--///////////////////////////////////////Top-->
 	<div class="top">
 		<div class="zerogrid">
@@ -17,11 +23,14 @@
 	<!--////////////////////////////////////Header-->
 	<header>
 		<div class="zerogrid">
-			<center><div class="logo"><img src="images/logo.png"></div></center>
-            
-			<a href="Login.jsp"><span class="ribbon2">登录<b></b></span></a>
+			
+			<center>
+			 
+			<div class="logo"><img src="images/logo.png"></div></center>
+            <a href="Login.jsp"><span class="ribbon2">登录<b></b></span></a>
 			<span></span>
 			<a href="register.html"><span class="ribbon2">注册<b></b></span></a>
+		
 			  <style>
 
   

@@ -63,6 +63,50 @@
     margin-left: 200px;
     margin-right: 200px;
 }
+.ui_title {
+    height: 35px;
+    border-bottom: 1px solid #E8E8E8;
+    position: relative;
+}
+.ui_title_wrap h1.on a, .ui_title_wrap h2.on a, .ui_title_wrap h3.on a {
+    color: #ff6767;
+    
+}
+.ui_title_wrap h1, .ui_title_wrap h2, .ui_title_wrap h3 {
+    float: left;
+    /* font-weight: 400; */
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 20px;
+    color: #666;
+    padding-bottom: 4px;
+    outline: 0;
+    color: #333;
+    max-width: 100%;
+    overflow: hidden;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+a.right{
+margin-left:160px;
+}
+a.right1{
+ margin-left:220px;
+}
+a{
+font-size:18px;
+}
+a.right2{
+  margin-left:30px;
+}
+a.right3{
+ margin-left:60px;
+}
+#main-content .wrap-content {
+
+    width: 1185px;
+}
 
 </style>
 
@@ -132,6 +176,13 @@
 						<div class="col-1-3">
 							<div class="wrap-col">
 								<div class="box-item">
+								<div class="ui_title">
+                                  <div class="ui_title_wrap">
+                                    <h2 class="on"><a href="javascript:void(0);">健康</a></h2>
+                                      <h2><a href="javascript:void(0);">食疗</a></h2>
+                                      <a title="健康首页" href="//www.meishichina.com/Health/" class="right" target="_blank">健康首页</a>
+                                </div>
+                                </div>
 									<span class="ribbon">健康·食疗<b></b></span>
 									<img src="images/menu.jpg" alt="">
 									<p>
@@ -149,6 +200,13 @@
 						<div class="col-1-3">
 							<div class="wrap-col">
 								<div class="box-item">
+								<div class="ui_title">
+                                  <div class="ui_title_wrap">
+                                    <h2 class="on"><a href="javascript:void(0);">烘焙</a></h2>
+                                      <h2><a href="javascript:void(0);">食谱</a></h2>
+                                      <a title="健康首页" href="//www.meishichina.com/Health/" class="right" target="_blank">烘焙专区</a>
+                                </div>
+                                </div>
 									<span class="ribbon">烘焙·食谱<b></b></span>
 									<img src="images/fast-food.jpg" alt="">
 									<p>
@@ -166,6 +224,13 @@
 						<div class="col-1-3">
 							<div class="wrap-col">
 								<div class="box-item">
+								<div class="ui_title">
+                                  <div class="ui_title_wrap">
+                                    <h2 class="on"><a href="javascript:void(0);">健康</a></h2>
+                                      
+                                      <a title="健康首页" href="//www.meishichina.com/Health/" class="right1" target="_blank">我的专区</a>
+                                </div>
+                                </div>
 									<span class="ribbon">为您推荐<b></b></span>
 									<img src="images/reservation.jpg" alt="">
 									<p>
@@ -185,6 +250,19 @@
 					<div class="w5">
 
                <div id="main-content">
+                        <div class="ui_title">
+                           <div class="ui_title_wrap">
+                               <h2 class="on"><a href="javascript:void(0);" class="right2">新秀菜谱</a></h2>
+                                  <h2><a href="javascript:void(0);" class="right2">一周热门</a></h2>
+                                  <h2><a href="javascript:void(0);" class="right2">最受欢迎的家常菜</a></h2>
+                                  <a title="健康首页" href="//www.meishichina.com/Health/" class="right3" target="_blank">热菜</a>
+                                  <a title="健康首页" href="//www.meishichina.com/Health/" class="right3" target="_blank">凉菜</a>
+                                  <a title="健康首页" href="//www.meishichina.com/Health/" class="right3" target="_blank">汤羹</a>
+                                  <a title="健康首页" href="//www.meishichina.com/Health/" class="right3" target="_blank">主食</a>
+                                  <a title="健康首页" href="//www.meishichina.com/Health/" class="right3" target="_blank">小吃</a>
+                                  <a title="健康首页" href="//www.meishichina.com/Health/" class="right3" target="_blank">西餐</a>
+                           </div>
+                        </div>
 			<div class="wrap-content">
 	<div class="row">
 					<div class="col-1-4">
