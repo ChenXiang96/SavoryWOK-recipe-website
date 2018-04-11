@@ -38,7 +38,14 @@
 		<script src="js/html5.js"></script>
 		<script src="js/css3-mediaqueries.js"></script>
 	<![endif]-->
+<style>
+.content-box.box-1 .box-item {
 
+    margin-top: 40px;
+}
+
+
+</style>
 </head>
 <body>
 <div class="wrap-body">
