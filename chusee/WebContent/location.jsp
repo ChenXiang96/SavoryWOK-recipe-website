@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
@@ -37,108 +37,42 @@
 		<script src="js/html5.js"></script>
 		<script src="js/css3-mediaqueries.js"></script>
 	<![endif]-->
-    <style>
     
-.c{
-  width:100%;
-  height:160px;
-}
-.font-f{
-  margin-left:20px;
-  padding-left:40px;
-}
-.tupian{
-  width:100%;
-  height:100px;
-  margin-left:58px;
-}
-.hua{
-  width:120px;
-  height:120px;
-  margin-right:10px;
-  float:left;
-  background-image: url(images/12.jpg);
-}
-    
-    
-    </style>
 </head>
 <body>
-<div class="wrap-body">
-	<%@ include file="menu.jsp" %>
+<%@ include file="menu.jsp" %>
 	
-
+<!--////////////////////////////////////Container-->
 <section id="container" class="sub-page">
 	<div class="wrap-container zerogrid">
 		<div class="crumbs">
 			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="staff.html">Staff</a></li>
+				<li><a href="index.html">主页</a></li>
+				<li><a href="location.html">个人中心</a></li>
 			</ul>
 		</div>
 		<div id="main-content">
 			<div class="wrap-content">
-			   <div class="list">
-			   	 <ul>
-			   	 	<li class="list-l">
-			   	 		<div class="up">
-			   	 			<div class="aa"></div>
-			   	 			<div class="bb">
-							   <div class="user" >清水淡竹</div>
-							   <span class="time">30分钟前</span>
-							</div>
-			   	 		</div>
-
-                        <div class="c">
-							<div class="font-f">#早餐#当阳光洒满你的窗台，春暖了，花就开了……</div>
-							<div class="tupian">
-							     <div class="hua"></div>
-							     <div class="hua"></div>
-							     <div class="hua"></div>
-							</div>
+				<div class="row">
+					<div class="col-1-3">
+						<div class="wrap-col">
+							<h3>Address</h3>
+							<p>1051 Nipomo St San Luis Obispo, CA 93401</p><br/>
+							<h3>Hours Of Operation</h3>
+							<p><span>MONDAY-FRIDAY: </span>8am-6pm</p>
+							<p><span>SATURDAY-SUNDAY: </span>8am-10pm</p><br/>
+							<h3>Contact Info</h3>
+							<p><span>EMAIL ADDRESS: </span>contact@mycuisine.com</p>
+							<p><span>TELEPHONE: </span>343-233-5533</p>
+							<p><span>FAX: </span>432-456-6642</p>
 						</div>
-			   	 	</li>
-			   	 	<li class="list-l">
-			   	 		<div class="up">
-			   	 			<div class="aa"></div>
-			   	 			<div class="bb">
-							   <div class="user" >清水淡竹</div>
-							   <span class="time">30分钟前</span>
-							</div>
-			   	 		</div>
-
-                        <div class="c">
-							<div class="font-f">#早餐#当阳光洒满你的窗台，春暖了，花就开了……</div>
-							<div class="tupian">
-							     <div class="hua"></div>
-							     <div class="hua"></div>
-							     <div class="hua"></div>
-							</div>
+					</div>
+					<div class="col-2-3">
+						<div class="wrap-col">
+							<div class="wrap-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.289259162295!2d-120.7989351!3d37.5246781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8091042b3386acd7%3A0x3b4a4cedc60363dd!2sMain+St%2C+Denair%2C+CA+95316%2C+Hoa+K%E1%BB%B3!5e0!3m2!1svi!2s!4v1434016649434" width="100%" height="380" frameborder="0" style="border:0"></iframe></div>
 						</div>
-			   	 	</li>
-			   	 	<li class="list-l">
-			   	 		<div class="up">
-			   	 			<div class="aa"></div>
-			   	 			<div class="bb">
-							   <div class="user" >清水淡竹</div>
-							   <span class="time">30分钟前</span>
-							</div>
-			   	 		</div>
-
-                        <div class="c">
-							<div class="font-f">#早餐#当阳光洒满你的窗台，春暖了，花就开了……</div>
-							<div class="tupian">
-							     <div class="hua"></div>
-							     <div class="hua"></div>
-							     <div class="hua"></div>
-							</div>
-						</div>
-			   	 	</li>
-			   	 </ul>
-			   </div>
-               
-
-
+					</div>
+				</div>
 			</div>
 		</div> 
 	</div>

@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <style>
+     .row1{
+       margin-right:100px;
+     }
+
+    </style>
     <!--///////////////////////////////////////Top-->
 	<div class="top">
 		<div class="zerogrid">
@@ -17,11 +23,14 @@
 	<!--////////////////////////////////////Header-->
 	<header>
 		<div class="zerogrid">
-			<center><div class="logo"><img src="images/logo.png"></div></center>
-            
-			<a href="Login.jsp"><span class="ribbon2">登录<b></b></span></a>
+			
+			<center>
+			 
+			<div class="logo"><img src="images/logo.png"></div></center>
+            <a href="Login.jsp"><span class="ribbon2">登录<b></b></span></a>
 			<span></span>
 			<a href="register.html"><span class="ribbon2">注册<b></b></span></a>
+		
 			  <style>
 
   
@@ -46,11 +55,11 @@
 
 			<li class="colour-1"><a href="index.jsp">主页</a></li>
              <li class="colour-2"><a href="cai.jsp">菜谱</a></li>
-			<li class="colour-3"><a href="location.html">食材</a></li>
+			<li class="colour-3"><a href="location.jsp">食材</a></li>
 			<li class="colour-4"><a href="archive.jsp">甄选</a></li>
 			<li class="colour-5"><a href="health.jsp">健康</a></li>
 			<li class="colour-6"><a href="reservation.jsp">专题</a></li>
-			<li class="colour-7"><a href="news.jsp">社区</a></li>
+			<li class="colour-7"><a href="staff.jsp">社区</a></li>
 			<li class="colour-8"><a href="gallery.jsp">话题</a></li>
 
 
