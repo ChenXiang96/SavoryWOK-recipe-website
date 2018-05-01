@@ -1,23 +1,25 @@
-package com.chuse.dao;
 
+package com.chuse.dao.impl;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
-import org.hibernate.Query;
+import org.hibernate.query.Query;
 import org.hibernate.hql.internal.ast.HqlASTFactory;
 import org.springframework.stereotype.Repository;
 
+import com.chuse.dao.ProductDao;
 import com.chuse.entity.Product;
+
 
 
 @Repository("productDao")
 @SuppressWarnings("all")
 public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao{
 	
-	final String selecthql = "select p.pid,p.image,p.is_hot,"
-	 + "p.market_price,p.pdate,p.pdesc,p.pname,p.shop_price ";
+	final String selecthql = "select p.pid,p.image,"
+	 + "p.pdate,p.pdesc,p.pname ";
 	
 	public Integer CountPageProductFromCategory(Integer cid) {
 		String hql = "select count(*) from Product p, Category c, CategorySecond cs ";
@@ -58,12 +60,7 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao{
 		List<Product> products = new ArrayList<Product>();
 		Iterator iter = list.iterator();
 		while(iter.hasNext()){
-			Object[] obj = (Object[])iter.next();
-			Product product = new Product();
-			int pid = (Integer)obj[0];
-	
-		
-			products.add(product);
+
 		}
 		return products;
 	}

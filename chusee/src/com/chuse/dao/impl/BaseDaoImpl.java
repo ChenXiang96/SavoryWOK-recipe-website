@@ -1,4 +1,4 @@
-package com.chuse.dao;
+package com.chuse.dao.impl;
 
 
 import java.io.Serializable;
@@ -6,7 +6,7 @@ import java.lang.reflect.ParameterizedType;
 import java.util.List;
 import java.util.Map;
 
-import org.hibernate.Query;
+import org.hibernate.query.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +38,7 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 	
 	private Class<T> getClz() {
 		if(clz==null) {
-			//��ȡ���͵�Class����
+			//获取泛型的Class对象
 			clz = ((Class<T>)
 					(((ParameterizedType)(this.getClass().getGenericSuperclass())).getActualTypeArguments()[0]));
 		}
