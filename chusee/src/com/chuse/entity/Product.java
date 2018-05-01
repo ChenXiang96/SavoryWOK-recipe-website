@@ -2,12 +2,20 @@ package com.chuse.entity;
 
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-
+/**
+ * 
+ * Product代表健康显示菜品先
+ * @author lenovo
+ *
+ */
 
 public class Product {
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Id
    private Integer pid;
    private String pname;
    private Date pdate;
