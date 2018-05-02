@@ -25,7 +25,7 @@ public class ProductController {
 	@RequestMapping(value="findByPid/{pid}",method=RequestMethod.GET)
 	public String findByPid(@PathVariable("pid") Integer pid,Map<String,Product> map){
 		map.put("product", productService.findByPid(pid));
-		return "product";
+		return "health";
 	}
 }
 

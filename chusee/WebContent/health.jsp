@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
    <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
@@ -124,9 +125,10 @@
 		<section class="content-box box-2">
 			<div class="zerogrid">
 				<div class="row wrap-box"><!--Start Box-->
+		
 					<div class="header">
 						<h2>欢迎</h2>
-						<hr class="line">
+			      
 						<span>这是为您推荐的健康营养菜单</span>
 					</div>
 					<div class="row">
@@ -134,12 +136,13 @@
 							<div class="wrap-col">
 								<div class="box-item">
 								<div><a href="#" style="font-size:24px">爱美人士的抗衰老美食</a></div>
-									<span class="ribbon">美容养颜<b></b></span>
+									<span class="ribbon"><b></b></span>
 									<img src="images/h2.jpg" alt="">
 									<p>每一个爱美的人都想拥有不老容颜，但岁月总是那么无情。我们抵挡不住岁月，但我们可以延缓它的脚步。有许多食物可以帮助爱美人士。</p>
 									<a href="./menu.jsp" class="button button-1">详情</a>
 								</div>
 							</div>
+							
 						</div>
 						<div class="col-1-3">
 							<div class="wrap-col">
@@ -197,8 +200,10 @@
 									<a href="#" class="button button-1">详情</a>
 								</div>
 							</div>
-						</div>
+						
 					</div>
+					
+				
 				</div>
 			</div>
 		</section>

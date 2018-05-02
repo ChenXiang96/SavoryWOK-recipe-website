@@ -25,6 +25,9 @@ public class ProductServiceImpl implements ProductService{
 	}
 
 
+	public List<Product> findHot() {
+		return productDao.findHot();
+	}
 
 
 }
