@@ -11,7 +11,7 @@ public interface ProductService {
 
 	//根据菜品的pid查询菜品
 	public Product findByPid(Integer pid);
-	//查找最热的商品10条
+	//查找最热的商品6条
 	public List<Product> findHot();
 
 }

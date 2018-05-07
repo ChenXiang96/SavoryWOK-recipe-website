@@ -47,6 +47,7 @@
 
 
 </style>
+
 </head>
 <body>
 <div class="wrap-body">
@@ -131,78 +132,27 @@
 			      
 						<span>这是为您推荐的健康营养菜单</span>
 					</div>
-					<div class="row">
-						<div class="col-1-3">
-							<div class="wrap-col">
-								<div class="box-item">
-								<div><a href="#" style="font-size:24px">爱美人士的抗衰老美食</a></div>
-									<span class="ribbon"><b></b></span>
-									<img src="images/h2.jpg" alt="">
-									<p>每一个爱美的人都想拥有不老容颜，但岁月总是那么无情。我们抵挡不住岁月，但我们可以延缓它的脚步。有许多食物可以帮助爱美人士。</p>
-									<a href="./menu.jsp" class="button button-1">详情</a>
-								</div>
-							</div>
-							
-						</div>
-						<div class="col-1-3">
-							<div class="wrap-col">
-								<div class="box-item">
-								<div><a href="#" style="font-size:24px">大豆的八大功效，还能美白护肤</a></div>
-									<span class="ribbon">大豆的功效<b></b></span>
-									<img src="images/h3.jpg" alt="">
-									<p>大豆，又称黄豆，是很常见的食物，而且以大豆为原料还制作出了很多美味的食物，豆浆，豆腐、豆花都是大豆加工制作而成的。</p>
-									<a href="#" class="button button-1">详情</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-1-3">
-							<div class="wrap-col">
-								<div class="box-item">
-								<div><a href="#" style="font-size:24px">你的晚餐，决定了体重与寿命！</a></div>
-									<span class="ribbon">晚餐的重要性<b></b></span>
-									<img src="images/h4.jpg" alt="">
-									<p>很多人喜欢丰盛的晚餐，弄上一大桌子菜，再加上各种酒水，吃上两三个小时，肚子溜圆。可实际上吃晚饭大有讲究，它决定了你的体重！</p>
-									<a href="#" class="button button-1">详情</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-1-3">
-							<div class="wrap-col">
-								<div class="box-item">
-									<div><a href="#" style="font-size:24px">春天宜养肝，九种食物来帮忙！</a></div>
-									<span class="ribbon">肝脏的排毒<b></b></span>
-									<img src="images/h6.jpg" alt="">
-									<p>春天宜养肝，肝脏的主要作用是排毒，能够有效保障人体内的毒素及时排出，如果肝脏出现问题，导致毒素积累，对健康的危害是很大的。</p>
-									<a href="#" class="button button-1">详情</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-1-3">
-							<div class="wrap-col">
-								<div class="box-item">
-								<div><a href="#" style="font-size:24px">保护眼睛的十二种食物！</a></div>
-									<span class="ribbon">护眼美食<b></b></span>
-									<img src="images/h8.jpg" alt="">
-									<p>现在手机电脑越来越流行，就连小学生几乎人手一部手机。用眼的时间过长，眼睛就会感到干涩疼痛，长期下去很可能就会近视。</p>
-									<a href="#" class="button button-1">详情</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-1-3">
-							<div class="wrap-col">
-								<div class="box-item">
-								<div><a href="#" style="font-size:24px">小米到底都没有养胃的功效？</a></div>
-									<span class="ribbon">小米养胃吗？<b></b></span>
-									<img src="images/h10.jpg" alt="">
-									<p>都说小米能养胃，但是有些朋友表示自己喝了小米粥以后胃部反而感觉不舒服了，这到底是怎么一回事呢？</p>
-									<a href="#" class="button button-1">详情</a>
-								</div>
-							</div>
-						
-					</div>
 					
+					
+					<div class="row">
+			    	
+			    
+				    <c:forEach var="p" items="${hList}"> 		
+			    	<div class="col-1-3">
+							<div class="wrap-col">
+								<div class="box-item">
+								<div><a href="#" style="font-size:24px"><c:out value="${p.pdesc}"/></a></div>
+									<span class="ribbon"><c:out value="${p.pname }"/><b></b></span>
+									 <img src="${pageContext.request.contextPath}/<c:out value="${p.image}"/>"style="display: block;" />
+									<p><c:out value="${p.pcontent}"/></p>
+									<a href="#" class="button button-1">详情</a>
+								</div>
+							</div>
+				    </div>
+				    </c:forEach>
+			    	
+					</div>
+				
 				
 				</div>
 			</div>

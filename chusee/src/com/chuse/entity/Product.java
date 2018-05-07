@@ -24,9 +24,24 @@ public class Product {
    private String image;
    private String pdesc;
    private Date pdate;
+   public String getPcontent() {
+	return pcontent;
+}
+public void setPcontent(String pcontent) {
+	this.pcontent = pcontent;
+}
+private String pcontent;
+   private Integer is_hot;
    
    
    
+   
+public Integer getIs_hot() {
+	return is_hot;
+}
+public void setIs_hot(Integer is_hot) {
+	this.is_hot = is_hot;
+}
 public Integer getPid() {
 	return pid;
 }

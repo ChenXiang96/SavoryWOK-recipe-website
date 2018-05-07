@@ -53,11 +53,11 @@
     <nav class="cmn-tile-nav">
 		<ul class="clearfix">
 
-			<li class="colour-1"><a href="index.jsp">主页</a></li>
+			<li class="colour-1"><a  href="${ pageContext.request.contextPath 	}/index">主页</a></li>
              <li class="colour-2"><a href="cai.jsp">菜谱</a></li>
 			<li class="colour-3"><a href="location.jsp">食材</a></li>
 			<li class="colour-4"><a href="archive.jsp">甄选</a></li>
-			<li class="colour-5"><a href="health.jsp">健康</a></li>
+			<li class="colour-5"><a href="${ pageContext.request.contextPath 	}/myHealth">健康</a></li>
 			<li class="colour-6"><a href="reservation.jsp">专题</a></li>
 			<li class="colour-7"><a href="staff.jsp">社区</a></li>
 			<li class="colour-8"><a href="gallery.jsp">话题</a></li>
