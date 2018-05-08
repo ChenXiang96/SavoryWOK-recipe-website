@@ -68,7 +68,7 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao{
 	public List<Product> findHot() {
 		String hql = "from Product p where p.is_hot = 1 ";
 		hql += "order by p.pdate desc";
-		int rows = 6;
+		int rows = 9;
 		return find(hql,1,rows);
 	}
 

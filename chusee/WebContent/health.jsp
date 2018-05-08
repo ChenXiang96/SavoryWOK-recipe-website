@@ -47,6 +47,25 @@
 
 
 </style>
+<style>
+.zerogrid .col-1-3, .zerogrid .col-1-3-fixed {
+    /* width: 33.33%; */
+    width: 33%;
+    float: right;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* margin-left: 10px; */
+    /* margin: 0 auto; */
+}
+.zerogrid .row {
+    margin-right: 30px;
+}
+.content-box .header {
+
+    margin-bottom: 35px;
+}
+
+</style>
 
 </head>
 <body>
@@ -150,12 +169,16 @@
 							</div>
 				    </div>
 				    </c:forEach>
+				   
 			    	
 					</div>
+					
 				
 				
 				</div>
+			
 			</div>
+		
 		</section>
 	</div>
 </section>
