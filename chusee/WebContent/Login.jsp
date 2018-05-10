@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
+<c:set var="ctx" value="${pageContext.request.contextPath}" />
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -19,12 +22,12 @@
 		<p></p>
 	</div>
 	
-	<form action="" method="post" id="loginForm">
+	<form action="${ctx }/user/login" method="post" id="loginForm">
 		<div>
-			<input type="text" name="username" class="username" placeholder="用户名" autocomplete="off"/>
+			<input type="text" name="username" class="username" id = "username"placeholder="用户名" autocomplete="off"/>
 		</div>
 		<div>
-			<input type="password" name="password" class="password" placeholder="密码" oncontextmenu="return false" onpaste="return false" />
+			<input type="password" name="password" class="password" id="password" placeholder="密码" oncontextmenu="return false" onpaste="return false" />
 		</div>
 		<button id="submit" type="submit">登 录</button>
 	</form>
