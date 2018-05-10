@@ -86,7 +86,7 @@
 		<div class="crumbs">
 			<ul>
 				<li><a href="index.jsp">主页</a></li>
-				<li><a href="reservation.html">专题</a></li>
+				<li><a href="reservation.jsp">专题</a></li>
 			</ul>
 		</div>
 		<div id="main-content">

@@ -47,8 +47,8 @@
 	<div class="wrap-container zerogrid">
 		<div class="crumbs">
 			<ul>
-				<li><a href="index.html">主页</a></li>
-				<li><a href="location.html">个人中心</a></li>
+				<li><a href="index.jsp">主页</a></li>
+				<li><a href="location.jsp">个人中心</a></li>
 			</ul>
 		</div>
 		<div id="main-content">

@@ -72,8 +72,8 @@
 	<div class="wrap-container zerogrid">
 		<div class="crumbs">
 			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="staff.html">Staff</a></li>
+				<li><a href="index.jsp">Home</a></li>
+				<li><a href="staff.jsp">Staff</a></li>
 			</ul>
 		</div>
 		<div id="main-content">

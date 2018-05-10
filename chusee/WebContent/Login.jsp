@@ -29,7 +29,7 @@
 		<button id="submit" type="submit">登 录</button>
 	</form>
 
-	<a href="register.html">
+	<a href="register.jsp">
 		<button type="button" class="register-tis">还有没有账号？</button>
 	</a>
 
