@@ -9,6 +9,13 @@
         setInterval(function () {
             stime++;
         }, 1000);
+        
+        
+        <!--这是信息页面 -->
+        
+        
+        
+        
     </script></head><body version="v1.0"><input type="hidden" id="isSendAjaxUser" value="1"><div class="qt-tips" style="display:none;"><div class="w1200">您的<span class="vips_types">原创</span>VIP将在<span><span class="vips_days">7</span>天</span>后过期，每日下载数量及下载速度将受到限制。<a target="_blank"
                 class="vips_jump_urls user_click_bth" data-ids="1">立即续费</a><i class="close-btn fr user_click_bth" data-ids="2"></i></div></div><div class="qt-header"><div class="qt-header-container clearfix qt-header-fixed"><div class="header-nav"><div class="search-fixed"><div class="search-main clearfix"><div class="btn-classify"><i class="icon icon-p-fenlei"></i>分类
                         </div><div class="fl search-input"><div><input type="text" class="fl" placeholder="9,600,200免费设计素材任意下载" value="" data-isShow="1" data-where="1" ></div></div><div class="qt-btn btn-green-linear btn-search fr"><i class="icon icon-p-search"></i></div><div class="search-result"></div><div class="search-classify"></div></div></div><div class="nav-wrap hover-box nav-fixed"><a href="javascript:;" class="arrow">
