@@ -264,51 +264,6 @@ a.right3{
                            </div>
                         </div>
 			<div class="wrap-content">
-	<div class="row">
-					<div class="col-1-4">
-						<div class="zoom-container">
-							<a href="#">
-								<span class="zoom-caption">
-									<span>
-									酱牛肉
-									</span>
-								</span>
-								<img src="images/JNR.jpg" />
-							</a>
-						</div>
-						
-					</div>
-					<div class="col-1-4">
-						<div class="zoom-container">
-							<a href="#">
-								<span class="zoom-caption">
-									<span>水晶虾饺</span>
-								</span>
-								<img src="images/XJ.jpg" />
-							</a>
-						</div>
-					</div>
-					<div class="col-1-4">
-						<div class="zoom-container">
-							<a href="#">
-								<span class="zoom-caption">
-									<span>麻辣千页豆腐</span>
-								</span>
-								<img src="images/QY.jpg" />
-							</a>
-						</div>
-					</div>
-					<div class="col-1-4">
-						<div class="zoom-container">
-							<a href="#">
-								<span class="zoom-caption">
-									<span>凉拌皮蛋豆腐</span>
-								</span>
-								<img src="images/PD.jpg" />
-							</a>
-						</div>
-					</div>
-				</div>
 				<div class="row">
 					<div class="col-1-4">
 						<div class="zoom-container">
@@ -320,80 +275,9 @@ a.right3{
 							</a>
 						</div>
 					</div>
-					<div class="col-1-4">
-						<div class="zoom-container">
-							<a href="#">
-								<span class="zoom-caption">
-									<span>清蒸鮰鱼</span>
-								</span>
-								<img src="images/HY.jpg" />
-							</a>
-						</div>
-					</div>
-					<div class="col-1-4">
-						<div class="zoom-container">
-							<a href="#">
-								<span class="zoom-caption">
-									<span>豆角焖面</span>
-								</span>
-								<img src="images/MM.jpg" />
-							</a>
-						</div>
-					</div>
-					<div class="col-1-4">
-						<div class="zoom-container">
-							<a href="#">
-								<span class="zoom-caption">
-									<span>锅包肉</span>
-								</span>
-								<img src="images/GBR.jpg" />
-							</a>
-						</div>
-					</div>
 				</div>
-               	<div class="row">
-					<div class="col-1-4">
-						<div class="zoom-container">
-							<a href="#">
-								<span class="zoom-caption">
-									<span>蒜泥茄子</span>
-								</span>
-								<img src="images/QZ.jpg" />
-							</a>
-						</div>
-					</div>
-					<div class="col-1-4">
-						<div class="zoom-container">
-							<a href="#">
-								<span class="zoom-caption">
-									<span>红烧肉</span>
-								</span>
-								<img src="images/HSR.jpg" />
-							</a>
-						</div>
-					</div>
-					<div class="col-1-4">
-						<div class="zoom-container">
-							<a href="#">
-								<span class="zoom-caption">
-									<span>宫保鸡丁</span>
-								</span>
-								<img src="images/GBJD.jpg" />
-							</a>
-						</div>
-					</div>
-					<div class="col-1-4">
-						<div class="zoom-container">
-							<a href="#">
-								<span class="zoom-caption">
-									<span>红焖大虾</span>
-								</span>
-								<img src="images/DX.jpg" />
-							</a>
-						</div>
-					</div>
-				</div>
-				
+			</div>
+               	
 				
 					
 				</div>
