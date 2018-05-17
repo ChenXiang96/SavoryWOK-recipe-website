@@ -14,6 +14,7 @@ import javax.persistence.Table;
  * @author lenovo
  *
  */
+//这是一行注释
 @Table(name="product")
 @Entity
 public class Product {
