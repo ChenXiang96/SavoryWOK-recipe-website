@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50615
 File Encoding         : 65001
 
-Date: 2018-05-16 15:35:56
+Date: 2018-05-20 09:35:11
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -152,7 +152,6 @@ DROP TABLE IF EXISTS `cs_user`;
 CREATE TABLE `cs_user` (
   `uid` int(11) NOT NULL AUTO_INCREMENT,
   `u_name` char(50) DEFAULT NULL,
-  `u_qq` varchar(15) DEFAULT NULL,
   `u_email` varchar(50) DEFAULT NULL,
   `u_phone` varchar(15) DEFAULT NULL,
   `u_passwd` varchar(50) NOT NULL,
@@ -160,9 +159,13 @@ CREATE TABLE `cs_user` (
   `u_head` int(11) DEFAULT NULL,
   `u_admin` tinyint(1) DEFAULT NULL,
   `u_sex` int(11) DEFAULT NULL,
-  `u_collect` int(11) DEFAULT NULL,
+  `u_collect` int(11) NOT NULL,
   `u_level` int(11) DEFAULT NULL,
   `u_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `name` varchar(255) DEFAULT NULL,
+  `u_addr` varchar(255) DEFAULT NULL,
+  `u_state` int(11) DEFAULT NULL,
+  `u_code` varchar(64) DEFAULT NULL,
   PRIMARY KEY (`uid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
