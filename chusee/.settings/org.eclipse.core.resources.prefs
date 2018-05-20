@@ -2,4 +2,5 @@ eclipse.preferences.version=1
 encoding//WebContent/adm/detail/updateUser.jsp=UTF-8
 encoding//WebContent/health.jsp=UTF-8
 encoding//WebContent/location.jsp=UTF-8
+encoding//src/com/chuse/controller/UserController.java=UTF-8
 encoding//src/com/chuse/dao/ProductDao.java=UTF-8

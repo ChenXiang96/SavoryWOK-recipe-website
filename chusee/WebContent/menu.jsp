@@ -29,7 +29,7 @@
 			<div class="logo"><img src="images/logo.png"></div></center>
             <a href="Login.jsp"><span class="ribbon2">登录<b></b></span></a>
 			<span></span>
-			<a href="register.jsp"><span class="ribbon2">注册<b></b></span></a>
+			<a href="${ pageContext.request.contextPath }/userRegister"><span class="ribbon2">注册<b></b></span></a>
 		
 			  <style>
 
