@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50615
 File Encoding         : 65001
 
-Date: 2018-05-20 22:20:57
+Date: 2018-05-21 18:46:44
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -146,28 +146,6 @@ CREATE TABLE `cs_topic` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `cs_user`
--- ----------------------------
-DROP TABLE IF EXISTS `cs_user`;
-CREATE TABLE `cs_user` (
-  `uid` int(11) NOT NULL AUTO_INCREMENT,
-  `u_name` char(50) DEFAULT NULL,
-  `name` char(50) DEFAULT NULL,
-  `u_email` varchar(50) DEFAULT NULL,
-  `u_phone` varchar(15) DEFAULT NULL,
-  `u_addr` varchar(255) DEFAULT NULL,
-  `u_state` int(11) DEFAULT NULL,
-  `u_code` varchar(64) DEFAULT NULL,
-  `u_password` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`uid`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of cs_user
--- ----------------------------
-INSERT INTO `cs_user` VALUES ('1', '222', '222', '222', '222', '222', '1', '1', '222');
-
--- ----------------------------
 -- Table structure for `howdo`
 -- ----------------------------
 DROP TABLE IF EXISTS `howdo`;
@@ -269,3 +247,29 @@ CREATE TABLE `relationship_7` (
 -- ----------------------------
 -- Records of relationship_7
 -- ----------------------------
+
+-- ----------------------------
+-- Table structure for `user`
+-- ----------------------------
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `phone` varchar(255) DEFAULT NULL,
+  `addr` varchar(255) DEFAULT NULL,
+  `state` int(11) DEFAULT NULL,
+  `code` varchar(64) DEFAULT NULL,
+  PRIMARY KEY (`uid`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of user
+-- ----------------------------
+INSERT INTO `user` VALUES ('1', 'root', 'root', 'root', 'root@qq.com', '15566778899', '', '1', '34324232321');
+INSERT INTO `user` VALUES ('2', 'zwb', 'zwb', 'zwb', 'zwb@live.com', '13344556677', '', '1', '34324232322');
+INSERT INTO `user` VALUES ('3', 'admin', '2222', '22', '2222@qq.com', '22', '22', '1', '97e7af4e56344b5d8468fd5fe44fb3fb678cada1548e4bdc9ed9c87b1177293e');
+INSERT INTO `user` VALUES ('4', '333', '222', '123', 'aaa@shop.com', '123', '123', '1', '54f73efff1bc493a926d345e4a754683abbf8077f2d44ce681a3cce4c9530799');
+INSERT INTO `user` VALUES ('5', '444', '444', '123', 'aaa@shop.com', '123', '123', '1', 'cbea59042b03471b9817aa8bb52b7f674fd9be13481348859ef7fcce61e97784');
