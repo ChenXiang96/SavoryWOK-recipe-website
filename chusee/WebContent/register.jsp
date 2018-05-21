@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -18,16 +19,15 @@
 			function(data) {
 				if (data == 1) {
 					document.getElementById("span1").innerHTML = 
-						"<font color='red'>用户名已经存在!</font>";
+						//"<font color='red'>用户名已经存在!</font>";
+						"<label>用户名已经存在！</label>";
 					$("#username").val("");
 					$("#username").focus();
 					$(".submit").unbind("click",
 							function(event){
 						
 					});
-				} else {
-					document.getElementById("span1").innerHTML = "<font color='green'>用户名可以使用</font>";
-				}
+				} 
 		});
 	}
 </script>
@@ -47,7 +47,10 @@
 	  method="post" id="registerForm">
 		<div>
 			<input path="username" id="username" type="text" name="username" class="username" onblur="checkUsername()" placeholder="您的用户名" autocomplete="off"/>
-			<span id="span1" style="padding-left: 10px;"></span>
+			<!--  <span id="span1" style="padding-left: 10px;"></span> -->
+			
+			<label id="span1" class="error" for="username"></label>
+		   
 		</div>
 		<div>
 			<input type="password" path="password" id="password" name="password" class="password" placeholder="输入密码" oncontextmenu="return false" onpaste="return false" />
