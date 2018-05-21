@@ -50,6 +50,7 @@
 			<!--  <span id="span1" style="padding-left: 10px;"></span> -->
 			
 			<label id="span1" class="error" for="username"></label>
+		  
 		   
 		</div>
 		<div>
@@ -72,6 +73,7 @@
 	</a>
 
 </div>
+
 
 
 <script src="js/jquery.min.js"></script>

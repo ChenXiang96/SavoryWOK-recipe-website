@@ -8,79 +8,116 @@ import javax.persistence.Table;
 
 
 
-@Table(name="cs_user")
+@Table(name="user")
 @Entity
 public class User {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Id
 	private int uid;
-	private String u_name;
-	private String u_password;
+	private String username;
+	private String password;
 	private String name;
-    private String u_email;
-    private String u_phone;
-    private String u_addr;
-    private Integer u_state;
-    private String u_code;
+    private String email;
+    private String phone;
+    private String addr;
+    private Integer state;
+    private String code;
+
+    
 	public int getUid() {
 		return uid;
 	}
+
+
 	public void setUid(int uid) {
 		this.uid = uid;
 	}
-	public String getU_name() {
-		return u_name;
+
+
+	public String getUsername() {
+		return username;
 	}
-	public void setU_name(String u_name) {
-		this.u_name = u_name;
+
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
-	public String getU_password() {
-		return u_password;
+
+
+	public String getPassword() {
+		return password;
 	}
-	public void setU_password(String u_password) {
-		this.u_password = u_password;
+
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
+
+
 	public String getName() {
 		return name;
 	}
+
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getU_email() {
-		return u_email;
+
+
+	public String getEmail() {
+		return email;
 	}
-	public void setU_email(String u_email) {
-		this.u_email = u_email;
+
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
-	public String getU_phone() {
-		return u_phone;
+
+
+	public String getPhone() {
+		return phone;
 	}
-	public void setU_phone(String u_phone) {
-		this.u_phone = u_phone;
+
+
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
-	public String getU_addr() {
-		return u_addr;
+
+
+	public String getAddr() {
+		return addr;
 	}
-	public void setU_addr(String u_addr) {
-		this.u_addr = u_addr;
+
+
+	public void setAddr(String addr) {
+		this.addr = addr;
 	}
-	public Integer getU_state() {
-		return u_state;
+
+
+	public Integer getState() {
+		return state;
 	}
-	public void setU_state(Integer u_state) {
-		this.u_state = u_state;
+
+
+	public void setState(Integer state) {
+		this.state = state;
 	}
-	public String getU_code() {
-		return u_code;
+
+
+	public String getCode() {
+		return code;
 	}
-	public void setU_code(String u_code) {
-		this.u_code = u_code;
+
+
+	public void setCode(String code) {
+		this.code = code;
 	}
-    
+
+
 	@Override
 	public String toString() {
-		return "User [uid=" + uid + ", u_name=" + u_name + ", u_password=" + u_password + ", name=" + name + ", u_email="
-				+ u_email + ", u_phone=" + u_phone + ", u_addr=" + u_addr + ", u_state=" + u_state + ", u_code=" + u_code + "]";
+		return "User [uid=" + uid + ", username=" + username + ", password=" + password + ", name=" + name + ", email="
+				+ email + ", phone=" + phone + ", addr=" + addr + ", state=" + state + ", code=" + code + "]";
 	}	
 	
 //	public void sing(){

@@ -26,7 +26,7 @@ public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao{
 	}
 
 	public User findByUsername(String userName) {
-		String hql = "from User u where u.u_name = ?";
+		String hql = "from User u where u.username = ?";
 		Query query = this.getCurrentSession().createQuery(hql);
 		query.setParameter(0, userName);
 		return (User)query.uniqueResult(); 
@@ -53,5 +53,6 @@ public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao{
 		query.setParameter(0, uid);
 		return (User)query.uniqueResult(); 
 	}
+
 
 }
