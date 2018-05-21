@@ -67,7 +67,7 @@
 
 		<button id="submit" type="submit">注 册</button>
 	</form>
-	<a href="index.html">
+	<a href="${ pageContext.request.contextPath }/userLogin">
 		<button type="button" class="register-tis">已经有账号？</button>
 	</a>
 

@@ -49,5 +49,10 @@ public class UserController{
 	public String register() {
 		return "register";
 	}
+	//跳转到用户登录
+		@RequestMapping(value="/userLogin")
+		public String userLogin(){
+			return "Login";
+		}
 	
 }

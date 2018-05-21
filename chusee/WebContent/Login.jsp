@@ -16,8 +16,8 @@
 <body>
 
 <div class="login-container">
-	<h1></h1>
-	
+
+	<h1>厨色</h1>
 	<div class="connect">
 		<p></p>
 	</div>
@@ -32,7 +32,7 @@
 		<button id="submit" type="submit">登 录</button>
 	</form>
 
-	<a href="register.jsp">
+	<a href="${ pageContext.request.contextPath }/userRegister">
 		<button type="button" class="register-tis">还有没有账号？</button>
 	</a>
 
