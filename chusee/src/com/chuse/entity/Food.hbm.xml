@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chuse.entity">
+ 	<class name="Food" table="FOOD">
+ 	   <id name="cid" column="CID">
+			<generator class="increment"/>
+		</id>
+		<property name="name" type="java.lang.String" not-null="true"
+			column="NAME" length="20" />
+		<property name="image"/>
+		<property name="description"/>
+		 <!-- 映射与Howdo的多对一关联关系 -->
+        <many-to-one name="materialSet" column="" class="MaterialSet"/>
+ 	</class>
+
+</hibernate-mapping>
