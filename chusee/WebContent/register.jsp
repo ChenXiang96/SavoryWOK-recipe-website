@@ -40,10 +40,8 @@
 		<p></p>
 	</div>
 	
-	<form 
-	  commandName="user"  
+	<form  
 	  action="${ pageContext.request.contextPath }/register" 
-	  modelAttribute="user" 
 	  method="post" id="registerForm">
 		<div>
 			<input path="username" id="username" type="text" name="username" class="username" onblur="checkUsername()" placeholder="您的用户名" autocomplete="off"/>
@@ -57,16 +55,41 @@
 			<input type="password" path="password" id="password" name="password" class="password" placeholder="输入密码" oncontextmenu="return false" onpaste="return false" />
 		</div>
 		<div>
-			<input type="password" id="repassword" name="confirm_password" class="confirm_password" placeholder="再次输入密码" oncontextmenu="return false" onpaste="return false" />
+			<input type="password" id="repassword" name="repassword" class="confirm_password" placeholder="再次输入密码" oncontextmenu="return false" onpaste="return false" />
 		</div>
-		<div>
-			<input type="text" name="phone_number" class="phone_number" placeholder="输入手机号码" autocomplete="off" id="number"/>
-		</div>
+		
 		<div>
 			<input type="email" path="email" name="email" class="email" placeholder="输入邮箱地址" oncontextmenu="return false" onpaste="return false" />
 		</div>
-
-		<button id="submit" type="submit">注 册</button>
+		
+		<div>
+			<input path="name"  placeholder="输入姓名" oncontextmenu="return false" onpaste="return false" />
+		</div>
+		
+		<div>
+			<input type="text" path="phone"class="phone_number" placeholder="输入手机号码" autocomplete="off" id="number"/>
+		</div>
+		<div>
+			<input path="addr" placeholder="输入地址" oncontextmenu="return false" onpaste="return false" />
+		</div>
+		<div>
+		   <tr>
+			   <th><span class="requiredField">*</span>验证码:</th>
+						<td><span class="fieldSet"> <input type="text"
+							id="checkcode" name="checkcode" class="text captcha"
+							maxlength="4" /> <img id="checkImg" class="captchaImage"
+							src="${pageContext.request.contextPath}/getCheckCodeImage"
+							onclick="changeImg()" title="点击更换验证码" /></span>
+							<c:if test="${errorCheckCode !=null}">
+									<font color="red">验证码出错</font>
+							</c:if>
+						</td>
+			</tr>
+		</div>
+          
+          
+       
+		<td><input type="submit" class="submit" value="同意以下协议并注册" /></td>
 	</form>
 	<a href="${ pageContext.request.contextPath }/userLogin">
 		<button type="button" class="register-tis">已经有账号？</button>
@@ -85,6 +108,5 @@
 
 <!--表单验证-->
 
-<script src="js/jquery.validate.min.js?var1.14.0"></script>
 </body>
 </html>

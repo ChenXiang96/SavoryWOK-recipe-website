@@ -33,6 +33,58 @@ public class UserController{
 	public User getUser(){
 		return new User();
 	}
+	
+	//跳转到用户登录
+	@RequestMapping(value="/userLogin")
+	public String userLogin(){
+		return "Login";
+	}
+
+	
+	       //用户激活
+			@RequestMapping(value="/active/{code}")
+			public String active(@PathVariable("code") String code,Map<String,Object> map){
+				//根据激活码去查询用户
+				User user = userService.active(code);
+				if(user == null){
+					map.put("notUser", "notUser");
+					return "msg";
+				}
+				user.setCode("");
+				user.setState(1);
+				userService.update(user);
+				map.put("activeSuccess","activeSuccess");
+				return "msg";
+			}
+
+			// 用户注册
+			//这里一个@Valid的参数后必须紧挨着一个BindingResult 参数，否则spring会在校验不通过时直接抛出异常
+			@RequestMapping(value = "register",method=RequestMethod.POST)
+			public String register(@ModelAttribute @Valid User user,BindingResult result,HttpSession session,
+					String checkcode,Map<String,Object> map) {
+				//如果有错误，直接跳转到注册的页面
+				if (result.hasErrors()){
+					//在控制台打印错误的信息s
+		            List<ObjectError> errorList = result.getAllErrors();
+		            for(ObjectError error : errorList){
+		                System.out.println(error.getDefaultMessage());
+		            }
+		            //返回到注册页面
+		            return "register";
+		        }
+				//从session中获取验证码
+				String checkCode = (String) session.getAttribute("checkcode");
+				System.out.println("后台验证码"+checkCode);
+				System.out.println("前台验证码"+checkcode);		
+				//如果验证码不一致，直接返回
+				if(! checkCode.equalsIgnoreCase(checkcode)){
+					map.put("errorCheckCode", "errorCheckCode");
+					return "register"; 
+				}
+				userService.register(user);
+				return "msg";
+			 }
+
 
 	// 使用ajax判断用户是否存在
 		@RequestMapping(value="/checkUser/{userName}",method=RequestMethod.POST)
@@ -54,52 +106,11 @@ public class UserController{
 			}
 			return null;
 		}
-		// 用户注册
-		//这里一个@Valid的参数后必须紧挨着一个BindingResult 参数，否则spring会在校验不通过时直接抛出异常
-		@RequestMapping(value = "register",method=RequestMethod.POST)
-		public String register(@ModelAttribute @Valid User user,BindingResult result,HttpSession session,
-				String checkcode,Map<String,Object> map) {
-			//如果有错误，直接跳转到注册的页面
-			if (result.hasErrors()){
-				//在控制台打印错误的信息s
-	            List<ObjectError> errorList = result.getAllErrors();
-	            for(ObjectError error : errorList){
-	                System.out.println(error.getDefaultMessage());
-	            }
-	            //返回到注册页面
-	            return "register";
-	        }
-			//从session中获取验证码
-			String checkCode = (String) session.getAttribute("checkcode");
-			System.out.println("后台验证码"+checkCode);
-			System.out.println("前台验证码"+checkcode);		
-			//如果验证码不一致，直接返回
-			if(! checkCode.equalsIgnoreCase(checkcode)){
-				map.put("errorCheckCode", "errorCheckCode");
-				return "regist"; 
-			}
-			userService.register(user);
-			return "msg";
-		 }
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 	//用户注册的跳转
 	@RequestMapping("/userRegister")
 	public String register() {
 		return "register";
 	}
-	//跳转到用户登录
-		@RequestMapping(value="/userLogin")
-		public String userLogin(){
-			return "Login";
-		}
-	
+
 }

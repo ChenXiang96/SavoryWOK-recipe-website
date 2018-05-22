@@ -6,17 +6,20 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.validator.constraints.Email;
+
 
 
 @Table(name="user")
 @Entity
 public class User {
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Id
 	private int uid;
 	private String username;
 	private String password;
 	private String name;
+	@Email(message="邮箱格式错误")
     private String email;
     private String phone;
     private String addr;
