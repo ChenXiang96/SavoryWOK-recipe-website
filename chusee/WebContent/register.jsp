@@ -114,20 +114,25 @@
                 
                 </div>
                 
-                 <div>
-               <tr>
+                 <div class="form-group organic-form-2">
+             
+									<!--
 									<th><span class="requiredField">*</span>验证码:</th>
+									  -->
+									<label><font color="red">*</font>验证码</label>
 									<td><span class="fieldSet"> <input type="text"
-											id="checkcode" name="checkcode" class="text captcha"
-											maxlength="4" /> <img id="checkImg" class="captchaImage"
+											id="checkcode" name="checkcode" class="form-control"
+											maxlength="4" />
+											 <img id="checkImg" class="captchaImage"
 											src="${pageContext.request.contextPath}/getCheckCodeImage"
-											onclick="changeImg()" title="点击更换验证码" /></span>
+											onclick="changeImg()" title="点击更换验证码" width=150px height=50px/>
+											</span>
 											
 											<c:if test="${errorCheckCode !=null}">
 											   <font color="red">验证码出错</font>
 											</c:if>
 									</td>
-								</tr>
+								
                 </div>
                 
                 
