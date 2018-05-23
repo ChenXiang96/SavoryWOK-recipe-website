@@ -14,46 +14,46 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 /**
- * �ʼ����͹�����
+ * 邮件发送工具类
  */
 public class MailUitls {
 	/**
-	 * �����ʼ��ķ���
-	 * @param to	:�ռ���
-	 * @param code	:������
+	 * 发送邮件的方法
+	 * @param to	:收件人
+	 * @param code	:激活码
 	 */
 	public static void sendMail(String to,String code){
 		/**
-		 * 1.���һ��Session����.
-		 * 2.����һ�������ʼ��Ķ���Message.
-		 * 3.�����ʼ�Transport
+		 * 1.获得一个session对象
+		 * 2.创建一个代表邮件的对象Message
+		 * 3.发送邮件Transport
 		 */
-		// 1.������Ӷ���
+		// 1.获得连接对象
 		Properties props = new Properties();
-		//���÷����ʼ�������
+		//设置发送邮件的主机
 		props.setProperty("mail.host", "localhost");
 		Session session = Session.getInstance(props, new Authenticator() {
 			@Override
 			protected PasswordAuthentication getPasswordAuthentication() {
-				//ʹ���Ǹ����ʼ�
+				//使用发邮件
 				return new PasswordAuthentication("service@shop.com", "service");
 			}
 		});
 		
-		// 2.�����ʼ�����:
+		// 2.创建邮件对象：
 		Message message = new MimeMessage(session);
 		
 		try {
-			// ���÷�����:
+			// 设置发件人：
 			message.setFrom(new InternetAddress("service@shop.com"));
-			// �����ռ���:
+			// 设置收件人：
 			message.addRecipient(RecipientType.TO, new InternetAddress(to));
-			// ���� CC   ����BCC
-			// ���ñ���
-			message.setSubject("���Թ������ùٷ������ʼ�");
-			// �����ʼ�����:	
-			message.setContent("<h1>�������ùٷ������ʼ�!������������ɼ������!</h1><h3><a href='http://localhost:8080/eShop/active/"+code+"'>http://localhost:8080/eShop/active/"+code+"</a></h3>", "text/html;charset=UTF-8");
-			// 3.�����ʼ�:
+			// 抄送CC 密送BCC
+			// 设置标题
+			message.setSubject("来自‘厨色’的官方激活邮件");
+			// 设置邮件正文:	
+			message.setContent("<h1>‘厨色’官方激活邮件!点击下方链接完成激活操作！</h1><h3><a href='http://localhost:8080/eShop/active/"+code+"'>http://localhost:8080/eShop/active/"+code+"</a></h3>", "text/html;charset=UTF-8");
+			// 3.发送邮件：
 			Transport.send(message);
 		} catch (AddressException e) {
 			e.printStackTrace();

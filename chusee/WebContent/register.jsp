@@ -1,112 +1,186 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title></title>
-<link rel="stylesheet" href="css/style1.css" />
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+<!DOCTYPE html>
 
-<script>
+<html>
+  <head>
+    <title>Home</title>
+    
+    
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/main.css" />
+     <style>
+  </style>
+  <script>
+	function checkForm() {
+		// 校验用户名:
+		// 获得用户名文本框的值:
+		var username = $("#username").val();
+		if (username == null || username == '') {
+			alert("用户名不能为空!");
+			return false;
+		}
+		// 校验密码:
+		// 获得密码框的值:
+		var password = $("#password").val();
+		if (password == null || password == '') {
+			alert("密码不能为空!");
+			return false;
+		}
+		// 校验确认密码:
+		var repassword = $("#repassword").val();
+		if (repassword != password) {
+			alert("两次密码输入不一致!");
+			return false;
+		}
 
+	}
 	function checkUsername() {
 		$.post(
 			"checkUser/" + $("#username").val(),
 			{},
 			function(data) {
 				if (data == 1) {
-					document.getElementById("span1").innerHTML = 
-						//"<font color='red'>用户名已经存在!</font>";
-						"<label>用户名已经存在！</label>";
+					document.getElementById("span1").innerHTML = "<font color='red'>用户名已经存在</font>";
 					$("#username").val("");
 					$("#username").focus();
 					$(".submit").unbind("click",
 							function(event){
 						
 					});
-				} 
+				} else {
+					document.getElementById("span1").innerHTML = "<font color='green'>用户名可以使用</font>";
+				}
 		});
 	}
 </script>
-<body>
-
-<div class="register-container">
-	<h1>厨色</h1>
-	
-	<div class="connect">
-		<p></p>
-	</div>
-	
-	<form  
-	  action="${ pageContext.request.contextPath }/register" 
-	  method="post" id="registerForm">
-		<div>
-			<input path="username" id="username" type="text" name="username" class="username" onblur="checkUsername()" placeholder="您的用户名" autocomplete="off"/>
-			<!--  <span id="span1" style="padding-left: 10px;"></span> -->
-			
-			<label id="span1" class="error" for="username"></label>
-		  
-		   
-		</div>
-		<div>
-			<input type="password" path="password" id="password" name="password" class="password" placeholder="输入密码" oncontextmenu="return false" onpaste="return false" />
-		</div>
-		<div>
-			<input type="password" id="repassword" name="repassword" class="confirm_password" placeholder="再次输入密码" oncontextmenu="return false" onpaste="return false" />
-		</div>
-		
-		<div>
-			<input type="email" path="email" name="email" class="email" placeholder="输入邮箱地址" oncontextmenu="return false" onpaste="return false" />
-		</div>
-		
-		<div>
-			<input path="name"  placeholder="输入姓名" oncontextmenu="return false" onpaste="return false" />
-		</div>
-		
-		<div>
-			<input type="text" path="phone"class="phone_number" placeholder="输入手机号码" autocomplete="off" id="number"/>
-		</div>
-		<div>
-			<input path="addr" placeholder="输入地址" oncontextmenu="return false" onpaste="return false" />
-		</div>
-		<div>
-		   <tr>
-			   <th><span class="requiredField">*</span>验证码:</th>
-						<td><span class="fieldSet"> <input type="text"
-							id="checkcode" name="checkcode" class="text captcha"
-							maxlength="4" /> <img id="checkImg" class="captchaImage"
-							src="${pageContext.request.contextPath}/getCheckCodeImage"
-							onclick="changeImg()" title="点击更换验证码" /></span>
-							<c:if test="${errorCheckCode !=null}">
-									<font color="red">验证码出错</font>
-							</c:if>
-						</td>
-			</tr>
-		</div>
-          
-          
-       
-		<td><input type="submit" class="submit" value="同意以下协议并注册" /></td>
-	</form>
-	<a href="${ pageContext.request.contextPath }/userLogin">
-		<button type="button" class="register-tis">已经有账号？</button>
-	</a>
-
-</div>
+</head>
+  <body >
 
 
 
-<script src="js/jquery.min.js"></script>
-<script src="js/common.js"></script>
-<!--背景图片自动更换-->
-  <script src="js/supersized.3.2.7.min.js"></script>
-<script src="js/supersized-init.js"></script>
+      <section class="sub-header shop-layout-1">
+        <img class="rellax bg-overlay" src="${pageContext.request.contextPath}/images/logo2.jpg" alt="">
+        <div class="overlay-call-to-action"></div>
+        <h3 class="heading-style-3">厨色</h3>
+         
+      </section>
+      <section class="boxed-sm">
+        <div class="container">
+          <div class="login-wrapper">
+            <div class="row">
+              <h3>Register</h3>
+              <form  commandName="user" action="${ pageContext.request.contextPath }/register" method="post" modelAttribute="user" novalidate="novalidate" onsubmit="return checkForm();">
+                <div class="form-group organic-form-2">
+                  <label><font color="red">*</font> 用户名</label>
+                  <input type="text" id="username" path="username" name="username" class="form-control" maxlength="20" onblur="checkUsername()">
+                  <span id="span1"></span>
+                </div>
+                
+               
+                <div class="form-group organic-form-2">
+                   <label><font color="red">*</font> 密码</label>
+                  <input class="form-control" type="password" id="password" path="password" name="password" maxlength="20" autocomplete="off">
+                 <!--   <span><font color="red"><s:fielderror fieldName="password"/></font></span>
+                  -->
+                </div>
+                <div class="form-group organic-form-2">
+                    <label><font color="red">*</font> 确认密码</label>
+                  <input class="form-control" type="password"id="repassword" name="repassword" maxlength="20" autocomplete="off">
+                </div>
+                
+                 <div class="form-group organic-form-2">
+                 <label><font color="red">*</font> 邮箱</label>
+                  <input class="form-control" path="email" type="Email" id="email" name="email">
+                  <form:errors path="email" cssClass="error"/>
+                </div>
+                
+                <div class="form-group organic-form-2">
+                   <label><font color="red">*</font>真实姓名</label>
+                  <input type="text"  path="name" name="name" class="form-control" maxlength="20">
+                
+                </div>
+                
+                  <div class="form-group organic-form-2">
+                    <label><font color="red">*</font>电话</label>
+                  <input type="text"  path="phone" name="phone" class="form-control" maxlength="20">
+                
+                </div>
+                
+                  <div class="form-group organic-form-2">
+                   <label><font color="red">*</font>地址</label>
+                  <input type="text"  path="addr" name="addr" class="form-control" maxlength="20">
+                
+                </div>
+                
+                 <div>
+               <tr>
+									<th><span class="requiredField">*</span>验证码:</th>
+									<td><span class="fieldSet"> <input type="text"
+											id="checkcode" name="checkcode" class="text captcha"
+											maxlength="4" /> <img id="checkImg" class="captchaImage"
+											src="${pageContext.request.contextPath}/getCheckCodeImage"
+											onclick="changeImg()" title="点击更换验证码" /></span>
+											
+											<c:if test="${errorCheckCode !=null}">
+											   <font color="red">验证码出错</font>
+											</c:if>
+									</td>
+								</tr>
+                </div>
+                
+                
+               
+               
+                 <font color="red"><s:actionerror/></font>
+              
+                
+                <div class="form-group remember-me">
+                  <div class="checkbox pull-left">
+                    <label>
+                      <input type="checkbox"> Privacy Policy Agreement?
+                    </label>
+                  </div>
+                </div>
+                
+                <div class="form-group footer-form">
+                  <button class="btn btn-brand pill" type="submit">SUBMIT</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+ 
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/function-check-viewport.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.mmenu.all.min.js"></script>
+    <script src="js/rellax.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/bootstrap-notify.min.js"></script>
+    <script src="js/bootstrap-slider.js"></script>
+    <script src="js/in-view.min.js"></script>
+    <script src="js/countup.js"></script>
+    <script src="js/animsition.min.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/config-mm-menu.js"></script>
+    <script src="js/config-set-bg-blog-thumb.js"></script>
+    <script src="js/config-accrodion.js">
+    
 
-
-<!--表单验证-->
-
-</body>
+    </script>
+    <script type="text/javascript">
+		function changeImg() {
+			var img1 = document.getElementById("checkImg");
+			img1.src = "${pageContext.request.contextPath}/getCheckCodeImage"
+					+ "?date=" + new Date();
+		}
+	</script>
+  </body>
 </html>
