@@ -34,6 +34,41 @@ public class UserController{
 		return new User();
 	}
 	
+	
+	
+	//用户登录
+		@RequestMapping(value="login")
+		public String login(@ModelAttribute("user") User user, String checkcode,
+				HttpSession session,Map<String,Object> map){
+			//从session中获取验证码
+			String checkCode = (String) session.getAttribute("checkcode");
+			//如果验证码不一致，直接返回到登陆的页面
+			if(! checkCode.equalsIgnoreCase(checkcode)){
+				map.put("errorCheckCode", "errorCheckCode");
+				return "Login"; 
+			}
+			//判断是否存在用户
+			User isExistUser = userService.existUser(user.getUsername());
+			if(isExistUser == null){
+				map.put("notUser", "notUser");
+				return "Login";
+			}
+			//判断用户是否激活
+			User u = userService.existUser(user.getUsername());
+			if(u.getState() == 0){
+				map.put("notActive","notActive");
+				return "Login";
+			}
+			//判断用户名和密码是否都正确
+			u = userService.findUserByUsernameAndPassword(user);
+			if(u == null){
+				map.put("notPassword", "notPassword");
+				return "Login";
+			}
+			session.setAttribute("user", u);
+			return "redirect:index";
+		}
+	
 	//跳转到用户登录
 	@RequestMapping(value="/userLogin")
 	public String userLogin(){
