@@ -127,7 +127,7 @@ h3.heading-style-3 {
    
    </div>
     
- 
+      <%@ include file="footer.jsp" %>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/function-check-viewport.js"></script>
