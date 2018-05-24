@@ -10,38 +10,40 @@
 
   
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/main.css" />
-     <style>
- h3 {
-    font-size: 25px;
-    text-align: center;
-    color: #333;
-    margin-bottom: 22px;
-    margin-top:20px;
-}
-.form-control{
+    
+<style>
+   h3 {
+      font-size: 25px;
+      text-align: center;
+      color: #333;
+     margin-bottom: 22px;
+     margin-top:20px;
+  }
+   .form-control{
     width:550px;
 
 
-}
+  }
 h3.heading-style-3 {
 
-    color: navajowhite;
+    color: #FFBF00;
     font-weight: bold;
 }
-.organic-form-2 label{
+  .organic-form-2 label{
    font-size:25px;
-   font-family: "Playfair Display", serif;
+    font-family: "Playfair Display", serif;
    margin-top:30px;
 
 }
-.pull-right {
+  .pull-right {
   
     margin-right: 225px;
 }
-.pull-left {
+  .pull-left {
 
     margin-left: 225px;
 }
+
   </style>
 
 </head>
@@ -61,14 +63,16 @@ h3.heading-style-3 {
         <section class="sub-header shop-layout-1">
         <img class="rellax bg-overlay" src="${pageContext.request.contextPath}/images/logo4.jpg" alt="">
         <div class="overlay-call-to-action"></div>
-        <h3 class="heading-style-3" color:"red">我的账户</h3>
+        <h3 class="heading-style-3"><img src="images/lo.png"></h3>
+       
       </section>
       
       <section class="boxed-sm">
         <div class="container">
           <div class="login-wrapper">
             <div class="row">
-              <h3>登录</h3>
+              <center><h3 class="heading-style-3" color:"red">我的账户</h3>
+              </center>
               <div><s:actionerror /></div>
               <form 
                id="loginForm" modelAttribute="user"

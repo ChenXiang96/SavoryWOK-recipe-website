@@ -55,6 +55,16 @@
 		});
 	}
 </script>
+<style>
+h3.heading-style-3:before, h3.heading-style-3:after{
+     width:200px;
+     left:28%;
+
+
+}
+
+
+</style>
 </head>
   <body >
 
@@ -63,7 +73,8 @@
       <section class="sub-header shop-layout-1">
         <img class="rellax bg-overlay" src="${pageContext.request.contextPath}/images/logo2.jpg" alt="">
         <div class="overlay-call-to-action"></div>
-        <h3 class="heading-style-3">厨色</h3>
+        <center><h3 class="heading-style-3"><img src="images/lo.png"></h3>
+        </center>
          
       </section>
       <section class="boxed-sm">
