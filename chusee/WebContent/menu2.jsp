@@ -21,6 +21,16 @@
     display: flex;
     width:1300px;
 }
+.menu .hidden-xs{
+  margin-right:120px;
+}
+.nav5{
+ margin-right:200px;
+ width:800px;
+}
+.menu > li > a {
+    color: #F7D358;
+}
 </style>
       <header class="header-style-1">
         <div class="container">
@@ -30,7 +40,8 @@
               <a class="brand-logo animsition-link" href="index.html">
                 <img class="img-responsive" src="${pageContext.request.contextPath}/picture/logo.png" alt="" />
               </a>
-              <nav>
+              <center>
+              <nav class="nav5">
                 <ul class="menu hidden-xs">
                   <li>
                     <a href="${ pageContext.request.contextPath}/index">首页</a>
@@ -81,11 +92,11 @@
                   <li>
                   <s:if test="#session.existuser == null">
                   <li>
-                     <a href="${pageContext.request.contextPath}/user_loginPage.action">登录</a>
+                     <a href="${ pageContext.request.contextPath }/userLogin">登录</a>
                   </li>
                   
                   <li>
-                      <a href="${pageContext.request.contextPath}/user_registPage.action">注册</a>
+                      <a href="${ pageContext.request.contextPath }/userRegister">注册</a>
                   </li>
                  </s:if>
                  </li>
@@ -99,15 +110,15 @@
       	-->
                      </li>
                      
-                     <li>
-                         <a href="${pageContext.request.contextPath}/user_quit.action">退出</a>
-                     </li>
+                    
 
                   </s:else>
                   </li>
                  
                 </ul>
               </nav>
+              </center>
+              
               <aside class="right">
                 <div class="widget widget-control-header">
                   <div class="select-custom-wrapper">

@@ -62,12 +62,19 @@ h3.heading-style-3:before, h3.heading-style-3:after{
 
 
 }
-
+  .div99{
+ 
+   margin-left:450px;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+}
 
 </style>
 </head>
   <body >
-
+       <%@ include file="menu2.jsp" %>
 
 
       <section class="sub-header shop-layout-1">
@@ -159,10 +166,16 @@ h3.heading-style-3:before, h3.heading-style-3:after{
                     </label>
                   </div>
                 </div>
-                
+                 <div class="div99">
                 <div class="form-group footer-form">
-                  <button class="btn btn-brand pill" type="submit">SUBMIT</button>
+               
+             <button class="btn btn-brand pill" type="submit">注册</button>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <button class="btn btn-brand pill" ><a href="${ pageContext.request.contextPath }/userLogin" color:red> 已经有账号？</a></button>
+          
                 </div>
+                </div>
+                
               </form>
             </div>
           </div>
