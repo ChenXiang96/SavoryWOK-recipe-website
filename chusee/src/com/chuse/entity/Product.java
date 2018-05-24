@@ -17,7 +17,7 @@ import javax.persistence.Table;
 //这是一行注释
 @Table(name="product")
 @Entity
-public class Product {
+public class Product implements java.io.Serializable{
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Id
    private Integer pid;

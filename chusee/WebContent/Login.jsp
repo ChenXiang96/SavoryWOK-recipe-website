@@ -48,7 +48,7 @@ h3.heading-style-3 {
 
 </head>
   <body >
- 
+   <%@ include file="menu2.jsp" %>
 
 <!-- 
       <section class="sub-header shop-layout-1">

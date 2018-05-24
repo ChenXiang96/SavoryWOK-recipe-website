@@ -151,19 +151,7 @@
 					</div>
 				</div>
 				<!---- Start Widget ---->
-				<div class="widget wid-gallery">
-					<div class="wid-header">
-						<h5>Gallery</h5>
-					</div>
-					<div class="wid-content">
-						<a href="#"><img src="images/111.jpg"></a>
-						<a href="#"><img src="images/111.jpg"></a>
-						<a href="#"><img src="images/111.jpg"></a>
-						<a href="#"><img src="images/111.jpg"></a>
-						<a href="#"><img src="images/111.jpg"></a>
-						<a href="#"><img src="images/111.jpg"></a>
-					</div>
-				</div>
+				
 			</div>
 		</div>
 	</div>
