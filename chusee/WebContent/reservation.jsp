@@ -162,7 +162,8 @@
 	<![endif]-->
 
 </head>
-<body >
+<body style="background: url(#2D2D2D)">
+     <%@ include file="menu3.jsp" %>
 	<div class="wrap-body">
 		<!--///////////////////////////////////////Top-->
 
@@ -174,12 +175,7 @@
 		<!--////////////////////////////////////Container-->
 		<section id="container" class="sub-page">
 		<div class="wrap-container zerogrid">
-			<div class="crumbs">
-				<ul>
-					<li><a href="index.jsp">主页</a></li>
-					<li><a href="reservation.jsp">专题</a></li>
-				</ul>
-			</div>
+		 
 			<div id="main-content">
 				<div class="wrap-content">
 					<div class="row">

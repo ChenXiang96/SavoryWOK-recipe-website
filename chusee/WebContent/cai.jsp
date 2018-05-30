@@ -151,8 +151,7 @@
 
 
 <!-- footer -->
-<link href="css/bootstrap.min.css" rel="stylesheet" />
-<link href="css/style2.css" rel="stylesheet" />
+
 
 <!-- Custom Fonts -->
 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"
@@ -173,18 +172,12 @@
 <body style="background: url(#FFFFFF)">
         
 		<!--//////////////////////////////////////Menu-->
-
-		</nav>
+<%@ include file="menu3.jsp" %>
 
 		<!--////////////////////////////////////Container-->
 		<section id="container" class="sub-page">
 		<div class="wrap-container zerogrid">
-			<div class="crumbs">
-				<ul>
-					<li><a href="index.jsp">主页</a></li>
-					<li><a href="cai.jsp">菜谱</a></li>
-				</ul>
-			</div>
+			
 			<div id="main-content">
 				<div class="wrap-content">
 					<div class="row">

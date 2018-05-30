@@ -43,17 +43,12 @@
     
 </head>
 <body style="background: url(#FFFFFF)">
-
+<%@ include file="menu3.jsp" %>
 	
 <!--////////////////////////////////////Container-->
 <section id="container" class="sub-page">
 	<div class="wrap-container zerogrid">
-		<div class="crumbs">
-			<ul>
-				<li><a href="index.jsp">主页</a></li>
-				<li><a href="location.jsp">个人中心</a></li>
-			</ul>
-		</div>
+		
 		<div id="main-content">
 			<div class="wrap-content">
 				<div class="row">

@@ -41,6 +41,7 @@
 	<![endif]-->
 		<!-- footer -->
 <link href="css/bootstrap.min.css" rel="stylesheet" />
+
 <link href="css/style2.css" rel="stylesheet" />
    
 <style>
@@ -74,8 +75,10 @@
     margin: 0 auto;
     padding: 0px;
 }
-a{
-color:#654e2d;
+
+a {
+    color: #654E2D;
+    
 }
 </style>
 
@@ -84,7 +87,8 @@ color:#654e2d;
 <div class="wrap-body">
 	
 	
-		
+<%@ include file="menu3.jsp" %>
+	
 
 
 	<!-- 

@@ -82,7 +82,7 @@ hr.line { margin: 25px auto 15px; padding: 0; max-width: 80px;border: 0; border-
 .top ul.top-social {margin: 5px 7px 0 0;}
 .top ul.top-social li a{padding: 8px 10px;display: block;width: 35px;height: 35px;border-radius: 50%;font-size: 19px;line-height: 40px;color: #ffffff;background: #E4000D;}
 .top ul.top-social li a:hover, ul.social-buttons li a:focus, ul.social-buttons li a:active{opacity: 0.7;}
-header{background: #E4000D url(../images/bg-header.png) repeat;padding:15px 0;}
+header{background: #E4000D url(../images/bg-header.png) repeat;}
 
 .logo{display:inline-block;}
 .logo img{max-width: 210px;}

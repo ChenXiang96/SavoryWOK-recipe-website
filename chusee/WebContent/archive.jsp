@@ -20,7 +20,7 @@
 </head>
 <body>
 <!-- logo+nav -->
-
+<%@ include file="menu3.jsp" %>
 
 <div class="nav_wrap2">
 	<ul>

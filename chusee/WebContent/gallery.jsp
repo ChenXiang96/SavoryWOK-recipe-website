@@ -56,12 +56,7 @@ a {
 <!--////////////////////////////////////Container-->
 <section id="container" class="sub-page">
 	<div class="wrap-container zerogrid">
-		<div class="crumbs">
-			<ul>
-				<li><a href="index.jsp">主页</a></li>
-				<li><a href="archive.jsp">话题</a></li>
-			</ul>
-		</div>
+		<%@ include file="menu3.jsp" %>
 		<div id="main-content" class="col-2-3">
 			<div class="wrap-content">
 				<article>

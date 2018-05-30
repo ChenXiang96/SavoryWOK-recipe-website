@@ -190,6 +190,10 @@ position: absolute;
     border: 2px solid #ccc;
     width: 440px;
 }
+.navbar-default .navbar-brand{
+
+position: absolute;
+}
 #main-content .wrap-content {
     width:1580px;
 }

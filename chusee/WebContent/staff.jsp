@@ -73,12 +73,7 @@
 
 <section id="container" class="sub-page">
 	<div class="wrap-container zerogrid">
-		<div class="crumbs">
-			<ul>
-				<li><a href="index.jsp">Home</a></li>
-				<li><a href="staff.jsp">Staff</a></li>
-			</ul>
-		</div>
+		<%@ include file="menu3.jsp" %>
 		<div id="main-content">
 			<div class="wrap-content">
 			   <div class="list">
