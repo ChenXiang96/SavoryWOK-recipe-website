@@ -25,6 +25,10 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/slide.css">
 	<link rel="stylesheet" href="css/menu.css">
+	
+	
+
+
 	<!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<!--[if lt IE 8]>
@@ -48,7 +52,12 @@
 
 <!-- [ REQUIRED ] -->
 <link rel="stylesheet" href="css/bpHS.min.css">
+
+
+
 <style>
+
+
 .bp-hs img {
     max-width: 100%;
     margin-top: 30px;
@@ -64,7 +73,7 @@
     margin-right: 200px;
 }
 .ui_title {
-    height: 35px;
+    height: 45px;
     border-bottom: 1px solid #E8E8E8;
     position: relative;
 }
@@ -77,7 +86,7 @@
     /* font-weight: 400; */
     display: inline-block;
     font-size: 20px;
-    margin-right: 20px;
+    margin-right: 40px;
     color: #666;
     padding-bottom: 4px;
     outline: 0;
@@ -88,8 +97,12 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+a{
+color:#654e2d;
+}
 a.right{
-margin-left:160px;
+margin-left:225px;
 }
 a.right1{
  margin-left:220px;
@@ -98,7 +111,7 @@ a{
 font-size:18px;
 }
 a.right2{
-  margin-left:30px;
+  margin-left:90px;
 }
 a.right3{
  margin-left:60px;
@@ -107,6 +120,80 @@ a.right3{
 
     width: 1185px;
 }
+.zerogrid {
+    width: 1580px;
+    position: relative;
+    margin: 0 auto;
+    padding: 0px;
+}
+li{
+margin-left:20px;
+}
+header {
+    background: #FFFFFF url(../images/bg-header.png) repeat;
+    padding: 15px 0;
+    height:90px;
+}
+
+.r2{
+<!-- 为您推荐样式-->
+position: absolute;
+    top: 50px;
+    position: relative;
+    display: inline-block;
+    font-size: 21px;
+    width: 170px;
+    padding: 6px 0px;
+    text-align: center;
+    margin-left: -20px;
+    color: #fff;
+    background: #C9000B;
+    -webkit-box-shadow: 3px 2px 4px rgba(0,0,0,.5);
+    -moz-box-shadow: 3px 2px 4px rgba(0,0,0,.5);
+    box-shadow: 3px 2px 4px rgba(0,0,0,.5);
+}
+.r2:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0px;
+    top: 100%;
+    border-width: 5px 10px;
+    border-style: solid;
+    border-color: #470000 #470000 transparent transparent;
+}
+.r2 b {
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: -10px;
+    bottom: 0;
+    border-width: 10px 5px;
+    border-style: solid;
+    border-color: transparent transparent #C9000B #C9000B;
+}
+.r2:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: -10px;
+    top: 0;
+    border-width: 10px 5px;
+    border-style: solid;
+    border-color: #C9000B transparent transparent #C9000B;
+}
+.content-box.box-2 img {
+    background: #e9e9e9;
+    padding: 4px;
+    border: 2px solid #ccc;
+    width: 440px;
+}
+#main-content .wrap-content {
+    width:1580px;
+}
+
 
 </style>
 
@@ -118,36 +205,13 @@ a.right3{
 <script src="js/bpHS.min.js"></script>
 <script src="js/custom.js"></script>
 
-<div class="wrap-body">
-	
+
+
+
 	
 		
 	<%@ include file="menu.jsp" %>
 	 <!-- 18/4/4 -->
-   <div class="container">
-
-	   <div class="bp-hs" id="demo-default">
-		 <div class="bp-hs_inner" >
-		   
-			<div class="bp-hs_inner__item" data-transform="scale">
-				<img src="images/SMZ.jpg" alt="Boompx Hero Slider 01"/>
-			</div>
-			<div class="bp-hs_inner__item" data-transform="rotate" data-origin="top-left">
-				<img src="images/JZD.jpg" alt="Boompx Hero Slider 02"/>
-			</div>
-			<div class="bp-hs_inner__item" data-transform="rotate"  data-origin="bottom-left">
-				<img src="images/LB.jpg" alt="Boompx Hero Slider 03"/>
-			</div>
-			<div class="bp-hs_inner__item">
-				<img src="images/LP.jpg" alt="Boompx Hero Slider 04"/>
-			</div>
-			<div class="bp-hs_inner__item">
-				<img src="images/Z.jpg" alt="Boompx Hero Slider 04"/>
-			</div>
-		</div>
-	  </div>
-
-  </div>
 
 	
 	
@@ -178,9 +242,10 @@ a.right3{
 								<div class="box-item">
 								<div class="ui_title">
                                   <div class="ui_title_wrap">
-                                    <h2 class="on"><a href="javascript:void(0);">健康</a></h2>
-                                      <h2><a href="javascript:void(0);">食疗</a></h2>
-                                      <a title="健康首页" href="//www.meishichina.com/Health/" class="right" target="_blank">健康首页</a>
+                                    <h2 class="on"><a href="javascript:void(0);" >健康</a></h2>
+                                    <h2><a href="javascript:void(0);">食疗</a></h2>
+                                   <h3><a title="健康首页" href="//www.meishichina.com/Health/" class="right" target="_blank">健康首页</a>
+                                    </h3>
                                 </div>
                                 </div>
 									<span class="ribbon">健康·食疗<b></b></span>
@@ -204,7 +269,8 @@ a.right3{
                                   <div class="ui_title_wrap">
                                     <h2 class="on"><a href="javascript:void(0);">烘焙</a></h2>
                                       <h2><a href="javascript:void(0);">食谱</a></h2>
-                                      <a title="健康首页" href="//www.meishichina.com/Health/" class="right" target="_blank">烘焙专区</a>
+                                      <h3><a title="健康首页" href="//www.meishichina.com/Health/" class="right" target="_blank">烘焙专区</a>
+                                       </h3>
                                 </div>
                                 </div>
 									<span class="ribbon">烘焙·食谱<b></b></span>
@@ -228,10 +294,12 @@ a.right3{
                                   <div class="ui_title_wrap">
                                     <h2 class="on"><a href="javascript:void(0);">健康</a></h2>
                                       
-                                      <a title="健康首页" href="//www.meishichina.com/Health/" class="right1" target="_blank">我的专区</a>
+                                      <h3><a title="健康首页" href="//www.meishichina.com/Health/" class="right1" target="_blank">我的专区</a>
+                                      </h3>
                                 </div>
                                 </div>
-									<span class="ribbon">为您推荐<b></b></span>
+                                
+									<span class="r2">为您推荐<b></b></span>
 									<img src="images/reservation.jpg" alt="">
 									<p>
 									   <li><a href="#" style="color:red">春天易上火，5款食疗降春火</a></li>
@@ -252,15 +320,16 @@ a.right3{
                <div id="main-content">
                         <div class="ui_title">
                            <div class="ui_title_wrap">
-                               <h2 class="on"><a href="javascript:void(0);" class="right2">新秀菜谱</a></h2>
-                                  <h2><a href="javascript:void(0);" class="right2">一周热门</a></h2>
-                                  <h2><a href="javascript:void(0);" class="right2">最受欢迎的家常菜</a></h2>
-                                  <a title="健康首页" href="//www.meishichina.com/Health/" class="right3" target="_blank">热菜</a>
-                                  <a title="健康首页" href="//www.meishichina.com/Health/" class="right3" target="_blank">凉菜</a>
-                                  <a title="健康首页" href="//www.meishichina.com/Health/" class="right3" target="_blank">汤羹</a>
-                                  <a title="健康首页" href="//www.meishichina.com/Health/" class="right3" target="_blank">主食</a>
-                                  <a title="健康首页" href="//www.meishichina.com/Health/" class="right3" target="_blank">小吃</a>
-                                  <a title="健康首页" href="//www.meishichina.com/Health/" class="right3" target="_blank">西餐</a>
+                          <h2 class="on"><a href="javascript:void(0);" class="right2">新秀菜谱</a></h2>
+                          <h2><a href="javascript:void(0);" class="right2">一周热门</a></h2>
+                          <h2><a href="javascript:void(0);" class="right2">最受欢迎的家常菜</a></h2>
+                          <h3><a title="健康首页" href="//www.meishichina.com/Health/" class="right3" target="_blank">热菜</a></h3>
+                          
+                          <h3><a title="健康首页" href="//www.meishichina.com/Health/" class="right3" target="_blank">凉菜</a></h3>
+                          <h3><a title="健康首页" href="//www.meishichina.com/Health/" class="right3" target="_blank">汤羹</a></h3>
+                          <h3><a title="健康首页" href="//www.meishichina.com/Health/" class="right3" target="_blank">主食</a></h3>
+                          <h3><a title="健康首页" href="//www.meishichina.com/Health/" class="right3" target="_blank">小吃</a></h3>
+                          <h3><a title="健康首页" href="//www.meishichina.com/Health/" class="right3" target="_blank">西餐</a></h3>
                            </div>
                         </div>
 			<div class="wrap-content">
@@ -271,7 +340,7 @@ a.right3{
 								<span class="zoom-caption">
 									<span>黄金炸鸡排</span>
 								</span>
-								<img src="images/JP.jpg" />
+								<img  src="images/JP.jpg" />
 							</a>
 						</div>
 					</div>
@@ -285,39 +354,8 @@ a.right3{
 		</section>
 	</div>
 </section>
-
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 <!--////////////////////////////////////Footer-->
-<footer class="zerogrid">
-	<div class="wrap-footer">
-		<div class="row">
-			<div class="col-1-3">
-				<div class="wrap-col">
-					<h4>Customer Testimonials</h4>
-					<div class="row">
-						<img src="images/a-1.jpg">
-						<h5>Nick Roach</h5>
-						<p>Pellentesque elementum leo et justo dapibus convalli. In justo nibh, congue nec dapibus ac, placerat eget sem. Nunc consequat felis non elit ultricies in varius massa laoreet. Aenean lectus nisl, ellentesque in fermentum sit amet, convallis a lorem condimentum mollis. Aenean lectus nisl, ellentesque in fermentum sit amet.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-1-3">
-				<div class="wrap-col">
-					<h4>Open Daily</h4>
-					<p><span>mon.</span> 17:00 - 21:00</p>
-					<p><span>tue.-wed.</span> 16:30 – 21:00</p>
-					<p><span>thu.-sat.</span> 16:30 – 21:00</p>
-					<p><span>sun.</span> 11:00 – 21:00</p>
-					<p><span>Need help getting home?</span></br>
-					We will call a cab for you!</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="copyright">
-		<div class="wrapper">
-		</div>
-	</div>
-</footer>
 
 
 	<!-- js -->
@@ -345,4 +383,6 @@ a.right3{
 	});
 	</script>
 </div>
-</body></html>
+</body>
+
+</html>

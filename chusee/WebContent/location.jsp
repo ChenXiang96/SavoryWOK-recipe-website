@@ -40,7 +40,7 @@
     
 </head>
 <body>
-<%@ include file="menu.jsp" %>
+
 	
 <!--////////////////////////////////////Container-->
 <section id="container" class="sub-page">

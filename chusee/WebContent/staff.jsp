@@ -65,7 +65,7 @@
 </head>
 <body>
 <div class="wrap-body">
-	<%@ include file="menu.jsp" %>
+
 	
 
 <section id="container" class="sub-page">

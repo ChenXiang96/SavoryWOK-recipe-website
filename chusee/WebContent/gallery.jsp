@@ -42,7 +42,7 @@
 <body>
 <div class="wrap-body">
 	<!--///////////////////////////////////////Top-->
-	<%@ include file="menu.jsp" %>
+	
 
 
 >>>>>>> branch 'master' of https://github.com/liuyutaoLYT/-.git

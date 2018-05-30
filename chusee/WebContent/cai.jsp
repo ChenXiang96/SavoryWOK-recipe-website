@@ -156,47 +156,9 @@
 
 </head>
 <body>
-	<div class="wrap-body">
-		<!--///////////////////////////////////////Top-->
-		<div class="top">
-			<div class="zerogrid">
-				<ul class="top-social f-right">
-					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-					<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-					<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-					<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-				</ul>
-			</div>
-		</div>
-		<!--////////////////////////////////////Header-->
-		<header>
-		<div class="zerogrid">
-			<center>
-				<div class="logo">
-					<img src="images/logo.png">
-				</div>
-			</center>
-		</div>
-		</header>
-		<div class="site-title">
-			<div class="zerogrid">
-				<div class="row"></div>
-			</div>
-		</div>
+        
 		<!--//////////////////////////////////////Menu-->
-		<a href="#" class="nav-toggle">Toggle Navigation</a>
-		<nav class="cmn-tile-nav">
-		<ul class="clearfix">
-			<li class="colour-1"><a href="index.jsp">主页</a></li>
-			<li class="colour-2"><a href="menu.jsp">菜谱</a></li>
-			<li class="colour-3"><a href="location.jsp">食材</a></li>
-			<li class="colour-4"><a href="archive.jsp">甄选</a></li>
-			<li class="colour-5"><a href="health.jsp">健康</a></li>
-			<li class="colour-6"><a href="reservation.jsp">专题</a></li>
-			<li class="colour-7"><a href="news.jsp">社区</a></li>
-			<li class="colour-8"><a href="gallery.jsp">话题</a></li>
-		</ul>
+
 		</nav>
 
 		<!--////////////////////////////////////Container-->
