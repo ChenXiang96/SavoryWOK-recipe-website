@@ -62,6 +62,15 @@
     document.createElement('ng:view');
   </script>
   <![endif]-->
+  <style>
+  .zerogrid {
+    width: 1580px;
+    position: relative;
+    margin: 0 auto;
+    padding: 0px;
+}
+  
+  </style>
 <script>
 	var _hmt = _hmt || [];
 	(function() {
@@ -139,6 +148,12 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/slide.css">
 <link rel="stylesheet" href="css/menu.css">
+
+
+<!-- footer -->
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/style2.css" rel="stylesheet" />
+
 <!-- Custom Fonts -->
 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"
 	type="text/css">
@@ -155,7 +170,7 @@
 	<![endif]-->
 
 </head>
-<body>
+<body style="background: url(#FFFFFF)">
         
 		<!--//////////////////////////////////////Menu-->
 
@@ -736,49 +751,8 @@
 
 
 	<!--////////////////////////////////////Footer-->
-	<footer class="zerogrid">
-	<div class="wrap-footer">
-		<div class="row">
-			<div class="col-1-3">
-				<div class="wrap-col">
-					<h4>Customer Testimonials</h4>
-					<div class="row">
-						<img src="images/a-1.jpg">
-						<h5>Nick Roach</h5>
-						<p>Pellentesque elementum leo et justo dapibus convalli. In
-							justo nibh, congue nec dapibus ac, placerat eget sem. Nunc
-							consequat felis non elit ultricies in varius massa laoreet.
-							Aenean lectus nisl, ellentesque in fermentum sit amet, convallis
-							a lorem condimentum mollis. Aenean lectus nisl, ellentesque in
-							fermentum sit amet.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-1-3"></div>
-			<div class="col-1-3">
-				<div class="wrap-col">
-					<h4>Open Daily</h4>
-					<p>
-						<span>mon.</span> 17:00 - 21:00
-					</p>
-					<p>
-						<span>tue.-wed.</span> 16:30 – 21:00
-					</p>
-					<p>
-						<span>thu.-sat.</span> 16:30 – 21:00
-					</p>
-					<p>
-						<span>sun.</span> 11:00 – 21:00
-					</p>
-					<p>
-						<span>Need help getting home?</span></br> We will call a cab for you!
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="copyright"></div>
-	</footer>
+	
+	<%@ include file="footer2.jsp" %>
 
 
 	<!-- js -->

@@ -180,7 +180,7 @@ article img{display: inline-block;max-width: 250px;float: left;padding-right: 15
 /* ---------------------------------------------------------------------------- */
 /* -------------------------------------Footer--------------------------------- */
 /* ---------------------------------------------------------------------------- */
-footer{margin-top: 20px;background: #F2F1E8;}
+footer{margin-top: 20px;background: #2D2D2D;}
 footer .wrap-footer{color: #92907C;padding: 20px 25px 35px;border-bottom: 1px solid #ddd;position: relative;}
 footer .wrap-footer:after{
 	content:'';

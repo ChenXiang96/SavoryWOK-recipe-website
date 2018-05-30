@@ -198,7 +198,7 @@ position: absolute;
 </style>
 
 </head>
-<body>
+<body  style="background: url(#2D2D2D)">
 
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.touchSwipe.min.js"></script> <!-- optional (required for touchSwipe option) -->
@@ -345,6 +345,7 @@ position: absolute;
 						</div>
 					</div>
 				</div>
+				
 			</div>
                	
 				
@@ -357,7 +358,8 @@ position: absolute;
 
 <!--////////////////////////////////////Footer-->
 
-
+	
+	<%@ include file="footer2.jsp" %>
 	<!-- js -->
 	<script src="js/classie.js"></script>
 	<script src="js/demo.js"></script>

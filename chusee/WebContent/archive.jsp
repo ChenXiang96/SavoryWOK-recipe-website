@@ -13,61 +13,14 @@
 <link rel="stylesheet" type="text/css" href="css/all.css?v1=9">
 <link rel="stylesheet" type="text/css" href="css/zhen2.css?v1=2018-01-241">
 <link rel="stylesheet" type="text/css" href="css/zhen_listing.css?v1=2016-12-26">
-
+	<!-- footer -->
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/style2.css" rel="stylesheet" />
+   
 </head>
 <body>
-<div class="top-bar" id="J_top_bar">
-<ul class="bar-left left">
-<li><a title="厨色" href="https://www.meishichina.com/" target="_blank" class="top_bar_logo"><i>厨色</i>首页</a></li>
-      <li> <a title="菜谱" href="https://home.meishichina.com/recipe.html" target="_blank">菜谱</a></li>
-      <li> <a title="食材" href="https://www.meishichina.com/YuanLiao/" target="_blank">食材</a></li>
-	  <li> <a title="甄选" href="https://zhen.meishichina.com/" target="_blank">甄选</a></li>
-	  <li> <a title="健康" href="https://www.meishichina.com/Health/" target="_blank">健康</a></li>
-	  <li> <a title="专题" href="https://www.meishichina.com/mofang/" target="_blank">专题</a></li>
-	  <li> <a title="社区" href="https://home.meishichina.com/" target="_blank">社区</a></li>
-	  <li> <a title="话题" href="https://home.meishichina.com/pai.html" target="_blank">话题</a></li>
-      <li> <a title="活动" href="https://home.meishichina.com/event/" target="_blank">活动</a></li>
-	  <li> <a title="搜索" href="https://home.meishichina.com/search/" target="_blank">搜索</a></li>
-	  <li class="top_bar_more"><i></i>
-	  <div>
-	  <a title="烘焙" href="https://hongbei.meishichina.com/" target="_blank">烘焙</a>
-	  <a title="妈妈派" href="https://mamapai.meishichina.com/" target="_blank">妈妈派</a>
-	  </div>
-	  </li>
-    </ul>
-
-<a href="https://www.meishichina.com/Mobile/" target="_blank" class="nr3"><img src="images/zhenxuan/nr3.png" width=18 height=18>客户端<img src="images/zhenxuan/msc_app.png" class="code">
-</a>
-
-<div class="right" id="J_top_bar_user"></div>				
-</div>
 <!-- logo+nav -->
 
-<div class="logo_wrap2">
-	<div class="logo_inner left">
-		<a href="https://www.meishichina.com/" title="厨色">厨色</a>
-	</div>
-	<div class="logo_current left">
-		<h1><a href="https://zhen.meishichina.com/" title="甄选">甄选</a></h1>
-	</div>
-
-
-
-
-<div class="logo_search right">
-<div class="searchBox J_search"><a href="javascript:;" title="搜索" class="search_Btn J_searchBTN right" id="search">搜索</a><input type="text" id="q" class="search_Text J_searchTxt right">
-</div>
-
-	</div>
-
-<div class="logo_nav">
-	<a href="https://zhen.meishichina.com/"  class="on">甄选首页<i></i><b></b></a>
-	<a href="https://zhen.meishichina.com/goods/" >分类<i></i><b></b></a>
-<a href="https://zhen.meishichina.com/listing/"  >清单<i></i><b></b></a>
-<a href="https://zhen.meishichina.com/pince/" >品测<i></i><b></b></a>
-</div>
-
-</div>
 
 <div class="nav_wrap2">
 	<ul>
@@ -606,34 +559,11 @@
 <style type="text/css">
 .footer-area{padding:10px 0}.footer-area .w{padding-top:10px;border-top:1px solid #e8e8e8}.footer-area a{color:#666}.footer-area a:hover{color:#ff6767}.ft1{clear:none;float:left;font-size:11px;color:#666;width:680px;padding-top:10px}.ft1 .c3b{color:#c90;font-size:14px;font-weight:700;margin-bottom:6px}.ft1 .c3b a{color:#f50}.ft1 .c3c{color:#aaa;font-size:12px;margin-bottom:6px}.ft2,.ft3,.ft4{clear:none;float:right;text-align:center}.ft3{margin:0 25px}
 </style>
-<div id="J_footer_box" class="footer-area clear">
-<div class="w">
-	<div class="ft1">
-		<p class="c3b"><a target="_blank" href="https://www.meishichina.com/" title="厨色 - 让吃更美好">厨色 - 让吃更美好！</a></p>
-		<p class="c3c">
-<a target="_blank" title="菜谱" href="https://home.meishichina.com/recipe.html">菜谱</a> · 
-<a target="_blank" title="食材" href="https://www.meishichina.com/YuanLiao/">食材</a> · 
-<a target="_blank" title="美食魔方" href="https://www.meishichina.com/mofang/">魔方</a> · 
-<a target="_blank" href="https://www.meishichina.com/minisite/red/" title="关于我们">关于我们</a> · 
-<a target="_blank" href="https://www.meishichina.com/minisite/red/contact/" title="联系我们">联系我们</a> · 
-<a target="_blank" href="https://www.meishichina.com/minisite/red/joinus/" title="加入我们">加入我们</a> · 
-<a target="_blank" href="https://www.meishichina.com/minisite/red/copyright/" title="服务声明">服务声明</a> · 
-<a target="_blank" href="https://www.meishichina.com/minisite/red/links/" title="友情链接">友情链接</a> · 
-<a target="_blank" href="https://www.meishichina.com/minisite/red/sitemap/" title="网站地图">网站地图</a> · 
-<a target="_blank" title="移动应用" href="https://www.meishichina.com/Mobile/">移动应用</a>
-</p>
-		<p>&copy; 2004-2018 厨色 保留所有权利 - 京ICP证090244号</p>
-	</div>
-	<div class="ft4">
-		<img class="imgLoad" src="images/zhenxuan/weixin.png" title="微信公众号">微信公众号
-	</div>
-	<div class="ft3">
-		<img class="imgLoad" width="82" src="images/zhenxuan/msc_app.png" title="手机客户端">手机客户端
-	</div>
-	
-	
-</div>
-</div>
+
+
+
+
+<%@ include file="footer2.jsp" %>
 <!-- 引用全站js -->
 <script type="text/javascript" src="//static.meishichina.com/v6/js/lib/all.js?v1=20170218"></script>
 <script type="text/javascript"> 

@@ -18,6 +18,11 @@
 <meta name="renderer" content="webkit">
 <link href="http://www.xiachufang.com/favicon.ico" rel="shortcut icon"
 	type="image/x-icon">
+	<!-- footer -->
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/style2.css" rel="stylesheet" />
+
+   
 
 <script type="text/javascript" async=""
 	src="%E6%96%B0%E7%A7%80%E8%8F%9C%E8%B0%B1%20_%E4%B8%8B%E5%8E%A8%E6%88%BF_files/ga.js"></script>
@@ -62,6 +67,7 @@
     document.createElement('ng:view');
   </script>
   <![endif]-->
+
 <script>
 	var _hmt = _hmt || [];
 	(function() {
@@ -90,6 +96,7 @@
 			s.parentNode.insertBefore(vds, s);
 		})();
 	})();
+	
 </script>
 
 
@@ -155,7 +162,7 @@
 	<![endif]-->
 
 </head>
-<body>
+<body >
 	<div class="wrap-body">
 		<!--///////////////////////////////////////Top-->
 
@@ -343,50 +350,7 @@
 
 
 	<!--////////////////////////////////////Footer-->
-	<footer class="zerogrid">
-	<div class="wrap-footer">
-		<div class="row">
-			<div class="col-1-3">
-				<div class="wrap-col">
-					<h4>Customer Testimonials</h4>
-					<div class="row">
-						<img src="images/a-1.jpg">
-						<h5>Nick Roach</h5>
-						<p>Pellentesque elementum leo et justo dapibus convalli. In
-							justo nibh, congue nec dapibus ac, placerat eget sem. Nunc
-							consequat felis non elit ultricies in varius massa laoreet.
-							Aenean lectus nisl, ellentesque in fermentum sit amet, convallis
-							a lorem condimentum mollis. Aenean lectus nisl, ellentesque in
-							fermentum sit amet.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-1-3"></div>
-			<div class="col-1-3">
-				<div class="wrap-col">
-					<h4>Open Daily</h4>
-					<p>
-						<span>mon.</span> 17:00 - 21:00
-					</p>
-					<p>
-						<span>tue.-wed.</span> 16:30 – 21:00
-					</p>
-					<p>
-						<span>thu.-sat.</span> 16:30 – 21:00
-					</p>
-					<p>
-						<span>sun.</span> 11:00 – 21:00
-					</p>
-					<p>
-						<span>Need help getting home?</span></br> We will call a cab for you!
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="copyright"></div>
-	</footer>
-
+<%@ include file="footer2.jsp" %>
 
 	<!-- js -->
 	<script src="js/classie.js"></script>
