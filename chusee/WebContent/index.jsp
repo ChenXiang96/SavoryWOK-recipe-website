@@ -126,8 +126,8 @@ a.right3{
     margin: 0 auto;
     padding: 0px;
 }
-li{
-margin-left:20px;
+.li1{
+margin-left:15px;
 }
 header {
     background: #FFFFFF url(../images/bg-header.png) repeat;
@@ -251,12 +251,12 @@ position: absolute;
 									<span class="ribbon">健康·食疗<b></b></span>
 									<img src="images/menu.jpg" alt="">
 									<p>
-									   <li><a href="#" style="color:red">牙齿不好就别吃这5种食物！</a></li>
-									   <li><a href="#">清理血管，让血管年轻起来！</a></li>
-									   <li><a href="#">脸上还有痘痘？6种方法帮你摆脱</a></li>
-									   <li><a href="#">专题：那些美颜食物的神级吃法</a></li>
-									   <li><a href="#">专题：低卡减肥餐，让你瘦到飞起来</a></li>
-                                       <li><a href="#">提高脑力，这些食物少不了！</a></li>
+									   <li class="li1"><a href="#" style="color:red">牙齿不好就别吃这5种食物！</a></li>
+									   <li class="li1"><a href="#">清理血管，让血管年轻起来！</a></li>
+									   <li class="li1"><a href="#">脸上还有痘痘？6种方法帮你摆脱</a></li>
+									   <li class="li1"><a href="#">专题：那些美颜食物的神级吃法</a></li>
+									   <li class="li1"><a href="#">专题：低卡减肥餐，让你瘦到飞起来</a></li>
+                                       <li class="li1"><a href="#">提高脑力，这些食物少不了！</a></li>
                                     </p>
 									<a href="#" class="button button-1">更多</a>
 								</div>
@@ -276,12 +276,12 @@ position: absolute;
 									<span class="ribbon">烘焙·食谱<b></b></span>
 									<img src="images/fast-food.jpg" alt="">
 									<p>
-									   <li><a href="#" style="color:red">象征丰收和满载的水果</a></li>
-									   <li><a href="#">自制美味的花生牛轧糖</a></li>
-									   <li><a href="#">内藏惊喜的彩虹戚风蛋糕</a></li>
-									   <li><a href="#">消耗蛋挞皮 - 简单版红薯酥</a></li>
-									   <li><a href="#">菜单：奥利奥的N种百搭吃法</a></li>
-                                       <li><a href="#">专题：另类咸香口儿，满足你的味蕾</a></li>
+									   <li class="li1"><a href="#" style="color:red">象征丰收和满载的水果</a></li>
+									   <li class="li1"><a href="#">自制美味的花生牛轧糖</a></li>
+									   <li class="li1"><a href="#">内藏惊喜的彩虹戚风蛋糕</a></li>
+									   <li class="li1"><a href="#">消耗蛋挞皮 - 简单版红薯酥</a></li>
+									   <li class="li1"><a href="#">菜单：奥利奥的N种百搭吃法</a></li>
+                                       <li class="li1"><a href="#">专题：另类咸香口儿，满足你的味蕾</a></li>
                                     </p>
 									<a href="#" class="button button-1">更多</a>
 								</div>
@@ -302,12 +302,12 @@ position: absolute;
 									<span class="r2">为您推荐<b></b></span>
 									<img src="images/reservation.jpg" alt="">
 									<p>
-									   <li><a href="#" style="color:red">春天易上火，5款食疗降春火</a></li>
-									   <li><a href="#">划重点！食物降血脂这些更有效</a></li>
-									   <li><a href="#">粗粮细作：健康能量燕麦甜品</a></li>
-									   <li><a href="#">妈妈派：童趣童味，儿童创意餐点</a></li>
-									   <li><a href="#">ACA多功能辅食料理机</a></li>
-                                       <li><a href="#">免费抽奖，孩儿智能烤箱</a></li>
+									   <li class="li1"><a href="#" style="color:red">春天易上火，5款食疗降春火</a></li>
+									   <li class="li1"><a href="#">划重点！食物降血脂这些更有效</a></li>
+									   <li class="li1"><a href="#">粗粮细作：健康能量燕麦甜品</a></li>
+									   <li class="li1"><a href="#">妈妈派：童趣童味，儿童创意餐点</a></li>
+									   <li class="li1"><a href="#">ACA多功能辅食料理机</a></li>
+                                       <li class="li1"><a href="#">免费抽奖，孩儿智能烤箱</a></li>
                                     </p>
 									<a href="#" class="button button-1">更多</a>
 								</div>
@@ -354,7 +354,7 @@ position: absolute;
 		</section>
 	</div>
 </section>
-<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+
 <!--////////////////////////////////////Footer-->
 
 
