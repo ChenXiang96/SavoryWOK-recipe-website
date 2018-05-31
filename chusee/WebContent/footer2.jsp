@@ -23,7 +23,6 @@
 <link href="css/bootstrap1.min.css" rel="stylesheet" />
 
 
-
     <footer>
 	<div class="container">
 		<div class="row">
@@ -92,4 +91,6 @@
 		</div>
 
 	</div>
+	
 	</footer>
+	

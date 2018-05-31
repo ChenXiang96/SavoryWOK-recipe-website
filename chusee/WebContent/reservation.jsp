@@ -347,6 +347,7 @@
 
 	<!--////////////////////////////////////Footer-->
 <%@ include file="footer2.jsp" %>
+
  <div class="fixed-footer">
   <a href="#" class="scrollup"></a>
   </div>

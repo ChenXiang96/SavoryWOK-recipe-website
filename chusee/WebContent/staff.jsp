@@ -21,7 +21,7 @@
     <!-- CSS
   ================================================== -->
   	<link rel="stylesheet" href="css/zerogrid.css">
-	<link rel="stylesheet" href="css/style.css">
+	
 	<link rel="stylesheet" href="css/slide.css">
 	<link rel="stylesheet" href="css/menu.css">
 	<!-- Custom Fonts -->
@@ -65,8 +65,13 @@
     
     
     </style>
+    
 </head>
 <body style="background: url(#2D2D2D)">
+
+ <div class="fixed-footer" style="background-color:red" >
+  <a href="#" class="scrollup"></a>
+  </div>
 <div class="wrap-body">
 
 	
@@ -141,13 +146,11 @@
 		</div> 
 	</div>
 </section>
-
+	<%@ include file="footer2.jsp" %>
 <!--////////////////////////////////////Footer-->
-<%@ include file="footer2.jsp" %>
 
- <div class="fixed-footer">
-  <a href="#" class="scrollup"></a>
-  </div>
+
+
 
 	<!-- js -->
 	

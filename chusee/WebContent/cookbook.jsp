@@ -1507,7 +1507,7 @@ $("img.imgLoad").imgLoad();
 //搜索
 $("#search").click(function(){var q=$("#q").val().replace(/\s+/g,"").replace("　","");window.location.href='https://home.meishichina.com/search/'+(q==""?'':q+'/')});$("#q").keydown(function(e){if(e.keyCode==13)$("#search").click()});
 </script>
-<div class="fixed-footer" style="left: 1179.5px; right: auto; bottom: 10px;"><a href="javascript:;" title="点击返回页面顶部" onclick="window.scrollTo(0,0);" class="fixed-footer-go" style="display: none;">
+<div class="fixed-footer" style="left: 1400.5px; right: auto; bottom: 10px;"><a href="javascript:;" title="点击返回页面顶部" onclick="window.scrollTo(0,0);" class="fixed-footer-go" style="display: none;">
 </a><div class="fixed-footer-weixin"><div class="fixed-footer-weixin-inner"><span>厨色手机客户端</span></div></div></div>
 <script src="images/cookbook/slider2.js" type="text/javascript"></script>
 <script type="text/javascript">
