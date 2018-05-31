@@ -23,8 +23,21 @@ top:-38px;
 }
 
 
+.scrollup {
+    position: fixed;
+    width: 82px;
+    height: 82px;
+    bottom: 0px;
+    right: 20px;
+    z-index: 102410;
+    /* background: #CF6A14; */
+    background: url(//static.meishichina.com/v6/img/wap_a/gotop.png) no-repeat scroll center center/58px 58px;
+}
+
   </style>  
-  
+  <div class="fixed-footer">
+  <a href="#" class="scrollup"></a>
+  </div>
 <script src="js/jquery1.js"></script>
 <script src="js/bootstrap1.min.js"></script>
 <script src="js/jquery1.fancybox.pack.js"></script>

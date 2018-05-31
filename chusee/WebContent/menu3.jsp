@@ -48,6 +48,7 @@ a.navbar-brand:before {
     left: 0;
     bottom: -42px;
 }
+
 </style>
 </head>
 <body>
@@ -93,7 +94,7 @@ a.navbar-brand:before {
 	</section>
 	
 </div>
-<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+
 <!-- javascript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->

@@ -40,7 +40,7 @@
 	<!-- footer -->
 <link href="css/bootstrap.min.css" rel="stylesheet" />
 <link href="css/style2.css" rel="stylesheet" />
-    
+
 </head>
 <body style="background: url(#FFFFFF)">
 <%@ include file="menu3.jsp" %>
@@ -80,8 +80,25 @@
 <%@ include file="footer2.jsp" %>
 
 	<!-- js -->
+	  <div class="fixed-footer">
+  <a href="#" class="scrollup"></a>
+  </div>
 	<script src="js/classie.js"></script>
 	<script src="js/demo.js"></script>
-	
+	    <style>
+    
+    .scrollup {
+    position: fixed;
+    width: 82px;
+    height: 82px;
+    bottom: 0px;
+    right: 20px;
+    z-index: 102410;
+    /* background: #CF6A14; */
+    background: url(//static.meishichina.com/v6/img/wap_a/gotop.png) no-repeat scroll center center/58px 58px;
+}
+    
+    
+    </style>
 </div>
 </body></html>

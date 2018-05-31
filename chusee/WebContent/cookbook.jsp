@@ -16,7 +16,7 @@
 </head>
 <body>
 
-  
+  <%@ include file="menu3.jsp" %>
 
 <!-- 主框架 -->
 <div class="wrap">
@@ -1491,28 +1491,11 @@
 <style type="text/css">
 .footer-area{padding:10px 0}.footer-area .w{padding-top:10px;border-top:1px solid #e8e8e8}.footer-area a{color:#666}.footer-area a:hover{color:#ff6767}.ft1{clear:none;float:left;font-size:11px;color:#666;width:680px;padding-top:10px}.ft1 .c3b{color:#c90;font-size:14px;font-weight:700;margin-bottom:6px}.ft1 .c3b a{color:#f50}.ft1 .c3c{color:#aaa;font-size:12px;margin-bottom:6px}.ft2,.ft3,.ft4{clear:none;float:right;text-align:center}.ft3{margin:0 25px}
 </style>
-<div id="J_footer_box" class="footer-area clear">
-<div class="w">
-	<div class="ft1">
-		<p class="c3b"><a target="_blank" href="https://www.meishichina.com/" title="厨色 - 让吃更美好">厨色 - 让吃更美好！</a></p>
-		<p class="c3c">
-<a target="_blank" title="菜谱" href="https://home.meishichina.com/recipe.html">菜谱</a> · 
-<a target="_blank" title="食材" href="https://www.meishichina.com/YuanLiao/">食材</a> · 
-<a target="_blank" title="美食魔方" href="https://www.meishichina.com/mofang/">魔方</a> · 
-<a target="_blank" href="https://www.meishichina.com/minisite/red/" title="关于我们">关于我们</a> · 
-<a target="_blank" href="https://www.meishichina.com/minisite/red/contact/" title="联系我们">联系我们</a> · 
-<a target="_blank" href="https://www.meishichina.com/minisite/red/joinus/" title="加入我们">加入我们</a> · 
-<a target="_blank" href="https://www.meishichina.com/minisite/red/copyright/" title="服务声明">服务声明</a> · 
-<a target="_blank" href="https://www.meishichina.com/minisite/red/links/" title="友情链接">友情链接</a> · 
-<a target="_blank" href="https://www.meishichina.com/minisite/red/sitemap/" title="网站地图">网站地图</a> · 
-<a target="_blank" title="移动应用" href="https://www.meishichina.com/Mobile/">移动应用</a>
-</p>
-		<p>© 2004-2018 厨色 保留所有权利 - 京ICP证090244号</p>
-	</div>
-	
-	
-</div>
-</div>
+
+
+<%@ include file="footer2.jsp" %>
+
+
 <!-- 引用全站js -->
 <script src="js/push.js"></script><script src="js/hm.js"></script><script type="text/javascript" src="images/cookbook/all.js"></script>
 <script type="text/javascript" src="js/get_num.js"></script>
@@ -1523,7 +1506,9 @@ msc.user.init();
 $("img.imgLoad").imgLoad();
 //搜索
 $("#search").click(function(){var q=$("#q").val().replace(/\s+/g,"").replace("　","");window.location.href='https://home.meishichina.com/search/'+(q==""?'':q+'/')});$("#q").keydown(function(e){if(e.keyCode==13)$("#search").click()});
-</script><div class="fixed-footer" style="left: 1179.5px; right: auto; bottom: 10px;"><a href="javascript:;" title="点击返回页面顶部" onclick="window.scrollTo(0,0);" class="fixed-footer-go" style="display: none;"></a><div class="fixed-footer-weixin"><div class="fixed-footer-weixin-inner"><span>厨色手机客户端</span></div></div></div>
+</script>
+<div class="fixed-footer" style="left: 1179.5px; right: auto; bottom: 10px;"><a href="javascript:;" title="点击返回页面顶部" onclick="window.scrollTo(0,0);" class="fixed-footer-go" style="display: none;">
+</a><div class="fixed-footer-weixin"><div class="fixed-footer-weixin-inner"><span>厨色手机客户端</span></div></div></div>
 <script src="images/cookbook/slider2.js" type="text/javascript"></script>
 <script type="text/javascript">
 var sudoSlider = $("#home_index_slider").sudoSlider({speed:600,slideCount:3,movecount:3,prevHtml:'<a class="prevBtn" href="javascript:void(0);"><i>&nbsp;</i></a>',nextHtml:'<a class="nextBtn" href="javascript:void(0);"><i>&nbsp;</i></a>',continuous: true});
