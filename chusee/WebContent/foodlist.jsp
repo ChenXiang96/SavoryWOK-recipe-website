@@ -8,11 +8,11 @@
 <script
 	src="js/pubads_impl_rendering_207.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>烤鸡翅的做法_菜谱_美食天下</title>
+<title>烤鸡翅的做法_菜谱_厨色</title>
 <meta name="keywords"
 	content="烤鸡翅,烤鸡翅的做法,烤鸡翅的家常做法,烤鸡翅怎么做,烤鸡翅的做法步骤,烤鸡翅的最正宗做法,烤鸡翅怎么做好吃">
 <meta name="description"
-	content="美食天下通过图文并茂的方式，手把手教你烤鸡翅如何做才美味，并详细说明烤鸡翅烹制所用佐料时间和窍门，包括烤鸡翅营养价值和最适宜食用方法等揭秘。">
+	content="厨色通过图文并茂的方式，手把手教你烤鸡翅如何做才美味，并详细说明烤鸡翅烹制所用佐料时间和窍门，包括烤鸡翅营养价值和最适宜食用方法等揭秘。">
 <meta name="renderer" content="webkit">
 <meta http-equiv="mobile-agent"
 	content="format=xhtml; url=https://m.meishichina.com/recipe/399056/">
@@ -50,202 +50,11 @@
 	href="css/share_style0_16.css">
 </head>
 <body>
-	<div class="top-bar" id="J_top_bar">
-		<ul class="bar-left left">
-			<li><a title="美食天下" href="https://www.meishichina.com/"
-				target="_blank" class="top_bar_logo"><i>美食天下</i>首页</a></li>
-			<li><a title="菜谱"
-				href="https://home.meishichina.com/recipe.html" target="_blank">菜谱</a></li>
-			<li><a title="食材" href="https://www.meishichina.com/YuanLiao/"
-				target="_blank">食材</a></li>
-			<li><a title="健康" href="https://www.meishichina.com/Health/"
-				target="_blank">健康</a></li>
-			<li><a title="专题" href="https://www.meishichina.com/mofang/"
-				target="_blank">专题</a></li>
-			<li><a title="社区" href="https://home.meishichina.com/"
-				target="_blank">社区</a></li>
-			<li class="top_bar_more"><a href="javascript:void(0);">更多</a>
-				<div>
-					<a title="话题" href="https://home.meishichina.com/pai.html"
-						target="_blank">话题</a> <a title="活动"
-						href="https://home.meishichina.com/event/" target="_blank">活动</a>
-					<a title="珍选" href="https://zhen.meishichina.com/" target="_blank">珍选</a>
-					<a title="烘焙" href="https://hongbei.meishichina.com/"
-						target="_blank">烘焙</a> <a title="母婴"
-						href="https://mamapai.meishichina.com/" target="_blank">母婴</a>
-				</div></li>
-		</ul>
-		<div id="bar_search" class="left">
-			<span>搜索</span> <input placeholder="输入菜谱、食材..." type="text">
-			<a href="javascript:void(0);">搜索</a>
-			<form action="https://home.meishichina.com/search/" method="post"
-				target="_blank"></form>
-		</div>
-		<a href="https://www.meishichina.com/Mobile/" target="_blank"
-			class="nr3"><img
-			src="images/foodimg/nr3.png"
-			width="18" height="18">客户端
-			<div class="code">
-				<img
-					src="images/foodimg/msc_app.png"><br>
-				下载客户端<br> 把百万菜谱存到手机
-			</div> </a>
-		<div class="right" id="J_top_bar_user">
-			<ul class="clear bar-info right bar-noLogin" id="J_barUser">
-				<li class="bar-tips bar-sign-tips" id="J_barSignTips"><i
-					class="arrow"></i><b class="arrow"></b><a href="javascript:;"
-					class="close">×</a>签到即可参加 0元购</li>
-				<li class="bar-tips bar-message-tips" id="J_barMessageTips"><i
-					class="arrow"></i><b class="arrow"></b><a href="javascript:;"
-					class="close">×</a>
-				<p>
-						<span></span>条新消息, <a
-							href="https://member.meishichina.com/center/privately_list/"
-							class="J_tips_look" target="_blank">查看</a>
-					</p>
-					<p>
-						<span></span>条通知, <a
-							href="https://member.meishichina.com/center/my_notice_list/"
-							class="J_tips_look" target="_blank">查看</a>
-					</p></li>
-				<li class="bar-item bar-loading images-loading bar-link"></li>
-				<li class="bar-login J_down bar-item"><div class="bar-text">
-						<a href="javascript:void(0);" class="bar-loginreg J_barLogin">登录/注册</a>
-					</div>
-					<div class="bar-box bar-box-reg">
-						<ul>
-							<li class="bar-box-item-0"><a target="_blank"
-								href="https://home.meishichina.com/meishi2.php?ac=wechatlogin&amp;op=login"><img
-									src="images/foodimg/nir3.png"
-									width="24" height="24">微信登录</a></li>
-							<li class="bar-box-item-1"><a target="_blank"
-								href="https://home.meishichina.com/meishi2.php?ac=qqlogin&amp;op=login"><img
-									src="images/foodimg/nir1.png"
-									width="24" height="24">QQ登录</a></li>
-							<li class="bar-box-item-2"><a target="_blank"
-								href="https://home.meishichina.com/meishi2.php?ac=sinalogin"><img
-									src="images/foodimg/nir2.png"
-									width="24" height="24">微博登录</a></li>
-						</ul>
-					</div></li>
-				<li class="bar-center J_down bar-item"><div class="bar-text">
-						会员中心<i class="arrow"></i>
-					</div>
-					<div class="bar-box">
-						<ul>
-							<li class="bar-box-item-0"><a href="#" class="J_barLogin">会员中心</a></li>
-							<li><a href="#" class="J_barLogin">我的主页</a></li>
-						</ul>
-					</div></li>
-				<li class="bar-user J_down bar-item"><div class="bar-text">
-						<div class="bar-text-userName" id="J_barUserName"></div>
-						<i class="arrow"></i>
-					</div>
-					<div class="bar-box">
-						<ul>
-							<li class="bar-box-item-0 bar-box-item-fav"></li>
-							<li class="bar-box-item-1"><a title="管理中心"
-								href="https://member.meishichina.com/center/" target="_blank">管理</a></li>
-							<li class="bar-box-item-2"><a title="私信"
-								href="https://member.meishichina.com/center/privately_list/"
-								target="_blank" id="privately_list">私信<span></span></a></li>
-							<li class="bar-box-item-3"><a title="通知"
-								href="https://member.meishichina.com/center/my_notice_list/"
-								target="_blank" id="my_notice_list">通知<span></span></a></li>
-							<li class="bar-box-item-4"><a title="退出" href="#"
-								class="J_barExit">退出</a></li>
-						</ul>
-					</div></li>
-				<li class="bar-add J_down bar-item"><div class="bar-text">
-						<img
-							src="images/foodimg/nr1.png"
-							width="18" height="18">发布
-					</div>
-					<div class="bar-box">
-						<ul>
-							<li class="bar-box-item-0"><a
-								href="https://member.meishichina.com/center/recipe-add/"
-								target="_blank" class="J_barLogin">发菜谱</a></li>
-							<li class="bar-box-item-1"><a
-								href="https://member.meishichina.com/center/pai-add/"
-								target="_blank" class="J_barLogin">发话题</a></li>
-						</ul>
-					</div></li>
-				<li class="bar-item bar-sign J_down" id="J_barSign"><a
-					href="javascript:void(0);" class="bar-sign-text J_barLogin"><img
-						src="images/foodimg/nr2.png"
-						width="18" height="18">签到有礼</a>
-				<div class="bar-sign-box">
-						<h3>
-							签到 <b>0</b> 天
-						</h3>
-						<p>
-							<b>0</b>
-						</p>
-						<a target="_blank"
-							href="https://home.meishichina.com/event/lottery/">去抽奖</a>
-					</div></li>
-			</ul>
-		</div>
-	</div>
+
+<%@ include file="menu.jsp" %>
+
 	<!-- logo+nav -->
-	<div class="w logo_wrap2">
-		<div class="logo_inner left">
-			<a href="https://www.meishichina.com/" title="美食天下">美食天下</a>
-		</div>
-		<div class="logo_current left">
-			<h1>
-				<a href="https://home.meishichina.com/recipe.html" title="菜谱">菜谱</a>
-			</h1>
-		</div>
-		<div class="logo_search right">
-			<div class="searchBox J_search">
-				<a href="javascript:;" title="搜索"
-					class="search_Btn J_searchBTN right" id="search">搜索</a><input
-					id="q" class="search_Text J_searchTxt right" type="text">
-			</div>
-		</div>
-		<div class="logo_nav">
-			<a href="https://home.meishichina.com/recipe.html">菜谱首页<i></i><b></b></a>
-			<a class="on" href="https://home.meishichina.com/recipe-type.html">分类<i></i><b></b></a>
-			<a href="https://home.meishichina.com/collect-list-type-recipe.html">菜单<i></i><b></b></a>
-			<a href="https://home.meishichina.com/show-top-type-recipe.html">排行<i></i><b></b></a>
-			<span
-				style="float: left; height: 18px; margin: 23px 4px 0; border-right: 1px solid #ddd;"></span>
-			<a target="_blank" href="https://www.meishichina.com/YuanLiao/"
-				title="食材">食材</a> <a target="_blank"
-				href="https://www.meishichina.com/YuanLiao/gongxiao/" title="食疗食补">食疗食补</a>
-		</div>
-	</div>
-	<div class="nav_wrap2">
-		<ul>
-			<li><a href="https://home.meishichina.com/recipe-type.html">全部</a></li>
-			<li><a title="热菜"
-				href="https://home.meishichina.com/recipe/recai/">热菜</a></li>
-			<li><a title="凉菜"
-				href="https://home.meishichina.com/recipe/liangcai/">凉菜</a></li>
-			<li><a title="汤羹"
-				href="https://home.meishichina.com/recipe/tanggeng/">汤羹</a></li>
-			<li><a title="主食"
-				href="https://home.meishichina.com/recipe/zhushi/">主食</a></li>
-			<li><a title="小吃"
-				href="https://home.meishichina.com/recipe/xiaochi/">小吃</a></li>
-			<li><a title="西餐"
-				href="https://home.meishichina.com/recipe/xican/">西餐</a></li>
-			<li><a title="烘焙"
-				href="https://home.meishichina.com/recipe/hongbei/">烘焙</a></li>
-			<li><a title="饮品"
-				href="https://home.meishichina.com/recipe/yinpin/">饮品</a></li>
-			<li><a title="零食"
-				href="https://home.meishichina.com/recipe/lingshi/">零食</a></li>
-			<li><a title="泡酱腌菜"
-				href="https://home.meishichina.com/recipe/jiangpaoyancai/">泡酱腌菜</a></li>
-			<li><a title="自制食材"
-				href="https://home.meishichina.com/recipe/zizhishicai/">自制食材</a></li>
-			<li><a title="最新菜谱"
-				href="https://home.meishichina.com/recipe-list.html">最新菜谱</a></li>
-			<li id="navlist" class="right"><a class="navlist_a"
-				href="javascript:void(0);">浏览全部菜谱<i></i><b></b></a>
+	
 			<div id="navlist_sub">
 					<div>
 						<h5>主食/小吃/饮品</h5>
@@ -493,7 +302,7 @@
 					title="家常菜谱做法" target="_blank">家常菜谱</a> &nbsp; <a
 					href="https://m.meishichina.com/" title="手机菜谱" target="_blank">手机菜谱</a>
 			</ins>
-			您的位置：<a title="美食天下" href="https://www.meishichina.com/">美食天下</a>
+			您的位置：<a title="厨色" href="https://www.meishichina.com/">厨色</a>
 			&gt; <a title="菜谱" href="https://home.meishichina.com/recipe.html">菜谱</a>
 			&nbsp;&gt;&nbsp; <a title="小吃"
 				href="https://home.meishichina.com/recipe/xiaochi/" target="_blank">小吃</a>&nbsp;&nbsp;
@@ -705,7 +514,7 @@
 
 
 						<div class="recipeTip mt16">
-							来自 美食天下 <a
+							来自 厨色<a
 								href="https://home.meishichina.com/space-10244347.html"
 								target="_blank">一米阳光612</a> 的作品
 						</div>
@@ -722,7 +531,7 @@
 
 
 
-						<p class="mt10 copyright">*本菜谱为作者独家发布于美食天下，禁止其他平台或个人转载。</p>
+						<p class="mt10 copyright">*本菜谱为作者独家发布于厨色，禁止其他平台或个人转载。</p>
 
 						<div class="recipeArction mt10 clear">
 							<ul class="collect_da">
@@ -757,50 +566,8 @@
 
 						</div>
 
-						<div class="clear mt20">
-							<!-- 美食天下内容页左幅300x250 -->
-							<div id="div-gpt-ad-1508681717585-0"
-								style="height: 250px; width: 300px; float: left">
-								<script>
-									googletag.cmd
-											.push(function() {
-												googletag
-														.display('div-gpt-ad-1508681717585-0');
-											});
-								</script>
-								<div
-									id="google_ads_iframe_/1103991/美食天下内容页左幅300x250_0__container__"
-									style="border: 0pt none;">
-									<iframe id="google_ads_iframe_/1103991/美食天下内容页左幅300x250_0"
-										title="3rd party ad content"
-										name="google_ads_iframe_/1103991/美食天下内容页左幅300x250_0"
-										scrolling="no" marginwidth="0" marginheight="0"
-										style="border: 0px none; vertical-align: bottom;" srcdoc=""
-										width="300" height="250" frameborder="0"></iframe>
-								</div>
-							</div>
-							<!-- 美食天下内容页右幅300x250 -->
-							<div id="div-gpt-ad-1508681717585-1"
-								style="height: 250px; width: 300px; float: right">
-								<script>
-									googletag.cmd
-											.push(function() {
-												googletag
-														.display('div-gpt-ad-1508681717585-1');
-											});
-								</script>
-								<div
-									id="google_ads_iframe_/1103991/美食天下内容页右幅300x250_0__container__"
-									style="border: 0pt none;">
-									<iframe id="google_ads_iframe_/1103991/美食天下内容页右幅300x250_0"
-										title="3rd party ad content"
-										name="google_ads_iframe_/1103991/美食天下内容页右幅300x250_0"
-										scrolling="no" marginwidth="0" marginheight="0"
-										style="border: 0px none; vertical-align: bottom;" srcdoc=""
-										width="300" height="250" frameborder="0"></iframe>
-								</div>
-							</div>
-						</div>
+			
+		
 
 						<div class="mt20">
 							<iframe
@@ -951,27 +718,8 @@
 
 			<div class="space_right">
 				<!-- 右侧 -->
-				<!-- 美食天下菜谱页右侧一(首屏)300x250 -->
-				<div id="div-gpt-ad-1508681717585-2"
-					style="height: 250px; width: 300px;">
-					<script>
-						googletag.cmd.push(function() {
-							googletag.display('div-gpt-ad-1508681717585-2');
-						});
-					</script>
-					<div
-						id="google_ads_iframe_/1103991/美食天下菜谱页右侧一(首屏)300x250_0__container__"
-						style="border: 0pt none;">
-						<iframe id="google_ads_iframe_/1103991/美食天下菜谱页右侧一(首屏)300x250_0"
-							title="3rd party ad content"
-							name="google_ads_iframe_/1103991/美食天下菜谱页右侧一(首屏)300x250_0"
-							scrolling="no" marginwidth="0" marginheight="0"
-							style="border: 0px none; vertical-align: bottom;" srcdoc=""
-							width="300" height="250" frameborder="0"></iframe>
-					</div>
-				</div>
-
-
+				<!-- 厨色菜谱页右侧一(首屏)300x250 -->
+			
 				<div id="getRecipeDetailPaiandHealth" ingredient="JiChi">
 					<div class="ui_title mt20 clear">
 						<div class="ui_title_wrap">
@@ -1079,26 +827,7 @@
 
 
 
-				<!-- 美食天下菜谱页右侧二300x250 -->
-				<div id="div-gpt-ad-1508681717585-3"
-					style="height: 250px; width: 300px; margin-top: 20px">
-					<script>
-						googletag.cmd.push(function() {
-							googletag.display('div-gpt-ad-1508681717585-3');
-						});
-					</script>
-					<div
-						id="google_ads_iframe_/1103991/美食天下菜谱页右侧二300x250_0__container__"
-						style="border: 0pt none;">
-						<iframe id="google_ads_iframe_/1103991/美食天下菜谱页右侧二300x250_0"
-							title="3rd party ad content"
-							name="google_ads_iframe_/1103991/美食天下菜谱页右侧二300x250_0"
-							scrolling="no" marginwidth="0" marginheight="0"
-							style="border: 0px none; vertical-align: bottom;" srcdoc=""
-							width="300" height="250" frameborder="0"></iframe>
-					</div>
-				</div>
-
+			
 
 				<div class="ui_title mt20 clear">
 					<div class="ui_title_wrap">
@@ -1148,25 +877,7 @@
 
 				<div class="mt20" id="smnbk"></div>
 
-				<div id="div-gpt-ad-1508681717585-4"
-					style="height: 510px; width: 300px; margin: 0px; position: fixed; top: 40px; left: 0px;"
-					class="keyshow">
-					<script>
-						googletag.cmd.push(function() {
-							googletag.display('div-gpt-ad-1508681717585-4');
-						});
-					</script>
-					<div
-						id="google_ads_iframe_/1103991/美食天下菜谱页右侧(悬浮)300x250_0__container__"
-						style="border: 0pt none;">
-						<iframe id="google_ads_iframe_/1103991/美食天下菜谱页右侧(悬浮)300x250_0"
-							title="3rd party ad content"
-							name="google_ads_iframe_/1103991/美食天下菜谱页右侧(悬浮)300x250_0"
-							scrolling="no" marginwidth="0" marginheight="0"
-							style="border: 0px none; vertical-align: bottom;" srcdoc=""
-							width="300" height="510" frameborder="0"></iframe>
-					</div>
-				</div>
+			
 
 
 			</div>
@@ -1232,51 +943,8 @@
 	margin: 0 25px
 }
 </style>
-	<div id="J_footer_box" class="footer-area clear">
-		<div class="w">
-			<div class="ft1">
-				<p class="c3b">
-					<a target="_blank" href="https://www.meishichina.com/"
-						title="美食天下 - 让吃更美好">美食天下 - 让吃更美好！</a>
-				</p>
-				<p class="c3c">
-					<a target="_blank" title="菜谱"
-						href="https://home.meishichina.com/recipe.html">菜谱</a> · <a
-						target="_blank" title="食材"
-						href="https://www.meishichina.com/YuanLiao/">食材</a> · <a
-						target="_blank" title="美食魔方"
-						href="https://www.meishichina.com/mofang/">魔方</a> · <a
-						target="_blank" href="https://www.meishichina.com/minisite/red/"
-						title="关于我们">关于我们</a> · <a target="_blank"
-						href="https://www.meishichina.com/minisite/red/contact/"
-						title="联系我们">联系我们</a> · <a target="_blank"
-						href="https://www.meishichina.com/minisite/red/joinus/"
-						title="加入我们">加入我们</a> · <a target="_blank"
-						href="https://www.meishichina.com/minisite/red/copyright/"
-						title="服务声明">服务声明</a> · <a target="_blank"
-						href="https://www.meishichina.com/minisite/red/links/"
-						title="友情链接">友情链接</a> · <a target="_blank"
-						href="https://www.meishichina.com/minisite/red/sitemap/"
-						title="网站地图">网站地图</a> · <a target="_blank" title="移动应用"
-						href="https://www.meishichina.com/Mobile/">移动应用</a>
-				</p>
-				<p>© 2004-2018 美食天下 保留所有权利 - 京ICP证090244号</p>
-			</div>
-			<div class="ft4">
-				<img class="imgLoad"
-					src="images/foodimg/weixin.png"
-					title="微信公众号">微信公众号
-			</div>
-			<div class="ft3">
-				<img class="imgLoad"
-					src="images/foodimg/msc_app.png"
-					title="手机客户端" width="82">手机客户端
-			</div>
-
-
-		</div>
-	</div>
-	<!-- 引用全站js -->
+	<%@ include file="footer2.jsp" %>
+	
 	<script type="text/javascript"
 		src="js/all3.js"></script>
 	<script type="text/javascript"
@@ -1308,7 +976,7 @@
 			style="display: none;"></a>
 		<div class="fixed-footer-weixin">
 			<div class="fixed-footer-weixin-inner">
-				<span>美食天下手机客户端</span>
+				<span>厨色手机客户端</span>
 			</div>
 		</div>
 	</div>
