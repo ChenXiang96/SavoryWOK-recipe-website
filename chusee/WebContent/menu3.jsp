@@ -36,6 +36,18 @@ header .navbar {
     padding: 10px 0;
     height: 110px;
 }
+a.navbar-brand:before {
+    content: '';
+    z-index: 99;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 87px solid transparent;
+    border-right: 92px solid transparent;
+    border-top: 42px solid #81c402;
+    left: 0;
+    bottom: -42px;
+}
 </style>
 </head>
 <body>
@@ -53,7 +65,7 @@ header .navbar {
                     </button>
                     <a class="navbar-brand" href="index.html">
                      
-                    <img src="img/logo.png" alt="logo"/></a>
+                    <img src="img/lo1.png" alt="logo"/></a>
                 </div>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
