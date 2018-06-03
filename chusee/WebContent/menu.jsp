@@ -67,7 +67,7 @@ top:-38px;
                     <ul class="nav navbar-nav">
                         <li class="active"><a  href="${ pageContext.request.contextPath}/index">主页</a></li> 
 						<li><a href="cookbook.jsp">菜谱</a></li>
-						<li><a href="location.jsp">食材</a></li>
+						<li><a href="location.jsp">周边</a></li>
                         <li><a href="archive.jsp">甄选</a></li>
                         <li><a href="${ pageContext.request.contextPath}/myHealth">健康</a></li>
                         <li><a href="reservation.jsp">专题</a></li>
