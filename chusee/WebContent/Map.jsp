@@ -4,6 +4,8 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	  
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/main.css" />
 	<style type="text/css">
 		body, html {width: 100%;height: 100%;margin:0;font-family:"微软雅黑";}
 		#allmap{width:100%;height:500px;}
@@ -19,17 +21,27 @@
 	
 	<div id="r-result">
 	 
-	        请搜索城市名称和美食名称(空格隔开): 
-	  
-	    <input id="Name" name="name1" type="text" style="width:100px; margin-right:10px;" />
-		<input type="button" value="查询" onclick="theLocation()" />
-    
+       
+	    <form class="f1">
+	    
+	    <input id="Name" name="name1" type="text" style="width:150px; margin-right:10px;" />
+		<input type="button" value="查询" onclick="theLocation()" class="btn btn-brand pill"/>
+      </form>
 	    
 	</div>
   
 	
 </body>
 </html>
+<style>
+  .f1{
+ 
+  margin-left:250px;
+  height:20px;
+  }
+
+
+</style>
 <script type="text/javascript">
 	// 百度地图API功能
 	var map = new BMap.Map("allmap");  
