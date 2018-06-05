@@ -45,7 +45,7 @@
 </div>
 <!-- logo+nav -->
 
-<div class="logo_wrap2">
+<!-- <div class="logo_wrap2">
 	<div class="logo_inner left">
 		<a href="https://www.meishichina.com/" title="美食天下">厨色</a>
 	</div>
@@ -69,7 +69,7 @@
 <a href="https://zhen.meishichina.com/pince/" >品测<i></i><b></b></a>
 </div>
 
-</div>
+</div> -->
 
 
 <div class="nav_wrap2">
