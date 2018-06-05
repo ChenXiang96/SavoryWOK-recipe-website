@@ -34,6 +34,7 @@ top:-38px;
     background: url(//static.meishichina.com/v6/img/wap_a/gotop.png) no-repeat scroll center center/58px 58px;
 }
 
+
   </style>  
   <div class="fixed-footer">
   <a href="#" class="scrollup"></a>
@@ -73,6 +74,8 @@ top:-38px;
                         <li><a href="reservation.jsp">专题</a></li>
                         <li><a href="staff.jsp">社区</a></li>
                         <li><a href="gallery.jsp">话题</a></li>
+                         <li><a href="${ pageContext.request.contextPath}/userLogin">登录</a></li>
+                          <li><a href="${ pageContext.request.contextPath}/userRegister">注册</a></li>
                     </ul>
                 </div>
             </div>

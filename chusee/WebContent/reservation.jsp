@@ -346,7 +346,7 @@
 
 
 	<!--////////////////////////////////////Footer-->
-<%@ include file="footer2.jsp" %>
+<%@ include file="footer3.jsp" %>
 
  <div class="fixed-footer">
   <a href="#" class="scrollup"></a>

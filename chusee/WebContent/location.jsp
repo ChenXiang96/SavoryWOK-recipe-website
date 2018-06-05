@@ -77,7 +77,7 @@
 </section>
 
 <!--////////////////////////////////////Footer-->
-<%@ include file="footer2.jsp" %>
+<%@ include file="footer3.jsp" %>
 
 	<!-- js -->
 	  <div class="fixed-footer">

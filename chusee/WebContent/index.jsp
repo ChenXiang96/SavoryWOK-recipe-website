@@ -363,7 +363,7 @@ position: absolute;
 <!--////////////////////////////////////Footer-->
 
 	
-	<%@ include file="footer2.jsp" %>
+	<%@ include file="footer3.jsp" %>
 	<!-- js -->
 	<script src="js/classie.js"></script>
 	<script src="js/demo.js"></script>

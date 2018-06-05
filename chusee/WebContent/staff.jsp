@@ -146,7 +146,7 @@
 		</div> 
 	</div>
 </section>
-	<%@ include file="footer2.jsp" %>
+<%@ include file="footer3.jsp" %>
 <!--////////////////////////////////////Footer-->
 
 

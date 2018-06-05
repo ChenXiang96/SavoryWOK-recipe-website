@@ -48,6 +48,13 @@ a.navbar-brand:before {
     left: 0;
     bottom: -42px;
 }
+#inner-headline h2.pageTitle {
+    color: #81C402;
+    padding: 5px 15px;
+    text-align: right;
+    display: block;
+    font-size: 25px;
+}
 
 </style>
 </head>

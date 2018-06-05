@@ -26,6 +26,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/slide.css">
 	<link rel="stylesheet" href="css/menu.css">
+	
 	<!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<!--[if lt IE 8]>
@@ -201,7 +202,7 @@ a {
 </section>
 
 <!--////////////////////////////////////Footer-->
-<%@ include file="footer2.jsp" %>
+<%@ include file="footer3.jsp" %>
  <div class="fixed-footer">
   <a href="#" class="scrollup"></a>
   </div>
@@ -242,5 +243,10 @@ a {
 	  });
 	});
 	</script>
+	
+	
+	
+	
+	
 </div>
 </body></html>
