@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html><head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>会员中心 - 美食天下</title>
+<title>会员中心 - 厨色</title>
 <meta name="renderer" content="webkit">
 <meta name="keywords" content="">
 <meta name="description" content="">
@@ -17,7 +17,7 @@
 <body>
 <div class="top-bar" id="J_top_bar">
 <ul class="bar-left left">
-<li><a title="美食天下" href="https://www.meishichina.com/" target="_blank" class="top_bar_logo"><i>美食天下</i>首页</a></li>
+<li><a title="厨色" href="https://www.meishichina.com/" target="_blank" class="top_bar_logo"><i>厨色</i>首页</a></li>
       <li> <a title="菜谱" href="https://home.meishichina.com/recipe.html" target="_blank">菜谱</a></li>
       <li> <a title="食材" href="https://www.meishichina.com/YuanLiao/" target="_blank">食材</a></li>
 	  <li> <a title="珍选" href="https://zhen.meishichina.com/" target="_blank">珍选</a></li>
@@ -135,7 +135,7 @@
 
         <div class="home_right mt30">
 
-            <a title="美食天下客户端" href="https://www.meishichina.com/Mobile/" target="_blank">
+            <a title="厨色客户端" href="https://www.meishichina.com/Mobile/" target="_blank">
                 <img src="images/center/appc.jpg" class="imgLoad" style="display: block;" width="300" height="120">
             </a>
 

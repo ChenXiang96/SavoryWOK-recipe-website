@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>4款养生食物，夏季安神少不了_专题_美食天下</title>
+<title>4款养生食物，夏季安神少不了_专题_厨色</title>
 <meta name="keywords" content="4款养生食物，夏季安神少不了,安神,夏季,烦躁,静心">
 <meta name="description" content="安神,夏季,烦躁,静心">
 <meta name="renderer" content="webkit">
@@ -15,7 +15,7 @@
 <body>
 <div class="top-bar" id="J_top_bar">
 <ul class="bar-left left">
-<li><a title="美食天下" href="https://www.meishichina.com/" target="_blank" class="top_bar_logo"><i>美食天下</i>首页</a></li>
+<li><a title="厨色" href="https://www.meishichina.com/" target="_blank" class="top_bar_logo"><i>厨色</i>首页</a></li>
 <li> <a title="菜谱" href="https://home.meishichina.com/recipe.html" target="_blank">菜谱</a></li>
 <li> <a title="食材" href="https://www.meishichina.com/YuanLiao/" target="_blank">食材</a></li>
 <li> <a title="珍选" href="https://zhen.meishichina.com/" target="_blank">珍选</a></li>
@@ -366,7 +366,7 @@
 <div id="J_footer_box" class="footer-area clear">
 <div class="w">
 <div class="ft1">
-<p class="c3b"><a target="_blank" href="https://www.meishichina.com/" title="美食天下 - 让吃更美好">美食天下 - 让吃更美好！</a></p>
+<p class="c3b"><a target="_blank" href="https://www.meishichina.com/" title="厨色 - 让吃更美好">厨色 - 让吃更美好！</a></p>
 <p class="c3c">
 <a target="_blank" title="菜谱" href="https://home.meishichina.com/recipe.html">菜谱</a> ·
 <a target="_blank" title="食材" href="https://www.meishichina.com/YuanLiao/">食材</a> ·
@@ -379,7 +379,7 @@
 <a target="_blank" href="https://www.meishichina.com/minisite/red/sitemap/" title="网站地图">网站地图</a> ·
 <a target="_blank" title="移动应用" href="https://www.meishichina.com/Mobile/">移动应用</a>
 </p>
-<p>© 2004-2018 美食天下 保留所有权利 - 京ICP证090244号</p>
+<p>© 2004-2018 厨色 保留所有权利 - 京ICP证090244号</p>
 </div>
 <div class="ft4">
 <img class="imgLoad" src="images/zhuantixiangqing/weixin.png" title="微信公众号">微信公众号
@@ -390,7 +390,7 @@
 </div>
 </div>
 <script type="text/javascript" src="js/all.js"></script>
-<script type="text/javascript" src="js/all2.js"></script><div class="fixed-footer" style="left: 1179.5px; right: auto; bottom: 10px;"><a href="javascript:;" title="点击返回页面顶部" onclick="window.scrollTo(0,0);" class="fixed-footer-go" style="display: inline;"></a><div class="fixed-footer-weixin"><div class="fixed-footer-weixin-inner"><span>美食天下手机客户端</span></div></div></div>
+<script type="text/javascript" src="js/all2.js"></script><div class="fixed-footer" style="left: 1179.5px; right: auto; bottom: 10px;"><a href="javascript:;" title="点击返回页面顶部" onclick="window.scrollTo(0,0);" class="fixed-footer-go" style="display: inline;"></a><div class="fixed-footer-weixin"><div class="fixed-footer-weixin-inner"><span>厨色手机客户端</span></div></div></div>
 <script type="text/javascript">
 var inTimer,outTimer;
 //绑定鼠标进入事件

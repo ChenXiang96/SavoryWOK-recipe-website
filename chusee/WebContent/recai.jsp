@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>热菜菜谱大全_做法大全_带有图文步骤_菜谱_美食天下</title>    
+<title>热菜菜谱大全_做法大全_带有图文步骤_菜谱_厨色</title>    
 <meta name="keywords" content="热菜菜谱大全,热菜做法大全,热菜怎么做好吃,家常热菜菜谱做法大全" />
 <meta name="description" content="热菜的家常做法图片大全,热菜怎么做好吃,家常热菜的最简单制作方法等菜谱相关信息,让初学者也能烹饪出好味道。" />
 <meta name="renderer" content="webkit">
@@ -21,7 +21,7 @@
 
 <div class="top-bar" id="J_top_bar">
 <ul class="bar-left left">
-<li><a title="美食天下" href="https://www.meishichina.com/" target="_blank" class="top_bar_logo"><i>美食天下</i>首页</a></li>
+<li><a title="厨色" href="https://www.meishichina.com/" target="_blank" class="top_bar_logo"><i>厨色</i>首页</a></li>
       <li> <a title="菜谱" href="https://home.meishichina.com/recipe.html" target="_blank">菜谱</a></li>
       <li> <a title="食材" href="https://www.meishichina.com/YuanLiao/" target="_blank">食材</a></li>
 	  <li> <a title="珍选" href="https://zhen.meishichina.com/" target="_blank">珍选</a></li>
@@ -48,7 +48,7 @@
 
 <div class="w logo_wrap2">
 	<div class="logo_inner left">
-		<a href="https://www.meishichina.com/" title="美食天下">美食天下</a>
+		<a href="https://www.meishichina.com/" title="厨色">厨色</a>
 	</div>
 	<div class="logo_current left">
 		
@@ -338,13 +338,13 @@
 </div>
 
 <div class="mt20 clear">
-	<!-- 美食天下内容页左幅300x250 -->
+	<!-- 厨色内容页左幅300x250 -->
 	<div id='div-gpt-ad-1415071902366-0' style='width:300px; height:250px;float:left;'>
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-0'); });
 </script>
 </div>
-<!-- 美食天下内容页右幅300x250 -->
+<!-- 厨色内容页右幅300x250 -->
 <div id='div-gpt-ad-1415071902366-1' style='width:300px; height:250px;float:right'>
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-1'); });
@@ -359,7 +359,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-1');
 
 <div class="space_right">
 
-<!-- 美食天下菜谱频道右侧一(首屏)300x250 -->
+<!-- 厨色菜谱频道右侧一(首屏)300x250 -->
 <div id='div-gpt-ad-1415071902366-2' style='width:300px; height:250px;'>
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-2'); });
@@ -380,7 +380,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-2');
 	</ul>
 </div>
 
-<!-- 美食天下菜谱频道右侧二300x250 -->
+<!-- 厨色菜谱频道右侧二300x250 -->
 <div id='div-gpt-ad-1415071902366-3' style='width:300px; height:250px;margin-top:20px;' class="smnbk">
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-3'); });
@@ -388,7 +388,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-3');
 </div>
 
 
-<!-- 美食天下菜谱频道右侧(悬浮)300x250 -->
+<!-- 厨色菜谱频道右侧(悬浮)300x250 -->
 <div id='div-gpt-ad-1415071902366-4' style='width:300px; height:250px;margin-top:20px;' class="keyshow">
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-4'); });
@@ -408,7 +408,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-4');
 <div id="J_footer_box" class="footer-area clear">
 <div class="w">
 	<div class="ft1">
-		<p class="c3b"><a target="_blank" href="https://www.meishichina.com/" title="美食天下 - 让吃更美好">美食天下 - 让吃更美好！</a></p>
+		<p class="c3b"><a target="_blank" href="https://www.meishichina.com/" title="厨色 - 让吃更美好">厨色 - 让吃更美好！</a></p>
 		<p class="c3c">
 <a target="_blank" title="菜谱" href="https://home.meishichina.com/recipe.html">菜谱</a> · 
 <a target="_blank" title="食材" href="https://www.meishichina.com/YuanLiao/">食材</a> · 
@@ -421,7 +421,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-4');
 <a target="_blank" href="https://www.meishichina.com/minisite/red/sitemap/" title="网站地图">网站地图</a> · 
 <a target="_blank" title="移动应用" href="https://www.meishichina.com/Mobile/">移动应用</a>
 </p>
-		<p>&copy; 2004-2018 美食天下 保留所有权利 - 京ICP证090244号</p>
+		<p>&copy; 2004-2018 厨色 保留所有权利 - 京ICP证090244号</p>
 	</div>
 	<div class="ft4">
 		<img class="imgLoad" src="//static.meishichina.com/v6/img/footer/weixin.png" title="微信公众号">微信公众号

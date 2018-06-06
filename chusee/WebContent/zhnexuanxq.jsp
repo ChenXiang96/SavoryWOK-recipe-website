@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>和其正凉茶饮料_珍选_美食天下</title>              
+<title>和其正凉茶饮料_珍选_厨色</title>              
 <meta name="keywords" content="和其正凉茶饮料,和其正凉茶饮料怎么样,和其正凉茶饮料选购,和其正和其正凉茶饮料" />
 <meta name="description" content="Top 11. 传统配方，真材实料，中草药萃取，原汁原味，醇厚口感，清火气，养元气。" />
 <meta name="renderer" content="webkit">
@@ -20,7 +20,7 @@
 <body>
 <div class="top-bar" id="J_top_bar">
 <ul class="bar-left left">
-<li><a title="美食天下" href="https://www.meishichina.com/" target="_blank" class="top_bar_logo"><i>美食天下</i>首页</a></li>
+<li><a title="厨色" href="https://www.meishichina.com/" target="_blank" class="top_bar_logo"><i>厨色</i>首页</a></li>
       <li> <a title="菜谱" href="https://home.meishichina.com/recipe.html" target="_blank">菜谱</a></li>
       <li> <a title="食材" href="https://www.meishichina.com/YuanLiao/" target="_blank">食材</a></li>
 	  <li> <a title="珍选" href="https://zhen.meishichina.com/" target="_blank">珍选</a></li>
@@ -47,7 +47,7 @@
 
 <!-- <div class="logo_wrap2">
 	<div class="logo_inner left">
-		<a href="https://www.meishichina.com/" title="美食天下">厨色</a>
+		<a href="https://www.meishichina.com/" title="厨色">厨色</a>
 	</div>
 	<div class="logo_current left">
 		<h1><a href="https://zhen.meishichina.com/" title="珍选">珍选</a></h1>
@@ -321,13 +321,13 @@
 
 
 <div class="mt30 clear" id="div-gpt-ad">
-<!-- <!-- 美食天下内容页左幅300x250 -->
+<!-- <!-- 厨色内容页左幅300x250 -->
 <div id='div-gpt-ad-1415071902366-0' style='width:300px; height:250px;float:left;'>
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-0'); });
 </script>
 </div>
-美食天下内容页右幅300x250
+厨色内容页右幅300x250
 <div id='div-gpt-ad-1415071902366-1' style='width:300px; height:250px;float:right'>
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-1'); });
@@ -499,7 +499,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-2');
 					</li>
 									</ul>
 			</div>
-<!-- 美食天下菜谱频道右侧二300x250 -->
+<!-- 厨色菜谱频道右侧二300x250 -->
 <div id='div-gpt-ad-1415071902366-3' style='width:300px; height:250px;margin-top:20px;'  >
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-3'); });
@@ -559,7 +559,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-3');
 				</ul>
 			</div>
 
-<!-- 美食天下菜谱频道右侧(悬浮)300x250 -->
+<!-- 厨色菜谱频道右侧(悬浮)300x250 -->
 <div id='div-gpt-ad-1415071902366-4' style='width:300px; height:250px;margin-top:20px;' class="keyshow">
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-4'); });
@@ -577,7 +577,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-4');
 <div id="J_footer_box" class="footer-area clear">
 <div class="w">
 	<div class="ft1">
-		<p class="c3b"><a target="_blank" href="https://www.meishichina.com/" title="美食天下 - 让吃更美好">美食天下 - 让吃更美好！</a></p>
+		<p class="c3b"><a target="_blank" href="https://www.meishichina.com/" title="厨色 - 让吃更美好">厨色 - 让吃更美好！</a></p>
 		<p class="c3c">
 <a target="_blank" title="菜谱" href="https://home.meishichina.com/recipe.html">菜谱</a> · 
 <a target="_blank" title="食材" href="https://www.meishichina.com/YuanLiao/">食材</a> · 
@@ -590,7 +590,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-4');
 <a target="_blank" href="https://www.meishichina.com/minisite/red/sitemap/" title="网站地图">网站地图</a> · 
 <a target="_blank" title="移动应用" href="https://www.meishichina.com/Mobile/">移动应用</a>
 </p>
-		<p>&copy; 2004-2018 美食天下 保留所有权利 - 京ICP证090244号</p>
+		<p>&copy; 2004-2018 厨色 保留所有权利 - 京ICP证090244号</p>
 	</div>
 	<div class="ft4">
 		<img class="imgLoad" src="images/zhenxuanxq/weixin.png" title="微信公众号">微信公众号
