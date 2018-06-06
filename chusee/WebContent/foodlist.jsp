@@ -51,7 +51,7 @@
 </head>
 <body>
 
-<%@ include file="menu.jsp" %>
+<%@ include file="menu3.jsp" %>
 
 	<!-- logo+nav -->
 	

@@ -69,6 +69,7 @@
 </head>
 <body style="background: url(#2D2D2D)">
 
+		<%@ include file="menu3.jsp" %>
  <div class="fixed-footer" style="background-color:red" >
   <a href="#" class="scrollup"></a>
   </div>
@@ -78,7 +79,6 @@
 
 <section id="container" class="sub-page">
 	<div class="wrap-container zerogrid">
-		<%@ include file="menu3.jsp" %>
 		<div id="main-content">
 			<div class="wrap-content">
 			   <div class="list">

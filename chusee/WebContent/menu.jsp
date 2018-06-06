@@ -33,7 +33,9 @@ top:-38px;
     /* background: #CF6A14; */
     background: url(//static.meishichina.com/v6/img/wap_a/gotop.png) no-repeat scroll center center/58px 58px;
 }
-
+.imgl{
+margin-left:40px;
+}
 
   </style>  
   <div class="fixed-footer">
@@ -62,7 +64,7 @@ top:-38px;
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="img/lo1.png" alt="logo"/></a>
+                    <a class="" href="index.html"><img class="imgl" src="${pageContext.request.contextPath}/images/lo.png" alt="logo"/></a>
                 </div>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">

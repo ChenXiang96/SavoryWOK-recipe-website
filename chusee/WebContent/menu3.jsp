@@ -55,7 +55,11 @@ a.navbar-brand:before {
     display: block;
     font-size: 25px;
 }
+.imgl{
 
+margin-left:40px;
+margin-top:35px;
+}
 </style>
 </head>
 <body>
@@ -71,9 +75,9 @@ a.navbar-brand:before {
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">
+                    <a class="" href="index.html">
                      
-                    <img src="img/lo1.png" alt="logo"/></a>
+                    <img class="imgl" src="${pageContext.request.contextPath}/images/lo.png" alt="logo"/></a>
                 </div>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">

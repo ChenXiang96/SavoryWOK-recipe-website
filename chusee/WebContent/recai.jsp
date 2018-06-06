@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>热菜菜谱大全_做法大全_带有图文步骤_菜谱_美食天下</title>    
+<title>热菜菜谱大全_做法大全_带有图文步骤_菜谱_厨色</title>    
 <meta name="keywords" content="热菜菜谱大全,热菜做法大全,热菜怎么做好吃,家常热菜菜谱做法大全" />
 <meta name="description" content="热菜的家常做法图片大全,热菜怎么做好吃,家常热菜的最简单制作方法等菜谱相关信息,让初学者也能烹饪出好味道。" />
 <meta name="renderer" content="webkit">
@@ -19,10 +19,8 @@
 </head>
 <body>
 
-<!-- logo+nav -->
 
   <%@ include file="menu3.jsp" %>
-
 	
 <!-- 主框架 -->
 	<div class="wrap">
@@ -284,13 +282,13 @@
 </div>
 
 <div class="mt20 clear">
-	<!-- 美食天下内容页左幅300x250 -->
+	<!-- 厨色内容页左幅300x250 -->
 	<div id='div-gpt-ad-1415071902366-0' style='width:300px; height:250px;float:left;'>
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-0'); });
 </script>
 </div>
-<!-- 美食天下内容页右幅300x250 -->
+<!-- 厨色内容页右幅300x250 -->
 <div id='div-gpt-ad-1415071902366-1' style='width:300px; height:250px;float:right'>
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-1'); });
@@ -305,7 +303,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-1');
 
 <div class="space_right">
 
-<!-- 美食天下菜谱频道右侧一(首屏)300x250 -->
+<!-- 厨色菜谱频道右侧一(首屏)300x250 -->
 <div id='div-gpt-ad-1415071902366-2' style='width:300px; height:250px;'>
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-2'); });
@@ -326,7 +324,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-2');
 	</ul>
 </div>
 
-<!-- 美食天下菜谱频道右侧二300x250 -->
+<!-- 厨色菜谱频道右侧二300x250 -->
 <div id='div-gpt-ad-1415071902366-3' style='width:300px; height:250px;margin-top:20px;' class="smnbk">
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-3'); });
@@ -334,7 +332,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-3');
 </div>
 
 
-<!-- 美食天下菜谱频道右侧(悬浮)300x250 -->
+<!-- 厨色菜谱频道右侧(悬浮)300x250 -->
 <div id='div-gpt-ad-1415071902366-4' style='width:300px; height:250px;margin-top:20px;' class="keyshow">
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-4'); });
@@ -347,7 +345,10 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-4');
 	</div>
 
 	
+
   <%@ include file="footer2.jsp" %>
+
+
 <!-- 引用全站js -->
 <script type="text/javascript" src="//static.meishichina.com/v6/js/lib/all.js?v1=20170218"></script>
 <script type="text/javascript" src="//static.meishichina.com/v6/js/lib/get_num.js"></script>

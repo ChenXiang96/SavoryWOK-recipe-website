@@ -42,6 +42,8 @@
 <link href="css/style2.css" rel="stylesheet" />
 </head>
 <body  style="background: url(#2D2D2D)">
+<%@ include file="menu3.jsp" %>
+		
 <div class="wrap-body">
 	<!--///////////////////////////////////////Top-->
 	
@@ -56,7 +58,6 @@ a {
 <!--////////////////////////////////////Container-->
 <section id="container" class="sub-page">
 	<div class="wrap-container zerogrid">
-		<%@ include file="menu3.jsp" %>
 		<div id="main-content" class="col-2-3">
 			<div class="wrap-content">
 				<article>
