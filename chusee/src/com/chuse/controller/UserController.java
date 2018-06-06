@@ -33,7 +33,12 @@ public class UserController{
 	public User getUser(){
 		return new User();
 	}
-	
+	//用户退出
+		@RequestMapping("/quit")
+		public String quit(HttpSession session,HttpServletRequest request){
+			request.getSession().invalidate();
+			return "redirect:index";
+		}
 	
 	
 	//用户登录

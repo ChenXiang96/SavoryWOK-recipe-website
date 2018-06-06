@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <link href="css/bootstrap.min.css" rel="stylesheet" />
 
 <link href="css/flexslider1.css" rel="stylesheet" />
@@ -76,8 +76,31 @@ margin-left:40px;
                         <li><a href="reservation.jsp">专题</a></li>
                         <li><a href="staff.jsp">社区</a></li>
                         <li><a href="gallery.jsp">话题</a></li>
-                         <li><a href="${ pageContext.request.contextPath}/userLogin">登录</a></li>
-                          <li><a href="${ pageContext.request.contextPath}/userRegister">注册</a></li>
+                        
+                    <c:if test="${sessionScope.user == null}">
+				       <li class="nav navbar-nav">
+				 	     <a href="${ pageContext.request.contextPath }/userLogin">登录 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a>
+				       </li>
+				       <li class="nav navbar-nav"><a href="${ pageContext.request.contextPath }/userRegister">注册</a>
+				       </li>
+			        </c:if>
+			        
+			        
+			        <c:if test="${sessionScope.user != null}">
+				<li class="nav navbar-nav">
+					<a><c:out value="${user.username }"/></a>
+					
+				</li>
+				<li class="nav navbar-nav">
+				<a>|</a>
+				</li>
+				<li class="nav navbar-nav"><a
+					href="${ pageContext.request.contextPath }/quit">退出</a>
+				</li>
+			</c:if>
+                       
+                
+                        
                     </ul>
                 </div>
             </div>
@@ -96,6 +119,7 @@ margin-left:40px;
 					<p>Doloribus omnis minus temporibus perferendis ipsa</p>  
                 </div>
               </li>
+              
               <li>
                 <img src="img/slides/2.jpg" alt="" />
                 <div class="flex-caption container">
@@ -103,6 +127,60 @@ margin-left:40px;
 <p>Doloribus omnis minus temporibus perferendis ipsa</p>  					
                 </div>
               </li>
+              
+                <li>
+                <img src="img/slides/3.jpg" alt="" />
+                <div class="flex-caption container">
+                    <h3>Best Time-out</h3> 
+<p>Doloribus omnis minus temporibus perferendis ipsa</p>  					
+                </div>
+              </li>
+              
+                <li>
+                <img src="img/slides/4.jpg" alt="" />
+                <div class="flex-caption container">
+                    <h3>Best Time-out</h3> 
+<p>Doloribus omnis minus temporibus perferendis ipsa</p>  					
+                </div>
+              </li>
+              
+                <li>
+                <img src="img/slides/5.jpg" alt="" />
+                <div class="flex-caption container">
+                    <h3>Best Time-out</h3> 
+<p>Doloribus omnis minus temporibus perferendis ipsa</p>  					
+                </div>
+              </li>
+              <li>
+                <img src="img/slides/6.jpg" alt="" />
+                <div class="flex-caption container">
+                    <h3>Best Time-out</h3> 
+<p>Doloribus omnis minus temporibus perferendis ipsa</p>  					
+                </div>
+              </li>
+              <li>
+                <img src="img/slides/7.jpg" alt="" />
+                <div class="flex-caption container">
+                    <h3>Best Time-out</h3> 
+<p>Doloribus omnis minus temporibus perferendis ipsa</p>  					
+                </div>
+              </li>
+              <li>
+                <img src="img/slides/8.jpg" alt="" />
+                <div class="flex-caption container">
+                    <h3>Best Time-out</h3> 
+<p>Doloribus omnis minus temporibus perferendis ipsa</p>  					
+                </div>
+              </li>
+              
+              <li>
+                <img src="img/slides/9.jpg" alt="" />
+                <div class="flex-caption container">
+                    <h3>Best Time-out</h3> 
+<p>Doloribus omnis minus temporibus perferendis ipsa</p>  					
+                </div>
+              </li>
+              
             </ul>
         </div>
 	<!-- end slider -->
