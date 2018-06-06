@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 
 <head>
@@ -89,6 +90,28 @@ margin-top:35px;
                         <li><a href="reservation.jsp">专题</a></li>
                         <li><a href="staff.jsp">社区</a></li>
                         <li><a href="gallery.jsp">话题</a></li>
+                    
+                    
+                    <c:if test="${sessionScope.user == null}">
+				       <li class="nav navbar-nav">
+				 	     <a href="${ pageContext.request.contextPath }/userLogin">登录 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a>
+				       </li>
+				       <li class="nav navbar-nav"><a href="${ pageContext.request.contextPath }/userRegister">注册</a>
+				       </li>
+			        </c:if>
+			        
+			       <c:if test="${sessionScope.user != null}">
+				     <li class="nav navbar-nav">
+					   <a><c:out value="${user.username }"/></a>
+					 </li>
+				     <li class="nav navbar-nav">
+				      <a>|</a>
+			       	 </li>
+				    <li class="nav navbar-nav"><a
+					  href="${ pageContext.request.contextPath }/quit">退出</a>
+				    </li>
+			      </c:if>
+                        
                     </ul>
                 </div>
             </div>
