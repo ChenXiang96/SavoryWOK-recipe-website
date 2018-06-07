@@ -17,7 +17,7 @@ public interface ProductDao extends BaseDao<Product>{
 
 	public List<Product> findByCategorySecondCategoryCid(Integer cid,Integer page);
 	
-	public List<Product> findByCategoryCid(Integer cid,Integer page);
+
 
 	public Integer CountPageProductFromCategory(Integer cid);
 	

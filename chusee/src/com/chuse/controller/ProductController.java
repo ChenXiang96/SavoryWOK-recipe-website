@@ -32,21 +32,39 @@ public class ProductController {
 		
 		return "health"; 
 	}
+
 	//首页中点击一级分类查询商品
-		@RequestMapping(value="/findByCid/{cid}/{page}")
-		public String findByCid(@PathVariable("cid") Integer cid,@PathVariable("page") Integer page
+	@RequestMapping(value="/findByCid/{cid}/{page}")
+	public String findByCid(@PathVariable("cid") Integer cid,@PathVariable("page") Integer page
+			,Map<String,Object> map){
+		List<Product> products = productService.findByCid(cid, page);
+		Integer count = productService.CountPageProductFromCategory(cid);
+		if(page > count){
+			page = 1;
+		}
+		map.put("products", products);
+		//把当前的页数存放到map中
+		map.put("page", page);
+		//总共有多少页
+		map.put("count",count);
+		map.put("cid", cid);
+		return "recai";
+	}
+	//根据二级分类查询商品
+		@RequestMapping(value="findByCsid/{csid}/{page}")	
+		public String findByCsid(@PathVariable("csid") Integer csid,@PathVariable("page") Integer page
 				,Map<String,Object> map){
-			List<Product> products = productService.findByCid(cid, page);
-			Integer count = productService.CountPageProductFromCategory(cid);
+			Integer count = productService.CountPageProductFromCategorySecond(csid);
 			if(page > count){
 				page = 1;
 			}
+			List<Product> products = productService.findByCsid(csid, page);
 			map.put("products", products);
 			//把当前的页数存放到map中
 			map.put("page", page);
 			//总共有多少页
 			map.put("count",count);
-			map.put("cid", cid);
+			map.put("csid", csid);
 			return "recai";
 		}
 		

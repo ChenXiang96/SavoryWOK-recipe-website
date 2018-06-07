@@ -13,10 +13,12 @@ public interface ProductService {
 	public Product findByPid(Integer pid);
 	//根据一级分类查询菜品
 	public List<Product> findByCid(Integer cid,Integer page);
-
+	//根据二级分类查询商品
+    public List<Product> findByCsid(Integer csid, Integer page);
 	//返回一级有多少页的数据
 	public Integer CountPageProductFromCategory(Integer cid);
 	//查找最热的商品6条
 	public List<Product> findHot();
+	public Integer CountPageProductFromCategorySecond(Integer csid);
 
 }

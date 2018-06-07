@@ -19,14 +19,21 @@ public class ProductServiceImpl implements ProductService{
 	@Resource
 	private ProductDao productDao;
 
-
-	
 	public Integer CountPageProductFromCategory(Integer cid) {
 		Integer count = productDao.CountPageProductFromCategory(cid);
 		return (count % 12 == 0 ? (count / 12) : (count / 12 + 1));
 	}
+
+	public Integer CountPageProductFromCategorySecond(Integer csid) {
+		Integer count = productDao.CountPageProductFromCategorySecond(csid);
+		return (count % 12 == 0 ? (count / 12) : (count / 12 + 1));
+	}
+
 	public List<Product> findByCid(Integer cid, Integer page) {
-		return productDao.findByCategoryCid(cid, page);
+		return productDao.findByCategorySecondCategoryCid(cid, page);
+	}
+	public List<Product> findByCsid(Integer csid, Integer page) {
+		return productDao.findByCategorySecondCsid(csid, page);
 	}
 	
 	
@@ -40,4 +47,7 @@ public class ProductServiceImpl implements ProductService{
 	}
 
 
+	public List<Product> findNew() {
+		return productDao.findNew();
+	}
 }

@@ -13,6 +13,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
+import com.chuse.entity.CategorySecond;
+
 @Table(name="category")
 @Entity
 public class Category implements Serializable{
@@ -23,8 +25,9 @@ public class Category implements Serializable{
 	@Id
 	private Integer cid;
 	private String cname;
-	
+	@OrderBy(value="csid")
 	@OneToMany(fetch=FetchType.EAGER,mappedBy="category")
+	private Set<CategorySecond> categorySeconds = new HashSet<CategorySecond>();
 
 	
 	public Integer getCid() {
@@ -38,6 +41,12 @@ public class Category implements Serializable{
 	}
 	public void setCname(String cname) {
 		this.cname = cname;
+	}
+	public Set<CategorySecond> getCategorySeconds() {
+		return categorySeconds;
+	}
+	public void setCategorySeconds(Set<CategorySecond> categorySeconds) {
+		this.categorySeconds = categorySeconds;
 	}
 
 	

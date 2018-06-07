@@ -10,6 +10,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.chuse.entity.Category;
+import com.chuse.entity.CategorySecond;
+
 /**
  * 
  * Product代表显示的菜品
@@ -23,38 +26,30 @@ public class Product implements java.io.Serializable{
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Id
    private Integer pid;
+   private Integer is_hot;
    private String pname;
    private String image;
    private String pdesc;
    private Date pdate;
-   
-   
-   //一级分类的外键：使用一级分类的对象
-   @JoinColumn(name="cid")
-   @ManyToOne
-   public String getPcontent() {
-	return pcontent;
-}
-public void setPcontent(String pcontent) {
-	this.pcontent = pcontent;
-}
-private String pcontent;
-   private Integer is_hot;
-   
-   
-   
-   
-public Integer getIs_hot() {
-	return is_hot;
-}
-public void setIs_hot(Integer is_hot) {
-	this.is_hot = is_hot;
-}
+   private String pcontent;
+
+	// 二级分类的外键:使用二级分类的对象.
+	@JoinColumn(name="csid")
+	@ManyToOne
+	private CategorySecond categorySecond;
+
+
 public Integer getPid() {
 	return pid;
 }
 public void setPid(Integer pid) {
 	this.pid = pid;
+}
+public Integer getIs_hot() {
+	return is_hot;
+}
+public void setIs_hot(Integer is_hot) {
+	this.is_hot = is_hot;
 }
 public String getPname() {
 	return pname;
@@ -80,7 +75,18 @@ public Date getPdate() {
 public void setPdate(Date pdate) {
 	this.pdate = pdate;
 }
-
+public String getPcontent() {
+	return pcontent;
+}
+public void setPcontent(String pcontent) {
+	this.pcontent = pcontent;
+}
+public CategorySecond getCategorySecond() {
+	return categorySecond;
+}
+public void setCategorySecond(CategorySecond categorySecond) {
+	this.categorySecond = categorySecond;
+}
 
 
 

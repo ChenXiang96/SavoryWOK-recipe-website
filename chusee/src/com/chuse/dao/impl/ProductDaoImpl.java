@@ -18,21 +18,22 @@ import com.chuse.entity.Product;
 @SuppressWarnings("all")
 public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao{
 	
-	final String selecthql = "select p.pid,p.image,"
-	 + "p.pdate,p.pdesc,p.pname ";
+	final String selecthql = "select p.pid,p.image,p.is_hot,"
+	 + "p.pdate,p.pdesc,p.pname,p.pcontent ";
 	
 	public Integer CountPageProductFromCategory(Integer cid) {
-		String hql = "select count(*) from Product p, Category c ";
-		hql += "where p.category.cid = c.cid and c.cid = ?";
+		String hql = "select count(*) from Product p, Category c, CategorySecond cs ";
+		hql += "where p.categorySecond.csid = cs.csid and cs.category.cid = c.cid and c.cid = ?";
 		return count(hql, cid);
 	}
+
 
 	public Integer CountPageProductFromCategorySecond(Integer csid) {
 		String hql = "select count(*) from Product p ,CategorySecond cs ";
 		hql += "where p.categorySecond.csid = cs.csid and cs.csid = ?";
 		return count(hql, csid);
 	}
-
+	
 	public Integer CountProduct() {
 		String hql = "select count(*) from Product";
 		return count(hql);
@@ -45,26 +46,17 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao{
 		return Query(cid, page, hql);
 	}
 	
-	public List<Product> findByCategoryCid(Integer cid,
-			Integer page) {
-		String hql = selecthql + "from Product p,Category c";
-		hql += "where p.category.cid = c.cid and c.cid = ?";
-		return Query(cid, page, hql);
-	}
-    
-	
-	
-	
 	public List<Product> findByCategorySecondCsid(Integer csid, Integer page) {
 		String hql = selecthql + "from Product p ,CategorySecond cs ";
 		hql += "where p.categorySecond.csid = cs.csid and cs.csid = ?";
 		return Query(csid, page, hql);
 	}
-	
-	private List<Product> Query(Integer cid, Integer page,String hql){
+    
+
+	private List<Product> Query(Integer csid, Integer page,String hql){
 		int rows = 12;
 		Query query = this.getCurrentSession().createQuery(hql);
-		query.setParameter(0, cid);
+		query.setParameter(0, csid);
 		List list= query.setFirstResult((page - 1) * rows).setMaxResults(rows).list();
 		
 		List<Product> products = new ArrayList<Product>();
@@ -76,9 +68,12 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao{
 			product.setPid(pid);
 			product.setImage((String)obj[1]);
 			product.setIs_hot((Integer) obj[2]);
-			product.setPdate((Date) obj[4]);
-			product.setPdesc((String) obj[5]);
-			product.setPname((String) obj[6]);
+			
+            product.setPdate((Date) obj[3]);
+			product.setPdesc((String) obj[4]);
+			product.setPname((String) obj[5]);
+			product.setPcontent((String) obj[6]);
+
 		
 			products.add(product);
 		}
@@ -113,5 +108,7 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao{
 		int page1 = page;
 		return find(hql,page1,rows);
 	}
+
+
 
 }
