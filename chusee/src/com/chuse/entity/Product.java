@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -25,6 +27,11 @@ public class Product implements java.io.Serializable{
    private String image;
    private String pdesc;
    private Date pdate;
+   
+   
+   //一级分类的外键：使用一级分类的对象
+   @JoinColumn(name="cid")
+   @ManyToOne
    public String getPcontent() {
 	return pcontent;
 }

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
    <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -324,16 +324,19 @@ position: absolute;
                <div id="main-content">
                         <div class="ui_title">
                            <div class="ui_title_wrap">
-                          <h2 class="on"><a href="javascript:void(0);" class="right2">新秀菜谱</a></h2>
+                         
+                         <!--   <h2 class="on"><a href="javascript:void(0);" class="right2">新秀菜谱</a></h2>
                           <h2><a href="javascript:void(0);" class="right2">一周热门</a></h2>
                           <h2><a href="javascript:void(0);" class="right2">最受欢迎的家常菜</a></h2>
-                          <h3><a title="健康首页" href="//www.meishichina.com/Health/" class="right3" target="_blank">热菜</a></h3>
-                          
-                          <h3><a title="健康首页" href="//www.meishichina.com/Health/" class="right3" target="_blank">凉菜</a></h3>
-                          <h3><a title="健康首页" href="//www.meishichina.com/Health/" class="right3" target="_blank">汤羹</a></h3>
-                          <h3><a title="健康首页" href="//www.meishichina.com/Health/" class="right3" target="_blank">主食</a></h3>
-                          <h3><a title="健康首页" href="//www.meishichina.com/Health/" class="right3" target="_blank">小吃</a></h3>
-                          <h3><a title="健康首页" href="//www.meishichina.com/Health/" class="right3" target="_blank">西餐</a></h3>
+                          -->
+                          <c:forEach items="${sessionScope.cList}" var="c">
+                          <h3>
+                          <a title="健康首页" href="${ pageContext.request.contextPath }/findByCid/<c:out value="${c.cid}"/>/1" class="right3" target="_blank">
+                             <c:out value="${c.cname}"></c:out> 
+                          </a>
+                          </h3>
+                          </c:forEach>
+                       
                            </div>
                         </div>
 			<div class="wrap-content">

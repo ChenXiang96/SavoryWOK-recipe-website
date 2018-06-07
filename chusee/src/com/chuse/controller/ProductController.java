@@ -47,7 +47,7 @@ public class ProductController {
 			//总共有多少页
 			map.put("count",count);
 			map.put("cid", cid);
-			return "productList";
+			return "recai";
 		}
 		
 	//根据菜品pid查询菜品

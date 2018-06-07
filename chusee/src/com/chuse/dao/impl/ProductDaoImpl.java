@@ -22,8 +22,8 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao{
 	 + "p.pdate,p.pdesc,p.pname ";
 	
 	public Integer CountPageProductFromCategory(Integer cid) {
-		String hql = "select count(*) from Product p, Category c, CategorySecond cs ";
-		hql += "where p.categorySecond.csid = cs.csid and cs.category.cid = c.cid and c.cid = ?";
+		String hql = "select count(*) from Product p, Category c ";
+		hql += "where p.category.cid = c.cid and c.cid = ?";
 		return count(hql, cid);
 	}
 
@@ -44,26 +44,47 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao{
 		hql += "where p.categorySecond.csid = cs.csid and cs.category.cid = c.cid and c.cid = ?";
 		return Query(cid, page, hql);
 	}
-
+	
+	public List<Product> findByCategoryCid(Integer cid,
+			Integer page) {
+		String hql = selecthql + "from Product p,Category c";
+		hql += "where p.category.cid = c.cid and c.cid = ?";
+		return Query(cid, page, hql);
+	}
+    
+	
+	
+	
 	public List<Product> findByCategorySecondCsid(Integer csid, Integer page) {
 		String hql = selecthql + "from Product p ,CategorySecond cs ";
 		hql += "where p.categorySecond.csid = cs.csid and cs.csid = ?";
 		return Query(csid, page, hql);
 	}
 	
-	private List<Product> Query(Integer csid, Integer page,String hql){
+	private List<Product> Query(Integer cid, Integer page,String hql){
 		int rows = 12;
 		Query query = this.getCurrentSession().createQuery(hql);
-		query.setParameter(0, csid);
+		query.setParameter(0, cid);
 		List list= query.setFirstResult((page - 1) * rows).setMaxResults(rows).list();
 		
 		List<Product> products = new ArrayList<Product>();
 		Iterator iter = list.iterator();
 		while(iter.hasNext()){
-
+			Object[] obj = (Object[])iter.next();
+			Product product = new Product();
+			int pid = (Integer)obj[0];
+			product.setPid(pid);
+			product.setImage((String)obj[1]);
+			product.setIs_hot((Integer) obj[2]);
+			product.setPdate((Date) obj[4]);
+			product.setPdesc((String) obj[5]);
+			product.setPname((String) obj[6]);
+		
+			products.add(product);
 		}
 		return products;
 	}
+	
 	
 	public List<Product> findHot() {
 		String hql = "from Product p where p.is_hot = 1 ";

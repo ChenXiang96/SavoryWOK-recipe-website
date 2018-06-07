@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!doctype html>
 <html>
 <head>
@@ -262,16 +262,37 @@
 <script type="text/javascript" src="//crayon.meishichina.com/idvmszelzgkcef.js"></script>
 
 <div class="ui-page mt10">
-	<div class="ui-page-inner">
-		<a class='now_page'>1</a>
-<a href="https://home.meishichina.com/recipe/recai/page/2/">2</a>
-<a href="https://home.meishichina.com/recipe/recai/page/3/">3</a>
-<a href="https://home.meishichina.com/recipe/recai/page/4/">4</a>
-<a href="https://home.meishichina.com/recipe/recai/page/5/">5</a>
-<span>...</span>
-<a href="https://home.meishichina.com/recipe/recai/page/2/">下一页</a>
-
-	</div>
+ <div class="ui-page-inner">
+  <c:if test="${cid != null }">
+  <!-- 首页 -->
+  <a class='now_page' href="${pageContext.request.contextPath}/findByCid/${cid}/1"></a>
+  <c:if test="${page != 1}">
+    <a href="${pageContext.request.contextPath}/findByCid/${cid}/<c:out value="${page-1}"/>"></a>
+  </c:if>
+  <c:forEach var="i" begin="1" end="${count }">
+    <span>
+							   <!-- 如果是当前页则不能够点击 -->
+							   <c:if test="${i == page }">
+							    	<span class="currentPage">${page }</span>
+							   </c:if>
+							   <c:if test="${i != page }">
+								 <a href="${pageContext.request.contextPath}/findByCid/${cid}/<c:out value="${i}"/>">
+									<c:out value="${i}" /></a>
+								</c:if>
+	</span>
+     
+  </c:forEach>
+ <!--  <a href="https://home.meishichina.com/recipe/recai/page/2/">2</a>
+  <a href="https://home.meishichina.com/recipe/recai/page/3/">3</a>
+  <a href="https://home.meishichina.com/recipe/recai/page/4/">4</a>
+  <a href="https://home.meishichina.com/recipe/recai/page/5/">5</a>
+   <span>...</span>
+ -->
+ <c:if test="${page !=count }">
+  <a class="nextPage" href="${pageContext.request.contextPath}/findByCid/${cid}/<c:out value="${page+1}"/>">下一页</a>
+ </c:if>
+ </c:if>
+ </div>
 </div>
 
 <div class="mt20 clear">
