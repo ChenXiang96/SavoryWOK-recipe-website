@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+    
     <!DOCTYPE html>
     <html><head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -10,8 +12,8 @@
     <meta http-equiv="mobile-agent" content="format=xhtml; url=https://m.meishichina.com/pai/">
     <link rel="shortcut icon" href="https://static.meishichina.com/v6/img/lib/f.ico">
     <link rel="apple-touch-icon" href="https://static.meishichina.com/v6/img/lib/wapico.png">
-    <link rel="stylesheet" type="text/css" href="css/all.css">
-    <link rel="stylesheet" type="text/css" href="css/pai2.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/all.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/pai2.css">
 </head>
 <body>
 
@@ -176,7 +178,7 @@
  <a class="r_pai-add" target="_blank" href="pinglun.jsp">发布话题</a>
  <div class="mt20">
     <a title="厨色客户端" href="https://www.meishichina.com/Mobile/" target="_blank">
-        <script src="js/push.js"></script><script src="js/hm.js"></script><script>
+        <script src="${pageContext.request.contextPath}/js/push.js"></script><script src="${pageContext.request.contextPath}/js/hm.js"></script><script>
         document.write('<img width="300" height="600" src="//static.meishichina.com/v6/img/blank.gif" data-src="//static.meishichina.com/v6/img/center/r'+Math.floor(Math.random()*5)+'.jpg" class="imgLoad">')
     </script><img src="%E8%AF%9D%E9%A2%98_%E7%BE%8E%E9%A3%9F%E5%A4%A9%E4%B8%8B_files/r4.jpg" class="imgLoad" style="display: block;" width="300" height="600">
 </a>
@@ -193,7 +195,7 @@
 <%@ include file="footer3.jsp" %>
 	
 <!-- 引用全站js -->
-<script type="text/javascript" src="js/all.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/all.js"></script>
 <script type="text/javascript">
     msc.goTop.init();
     msc.user.init();

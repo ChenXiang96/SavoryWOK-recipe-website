@@ -9,11 +9,11 @@
 <meta name="description" content="" />
 <meta name="author" content="" />
 <!-- css -->
-<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet" />
 
-<link href="css/flexslider1.css" rel="stylesheet" />
+<link href="${pageContext.request.contextPath}/css/flexslider1.css" rel="stylesheet" />
 
-<link href="css/style2.css" rel="stylesheet" />
+<link href="${pageContext.request.contextPath}/css/style2.css" rel="stylesheet" />
  
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -88,7 +88,7 @@ margin-top:35px;
                         <li><a href="archive.jsp">甄选</a></li>
                         <li><a href="${ pageContext.request.contextPath}/myHealth">健康</a></li>
                         <li><a href="reservation.jsp">专题</a></li>
-                        <li><a href="community.jsp">社区</a></li>
+                        <li><a href="topic/test">社区</a></li>
                         <li><a href="gallery.jsp">话题</a></li>
                     
                     
@@ -132,15 +132,15 @@ margin-top:35px;
 <!-- javascript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="js/jquery.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.fancybox.pack.js"></script>
-<script src="js/jquery.fancybox-media.js"></script> 
-<script src="js/portfolio/jquery.quicksand.js"></script>
-<script src="js/portfolio/setting.js"></script>
-<script src="js/jquery.flexslider.js"></script>
-<script src="js/animate.js"></script>
-<script src="js/custom.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.easing.1.3.js"></script>
+<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.fancybox.pack.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.fancybox-media.js"></script> 
+<script src="${pageContext.request.contextPath}/js/portfolio/jquery.quicksand.js"></script>
+<script src="${pageContext.request.contextPath}/js/portfolio/setting.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.flexslider.js"></script>
+<script src="${pageContext.request.contextPath}/js/animate.js"></script>
+<script src="${pageContext.request.contextPath}/js/custom.js"></script>
 </body>
 </html>

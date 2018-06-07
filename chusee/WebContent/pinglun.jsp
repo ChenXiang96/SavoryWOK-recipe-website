@@ -33,32 +33,32 @@
 </div>
 
 
-<form action="/center/pai-add/" id="J_form" enctype="multipart/form-data" method="post">
+<form action="topic/test" id="J_form" enctype="multipart/form-data" method="post">
 <div class="mr_edit mr_edit_center clear">
-<ul>
-<li class="low_tip">您的浏览器版本太低，无法使用新版发布话题，请升级。 <a href="#" target="_blank">点击进入老版编辑页</a></li>
-<li>
-<label class="must">上传图片（最多9张）</label><br>
-<div class="J_upload">上传图片
-<input multiple class="J_img" id="J_m_cover" accept="image/png,image/gif,image/jpeg"  type="file">
-</div>
-<span class="img_status" id="multi_cover_status"> </span>
-<div id="cover" class="clear">
-</div>
-</li>
-
-<li>
-<label>加个标题（非必填）</label><br>
-<input id="com_title" name="title" class="inputM" type="text">
-</li>
-
-
-
-<li>
-<label class="must">写话题</label><br>
-<textarea id="J_message" name="message" style="height:300px;"></textarea>
-</li>
-</ul>
+	<ul>
+		<li class="low_tip">您的浏览器版本太低，无法使用新版发布话题，请升级。 <a href="#" target="_blank">点击进入老版编辑页</a></li>
+		<li>
+			<label class="must">上传图片（最多9张）</label><br>
+			<div class="J_upload">上传图片
+				<input multiple class="J_img" id="J_m_cover" accept="image/png,image/gif,image/jpeg"  type="file">
+			</div>
+			<span class="img_status" id="multi_cover_status"> </span>
+			<div id="cover" class="clear">
+			</div>
+		</li>
+		
+		<li>
+			<label>加个标题（非必填）</label><br>
+			<input id="com_title" name="title" class="inputM" type="text">
+		</li>
+		
+		
+		
+		<li>
+			<label class="must">写话题</label><br>
+			<textarea id="J_message" name="message" style="height:300px;"></textarea>
+		</li>
+	</ul>
 
 </div>
 

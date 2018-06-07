@@ -33,15 +33,15 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 	
-	
-	
 	<context:component-scan base-package="com.chuse">   
 	    <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>   
 	</context:component-scan> 
 	<!-- 文件上传 -->
-		
-	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">  
+		<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">  
     <property name="defaultEncoding" value="utf-8"/>  
+    
+	
+    
     <!-- 最大内存大小 -->  
     <property name="maxInMemorySize" value="10240"/>  
     <!-- 最大文件大小，-1为不限制大小 -->  
