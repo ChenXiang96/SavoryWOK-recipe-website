@@ -173,7 +173,7 @@
 </div>
 
 <div class="space_right">
- <a class="r_pai-add" target="_blank" href="https://member.meishichina.com/center/pai-add/">发布话题</a>
+ <a class="r_pai-add" target="_blank" href="pinglun.jsp">发布话题</a>
  <div class="mt20">
     <a title="美食天下客户端" href="https://www.meishichina.com/Mobile/" target="_blank">
         <script src="js/push.js"></script><script src="js/hm.js"></script><script>
