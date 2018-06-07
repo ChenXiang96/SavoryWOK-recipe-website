@@ -29,9 +29,27 @@ public class ProductController {
 		//把最热的10条商品添加到map集合中
 		map.put("hList", productService.findHot());
 		
+		
 		return "health"; 
 	}
-
+	//首页中点击一级分类查询商品
+		@RequestMapping(value="/findByCid/{cid}/{page}")
+		public String findByCid(@PathVariable("cid") Integer cid,@PathVariable("page") Integer page
+				,Map<String,Object> map){
+			List<Product> products = productService.findByCid(cid, page);
+			Integer count = productService.CountPageProductFromCategory(cid);
+			if(page > count){
+				page = 1;
+			}
+			map.put("products", products);
+			//把当前的页数存放到map中
+			map.put("page", page);
+			//总共有多少页
+			map.put("count",count);
+			map.put("cid", cid);
+			return "productList";
+		}
+		
 	//根据菜品pid查询菜品
 	@RequestMapping(value="findByPid/{pid}",method=RequestMethod.GET)
 	public String findByPid(@PathVariable("pid") Integer pid,Map<String,Product> map){

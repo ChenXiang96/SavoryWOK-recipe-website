@@ -27,24 +27,7 @@
 		<div class="w clear">
 		
   <div id="recipeindex_info">
-	  <div id="recipeindex_info_wrap" style="position: static; top: 40px; z-index: 1111; left: 179.5px;">
-		  <div class="ui_title">
-			  <div class="ui_title_wrap clear">
-				  <h3 class="on"><a href="javascript:void(0);" page="2" data="0" order="hot">最新推荐</a></h3>
-				  <h3><a href="javascript:void(0);" page="2" data="0" order="new">最新发布</a></h3>
-				  <h3><a href="javascript:void(0);" page="2" data="102" order="tag">热菜</a></h3>
-				  <h3><a href="javascript:void(0);" page="2" data="202" order="tag">凉菜</a></h3>
-				  <h3><a href="javascript:void(0);" page="2" data="57" order="tag">汤羹</a></h3>
-				  <h3><a href="javascript:void(0);" page="2" data="59" order="tag">主食</a></h3>
-				  <h3><a href="javascript:void(0);" page="2" data="62" order="tag">小吃</a></h3>
-				  <h3><a href="javascript:void(0);" page="2" data="160" order="tag">西餐</a></h3>
-				  <h3><a href="javascript:void(0);" page="2" data="60" order="tag">烘焙</a></h3>
-				  <h3><a href="javascript:void(0);" page="2" data="69" order="tag">自制食材</a></h3>
-				  
-				  <a title="全部分类" class="right" href="https://home.meishichina.com/recipe-type.html">全部分类</a>
-			  </div>
-		  </div>
-	  </div>
+	 
   </div>
 			
 			<div class="space_left">
@@ -52,10 +35,19 @@
 <div class="ui_title">
 			  <div class="ui_title_wrap clear">
 
-<h1 class="on" ><a title="热菜" href="https://home.meishichina.com/recipe/recai/" >热菜</a></h1>
+<!--  <h1 class="on" ><a title="热菜" href="https://home.meishichina.com/recipe/recai/" >热菜</a></h1> -->
+ <h3  class="on"><a href="javascript:void(0);" page="2" data="102" order="tag">热菜</a></h3>
+				  <h3><a href="javascript:void(0);" page="2" data="202" order="tag">凉菜</a></h3>
+				  <h3><a href="javascript:void(0);" page="2" data="57" order="tag">汤羹</a></h3>
+				  <h3><a href="javascript:void(0);" page="2" data="59" order="tag">主食</a></h3>
+				  <h3><a href="javascript:void(0);" page="2" data="62" order="tag">小吃</a></h3>
+				  <h3><a href="javascript:void(0);" page="2" data="160" order="tag">西餐</a></h3>
+				  <h3><a href="javascript:void(0);" page="2" data="60" order="tag">烘焙</a></h3>
+				  <h3><a href="javascript:void(0);" page="2" data="69" order="tag">自制食材</a></h3>
+
 <a  rel="nofollow" href="https://home.meishichina.com/recipe/recai/elite/" class="right ">推荐</a>
 <a  rel="nofollow" href="https://home.meishichina.com/recipe/recai/hot/" class="right ">最热</a>
-<a  href="https://home.meishichina.com/recipe/recai/" class="right  on">最新</a>
+
 
 </div>
 </div>
@@ -67,12 +59,13 @@
  <li data-id="400952">
 					<div class="pic">
 						<a target="_blank" href="https://home.meishichina.com/recipe-400952.html" title="鱼香肉丝">
-														<img width="180" height="180" src="//static.meishichina.com/v6/img/blank.gif" data-src="https://i3.meishichina.com/attachment/recipe/2018/06/05/2018060515281640691299702111.jpg?x-oss-process=style/c320" class="imgLoad">
+						<img width="180" height="180" src="//static.meishichina.com/v6/img/blank.gif" data-src="https://i3.meishichina.com/attachment/recipe/2018/06/05/2018060515281640691299702111.jpg?x-oss-process=style/c320" class="imgLoad">
 						</a>
 					</div>
 					<div class="detail">
 					<h2>
 						<a target="_blank" href="https://home.meishichina.com/recipe-400952.html">鱼香肉丝</a>
+						
 					</h2>
 					<p class="subline"><a target="_blank" href="https://home.meishichina.com/space-10899818.html">匠心传承</a>  </p>
 

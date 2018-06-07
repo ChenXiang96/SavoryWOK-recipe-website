@@ -20,6 +20,14 @@ public class ProductServiceImpl implements ProductService{
 	private ProductDao productDao;
 
 
+	public List<Product> findByCid(Integer cid, Integer page) {
+		return productDao.findByCategorySecondCategoryCid(cid, page);
+	}
+	public Integer CountPageProductFromCategory(Integer cid) {
+		Integer count = productDao.CountPageProductFromCategory(cid);
+		return (count % 12 == 0 ? (count / 12) : (count / 12 + 1));
+	}
+
 	public Product findByPid(Integer pid) {
 		return productDao.findOne(pid);
 	}
