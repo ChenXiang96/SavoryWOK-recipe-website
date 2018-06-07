@@ -3,7 +3,7 @@
     <!DOCTYPE html>
     <html><head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>话题_美食天下</title>
+    <title>话题_厨色</title>
     <meta name="keywords" content="话题">
     <meta name="description" content="话题">
     <meta name="renderer" content="webkit">
@@ -175,7 +175,7 @@
 <div class="space_right">
  <a class="r_pai-add" target="_blank" href="pinglun.jsp">发布话题</a>
  <div class="mt20">
-    <a title="美食天下客户端" href="https://www.meishichina.com/Mobile/" target="_blank">
+    <a title="厨色客户端" href="https://www.meishichina.com/Mobile/" target="_blank">
         <script src="js/push.js"></script><script src="js/hm.js"></script><script>
         document.write('<img width="300" height="600" src="//static.meishichina.com/v6/img/blank.gif" data-src="//static.meishichina.com/v6/img/center/r'+Math.floor(Math.random()*5)+'.jpg" class="imgLoad">')
     </script><img src="%E8%AF%9D%E9%A2%98_%E7%BE%8E%E9%A3%9F%E5%A4%A9%E4%B8%8B_files/r4.jpg" class="imgLoad" style="display: block;" width="300" height="600">
@@ -199,7 +199,7 @@
     msc.user.init();
     $("img.imgLoad").imgLoad();
     $("#search").click(function(){var q=$("#q").val().replace(/\s+/g,"").replace("　","");window.location.href='https://home.meishichina.com/search/'+(q==""?'':q+'/')});$("#q").keydown(function(e){if(e.keyCode==13)$("#search").click()});
-</script><div class="fixed-footer" style="left: 1179.5px; right: auto; bottom: 10px;"><a href="javascript:;" title="点击返回页面顶部" onclick="window.scrollTo(0,0);" class="fixed-footer-go" style="display: none;"></a><div class="fixed-footer-weixin"><div class="fixed-footer-weixin-inner"><span>美食天下手机客户端</span></div></div></div>
+</script><div class="fixed-footer" style="left: 1179.5px; right: auto; bottom: 10px;"><a href="javascript:;" title="点击返回页面顶部" onclick="window.scrollTo(0,0);" class="fixed-footer-go" style="display: none;"></a><div class="fixed-footer-weixin"><div class="fixed-footer-weixin-inner"><span>厨色手机客户端</span></div></div></div>
 <script>
     var inTimer,outTimer;
 //绑定鼠标进入事件
