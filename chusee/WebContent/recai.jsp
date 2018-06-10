@@ -55,207 +55,33 @@
 
 <div class="ui_newlist_1 get_num" id="J_list">
 	<ul>
-
+	<c:forEach var="p" items="${products}">
  <li data-id="400952">
 					<div class="pic">
-						<a target="_blank" href="https://home.meishichina.com/recipe-400952.html" title="鱼香肉丝">
-						<img width="180" height="180" src="//static.meishichina.com/v6/img/blank.gif" data-src="https://i3.meishichina.com/attachment/recipe/2018/06/05/2018060515281640691299702111.jpg?x-oss-process=style/c320" class="imgLoad">
+						<a target="_blank" href="${ pageContext.request.contextPath }/findByPid/<c:out value="${p.pid}"/>">
+						<img width="180" height="180" src="${pageContext.request.contextPath}/<c:out value="${p.image}"/>" data-src="${pageContext.request.contextPath}/<c:out value="${p.image}"/>"  class="imgLoad">
 						</a>
 					</div>
 					<div class="detail">
 					<h2>
-						<a target="_blank" href="https://home.meishichina.com/recipe-400952.html">鱼香肉丝</a>
+						<a target="_blank" href="https://home.meishichina.com/recipe-400952.html"> <c:out value="${p.pname}" /></a>
 						
 					</h2>
 					<p class="subline"><a target="_blank" href="https://home.meishichina.com/space-10899818.html">匠心传承</a>  </p>
 
-						<p class="subcontent">原料：猪里脊肉、川味泡姜泡辣椒、蒜米、白砂糖、保宁醋、鲜味酱油、大葱粒、红花椒、红薯粉、淀粉、鲜汤。</p>
+						<p class="subcontent"><c:out value="${p.pcontent}" /></p>
 						
 						<div class="substatus clear">
 						<span class="get_nums"></span>
 							</div>
 						</div>
 </li>
+</c:forEach>
 		
- <li data-id="400951">
-					<div class="pic">
-						<a target="_blank" href="https://home.meishichina.com/recipe-400951.html" title="芦笋烤冰鱼">
-														<img width="180" height="180" src="//static.meishichina.com/v6/img/blank.gif" data-src="https://i3.meishichina.com/attachment/recipe/2018/06/05/2018060515281635796189724956.jpg?x-oss-process=style/c320" class="imgLoad">
-						</a>
-					</div>
-					<div class="detail">
-					<h2>
-						<a target="_blank" href="https://home.meishichina.com/recipe-400951.html">芦笋烤冰鱼</a>
-					</h2>
-					<p class="subline"><a target="_blank" href="https://home.meishichina.com/space-8819358.html">sourcehe</a>  </p>
 
-						<p class="subcontent">原料：南极冰鱼柳、红辣椒、芦笋、橄榄油、盐、生抽、生姜、鱼露、孜然粉。</p>
-						
-						<div class="substatus clear">
-						<span class="get_nums"></span>
-							</div>
-						</div>
-</li>
+
 		
- <li data-id="400883">
-					<div class="pic">
-						<a target="_blank" href="https://home.meishichina.com/recipe-400883.html" title="红烧排骨">
-														<img width="180" height="180" src="//static.meishichina.com/v6/img/blank.gif" data-src="https://i3.meishichina.com/attachment/recipe/2018/06/05/2018060515281628872589724956.jpg?x-oss-process=style/c320" class="imgLoad">
-						</a>
-					</div>
-					<div class="detail">
-					<h2>
-						<a target="_blank" href="https://home.meishichina.com/recipe-400883.html">红烧排骨</a>
-					</h2>
-					<p class="subline"><a target="_blank" href="https://home.meishichina.com/space-10606182.html">诗韵墨香</a>  </p>
 
-						<p class="subcontent">原料：排骨、油、盐、老抽、料酒、蚝油、冰糖、姜、葱、茴香、橙皮、干椒、八角、开水、香叶。</p>
-						
-						<div class="substatus clear">
-						<span class="get_nums"></span>
-							</div>
-						</div>
-</li>
-		
- <li data-id="397961">
-					<div class="pic">
-						<a target="_blank" href="https://home.meishichina.com/recipe-397961.html" title="番茄四季豆">
-														<img width="180" height="180" src="//static.meishichina.com/v6/img/blank.gif" data-src="https://i3.meishichina.com/attachment/recipe/2018/06/05/2018060515281625959369724956.jpg?x-oss-process=style/c320" class="imgLoad">
-						</a>
-					</div>
-					<div class="detail">
-					<h2>
-						<a target="_blank" href="https://home.meishichina.com/recipe-397961.html">番茄四季豆</a>
-					</h2>
-					<p class="subline"><a target="_blank" href="https://home.meishichina.com/space-230225.html">伊悠悠</a>  </p>
-
-						<p class="subcontent">原料：四季豆、番茄、大蒜子、蕃茄酱、盐。</p>
-						
-						<div class="substatus clear">
-						<span class="get_nums"></span>
-							</div>
-						</div>
-</li>
-		
- <li data-id="400864">
-					<div class="pic">
-						<a target="_blank" href="https://home.meishichina.com/recipe-400864.html" title="剁椒三文鱼头">
-														<img width="180" height="180" src="//static.meishichina.com/v6/img/blank.gif" data-src="https://i3.meishichina.com/attachment/recipe/2018/06/05/2018060515281623311509724956.jpg?x-oss-process=style/c320" class="imgLoad">
-						</a>
-					</div>
-					<div class="detail">
-					<h2>
-						<a target="_blank" href="https://home.meishichina.com/recipe-400864.html">剁椒三文鱼头</a>
-					</h2>
-					<p class="subline"><a target="_blank" href="https://home.meishichina.com/space-10408251.html">燊燊姐</a>  </p>
-
-						<p class="subcontent">原料：三文鱼头、剁椒酱、葱、姜、蒜、豆豉、盐、白胡椒粉、料酒、蒸鱼豉油。</p>
-						
-						<div class="substatus clear">
-						<span class="get_nums"></span>
-							</div>
-						</div>
-</li>
-		
- <li data-id="400489">
-					<div class="pic">
-						<a target="_blank" href="https://home.meishichina.com/recipe-400489.html" title="花生猪手">
-														<img width="180" height="180" src="//static.meishichina.com/v6/img/blank.gif" data-src="https://i3.meishichina.com/attachment/recipe/2018/06/05/2018060515281627599819702111.jpg?x-oss-process=style/c320" class="imgLoad">
-						</a>
-					</div>
-					<div class="detail">
-					<h2>
-						<a target="_blank" href="https://home.meishichina.com/recipe-400489.html">花生猪手</a>
-					</h2>
-					<p class="subline"><a target="_blank" href="https://home.meishichina.com/space-10541710.html">最初的最美❤</a>  </p>
-
-						<p class="subcontent">原料：猪蹄、花生、葱、姜、大料、生抽、老抽、盐、鸡精、大枣、枸杞。</p>
-						
-						<div class="substatus clear">
-						<span class="get_nums"></span>
-							</div>
-						</div>
-</li>
-		
- <li data-id="400512">
-					<div class="pic">
-						<a target="_blank" href="https://home.meishichina.com/recipe-400512.html" title="木耳炒长豆角">
-														<img width="180" height="180" src="//static.meishichina.com/v6/img/blank.gif" data-src="https://i3.meishichina.com/attachment/recipe/2018/06/05/2018060515281619509059724956.jpg?x-oss-process=style/c320" class="imgLoad">
-						</a>
-					</div>
-					<div class="detail">
-					<h2>
-						<a target="_blank" href="https://home.meishichina.com/recipe-400512.html">木耳炒长豆角</a>
-					</h2>
-					<p class="subline"><a target="_blank" href="https://home.meishichina.com/space-10609838.html">凤记美食</a>  </p>
-
-						<p class="subcontent">原料：长豆角、干木耳、油、盐、葱。</p>
-						
-						<div class="substatus clear">
-						<span class="get_nums"></span>
-							</div>
-						</div>
-</li>
-		
- <li data-id="400657">
-					<div class="pic">
-						<a target="_blank" href="https://home.meishichina.com/recipe-400657.html" title="炸茄盒">
-														<img width="180" height="180" src="//static.meishichina.com/v6/img/blank.gif" data-src="https://i3.meishichina.com/attachment/recipe/2018/06/05/2018060515281625124389702111.jpg?x-oss-process=style/c320" class="imgLoad">
-						</a>
-					</div>
-					<div class="detail">
-					<h2>
-						<a target="_blank" href="https://home.meishichina.com/recipe-400657.html">炸茄盒</a>
-					</h2>
-					<p class="subline"><a target="_blank" href="https://home.meishichina.com/space-563830.html">柳絮1982</a>  </p>
-
-						<p class="subcontent">原料：紫茄子、猪肉馅、韭菜、鸡蛋、淀粉、面粉、油、蚝油、五香粉。</p>
-						
-						<div class="substatus clear">
-						<span class="get_nums"></span>
-							</div>
-						</div>
-</li>
-		
- <li data-id="400934">
-					<div class="pic">
-						<a target="_blank" href="https://home.meishichina.com/recipe-400934.html" title="肥牛金针菇">
-														<img width="180" height="180" src="//static.meishichina.com/v6/img/blank.gif" data-src="https://i3.meishichina.com/attachment/recipe/2018/06/05/2018060515281621152939702111.jpg?x-oss-process=style/c320" class="imgLoad">
-						</a>
-					</div>
-					<div class="detail">
-					<h2>
-						<a target="_blank" href="https://home.meishichina.com/recipe-400934.html">肥牛金针菇</a>
-					</h2>
-					<p class="subline"><a target="_blank" href="https://home.meishichina.com/space-10876021.html">迷糊阿山</a>  </p>
-
-						<p class="subcontent">原料：肥牛、金针菇、白胡椒、孜然、盐、辣椒面。</p>
-						
-						<div class="substatus clear">
-						<span class="get_nums"></span>
-							</div>
-						</div>
-</li>
-		
- <li data-id="400929">
-					<div class="pic">
-						<a target="_blank" href="https://home.meishichina.com/recipe-400929.html" title="红烧肉">
-														<img width="180" height="180" src="//static.meishichina.com/v6/img/blank.gif" data-src="https://i3.meishichina.com/attachment/recipe/2018/06/05/2018060515281611995019702111.jpg?x-oss-process=style/c320" class="imgLoad">
-						</a>
-					</div>
-					<div class="detail">
-					<h2>
-						<a target="_blank" href="https://home.meishichina.com/recipe-400929.html">红烧肉</a>
-					</h2>
-					<p class="subline"><a target="_blank" href="https://home.meishichina.com/space-10285576.html">雨欣欣欣</a>  </p>
-
-						<p class="subcontent">原料：带皮五花肉、生姜、土豆、大葱、小葱、老抽、郫县豆瓣酱、生抽。</p>
-						
-						<div class="substatus clear">
-						<span class="get_nums"></span>
-							</div>
-						</div>
-</li>
 			</ul>
 </div>
 
