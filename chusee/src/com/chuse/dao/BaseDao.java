@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
+import com.chuse.entity.Subject;
+
 public interface BaseDao<T> {
 	
 	public Serializable save(T o);
@@ -23,6 +25,8 @@ public interface BaseDao<T> {
 	public List<T> find(String hql, Map<String, Object> params);
 
 	public List<T> find(String hql, int page, int rows);
+	
+	public List<Subject> hfind(String hql, int page, int rows);
 
 	public List<T> find(String hql, Map<String, Object> params, int page, int rows);
 

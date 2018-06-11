@@ -174,14 +174,14 @@ a {
 					<div class="row">
 			    	
 			    
-				    <c:forEach var="p" items="${hList}"> 		
+				    <c:forEach var="s" items="${hList}"> 		
 			    	<div class="col-1-3">
 							<div class="wrap-col">
 								<div class="box-item">
-								<div><a href="#" style="font-size:24px"><c:out value="${p.pdesc}"/></a></div>
-									<span class="ribbon"><c:out value="${p.pname }"/><b></b></span>
-									 <img src="${pageContext.request.contextPath}/<c:out value="${p.image}"/>"style="display: block;" />
-									<p><c:out value="${p.pcontent}"/></p>
+								<div><a href="#" style="font-size:24px"><c:out value="${s.pdesc}"/></a></div>
+									<span class="ribbon"><c:out value="${s.pname }"/><b></b></span>
+									 <img src="${pageContext.request.contextPath}/<c:out value="${s.image}"/>"style="display: block;" />
+									<p><c:out value="${s.pcontent}"/></p>
 									<a href="#" class="button button-1">详情</a>
 								</div>
 							</div>

@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.chuse.dao.BaseDao;
+import com.chuse.entity.Subject;
 
 @Repository("baseDao")
 @SuppressWarnings("all")
@@ -95,11 +96,18 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 		}
 		return q.setFirstResult((page - 1) * rows).setMaxResults(rows).list();
 	}
+	
 
 	public List<T> find(String hql, int page, int rows) {
 		Query q = this.getCurrentSession().createQuery(hql);
 		return q.setFirstResult((page - 1) * rows).setMaxResults(rows).list();
 	}
+	
+	public List<Subject> hfind(String hql, int page, int rows) {
+		Query q = this.getCurrentSession().createQuery(hql);
+		return q.setFirstResult((page - 1) * rows).setMaxResults(rows).list();
+	}
+
 
 	public Integer count(String hql) {
 		Query q = sessionFactory.getCurrentSession().createQuery(hql);

@@ -3,6 +3,7 @@ package com.chuse.dao;
 import java.util.List;
 
 import com.chuse.entity.Product;
+import com.chuse.entity.Subject;
 
 
 
@@ -10,6 +11,7 @@ public interface ProductDao extends BaseDao<Product>{
 	
 	
 	public List<Product> findHot();
+	public List<Subject> findHHot();
 	
 	public List<Product> findNew();
 	public List<Product> findByCategorySecondCsid(Integer csid,Integer page);

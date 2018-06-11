@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.chuse.dao.ProductDao;
 import com.chuse.entity.Product;
+import com.chuse.entity.Subject;
 import com.chuse.service.ProductService;
 
 
@@ -45,6 +46,11 @@ public class ProductServiceImpl implements ProductService{
 	public List<Product> findHot() {
 		return productDao.findHot();
 	}
+    
+	public List<Subject> findHHot() {
+		return productDao.findHHot();
+	}
+	
 
 
 	public List<Product> findNew() {

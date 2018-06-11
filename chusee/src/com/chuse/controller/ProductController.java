@@ -27,7 +27,7 @@ public class ProductController {
 	public String showIndex(Map<String,Object> map,HttpSession session){
 
 		//把最热的10条商品添加到map集合中
-		map.put("hList", productService.findHot());
+		map.put("hList", productService.findHHot());
 		
 		
 		return "health"; 

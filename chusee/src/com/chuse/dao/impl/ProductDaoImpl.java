@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 
 import com.chuse.dao.ProductDao;
 import com.chuse.entity.Product;
+import com.chuse.entity.Subject;
 
 
 
@@ -87,6 +88,16 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao{
 		int rows = 9;
 		return find(hql,1,rows);
 	}
+	
+	
+	public List<Subject> findHHot() {
+		String hql = "from Subject s where s.is_hot = 1 ";
+		hql += "order by s.pdate desc";
+		int rows = 9;
+		return hfind(hql,1,rows);
+	}
+	
+
 
 	public Product findOne(Integer pid) {
 		String hql = "from Product p where p.pid = ?";

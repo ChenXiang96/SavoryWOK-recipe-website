@@ -16,6 +16,14 @@
 <link rel="stylesheet" type="text/css" href="https://static.meishichina.com/v6/css/lib/all.css?v1=9">
 <link rel="stylesheet" type="text/css" href="https://static.meishichina.com/v6/css/app/newrecipe/recipe2.css?v1=2017-09-08">
 <script type="text/javascript" src="//static.meishichina.com/v6/js/lib/dfp-list-5.js"></script>
+<style>
+.ui-page .now_page, .ui-page .now_page:hover, .ui-page .on, .ui-page .on:hover {
+    border: 0px;
+
+}
+
+</style>
+
 </head>
 <body>
 
@@ -91,21 +99,22 @@
  <div class="ui-page-inner">
   <c:if test="${cid != null }">
   <!-- 首页 -->
+
   <a class='now_page' href="${pageContext.request.contextPath}/findByCid/${cid}/1"></a>
   <c:if test="${page != 1}">
-    <a href="${pageContext.request.contextPath}/findByCid/${cid}/<c:out value="${page-1}"/>"></a>
+    <a href="${pageContext.request.contextPath}/findByCid/${cid}/<c:out value="${page-1}"/>">上一页</a>
   </c:if>
   <c:forEach var="i" begin="1" end="${count }">
-    <span>
-							   <!-- 如果是当前页则不能够点击 -->
-							   <c:if test="${i == page }">
-							    	<span class="currentPage">${page }</span>
-							   </c:if>
-							   <c:if test="${i != page }">
-								 <a href="${pageContext.request.contextPath}/findByCid/${cid}/<c:out value="${i}"/>">
-									<c:out value="${i}" /></a>
-								</c:if>
-	</span>
+   
+				  <!-- 如果是当前页则不能够点击 -->
+			      <c:if test="${i == page }">
+				  	<span class="now_page">${page }</span>
+				  </c:if>
+				  <c:if test="${i != page }">
+				    <a href="${pageContext.request.contextPath}/findByCid/${cid}/<c:out value="${i}"/>">
+					 <c:out value="${i}" /></a>
+				  </c:if>
+	 
      
   </c:forEach>
  <!--  <a href="https://home.meishichina.com/recipe/recai/page/2/">2</a>
@@ -118,6 +127,7 @@
   <a class="nextPage" href="${pageContext.request.contextPath}/findByCid/${cid}/<c:out value="${page+1}"/>">下一页</a>
  </c:if>
  </c:if>
+ 
  </div>
 </div>
 

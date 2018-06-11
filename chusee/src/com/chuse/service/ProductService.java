@@ -3,6 +3,7 @@ package com.chuse.service;
 import java.util.List;
 
 import com.chuse.entity.Product;
+import com.chuse.entity.Subject;
 
 
 
@@ -19,6 +20,7 @@ public interface ProductService {
 	public Integer CountPageProductFromCategory(Integer cid);
 	//查找最热的商品6条
 	public List<Product> findHot();
+	public List<Subject> findHHot();
 	public Integer CountPageProductFromCategorySecond(Integer csid);
 
 }
