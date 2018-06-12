@@ -21,6 +21,23 @@
     border: 0px;
 
 }
+.space_right {
+
+    margin-top: 80px;
+}
+a.right3 {
+    color: #654e2d;
+    text-decoration: none;
+}
+.ui_title2 {
+   
+    border-top: 1px solid #eeeeee;
+  
+}
+.subcontent1{
+   margin-left:80px;
+   font-size: 20px;
+}
 
 </style>
 
@@ -33,78 +50,66 @@
 <!-- 主框架 -->
 	<div class="wrap">
 		<div class="w clear">
-		
-  <div id="recipeindex_info">
-	 
-  </div>
+		 <div id="recipeindex_info">
+   </div>
 			
-			<div class="space_left">
+		<div class="space_left">
 
-<div class="ui_title">
+           <div class="ui_title2">
 			  <div class="ui_title_wrap clear">
 
-<!--  <h1 class="on" ><a title="热菜" href="https://home.meishichina.com/recipe/recai/" >热菜</a></h1> -->
- <h3  class="on"><a href="javascript:void(0);" page="2" data="102" order="tag">热菜</a></h3>
-				  <h3><a href="javascript:void(0);" page="2" data="202" order="tag">凉菜</a></h3>
-				  <h3><a href="javascript:void(0);" page="2" data="57" order="tag">汤羹</a></h3>
-				  <h3><a href="javascript:void(0);" page="2" data="59" order="tag">主食</a></h3>
-				  <h3><a href="javascript:void(0);" page="2" data="62" order="tag">小吃</a></h3>
-				  <h3><a href="javascript:void(0);" page="2" data="160" order="tag">西餐</a></h3>
-				  <h3><a href="javascript:void(0);" page="2" data="60" order="tag">烘焙</a></h3>
-				  <h3><a href="javascript:void(0);" page="2" data="69" order="tag">自制食材</a></h3>
+          <!--  <h1 class="on" ><a title="热菜" href="https://home.meishichina.com/recipe/recai/" >热菜</a></h1> -->
+                 <c:forEach items="${sessionScope.cList}" begin="3" var="c">
+                          <h3>
+                      
+                          <a title="健康首页"   href="${ pageContext.request.contextPath }/findByCid/<c:out value="${c.cid}"/>/1" class="right3" target="_blank">
+                             <c:out value="${c.cname}"></c:out>
+                          </a>
+                          </h3>
+                          
+                 </c:forEach>
+                 
+                 
 
-<a  rel="nofollow" href="https://home.meishichina.com/recipe/recai/elite/" class="right ">推荐</a>
-<a  rel="nofollow" href="https://home.meishichina.com/recipe/recai/hot/" class="right ">最热</a>
+              </div>
+           </div>
 
 
-</div>
-</div>
-
-
-<div class="ui_newlist_1 get_num" id="J_list">
-	<ul>
-	<c:forEach var="p" items="${products}">
- <li data-id="400952">
+        <div class="ui_newlist_1 get_num" id="J_list">
+	       <ul>
+	         <c:forEach var="p" items="${products}">
+                <li data-id="400952">
 					<div class="pic">
 						<a target="_blank" href="${ pageContext.request.contextPath }/findByPid/<c:out value="${p.pid}"/>">
 						<img width="180" height="180" src="${pageContext.request.contextPath}/<c:out value="${p.image}"/>" data-src="${pageContext.request.contextPath}/<c:out value="${p.image}"/>"  class="imgLoad">
 						</a>
 					</div>
-					<div class="detail">
-					<h2>
-						<a target="_blank" href="https://home.meishichina.com/recipe-400952.html"> <c:out value="${p.pname}" /></a>
-						
-					</h2>
-					<p class="subline"><a target="_blank" href="https://home.meishichina.com/space-10899818.html">匠心传承</a>  </p>
-
-						<p class="subcontent"><c:out value="${p.pcontent}" /></p>
-						
-						<div class="substatus clear">
-						<span class="get_nums"></span>
-							</div>
+		    <div class="detail">
+				 <h2>
+					<a target="_blank" href="https://home.meishichina.com/recipe-400952.html" class="right3"> <c:out value="${p.pname}" /></a>
+				 </h2>
+					<p class="subline"><a target="_blank" href="https://home.meishichina.com/space-10899818.html"><c:out value="${p.pdesc}" /></a>  </p>
+                        <p class="subcontent"><c:out value="${p.pcontent}" /></p>
+                        <div class="substatus clear">
+						   <span class="get_nums"></span>
 						</div>
-</li>
-</c:forEach>
-		
+		    </div>
+                </li>
+            </c:forEach>
+          </ul>
+    </div>
 
+    <script type="text/javascript" src="//crayon.meishichina.com/idvmszelzgkcef.js"></script>
 
-		
-
-			</ul>
-</div>
-
-<script type="text/javascript" src="//crayon.meishichina.com/idvmszelzgkcef.js"></script>
-
-<div class="ui-page mt10">
- <div class="ui-page-inner">
-  <c:if test="${cid != null }">
-  <!-- 首页 -->
-
-  <a class='now_page' href="${pageContext.request.contextPath}/findByCid/${cid}/1"></a>
-  <c:if test="${page != 1}">
-    <a href="${pageContext.request.contextPath}/findByCid/${cid}/<c:out value="${page-1}"/>">上一页</a>
-  </c:if>
-  <c:forEach var="i" begin="1" end="${count }">
+     <div class="ui-page mt10">
+       <div class="ui-page-inner">
+         <c:if test="${cid != null }">
+          <!-- 首页 -->
+            <a class='now_page' href="${pageContext.request.contextPath}/findByCid/${cid}/1"></a>
+              <c:if test="${page != 1}">
+                <a href="${pageContext.request.contextPath}/findByCid/${cid}/<c:out value="${page-1}"/>">上一页</a>
+              </c:if>
+              <c:forEach var="i" begin="1" end="${count }">
    
 				  <!-- 如果是当前页则不能够点击 -->
 			      <c:if test="${i == page }">
@@ -114,51 +119,58 @@
 				    <a href="${pageContext.request.contextPath}/findByCid/${cid}/<c:out value="${i}"/>">
 					 <c:out value="${i}" /></a>
 				  </c:if>
-	 
-     
-  </c:forEach>
+              </c:forEach>
  <!--  <a href="https://home.meishichina.com/recipe/recai/page/2/">2</a>
   <a href="https://home.meishichina.com/recipe/recai/page/3/">3</a>
   <a href="https://home.meishichina.com/recipe/recai/page/4/">4</a>
   <a href="https://home.meishichina.com/recipe/recai/page/5/">5</a>
    <span>...</span>
  -->
- <c:if test="${page !=count }">
-  <a class="nextPage" href="${pageContext.request.contextPath}/findByCid/${cid}/<c:out value="${page+1}"/>">下一页</a>
- </c:if>
- </c:if>
- 
- </div>
-</div>
+              <c:if test="${page !=count }">
+                 <a class="nextPage" href="${pageContext.request.contextPath}/findByCid/${cid}/<c:out value="${page+1}"/>">下一页</a>
+              </c:if>
+          </c:if>
+                
+                
+                
+                
+          <c:if test="${csid != null }">
+          <!-- 首页 -->
+            <a class='now_page' href="${pageContext.request.contextPath}/findByCsid/${csid}/1"></a>
+              <c:if test="${page != 1}">
+                <a href="${pageContext.request.contextPath}/findByCsid/${csid}/<c:out value="${page-1}"/>">上一页</a>
+              </c:if>
+              <c:forEach var="i" begin="1" end="${count }">
+   
+				  <!-- 如果是当前页则不能够点击 -->
+			      <c:if test="${i == page }">
+				  	<span class="now_page">${page }</span>
+				  </c:if>
+				  <c:if test="${i != page }">
+				    <a href="${pageContext.request.contextPath}/findByCsid/${csid}/<c:out value="${i}"/>">
+					 <c:out value="${i}" /></a>
+				  </c:if>
+              </c:forEach>
+               <c:if test="${page !=count }">
+                 <a class="nextPage" href="${pageContext.request.contextPath}/findByCsid/${csid}/<c:out value="${page+1}"/>">下一页</a>
+              </c:if>
+          </c:if>
+         </div>
+        </div>
+      </div><!--左侧end-->
 
-<div class="mt20 clear">
-	<!-- 厨色内容页左幅300x250 -->
-	<div id='div-gpt-ad-1415071902366-0' style='width:300px; height:250px;float:left;'>
-<script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-0'); });
-</script>
-</div>
-<!-- 厨色内容页右幅300x250 -->
-<div id='div-gpt-ad-1415071902366-1' style='width:300px; height:250px;float:right'>
-<script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-1'); });
-</script>
-</div>
-</div>
 
+      <div class="space_right">
+         <c:forEach var="c" items="${sessionScope.cList }">
+           <c:forEach var="cs" items="${c.categorySeconds}">
+               <p class="subcontent1">
+                  <a title="健康首页" href="${ pageContext.request.contextPath }/findByCsid/<c:out value="${cs.csid}/1"/>" class="right3" target="_blank">
+                    <c:out value="${cs.csname}" ></c:out>
+                  </a>
+               </p>
+           </c:forEach>
+          </c:forEach>
 
-
-</div><!--左侧end-->
-
-
-<div class="space_right">
-
-<!-- 厨色菜谱频道右侧一(首屏)300x250 -->
-<div id='div-gpt-ad-1415071902366-2' style='width:300px; height:250px;'>
-<script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-2'); });
-</script>
-</div>
 <!--
 <div class="ui_title mt20">
 	<div class="ui_title_wrap cleat">
@@ -167,28 +179,22 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-2');
 </div>
 -->
 
-<div class="new_r_list clear mt10">
-	<ul>
-			
 
-	</ul>
-</div>
-
-<!-- 厨色菜谱频道右侧二300x250 -->
+<!-- 厨色菜谱频道右侧二300x250 
 <div id='div-gpt-ad-1415071902366-3' style='width:300px; height:250px;margin-top:20px;' class="smnbk">
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-3'); });
 </script>
 </div>
+-->
 
-
-<!-- 厨色菜谱频道右侧(悬浮)300x250 -->
+<!-- 厨色菜谱频道右侧(悬浮)300x250 
 <div id='div-gpt-ad-1415071902366-4' style='width:300px; height:250px;margin-top:20px;' class="keyshow">
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-4'); });
 </script>
 </div>
-
+-->
 </div><!-- 右侧end -->
 				
 		</div>
