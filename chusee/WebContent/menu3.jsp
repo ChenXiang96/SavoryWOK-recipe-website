@@ -121,7 +121,7 @@ margin-top:35px;
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-				<h2 class="pageTitle">Gallery</h2>
+				<h2 class="pageTitle">美味常在身边</h2>
 			</div>
 		</div>
 	</div>

@@ -12,30 +12,23 @@
 <link rel="stylesheet" type="text/css" href="css/all.css">
 <link rel="stylesheet" type="text/css" href="css/mofang3.css">
 <script src="js/push.js"></script><script src="js/hm.js"></script><script src="js/share.js"></script><link rel="stylesheet" href="images/zhuantixiangqing/share_style0_16.css"></head>
+<style>
+   .sliderh {
+    width: 100%;
+    height: 350px;
+    clear: both;
+    position: relative;
+    overflow: hidden;
+    margin-top: 0px;
+}
+</style>
 <body>
-<div class="top-bar" id="J_top_bar">
-<ul class="bar-left left">
-<li><a title="厨色" href="https://www.meishichina.com/" target="_blank" class="top_bar_logo"><i>厨色</i>首页</a></li>
-<li> <a title="菜谱" href="https://home.meishichina.com/recipe.html" target="_blank">菜谱</a></li>
-<li> <a title="食材" href="https://www.meishichina.com/YuanLiao/" target="_blank">食材</a></li>
-<li> <a title="珍选" href="https://zhen.meishichina.com/" target="_blank">珍选</a></li>
-<li> <a title="健康" href="https://www.meishichina.com/Health/" target="_blank">健康</a></li>
-<li> <a title="专题" href="https://www.meishichina.com/mofang/" target="_blank">专题</a></li>
-<li> <a title="社区" href="https://home.meishichina.com/" target="_blank">社区</a></li>
-<li> <a title="话题" href="https://home.meishichina.com/pai.html" target="_blank">话题</a></li>
-<li> <a title="活动" href="https://home.meishichina.com/event/" target="_blank">活动</a></li>
-<li> <a title="搜索" href="https://home.meishichina.com/search/" target="_blank">搜索</a></li>
-<li class="top_bar_more"><i></i>
-<div>
-<a title="烘焙" href="https://hongbei.meishichina.com/" target="_blank">烘焙</a>
-<a title="妈妈派" href="https://mamapai.meishichina.com/" target="_blank">妈妈派</a>
-</div>
-</li>
-</ul>
-<a href="https://www.meishichina.com/Mobile/" target="_blank" class="nr3"><img src="images/zhuantixiangqing/nr3.png" width="18" height="18">客户端<img src="images/zhuantixiangqing/msc_app.png" class="code">
-</a>
-<div class="right" id="J_top_bar_user"><ul class="clear bar-info right bar-noLogin" id="J_barUser"><li class="bar-tips bar-sign-tips" id="J_barSignTips"><i class="arrow"></i><b class="arrow"></b><a href="javascript:;" class="close">×</a>签到即可参加 0元购</li><li class="bar-tips bar-message-tips" id="J_barMessageTips"><i class="arrow"></i><b class="arrow"></b><a href="javascript:;" class="close">×</a><p><span></span>条新消息, <a href="https://member.meishichina.com/center/privately_list/" class="J_tips_look" target="_blank">查看</a></p><p><span></span>条通知, <a href="https://member.meishichina.com/center/my_notice_list/" class="J_tips_look" target="_blank">查看</a></p></li><li class="bar-item bar-loading images-loading bar-link"></li><li class="bar-link bar-item bar-reg"><a href="https://member.meishichina.com/user/register/" target="_blank">注册</a></li><li class="bar-link bar-item bar-login"><a href="https://member.meishichina.com/user/login/" target="_blank">登录</a></li><li class="bar-login J_down bar-item"><div class="bar-text"><a href="https://home.meishichina.com/meishi2.php?ac=qqlogin&amp;op=login"><img src="images/zhuantixiangqing/nir1.png" width="18" height="18">QQ登录</a></div><div class="bar-box"><ul><li class="bar-box-item-0"><a href="https://home.meishichina.com/meishi2.php?ac=sinalogin"><img src="images/zhuantixiangqing/nir2.png" width="18" height="18">微博登录</a></li><li><a href="https://home.meishichina.com/meishi2.php?ac=wechatlogin&amp;op=login"><img src="images/zhuantixiangqing/nir3.png" width="18" height="18">微信登录</a></li></ul></div></li><li class="bar-center J_down bar-item"><div class="bar-text">会员中心<i class="arrow"></i></div><div class="bar-box"><ul><li class="bar-box-item-0"><a href="#" class="J_barLogin">会员中心</a></li><li><a href="#" class="J_barLogin">我的主页</a></li></ul></div></li><li class="bar-user J_down bar-item"><div class="bar-text"><div class="bar-text-userName" id="J_barUserName"></div><i class="arrow"></i></div><div class="bar-box"><ul><li class="bar-box-item-0 bar-box-item-fav"></li><li class="bar-box-item-1"><a title="管理中心" href="https://member.meishichina.com/center/" target="_blank">管理</a></li><li class="bar-box-item-2"><a title="私信" href="https://member.meishichina.com/center/privately_list/" target="_blank" id="privately_list">私信<span></span></a></li><li class="bar-box-item-3"><a title="通知" href="https://member.meishichina.com/center/my_notice_list/" target="_blank" id="my_notice_list">通知<span></span></a></li><li class="bar-box-item-4"><a title="退出" href="#" class="J_barExit">退出</a></li></ul></div></li><li class="bar-add J_down bar-item"><div class="bar-text"><img src="images/zhuantixiangqing/nr1.png" width="18" height="18">发布</div><div class="bar-box"><ul><li class="bar-box-item-0"><a href="https://member.meishichina.com/center/recipe-add/" target="_blank" class="J_barLogin">发菜谱</a></li><li class="bar-box-item-1"><a href="https://member.meishichina.com/center/pai-add/" target="_blank" class="J_barLogin">发话题</a></li><li class="bar-box-item-2"><a href="https://member.meishichina.com/center/blog-add/" target="_blank" class="J_barLogin">发日志</a></li></ul></div></li><li class="bar-item bar-sign J_down" id="J_barSign"><a href="javascript:void(0);" class="bar-sign-text J_barLogin"><img src="images/zhuantixiangqing/nr2.png" width="18" height="18">签到有礼</a><div class="bar-sign-box"><h3>签到 <b>0</b> 天</h3><p><b>0</b></p><a target="_blank" href="https://home.meishichina.com/event/lottery/">去抽奖</a></div></li></ul></div>
-</div>
+
+
+	<%@ include file="menu3.jsp" %>
+
+
+
 <div class="sliderh">
 <div id="sliderh" style="width:100%">
 <ul>
@@ -46,14 +39,12 @@
 <div class="msb">
 <input id="mof_fcover" value="https://i3.meishichina.com/attachment/mofang/2018/05/29/20180529152756112688310138013.jpg" type="hidden">
 <input id="mof_domain" value="assw" type="hidden">
+
 <div class="recipeArction clear">
-<ul class="collect_da">
-<li class="fav"><a title="收藏" href="javascript:void(0);" class="J_fav" dataid="2249"><i></i><span></span>收藏</a></li>
-<li class="shar"><a title="分享到微信" href="javascript:void(0);" class="J_s4" data="bds_weixin"><i></i>微信</a></li>
-<li class="shar"><a title="分享到QQ好友" href="javascript:void(0);" class="J_s2" data="bds_sqq"><i></i>QQ好友</a></li>
-<li class="shar"><a title="分享到QQ空间" href="javascript:void(0);" class="J_s3" data="bds_qzone"><i></i>QQ空间</a></li>
-<li class="shar"><a title="分享到新浪微博" href="javascript:void(0);" class="J_s1" data="bds_tsina"><i></i>新浪微博</a></li>
-</ul>
+
+
+
+
 <p id="mof_desc">夏季天气炎热，再加上生活压力大，很容易出现烦躁、失眠、心神不宁等状况，这个时候我们要注意养心安神。一般的安神食物有牛奶、蜂蜜、百合、莲子、食用菌等，同时要缓解自身的压力，养生一个良好的生活作息习惯，才能达到治标治本的效果。</p>
 <div class="bdsharebuttonbox bdshare-button-style0-16" id="bdshare" data-bd-bind="1527753183796">
 <a title="分享到新浪微博" href="#" class="bds_tsina" id="bds_tsina" data-cmd="tsina"></a><a title="分享到QQ空间" href="#" class="bds_qzone" id="bds_qzone" data-cmd="qzone"></a><a title="分享到QQ好友" href="#" class="bds_sqq" id="bds_sqq" data-cmd="sqq"></a><a data-cmd="weixin" id="bds_weixin" class="bds_weixin" href="#" title="分享到微信"></a>
@@ -363,34 +354,9 @@
 <style type="text/css">
 .footer-area{padding:10px 0}.footer-area .w{padding-top:10px;border-top:1px solid #e8e8e8}.footer-area a{color:#666}.footer-area a:hover{color:#ff6767}.ft1{clear:none;float:left;font-size:11px;color:#666;width:680px;padding-top:10px}.ft1 .c3b{color:#c90;font-size:14px;font-weight:700;margin-bottom:6px}.ft1 .c3b a{color:#f50}.ft1 .c3c{color:#aaa;font-size:12px;margin-bottom:6px}.ft2,.ft3,.ft4{clear:none;float:right;text-align:center}.ft3{margin:0 25px}
 </style>
-<div id="J_footer_box" class="footer-area clear">
-<div class="w">
-<div class="ft1">
-<p class="c3b"><a target="_blank" href="https://www.meishichina.com/" title="厨色 - 让吃更美好">厨色 - 让吃更美好！</a></p>
-<p class="c3c">
-<a target="_blank" title="菜谱" href="https://home.meishichina.com/recipe.html">菜谱</a> ·
-<a target="_blank" title="食材" href="https://www.meishichina.com/YuanLiao/">食材</a> ·
-<a target="_blank" title="美食魔方" href="https://www.meishichina.com/mofang/">魔方</a> ·
-<a target="_blank" href="https://www.meishichina.com/minisite/red/" title="关于我们">关于我们</a> ·
-<a target="_blank" href="https://www.meishichina.com/minisite/red/contact/" title="联系我们">联系我们</a> ·
-<a target="_blank" href="https://www.meishichina.com/minisite/red/joinus/" title="加入我们">加入我们</a> ·
-<a target="_blank" href="https://www.meishichina.com/minisite/red/copyright/" title="服务声明">服务声明</a> ·
-<a target="_blank" href="https://www.meishichina.com/minisite/red/links/" title="友情链接">友情链接</a> ·
-<a target="_blank" href="https://www.meishichina.com/minisite/red/sitemap/" title="网站地图">网站地图</a> ·
-<a target="_blank" title="移动应用" href="https://www.meishichina.com/Mobile/">移动应用</a>
-</p>
-<p>© 2004-2018 厨色 保留所有权利 - 京ICP证090244号</p>
-</div>
-<div class="ft4">
-<img class="imgLoad" src="images/zhuantixiangqing/weixin.png" title="微信公众号">微信公众号
-</div>
-<div class="ft3">
-<img class="imgLoad" src="images/zhuantixiangqing/msc_app.png" title="手机客户端" width="82">手机客户端
-</div>
-</div>
-</div>
+	<%@ include file="footer2.jsp" %>
 <script type="text/javascript" src="js/all.js"></script>
-<script type="text/javascript" src="js/all2.js"></script><div class="fixed-footer" style="left: 1179.5px; right: auto; bottom: 10px;"><a href="javascript:;" title="点击返回页面顶部" onclick="window.scrollTo(0,0);" class="fixed-footer-go" style="display: inline;"></a><div class="fixed-footer-weixin"><div class="fixed-footer-weixin-inner"><span>厨色手机客户端</span></div></div></div>
+<script type="text/javascript" src="js/all2.js"></script><div class="fixed-footer" style="left: 1179.5px; right: auto; bottom: 10px;"><div class="fixed-footer-weixin"><div class="fixed-footer-weixin-inner"><span>厨色手机客户端</span></div></div></div>
 <script type="text/javascript">
 var inTimer,outTimer;
 //绑定鼠标进入事件
