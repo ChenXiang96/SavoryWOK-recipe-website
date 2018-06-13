@@ -56,7 +56,4 @@ public class ProductServiceImpl implements ProductService{
 	public List<Product> findNew() {
 		return productDao.findNew();
 	}
-
-
-	
 }

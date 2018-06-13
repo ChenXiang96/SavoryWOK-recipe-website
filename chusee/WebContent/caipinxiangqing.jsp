@@ -26,31 +26,17 @@
 		<div class="w clear">
 			<div class="space_left">
 
-           <div class="userTop clear">
-              <h1 class="recipe_De_title">
-                  <div class="ui_title2">
-			         <div class="ui_title_wrap clear">
-
-                      <!--  <h1 class="on" ><a title="热菜" href="https://home.meishichina.com/recipe/recai/" >热菜</a></h1> -->
-                 <c:forEach items="${sessionScope.cList}" begin="3" var="c">
-                          <h3>
-                          <a title="健康首页"   href="${ pageContext.request.contextPath }/findByCid/<c:out value="${c.cid}"/>/1" class="right3" target="_blank">
-                             <c:out value="${c.cname}"></c:out>
-                          </a>
-                          </h3>
-                          
-                 </c:forEach>
-                     </div>
-                 </div>
-                 <a href="https://home.meishichina.com/recipe-402563.html" id="recipe_title" title="红糖咖啡坚果吐司">
-                  <c:out value="${product.pname }"/>
-                 </a>
-              </h1>
-                 <a title="龙宝宝陈诺" href="https://home.meishichina.com/space-10373406.html" target="_blank" class="uright">
-                  <img src="https://i5.meishichina.com/data/avatar/010/37/34/06_avatar_big.jpg?x-oss-process=style/c80&v=20180612" />
-                  <span class="userName" id="recipe_username"> <c:out value="${product.pdesc }"/></span>
-                 </a>
-           </div>
+<div class="userTop clear">
+<h1 class="recipe_De_title">
+<a href="https://home.meishichina.com/recipe-402563.html" id="recipe_title" title="红糖咖啡坚果吐司">
+<c:out value="${product.pname }"/>
+</a>
+</h1>
+<a title="龙宝宝陈诺" href="https://home.meishichina.com/space-10373406.html" target="_blank" class="uright">
+<img src="https://i5.meishichina.com/data/avatar/010/37/34/06_avatar_big.jpg?x-oss-process=style/c80&v=20180612" />
+<span class="userName" id="recipe_username"> <c:out value="${product.pdesc }"/></span>
+</a>
+</div>
 
 				 
 				<div class="space_box_home">
@@ -80,16 +66,16 @@
 
 
 
-                   <div class="mo mt20">
-                      <h3>食材明细</h3>
-                   </div>
+<div class="mo mt20">
+<h3>食材明细</h3>
+</div>
  
  
-            <fieldset class="particulars">
-	            <legend>用料</legend>
+ <fieldset class="particulars">
+	<legend>用料</legend>
 
-                 <div class="recipeCategory_sub_R clear">
-                      <ul>
+<div class="recipeCategory_sub_R clear">
+<ul>
 				  				  <li>
 					<span class="category_s1">
 				<a target="_blank" href="https://www.meishichina.com/YuanLiao/MianBaoFen/" title="面包粉的做法"  ><b> <c:out value="${product.pcontent }"/></b></a>
@@ -97,46 +83,46 @@
 				  					<span class="category_s2">260克</span>
 				  				  </li>
 				  				  
-				     </ul>
-             </div>
-           </fieldset>
+				  </ul>
+</div>
+</fieldset>
 
  
 
-           <div class="recipeCategory_sub_R mt30 clear">
-            <ul>
+<div class="recipeCategory_sub_R mt30 clear">
+<ul>
 
-               <li>
-               <span class="category_s1">
-		         <a title="甜味" href="https://home.meishichina.com/recipe-type-do-cuisine-view-10.html" target="_blank">甜味</a>
-	           </span>
-               <span class="category_s2">口味</span>
-               </li>
+<li>
+<span class="category_s1">
+		<a title="甜味" href="https://home.meishichina.com/recipe-type-do-cuisine-view-10.html" target="_blank">甜味</a>
+	</span>
+<span class="category_s2">口味</span>
+</li>
 
-               <li>
-               <span class="category_s1">
-				 <a title="烘焙" href="https://home.meishichina.com/recipe-type-do-technics-view-23.html" target="_blank">烘焙</a>
-			   </span>
-              <span class="category_s2">工艺</span>
-               </li>
+<li>
+<span class="category_s1">
+							<a title="烘焙" href="https://home.meishichina.com/recipe-type-do-technics-view-23.html" target="_blank">烘焙</a>
+						</span>
+<span class="category_s2">工艺</span>
+</li>
 
-               <li>
-              <span class="category_s1">
-				 <a title="数小时" href="https://home.meishichina.com/recipe-type-do-during-view-6.html" target="_blank">数小时</a>
-			  </span>
-           <span class="category_s2">耗时</span>
-          </li>
+<li>
+<span class="category_s1">
+							<a title="数小时" href="https://home.meishichina.com/recipe-type-do-during-view-6.html" target="_blank">数小时</a>
+						</span>
+<span class="category_s2">耗时</span>
+</li>
 
-        <li>
-             <span class="category_s1">
-				<a title="简单" href="https://home.meishichina.com/recipe-type-do-level-view-1.html" target="_blank">简单</a>
-			 </span>
-         <span class="category_s2">难度</span>
-        </li>
+<li>
+<span class="category_s1">
+							<a title="简单" href="https://home.meishichina.com/recipe-type-do-level-view-1.html" target="_blank">简单</a>
+						</span>
+<span class="category_s2">难度</span>
+</li>
 
 
-       </ul>
-         </div>
+</ul>
+</div>
 
 
 

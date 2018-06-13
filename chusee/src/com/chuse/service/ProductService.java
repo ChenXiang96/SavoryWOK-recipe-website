@@ -12,9 +12,6 @@ public interface ProductService {
        
 	//根据菜品的pid查询菜品
 	public Product findByPid(Integer pid);
-
-		
-	
 	//根据一级分类查询菜品
 	public List<Product> findByCid(Integer cid,Integer page);
 	//根据二级分类查询商品

@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.chuse.entity.Product;
-import com.chuse.entity.Subject;
 import com.chuse.service.ProductService;
 
 
@@ -33,8 +32,6 @@ public class ProductController {
 		
 		return "health"; 
 	}
-	
-	
 
 	//首页中点击一级分类查询商品
 	@RequestMapping(value="/findByCid/{cid}/{page}")
@@ -77,8 +74,6 @@ public class ProductController {
 		map.put("product", productService.findByPid(pid));
 		return "caipinxiangqing";
 	}
-	
-
 }
 
 

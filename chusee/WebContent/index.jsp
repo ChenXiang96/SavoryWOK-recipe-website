@@ -197,9 +197,7 @@ position: absolute;
 #main-content .wrap-content {
     width:1580px;
 }
-.aA{
-  color:white;
-}
+
 
 </style>
 
@@ -243,53 +241,82 @@ position: absolute;
 					</div>
 					
 					<div class="row">
-					
-					     <c:forEach items="${sessionScope.cList}" var="c" begin="9" end="11">
 						<div class="col-1-3">
 							<div class="wrap-col">
 								<div class="box-item">
-								
 								<div class="ui_title">
                                   <div class="ui_title_wrap">
                                     <h2 class="on"><a href="javascript:void(0);" >健康</a></h2>
                                     <h2><a href="javascript:void(0);">食疗</a></h2>
                                    <h3><a title="健康首页" href="//www.meishichina.com/Health/" class="right" target="_blank">健康首页</a>
                                     </h3>
-                                  </div>
                                 </div>
-                                 
-									<span class="ribbon">
-									 <a href="${ pageContext.request.contextPath }/findByCid/<c:out value="${c.cid}"/>/1" class="aA" target="_blank">
-                                        <c:out value="${c.cname}"></c:out> 
-                                     </a>
-									<b></b></span>
-									 
+                                </div>
+									<span class="ribbon">健康·食疗<b></b></span>
 									<img src="images/menu.jpg" alt="">
 									<p>
-									     <c:forEach var="cs" items="${c.categorySeconds}">
-									   <li class="li1">
-									  <a title="健康首页" href="${ pageContext.request.contextPath }/findByCsid/<c:out value="${cs.csid}/1"/>"target="_blank">
-                                        <c:out value="${cs.csname}" ></c:out>
-                                      </a>
-									   
-									   </li>
-						
-                                         </c:forEach>
+									   <li class="li1"><a href="#" style="color:red">牙齿不好就别吃这5种食物！</a></li>
+									   <li class="li1"><a href="#">清理血管，让血管年轻起来！</a></li>
+									   <li class="li1"><a href="#">脸上还有痘痘？6种方法帮你摆脱</a></li>
+									   <li class="li1"><a href="#">专题：那些美颜食物的神级吃法</a></li>
+									   <li class="li1"><a href="#">专题：低卡减肥餐，让你瘦到飞起来</a></li>
+                                       <li class="li1"><a href="#">提高脑力，这些食物少不了！</a></li>
                                     </p>
-                                    
-                                    
 									<a href="#" class="button button-1">更多</a>
-								
-									
 								</div>
 							</div>
 						</div>
-						</c:forEach>
-
-						
-						
-						
-						
+						<div class="col-1-3">
+							<div class="wrap-col">
+								<div class="box-item">
+								<div class="ui_title">
+                                  <div class="ui_title_wrap">
+                                    <h2 class="on"><a href="javascript:void(0);">烘焙</a></h2>
+                                      <h2><a href="javascript:void(0);">食谱</a></h2>
+                                      <h3><a title="健康首页" href="//www.meishichina.com/Health/" class="right" target="_blank">烘焙专区</a>
+                                       </h3>
+                                </div>
+                                </div>
+									<span class="ribbon">烘焙·食谱<b></b></span>
+									<img src="images/fast-food.jpg" alt="">
+									<p>
+									   <li class="li1"><a href="#" style="color:red">象征丰收和满载的水果</a></li>
+									   <li class="li1"><a href="#">自制美味的花生牛轧糖</a></li>
+									   <li class="li1"><a href="#">内藏惊喜的彩虹戚风蛋糕</a></li>
+									   <li class="li1"><a href="#">消耗蛋挞皮 - 简单版红薯酥</a></li>
+									   <li class="li1"><a href="#">菜单：奥利奥的N种百搭吃法</a></li>
+                                       <li class="li1"><a href="#">专题：另类咸香口儿，满足你的味蕾</a></li>
+                                    </p>
+									<a href="#" class="button button-1">更多</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-1-3">
+							<div class="wrap-col">
+								<div class="box-item">
+								<div class="ui_title">
+                                  <div class="ui_title_wrap">
+                                    <h2 class="on"><a href="javascript:void(0);">健康</a></h2>
+                                      
+                                      <h3><a title="健康首页" href="//www.meishichina.com/Health/" class="right1" target="_blank">我的专区</a>
+                                      </h3>
+                                </div>
+                                </div>
+                                
+									<span class="r2">为您推荐<b></b></span>
+									<img src="images/reservation.jpg" alt="">
+									<p>
+									   <li class="li1"><a href="#" style="color:red">春天易上火，5款食疗降春火</a></li>
+									   <li class="li1"><a href="#">划重点！食物降血脂这些更有效</a></li>
+									   <li class="li1"><a href="#">粗粮细作：健康能量燕麦甜品</a></li>
+									   <li class="li1"><a href="#">妈妈派：童趣童味，儿童创意餐点</a></li>
+									   <li class="li1"><a href="#">ACA多功能辅食料理机</a></li>
+                                       <li class="li1"><a href="#">免费抽奖，孩儿智能烤箱</a></li>
+                                    </p>
+									<a href="#" class="button button-1">更多</a>
+								</div>
+							</div>
+						</div>
 					</div>
 					
 					<div class="w5">
@@ -302,7 +329,7 @@ position: absolute;
                           <h2><a href="javascript:void(0);" class="right2">一周热门</a></h2>
                           <h2><a href="javascript:void(0);" class="right2">最受欢迎的家常菜</a></h2>
                           -->
-                          <c:forEach items="${sessionScope.cList}" var="c" begin="0" end="8"> 
+                          <c:forEach items="${sessionScope.cList}" var="c">
                           <h3>
                           <a title="健康首页" href="${ pageContext.request.contextPath }/findByCid/<c:out value="${c.cid}"/>/1" class="right3" target="_blank">
                              <c:out value="${c.cname}"></c:out> 
