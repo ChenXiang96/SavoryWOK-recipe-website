@@ -105,6 +105,8 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao{
 		query.setParameter(0, pid);
 		return (Product)query.uniqueResult(); 
 	}
+	
+
 
 	public List<Product> findNew() {
 		String hql = "from Product p ";
