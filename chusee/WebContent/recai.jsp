@@ -159,7 +159,7 @@ a.right3 {
         </div>
       </div><!--左侧end-->
 
-
+     <!-- 二级分类 -->
       <div class="space_right">
          <c:forEach var="c" items="${sessionScope.cList }">
            <c:forEach var="cs" items="${c.categorySeconds}">
