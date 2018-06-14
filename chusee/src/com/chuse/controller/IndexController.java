@@ -10,21 +10,29 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 import com.chuse.service.CategoryService;
+import com.chuse.service.CategoryService2;
 import com.chuse.service.ProductService;
 
 @Controller	
 public class IndexController {
 	@Resource
 	private CategoryService categoryService;
+	
+	@Resource
+	private CategoryService2 categoryService2;
+	
 
 	@Resource
 	private ProductService productService;
+
 	
 	//商品首页的action
 	@RequestMapping(value="/index")
 	public String showIndex(Map<String,Object> map,HttpSession session){
 		//把所有的一级分类都存入到session中
 		session.setAttribute("cList", categoryService.getCategory());
+		//把所有的专题一级分类都存入到session中
+		session.setAttribute("cList2", categoryService2.getCategory2());
 		//把最热的10条商品添加到map集合中
 		map.put("hList", productService.findHot());
 		

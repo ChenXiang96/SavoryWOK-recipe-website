@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.chuse.entity.Product;
+import com.chuse.entity.Subject;
 import com.chuse.service.ProductService;
 
 
@@ -50,7 +51,26 @@ public class ProductController {
 		map.put("cid", cid);
 		return "recai";
 	}
-	//根据二级分类查询商品
+	
+	//首页中点击专题一级分类查询商品
+		@RequestMapping(value="/findByCaid/{caid}/{page}")
+		public String findByCaid(@PathVariable("caid") Integer caid,@PathVariable("page") Integer page
+				,Map<String,Object> map){
+			List<Subject> subjects = productService.findByCaid(caid, page);
+			Integer count = productService.CountPageSubjectFromCategory2(caid);
+			if(page > count){
+				page = 1;
+			}
+			map.put("subjects", subjects);
+			//把当前的页数存放到map中
+			map.put("page", page);
+			//总共有多少页
+			map.put("count",count);
+			map.put("caid", caid);
+			return "zhuantixaingqing";
+		}
+		
+     //根据二级分类查询商品
 		@RequestMapping(value="findByCsid/{csid}/{page}")	
 		public String findByCsid(@PathVariable("csid") Integer csid,@PathVariable("page") Integer page
 				,Map<String,Object> map){
@@ -67,6 +87,24 @@ public class ProductController {
 			map.put("csid", csid);
 			return "recai";
 		}
+		
+		//根据专题二级分类查询商品
+				@RequestMapping(value="findByCasid/{casid}/{page}")	
+				public String findByCasid(@PathVariable("casid") Integer casid,@PathVariable("page") Integer page
+						,Map<String,Object> map){
+					Integer count = productService.CountPageSubjectFromCategorySecond2(casid);
+					if(page > count){
+						page = 1;
+					}
+					List<Subject> subjects = productService.findByCasid(casid, page);
+					map.put("subjects", subjects);
+					//把当前的页数存放到map中
+					map.put("page", page);
+					//总共有多少页
+					map.put("count",count);
+					map.put("casid", casid);
+					return "zhuantixiangqing";
+				}
 		
 	//根据菜品pid查询菜品
 	@RequestMapping(value="findByPid/{pid}",method=RequestMethod.GET)
