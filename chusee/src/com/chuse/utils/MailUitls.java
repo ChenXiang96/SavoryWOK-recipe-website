@@ -52,7 +52,10 @@ public class MailUitls {
 			// 设置标题
 			message.setSubject("来自‘厨色’的官方激活邮件");
 			// 设置邮件正文:	
-			message.setContent("<h1>‘厨色’官方激活邮件!点击下方链接完成激活操作！</h1><h3><a href='http://localhost:8080/eShop/active/"+code+"'>http://localhost:8080/eShop/active/"+code+"</a></h3>", "text/html;charset=UTF-8");
+			message.setContent("<h1>‘厨色’官方激活邮件!点击下方链接完成激活操作！</h1>"
+					+ "<h3>"
+					+ "<a href='http://localhost:8080/chusee/active/"+code+"'>http://localhost:8080/chusee/active/"+code+"</a>"
+							+ "</h3>", "text/html;charset=UTF-8");
 			// 3.发送邮件：
 			Transport.send(message);
 		} catch (AddressException e) {

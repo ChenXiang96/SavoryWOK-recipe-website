@@ -226,7 +226,7 @@ position: absolute;
 		<section class="content-box box-1">
 			<div class="zerogrid">
 				<div class="row box-item"><!--Start Box-->
-					<h2>“开启属于我的美食之旅”</h2>
+					<center><h2>开启属于我的美食之旅</h2></center>
 				</div>
 			</div>
 		</section>

@@ -115,69 +115,69 @@ margin-left:40px;
               <li>
                 <img src="img/slides/1.jpg" alt="" />
                 <div class="flex-caption container">
-                    <h3>Tast of Goodness</h3> 
-					<p>Doloribus omnis minus temporibus perferendis ipsa</p>  
+                     <h3>品味时光醇香</h3> 
+					<p>回 味 唇 齿 留 香 的 美 好 瞬 间</p>  
                 </div>
               </li>
               
               <li>
                 <img src="img/slides/2.jpg" alt="" />
                 <div class="flex-caption container">
-                    <h3>Best Time-out</h3> 
-<p>Doloribus omnis minus temporibus perferendis ipsa</p>  					
+                   <h3>品味时光醇香</h3> 
+					<p>回 味 唇 齿 留 香 的 美 好 瞬 间</p> 				
                 </div>
               </li>
               
                 <li>
                 <img src="img/slides/3.jpg" alt="" />
                 <div class="flex-caption container">
-                    <h3>Best Time-out</h3> 
-<p>Doloribus omnis minus temporibus perferendis ipsa</p>  					
+                    <h3>品味时光醇香</h3> 
+					<p>回 味 唇 齿 留 香 的 美 好 瞬 间</p>   					
                 </div>
               </li>
               
                 <li>
                 <img src="img/slides/4.jpg" alt="" />
                 <div class="flex-caption container">
-                    <h3>Best Time-out</h3> 
-<p>Doloribus omnis minus temporibus perferendis ipsa</p>  					
+                   <h3>品味时光醇香</h3> 
+					<p>回 味 唇 齿 留 香 的 美 好 瞬 间</p>   					
                 </div>
               </li>
               
                 <li>
                 <img src="img/slides/5.jpg" alt="" />
                 <div class="flex-caption container">
-                    <h3>Best Time-out</h3> 
-<p>Doloribus omnis minus temporibus perferendis ipsa</p>  					
+                   <h3>品味时光醇香</h3> 
+					<p>回 味 唇 齿 留 香 的 美 好 瞬 间</p> 				
                 </div>
               </li>
               <li>
                 <img src="img/slides/6.jpg" alt="" />
                 <div class="flex-caption container">
-                    <h3>Best Time-out</h3> 
-<p>Doloribus omnis minus temporibus perferendis ipsa</p>  					
+                    <h3>品味时光醇香</h3> 
+					<p>回 味 唇 齿 留 香 的 美 好 瞬 间</p> 			
                 </div>
               </li>
               <li>
                 <img src="img/slides/7.jpg" alt="" />
                 <div class="flex-caption container">
-                    <h3>Best Time-out</h3> 
-<p>Doloribus omnis minus temporibus perferendis ipsa</p>  					
+                    <h3>品味时光醇香</h3> 
+					<p>回 味 唇 齿 留 香 的 美 好 瞬 间</p>    					
                 </div>
               </li>
               <li>
                 <img src="img/slides/8.jpg" alt="" />
                 <div class="flex-caption container">
-                    <h3>Best Time-out</h3> 
-<p>Doloribus omnis minus temporibus perferendis ipsa</p>  					
+                   <h3>品味时光醇香</h3>  
+					<p>回 味 唇 齿 留 香 的 美 好 瞬 间</p>  					
                 </div>
               </li>
               
               <li>
                 <img src="img/slides/9.jpg" alt="" />
                 <div class="flex-caption container">
-                    <h3>Best Time-out</h3> 
-<p>Doloribus omnis minus temporibus perferendis ipsa</p>  					
+                   <h3>品味时光醇香</h3> 
+					<p>回 味 唇 齿 留 香 的 美 好 瞬 间</p> 			
                 </div>
               </li>
               

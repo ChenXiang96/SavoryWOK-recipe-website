@@ -88,13 +88,13 @@ public class UserController{
 				User user = userService.active(code);
 				if(user == null){
 					map.put("notUser", "notUser");
-					return "msg";
+					return "ono";
 				}
 				user.setCode("");
 				user.setState(1);
 				userService.update(user);
 				map.put("activeSuccess","activeSuccess");
-				return "msg";
+				return "wayes";
 			}
 
 			// 用户注册
