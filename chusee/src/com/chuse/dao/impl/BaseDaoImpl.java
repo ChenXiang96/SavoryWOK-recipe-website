@@ -107,6 +107,10 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 		Query q = this.getCurrentSession().createQuery(hql);
 		return q.setFirstResult((page - 1) * rows).setMaxResults(rows).list();
 	}
+	public List<Subject> hfind2(String hql, int page, int rows) {
+		Query q = this.getCurrentSession().createQuery(hql);
+		return q.setFirstResult((page - 1) * rows).setMaxResults(rows).list();
+	}
 
 
 	public Integer count(String hql) {

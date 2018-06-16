@@ -60,6 +60,9 @@ public class ProductServiceImpl implements ProductService{
 	public Subject findByPid2(Integer pid) {
 		return productDao.findTwo(pid);
 	}
+	public Subject findBySid(Integer pid) {
+		return productDao.findTwo(pid);
+	}
 	
 
 
@@ -72,8 +75,10 @@ public class ProductServiceImpl implements ProductService{
 	}
 	
 
-
 	public List<Product> findNew() {
 		return productDao.findNew();
+	}
+	public List<Subject> findNew2() {
+		return productDao.findNew2();
 	}
 }

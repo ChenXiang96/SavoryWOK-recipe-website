@@ -36,6 +36,11 @@ public class IndexController {
 		//把最热的10条商品添加到map集合中
 		map.put("hList", productService.findHot());
 		
+		map.put("nList", productService.findNew());
+		
+		//把3条专题存放到map集合中
+		map.put("nList2", productService.findNew2());
+		
 		return "index"; 
 	}
 }

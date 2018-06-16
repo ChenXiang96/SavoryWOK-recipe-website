@@ -88,7 +88,7 @@ h3.heading-style-3:before, h3.heading-style-3:after{
         <div class="container">
           <div class="login-wrapper">
             <div class="row">
-              <h3>Register</h3>
+              <h3>注册</h3>
               <form  commandName="user" action="${ pageContext.request.contextPath }/register" method="post" modelAttribute="user" novalidate="novalidate" onsubmit="return checkForm();">
                 <div class="form-group organic-form-2">
                   <label><font color="red">*</font> 用户名</label>

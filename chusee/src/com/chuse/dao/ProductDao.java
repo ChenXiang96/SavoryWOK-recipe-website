@@ -14,6 +14,8 @@ public interface ProductDao extends BaseDao<Product>{
 	public List<Subject> findHHot();
 	
 	public List<Product> findNew();
+	
+	public List<Subject> findNew2();
 	public List<Product> findByCategorySecondCsid(Integer csid,Integer page);
 	
 	public List<Subject> findByCategorySecondCsid2(Integer casid,Integer page);

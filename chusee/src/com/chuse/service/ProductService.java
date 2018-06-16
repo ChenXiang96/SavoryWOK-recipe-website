@@ -14,6 +14,7 @@ public interface ProductService {
 	public Product findByPid(Integer pid);
 	
 	public Subject findByPid2(Integer pid);
+	public Subject findBySid(Integer pid);
 	//根据一级分类查询菜品
 	public List<Product> findByCid(Integer cid,Integer page);
 	//根据专题一级分类查询菜品
@@ -33,5 +34,12 @@ public interface ProductService {
 	public List<Subject> findHHot();
 	public Integer CountPageProductFromCategorySecond(Integer csid);
 	public Integer CountPageSubjectFromCategorySecond2(Integer casid);
+
+	
+	//查找最新的商品10条
+	public List<Product> findNew();
+	//查找最新的商品10条
+	public List<Subject> findNew2();
+
 
 }

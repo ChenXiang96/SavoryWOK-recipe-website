@@ -25,6 +25,8 @@ public interface BaseDao<T> {
 	public List<T> find(String hql, Map<String, Object> params);
 
 	public List<T> find(String hql, int page, int rows);
+
+	public List<Subject> hfind2(String hql, int page, int rows);
 	
 	public List<Subject> hfind(String hql, int page, int rows);
 

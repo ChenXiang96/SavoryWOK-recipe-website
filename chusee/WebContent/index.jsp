@@ -261,7 +261,21 @@ position: absolute;
                                        </a>
 									 
 									<b></b></span>
-									<img src="images/menu.jpg" alt="">
+									<!--<c:forEach var="s" items="${subject}" begin="8" end="9">
+									<a href="${ pageContext.request.contextPath }/findBySid/<c:out value="${p.pid}"/>">
+						             <img src="${pageContext.request.contextPath}/<c:out value="${p.image}"/>" >
+						            </a>
+									</c:forEach>
+									-->
+								         <c:forEach items="${nList2}" var="s">
+										<a href="${pageContext.request.contextPath }/findByPid2/<c:out value="${s.pid}"/>">
+										<img src="${pageContext.request.contextPath}/<c:out value="${s.image}"/>"/>
+										</a>
+										  
+										</c:forEach>
+									
+									
+									
 									<p>
 									   <li class="li1"><a href="#" style="color:red">牙齿不好就别吃这5种食物！</a></li>
 									   <li class="li1"><a href="#">清理血管，让血管年轻起来！</a></li>

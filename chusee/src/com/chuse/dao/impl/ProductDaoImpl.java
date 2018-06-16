@@ -178,6 +178,16 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao{
 		int rows = 10;
 		return find(hql,1,rows);
 	}
+	public List<Subject> findNew2() {
+		String hql = "from Subject s ";
+		hql += "order by s.pdate desc";
+		int rows = 1;
+		return hfind2(hql,1,rows);
+	}
+	
+	
+	
+	
 
 	public List<Product> findAll(Integer page) {
 		String hql = "from Product";

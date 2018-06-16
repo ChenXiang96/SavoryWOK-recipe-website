@@ -112,6 +112,20 @@ public class ProductController {
 		map.put("product", productService.findByPid(pid));
 		return "caipinxiangqing";
 	}
+	
+	//根据专题pid查询菜品
+		@RequestMapping(value="findByPid2/{pid}",method=RequestMethod.GET)
+		public String findByPid2(@PathVariable("pid") Integer pid,Map<String,Subject> map){
+			map.put("subject", productService.findByPid2(pid));
+			return "zhuantixiangqing";
+		}
+		
+		@RequestMapping(value="findBySid/{pid}",method=RequestMethod.GET)
+		public String findBySid(@PathVariable("pid") Integer pid,Map<String,Subject> map){
+			map.put("subject", productService.findBySid(pid));
+			return "index";
+		}
+	
 }
 
 
