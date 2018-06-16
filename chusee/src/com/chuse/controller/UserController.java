@@ -122,7 +122,7 @@ public class UserController{
 					return "register"; 
 				}
 				userService.register(user);
-				return "msg";
+				return "yes";
 			 }
 
 

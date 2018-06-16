@@ -71,13 +71,16 @@ h3.heading-style-3 {
         <div class="container">
           <div class="login-wrapper">
             <div class="row">
-                <div class="call-to-action-style-1">
-            <h2><font color="#F7D358">注册失败!</font></h2>
-             <p class="h3"><font color="#A2CD5A">请再尝试一次，检查您的网络</font></p>
-              <a class="btn btn-brand pill" href="${ pageContext.request.contextPath}/index">返回首页</a>
+            
+        <center> <div class="call-to-action-style-1">
+            <center><h2><font color="#F7D358">注册成功!</font></h2></center>
+             <p class="h3"><font color="#A2CD5A">请去邮箱激活您的账户</font></p>
+             <a class="btn btn-brand pill" href="${ pageContext.request.contextPath}/index">返回首页</a>
              <a class="btn btn-brand pill" href="${ pageContext.request.contextPath }/userRegister">返回注册</a>
              <a class="btn btn-brand pill" href="${ pageContext.request.contextPath }/userLogin">返回登录</a>
+             
          </div>
+         </center>
               
               
             </div>
