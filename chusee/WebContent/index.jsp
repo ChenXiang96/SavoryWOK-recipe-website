@@ -317,22 +317,27 @@ position: absolute;
                        
                            </div>
                         </div>
-			<div class="wrap-content">
+		<div class="wrap-content">
 				<div class="row">
+				<c:forEach items="${ list}" var="p">
 					<div class="col-1-4">
+					
 						<div class="zoom-container">
+							
 							<a href="#">
 								<span class="zoom-caption">
-									<span>黄金炸鸡排</span>
+									<span>${p.pname }</span>
 								</span>
-								<img  src="images/JP.jpg" />
+							<img width="50" height="50" src="${ctx}/${p.image }" />
 							</a>
+							
 						</div>
+						
 					</div>
+					</c:forEach>
 				</div>
 				
 			</div>
-               	
 				
 					
 				</div>

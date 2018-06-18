@@ -23,7 +23,7 @@ import com.chuse.entity.CategorySecond;
 @Table(name="product")
 @Entity
 public class Product implements java.io.Serializable{
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Id
    private Integer pid;
    private Integer is_hot;

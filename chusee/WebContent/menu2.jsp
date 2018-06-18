@@ -83,7 +83,7 @@
                     <a href="reservation.jsp">专题</a>
                   </li>
                    <li>
-                    <a href="${ pageContext.request.contextPath}/topic/show">社区</a>
+                    <a href="staff.jsp">社区</a>
                   </li>
                    <li>
                     <a href="gallery.jsp">话题</a>

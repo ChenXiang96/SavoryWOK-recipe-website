@@ -1,5 +1,7 @@
 package com.chuse.service;
 
+import java.util.List;
+
 import com.chuse.entity.User;
 
 public interface UserService {
@@ -14,5 +16,9 @@ public interface UserService {
 	public void register(User user);
 	
 	public void update(User user);
+	
+	public List<User> findByPage(int num, int i);
+	
+	public int findByCount();
 
 }

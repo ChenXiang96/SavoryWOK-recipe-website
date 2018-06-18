@@ -48,10 +48,10 @@
 				<th>图片</th>
 				<th>菜名</th>
 				<th>所属菜系</th>
-				<td>描述</td>
+				<th>描述</th>
 				<th>上传者id</th>
 				<th>上传时间</th>
-				<td>喜欢数</th>
+				<th>喜欢数</th>
                 <th>收藏数</th>
 				<th>操作</th>
 			</tr>
@@ -71,17 +71,17 @@
 				<td>36&nbsp;</td>
                 <td>23&nbsp;</td>
 				<td>
-					<a href="${ctx }/health/edit?id=${p.pid}"  class="FunctionButton">更新</a>				
-					<a href="/wirelessplatform/food.jsp?method=delete&id=1" onClick="return delConfirm();"class="FunctionButton">删除</a>				
+					<a href="${ctx }/health/edit?pid=${p.pid}"  class="FunctionButton">更新</a>				
+					<a href="${ctx }/health/delete?pid=${p.pid}" onClick="return delConfirm();"class="FunctionButton">删除</a>
+					<a href="${ctx }/health/add"  class="FunctionButton">增加</a>				
 				</td>
 				
 				
 			</tr>
 			</c:forEach>
-  			<tr width="50" height="50"><td colspan="10" class="center">共有${page.totalCount}条数据，一共${page.totalPageNum }页，
-      			<a href="?pageNum=1">首页</a>，<a href="?pageNum=${page.prePageNum }">上一页</a>，<a href="?pageNum=${page.nextPageNum }">下一页</a>，<a href="?pageNum=${page.totalPageNum }">末页</a>
-      			</td></tr>
-
+  			
+ <tr width="50" height="50"><td colspan="10" class="center">共有${page.totalCount}条数据，一共${page.totalPageNum }页，
+      <a href="?pageNum=1">首页</a>，<a href="?pageNum=${page.prePageNum }">上一页</a>，<a href="?pageNum=${page.nextPageNum }">下一页</a>，<a href="?pageNum=${page.totalPageNum }">末页</a></td></tr>
 			
                 
         </tbody>
@@ -89,7 +89,7 @@
 	
    <!-- 其他功能超链接 -->
 	<div id="TableTail" align="center">
-		<div class="FunctionButton"><a href="saveFood.jsp">添加</a></div>
+		<div class="FunctionButton"><a href="${ctx }/health/add">添加</a></div>
     </div> 
 </div>
 </body>

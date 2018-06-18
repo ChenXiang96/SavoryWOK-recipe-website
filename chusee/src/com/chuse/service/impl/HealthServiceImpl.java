@@ -17,13 +17,58 @@ public class HealthServiceImpl {
 	@Resource
 	private HealthDaoImpl healthDaoImpl;
 	
-	//后-商品删除
-	//修改商品
+	//-----------------------------------------------------------------
+	//查-前-商品列表
+	public List<Product> listProducts(){
+		return healthDaoImpl.findAll();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//------------------------------------------------------------
+
+	//后-修改商品-先按id查出来
 	public Product findProduct(Integer pid){
 		return this.healthDaoImpl.findByIdBack(pid);
-	}	
+	}
+	public Product updateProduct(Product product) {				
+		return this.healthDaoImpl.updateBack(product);
+		
+	}
+	//后台-删除商品
+	public void deleteProduct(Product product, Integer pid) {
+		System.out.print("ser快删啊");
+		this.healthDaoImpl.deleteByIdBack(product,pid);
+	}
 
 	
+	
+	
+	
+	//后-添加商品
+		
+	public Product addProductBack(Product product){
+		return this.healthDaoImpl.saveProduct(product);
+				
+	}
 	
 	
 	
