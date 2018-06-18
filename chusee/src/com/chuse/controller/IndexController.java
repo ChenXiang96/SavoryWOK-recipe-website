@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.chuse.service.CategoryService;
 import com.chuse.service.CategoryService2;
 import com.chuse.service.ProductService;
+import com.chuse.service.SubjectService;
 
 @Controller	
 public class IndexController {
@@ -24,6 +25,11 @@ public class IndexController {
 
 	@Resource
 	private ProductService productService;
+	
+
+	@Resource
+	private SubjectService subjectService;
+
 
 	
 	//商品首页的action
@@ -39,7 +45,7 @@ public class IndexController {
 		map.put("nList", productService.findNew());
 		
 		//把3条专题存放到map集合中
-		map.put("nList2", productService.findNew2());
+		map.put("nList2", subjectService.findNew2());
 		
 		return "index"; 
 	}

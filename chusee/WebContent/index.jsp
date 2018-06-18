@@ -243,7 +243,7 @@ position: absolute;
 					<div class="row">
 					
 					
-					<c:forEach items="${sessionScope.cList2}" var="c">
+					<c:forEach items="${sessionScope.cList2}" var="c2">
 						<div class="col-1-3">
 							<div class="wrap-col">
 								<div class="box-item">
@@ -255,9 +255,10 @@ position: absolute;
                                     </h3>
                                 </div>
                                 </div>
+                                
 									<span class="ribbon">
-									   <a title="健康首页" href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1" class="right3" target="_blank">
-                                        <c:out value="${c.caname}"></c:out> 
+									 <a title="健康首页" href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c2.caid}"/>/1" >
+                                        <c:out value="${c2.caname}"></c:out> 
                                        </a>
 									 
 									<b></b></span>
