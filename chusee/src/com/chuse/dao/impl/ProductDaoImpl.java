@@ -23,8 +23,6 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao{
 	 + "p.pdate,p.pdesc,p.pname,p.pcontent ";
 	
 
-	
-
 			
 	
 	public Integer CountPageProductFromCategory(Integer cid) {
@@ -33,21 +31,33 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao{
 		return count(hql, cid);
 	}
 	
-
+	public Integer CountPageSubjectFromCategory2(Integer caid) {
+		String hql= "select count(*)from Subject s,Category2 c,CategorySecond2 cs";
+		hql+="where s.categorySecond2.casid = cs.casid and cs.category2.caid = c.caid and c.caid = ?";
+		return count(hql, caid);
+		
+	}
 
 	public Integer CountPageProductFromCategorySecond(Integer csid) {
 		String hql = "select count(*) from Product p ,CategorySecond cs ";
 		hql += "where p.categorySecond.csid = cs.csid and cs.csid = ?";
 		return count(hql, csid);
 	}
-	
+	public Integer CountPageSubjectFromCategorySecond2(Integer casid){
+		String hql = "select count(*) from Subject s ,CategorySecond2 cs ";
+		hql += "where s.categorySecond2.casid = cs.casid and cs.casid = ?";
+		return count(hql, casid);
+	}
 	
 	public Integer CountProduct() {
 		String hql = "select count(*) from Product";
 		return count(hql);
 	}
 	
-
+	public Integer CountSubject() {
+		String hql = "select count(*) from Subject";
+		return count(hql);
+	}
 
 	public List<Product> findByCategorySecondCategoryCid(Integer cid,
 			Integer page) {
@@ -56,14 +66,23 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao{
 		return Query(cid, page, hql);
 	}
 	
-	
+	public List<Subject> findByCategorySecondCategoryCid2(Integer caid,
+			Integer page) {
+		String hql = selecthql + "from Subject s,Category2 c, CategorySecond2 cs ";
+		hql += "where s.categorySecond2.casid = cs.casid and cs.category2.caid = c.caid and c.caid = ?";
+		return Query2(caid, page, hql);
+	}
 	
 	public List<Product> findByCategorySecondCsid(Integer csid, Integer page) {
 		String hql = selecthql + "from Product p ,CategorySecond cs ";
 		hql += "where p.categorySecond.csid = cs.csid and cs.csid = ?";
 		return Query(csid, page, hql);
 	}
-	
+	public List<Subject> findByCategorySecondCsid2(Integer casid, Integer page) {
+		String hql = selecthql + "from Subject s ,CategorySecond2 cs ";
+		hql += "where s.categorySecond2.casid = cs.casid and cs.casid = ?";
+		return Query2(casid, page, hql);
+	}
     
 
 	private List<Product> Query(Integer csid, Integer page,String hql){
@@ -93,7 +112,32 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao{
 		return products;
 	}
 	
+	private List<Subject> Query2(Integer casid, Integer page,String hql){
+		int rows = 12;
+		Query query = this.getCurrentSession().createQuery(hql);
+		query.setParameter(0, casid);
+		List list= query.setFirstResult((page - 1) * rows).setMaxResults(rows).list();
+		
+		List<Subject> subjects = new ArrayList<Subject>();
+		Iterator iter = list.iterator();
+		while(iter.hasNext()){
+			Object[] obj = (Object[])iter.next();
+			Subject subject = new Subject();
+			int pid = (Integer)obj[0];
+			subject.setPid(pid);
+			subject.setImage((String)obj[1]);
+			subject.setIs_hot((Integer) obj[2]);
+			
+            subject.setPdate((Date) obj[3]);
+			subject.setPdesc((String) obj[4]);
+			subject.setPname((String) obj[5]);
+			subject.setPcontent((String) obj[6]);
 
+		
+			subjects.add(subject);
+		}
+		return subjects;
+	}
 	
 
 	
@@ -107,6 +151,12 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao{
 	}
 	
 	
+	public List<Subject> findHHot() {
+		String hql = "from Subject s where s.is_hot = 1 ";
+		hql += "order by s.pdate desc";
+		int rows = 9;
+		return hfind(hql,1,rows);
+	}
 	
 
 
@@ -116,12 +166,23 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao{
 		query.setParameter(0, pid);
 		return (Product)query.uniqueResult(); 
 	}
-	
+	public Subject findTwo(Integer pid) {
+		String hql = "from Subject s where s.pid = ?";
+		Query query = this.getCurrentSession().createQuery(hql);
+		query.setParameter(0, pid);
+		return (Subject)query.uniqueResult(); 
+	}
 	public List<Product> findNew() {
 		String hql = "from Product p ";
 		hql += "order by p.pdate desc";
 		int rows = 10;
 		return find(hql,1,rows);
+	}
+	public List<Subject> findNew2() {
+		String hql = "from Subject s ";
+		hql += "order by s.pdate desc";
+		int rows = 1;
+		return hfind2(hql,1,rows);
 	}
 	
 	
@@ -137,7 +198,13 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao{
 
 
 
-	
+	public List<Subject> findAll2(Integer page) {
+		String hql = "from Subject";
+		int rows = 12;
+		int page1 = page;
+		return hfind(hql,page1,rows);
+	}
+
 
 
 
