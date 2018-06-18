@@ -38,7 +38,7 @@
 <!-- 主内容区域（数据列表或表单显示） -->
 <div id="MainArea">
 	<!-- 表单内容 -->
-	<form action="#" method="post" enctype="multipart/form-data">
+	<form action="${ctx }/health/update?pid=${product.pid}" method="post" enctype="multipart/form-data">
 		<!-- 本段标题（分段标题） -->
 		<div class="ItemBlock_Title">
         	<img width="4" height="7" border="0" src="${ctx }/adm/detail/style/images/item_point.gif"> 菜品信息&nbsp;
@@ -48,7 +48,7 @@
             <div class="ItemBlock">
 				<div class="ItemBlock2">
 					<table cellpadding="0" cellspacing="0" class="mainForm">
-					
+					 
                     <tr>
 							<td width="80px">菜系</td>
 							<td>
@@ -75,19 +75,19 @@
 			   						
 			   					
                             </select>
-                             *<input type="hidden" name="id" value="1" /></td>
+                             <input type="hidden" name="id" value="1" /></td>
 						</tr>
 						<tr>
 							<td width="80px">菜名</td>
-							<td><input type="text" id="pname" name="pname" class="InputStyle" value=" ${product.pname}"/> *</td>
+							<td><input type="text" id="pname" name="pname" class="InputStyle" value=" ${product.pname}"/></td>
 						</tr>
 						<tr>
 							<td width="80px">id</td>
-							<td><input type="text" id="pid" name="pid" class="InputStyle" value="${product.pid } "/> *</td>
+							<td><input type="text" id="pid" name="pid" class="InputStyle" value="${product.pid } "/></td>
 						</tr>
 						<tr>
 							<td>简介</td>
-							<td><textarea name="pdesc" id="pid" class="TextareaStyle" value="${product.pdesc }">粤菜白灼虾，大件！</textarea></td>
+							<td><textarea name="pdesc" id="pid" class="TextareaStyle">${product.pdesc }</textarea></td>
 						</tr>
 						<tr>
 							<td width="80px">菜品图片</td>
@@ -112,7 +112,7 @@
 				
 					 <input type="submit" value="修改" class="FunctionButtonInput">
 				
-				
+			
 			
             
             <a href="javascript:history.go(-1);" class="FunctionButton">返回</a>

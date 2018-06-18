@@ -9,6 +9,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.chuse.entity.Page;
@@ -21,19 +22,90 @@ public class HealthController {
 
 	@Resource
 	private HealthServiceImpl healthServiceImpl;
+	//前------------------------------------------------------
 	
-	//后-改-修改商品
-	//后-改-先找到要改的商品---修改商品
+	//前-查-在商品页面显示商品列表
+	@RequestMapping("/list")
+	public String list(HttpSession session){
+			List<Product> list=this.healthServiceImpl.listProducts();
+			session.setAttribute("list", list);
+			System.out.print("con");
+			return "cookbook";
+	}
+	
+	@RequestMapping("/list1")
+	public String list1(HttpSession session){
+			List<Product> list=this.healthServiceImpl.listProducts();
+			session.setAttribute("list", list);
+			System.out.print("con");
+			return "index";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//后台-----------------------------------------------------
+	//后-修改商品-修改商品------------
+	//后-修改商品-先找到要改的商品
 	@RequestMapping("/edit")
 	public String edit(@RequestParam(value="pid", required = false) Integer pid,Model model){
 		//List<ProductType> listtype=this.productTypeServiceImpl.listProductType();
 		//model.addAttribute("listtype", listtype);
 		Product product=this.healthServiceImpl.findProduct(pid);
-		//System.out.println("xiao"+product.getPname());
 		model.addAttribute("product", product);
-		System.out.println("xiaomi");
+		System.out.println("xiao"+product.getPname());
+		System.out.println("xiaomi"+product.getPdesc());
 		return "/adm/detail/updateHealth";
-	}	
+	}
+	//后-修改商品-调用那个提交修改商品
+	@RequestMapping(value="update", method=RequestMethod.POST)//没进来，但是跳转了什么鬼
+	public String updateBack(@RequestParam(value="pid", required = false) Integer pid,Product product,
+			@RequestParam("pname") String pname,
+			@RequestParam("pdesc") String pdesc) {
+		product=this.healthServiceImpl.findProduct(pid);
+		product.setPname(pname);
+		product.setPdesc(pdesc);
+		this.healthServiceImpl.updateProduct(product);
+		System.out.print("aaaaa"+product.getPname());
+		return "redirect:get";//重新跳转到健康列表页面
+	}
+	//后-删除健康
+	@RequestMapping("/delete")
+	public String deletelist(HttpSession session,@RequestParam(value="pid", required = false) Integer pid){
+		Product product=this.healthServiceImpl.findProduct(pid);
+		System.out.print("con快删啊");
+		this.healthServiceImpl.deleteProduct(product,pid);
+		return "forward:/health/get";
+	}
+	
+	
+	
+	
+	//后-添加-添加商品
+	@RequestMapping(value="/add", method=RequestMethod.GET)
+	public String toAdd(Model model){
+		//List<ProductType> listtype=this.productTypeServiceImpl.listProductType();
+		//model.addAttribute("listtype", listtype);
+		System.out.println("contype");  
+		return "/adm/detail/saveHealth";
+	}
+	//后-添加-添加商品---上传图片
+	@RequestMapping(value="add", method=RequestMethod.POST)
+	public String addBack(Product product,
+			@RequestParam("pname") String pname,
+			@RequestParam("pdesc") String pdesc
+		) {
+		product=this.healthServiceImpl.addProductBack(product);		
+		return "redirect:get";
+	}
 
 		
 	

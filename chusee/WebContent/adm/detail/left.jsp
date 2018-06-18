@@ -105,7 +105,7 @@ body {
                 	<a target="right" href="cuisineList.jsp">菜系管理</a>
 				</li>
                 <li class="level2 level2Style">
-                	<a target="right" href="userList.jsp">用户信息</a>
+                	<a target="right" href="${ctx }/user/get">用户信息</a>
 				</li>
 				
                 <li class="level2 level2Style">

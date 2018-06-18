@@ -80,10 +80,7 @@
 							<td width="80px">菜名</td>
 							<td><input type="text" name="pname" class="InputStyle" value=""/> *</td>
 						</tr>
-						<tr>
-							<td>上传id</td>
-							<td><input type="text" id="pid" name="pid" class="InputStyle" value=""/> *</td>
-						</tr>
+						
                         <tr>
 							<td>上传时间</td>
 							<td><input type="text" name="mprice" class="InputStyle" value=""/> *</td>
