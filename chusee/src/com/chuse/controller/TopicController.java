@@ -23,10 +23,12 @@ public class TopicController {
 	
 	
 	//显示全部话题
-	@RequestMapping("/test")
+	@RequestMapping("/show")
 	public String list(HttpSession session){
 		List<Topic> list=this.topicServiceImpl.listTopics();
-		session.setAttribute("list", list);
+		session.setAttribute("tlist", list);
+		
+		System.out.println(list.get(0).getTimg());
 		return "community";
 	}
 

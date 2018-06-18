@@ -1,5 +1,6 @@
 package com.chuse.service.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -24,7 +25,11 @@ public class TopicServiceImpl {
 
 
 	public List<Topic> listTopics(){
-		return topicdaoimpl.findAll();
+		
+	
+		return topicdaoimpl.findAll(1);
+		
+		
 	}
 
 }

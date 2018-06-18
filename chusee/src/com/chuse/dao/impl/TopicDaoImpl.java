@@ -23,35 +23,61 @@ import org.hibernate.Transaction;
 import org.hibernate.hql.internal.ast.HqlASTFactory;
 import org.springframework.stereotype.Repository;
 
-import com.chuse.dao.ProductDao;
 import com.chuse.dao.TopicDao;
 import com.chuse.entity.Food;
 import com.chuse.entity.Product;
 import com.chuse.entity.Topic;
-import com.chuse.entity.Product;
 
 
-@Repository
-public class TopicDaoImpl {
+@Repository("topicDao")
+@SuppressWarnings("all")
+public class TopicDaoImpl extends BaseDaoImpl<Topic>implements TopicDao {
 
-	@Resource
-	private SessionFactory sessionFactory;
+	final String selecthql = "select t.tid,t.tcontent,t.time," + "p.uid,p.ttitle";
 
-	public List<Topic> findAll(){	
-		//获得session  
-		Session session = sessionFactory.openSession();  
-		//打开事务  
-		Transaction ts = session.beginTransaction();
-		//原生的Sql查询  
-		SQLQuery query = session.createSQLQuery("select * from cs_topic");  
-		// addEntity 将查询结果封装到指定对象中  
-		query.addEntity(Food.class);  	          
-		List<Topic> list = query.list();
-		System.out.println(list);            
-		//提交事务  
-		ts.commit();        
-		//关闭资源  
-		session.close(); 
-		return list;
+	public Integer CountTopic() {
+		String hql = "select count(*) from Topic";
+		return count(hql);
 	}
+
+	private List<Topic> Query(Integer csid, Integer page, String hql) {
+		int rows = 12;
+		Query query = this.getCurrentSession().createQuery(hql);
+		query.setParameter(0, csid);
+		List list = query.setFirstResult((page - 1) * rows).setMaxResults(rows).list();
+
+		List<Topic> topics = new ArrayList<Topic>();
+		Iterator iter = list.iterator();
+		while (iter.hasNext()) {
+			Object[] obj = (Object[]) iter.next();
+			Topic topic = new Topic();
+			int tid = (Integer) obj[0];
+			topic.setTid(tid);
+			topic.setUid((Integer) obj[1]);
+			topic.setTcontent((String) obj[2]);
+			topic.setTtitle((String) obj[3]);
+
+			topic.setTime((Date) obj[4]);
+
+			topics.add(topic);
+		}
+		return topics;
+	}
+	
+	public Topic findOne(Integer tid) {
+		String hql = "from Topic t where t.tid = ?";
+		Query query = this.getCurrentSession().createQuery(hql);
+		query.setParameter(0, tid);
+		return (Topic)query.uniqueResult(); 
+	}
+	
+	public List<Topic> findAll(Integer page) {
+		String hql = "from Topic";
+		int rows = 12;
+		int page1 = page;
+		return find(hql,page1,rows);
+	}
+	
+	
+		
 }

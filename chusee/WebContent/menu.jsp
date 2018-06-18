@@ -74,7 +74,7 @@ margin-left:40px;
                         <li><a href="archive.jsp">甄选</a></li>
                         <li><a href="${ pageContext.request.contextPath}/myHealth">健康</a></li>
                         <li><a href="reservation.jsp">专题</a></li>
-                        <li><a href="staff.jsp">社区</a></li>
+                        <li><a href="${ pageContext.request.contextPath}/topic/show">社区</a></li>
                         <li><a href="gallery.jsp">话题</a></li>
                         
                     <c:if test="${sessionScope.user == null}">
