@@ -24,4 +24,6 @@ public interface UserDao extends BaseDao<User>{
 	
 	public int findCountByPage();
 	
+	public User findById(Integer uid);
+	
 }

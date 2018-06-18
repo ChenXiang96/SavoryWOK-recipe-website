@@ -24,6 +24,29 @@ public class UserServiceImpl implements UserService{
 	
 	@Resource
 	private UserDao userDao;
+	//前台，往用户中心跳转--------------------------------------------
+	//顺便获取用户信息
+	public User findUser(Integer uid){
+		return this.userDao.findById(uid);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	//后台--------------------------------------
 	//后--分页查询数据
 	public List<User> findByPage(int num, int i) {

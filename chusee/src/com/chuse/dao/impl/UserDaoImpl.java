@@ -10,6 +10,7 @@ import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 
 import com.chuse.dao.UserDao;
+import com.chuse.entity.Product;
 import com.chuse.entity.User;
 
 @Repository("userDao")
@@ -17,6 +18,33 @@ import com.chuse.entity.User;
 public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao{
 	@Resource
 	private SessionFactory sessionFactory;
+	
+	//前台，往用户中心跳转--------------------------------------------
+	//顺便获取用户信息
+	public User findById(Integer uid){	
+		User user = (User)this.sessionFactory.getCurrentSession().
+				createQuery("from User where uid = ?").
+				setParameter(0, uid).uniqueResult();
+		return user;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	//后台-------------------------------------------------------
 	//后-查-用户列表
 	//分页查询数据	

@@ -12,15 +12,18 @@ import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.chuse.entity.Page;
+import com.chuse.entity.Product;
 import com.chuse.entity.User;
 import com.chuse.service.UserService;
 
@@ -35,6 +38,36 @@ public class UserController{
 	public User getUser(){
 		return new User();
 	}
+//	//前台，往用户中心跳转--------------------------------------------
+//	//顺便获取用户信息
+//	@RequestMapping("/get")
+//	public String edit(@RequestParam(value="uid", required = false) Integer uid,Model model){
+//		User user=this.userService.findUser(uid);
+//		model.addAttribute("user", user);
+//		System.out.println("xiao"+user.getUsername());
+//		return "center";
+//	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	//-----------------------------------------------
 	//后-查-商品列表
 	@RequestMapping("/get")

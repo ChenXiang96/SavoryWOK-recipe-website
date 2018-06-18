@@ -20,5 +20,7 @@ public interface UserService {
 	public List<User> findByPage(int num, int i);
 	
 	public int findByCount();
+	
+	public User findUser(Integer uid);
 
 }
