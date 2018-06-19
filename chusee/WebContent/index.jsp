@@ -197,7 +197,10 @@ position: absolute;
 #main-content .wrap-content {
     width:1580px;
 }
-
+a.right3 {
+    margin-left: 60px;
+    color: #5A0000;
+}
 
 </style>
 
@@ -257,7 +260,7 @@ position: absolute;
                                 </div>
                                 
 									<span class="ribbon">
-									   <a title="健康首页" href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1" class="right3" target="_blank">
+									   <a title="健康首页" href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1"  style="color:#FFFFFF" target="_blank">
                                         <c:out value="${c.caname}"></c:out> 
                                        </a>
 									 
@@ -279,9 +282,11 @@ position: absolute;
 									
 									<p>
 									     <c:forEach var="cs" items="${c.categorySeconds}">
-									   <li class="li1"><a href="${ pageContext.request.contextPath }/findByCasid/<c:out value="${cs.casid}/1"/>" >
+									   <li class="li1">
+									   <a href="${ pageContext.request.contextPath }/findByCasid/<c:out value="${cs.casid}/1"/>"  style="color:#5A0000">
 									     <c:out value="${cs.casname}" ></c:out>
-									   </a></li>
+									   </a>
+									   </li>
 									   </c:forEach>
                                     </p>
 									<a href="#" class="button button-1">更多</a>
