@@ -23,8 +23,8 @@ public class SubjectDaoImpl extends BaseDaoImpl<Subject> implements SubjectDao {
    
 	
 	public Integer CountPageSubjectFromCategory2(Integer caid) {
-		String hql= "select count(*)from Subject s,Category2 c,CategorySecond2 cs";
-		hql+="where s.categorySecond2.casid = cs.casid and cs.category2.caid = c.caid and c.caid = ?";
+		String hql= "select count(*) from Subject s,Category2 c,CategorySecond2 cs";
+		hql+=" where s.categorySecond2.casid = cs.casid and cs.category2.caid = c.caid and c.caid = ?";
 		return count(hql, caid);
 		
 	}

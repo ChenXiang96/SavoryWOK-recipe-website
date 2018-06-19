@@ -27,7 +27,7 @@ public class Subject implements java.io.Serializable {
 	// 二级分类的外键:使用二级分类的对象.
 		@JoinColumn(name="casid")
 		@ManyToOne
-		private CategorySecond categorySecond2;
+		private CategorySecond2 categorySecond2;
 
 	public Integer getPid() {
 		return pid;
@@ -71,10 +71,10 @@ public class Subject implements java.io.Serializable {
 	public void setPcontent(String pcontent) {
 		this.pcontent = pcontent;
 	}
-	public CategorySecond getCategorySecond2() {
+	public CategorySecond2 getCategorySecond2() {
 		return categorySecond2;
 	}
-	public void setCategorySecond2(CategorySecond categorySecond2) {
+	public void setCategorySecond2(CategorySecond2 categorySecond2) {
 		this.categorySecond2 = categorySecond2;
 	}
 	   

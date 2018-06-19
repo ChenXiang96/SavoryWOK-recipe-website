@@ -255,6 +255,7 @@ position: absolute;
                                     </h3>
                                 </div>
                                 </div>
+                                
 									<span class="ribbon">
 									   <a title="健康首页" href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1" class="right3" target="_blank">
                                         <c:out value="${c.caname}"></c:out> 
@@ -277,12 +278,11 @@ position: absolute;
 									
 									
 									<p>
-									   <li class="li1"><a href="#" style="color:red">牙齿不好就别吃这5种食物！</a></li>
-									   <li class="li1"><a href="#">清理血管，让血管年轻起来！</a></li>
-									   <li class="li1"><a href="#">脸上还有痘痘？6种方法帮你摆脱</a></li>
-									   <li class="li1"><a href="#">专题：那些美颜食物的神级吃法</a></li>
-									   <li class="li1"><a href="#">专题：低卡减肥餐，让你瘦到飞起来</a></li>
-                                       <li class="li1"><a href="#">提高脑力，这些食物少不了！</a></li>
+									     <c:forEach var="cs" items="${c.categorySeconds}">
+									   <li class="li1"><a href="${ pageContext.request.contextPath }/findByCasid/<c:out value="${cs.casid}/1"/>" >
+									     <c:out value="${cs.casname}" ></c:out>
+									   </a></li>
+									   </c:forEach>
                                     </p>
 									<a href="#" class="button button-1">更多</a>
 								</div>

@@ -27,7 +27,7 @@ private static final long serialVersionUID = 1L;
 	// 所属一级分类.存的是一级分类的对象.
 	@JoinColumn(name="caid")
 	@ManyToOne
-	private Category category2;
+	private Category2 category2;
 	@OneToMany(fetch=FetchType.LAZY,mappedBy="categorySecond2")
 	private Set<Subject> subjects = new HashSet<Subject>();
 	public Integer getCasid() {
@@ -42,10 +42,10 @@ private static final long serialVersionUID = 1L;
 	public void setCasname(String casname) {
 		this.casname = casname;
 	}
-	public Category getCategory2() {
+	public Category2 getCategory2() {
 		return category2;
 	}
-	public void setCategory2(Category category2) {
+	public void setCategory2(Category2 category2) {
 		this.category2 = category2;
 	}
 	public Set<Subject> getSubjects() {
