@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set var="ctx" value="${pageContext.request.contextPath}" />
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 41 Transitional//EN">
 <html>
 <head>
@@ -11,10 +12,10 @@
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="text/javascript" src="style/js/jquery.js"></script>
-<script type="text/javascript" src="style/js/page_common.js"></script>
-<link href="style/css/common_style_blue.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="style/css/index_1.css" />
+<script type="text/javascript" src="${ctx }/adm/detail/style/js/jquery.js"></script>
+<script type="text/javascript" src="${ctx }/adm/detail/style/js/page_common.js"></script>
+<link href="${ctx }/adm/detail/style/css/common_style_blue.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="${ctx }/adm/detail/style/css/index_1.css" />
 </head>
 <body>
 <!-- 页面标题 -->
@@ -55,14 +56,14 @@
 		</thead>	
 		<!--显示数据列表 -->
         <tbody id="TableData">
-		
+			<c:forEach items="${ list}" var="p">
 			<tr class="TableDetail1">
-				<td>1&nbsp;</td>
-				<td>用户名&nbsp;</td>
+				<td>${p.uid }&nbsp;</td>
+				<td>${p.username }&nbsp;</td>
 				<td>1&nbsp;</td>
 				<td>管理员</td>
-				<td>123456</td>
-				<td>xxx.jpg</td>
+				<td>${p.password }</td>
+				<td>111</td>
 				<td>2018/5/16</td>
                 
 				<td>
@@ -70,8 +71,9 @@
 					<a href="/wirelessplatform/food.jsp?method=delete&id=1" onClick="return delConfirm();"class="FunctionButton">删除</a>				
 				</td>
 			</tr>
-        
-		
+        	</c:forEach>
+		 <tr width="50" height="50"><td colspan="8" class="center">共有${page.totalCount}条数据，一共${page.totalPageNum }页，
+      <a href="?pageNum=1">首页</a>，<a href="?pageNum=${page.prePageNum }">上一页</a>，<a href="?pageNum=${page.nextPageNum }">下一页</a>，<a href="?pageNum=${page.totalPageNum }">末页</a></td></tr>
                 
         </tbody>
     </table>
