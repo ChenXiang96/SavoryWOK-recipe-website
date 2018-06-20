@@ -44,7 +44,7 @@ public class CenterContorller {
 		System.out.print("con");
 		this.centerServiceImpl.gaiUser(user);
 	
-		return "zhanghushezhi";
+		return "redirect:get";
 	}
 	
 	
