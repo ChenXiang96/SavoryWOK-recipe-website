@@ -23,24 +23,16 @@
 </p>
 </div>
 <div class="ft4">
-<img width="82" title="微信公众号"  class="wx" src="//static.meishichina.com/v6/img/model/weixin_727.png">微信公众号
-<img width="82" title="手机客户端" class="sj" src="//static.meishichina.com/v6/img/model/msc_app.png">手机客户端
+<img width="82" title="微信公众号"  class="wx" src="//static.meishichina.com/v6/img/model/weixin_727.png">
+<img width="82" title="手机客户端" class="sj" src="//static.meishichina.com/v6/img/model/msc_app.png">
 </div>
 
 </div>
 </div>
 <div id="J_footer_box" class="footer-info">
 <div class="w">
-<p class="pp">
-版权所有 &copy; 2004-2018 <a  class="ac" target="_blank" href="https://www.meishichina.com/" title="厨色 -让吃更美好！">厨色</a> 保留所有权利 - <img  class="img4" height="14" src="//static.meishichina.com/v6/img/beian.png"> <a  class="ac" rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502031041">京公网安备 11010502031041号</a> / 京ICP证090244号 / <a  class="ac" rel="nofollow" target="_blank" href="http://www.miitbeian.gov.cn">京ICP备10020153号</a>
-
-<a rel="nofollow" href="http://www.cyberpolice.cn" target="_blank"><img  class="img1" src="//i3.meishichina.com/static/lib/cyberpolice.gif" height="30"></a>
-&nbsp;&nbsp;
-<a rel="nofollow" key="5506c2abc274e750d6d26924" logo_size="124x47" logo_type="realname" href="http://v.pinpaibao.com.cn/authenticate/cert/?site=www.meishichina.com&amp;at=realname" target="_blank">
-<img class="img2" src="//static.anquan.org/static/outer/image/sm_124x47.png?id=home.meishichina.com" alt="安全联盟认证" height="23"></a>
-&nbsp;&nbsp;
-<a rel="nofollow" href="http://ss.knet.cn/verifyseal.dll?sn=2010110200100002761&amp;ct=df&amp;a=1&amp;pa=0.1362082236943738" target="_blank"><img  class="img3" width="64" height="23" src="//static.meishichina.com/v6/img/temp/cnnic.png"></a></p>
-
+<p class="pp" align="center">
+版权所有 &copy; 2017-2018 <a  class="ac" target="_blank" href="${ pageContext.request.contextPath}/index" title="厨色 -让吃更美好！">厨色</a> 保留所有权利 
 </div>
 </div>
 

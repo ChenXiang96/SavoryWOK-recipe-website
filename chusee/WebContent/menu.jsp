@@ -64,18 +64,18 @@ margin-left:40px;
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="" href="index.html"><img class="imgl" src="${pageContext.request.contextPath}/images/lo.png" alt="logo"/></a>
+                    <a class="" href="${ pageContext.request.contextPath}/index"><img class="imgl" src="${pageContext.request.contextPath}/images/lo.png" alt="logo"/></a>
                 </div>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
                         <li class="active"><a  href="${ pageContext.request.contextPath}/index">主页</a></li> 
-						<li><a href="cookbook.jsp">菜谱</a></li>
-						<li><a href="location.jsp">周边</a></li>
-                        <li><a href="archive.jsp">甄选</a></li>
+						<li><a href="${ pageContext.request.contextPath}/health/list">菜谱</a></li>
+						<li><a href="${ pageContext.request.contextPath}/location.jsp">周边</a></li>
+                        <li><a href="${ pageContext.request.contextPath}/archive.jsp">甄选</a></li>
                         <li><a href="${ pageContext.request.contextPath}/myHealth">健康</a></li>
-                        <li><a href="reservation.jsp">专题</a></li>
+                        <li><a href="${ pageContext.request.contextPath}/reservation.jsp">专题</a></li>
                         <li><a href="${ pageContext.request.contextPath}/topic/show">社区</a></li>
-                        <li><a href="gallery.jsp">话题</a></li>
+                        <li><a href="${ pageContext.request.contextPath}/gallery.jsp">话题</a></li>
                         
                     <c:if test="${sessionScope.user == null}">
 				       <li class="nav navbar-nav">

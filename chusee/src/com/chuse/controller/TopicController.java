@@ -21,14 +21,13 @@ import com.chuse.service.FoodServiceImpl;
 import com.chuse.service.impl.TopicServiceImpl;
 
 @Controller
-@RequestMapping("/topic")
 public class TopicController {
 
 	@Resource
 	private TopicServiceImpl topicServiceImpl;
 
 	// 显示全部话题
-	@RequestMapping("/show")
+	@RequestMapping("/topicshow")
 	public String list(HttpSession session) {
 		List<Topic> list = this.topicServiceImpl.listTopics();
 		session.setAttribute("tlist", list);
@@ -42,7 +41,7 @@ public class TopicController {
 		return "community";
 	}
 
-	@RequestMapping(value = "/update")
+	@RequestMapping(value = "/topicupdate")
 	public String queryFileData(@RequestParam("uploadfile") CommonsMultipartFile file, HttpServletRequest request,
 			HttpSession session, @RequestParam("title") String title, @RequestParam("message") String message)
 					throws Exception {

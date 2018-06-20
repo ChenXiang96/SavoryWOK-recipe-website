@@ -224,7 +224,7 @@ a.right3 {
 	
 <!--////////////////////////////////////Container-->
 <section id="container" class="index-page">
-	<div class="wrap-container zerogrid">
+	<div class="wrap-container zerogrid" >
 		<!-----------------content-box-1-------------------->
 		<section class="content-box box-1">
 			<div class="zerogrid">
