@@ -22,6 +22,11 @@ public class TopicServiceImpl {
 	@Resource
 	private TopicDaoImpl topicdaoimpl;
 
+	public void addTopic(Topic t){
+		System.out.println("service");
+		topicdaoimpl.addtopic(t);
+		
+	}
 
 
 	public List<Topic> listTopics(){

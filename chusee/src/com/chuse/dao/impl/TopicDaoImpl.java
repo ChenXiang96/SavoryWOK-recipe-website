@@ -35,6 +35,10 @@ public class TopicDaoImpl extends BaseDaoImpl<Topic>implements TopicDao {
 
 	final String selecthql = "select t.tid,t.tcontent,t.time," + "p.uid,p.ttitle";
 
+	@Resource
+	private SessionFactory sessionFactory;
+
+	
 	public Integer CountTopic() {
 		String hql = "select count(*) from Topic";
 		return count(hql);
@@ -77,7 +81,15 @@ public class TopicDaoImpl extends BaseDaoImpl<Topic>implements TopicDao {
 		int page1 = page;
 		return find(hql,page1,rows);
 	}
-	
+	public void addtopic(Topic t){
+		Session session=sessionFactory.openSession();
+		Transaction transtion=session.beginTransaction();
+		session.save(t);	
+		System.out.print("dao"+t.getTid());
+		transtion.commit();
+		session.close();
+
+	}	
 	
 		
 }
