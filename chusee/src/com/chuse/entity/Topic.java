@@ -19,9 +19,9 @@ import javax.persistence.Table;
 @Table(name="topic")
 public class Topic {
 	
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Id
-   private Integer tid;
+	private Integer tid;
    private Integer uid;
    private String tcontent;
    private String ttitle;
