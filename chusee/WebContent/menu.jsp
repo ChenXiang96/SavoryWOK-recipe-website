@@ -71,7 +71,7 @@ margin-left:40px;
                         <li class="active"><a  href="${ pageContext.request.contextPath}/index">主页</a></li> 
 						<li><a href="${ pageContext.request.contextPath}/health/list">菜谱</a></li>
 						<li><a href="${ pageContext.request.contextPath}/location.jsp">周边</a></li>
-                        <li><a href="${ pageContext.request.contextPath}/archive.jsp">甄选</a></li>
+                        <li><a href="${ pageContext.request.contextPath}/archive/list">甄选</a></li>
                         <li><a href="${ pageContext.request.contextPath}/myHealth">健康</a></li>
                         <li><a href="${ pageContext.request.contextPath}/reservation.jsp">专题</a></li>
                         <li><a href="${ pageContext.request.contextPath}/topicshow">社区</a></li>
