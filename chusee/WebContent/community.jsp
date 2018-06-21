@@ -111,8 +111,8 @@
 			<div class="space_right">
 				<a class="r_pai-add" target="_blank" href="pinglun1.jsp">发布话题</a>
 				<div class="mt20">
-					<a title="厨色客户端" href="https://www.meishichina.com/Mobile/"
-						target="_blank"> </a>
+					<a title="厨色客户端" href=""
+						target="_blank"> <img alt="" src="images/20180621092708.jpg"> </a>
 				</div>
 			</div>
 
