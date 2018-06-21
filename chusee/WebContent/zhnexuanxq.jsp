@@ -18,31 +18,6 @@
 <script type="text/javascript" src="js/dfp-list-5.js"></script>
 </head>
 <body>
-<div class="top-bar" id="J_top_bar">
-<ul class="bar-left left">
-<li><a title="厨色" href="https://www.meishichina.com/" target="_blank" class="top_bar_logo"><i>厨色</i>首页</a></li>
-      <li> <a title="菜谱" href="https://home.meishichina.com/recipe.html" target="_blank">菜谱</a></li>
-      <li> <a title="食材" href="https://www.meishichina.com/YuanLiao/" target="_blank">食材</a></li>
-	  <li> <a title="珍选" href="https://zhen.meishichina.com/" target="_blank">珍选</a></li>
-	  <li> <a title="健康" href="https://www.meishichina.com/Health/" target="_blank">健康</a></li>
-	  <li> <a title="专题" href="https://www.meishichina.com/mofang/" target="_blank">专题</a></li>
-	  <li> <a title="社区" href="https://home.meishichina.com/" target="_blank">社区</a></li>
-	  <li> <a title="话题" href="https://home.meishichina.com/pai.html" target="_blank">话题</a></li>
-      <li> <a title="活动" href="https://home.meishichina.com/event/" target="_blank">活动</a></li>
-	  <li> <a title="搜索" href="https://home.meishichina.com/search/" target="_blank">搜索</a></li>
-	  <li class="top_bar_more"><i></i>
-	  <div>
-	  <a title="烘焙" href="https://hongbei.meishichina.com/" target="_blank">烘焙</a>
-	  <a title="妈妈派" href="https://mamapai.meishichina.com/" target="_blank">妈妈派</a>
-	  </div>
-	  </li>
-    </ul>
-
-<a href="https://www.meishichina.com/Mobile/" target="_blank" class="nr3"><img src="//static.meishichina.com/v6/img/lib/nr3.png" width=18 height=18>客户端<img src="//static.meishichina.com/v6/img/model/msc_app.png" class="code">
-</a>
-
-<div class="right" id="J_top_bar_user"></div>				
-</div>
 <!-- logo+nav -->
 
 <!-- <div class="logo_wrap2">
