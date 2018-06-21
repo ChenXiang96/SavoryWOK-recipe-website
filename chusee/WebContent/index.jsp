@@ -248,7 +248,7 @@ a.right3 {
 					
 					<c:forEach items="${sessionScope.cList2}" var="c">
 						<div class="col-1-3">
-							<div class="wrap-col">
+							<div class="wrap-col">-
 								<div class="box-item">
 								<div class="ui_title">
                                   <div class="ui_title_wrap">
