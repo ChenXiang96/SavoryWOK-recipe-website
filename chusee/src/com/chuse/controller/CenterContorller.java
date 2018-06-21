@@ -43,7 +43,7 @@ public class CenterContorller {
 		user.setGexingqianming(gexingqianming);
 		System.out.print("con");
 		this.centerServiceImpl.gaiUser(user);
-	
+		System.out.print("congai");
 		return "redirect:get";
 	}
 	

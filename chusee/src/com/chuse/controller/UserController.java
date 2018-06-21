@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.chuse.entity.Page;
 import com.chuse.entity.User;
 import com.chuse.service.UserService;
 
@@ -33,6 +34,29 @@ public class UserController{
 	public User getUser(){
 		return new User();
 	}
+	
+	//-----------------------------------------------
+		//后-查-商品列表
+		@RequestMapping("/get")
+		public String listgoods(User user,HttpSession session,HttpServletRequest request){
+			String num = request.getParameter("pageNum");//获取用户要看的页码
+			int pageNumber = 1;
+			if(num!=null){
+				pageNumber = Integer.parseInt(num);
+			}		
+			List<User> list=this.userService.findByPage(pageNumber, 5);
+			Page page = new Page(pageNumber,5);
+			page.setList(list);
+			page.setTotalCount(this.userService.findByCount());
+			session.setAttribute("list", list);
+			session.setAttribute("page", page);
+			System.out.println("con xiaomi");
+			return "adm/detail/userList";
+		 }
+	
+	
+	
+	
 	//用户退出
 		@RequestMapping("/quit")
 		public String quit(HttpSession session,HttpServletRequest request){

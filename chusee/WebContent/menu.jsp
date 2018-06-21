@@ -88,7 +88,7 @@ margin-left:40px;
 			        
 			        <c:if test="${sessionScope.user != null}">
 				<li class="nav navbar-nav">
-					<a><c:out value="${user.username }"/></a>
+					<a href="${ pageContext.request.contextPath }/center/get"><c:out value="${user.username }"/></a>
 					
 				</li>
 				<li class="nav navbar-nav">
