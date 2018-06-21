@@ -69,10 +69,10 @@ public class TopicController {
 
 		Topic t = new Topic();
 				/*(Topic) session.getAttribute("t");*/
-		String url = request.getRealPath("/upload");
+		String url = request.getRealPath("/images");
 		
 		try {
-			String url1 = request.getRealPath("/upload");
+			String url1 = request.getRealPath("/images");
 			System.out.println(url1);
 			InputStream is1 = file.getInputStream();
 			File files = new File(url1, file.getOriginalFilename());
@@ -95,11 +95,11 @@ public class TopicController {
 			os.close();
 			is1.close();
 
-			return "1";
+			return "redirect:topicshow";
 		} catch (java.lang.ArithmeticException e) {
 			System.out.println("in procedure, catch ArithmeticException: " + e);
 
-			return "2";
+			return "404";
 		}
 	}
 

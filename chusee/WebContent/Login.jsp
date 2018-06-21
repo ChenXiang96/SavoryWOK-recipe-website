@@ -69,7 +69,7 @@ h3.heading-style-3 {
       
       <section class="boxed-sm">
         <div class="container">
-          <div class="login-wrapper">
+          <div class="login-wrapper" style="padding-left: 17%;">
             <div class="row">
               <center><h3 class="heading-style-3" color:"red">我的账户</h3>
               </center>

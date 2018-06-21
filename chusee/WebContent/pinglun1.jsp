@@ -43,7 +43,7 @@
 				</div>
 			</div>
 			
-			<form action="${ pageContext.request.contextPath}/topic/update"
+			<form action="${ pageContext.request.contextPath}/topicupdate"
 				id="J_form" enctype="multipart/form-data" method="post">
 				<div class="mr_edit mr_edit_center clear">
 					<ul>
