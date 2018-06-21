@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import com.chuse.entity.Food;
+import com.chuse.entity.Page;
+import com.chuse.entity.Product;
 import com.chuse.entity.Topic;
 import com.chuse.service.FoodServiceImpl;
 import com.chuse.service.impl.TopicServiceImpl;
@@ -25,6 +27,25 @@ public class TopicController {
 
 	@Resource
 	private TopicServiceImpl topicServiceImpl;
+	
+	//------------------------------
+	//查
+	@RequestMapping("/topicget")
+	public String listTopic(Topic topic,HttpSession session,HttpServletRequest request){
+		String num = request.getParameter("pageNum");//获取用户要看的页码
+		int pageNumber = 1;
+		if(num!=null){
+			pageNumber = Integer.parseInt(num);
+		}		
+		List<Topic> list=this.topicServiceImpl.findByPage(pageNumber, 5);
+		Page page = new Page(pageNumber,5);
+		page.setList(list);
+		page.setTotalCount(this.topicServiceImpl.findByCount());
+		session.setAttribute("list", list);
+		session.setAttribute("page", page);
+		//System.out.println(product.getDescription());
+		return "adm/detail/topicList";
+	}
 
 	// 显示全部话题
 	@RequestMapping("/topicshow")
