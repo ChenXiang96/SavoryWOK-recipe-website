@@ -83,7 +83,7 @@
                     <a href="reservation.jsp">专题</a>
                   </li>
                    <li>
-                    <a href="${ pageContext.request.contextPath}/topic/show">社区</a>
+                    <a href="${ pageContext.request.contextPath}/topicshow">社区</a>
                   </li>
                    <li>
                     <a href="gallery.jsp">话题</a>
@@ -119,48 +119,7 @@
               </nav>
               </center>
               
-              <aside class="right">
-                <div class="widget widget-control-header">
-                  <div class="select-custom-wrapper">
-                    <select class="no-border">
-                      <option>USD</option>
-                      <option>VND</option>
-                      <option>EUR</option>
-                      <option>JPY</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="widget widget-control-header widget-search-header">
-                  <a class="control btn-open-search-form js-open-search-form-header" href="#">
-                    <span class="lnr lnr-magnifier"></span>
-                  </a>
-                  <div class="form-outer">
-                    <button class="btn-close-form-search-header js-close-search-form-header">
-                      <span class="lnr lnr-cross"></span>
-                    </button>
-                    <form>
-                      <input placeholder="Search" />
-                      <button class="search">
-                        <span class="lnr lnr-magnifier"></span>
-                      </button>
-                    </form>
-                  </div>
-                </div>
-                <div class="widget widget-control-header widget-shop-cart js-widget-shop-cart">
-                  <a class="control"  href="${pageContext.request.contextPath }/cart_myCart.action">
-                    <p class="counter">0</p>
-                    <span class="lnr lnr-cart"></span>
-                  </a>
-                </div>
-                <div class="widget widget-control-header hidden-lg hidden-md hidden-sm">
-                  <a class="navbar-toggle js-offcanvas-has-events" type="button" href="#menu">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </a>
-                </div>
-              </aside>
-            </div>
+              </div>
             </center>
           </div>
         </div>

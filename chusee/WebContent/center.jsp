@@ -15,31 +15,6 @@
     <link rel="stylesheet" type="text/css" href="css/center_home.css">
 </head>
 <body>
-<div class="top-bar" id="J_top_bar">
-<ul class="bar-left left">
-<li><a title="厨色" href="https://www.meishichina.com/" target="_blank" class="top_bar_logo"><i>厨色</i>首页</a></li>
-      <li> <a title="菜谱" href="https://home.meishichina.com/recipe.html" target="_blank">菜谱</a></li>
-      <li> <a title="食材" href="https://www.meishichina.com/YuanLiao/" target="_blank">食材</a></li>
-	  <li> <a title="珍选" href="https://zhen.meishichina.com/" target="_blank">珍选</a></li>
-	  <li> <a title="健康" href="https://www.meishichina.com/Health/" target="_blank">健康</a></li>
-	  <li> <a title="专题" href="https://www.meishichina.com/mofang/" target="_blank">专题</a></li>
-	  <li> <a title="社区" href="https://home.meishichina.com/" target="_blank">社区</a></li>
-	  <li> <a title="话题" href="https://home.meishichina.com/pai.html" target="_blank">话题</a></li>
-      <li> <a title="活动" href="https://home.meishichina.com/event/" target="_blank">活动</a></li>
-	  <li> <a title="搜索" href="https://home.meishichina.com/search/" target="_blank">搜索</a></li>
-	  <li class="top_bar_more"><i></i>
-	  <div>
-	  <a title="烘焙" href="https://hongbei.meishichina.com/" target="_blank">烘焙</a>
-	  <a title="妈妈派" href="https://mamapai.meishichina.com/" target="_blank">妈妈派</a>
-	  </div>
-	  </li>
-    </ul>
-
-<a href="https://www.meishichina.com/Mobile/" target="_blank" class="nr3"><img src="images/center/nr3.png" width="18" height="18">客户端<img src="images/center/msc_app.png" class="code">
-</a>
-
-<div class="right" id="J_top_bar_user"><ul class="clear bar-info right bar-isLogin" id="J_barUser"><li class="bar-tips bar-sign-tips" id="J_barSignTips"><i class="arrow"></i><b class="arrow"></b><a href="javascript:;" class="close">×</a>签到即可参加 0元购</li><li class="bar-tips bar-message-tips" id="J_barMessageTips"><i class="arrow"></i><b class="arrow"></b><a href="javascript:;" class="close">×</a><p><span></span>条新消息, <a href="https://member.meishichina.com/center/privately_list/" class="J_tips_look" target="_blank">查看</a></p><p><span></span>条通知, <a href="https://member.meishichina.com/center/my_notice_list/" class="J_tips_look" target="_blank">查看</a></p></li><li class="bar-item bar-loading images-loading bar-link"></li><li class="bar-link bar-item bar-reg"><a href="https://member.meishichina.com/user/register/" target="_blank">注册</a></li><li class="bar-link bar-item bar-login"><a href="https://member.meishichina.com/user/login/" target="_blank">登录</a></li><li class="bar-login J_down bar-item"><div class="bar-text"><a href="https://home.meishichina.com/meishi2.php?ac=qqlogin&amp;op=login"><img src="images/center/nir1.png" width="18" height="18">QQ登录</a></div><div class="bar-box"><ul><li class="bar-box-item-0"><a href="https://home.meishichina.com/meishi2.php?ac=sinalogin"><img src="images/center/nir2.png" width="18" height="18">微博登录</a></li><li><a href="https://home.meishichina.com/meishi2.php?ac=wechatlogin&amp;op=login"><img src="images/center/nir3.png" width="18" height="18">微信登录</a></li></ul></div></li><li class="bar-center J_down bar-item"><div class="bar-text">会员中心<i class="arrow"></i></div><div class="bar-box"><ul><li class="bar-box-item-0"><a href="#" class="J_barLogin">会员中心</a></li><li><a href="#" class="J_barLogin">我的主页</a></li></ul></div></li><li class="bar-user J_down bar-item"><div class="bar-text"><div class="bar-text-userName" id="J_barUserName"><a href="https://home.meishichina.com/space-10912291.html" target="_blank" title="粒小米。的主页"><img alt="粒小米。" class="imgLoad" src="images/center/n.jpg" data-src="https://i5.meishichina.com/data/avatar/010/91/22/91_avatar_big.jpg?x-oss-process=style/c80&amp;v=2018053108" width="30" height="30"><span>1</span></a></div><i class="arrow"></i></div><div class="bar-box"><ul><li class="bar-box-item-0 bar-box-item-fav"><a title="我的收藏" href="https://member.meishichina.com/center/my_fav_recipe/" target="_blank">收藏</a></li><li class="bar-box-item-1"><a title="管理中心" href="https://member.meishichina.com/center/" target="_blank">管理</a></li><li class="bar-box-item-2"><a title="私信" href="https://member.meishichina.com/center/privately_list/" target="_blank" id="privately_list">私信<span></span></a></li><li class="bar-box-item-3"><a title="通知" href="https://member.meishichina.com/center/my_notice_list/" target="_blank" id="my_notice_list">通知<span>(1)</span></a></li><li class="bar-box-item-4"><a title="退出" href="#" class="J_barExit">退出</a></li></ul></div></li><li class="bar-add J_down bar-item"><div class="bar-text"><img src="images/center/nr1.png" width="18" height="18">发布</div><div class="bar-box"><ul><li class="bar-box-item-0"><a href="https://member.meishichina.com/center/recipe-add/" target="_blank" class="J_barLogin">发菜谱</a></li><li class="bar-box-item-1"><a href="https://member.meishichina.com/center/pai-add/" target="_blank" class="J_barLogin">发话题</a></li><li class="bar-box-item-2"><a href="https://member.meishichina.com/center/blog-add/" target="_blank" class="J_barLogin">发日志</a></li></ul></div></li><li class="bar-item bar-sign J_down" id="J_barSign"><a href="javascript:void(0);" class="bar-sign-text J_barLogin"><img src="images/center/nr2.png" width="18" height="18">签到有礼</a><div class="bar-sign-box"><h3>签到 <b>0</b> 天</h3><p><b>5</b></p><a target="_blank" href="https://home.meishichina.com/event/lottery/">去抽奖</a></div></li></ul></div>				
-</div>
 
 <!-- 主框架 -->
 <div class="w_main clear">
