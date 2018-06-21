@@ -94,26 +94,20 @@ body {
 				系统菜单
 			</div>
             <ul class="MenuLevel2">
-            	<li class="level2 level2Style">
-                    <a target="right" href="boardList.jsp">食材管理</a>
+            
+				
+                <li class="level2 level2Style">
+                	<a target="right" href="${ctx }/subject/get">菜谱管理</a>
+				</li>
+              
+                <li class="level2 level2Style">
+                	<a target="right" href="${ctx }/userback/get">用户信息</a>
 				</li>
 				
                 <li class="level2 level2Style">
-                	<a target="right" href="foodList.jsp">菜谱管理</a>
+                	<a target="right" href="${ctx }/topicget">话题管理</a>
 				</li>
-                <li class="level2 level2Style">
-                	<a target="right" href="cuisineList.jsp">菜系管理</a>
-				</li>
-                <li class="level2 level2Style">
-                	<a target="right" href="${ctx }/user/get">用户信息</a>
-				</li>
-				
-                <li class="level2 level2Style">
-                	<a target="right" href="topicList.jsp">话题管理</a>
-				</li>
-                <li class="level2 level2Style">
-                	<a target="right" href="statementList.jsp">评论管理</a>
-				</li>
+              
 				<li class="level2 level2Style">
                 	<a target="right" href="${ctx }/health/get">健康管理</a>
 				</li>

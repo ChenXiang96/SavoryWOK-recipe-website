@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set var="ctx" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html>
 <head>
 <script
-	src="js/ads"></script>
+	src="${ctx}/js/ads"></script>
 <script
-	src="js/pubads_impl_rendering_207.js"></script>
+	src="${ctx}/js/pubads_impl_rendering_207.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>烤鸡翅的做法_菜谱_厨色</title>
 <meta name="keywords"
@@ -23,31 +25,31 @@
 <link rel="apple-touch-icon"
 	href="https://static.meishichina.com/v6/img/lib/wapico.png">
 <link rel="stylesheet" type="text/css"
-	href="css/all3.css">
+	href="${ctx}/css/all3.css">
 <link rel="stylesheet" type="text/css"
-	href="css/recipe_one.css">
+	href="${ctx}/css/recipe_one.css">
 <link rel="stylesheet" type="text/css"
-	href="css/comment.css">
+	href="${ctx}/css/comment.css">
 <script
-	src="js/push.js"></script>
+	src="${ctx}/js/push.js"></script>
 <script
-	src="js/hm.js"></script>
+	src="${ctx}/js/hm.js"></script>
 <script async="" type="text/javascript"
-	src="js/gpt.js"></script>
+	src="${ctx}/js/gpt.js"></script>
 <script type="text/javascript"
-	src="js/dfp-content-5.js"></script>
+	src="${ctx}/js/dfp-content-5.js"></script>
 <script
-	src="js/share.js"></script>
+	src="${ctx}/js/share.js"></script>
 <link rel="preload"
-	href="js/integrator.js"
+	href="${ctx}/js/integrator.js"
 	as="script">
 <script type="text/javascript"
-	src="js/integrator.js"></script>
+	src="${ctx}/js/integrator.js"></script>
 <script
-	src="js/pubads_impl_207.js"
+	src="${ctx}/js/pubads_impl_207.js"
 	async=""></script>
 <link rel="stylesheet"
-	href="css/share_style0_16.css">
+	href="${ctx}/css/share_style0_16.css">
 </head>
 <body>
 
@@ -293,7 +295,7 @@
 
 	<div class="w mt10 clear">
 		<iframe scrolling="no"
-			src="https://static.meishichina.com/v3/t1_1.html" width="100%"
+			src="${ctx}/https://static.meishichina.com/v3/t1_1.html" width="100%"
 			height="90" frameborder="0"></iframe>
 
 		<div id="path" class="clear">
@@ -319,12 +321,12 @@
 				<div class="userTop clear">
 					<h1 class="recipe_De_title">
 						<a href="https://home.meishichina.com/recipe-399056.html"
-							id="recipe_title" title="烤鸡翅">烤鸡翅</a> <span class="copyright">独家</span>
+							id="recipe_title" title="烤鸡翅">${product.pname }</a> <span class="copyright">独家</span>
 					</h1>
 					<a title="一米阳光612"
 						href="https://home.meishichina.com/space-10244347.html"
 						target="_blank" class="uright"> <img
-						src="images/foodimg/47_avatar_big.jpg">
+						src="${ctx}/images/foodimg/47_avatar_big.jpg">
 						<span class="userName" id="recipe_username">一米阳光612</span>
 					</a>
 				</div>
@@ -339,7 +341,7 @@
 							id="recipe_title" value="烤鸡翅" type="hidden">
 						<div class="recipe_De_imgBox" id="recipe_De_imgBox">
 							<a class="J_photo" title="烤鸡翅的做法"><span></span><img
-								src="images/foodimg/20180526152733960718910244347.jpg"
+								src="${ctx}/images/foodimg/20180526152733960718910244347.jpg"
 								alt="烤鸡翅的做法"> </a>
 							<p class="J_photo" style="opacity: 0.7; display: none;">
 								<span class="De_bg">&nbsp;</span> <span class="De_photo">3张图片</span>
@@ -424,7 +426,7 @@
 								<li>
 									<div class="recipeStep_img">
 										<img
-											src="images/foodimg/20180526152734514680710244347.jpg"
+											src="${ctx}/images/foodimg/20180526152734514680710244347.jpg"
 											alt="烤鸡翅的做法步骤：1">
 									</div>
 									<div class="recipeStep_word">
@@ -435,7 +437,7 @@
 								<li>
 									<div class="recipeStep_img">
 										<img
-											src="images/foodimg/20180526152734514839310244347.jpg"
+											src="${ctx}/images/foodimg/20180526152734514839310244347.jpg"
 											alt="烤鸡翅的做法步骤：2">
 									</div>
 									<div class="recipeStep_word">
@@ -446,7 +448,7 @@
 								<li>
 									<div class="recipeStep_img">
 										<img
-											src="images/foodimg/20180526152734515024110244347.jpg"
+											src="${ctx}/images/foodimg/20180526152734515024110244347.jpg"
 											alt="烤鸡翅的做法步骤：3">
 									</div>
 									<div class="recipeStep_word">
@@ -457,7 +459,7 @@
 								<li>
 									<div class="recipeStep_img">
 										<img
-											src="images/foodimg/20180526152734515223610244347.jpg"
+											src="${ctx}/images/foodimg/20180526152734515223610244347.jpg"
 											alt="烤鸡翅的做法步骤：4">
 									</div>
 									<div class="recipeStep_word">
@@ -468,7 +470,7 @@
 								<li>
 									<div class="recipeStep_img">
 										<img
-											src="images/foodimg/20180526152734515431810244347.jpg"
+											src="${ctx}/images/foodimg/20180526152734515431810244347.jpg"
 											alt="烤鸡翅的做法步骤：5">
 									</div>
 									<div class="recipeStep_word">
@@ -479,7 +481,7 @@
 								<li>
 									<div class="recipeStep_img">
 										<img
-											src="images/foodimg/20180526152734515662310244347.jpg"
+											src="${ctx}/images/foodimg/20180526152734515662310244347.jpg"
 											alt="烤鸡翅的做法步骤：6">
 									</div>
 									<div class="recipeStep_word">
@@ -490,7 +492,7 @@
 								<li>
 									<div class="recipeStep_img">
 										<img
-											src="images/foodimg/20180526152734515831110244347.jpg"
+											src="${ctx}/images/foodimg/20180526152734515831110244347.jpg"
 											alt="烤鸡翅的做法步骤：7">
 									</div>
 									<div class="recipeStep_word">
@@ -501,7 +503,7 @@
 								<li>
 									<div class="recipeStep_img">
 										<img
-											src="images/foodimg/20180526152734515962410244347.jpg"
+											src="${ctx}/images/foodimg/20180526152734515962410244347.jpg"
 											alt="烤鸡翅的做法步骤：8">
 									</div>
 									<div class="recipeStep_word">
@@ -535,32 +537,32 @@
 
 						<div class="recipeArction mt10 clear">
 							<ul class="collect_da">
-								<li class="lik"><a title="喜欢" href="javascript:void(0);"
+								<li class="lik"><a title="喜欢" href="${ctx}/javascript:void(0);"
 									class="J_lik" data=""><i></i><span>0</span>人喜欢</a></li>
-								<li class="fav"><a title="收藏" href="javascript:void(0);"
+								<li class="fav"><a title="收藏" href="${ctx}/javascript:void(0);"
 									class="J_fav" data=""><i></i><span>7</span>人收藏</a></li>
-								<li class="col"><a title="加入菜单" href="javascript:void(0);"
+								<li class="col"><a title="加入菜单" href="${ctx}/javascript:void(0);"
 									class="J_col" data=""><i></i>加入菜单</a></li>
 								<li
 									style="width: 1px; border-right: 1px solid #ddd; height: 30px; margin: 2px 10px; overflow: hidden;"></li>
 								<li class="shar"><a title="分享到微信"
-									href="javascript:void(0);" class="J_s4" data="bds_weixin"><i></i>微信</a></li>
+									href="${ctx}/javascript:void(0);" class="J_s4" data="bds_weixin"><i></i>微信</a></li>
 								<li class="shar"><a title="分享到QQ好友"
-									href="javascript:void(0);" class="J_s2" data="bds_sqq"><i></i>QQ好友</a></li>
+									href="${ctx}/javascript:void(0);" class="J_s2" data="bds_sqq"><i></i>QQ好友</a></li>
 								<li class="shar"><a title="分享到QQ空间"
-									href="javascript:void(0);" class="J_s3" data="bds_qzone"><i></i>QQ空间</a></li>
+									href="${ctx}/javascript:void(0);" class="J_s3" data="bds_qzone"><i></i>QQ空间</a></li>
 								<li class="shar"><a title="分享到新浪微博"
-									href="javascript:void(0);" class="J_s1" data="bds_tsina"><i></i>新浪微博</a></li>
+									href="${ctx}/javascript:void(0);" class="J_s1" data="bds_tsina"><i></i>新浪微博</a></li>
 							</ul>
 
 							<div class="bdsharebuttonbox bdshare-button-style0-16"
 								id="bdshare" data-bd-bind="1527468402923">
-								<a title="分享到新浪微博" href="#" class="bds_tsina" id="bds_tsina"
-									data-cmd="tsina"></a><a title="分享到QQ空间" href="#"
+								<a title="分享到新浪微博" href="${ctx}/#" class="bds_tsina" id="bds_tsina"
+									data-cmd="tsina"></a><a title="分享到QQ空间" href="${ctx}/#"
 									class="bds_qzone" id="bds_qzone" data-cmd="qzone"></a><a
-									title="分享到QQ好友" href="#" class="bds_sqq" id="bds_sqq"
+									title="分享到QQ好友" href="${ctx}/#" class="bds_sqq" id="bds_sqq"
 									data-cmd="sqq"></a><a data-cmd="weixin" id="bds_weixin"
-									class="bds_weixin" href="#" title="分享到微信"></a>
+									class="bds_weixin" href="${ctx}/#" title="分享到微信"></a>
 							</div>
 
 
@@ -571,7 +573,7 @@
 
 						<div class="mt20">
 							<iframe
-								src="https://static.meishichina.com/v3/t2_2.html?id=468627"
+								src="${ctx}/https://static.meishichina.com/v3/t2_2.html?id=468627"
 								scrolling="no" width="640" height="90" frameborder="0"></iframe>
 						</div>
 
@@ -591,8 +593,8 @@
 									href="https://home.meishichina.com/recipe-30883.html"
 									target="_blank"> <!--<span class="copyright">独家</span>--> <i>
 											<img class="imgLoad"
-											src="images/foodimg/20180424152455896849713.jpg"
-											data-src="//i3.meishichina.com/attachment/recipe/2018/04/24/20180424152455896849713.jpg@!c320">
+											src="${ctx}/images/foodimg/20180424152455896849713.jpg"
+											data-src="${ctx}///i3.meishichina.com/attachment/recipe/2018/04/24/20180424152455896849713.jpg@!c320">
 									</i>
 										<p>烤鸡翅</p>
 								</a> <a title="小耿妈妈"
@@ -602,8 +604,8 @@
 									href="https://home.meishichina.com/recipe-42113.html"
 									target="_blank"> <!--<span class="copyright">独家</span>--> <i>
 											<img class="imgLoad"
-											src="images/foodimg/2018042615247349857819702111.jpg"
-											data-src="//i3.meishichina.com/attachment/recipe/2018/04/26/2018042615247349857819702111.jpg@!c320">
+											src="${ctx}/images/foodimg/2018042615247349857819702111.jpg"
+											data-src="${ctx}///i3.meishichina.com/attachment/recipe/2018/04/26/2018042615247349857819702111.jpg@!c320">
 									</i>
 										<p>微波炉烤鸡翅</p>
 								</a> <a title="我煮你意"
@@ -613,8 +615,8 @@
 									href="https://home.meishichina.com/recipe-40145.html"
 									target="_blank"> <!--<span class="copyright">独家</span>--> <i>
 											<img class="imgLoad"
-											src="images/foodimg/2018042715247933778489732003.jpg"
-											data-src="//i3.meishichina.com/attachment/recipe/2018/04/27/2018042715247933778489732003.jpg@!c320">
+											src="${ctx}/images/foodimg/2018042715247933778489732003.jpg"
+											data-src="${ctx}///i3.meishichina.com/attachment/recipe/2018/04/27/2018042715247933778489732003.jpg@!c320">
 									</i>
 										<p>新奥尔良烤鸡翅</p>
 								</a> <a title="小慧厨房"
@@ -624,8 +626,8 @@
 									href="https://home.meishichina.com/recipe-68528.html"
 									target="_blank"> <!--<span class="copyright">独家</span>--> <i>
 											<img class="imgLoad"
-											src="images/foodimg/20180424152455909330813.jpg"
-											data-src="//i3.meishichina.com/attachment/recipe/2018/04/24/20180424152455909330813.jpg@!c320">
+											src="${ctx}/images/foodimg/20180424152455909330813.jpg"
+											data-src="${ctx}///i3.meishichina.com/attachment/recipe/2018/04/24/20180424152455909330813.jpg@!c320">
 									</i>
 										<p>蜜汁烤鸡翅</p>
 								</a> <a title="丹妮妮"
@@ -635,8 +637,8 @@
 									href="https://home.meishichina.com/recipe-63270.html"
 									target="_blank"> <!--<span class="copyright">独家</span>--> <i>
 											<img class="imgLoad"
-											src="images/foodimg/20171016150814659332813.jpg"
-											data-src="//i3.meishichina.com/attachment/recipe/2017/10/16/20171016150814659332813.jpg@!c320">
+											src="${ctx}/images/foodimg/20171016150814659332813.jpg"
+											data-src="${ctx}///i3.meishichina.com/attachment/recipe/2017/10/16/20171016150814659332813.jpg@!c320">
 									</i>
 										<p>新奥尔良烤鸡翅</p>
 								</a> <a title="小慧厨房"
@@ -646,8 +648,8 @@
 									href="https://home.meishichina.com/recipe-174478.html"
 									target="_blank"> <!--<span class="copyright">独家</span>--> <i>
 											<img class="imgLoad"
-											src="images/foodimg/20180425152463846051813.jpg"
-											data-src="//i3.meishichina.com/attachment/recipe/2018/04/25/20180425152463846051813.jpg@!c320">
+											src="${ctx}/images/foodimg/20180425152463846051813.jpg"
+											data-src="${ctx}///i3.meishichina.com/attachment/recipe/2018/04/25/20180425152463846051813.jpg@!c320">
 									</i>
 										<p>蜜烤鸡翅</p>
 								</a> <a title="々苗∴"
@@ -656,7 +658,7 @@
 							</ul>
 						</div>
 						<script type="text/javascript"
-							src="images/foodimg/gbtkqxcdteix.js"></script>
+							src="${ctx}/images/foodimg/gbtkqxcdteix.js"></script>
 
 						<div class="ui_title mt20">
 							<div class="ui_title_wrap cleat">
@@ -673,11 +675,11 @@
 						</div>
 
 						<script type="text/javascript"
-							src="js/fasjbjbbj.js"></script>
+							src="${ctx}/js/fasjbjbbj.js"></script>
 
 						<div class="ui-loading mt20">
 							<a id="getRecommendNewRecipe_a" page="2"
-								href="javascript:void(0);" class="">查看更多</a>
+								href="${ctx}/javascript:void(0);" class="">查看更多</a>
 						</div>
 
 
@@ -770,22 +772,22 @@
 						<li><a
 							href="https://www.meishichina.com/mofang/paigudezuofadaquan/#hmsr=www&amp;hmpl=recipe&amp;hmcu=s_mofang&amp;hmkw=paigudezuofadaquan&amp;hmci=pic"
 							title="排骨的花样吃法" target="_blank"><img
-								src="images/foodimg/20180418152403923755013.jpg"
+								src="${ctx}/images/foodimg/20180418152403923755013.jpg"
 								width="140" height="93" border="0"></a></li>
 						<li><a
 							href="https://www.meishichina.com/mofang/peigenzuofadaquan/#hmsr=www&amp;hmpl=recipe&amp;hmcu=s_mofang&amp;hmkw=peigenzuofadaquan&amp;hmci=pic"
 							title="诱惑味蕾的培根" target="_blank"><img
-								src="images/foodimg/20180418152403937895113.jpg"
+								src="${ctx}/images/foodimg/20180418152403937895113.jpg"
 								idth="140" height="93" border="0"></a></li>
 						<li><a
 							href="https://www.meishichina.com/mofang/qingdushucai/#hmsr=www&amp;hmpl=recipe&amp;hmcu=s_mofang&amp;hmkw=qingdushucai&amp;hmci=pic"
 							title="平民蔬菜清毒素" target="_blank"><img
-								src="images/foodimg/20180418152403944735113.jpg"
+								src="${ctx}/images/foodimg/20180418152403944735113.jpg"
 								width="140" height="93" border="0"></a></li>
 						<li><a
 							href="https://www.meishichina.com/mofang/chunjiqushi/#hmsr=www&amp;hmpl=recipe&amp;hmcu=s_mofang&amp;hmkw=chunjiqushi&amp;hmci=pic"
 							title="食物祛湿有诀窍" target="_blank"><img
-								src="images/foodimg/20180418152403953489313.jpg"
+								src="${ctx}/images/foodimg/20180418152403953489313.jpg"
 								width="140" height="93" border="0"></a></li>
 					</ul>
 				</div>
@@ -946,11 +948,11 @@
 	<%@ include file="footer2.jsp" %>
 	
 	<script type="text/javascript"
-		src="js/all3.js"></script>
+		src="${ctx}/js/all3.js"></script>
 	<script type="text/javascript"
-		src="js/get_num.js"></script>
+		src="${ctx}/js/get_num.js"></script>
 	<script type="text/javascript"
-		src="js/recipe_navlist.js"></script>
+		src="${ctx}/js/recipe_navlist.js"></script>
 	<script type="text/javascript">
 		msc.goTop.init();
 		msc.user.init();
@@ -971,7 +973,7 @@
 	</script>
 	<div class="fixed-footer"
 		style="left: 1179.5px; right: auto; bottom: 10px;">
-		<a href="javascript:;" title="点击返回页面顶部"
+		<a href="${ctx}/javascript:;" title="点击返回页面顶部"
 			onclick="window.scrollTo(0,0);" class="fixed-footer-go"
 			style="display: none;"></a>
 		<div class="fixed-footer-weixin">
@@ -981,20 +983,20 @@
 		</div>
 	</div>
 	<script type="text/javascript"
-		src="js/msc-tools-date.js"></script>
+		src="${ctx}/js/msc-tools-date.js"></script>
 	<script type="text/javascript"
-		src="js/msc-ui-lookImg.js"></script>
+		src="${ctx}/js/msc-ui-lookImg.js"></script>
 	<script type="text/javascript"
-		src="js/msc-ui-smilies.js"></script>
+		src="${ctx}/js/msc-ui-smilies.js"></script>
 	<script type="text/javascript"
-		src="js/msc-tools-comment.js"></script>
+		src="${ctx}/js/msc-tools-comment.js"></script>
 	<script type="text/javascript"
-		src="js/msc-ui-select.js"></script>
+		src="${ctx}/js/msc-ui-select.js"></script>
 	<script type="text/javascript" id="bdshare_js"
 		data="type=tools&amp;uid=11097"></script>
 	<script type="text/javascript" id="bdshell_js"></script>
 	<script type="text/javascript"
-		src="js/recipe_action_one.js"></script>
+		src="${ctx}/js/recipe_action_one.js"></script>
 	<script>
 		$("li.top_bar_more").hoverDelay(function() {
 			$("li.top_bar_more div").show()

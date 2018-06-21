@@ -18,6 +18,17 @@ public class HealthServiceImpl {
 	private HealthDaoImpl healthDaoImpl;
 	
 	//-----------------------------------------------------------------
+	//前台跳转到菜的做法页面-把菜名和菜的图片列出来
+	public Product findHowdo(Integer pid){
+		return this.healthDaoImpl.findById(pid);
+	}
+	
+	
+	
+	
+	
+	
+	
 	//查-前-商品列表
 	public List<Product> listProducts(){
 		return healthDaoImpl.findAll();

@@ -82,8 +82,8 @@
 							<td><input type="text" id="pname" name="pname" class="InputStyle" value=" ${product.pname}"/></td>
 						</tr>
 						<tr>
-							<td width="80px">id</td>
-							<td><input type="text" id="pid" name="pid" class="InputStyle" value="${product.pid } "/></td>
+							<td width="80px"></td>
+							<td><input type="hidden" id="pid" name="pid" class="InputStyle" value="${product.pid } "/></td>
 						</tr>
 						<tr>
 							<td>简介</td>

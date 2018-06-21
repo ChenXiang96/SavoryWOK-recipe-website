@@ -13,7 +13,7 @@ import javax.persistence.Table;
 @Table(name="subject")
 @Entity
 public class Subject implements java.io.Serializable {
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Id
 	   private Integer pid;
 	   private Integer is_hot;

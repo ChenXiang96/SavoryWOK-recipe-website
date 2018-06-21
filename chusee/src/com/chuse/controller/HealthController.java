@@ -23,6 +23,21 @@ public class HealthController {
 	@Resource
 	private HealthServiceImpl healthServiceImpl;
 	//前------------------------------------------------------
+	@RequestMapping("/howdo")
+	public String howdo(@RequestParam(value="pid", required = false) Integer pid,Model model){
+		Product product=this.healthServiceImpl.findProduct(pid);
+		model.addAttribute("product", product);
+		//System.out.println("xiao"+product.getPname());
+		return "foodlist";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	//前-查-在商品页面显示商品列表
 	@RequestMapping("/list")
@@ -66,7 +81,7 @@ public class HealthController {
 		return "/adm/detail/updateHealth";
 	}
 	//后-修改商品-调用那个提交修改商品
-	@RequestMapping(value="update", method=RequestMethod.POST)//没进来，但是跳转了什么鬼
+	@RequestMapping(value="update", method=RequestMethod.POST)
 	public String updateBack(@RequestParam(value="pid", required = false) Integer pid,Product product,
 			@RequestParam("pname") String pname,
 			@RequestParam("pdesc") String pdesc) {

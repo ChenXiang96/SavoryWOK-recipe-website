@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set var="ctx" value="${pageContext.request.contextPath}" />
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 41 Transitional//EN">
 <html>
 <head>
@@ -13,8 +14,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript" src="style/js/jquery.js"></script>
 <script type="text/javascript" src="style/js/page_common.js"></script>
-<link href="style/css/common_style_blue.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="style/css/index_1.css" />
+<link href="${ctx }/adm/detail/style/css/common_style_blue.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="${ctx }/adm/detail/style/css/index_1.css" />
 </head>
 <body>
 <!-- 页面标题 -->
@@ -54,22 +55,24 @@
 		</thead>	
 		<!--显示数据列表 -->
         <tbody id="TableData">
-		
+			<c:forEach items="${ list}" var="p">
 			<tr class="TableDetail1">
-				<td>话题1&nbsp;</td>
-				<td>用户1&nbsp;</td>
-				<td>话题内容1111</td>
-				<td><a href="statementList.jsp">评论1</a></td>
-				<td>2018/5/16</td>
+				<td>${p.tid }&nbsp;</td>
+				<td>${p.uid }&nbsp;</td>
+				<td>${p.tcontent }</td>
+				<td><a href="${ctx }/adm/detail/statementList.jsp">${p.ttitle }</a></td>
+				<td>${p.time }</td>
                 
 				<td>
-					<a href="updateTopic.jsp"  class="FunctionButton">更新</a>				
-					<a href="/wirelessplatform/food.jsp?method=delete&id=1" onClick="return delConfirm();"class="FunctionButton">删除</a>				
+					<a href="${ctx }/adm/detail/updateTopic.jsp"  class="FunctionButton">更新</a>				
+					<a href="${ctx }/adm/detail/wirelessplatform/food.jsp?method=delete&id=1" onClick="return delConfirm();"class="FunctionButton">删除</a>				
 				</td>
 			</tr>
-        
+        	</c:forEach>
 		
-                
+             <tr height="50"><td colspan="6" class="center">共有${page.totalCount}条数据，一共${page.totalPageNum }页，
+      <a href="?pageNum=1">首页</a>，<a href="?pageNum=${page.prePageNum }">上一页</a>，<a href="?pageNum=${page.nextPageNum }">下一页</a>，<a href="?pageNum=${page.totalPageNum }">末页</a></td></tr>
+			<tr class="FunctionButton"><td colspan="10" class="center"><a href="${ctx }/health/add">添加</a></td></tr>   
         </tbody>
     </table>
 	

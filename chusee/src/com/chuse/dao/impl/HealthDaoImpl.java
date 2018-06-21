@@ -20,6 +20,21 @@ public class HealthDaoImpl {
 	private SessionFactory sessionFactory;
 	
 	//前---------------------------------------------
+	//前台跳转到菜的做法页面-把菜名和菜的图片列出来
+	public Product findById(Integer pid){	
+		Product product = (Product)this.sessionFactory.getCurrentSession().
+				createQuery("from Product where pid = ?").
+				setParameter(0, pid).uniqueResult();
+		return product;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 	//前-查-把数据库里的菜放在首页里-商品列表
 	public List<Product> findAll(){	
 			//获得session  

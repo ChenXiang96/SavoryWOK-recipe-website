@@ -12,7 +12,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.chuse.entity.Product;
 import com.chuse.entity.User;
 import com.chuse.service.impl.CenterServiceImpl;
-
+/*
+ * 
+ * 
+ * 
+ */
 @Controller
 @RequestMapping("/center")
 public class CenterContorller {
@@ -37,6 +41,7 @@ public class CenterContorller {
 	public String updateBack(@RequestParam(value="uid", required = false) Integer uid,User user,
 			@RequestParam("email") String email,
 			@RequestParam("gexingqianming") String gexingqianming) {
+		//测试修改
 		user=this.centerServiceImpl.findCenter(uid);
 		System.out.print("con111");
 		user.setEmail(email);
