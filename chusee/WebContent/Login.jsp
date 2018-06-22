@@ -43,7 +43,12 @@ h3.heading-style-3 {
 
     margin-left: 225px;
 }
-
+.login-wrapper{
+   margin:0 auto;
+}
+.img0{
+  margin-right:50px;
+}
   </style>
 
 </head>
@@ -63,13 +68,14 @@ h3.heading-style-3 {
         <section class="sub-header shop-layout-1">
         <img class="rellax bg-overlay" src="${pageContext.request.contextPath}/images/logo4.jpg" alt="">
         <div class="overlay-call-to-action"></div>
-        <h3 class="heading-style-3"><img src="images/lo.png"></h3>
+        <h3><img  class="img0" src="images/lo.png"></h3>
        
       </section>
       
       <section class="boxed-sm">
         <div class="container">
-          <div class="login-wrapper" style="padding-left: 17%;">
+         
+          <div class="login-wrapper">
             <div class="row">
               <center><h3 class="heading-style-3" color:"red">我的账户</h3>
               </center>

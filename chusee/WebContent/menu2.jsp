@@ -31,15 +31,20 @@
 .menu > li > a {
     color: #F7D358;
 }
+.menu, .menu > li > ul, .menu > li > ul ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 20;
+    width: 1000px;
+    margin-left: 110px;
+}
 </style>
       <header class="header-style-1">
         <div class="container">
           <div class="row">
             <center>
             <div class="header-1-inner">
-              <a class="brand-logo animsition-link" href="index.html">
-                <img class="img-responsive" src="${pageContext.request.contextPath}/picture/logo.png" alt="" />
-              </a>
+           
               <center>
               <nav class="nav5">
                 <ul class="menu hidden-xs">

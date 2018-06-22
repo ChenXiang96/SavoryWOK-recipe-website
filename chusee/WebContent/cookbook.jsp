@@ -81,18 +81,14 @@
 	  <div id="recipeindex_info_wrap" style="position: static; top: 40px; z-index: 1111; left: 179.5px;">
 		  <div class="ui_title">
 			  <div class="ui_title_wrap clear">
-				  <h3 class="on"><a href="${ctx }/javascript:void(0);" page="2" data="0" order="hot">最新推荐</a></h3>
-				  <h3><a href="javascript:void(0);" page="2" data="0" order="new">最新发布</a></h3>
-				  <h3><a href="javascript:void(0);" page="2" data="102" order="tag">热菜</a></h3>
-				  <h3><a href="javascript:void(0);" page="2" data="202" order="tag">凉菜</a></h3>
-				  <h3><a href="javascript:void(0);" page="2" data="57" order="tag">汤羹</a></h3>
-				  <h3><a href="javascript:void(0);" page="2" data="59" order="tag">主食</a></h3>
-				  <h3><a href="javascript:void(0);" page="2" data="62" order="tag">小吃</a></h3>
-				  <h3><a href="javascript:void(0);" page="2" data="160" order="tag">西餐</a></h3>
-				  <h3><a href="javascript:void(0);" page="2" data="60" order="tag">烘焙</a></h3>
-				  <h3><a href="javascript:void(0);" page="2" data="69" order="tag">自制食材</a></h3>
-				  
-				  <a title="全部分类" class="right" href="${ctx }/https://home.meishichina.com/recipe-type.html">全部分类</a>
+				  <c:forEach items="${sessionScope.cList}" var="c">
+                          <h3>
+                          <a title="健康首页" href="${ pageContext.request.contextPath }/findByCid/<c:out value="${c.cid}"/>/1" class="right3" target="_blank">
+                             <c:out value="${c.cname}"></c:out> 
+                          </a>
+                          </h3>
+                          </c:forEach>
+				
 			  </div>
 		  </div>
 	  </div>
