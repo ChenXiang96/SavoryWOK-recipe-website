@@ -101,9 +101,7 @@
 a{
 color:#654e2d;
 }
-a.right{
-margin-left:225px;
-}
+
 a.right1{
  margin-left:220px;
 }
@@ -121,7 +119,7 @@ a.right3{
     width: 1185px;
 }
 .zerogrid {
-    width: 1580px;
+    width: 1400px;
     position: relative;
     margin: 0 auto;
     padding: 0px;
@@ -198,8 +196,11 @@ position: absolute;
     width:1580px;
 }
 a.right3 {
-    margin-left: 60px;
+    margin-left: 50px;
     color: #5A0000;
+}
+a.right {
+    margin-left: 170px;
 }
 
 </style>
@@ -248,7 +249,7 @@ a.right3 {
 					
 					<c:forEach items="${sessionScope.cList2}" var="c">
 						<div class="col-1-3">
-							<div class="wrap-col">-
+							<div class="wrap-col">
 								<div class="box-item">
 								<div class="ui_title">
                                   <div class="ui_title_wrap">
