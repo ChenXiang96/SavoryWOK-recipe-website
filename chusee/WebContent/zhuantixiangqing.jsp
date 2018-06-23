@@ -426,7 +426,7 @@
 </ul>
 </div>
 </div>
-  <%@ include file="footer2.jsp" %>
+  <%@ include file="footer3.jsp" %>
 
 
 <script type="text/javascript" src="//static.meishichina.com/v6/js/lib/all.js?v1=20170218"></script>
