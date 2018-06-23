@@ -682,7 +682,7 @@
 
 </style>
 
-	<%@ include file="footer2.jsp" %>
+	<%@ include file="footer3.jsp" %>
 	
 	<script type="text/javascript"
 		src="${ctx}/js/all3.js"></script>
