@@ -106,7 +106,7 @@
 			  <p name="pname">${p.pname }</p>
 			  <input name="pid" id="pid" class="" value="${product.pid}" type="hidden">
 		  </a>
-		  <a title="${p.pdesc }" href="${ctx }/https://home.meishichina.com/space-5828748.html" target="_blank" class="u">${p.pdesc }</a>
+		  <a title="${p.pdesc }" href="" target="_blank" class="u">${p.pdesc }</a>
 		  </li>
 		  </c:forEach>
 		  		 

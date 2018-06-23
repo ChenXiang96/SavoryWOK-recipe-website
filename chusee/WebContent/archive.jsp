@@ -97,14 +97,14 @@
 <ul>
 	<c:forEach items="${ list}" var="p">
 	<li>
-<a title="和其正凉茶饮料" href="https://zhen.meishichina.com/29395/" target="_blank" class="pic">
+<a title="和其正凉茶饮料" href="" target="_blank" class="pic">
 <i>
 	<img src="${ctx }/${p.image }" class="imgLoad" >
 </i>
 <p>${p.pname}</p>
 <span>${p.price}</span>
 </a>
-<a target="_blank" class="buy" href="https://zhen.meishichina.com/29395/redirect/" rel="nofollow">购买</a>
+<a target="_blank" class="buy" href="" rel="nofollow">购买</a>
 </li>
 </c:forEach>
 
