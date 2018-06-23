@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.chuse.dao.impl.HealthDaoImpl;
 import com.chuse.entity.Product;
+import com.chuse.entity.Topic;
 
 @Service
 @Transactional(readOnly=true)
@@ -49,6 +50,7 @@ public class HealthServiceImpl {
 	
 	
 	
+
 	
 	
 	

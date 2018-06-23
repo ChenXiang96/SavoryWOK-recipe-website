@@ -65,7 +65,7 @@
                 
 				<td>
 					<!--  a href="${ctx }/adm/detail/updateTopic.jsp"  class="FunctionButton">更新</a-->				
-					<a href="${ctx }/topicdelete?tid=${t.pid}" onClick="return delConfirm();"class="FunctionButton">删除</a>				
+					<a href="${ctx }/topic/delete?tid=${p.tid}" onClick="return delConfirm();"class="FunctionButton">删除</a>				
 				</td>
 			</tr>
         	</c:forEach>

@@ -23,6 +23,7 @@ import org.hibernate.query.Query;
 import org.hibernate.SQLQuery;
 import com.chuse.dao.TopicDao;
 import com.chuse.entity.Food;
+import com.chuse.entity.Product;
 import com.chuse.entity.Topic;
 
 
@@ -60,25 +61,6 @@ public class TopicDaoImpl extends BaseDaoImpl<Topic>implements TopicDao {
 			return 0;
 		}
 	}
-	//
-	public Topic findByIdBack(Integer tid){	
-		Topic topic = (Topic)this.sessionFactory.getCurrentSession().
-				createQuery("from Topic where tid = ?").
-				setParameter(0, tid).uniqueResult();
-		return topic;
-	}
-	public void deleteByIdBack(Topic topic,Integer tid){
-		Session session=sessionFactory.openSession();
-		System.out.print("dao快删啊");
-		Transaction tran = session.beginTransaction() ;     
-	        String hql = "Delete FROM Topic Where tid=?" ;     
-	        Query q = session.createQuery(hql) ;     
-	        q.setInteger(0, tid) ;     
-	        q.executeUpdate() ;     
-	        tran.commit() ; 			
-		
-	}
-	
 	
 	
 	

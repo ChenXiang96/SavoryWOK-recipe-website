@@ -105,7 +105,7 @@ body {
 				</li>
 				
                 <li class="level2 level2Style">
-                	<a target="right" href="${ctx }/topicget">话题管理</a>
+                	<a target="right" href="${ctx }/topic/get">话题管理</a>
 				</li>
               
 				<li class="level2 level2Style">

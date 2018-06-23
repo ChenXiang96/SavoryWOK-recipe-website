@@ -30,14 +30,6 @@ public class TopicServiceImpl {
 		return topicdaoimpl.findCountByPage();
 	}
 	
-	public Topic findTopic(Integer tid){
-		return this.topicdaoimpl.findByIdBack(tid);
-	}
-	public void deleteTopic(Topic topic, Integer tid) {
-		System.out.print("ser快删啊");
-		this.topicdaoimpl.deleteByIdBack(topic,tid);
-	}
-	
 	
 	
 	

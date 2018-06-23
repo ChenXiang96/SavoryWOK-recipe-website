@@ -67,8 +67,8 @@
 				<td>2018/5/16</td>
                 
 				<td>
-					<!-- a href="updateUser.jsp"  class="FunctionButton">更新</a-->				
-					<a href="/wirelessplatform/food.jsp?method=delete&id=1" onClick="return delConfirm();"class="FunctionButton">删除</a>				
+					<!-- a href="pdateUser.jsp"  class="FunctionButton">更新</a-->				
+					<a href="${ctx }/userback/delete?uid=${p.uid}" onClick="return delConfirm();"class="FunctionButton">删除</a>				
 				</td>
 			</tr>
         	</c:forEach>

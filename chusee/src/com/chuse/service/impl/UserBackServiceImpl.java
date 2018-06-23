@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.chuse.dao.impl.UserBackDaoImpl;
+import com.chuse.entity.Product;
 import com.chuse.entity.User;
 
 @Service
@@ -15,6 +16,16 @@ import com.chuse.entity.User;
 public class UserBackServiceImpl {
 	@Resource
 	private UserBackDaoImpl userBackDaoImpl;
+	//后--先按id查出来
+	public User findUser(Integer uid){
+		return this.userBackDaoImpl.findByIdBack(uid);
+	}
+	//后台-删除用户
+	public void deleteUser(User user, Integer uid) {
+		System.out.print("ser快删啊");
+		this.userBackDaoImpl.deleteByIdBack(user,uid);
+	}
+	
 	
 	//后台--------------------------------------
 	//后--分页查询数据

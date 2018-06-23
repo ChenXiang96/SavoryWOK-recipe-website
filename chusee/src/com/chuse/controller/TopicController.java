@@ -47,21 +47,7 @@ public class TopicController {
 		return "adm/detail/topicList";
 	}
 	
-//	@RequestMapping("/edit")
-//	public String edit(@RequestParam(value="tid", required = false) Integer tid,Model model){
-//		Topic topic=this.topicServiceImpl.findTopic(tid);
-//		model.addAttribute("topic", topic);
-//	
-//		return "/adm/detail/updateHealth";
-//	}
-	@RequestMapping("/topicdelete")
-	public String deletelist(HttpSession session,@RequestParam(value="tid", required = false) Integer tid){
-		Topic topic=this.topicServiceImpl.findTopic(tid);
-		System.out.print("con快删啊");
-		this.topicServiceImpl.deleteTopic(topic,tid);
-		return "forward:/topic/get";
-	}
-	
+
 	
 	
 	
