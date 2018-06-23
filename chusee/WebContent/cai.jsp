@@ -745,7 +745,7 @@
 
 	<!--////////////////////////////////////Footer-->
 	
-	<%@ include file="footer2.jsp" %>
+	<%@ include file="footer3.jsp" %>
 
 
 	<!-- js -->

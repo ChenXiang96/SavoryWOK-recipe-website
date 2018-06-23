@@ -121,11 +121,12 @@
 </style>
 
 
-<%@ include file="footer2.jsp" %>
+<%@ include file="footer3.jsp" %>
 
 
 <!-- 引用全站js -->
-<script src="${ctx}/js/push.js"></script><script src="${ctx}/js/hm.js"></script><script type="text/javascript" src="${ctx}/images/cookbook/all.js"></script>
+<script src="${ctx}/js/push.js"></script><script src="${ctx}/js/hm.js"></script>
+
 <script type="text/javascript" src="${ctx}/js/get_num.js"></script>
 <script type="text/javascript" src="${ctx}/js/recipe_navlist.js"></script>
 <script type="text/javascript">	

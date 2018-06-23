@@ -204,7 +204,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-4');
 
 	
 
-  <%@ include file="footer2.jsp" %>
+  <%@ include file="footer3.jsp" %>
 
 
 <!-- 引用全站js -->
