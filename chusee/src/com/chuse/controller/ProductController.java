@@ -22,17 +22,7 @@ public class ProductController {
 	
 	@Resource
 	private ProductService productService;
-	//首页上跳转至健康
-	@RequestMapping(value="/myHealth")
-
-	public String showIndex(Map<String,Object> map,HttpSession session){
-
-		//把最热的10条商品添加到map集合中
-		map.put("hList", productService.findHot());
-		
-		
-		return "health"; 
-	}
+	
 
 	//首页中点击一级分类查询商品
 	@RequestMapping(value="/findByCid/{cid}/{page}")

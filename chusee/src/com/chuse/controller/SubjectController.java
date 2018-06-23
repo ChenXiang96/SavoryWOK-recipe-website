@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,6 +20,18 @@ public class SubjectController {
 
 	@Resource
 	private SubjectService subjectService;
+	
+	//首页上跳转至健康
+		@RequestMapping(value="/myHealth")
+
+		public String showIndex(Map<String,Object> map,HttpSession session){
+
+			//把最热的10条商品添加到map集合中
+			map.put("hList", subjectService.findHHot());
+			
+			
+			return "health"; 
+		}
 	//首页中点击专题一级分类查询商品
 			@RequestMapping(value="/findByCaid/{caid}/{page}")
 			public String findByCaid(@PathVariable("caid") Integer caid,@PathVariable("page") Integer page

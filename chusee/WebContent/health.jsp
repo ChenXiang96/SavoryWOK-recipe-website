@@ -71,10 +71,11 @@
     margin-bottom: 35px;
 }
 .zerogrid {
-    width: 1580px;
+    width: 1550px;
     position: relative;
     margin: 0 auto;
     padding: 0px;
+    margin-left: 10px;
 }
 
 a {
