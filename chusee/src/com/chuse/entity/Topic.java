@@ -27,6 +27,8 @@ public class Topic {
    private String ttitle;
    private Date time;
    private String timg;
+   private String uname;
+   private String uimg;
    
 public Integer getTid() {
 	return tid;
@@ -63,6 +65,18 @@ public String getTimg() {
 }
 public void setTimg(String timg) {
 	this.timg = timg;
+}
+public String getUname() {
+	return uname;
+}
+public void setUname(String uname) {
+	this.uname = uname;
+}
+public String getUimg() {
+	return uimg;
+}
+public void setUimg(String uimg) {
+	this.uimg = uimg;
 }
 
 		

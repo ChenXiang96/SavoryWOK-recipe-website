@@ -112,7 +112,7 @@ public class TopicDaoImpl extends BaseDaoImpl<Topic>implements TopicDao {
 	}
 	
 	public List<Topic> findAll(Integer page) {
-		String hql = "from Topic";
+		String hql = "from Topic order by time desc";
 		int rows = 12;
 		int page1 = page;
 		return find(hql,page1,rows);

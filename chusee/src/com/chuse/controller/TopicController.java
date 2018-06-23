@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -104,6 +106,11 @@ public class TopicController {
 			t.setTcontent(message);
 			t.setTtitle(title);
 		
+			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");  
+			System.out.println();
+			Date date =  df.parse(df.format(System.currentTimeMillis()));
+			t.setTime(date);
+			
 			topicServiceImpl.addTopic(t);
 		
 			int length = 0;

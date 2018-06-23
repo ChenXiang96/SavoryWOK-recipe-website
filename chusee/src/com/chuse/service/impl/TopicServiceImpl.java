@@ -41,8 +41,6 @@ public class TopicServiceImpl {
 	
 	
 	
-	
-	
 
 	public void addTopic(Topic t){
 		System.out.println("service");

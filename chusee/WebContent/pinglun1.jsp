@@ -41,8 +41,6 @@
 </head>
 <body>
 
-<%@ include file="menu3.jsp" %>
-
 	<!-- 主框架 -->
 	<div class="w_main clear">
 

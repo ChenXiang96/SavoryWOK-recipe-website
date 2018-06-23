@@ -57,11 +57,11 @@
 									<a href="https://home.meishichina.com/space-10795907.html"
 										target="_blank" title="${c.uid }"><img class="imgLoad"
 										src="%E8%AF%9D%E9%A2%98_%E7%BE%8E%E9%A3%9F%E5%A4%A9%E4%B8%8B_files/blank.gif"
-										data-src="https://i5.meishichina.com/data/avatar/010/79/59/07_avatar_big.jpg?x-oss-process=style/c120&amp;v=20180607"
+										data-src="images/${c.timg }"
 										width="40" height="40"></a>
 									<div>
 										<a href="https://home.meishichina.com/space-10795907.html"
-											class="t" target="_blank" title="乐焙儿">${c.uid }</a> <span>${c.time }</span>
+											class="t" target="_blank" title="乐焙儿">${c.uname }</a> <span>${c.time }</span>
 									</div>
 								</div>
 
