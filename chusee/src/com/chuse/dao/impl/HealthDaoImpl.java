@@ -3,12 +3,12 @@ package com.chuse.dao.impl;
 import java.util.List;
 
 import javax.annotation.Resource;
-
+import org.hibernate.query.Query;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.query.Query;
+
 import org.springframework.stereotype.Repository;
 
 import com.chuse.entity.Product;

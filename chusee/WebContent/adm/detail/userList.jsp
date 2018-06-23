@@ -67,20 +67,21 @@
 				<td>2018/5/16</td>
                 
 				<td>
-					<a href="updateUser.jsp"  class="FunctionButton">更新</a>				
+					<!-- a href="updateUser.jsp"  class="FunctionButton">更新</a-->				
 					<a href="/wirelessplatform/food.jsp?method=delete&id=1" onClick="return delConfirm();"class="FunctionButton">删除</a>				
 				</td>
 			</tr>
         	</c:forEach>
-		 <tr width="50" height="50"><td colspan="8" class="center">共有${page.totalCount}条数据，一共${page.totalPageNum }页，
-      <a href="?pageNum=1">首页</a>，<a href="?pageNum=${page.prePageNum }">上一页</a>，<a href="?pageNum=${page.nextPageNum }">下一页</a>，<a href="?pageNum=${page.totalPageNum }">末页</a></td></tr>
+		 <!--  tr id="TableTail" width="50" height="50"><td colspan="8" align="center">共有${page.totalCount}条数据，一共${page.totalPageNum }页，
+      <a href="?pageNum=1">首页</a>，<a href="?pageNum=${page.prePageNum }">上一页</a>，<a href="?pageNum=${page.nextPageNum }">下一页</a>，<a href="?pageNum=${page.totalPageNum }">末页</a></td></tr-->
                 
         </tbody>
     </table>
 	
    <!-- 其他功能超链接 -->
-	<div id="TableTail" align="center">
-		<div class="FunctionButton"><a href="saveUser.jsp">添加</a></div>
+	<div >
+	 	<p colspan="8" align="center">共有${page.totalCount}条数据，一共${page.totalPageNum }页，
+      <a href="?pageNum=1">首页</a>，<a href="?pageNum=${page.prePageNum }">上一页</a>，<a href="?pageNum=${page.nextPageNum }">下一页</a>，<a href="?pageNum=${page.totalPageNum }">末页</a></p>
     </div> 
 </div>
 </body>

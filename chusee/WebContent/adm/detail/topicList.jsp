@@ -64,21 +64,19 @@
 				<td>${p.time }</td>
                 
 				<td>
-					<a href="${ctx }/adm/detail/updateTopic.jsp"  class="FunctionButton">更新</a>				
-					<a href="${ctx }/adm/detail/wirelessplatform/food.jsp?method=delete&id=1" onClick="return delConfirm();"class="FunctionButton">删除</a>				
+					<!--  a href="${ctx }/adm/detail/updateTopic.jsp"  class="FunctionButton">更新</a-->				
+					<a href="${ctx }/topicdelete?tid=${t.pid}" onClick="return delConfirm();"class="FunctionButton">删除</a>				
 				</td>
 			</tr>
         	</c:forEach>
 		
-             <tr height="50"><td colspan="6" class="center">共有${page.totalCount}条数据，一共${page.totalPageNum }页，
+             <tr height="50"><td colspan="6" align="center">共有${page.totalCount}条数据，一共${page.totalPageNum }页，
       <a href="?pageNum=1">首页</a>，<a href="?pageNum=${page.prePageNum }">上一页</a>，<a href="?pageNum=${page.nextPageNum }">下一页</a>，<a href="?pageNum=${page.totalPageNum }">末页</a></td></tr>
-			<tr class="FunctionButton"><td colspan="10" class="center"><a href="${ctx }/health/add">添加</a></td></tr>   
+			  
         </tbody>
     </table>
 	
-   <!-- 其他功能超链接 -->
-	<div id="TableTail" align="center">
-	</div> 
+   
 </div>
 </body>
 </html>

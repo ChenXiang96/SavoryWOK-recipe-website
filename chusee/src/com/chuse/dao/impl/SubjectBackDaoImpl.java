@@ -10,6 +10,7 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 
+import com.chuse.entity.Product;
 import com.chuse.entity.Subject;
 
 @Repository

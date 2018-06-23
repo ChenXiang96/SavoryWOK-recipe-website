@@ -49,7 +49,7 @@ public class CenterContorller {
 		System.out.print("con");
 		this.centerServiceImpl.gaiUser(user);
 		System.out.print("congai");
-		return "redirect:get";
+		return "forward:/center/get";
 	}
 	
 	

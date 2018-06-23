@@ -11,13 +11,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import com.chuse.entity.Food;
 import com.chuse.entity.Page;
-import com.chuse.entity.Product;
 import com.chuse.entity.Topic;
 import com.chuse.service.FoodServiceImpl;
 import com.chuse.service.impl.TopicServiceImpl;
@@ -43,9 +43,43 @@ public class TopicController {
 		page.setTotalCount(this.topicServiceImpl.findByCount());
 		session.setAttribute("list", list);
 		session.setAttribute("page", page);
-		//System.out.println(product.getDescription());
+		//System.out.println(topic.getDescription());
 		return "adm/detail/topicList";
 	}
+	
+//	@RequestMapping("/edit")
+//	public String edit(@RequestParam(value="tid", required = false) Integer tid,Model model){
+//		Topic topic=this.topicServiceImpl.findTopic(tid);
+//		model.addAttribute("topic", topic);
+//	
+//		return "/adm/detail/updateHealth";
+//	}
+	@RequestMapping("/topicdelete")
+	public String deletelist(HttpSession session,@RequestParam(value="tid", required = false) Integer tid){
+		Topic topic=this.topicServiceImpl.findTopic(tid);
+		System.out.print("con快删啊");
+		this.topicServiceImpl.deleteTopic(topic,tid);
+		return "forward:/topic/get";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	// 显示全部话题
 	@RequestMapping("/topicshow")

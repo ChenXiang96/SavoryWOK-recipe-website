@@ -8,10 +8,8 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.chuse.dao.ProductDao;
 import com.chuse.dao.impl.TopicDaoImpl;
 import com.chuse.entity.Food;
-import com.chuse.entity.Product;
 import com.chuse.entity.Topic;
 
 @Transactional
@@ -30,6 +28,14 @@ public class TopicServiceImpl {
 	}
 	public int findByCount() {
 		return topicdaoimpl.findCountByPage();
+	}
+	
+	public Topic findTopic(Integer tid){
+		return this.topicdaoimpl.findByIdBack(tid);
+	}
+	public void deleteTopic(Topic topic, Integer tid) {
+		System.out.print("ser快删啊");
+		this.topicdaoimpl.deleteByIdBack(topic,tid);
 	}
 	
 	

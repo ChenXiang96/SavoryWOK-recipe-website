@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.chuse.dao.impl.SubjectBackDaoImpl;
+import com.chuse.entity.Product;
 import com.chuse.entity.Subject;
 
 @Service
@@ -30,7 +31,7 @@ public class SubjectBackServiceImpl {
 	//------------------------------------------------------------
 
 	//后-修改商品-先按id查出来
-	public Subject findsubject(Integer pid){
+	public Subject findSubject(Integer pid){
 		return this.subjectBackDaoImpl.findByIdBack(pid);
 	}
 	public Subject updatesubject(Subject subject) {				

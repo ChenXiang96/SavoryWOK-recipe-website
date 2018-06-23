@@ -79,7 +79,7 @@
 						</tr>
 						<tr>
 							<td width="80px">菜名</td>
-							<td><input type="text" id="pname" name="pname" class="InputStyle" value=" ${subject.pname}"/></td>
+							<td><input type="text" id="pname" name="pname" class="InputStyle" value="${subject.pname}"/></td>
 						</tr>
 						<tr>
 							<td width="80px"></td>

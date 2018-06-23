@@ -80,17 +80,17 @@
 			</tr>
 			</c:forEach>
   			
- <tr height="50"><td colspan="10" class="center">共有${page.totalCount}条数据，一共${page.totalPageNum }页，
+ <tr height="50"><td colspan="10" align="center">共有${page.totalCount}条数据，一共${page.totalPageNum }页，
       <a href="?pageNum=1">首页</a>，<a href="?pageNum=${page.prePageNum }">上一页</a>，<a href="?pageNum=${page.nextPageNum }">下一页</a>，<a href="?pageNum=${page.totalPageNum }">末页</a></td></tr>
-			<tr class="FunctionButton"><td colspan="10" class="center"><a href="${ctx }/health/add">添加</a></td></tr>
+
                 
         </tbody>
     </table>
 	
-   <!-- 其他功能超链接 -->
-	<!--div id="TableTail" align="center">
+   <!--其他功能超链接-->
+	<!--  div id="TableTail" align="center">
 		<div class="FunctionButton"><a href="${ctx }/health/add">添加</a></div>
-    </div--> 
+    </div-->
 </div>
 </body>
 </html>

@@ -32,8 +32,10 @@ public class SubjectBackController {
 	//后-修改商品-先找到要改的商品
 	@RequestMapping("/edit")
 	public String edit(@RequestParam(value="pid", required = false) Integer pid,Model model){
-		Subject subject=this.subjectBackServiceImpl.findsubject(pid);
-		model.addAttribute("Subject", subject);
+		//List<ProductType> listtype=this.productTypeServiceImpl.listProductType();
+		//model.addAttribute("listtype", listtype);
+		Subject subject=this.subjectBackServiceImpl.findSubject(pid);
+		model.addAttribute("subject", subject);
 		System.out.println("xiao"+subject.getPname());
 		System.out.println("xiaomi"+subject.getPdesc());
 		return "/adm/detail/updateSubject";
@@ -43,7 +45,7 @@ public class SubjectBackController {
 	public String updateBack(@RequestParam(value="pid", required = false) Integer pid,Subject subject,
 			@RequestParam("pname") String pname,
 			@RequestParam("pdesc") String pdesc) {
-		subject=this.subjectBackServiceImpl.findsubject(pid);
+		subject=this.subjectBackServiceImpl.findSubject(pid);
 		subject.setPname(pname);
 		subject.setPdesc(pdesc);
 		this.subjectBackServiceImpl.updatesubject(subject);
@@ -53,7 +55,7 @@ public class SubjectBackController {
 	//后-删除健康
 	@RequestMapping("/delete")
 	public String deletelist(HttpSession session,@RequestParam(value="pid", required = false) Integer pid){
-		Subject subject=this.subjectBackServiceImpl.findsubject(pid);
+		Subject subject=this.subjectBackServiceImpl.findSubject(pid);
 		System.out.print("con快删啊");
 		this.subjectBackServiceImpl.deletesubject(subject,pid);
 		return "forward:/subject/get";
