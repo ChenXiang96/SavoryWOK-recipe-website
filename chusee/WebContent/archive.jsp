@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set var="ctx" value="${pageContext.request.contextPath}" />
 <!doctype html>
 <html>
 <head>
@@ -10,9 +12,9 @@
 <meta name="renderer" content="webkit">
 <link rel="shortcut icon" href="https:images/zhenxuan/lib/f.ico"/>
 <link rel="apple-touch-icon" href="images/zhenxuan/wapico.png" />
-<link rel="stylesheet" type="text/css" href="css/all.css?v1=9">
-<link rel="stylesheet" type="text/css" href="css/zhen2.css?v1=2018-01-241">
-<link rel="stylesheet" type="text/css" href="css/zhen_listing.css?v1=2016-12-26">
+<link rel="stylesheet" type="text/css" href="${ctx }/css/all.css?v1=9">
+<link rel="stylesheet" type="text/css" href="${ctx }/css/hen2.css?v1=2018-01-241">
+<link rel="stylesheet" type="text/css" href="${ctx }/css/zhen_listing.css?v1=2016-12-26">
 
 </head>
 <body>
@@ -31,49 +33,49 @@
 
 
 <a href="https://zhen.meishichina.com/listing/4834215/" target="_blank" title="限时秒杀">
-<img src="images/zhenxuan/z01.jpg" class="imgLoad" >
+<img src="${ctx }/images/zhenxuan/z01.jpg" class="imgLoad" >
 限时秒杀
 </a>
 
 <a href="https://zhen.meishichina.com/listing/4834212/" target="_blank" title="白菜价">
-<img src="images/zhenxuan/z02.jpg" class="imgLoad" >
+<img src="${ctx }/images/zhenxuan/z02.jpg" class="imgLoad" >
 白菜价
 </a>
 
 <a href="https://zhen.meishichina.com/listing/4834211/" target="_blank" title="买了又买">
-<img src="images/zhenxuan/z03.jpg" class="imgLoad" >
+<img src="${ctx }/images/zhenxuan/z03.jpg" class="imgLoad" >
 买了又买
 </a>
 
 <a href="https://zhen.meishichina.com/listing/4834217/" target="_blank" title="厨房神器">
-<img src="images/zhenxuan/z04.jpg" class="imgLoad" >
+<img src="${ctx }/images/zhenxuan/z04.jpg" class="imgLoad" >
 厨房神器
 </a>
 
 <a href="https://zhen.meishichina.com/listing/4834219/" target="_blank" title="镇店之宝">
-<img src="images/zhenxuan/z05.jpg" class="imgLoad" >
+<img src="${ctx }/images/zhenxuan/z05.jpg" class="imgLoad" >
 镇店之宝
 </a>
 
 <a href="https://zhen.meishichina.com/listing/4836164/" target="_blank" title="海淘食光">
-<img src="images/zhenxuan/z06.jpg" class="imgLoad" >
+<img src="${ctx }/images/zhenxuan/z06.jpg" class="imgLoad" >
 海淘食光
 </a>
 
 <a href="https://zhen.meishichina.com/listing/4917758/" target="_blank" title="葡萄酒">
-<img src="images/zhenxuan/z07.jpg" class="imgLoad" >
+<img src="${ctx }/images/zhenxuan/z07.jpg" class="imgLoad" >
 葡萄酒
 </a>
 <a href="https://zhen.meishichina.com/listing/4859552/" target="_blank" title="咖啡">
-<img src="images/zhenxuan/z08.jpg" class="imgLoad" >
+<img src="${ctx }/images/zhenxuan/z08.jpg" class="imgLoad" >
 咖啡
 </a>
 <a href="https://zhen.meishichina.com/listing/4856568/" target="_blank" title="杯子">
-<img src="images/zhenxuan/z09.jpg" class="imgLoad" >
+<img src="${ctx }/images/zhenxuan/z09.jpg" class="imgLoad" >
 杯子
 </a>
 <a href="https://zhen.meishichina.com/listing/4788122/" target="_blank" title="悦烘焙">
-<img src="images/zhenxuan/z10.jpg" class="imgLoad" >
+<img src="${ctx }/images/zhenxuan/z10.jpg" class="imgLoad" >
 悦烘焙
 </a>    
 </div>
@@ -93,126 +95,19 @@
 
 <div id="zhen_list_living" class="zhen_list_living clear mt20">
 <ul>
+	<c:forEach items="${ list}" var="p">
 	<li>
 <a title="和其正凉茶饮料" href="https://zhen.meishichina.com/29395/" target="_blank" class="pic">
 <i>
-	<img src="images/zhenxuan/01.jpg" class="imgLoad" >
+	<img src="${ctx }/${p.image }" class="imgLoad" >
 </i>
-<p>和其正凉茶饮料</p>
-<span>￥104.90</span>
+<p>${p.pname}</p>
+<span>${p.price}</span>
 </a>
 <a target="_blank" class="buy" href="https://zhen.meishichina.com/29395/redirect/" rel="nofollow">购买</a>
 </li>
-<li>
-<a title="加多宝凉茶饮料" href="https://zhen.meishichina.com/29394/" target="_blank" class="pic">
-<i>
-	<img src="images/zhenxuan/02.jpg" class="imgLoad"  >
-</i>
-<p>加多宝凉茶饮料</p>
-<span>￥39.90</span>
-</a>
-<a target="_blank" class="buy" href="https://zhen.meishichina.com/29394/redirect/" rel="nofollow">购买</a>
-</li>
-<li>
-<a title="忆味念茗茶阁清热去火茶" href="https://zhen.meishichina.com/29393/" target="_blank" class="pic">
-<i>
-	<img src="images/zhenxuan/03.jpg" class="imgLoad" >
-</i>
-<p>忆味念茗茶阁清热去火茶</p>
-<span>￥26.80</span>
-</a>
-<a target="_blank" class="buy" href="https://zhen.meishichina.com/29393/redirect/" rel="nofollow">购买</a>
-</li>
-<li>
-<a title="花语花愿清热去火茶" href="https://zhen.meishichina.com/29392/" target="_blank" class="pic">
-<i>
-	<img src="images/zhenxuan/04.jpg" class="imgLoad" >
-</i>
-<p>花语花愿清热去火茶</p>
-<span>￥26.66</span>
-</a>
-<a target="_blank" class="buy" href="https://zhen.meishichina.com/29392/redirect/" rel="nofollow">购买</a>
-</li>
-<li>
-<a title="新疆哈密瓜" href="https://zhen.meishichina.com/29391/" target="_blank" class="pic">
-<i>
-	<img src="images/zhenxuan/05.jpg" class="imgLoad" >
-</i>
-<p>新疆哈密瓜</p>
-<span>￥26.80</span>
-</a>
-<a target="_blank" class="buy" href="https://zhen.meishichina.com/29391/redirect/" rel="nofollow">购买</a>
-</li>
-<li>
-<a title=" 新鲜樱桃" href="https://zhen.meishichina.com/29390/" target="_blank" class="pic">
-<i>
-	<img src="images/zhenxuan/06.jpg" class="imgLoad" >
-</i>
-<p>新鲜樱桃 </p>
-<span>￥14.90</span>
-</a>
-<a target="_blank" class="buy" href="https://zhen.meishichina.com/29390/redirect/" rel="nofollow">购买</a>
-</li>
-<li>
-<a title="东北正宗冷面" href="https://zhen.meishichina.com/29389/" target="_blank" class="pic">
-<i>
-	<img src="images/zhenxuan/07.jpg" class="imgLoad" >
-</i>
-<p>东北正宗冷面</p>
-<span>￥22.90</span>
-</a>
-<a target="_blank" class="buy" href="https://zhen.meishichina.com/29389/redirect/" rel="nofollow">购买</a>
-</li>
-<li>
-<a title="玉米" href="https://zhen.meishichina.com/29388/" target="_blank" class="pic">
-<i>
-	<img src="images/zhenxuan/08.jpg" class="imgLoad" >
-</i>
-<p>玉米</p>
-<span>￥28.80</span>
-</a>
-<a target="_blank" class="buy" href="https://zhen.meishichina.com/29388/redirect/" rel="nofollow">购买</a>
-</li>
-<li>
-<a title="金银花" href="https://zhen.meishichina.com/29387/" target="_blank" class="pic">
-<i>
-	<img src="images/zhenxuan/09.jpg" class="imgLoad" >
-</i>
-<p>金银花</p>
-<span>￥19.90</span>
-</a>
-<a target="_blank" class="buy" href="https://zhen.meishichina.com/29387/redirect/" rel="nofollow">购买</a>
-</li>
-<li>
-<a title="泡饭" href="https://zhen.meishichina.com/29386/" target="_blank" class="pic">
-<i>
-	<img src="images/zhenxuan/10.jpg" class="imgLoad" >
-</i>
-<p>泡饭</p>
-<span>￥26.80</span>
-</a>
-<a target="_blank" class="buy" href="https://zhen.meishichina.com/29386/redirect/" rel="nofollow">购买</a>
-</li>
-<li>
-<a title="午餐肉" href="https://zhen.meishichina.com/29385/" target="_blank" class="pic">
-<i>
-	<img src="images/zhenxuan/11.jpg" class="imgLoad" >
-</i>
-<p>午餐肉</p>
-<span>￥41.80</span>
-</a>
-<a target="_blank" class="buy" href="https://zhen.meishichina.com/29385/redirect/" rel="nofollow">购买</a>
-</li>
-<li>
-<a title="杨梅" href="https://zhen.meishichina.com/29382/" target="_blank" class="pic">
-<i>
-	<img src="images/zhenxuan/12.jpg" class="imgLoad" >
-</i>
-<p>杨梅</p>
-<span>￥10.00</span>
-</a>
-<a target="_blank" class="buy" href="https://zhen.meishichina.com/29360/redirect/" rel="nofollow">购买</a>
-</li>
+</c:forEach>
+
 </ul>
 </div>
 </div>

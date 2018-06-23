@@ -4,17 +4,20 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
-import com.chuse.dao.impl.ZhenXuanDaoImpl;
-import com.chuse.entity.zhenxuan;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import com.chuse.dao.impl.ZhenXuanDaoImpl;
+import com.chuse.entity.Zhenxuan;
+@Service
+@Transactional(readOnly=true)
 public class ZhenXuanServiceImpl {
 
 	@Resource
 	private ZhenXuanDaoImpl zhenxuanDaoImpl;
 	
 	//-----------------------------------------------------------------
-	//查-前-商品列表
-	public List<zhenxuan> listProducts(){
+	public List<Zhenxuan> listZhenxuans(){
 		return zhenxuanDaoImpl.findAll();
 	}
 	
