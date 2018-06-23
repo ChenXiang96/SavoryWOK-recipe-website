@@ -387,7 +387,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1508681717585-4');
 
 	</div><!-- 顶层end -->
 
-  <%@ include file="footer2.jsp" %>
+  <%@ include file="footer3.jsp" %>
 
 <!-- 引用全站js -->
 <script type="text/javascript" src="//static.meishichina.com/v6/js/lib/all3.js?v1=2018-04-27"></script>
