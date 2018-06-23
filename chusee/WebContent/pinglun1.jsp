@@ -59,7 +59,7 @@
 				</div>
 			</div>
 			
-			<form action="${ pageContext.request.contextPath}/topicupdate"
+			<form action="${ pageContext.request.contextPath}/topicupdate?uid=${user.uid}"
 				id="J_form" enctype="multipart/form-data" method="post">
 				<div class="mr_edit mr_edit_center clear">
 					<ul>

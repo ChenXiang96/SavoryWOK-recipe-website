@@ -57,7 +57,7 @@
 									<a href="https://home.meishichina.com/space-10795907.html"
 										target="_blank" title="${c.uid }"><img class="imgLoad"
 										src="%E8%AF%9D%E9%A2%98_%E7%BE%8E%E9%A3%9F%E5%A4%A9%E4%B8%8B_files/blank.gif"
-										data-src="images/${c.timg }"
+										data-src="images/${c.uimg }"
 										width="40" height="40"></a>
 									<div>
 										<a href="https://home.meishichina.com/space-10795907.html"
@@ -109,7 +109,7 @@
 			</div>
 
 			<div class="space_right">
-				<a class="r_pai-add" target="_blank" href="pinglun1.jsp?tid=${user.uid }">发布话题</a>
+				<a class="r_pai-add" target="_blank" href="pinglun1.jsp?uid=${user.uid }">发布话题</a>
 				<div class="mt20">
 					<a title="厨色客户端" href=""
 						target="_blank"> <img alt="" src="images/20180621092708.jpg"> </a>

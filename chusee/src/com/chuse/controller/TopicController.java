@@ -21,6 +21,7 @@ import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import com.chuse.entity.Food;
 import com.chuse.entity.Page;
 import com.chuse.entity.Topic;
+import com.chuse.entity.User;
 import com.chuse.service.FoodServiceImpl;
 import com.chuse.service.impl.TopicServiceImpl;
 
@@ -29,45 +30,25 @@ public class TopicController {
 
 	@Resource
 	private TopicServiceImpl topicServiceImpl;
-	
-	//------------------------------
-	//查
+
+	// ------------------------------
+	// 查
 	@RequestMapping("/topicget")
-	public String listTopic(Topic topic,HttpSession session,HttpServletRequest request){
-		String num = request.getParameter("pageNum");//获取用户要看的页码
+	public String listTopic(Topic topic, HttpSession session, HttpServletRequest request) {
+		String num = request.getParameter("pageNum");// 获取用户要看的页码
 		int pageNumber = 1;
-		if(num!=null){
+		if (num != null) {
 			pageNumber = Integer.parseInt(num);
-		}		
-		List<Topic> list=this.topicServiceImpl.findByPage(pageNumber, 5);
-		Page page = new Page(pageNumber,5);
+		}
+		List<Topic> list = this.topicServiceImpl.findByPage(pageNumber, 5);
+		Page page = new Page(pageNumber, 5);
 		page.setList(list);
 		page.setTotalCount(this.topicServiceImpl.findByCount());
 		session.setAttribute("list", list);
 		session.setAttribute("page", page);
-		//System.out.println(topic.getDescription());
+		// System.out.println(topic.getDescription());
 		return "adm/detail/topicList";
 	}
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 	// 显示全部话题
 	@RequestMapping("/topicshow")
@@ -85,40 +66,46 @@ public class TopicController {
 	}
 
 	@RequestMapping(value = "/topicupdate")
-	public String queryFileData(@RequestParam("uploadfile") CommonsMultipartFile file, HttpServletRequest request,
-			HttpSession session, @RequestParam("title") String title, @RequestParam("message") String message)
-					throws Exception {
+	public String queryFileData(@RequestParam("uploadfile") CommonsMultipartFile file, @RequestParam("uid") String uid,
+			HttpServletRequest request, HttpSession session, @RequestParam("title") String title,
+			@RequestParam("message") String message) throws Exception {
 
 		Topic t = new Topic();
-				/*(Topic) session.getAttribute("t");*/
+		/* (Topic) session.getAttribute("t"); */
 		String url = request.getRealPath("/images");
-		
+		User u = new User();
+
 		try {
 			String url1 = request.getRealPath("/images");
 			System.out.println(url1);
 			InputStream is1 = file.getInputStream();
 			File files = new File(url1, file.getOriginalFilename());
 			OutputStream os = new FileOutputStream(files);
-		
+
 			String path = file.getOriginalFilename();
-		
+
 			t.setTimg(path);
 			t.setTcontent(message);
 			t.setTtitle(title);
-		
-			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");  
+			int a = Integer.parseInt(uid);
+			t.setUid(a);
+
+			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 			System.out.println();
-			Date date =  df.parse(df.format(System.currentTimeMillis()));
+			Date date = df.parse(df.format(System.currentTimeMillis()));
 			t.setTime(date);
+
+			u = topicServiceImpl.addTopic(t);
+
+			System.out.println(u.getUsername());
+			System.out.println(u.getUimage());
 			
-			topicServiceImpl.addTopic(t);
-		
 			int length = 0;
 			byte[] buffer = new byte[400];
 			while ((length = is1.read(buffer)) != -1) {
 				os.write(buffer, 0, length);
 			}
-		
+
 			os.close();
 			is1.close();
 
