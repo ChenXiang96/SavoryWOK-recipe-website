@@ -84,6 +84,7 @@ a.right3 {
 						<img width="180" height="180" src="${pageContext.request.contextPath}/<c:out value="${p.image}"/>" data-src="${pageContext.request.contextPath}/<c:out value="${p.image}"/>"  class="imgLoad">
 						</a>
 					</div>
+				
 		    <div class="detail">
 				 <h2>
 					<a target="_blank" href="https://home.meishichina.com/recipe-400952.html" class="right3"> <c:out value="${p.pname}" /></a>

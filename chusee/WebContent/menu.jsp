@@ -81,6 +81,7 @@ margin-left:40px;
 				       <li class="nav navbar-nav">
 				 	     <a href="${ pageContext.request.contextPath }/userLogin">登录 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a>
 				       </li>
+				        <li></li>
 				       <li class="nav navbar-nav"><a href="${ pageContext.request.contextPath }/userRegister">注册</a>
 				       </li>
 			        </c:if>
