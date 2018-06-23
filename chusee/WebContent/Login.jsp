@@ -100,13 +100,15 @@ h3.heading-style-3 {
                 
                 <div class="form-group organic-form-2">
                   <center><label>验证码</label></center>
+                  
                  <center>
                  <input class="form-control" type="text" id="captcha" name="checkcode"  maxlength="20" autocomplete="off">
                  <img id="captchaImage" class="captchaImage" 
-											src="${pageContext.request.contextPath}/getCheckCodeImage" title="点击更换验证码"/>
-                <c:if test="${errorCheckCode != null}">
-										    <font color="red">验证码出错</font>
-										</c:if>
+				  src="${pageContext.request.contextPath}/getCheckCodeImage" title="点击更换验证码"/>
+                <center><c:if test="${errorCheckCode != null}">
+			     <font color="red">验证码出错</font>
+				</c:if>
+				</center>
                  </center>
                 </div>
                 
@@ -116,11 +118,9 @@ h3.heading-style-3 {
                 </div>
                 <div class="form-group remember-me">
                   <div class="checkbox pull-left">
-                    <label>
-                      <input type="checkbox"> Remember me
-                    </label>
+                   
                   </div>
-                  <a class="pull-right" href="#">Lost your password?</a>
+                 
                 </div>
               </form>
               

@@ -90,7 +90,7 @@ h3.heading-style-3 {
 
 
      <section class="sub-header shop-layout-1">
-        <img class="rellax bg-overlay" src="${pageContext.request.contextPath}/images/logo4.jpg" alt="">
+        <img class="rellax bg-overlay" src="${pageContext.request.contextPath}/images/logo2.jpg" alt="">
         <div class="overlay-call-to-action"></div>
         <h3 ><img  class="img0" src="images/lo.png"></h3>
        

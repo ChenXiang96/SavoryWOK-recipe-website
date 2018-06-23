@@ -50,31 +50,11 @@
                 <ul class="menu hidden-xs">
                   <li>
                     <a href="${ pageContext.request.contextPath}/index">首页</a>
-                    <ul>
-                      <li>
-                        <a href="index.html">Home Version 1</a>
-                      </li>
-                      <li>
-                        <a href="index-02.html">Home Version 2</a>
-                      </li>
-                      <li>
-                        <a href="index-03.html">Home Version 3</a>
-                      </li>
-                      <li>
-                        <a href="index-04.html">Home Version 4</a>
-                      </li>
-                    </ul>
+                   
                   </li>
                   <li>
                     <a class="active" href="cai.jsp">菜谱</a>
-                    <ul>
-                     
-                    
-                      <li>
-                        <a  href="location.jsp">食材</a>
-                      </li>
-                      
-                    </ul>
+                   
                   </li>
                   <li>
                     <a href="archive.jsp">甄选</a>
