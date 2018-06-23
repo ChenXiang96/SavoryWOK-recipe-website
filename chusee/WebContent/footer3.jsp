@@ -81,7 +81,7 @@ font-size:13px;
 }
 .pp {
     margin: 0 0 10px;
-    width: 1200px;
+
     font-size: 13px;
     /* margin-right: 20px; */
     /* margin-bottom: 50px; */

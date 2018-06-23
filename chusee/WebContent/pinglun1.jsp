@@ -20,10 +20,28 @@
 	href="${ pageContext.request.contextPath}/css/center_pai.css">
 <link rel="stylesheet"
 	href="${ pageContext.request.contextPath}/css/style_https.css">
+	
+<style>
+.mr_edit_fixed {
+
+    position: absolute;
+ 
+}
+#mod_location {
+
+    position: absolute;
+
+
+}
+.footer-area {
+    padding: 10px 0;
+    margin-right: 130px;
+}
+</style>
 </head>
 <body>
 
-
+<%@ include file="menu3.jsp" %>
 
 	<!-- 主框架 -->
 	<div class="w_main clear">
@@ -50,8 +68,8 @@
 						<li>
 							<label class="must">上传图片（最多9张）</label><br>
 							<div class="J_upload">
-								上传图片 
-								<input name ="uploadfile"multiple="" class="J_img" id="uploadfile"
+							
+								<input name ="uploadfile" multiple="" class="J_img" id="uploadfile"
 									accept="image/png,image/gif,image/jpeg" type="file">
 							</div> 
 								<span class="img_status" id="multi_cover_status"> </span>
@@ -84,6 +102,8 @@
 			<input id="oss_key" value="attachment/pai/2018/06/07/20180607"
 				type="hidden"> <input id="user_id" value="10666843"
 				type="hidden">
+				<%@ include file="footer3.jsp" %>
+				
 
 
 		</div>

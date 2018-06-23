@@ -12,15 +12,15 @@
               
                 <ul>
                   <li>
-                    <span class="lnr lnr-map-marker icon"></span>
+                    
                     <span>379 5th Ave New York, NYC 10018</span>
                   </li>
                   <li>
-                    <span class="lnr lnr-phone-handset icon"></span>
+                    
                     <a href="tel:0123456789">(+1) 96 716 6879</a>
                   </li>
                   <li>
-                    <span class="lnr lnr-envelope icon"></span>
+                   
                     <a href="mailto: contact@site.com">contact@site.com </a>
                   </li>
                 </ul>
@@ -32,28 +32,35 @@
             </div>
             <div class="widget-footer widget-link col-second col-medium">
               <div class="list-link">
-                <h4 class="h4 heading">SHOP</h4>
+                <h4 class="h4 heading">关于我们</h4>
                 <ul>
                   <li>
-                    <a href="#">Food</a>
+                   <a href="${ pageContext.request.contextPath}/index">首页</a>
+                   &nbsp;
+                    <a class="active" href="cai.jsp">菜谱</a>
                   </li>
                   <li>
-                    <a href="#">Farm</a>
+                    <a href="archive.jsp">甄选</a>
+                   &nbsp;
+                    <a href="${ pageContext.request.contextPath}/myHealth">健康</a>
                   </li>
                   <li>
-                    <a href="#">Health</a>
+                   <a href="reservation.jsp">专题</a>
+                   &nbsp;
+                    <a href="${ pageContext.request.contextPath}/topicshow">社区</a>
                   </li>
+                  
                   <li>
-                    <a href="#">Organic</a>
+                   <a href="gallery.jsp">话题</a>
+                   &nbsp;
                   </li>
+                 
                 </ul>
               </div>
               <div class="list-link">
-                <h4 class="h4 heading">SUPPORT</h4>
+                <h4 class="h4 heading">联系我们</h4>
                 <ul>
-                  <li>
-                    <a href="#">Contact Us</a>
-                  </li>
+                  
                   <li>
                     <a href="#">FAQ</a>
                   </li>
@@ -66,26 +73,33 @@
                 </ul>
               </div>
               <div class="list-link">
-                <h4 class="h4 heading">MY ACCOUNT</h4>
+                <h4 class="h4 heading">我的账户</h4>
                 <ul>
                   <li>
-                    <a href="#">Sign In</a>
+                    <a href="${ pageContext.request.contextPath }/userLogin">登录</a>
                   </li>
                   <li>
-                    <a href="#">My Cart</a>
+                    <a href="${ pageContext.request.contextPath }/userRegister">注册</a>
                   </li>
-                  <li>
-                    <a href="#">My Wishlist</a>
-                  </li>
-                  <li>
-                    <a href="#">Check Out</a>
-                  </li>
+                 
+                  <c:if test="${sessionScope.user != null}">
+				<li class="nav navbar-nav">
+					<a href="${ pageContext.request.contextPath }/center/get"><c:out value="${user.username }"/></a>
+					
+				</li>
+				<li class="nav navbar-nav">
+				<a>|</a>
+				</li>
+				<li class="nav navbar-nav"><a
+					href="${ pageContext.request.contextPath }/quit">退出</a>
+				</li>
+			</c:if>
                 </ul>
               </div>
             </div>
             <div class="widget-footer widget-newsletter-footer col-last col-small">
-              <h4 class="h4 heading">NEWSLETTER</h4>
-              <p>Subscribe now to get daily updates</p>
+              <h4 class="h4 heading">邮箱</h4>
+              <p>现在就来联系我们</p>
               <form class="organic-form form-inline btn-add-on circle border">
                 <div class="form-group">
                   <input class="form-control pill transparent" placeholder="Your Email..." type="email" />

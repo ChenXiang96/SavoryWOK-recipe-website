@@ -101,9 +101,7 @@
 a{
 color:#654e2d;
 }
-a.right{
-margin-left:225px;
-}
+
 a.right1{
  margin-left:220px;
 }
@@ -121,7 +119,7 @@ a.right3{
     width: 1185px;
 }
 .zerogrid {
-    width: 1580px;
+    width: 1400px;
     position: relative;
     margin: 0 auto;
     padding: 0px;
@@ -198,8 +196,11 @@ position: absolute;
     width:1580px;
 }
 a.right3 {
-    margin-left: 60px;
+    margin-left: 50px;
     color: #5A0000;
+}
+a.right {
+    margin-left: 170px;
 }
 
 </style>
@@ -246,9 +247,9 @@ a.right3 {
 					<div class="row">
 					
 					
-					<c:forEach items="${sessionScope.cList2}" var="c">
+					<c:forEach items="${sessionScope.cList2}" var="c" begin="0" end="0">
 						<div class="col-1-3">
-							<div class="wrap-col">-
+							<div class="wrap-col">
 								<div class="box-item">
 								<div class="ui_title">
                                   <div class="ui_title_wrap">
@@ -271,22 +272,26 @@ a.right3 {
 						            </a>
 									</c:forEach>
 									-->
-								         <c:forEach items="${nList2}" var="s">
+									  
+								        <c:forEach items="${nList2}" var="s" begin="0" end="0">
 										<a href="${pageContext.request.contextPath }/findByPid2/<c:out value="${s.pid}"/>">
 										<img src="${pageContext.request.contextPath}/<c:out value="${s.image}"/>"/>
 										</a>
 										  
 										</c:forEach>
+										
 									
 									
 									
 									<p>
-									     <c:forEach var="cs" items="${c.categorySeconds}">
+									   <c:forEach var="cs" items="${c.categorySeconds}">
+									   
 									   <li class="li1">
 									   <a href="${ pageContext.request.contextPath }/findByCasid/<c:out value="${cs.casid}/1"/>"  style="color:#5A0000">
 									     <c:out value="${cs.casname}" ></c:out>
 									   </a>
 									   </li>
+									   
 									   </c:forEach>
                                     </p>
 									<a href="#" class="button button-1">更多</a>
@@ -298,6 +303,118 @@ a.right3 {
 						</c:forEach>
 						
 						
+						
+						<c:forEach items="${sessionScope.cList2}" var="c" begin="1" end="1">
+						<div class="col-1-3">
+							<div class="wrap-col">
+								<div class="box-item">
+								<div class="ui_title">
+                                  <div class="ui_title_wrap">
+                                    <h2 class="on"><a href="javascript:void(0);" >健康</a></h2>
+                                    <h2><a href="javascript:void(0);">食疗</a></h2>
+                                   <h3><a title="健康首页" href="//www.meishichina.com/Health/" class="right" target="_blank">健康首页</a>
+                                    </h3>
+                                </div>
+                                </div>
+                                
+									<span class="ribbon">
+									   <a title="健康首页" href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1"  style="color:#FFFFFF" target="_blank">
+                                        <c:out value="${c.caname}"></c:out> 
+                                       </a>
+									 
+									<b></b></span>
+									<!--<c:forEach var="s" items="${subject}" begin="8" end="9">
+									<a href="${ pageContext.request.contextPath }/findBySid/<c:out value="${p.pid}"/>">
+						             <img src="${pageContext.request.contextPath}/<c:out value="${p.image}"/>" >
+						            </a>
+									</c:forEach>
+									-->
+									  
+								        <c:forEach items="${nList2}" var="s" begin="1" end="1">
+										<a href="${pageContext.request.contextPath }/findByPid2/<c:out value="${s.pid}"/>">
+										<img src="${pageContext.request.contextPath}/<c:out value="${s.image}"/>"/>
+										</a>
+										  
+										</c:forEach>
+										
+									
+									
+									
+									<p>
+									   <c:forEach var="cs" items="${c.categorySeconds}">
+									   
+									   <li class="li1">
+									   <a href="${ pageContext.request.contextPath }/findByCasid/<c:out value="${cs.casid}/1"/>"  style="color:#5A0000">
+									     <c:out value="${cs.casname}" ></c:out>
+									   </a>
+									   </li>
+									   
+									   </c:forEach>
+                                    </p>
+									<a href="#" class="button button-1">更多</a>
+									
+									
+								</div>
+							</div>
+						</div>
+						</c:forEach>
+						
+						
+						
+						<c:forEach items="${sessionScope.cList2}" var="c" begin="2" end="2">
+						<div class="col-1-3">
+							<div class="wrap-col">
+								<div class="box-item">
+								<div class="ui_title">
+                                  <div class="ui_title_wrap">
+                                    <h2 class="on"><a href="javascript:void(0);" >健康</a></h2>
+                                    <h2><a href="javascript:void(0);">食疗</a></h2>
+                                   <h3><a title="健康首页" href="//www.meishichina.com/Health/" class="right" target="_blank">健康首页</a>
+                                    </h3>
+                                </div>
+                                </div>
+                                
+									<span class="ribbon">
+									   <a title="健康首页" href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1"  style="color:#FFFFFF" target="_blank">
+                                        <c:out value="${c.caname}"></c:out> 
+                                       </a>
+									 
+									<b></b></span>
+									<!--<c:forEach var="s" items="${subject}" begin="8" end="9">
+									<a href="${ pageContext.request.contextPath }/findBySid/<c:out value="${p.pid}"/>">
+						             <img src="${pageContext.request.contextPath}/<c:out value="${p.image}"/>" >
+						            </a>
+									</c:forEach>
+									-->
+									  
+								        <c:forEach items="${nList2}" var="s" begin="2" end="2">
+										<a href="${pageContext.request.contextPath }/findByPid2/<c:out value="${s.pid}"/>">
+										<img src="${pageContext.request.contextPath}/<c:out value="${s.image}"/>"/>
+										</a>
+										  
+										</c:forEach>
+										
+									
+									
+									
+									<p>
+									   <c:forEach var="cs" items="${c.categorySeconds}">
+									   
+									   <li class="li1">
+									   <a href="${ pageContext.request.contextPath }/findByCasid/<c:out value="${cs.casid}/1"/>"  style="color:#5A0000">
+									     <c:out value="${cs.casname}" ></c:out>
+									   </a>
+									   </li>
+									   
+									   </c:forEach>
+                                    </p>
+									<a href="#" class="button button-1">更多</a>
+									
+									
+								</div>
+							</div>
+						</div>
+						</c:forEach>
 						
 						
 						

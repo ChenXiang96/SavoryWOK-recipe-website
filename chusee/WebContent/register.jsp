@@ -70,6 +70,18 @@ h3.heading-style-3:before, h3.heading-style-3:after{
     color: white;
     text-decoration: none;
 }
+.img0{
+  margin-right:50px;
+}
+
+h3.heading-style-3 {
+
+    color: #FFBF00;
+    font-weight: bold;
+    
+}
+
+
 
 </style>
 </head>
@@ -77,18 +89,18 @@ h3.heading-style-3:before, h3.heading-style-3:after{
        <%@ include file="menu2.jsp" %>
 
 
-      <section class="sub-header shop-layout-1">
+     <section class="sub-header shop-layout-1">
         <img class="rellax bg-overlay" src="${pageContext.request.contextPath}/images/logo2.jpg" alt="">
         <div class="overlay-call-to-action"></div>
-        <center><h3 class="heading-style-3"><img src="images/lo.png"></h3>
-        </center>
-         
+        <h3 ><img  class="img0" src="images/lo.png"></h3>
+       
       </section>
       <section class="boxed-sm">
         <div class="container">
           <div class="login-wrapper">
             <div class="row">
-              <h3>注册</h3>
+            <center> <h3 class="heading-style-3" color:"red">注册</h3>
+            </center>
               <form  commandName="user" action="${ pageContext.request.contextPath }/register" method="post" modelAttribute="user" novalidate="novalidate" onsubmit="return checkForm();">
                 <div class="form-group organic-form-2">
                   <label><font color="red">*</font> 用户名</label>
