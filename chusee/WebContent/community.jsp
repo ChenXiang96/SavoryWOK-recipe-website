@@ -54,20 +54,20 @@
 						
 							<li>
 								<div class="u">
-									<a href="https://home.meishichina.com/space-10795907.html"
+									<a href=""
 										target="_blank" title="${c.uid }"><img class="imgLoad"
 										src="%E8%AF%9D%E9%A2%98_%E7%BE%8E%E9%A3%9F%E5%A4%A9%E4%B8%8B_files/blank.gif"
 										data-src="images/${c.uimg }"
 										width="40" height="40"></a>
 									<div>
-										<a href="https://home.meishichina.com/space-10795907.html"
-											class="t" target="_blank" title="乐焙儿">${c.uname }</a> <span>${c.time }</span>
+										<a href="${ pageContext.request.contextPath }/commentshow"
+											class="t" target="_blank" title="${c.uname }">${c.uname }</a> <span>${c.time }</span>
 									</div>
 								</div>
 
 								<div class="c clear">
 									<div class="pp">
-										<a href="https://home.meishichina.com/pai-900188.html"
+										<a href="${ pageContext.request.contextPath }/commentshow"
 											target="_blank"><strong>${c.ttitle }</strong><br>${c.tcontent }</a>
 									</div>
 									

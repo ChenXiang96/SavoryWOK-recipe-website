@@ -2,10 +2,9 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <link href="${ pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet" />
-
 <link href="${ pageContext.request.contextPath}/css/flexslider1.css" rel="stylesheet" />
-
 <link href="${ pageContext.request.contextPath}/css/style2.css" rel="stylesheet" />
+  
   <style>
   
   
