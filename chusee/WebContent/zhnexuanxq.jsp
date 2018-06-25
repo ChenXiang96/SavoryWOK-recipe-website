@@ -85,7 +85,7 @@
 				<a href="https://zhen.meishichina.com/29395/">
 					<span id="zhen_name">${zhenxuan.pname }</span>				</a>
 			</h1>
-			<p class="subcontent">Top 11. 传统配方，真材实料，中草药萃取，原汁原味，醇厚口感，清火气，养元气。</p>
+			<p class="subcontent">${zhenxuan.pdesc }</p>
 			
 		</div>
 		<div class="substatus2 clear">
