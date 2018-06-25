@@ -60,14 +60,14 @@
 										data-src="images/${c.uimg }"
 										width="40" height="40"></a>
 									<div>
-										<a href="${ pageContext.request.contextPath }/commentshow"
+										<a href="${ pageContext.request.contextPath }/commentshow?uid=${c.uid}&tid=${c.tid}"
 											class="t" target="_blank" title="${c.uname }">${c.uname }</a> <span>${c.time }</span>
 									</div>
 								</div>
 
 								<div class="c clear">
 									<div class="pp">
-										<a href="${ pageContext.request.contextPath }/commentshow"
+										<a href="${ pageContext.request.contextPath }/commentshow?uid=${c.uid}&tid=${c.tid}"
 											target="_blank"><strong>${c.ttitle }</strong><br>${c.tcontent }</a>
 									</div>
 									

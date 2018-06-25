@@ -2,8 +2,26 @@ package com.chuse.entity;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+
+/**
+ * 
+ * Comment 评论发布显示
+ * @author dell
+ *
+ */
+@Entity
+@Table(name="comment")
 public class Comment {
 
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Id
 	private int ctid;
 	private String cdes;
 	private Date ctime;

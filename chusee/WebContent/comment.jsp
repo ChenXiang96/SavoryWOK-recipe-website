@@ -44,7 +44,7 @@
 				</div>
 			</div>
 
-						<div class="pai_box">
+			<div class="pai_box">
 
 				<a class="img" title="米拉Miira" href="https://home.meishichina.com/space-10667631.html" target="_blank"><img src="${pageContext.request.contextPath}/images/comment/31_avatar_big_002.jpg" class="imgLoad" style="display: block;" width="48" height="48"></a>
 
@@ -66,22 +66,6 @@
 							</div>
 			
 
-<div class="recipeArction mt10 clear">
-<ul class="collect_da">
-<li class="lik"><a title="喜欢" href="javascript:void(0);" class="J_lik  " data=""><i></i><span>7</span>人喜欢</a></li>
-<li class="fav"><a title="收藏" href="javascript:void(0);" class="J_fav  " data=""><i></i><span>0</span>人收藏</a></li>
-
-<li style="width:1px;border-right: 1px solid #ddd; height: 30px; margin: 2px 10px; overflow: hidden;"></li>
-<li class="shar"><a title="分享到微信" href="javascript:void(0);" class="J_s4" data="bds_weixin"><i></i>微信</a></li>
-<li class="shar"><a title="分享到QQ好友" href="javascript:void(0);" class="J_s2" data="bds_sqq"><i></i>QQ好友</a></li>
-<li class="shar"><a title="分享到QQ空间" href="javascript:void(0);" class="J_s3" data="bds_qzone"><i></i>QQ空间</a></li>
-<li class="shar"><a title="分享到新浪微博" href="javascript:void(0);" class="J_s1" data="bds_tsina"><i></i>新浪微博</a></li>
-</ul>
-
-<div class="bdsharebuttonbox bdshare-button-style0-16" id="bdshare" data-bd-bind="1529739553954">
-		<a title="分享到新浪微博" href="#" class="bds_tsina" id="bds_tsina" data-cmd="tsina"></a><a title="分享到QQ空间" href="#" class="bds_qzone" id="bds_qzone" data-cmd="qzone"></a><a title="分享到QQ好友" href="#" class="bds_sqq" id="bds_sqq" data-cmd="sqq"></a><a data-cmd="weixin" id="bds_weixin" class="bds_weixin" href="#" title="分享到微信"></a>
-</div>
-</div>
 
 
 
@@ -94,185 +78,50 @@
 					<div class="comment-list ">
 						<div data-dom="list">
 							<ul style="">
-																								<li data-id="14936763">
+								
+						<c:forEach items="${sessionScope.clist}" begin="0" var="ct">
+										
+								<li data-id="${ct.ctid }">
 								<div class="pic"><a title="点击进入 zhangshouhua 的主页" target="_blank" href="https://home.meishichina.com/space-6213452.html"><img src="${pageContext.request.contextPath}/images/comment/52_avatar_big.jpg" class="imgLoad" style="display: block;" width="48" height="48"></a></div>
 								<div class="detail">
 									<div class="tools">
-										<div class="left"><a target="_blank" href="https://home.meishichina.com/space-6213452.html" title="点击进入 zhangshouhua 的主页">zhangshouhua</a><span data-time="1433395511" class="subtime">2小时前</span></div>
+										<div class="left"><a target="_blank" href="https://home.meishichina.com/space-6213452.html" title="点击进入 zhangshouhua 的主页">${ct.uname }</a><span data-time="1433395511" class="subtime">${ct.ctime }</span></div>
 										<div class="right">1#<a class="reply" href="javascript:void(0);">回复</a></div>
 									</div>
 									<div class="content">
-																				真好看，我喜欢<img src="${pageContext.request.contextPath}/images/comment/4.gif" class="face">
+																				${ct.cdes }
 																			</div>
 								</div>
+
 								</li>
-																<li data-id="14936764">
-								<div class="pic"><a title="点击进入 米拉Miira 的主页" target="_blank" href="https://home.meishichina.com/space-10667631.html"><img src="${pageContext.request.contextPath}/images/comment/31_avatar_big.jpg" class="imgLoad" style="display: block;" width="48" height="48"></a></div>
-								<div class="detail">
-									<div class="tools">
-										<div class="left"><a target="_blank" href="https://home.meishichina.com/space-10667631.html" title="点击进入 米拉Miira 的主页">米拉Miira</a><span data-time="1433395511" class="subtime">2小时前</span></div>
-										<div class="right">2#<a class="reply" href="javascript:void(0);">回复</a></div>
-									</div>
-									<div class="content">
-										<div class="quote"><span class="q"><b>zhangshouhua</b>: 真好看，我喜欢[em:d:]</span></div>										亲周末愉快<img src="${pageContext.request.contextPath}/images/comment/4.gif" class="face"><img src="${pageContext.request.contextPath}/images/comment/4.gif" class="face">
-																			</div>
-								</div>
-								</li>
-																<li data-id="14936780">
-								<div class="pic"><a title="点击进入 小戴_mluQFox0 的主页" target="_blank" href="https://home.meishichina.com/space-10614988.html"><img src="${pageContext.request.contextPath}/images/comment/88_avatar_big.jpg" class="imgLoad" style="display: block;" width="48" height="48"></a></div>
-								<div class="detail">
-									<div class="tools">
-										<div class="left"><a target="_blank" href="https://home.meishichina.com/space-10614988.html" title="点击进入 小戴_mluQFox0 的主页">小戴_mluQFox0</a><span data-time="1433395511" class="subtime">2小时前</span></div>
-										<div class="right">3#<a class="reply" href="javascript:void(0);">回复</a></div>
-									</div>
-									<div class="content">
-																				好漂亮，我喜欢
-																			</div>
-								</div>
-								</li>
-																<li data-id="14936795">
-								<div class="pic"><a title="点击进入 薛春风丹 的主页" target="_blank" href="https://home.meishichina.com/space-9329235.html"><img src="${pageContext.request.contextPath}/images/comment/35_avatar_big.jpg" class="imgLoad" style="display: block;" width="48" height="48"></a></div>
-								<div class="detail">
-									<div class="tools">
-										<div class="left"><a target="_blank" href="https://home.meishichina.com/space-9329235.html" title="点击进入 薛春风丹 的主页">薛春风丹</a><span data-time="1433395511" class="subtime">2小时前</span></div>
-										<div class="right">4#<a class="reply" href="javascript:void(0);">回复</a></div>
-									</div>
-									<div class="content">
-																				哪淘的，这么好看
-																			</div>
-								</div>
-								</li>
-																<li data-id="14936803">
-								<div class="pic"><a title="点击进入 清晨的一缕sunshine 的主页" target="_blank" href="https://home.meishichina.com/space-10714798.html"><img src="${pageContext.request.contextPath}/images/comment/98_avatar_big_002.jpg" class="imgLoad" style="display: block;" width="48" height="48"></a></div>
-								<div class="detail">
-									<div class="tools">
-										<div class="left"><a target="_blank" href="https://home.meishichina.com/space-10714798.html" title="点击进入 清晨的一缕sunshine 的主页">清晨的一缕sunshine</a><span data-time="1433395511" class="subtime">2小时前</span></div>
-										<div class="right">5#<a class="reply" href="javascript:void(0);">回复</a></div>
-									</div>
-									<div class="content">
-																				各种瓶瓶罐罐也是我的大爱，姐姐这一套也非常漂亮
-																			</div>
-								</div>
-								</li>
-																<li data-id="14936822">
-								<div class="pic"><a title="点击进入 禧歡Θ雨兲 的主页" target="_blank" href="https://home.meishichina.com/space-8803821.html"><img src="${pageContext.request.contextPath}/images/comment/21_avatar_big.jpg" class="imgLoad" style="display: block;" width="48" height="48"></a></div>
-								<div class="detail">
-									<div class="tools">
-										<div class="left"><a target="_blank" href="https://home.meishichina.com/space-8803821.html" title="点击进入 禧歡Θ雨兲 的主页">禧歡Θ雨兲</a><span data-time="1433395511" class="subtime">1小时前</span></div>
-										<div class="right">6#<a class="reply" href="javascript:void(0);">回复</a></div>
-									</div>
-									<div class="content">
-																				美器配美食。。。。
-																			</div>
-								</div>
-								</li>
-																<li data-id="14936827">
-								<div class="pic"><a title="点击进入 米拉Miira 的主页" target="_blank" href="https://home.meishichina.com/space-10667631.html"><img src="${pageContext.request.contextPath}/images/comment/31_avatar_big.jpg" class="imgLoad" style="display: block;" width="48" height="48"></a></div>
-								<div class="detail">
-									<div class="tools">
-										<div class="left"><a target="_blank" href="https://home.meishichina.com/space-10667631.html" title="点击进入 米拉Miira 的主页">米拉Miira</a><span data-time="1433395511" class="subtime">1小时前</span></div>
-										<div class="right">7#<a class="reply" href="javascript:void(0);">回复</a></div>
-									</div>
-									<div class="content">
-										<div class="quote"><span class="q"><b>小戴_mluQFox0</b>: 好漂亮，我喜欢</span></div>										亲周末愉快<img src="${pageContext.request.contextPath}/images/comment/4.gif" class="face"><img src="${pageContext.request.contextPath}/images/comment/4.gif" class="face">最近喜欢粗瓷风
-																			</div>
-								</div>
-								</li>
-																<li data-id="14936829">
-								<div class="pic"><a title="点击进入 米拉Miira 的主页" target="_blank" href="https://home.meishichina.com/space-10667631.html"><img src="${pageContext.request.contextPath}/images/comment/31_avatar_big.jpg" class="imgLoad" style="display: block;" width="48" height="48"></a></div>
-								<div class="detail">
-									<div class="tools">
-										<div class="left"><a target="_blank" href="https://home.meishichina.com/space-10667631.html" title="点击进入 米拉Miira 的主页">米拉Miira</a><span data-time="1433395511" class="subtime">1小时前</span></div>
-										<div class="right">8#<a class="reply" href="javascript:void(0);">回复</a></div>
-									</div>
-									<div class="content">
-										<div class="quote"><span class="q"><b>薛春风丹</b>: 哪淘的，这么好看</span></div>										哈哈😄京东！亲周末愉快<img src="${pageContext.request.contextPath}/images/comment/4.gif" class="face">
-																			</div>
-								</div>
-								</li>
-																<li data-id="14936830">
-								<div class="pic"><a title="点击进入 米拉Miira 的主页" target="_blank" href="https://home.meishichina.com/space-10667631.html"><img src="${pageContext.request.contextPath}/images/comment/31_avatar_big.jpg" class="imgLoad" style="display: block;" width="48" height="48"></a></div>
-								<div class="detail">
-									<div class="tools">
-										<div class="left"><a target="_blank" href="https://home.meishichina.com/space-10667631.html" title="点击进入 米拉Miira 的主页">米拉Miira</a><span data-time="1433395511" class="subtime">1小时前</span></div>
-										<div class="right">9#<a class="reply" href="javascript:void(0);">回复</a></div>
-									</div>
-									<div class="content">
-										<div class="quote"><span class="q"><b>清晨的一缕sunshine</b>: 各种瓶瓶罐罐也是我的大爱，姐姐这一套也非常漂亮</span></div>										哈哈😄妹妹周末愉快！女人的通病<img src="${pageContext.request.contextPath}/images/comment/4.gif" class="face"><img src="${pageContext.request.contextPath}/images/comment/4.gif" class="face"><img src="${pageContext.request.contextPath}/images/comment/4.gif" class="face">最近喜欢粗瓷风
-																			</div>
-								</div>
-								</li>
-																<li data-id="14936831">
-								<div class="pic"><a title="点击进入 雨中漫步_kRsJPX 的主页" target="_blank" href="https://home.meishichina.com/space-10274398.html"><img src="${pageContext.request.contextPath}/images/comment/98_avatar_big.jpg" class="imgLoad" style="display: block;" width="48" height="48"></a></div>
-								<div class="detail">
-									<div class="tools">
-										<div class="left"><a target="_blank" href="https://home.meishichina.com/space-10274398.html" title="点击进入 雨中漫步_kRsJPX 的主页">雨中漫步_kRsJPX</a><span data-time="1433395511" class="subtime">1小时前</span></div>
-										<div class="right">10#<a class="reply" href="javascript:void(0);">回复</a></div>
-									</div>
-									<div class="content">
-																				好漂亮<img src="${pageContext.request.contextPath}/images/comment/16.gif" class="face">
-																			</div>
-								</div>
-								</li>
-																<li data-id="14936834">
-								<div class="pic"><a title="点击进入 米拉Miira 的主页" target="_blank" href="https://home.meishichina.com/space-10667631.html"><img src="${pageContext.request.contextPath}/images/comment/31_avatar_big.jpg" class="imgLoad" style="display: block;" width="48" height="48"></a></div>
-								<div class="detail">
-									<div class="tools">
-										<div class="left"><a target="_blank" href="https://home.meishichina.com/space-10667631.html" title="点击进入 米拉Miira 的主页">米拉Miira</a><span data-time="1433395511" class="subtime">1小时前</span></div>
-										<div class="right">11#<a class="reply" href="javascript:void(0);">回复</a></div>
-									</div>
-									<div class="content">
-										<div class="quote"><span class="q"><b>禧歡Θ雨兲</b>: 美器配美食。。。。</span></div>										哈哈😄😄亲周末愉快！喜欢各种小瓶小罐
-																			</div>
-								</div>
-								</li>
-																<li data-id="14936835">
-								<div class="pic"><a title="点击进入 米拉Miira 的主页" target="_blank" href="https://home.meishichina.com/space-10667631.html"><img src="${pageContext.request.contextPath}/images/comment/31_avatar_big.jpg" class="imgLoad" style="display: block;" width="48" height="48"></a></div>
-								<div class="detail">
-									<div class="tools">
-										<div class="left"><a target="_blank" href="https://home.meishichina.com/space-10667631.html" title="点击进入 米拉Miira 的主页">米拉Miira</a><span data-time="1433395511" class="subtime">1小时前</span></div>
-										<div class="right">12#<a class="reply" href="javascript:void(0);">回复</a></div>
-									</div>
-									<div class="content">
-										<div class="quote"><span class="q"><b>雨中漫步_kRsJPX</b>: 好漂亮[em:p:]</span></div>										亲周末愉快呢<img src="${pageContext.request.contextPath}/images/comment/4.gif" class="face"><img src="${pageContext.request.contextPath}/images/comment/4.gif" class="face"><img src="${pageContext.request.contextPath}/images/comment/4.gif" class="face">
-																			</div>
-								</div>
-								</li>
-																<li data-id="14936877">
-								<div class="pic"><a title="点击进入 D☆L 的主页" target="_blank" href="https://home.meishichina.com/space-5993515.html"><img src="${pageContext.request.contextPath}/images/comment/15_avatar_big.jpg" class="imgLoad" style="display: block;" width="48" height="48"></a></div>
-								<div class="detail">
-									<div class="tools">
-										<div class="left"><a target="_blank" href="https://home.meishichina.com/space-5993515.html" title="点击进入 D☆L 的主页">D☆L</a><span data-time="1433395511" class="subtime">31分钟前</span></div>
-										<div class="right">13#<a class="reply" href="javascript:void(0);">回复</a></div>
-									</div>
-									<div class="content">
-																				好看
-																			</div>
-								</div>
-								</li>
-																							</ul>
+								</c:forEach>
+							</ul>
 						</div>
 					</div>
 
 
-					
-					<div class="comment-pai">
-												<img src="${pageContext.request.contextPath}/images/comment/n.jpg" data-src="https://i5.meishichina.com/data/avatar/010/66/68/43_avatar_big.jpg?x-oss-process=style/c80&amp;v=2018062315" class="imgLoad comment-pai-img" width="48" height="48">
-												<div data-dom="add" class="comment-post comment-add">
+					<form action="">					
+						<div class="comment-pai">
+								<img src="${pageContext.request.contextPath}/images/comment/n.jpg" data-src="https://i5.meishichina.com/data/avatar/010/66/68/43_avatar_big.jpg?x-oss-process=style/c80&amp;v=2018062315" class="imgLoad comment-pai-img" width="48" height="48">
+								<div data-dom="add" class="comment-post comment-add">
 							
-							<div class="comment-post-loading"></div>
-							<div class="comment-post-text">
-								<div class="comment-post-text-inner">
-									<textarea title="Ctrl+Enter 也可提交哦" class="text ui-webkit-scrollbar"></textarea>
-								</div>
-							</div>
-							<div class="comment-post-tools clear">
-								<div class="left"><a title="插入表情" data-type="smilies" class="J_event comment-smilies-a" href="javascript:void(0);"></a><span class="tips">Ctrl+Enter 也可提交哦</span></div>
-								<div class="right"><a class="comment-btn add_submit" href="javascript:void(0);" data-id="905517">发表评论</a></div>
-							</div>
+									<div class="comment-post-loading"></div>
+										<div class="comment-post-text">
+											<div class="comment-post-text-inner">
+												<textarea title="Ctrl+Enter 也可提交哦" class="text ui-webkit-scrollbar"></textarea>
+											</div>
+										</div>
+												<div class="comment-post-tools clear">
+													<div class="left"><a title="插入表情" data-type="smilies" class="J_event comment-smilies-a" href="javascript:void(0);"></a><span class="tips">Ctrl+Enter 也可提交哦</span></div>
+													<div class="right"><a class="comment-btn add_submit" href="${pageContext.request.contextPath}/commentadd/${ct.tid}" data-id="905517">发表评论</a></div>
+												</div>
 						</div>
+				
 					</div>
+				</form>
+				
 				</div>
+				
 			</div>
 
 
