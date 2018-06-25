@@ -6,8 +6,11 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.chuse.entity.Product;
 import com.chuse.entity.Zhenxuan;
 import com.chuse.service.impl.ZhenXuanServiceImpl;
 
@@ -18,13 +21,22 @@ public class ZhenXuanContorller {
 	private ZhenXuanServiceImpl zhenxuanServiceImpl;
 	//前------------------------------------------------------
 	
-	//前-查-在商品页面显示商品列表
+	//前-查-在商品页面显示珍选列表
 	@RequestMapping("/list")
 	public String list(HttpSession session){
 			List<Zhenxuan> list=this.zhenxuanServiceImpl.listZhenxuans();
 			session.setAttribute("list", list);
 			System.out.print("con");
 			return "archive";
+	}
+	
+	@RequestMapping("xiangqing")
+	public String edit(@RequestParam(value="zid", required = false) Integer zid,Model model){
+	
+		Zhenxuan zhenxuan=this.zhenxuanServiceImpl.findZhenxuan(zid);
+		model.addAttribute("zhenxuan", zhenxuan);
+		
+		return "zhnexuanxq";
 	}
 
 }

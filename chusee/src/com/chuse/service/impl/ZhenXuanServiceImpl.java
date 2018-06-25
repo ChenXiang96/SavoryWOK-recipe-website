@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.chuse.dao.impl.ZhenXuanDaoImpl;
+import com.chuse.entity.Product;
 import com.chuse.entity.Zhenxuan;
 @Service
 @Transactional(readOnly=true)
@@ -19,6 +20,10 @@ public class ZhenXuanServiceImpl {
 	//-----------------------------------------------------------------
 	public List<Zhenxuan> listZhenxuans(){
 		return zhenxuanDaoImpl.findAll();
+	}
+	
+	public Zhenxuan findZhenxuan(Integer zid){
+		return this.zhenxuanDaoImpl.findById(zid);
 	}
 	
 	

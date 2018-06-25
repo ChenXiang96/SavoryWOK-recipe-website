@@ -12,22 +12,33 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.chuse.entity.Howdo;
+import com.chuse.entity.Material;
 import com.chuse.entity.Page;
 import com.chuse.entity.Product;
+import com.chuse.entity.User;
 import com.chuse.service.impl.HealthServiceImpl;
 
 @Controller
 @RequestMapping("/health")
 public class HealthController {
 
+	
 	@Resource
 	private HealthServiceImpl healthServiceImpl;
 	//前------------------------------------------------------
 	@RequestMapping("/howdo")
-	public String howdo(@RequestParam(value="pid", required = false) Integer pid,Model model){
-		Product product=this.healthServiceImpl.findProduct(pid);
+
+	public String findHowdo(@RequestParam(value="pid", required = false) Integer pid,Model model, @RequestParam(value="uid", required = false) Integer uid
+			){
+		Product product=this.healthServiceImpl.findHowdoP(pid);
+//		User user=this.healthServiceImpl.findHowdoU(uid);
+//		Material material=this.healthServiceImpl.findHowdoM(mid);
+//		Howdo howdo=this.healthServiceImpl.findHowdoH(hid);
 		model.addAttribute("product", product);
-		//System.out.println("xiao"+product.getPname());
+//		model.addAttribute("user", user);
+//		model.addAttribute("material", material);
+//		model.addAttribute("howdo", howdo);
 		return "foodlist";
 	}
 	

@@ -10,7 +10,7 @@
 <script
 	src="${ctx}/js/pubads_impl_rendering_207.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>烤鸡翅的做法_菜谱_厨色</title>
+<title>${product.pname }的做法_菜谱_厨色</title>
 <meta name="keywords"
 	content="烤鸡翅,烤鸡翅的做法,烤鸡翅的家常做法,烤鸡翅怎么做,烤鸡翅的做法步骤,烤鸡翅的最正宗做法,烤鸡翅怎么做好吃">
 <meta name="description"
@@ -70,14 +70,14 @@
 
 				<div class="userTop clear">
 					<h1 class="recipe_De_title">
-						<a href="https://home.meishichina.com/recipe-399056.html"
-							id="recipe_title" title="烤鸡翅">${product.pname }</a> <span class="copyright">独家</span>
+						<a href=""
+							name="pname" id="pname" title="烤鸡翅">${product.pname }</a> <span class="copyright">独家</span>
 					</h1>
 					<a title="一米阳光612"
-						href="https://home.meishichina.com/space-10244347.html"
+						href=""
 						target="_blank" class="uright"> <img
-						src="${ctx}/images/foodimg/47_avatar_big.jpg">
-						<span class="userName" id="recipe_username">一米阳光612</span>
+						src="${ctx}/${p.image }">
+						<span class="userName" id="recipe_username">${user.username }</span>
 					</a>
 				</div>
 
@@ -91,11 +91,11 @@
 							id="recipe_title" value="烤鸡翅" type="hidden">
 						<div class="recipe_De_imgBox" id="recipe_De_imgBox">
 							<a class="J_photo" title="烤鸡翅的做法"><span></span><img
-								src="${ctx}/images/foodimg/20180526152733960718910244347.jpg"
+								src="${ctx}/${product.image }"
 								alt="烤鸡翅的做法"> </a>
-							<p class="J_photo" style="opacity: 0.7; display: none;">
+							<!-- p class="J_photo" style="opacity: 0.7; display: none;">
 								<span class="De_bg">&nbsp;</span> <span class="De_photo">3张图片</span>
-							</p>
+							</p-->
 						</div>
 
 
@@ -133,39 +133,13 @@
 						</fieldset>
 
 
-						<div class="recipeCategory_sub_R mt30 clear">
-							<ul>
-
-								<li><span class="category_s1"> <a title="中辣"
-										href="https://home.meishichina.com/recipe-type-do-cuisine-view-2.html"
-										target="_blank">中辣</a>
-								</span> <span class="category_s2">口味</span></li>
-
-								<li><span class="category_s1"> <a title="烤"
-										href="https://home.meishichina.com/recipe-type-do-technics-view-9.html"
-										target="_blank">烤</a>
-								</span> <span class="category_s2">工艺</span></li>
-
-								<li><span class="category_s1"> <a title="半小时"
-										href="https://home.meishichina.com/recipe-type-do-during-view-3.html"
-										target="_blank">半小时</a>
-								</span> <span class="category_s2">耗时</span></li>
-
-								<li><span class="category_s1"> <a title="简单"
-										href="https://home.meishichina.com/recipe-type-do-level-view-1.html"
-										target="_blank">简单</a>
-								</span> <span class="category_s2">难度</span></li>
-
-
-							</ul>
-						</div>
-
+						
 
 
 
 
 						<div class="mo mt20">
-							<h3>烤鸡翅的做法步骤</h3>
+							<h3>${product.pname }的做法步骤</h3>
 						</div>
 
 
