@@ -22,16 +22,16 @@
     
     <!-- CSS
   ================================================== -->
-  	<link rel="stylesheet" href="css/zerogrid.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/slide.css">
-	<link rel="stylesheet" href="css/menu.css">
+  	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/zerogrid.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/slide.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/menu.css">
 	
 	
 
 
 	<!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<!--[if lt IE 8]>
        <div style=' clear: both; text-align:center; position: relative;'>
          <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
@@ -52,7 +52,7 @@
 
 
 <!-- [ REQUIRED ] -->
-<link rel="stylesheet" href="css/bpHS.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bpHS.min.css">
 
 
 
@@ -209,10 +209,10 @@ a.right {
 </head>
 <body  style="background: url(#2D2D2D)">
 
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery.touchSwipe.min.js"></script> <!-- optional (required for touchSwipe option) -->
-<script src="js/bpHS.min.js"></script>
-<script src="js/custom.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.touchSwipe.min.js"></script> <!-- optional (required for touchSwipe option) -->
+<script src="${pageContext.request.contextPath}/js/bpHS.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/custom.js"></script>
 
 
 
@@ -442,7 +442,7 @@ a.right {
                        
                            </div>
                         </div>
-			<div class="wrap-content">
+		<div class="wrap-content">
 				<div class="row">
 					<div class="col-1-4">
 						<div class="zoom-container">
@@ -457,6 +457,7 @@ a.right {
 				</div>
 				
 			</div>
+
                	
 				
 					
@@ -471,11 +472,11 @@ a.right {
 	
 	<%@ include file="footer3.jsp" %>
 	<!-- js -->
-	<script src="js/classie.js"></script>
-	<script src="js/demo.js"></script>
+	<script src="${pageContext.request.contextPath}/js/classie.js"></script>
+	<script src="${pageContext.request.contextPath}/js/demo.js"></script>
 
-	<script src="js/jquery-1.11.3.min.js"></script>
-	<script src="js/responsiveslides.min.js"></script>
+	<script src="${pageContext.request.contextPath}/js/jquery-1.11.3.min.js"></script>
+	<script src="${pageContext.request.contextPath}/js/responsiveslides.min.js"></script>
 	<script>
 	$(function () {
 	  // Slideshow 4

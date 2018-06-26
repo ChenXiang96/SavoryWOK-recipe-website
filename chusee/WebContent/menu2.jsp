@@ -79,7 +79,7 @@
                   <li>
                      <a href="${ pageContext.request.contextPath }/userLogin">登录</a>
                   </li>
-                  
+                  <li><a href="${ pageContext.request.contextPath }/Backstage.jsp">管理员</a></li>
                   <li>
                       <a href="${ pageContext.request.contextPath }/userRegister">注册</a>
                   </li>
