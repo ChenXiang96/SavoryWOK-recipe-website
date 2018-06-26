@@ -183,7 +183,7 @@ a {
 									<span class="ribbon"><c:out value="${s.pname }"/><b></b></span>
 									 <img src="${pageContext.request.contextPath}/<c:out value="${s.image}"/>"style="display: block;" />
 									<p><c:out value="${s.pcontent}"/></p>
-									<a href="#" class="button button-1">详情</a>
+									<a href="${pageContext.request.contextPath}/getHealthaa?pid=${s.pid}" class="button button-1">详情</a>
 								</div>
 							</div>
 				    </div>

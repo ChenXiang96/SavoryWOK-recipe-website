@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.chuse.dao.ProductDao;
 import com.chuse.dao.SubjectDao;
+import com.chuse.entity.Product;
 import com.chuse.entity.Subject;
 import com.chuse.service.ProductService;
 import com.chuse.service.SubjectService;
@@ -19,6 +20,24 @@ public class SubjectServiceImpl implements SubjectService {
 
 	@Resource
 	private SubjectDao subjectDao;
+	
+	public Subject findSubject(Integer pid){
+		return this.subjectDao.findById(pid);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	public Integer CountPageSubjectFromCategory2(Integer caid) {
 		Integer count = subjectDao.CountPageSubjectFromCategory2(caid);

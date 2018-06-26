@@ -16,4 +16,5 @@ public interface SubjectDao extends BaseDao<Subject>{
 	public Integer CountSubject();
 	public Subject findTwo(Integer pid);
 	public List<Subject> findAll2(Integer page);
+	public Subject findById(Integer pid);
 }
