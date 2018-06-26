@@ -57,6 +57,16 @@ public class TopicController {
 		session.setAttribute("tlist", list);
 
 		System.out.println(list.get(0).getTimg());
+		return "topic";
+	}
+
+	//显示全部社区
+	@RequestMapping("/communityshow")
+	public String clist(HttpSession session) {
+		List<Topic> list = this.topicServiceImpl.listTopics();
+		session.setAttribute("tlist", list);
+
+		System.out.println(list.get(0).getTimg());
 		return "community";
 	}
 
