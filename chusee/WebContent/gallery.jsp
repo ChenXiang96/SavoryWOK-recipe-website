@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<c:set var="ctx" value="${pageContext.request.contextPath}" /> 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -20,10 +25,10 @@
     
     <!-- CSS
   ================================================== -->
-  	<link rel="stylesheet" href="css/zerogrid.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/slide.css">
-	<link rel="stylesheet" href="css/menu.css">
+  	<link rel="stylesheet" href="${ctx }/css/zerogrid.css">
+	<link rel="stylesheet" href="${ctx }/css/style.css">
+	<link rel="stylesheet" href="${ctx }/css/slide.css">
+	<link rel="stylesheet" href="${ctx }/css/menu.css">
 	<!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<!--[if lt IE 8]>
@@ -38,8 +43,8 @@
 		<script src="js/css3-mediaqueries.js"></script>
 	<![endif]-->
     		<!-- footer -->
-<link href="css/bootstrap.min.css" rel="stylesheet" />
-<link href="css/style2.css" rel="stylesheet" />
+<link href="${ctx }/css/bootstrap.min.css" rel="stylesheet" />
+<link href="${ctx }/css/style2.css" rel="stylesheet" />
 </head>
 <body  style="background: url(#2D2D2D)">
 <%@ include file="menu3.jsp" %>
@@ -180,8 +185,8 @@ a {
     background: url(//static.meishichina.com/v6/img/wap_a/gotop.png) no-repeat scroll center center/58px 58px;
 }
 	</style>
-	<script src="js/classie.js"></script>
-	<script src="js/demo.js"></script>
+	<script src="${ctx }/js/classie.js"></script>
+	<script src="${ctx }/js/demo.js"></script>
 	
 </div>
 </body>

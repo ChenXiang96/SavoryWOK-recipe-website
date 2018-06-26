@@ -449,9 +449,9 @@ a.right {
 							<div class="zoom-container"  style="display:inline;float:left;">
 								<a href="#" >
 									<span class="zoom-caption" >
-										<span>黄金炸鸡排</span>
+										<span>鱼香肉丝</span>
 									</span>
-									<img  src="images/JP.jpg" "/>
+									<img  src="cimg/1.jpg"/>
 								</a>
 							</div>
 							
@@ -461,9 +461,9 @@ a.right {
 							<div class="zoom-container"  style="display:inline;float:left;">
 								<a href="#" >
 									<span class="zoom-caption" >
-										<span>黄金炸鸡排</span>
+										<span>芦笋烤冰鱼</span>
 									</span>
-									<img  src="images/JP.jpg" "/>
+									<img  src="cimg/2.jpg "/>
 								</a>
 							</div>
 							
@@ -473,9 +473,9 @@ a.right {
 							<div class="zoom-container"  style="display:inline;float:left;">
 								<a href="#" >
 									<span class="zoom-caption" >
-										<span>黄金炸鸡排</span>
+										<span>红烧排骨</span>
 									</span>
-									<img  src="images/JP.jpg" "/>
+									<img  src="cimg/3.jpg"/>
 								</a>
 							</div>
 							
@@ -485,9 +485,9 @@ a.right {
 							<div class="zoom-container"  style="display:inline;float:left;">
 								<a href="#" >
 									<span class="zoom-caption" >
-										<span>黄金炸鸡排</span>
+										<span>番茄四季豆</span>
 									</span>
-									<img  src="images/JP.jpg" "/>
+									<img  src="cimg/4.jpg "/>
 								</a>
 							</div>
 							
@@ -497,9 +497,9 @@ a.right {
 							<div class="zoom-container"  style="display:inline;float:left;">
 								<a href="#" >
 									<span class="zoom-caption" >
-										<span>黄金炸鸡排</span>
+										<span>木耳炒长豆角</span>
 									</span>
-									<img  src="images/JP.jpg" "/>
+									<img  src="cimg/5.jpg"/>
 								</a>
 							</div>
 							
@@ -509,9 +509,9 @@ a.right {
 							<div class="zoom-container"  style="display:inline;float:left;">
 								<a href="#" >
 									<span class="zoom-caption" >
-										<span>黄金炸鸡排</span>
+										<span>炸茄盒</span>
 									</span>
-									<img  src="images/JP.jpg" "/>
+									<img  src="cimg/6.jpg"/>
 								</a>
 							</div>
 							
@@ -521,9 +521,9 @@ a.right {
 							<div class="zoom-container"  style="display:inline;float:left;">
 								<a href="#" >
 									<span class="zoom-caption" >
-										<span>黄金炸鸡排</span>
+										<span>红烧鸡腿</span>
 									</span>
-									<img  src="images/JP.jpg" "/>
+									<img  src="cimg/2r1.jpg"/>
 								</a>
 							</div>
 							
@@ -533,9 +533,9 @@ a.right {
 							<div class="zoom-container"  style="display:inline;float:left;">
 								<a href="#" >
 									<span class="zoom-caption" >
-										<span>黄金炸鸡排</span>
+										<span>辣炒鸡胗</span>
 									</span>
-									<img  src="images/JP.jpg" "/>
+									<img  src="cimg/2r2.jpg "/>
 								</a>
 							</div>
 							
