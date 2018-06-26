@@ -29,13 +29,13 @@
    
 
 <script type="text/javascript" async=""
-	src="%E6%96%B0%E7%A7%80%E8%8F%9C%E8%B0%B1%20_%E4%B8%8B%E5%8E%A8%E6%88%BF_files/ga.js"></script>
+	src="${pageContext.request.contextPath}/js/ga.js"></script>
 <script type="text/javascript" async=""
-	src="%E6%96%B0%E7%A7%80%E8%8F%9C%E8%B0%B1%20_%E4%B8%8B%E5%8E%A8%E6%88%BF_files/vds.js"></script>
+	src="${pageContext.request.contextPath}/js/vds.js"></script>
 <script
-	src="%E6%96%B0%E7%A7%80%E8%8F%9C%E8%B0%B1%20_%E4%B8%8B%E5%8E%A8%E6%88%BF_files/hm.js"></script>
+	src="${pageContext.request.contextPath}/js/hm.js"></script>
 <script
-	src="%E6%96%B0%E7%A7%80%E8%8F%9C%E8%B0%B1%20_%E4%B8%8B%E5%8E%A8%E6%88%BF_files/ds.js"></script>
+	src="${pageContext.request.contextPath}/js/ds.js"></script>
 
 
 <link rel="canonical" href="https://www.xiachufang.com/explore/rising/">
@@ -46,9 +46,6 @@
 
 <meta name="keywords" content="流行菜谱,流行食谱">
 <meta name="description" content="下厨房为您提供最近流行的菜谱，看看大家最近都在吃什么。">
-
-
-
 
 <link href="css/b98b18476b23b2e6dc0f.css" rel="stylesheet"
 	type="text/css">
@@ -197,12 +194,12 @@
 
 										<div
 											class="recipe recipe-215-horizontal pure-g image-link display-block">
-											<a href="http://www.xiachufang.com/recipe/102294729/"
+											<a href="${pageContext.request.contextPath}/essayshow?se=${s.sid}&sessay=${s.sessay}"
 												data-click-tracking-url="" data-expose-tracking-url=""
 												target="_blank">
 												<div class="cover pure-u">
 													<img
-														src="images/reservation/cf1cd37a3a9d11e7bc9d0242ac110002_2304w_1728h.jpg"
+														src="${pageContext.request.contextPath}/images/${s.simg}"
 														data-src="http://s2.cdn.xiachufang.com/cf1cd37a3a9d11e7bc9d0242ac110002_2304w_1728h.jpg?imageView2/1/w/215/h/136/interlace/1/q/90"
 														alt="早点爱上早点幸福" class="unveiled" width="215" height="136">
 												</div>
@@ -267,8 +264,8 @@
 }
 	</style>
 
-	<script src="js/classie.js"></script>
-	<script src="js/demo.js"></script>
+	<script src="${pageContext.request.contextPath}/js/classie.js"></script>
+	<script src="${pageContext.request.contextPath}/js/demo.js"></script>
 
 	</div>
 </body>

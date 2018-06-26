@@ -30,6 +30,7 @@ public class Special {
 	private String simg;
 	private Date stime;
 	private String stitle;
+	private String sessay;
 	public Integer getSid() {
 		return sid;
 	}
@@ -77,6 +78,12 @@ public class Special {
 	}
 	public void setStitle(String stitle) {
 		this.stitle = stitle;
+	}
+	public String getSessay() {
+		return sessay;
+	}
+	public void setSessay(String sessay) {
+		this.sessay = sessay;
 	}
 	
 	
