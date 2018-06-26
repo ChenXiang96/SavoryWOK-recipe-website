@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -18,6 +19,41 @@ public class UserBackDaoImpl {
 
 	@Resource
 	private SessionFactory sessionFactory;
+	
+	//后台登录
+	public List<User> findById(){	 
+        Session session = sessionFactory.openSession();  
+        Transaction ts = session.beginTransaction();
+        SQLQuery query = session.createSQLQuery("select * from user ");  
+        query.addEntity(User.class);  	          
+        List<User> list = query.list();            
+        System.out.println(list);            
+        ts.commit();
+        session.close(); 
+        return list;
+	}
+
+	public User findByName(String username){
+		User user = (User)this.sessionFactory.openSession().
+				createQuery("from User where username = ?").setParameter(0, username).uniqueResult();
+		return user;
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	//后台----后台----后台----后台----后台----后台-----------------
 	public User findByIdBack(Integer uid){	
 		User user = (User)this.sessionFactory.getCurrentSession().
