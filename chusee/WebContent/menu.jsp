@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet" />
 
-<link href="css/flexslider1.css" rel="stylesheet" />
+<link href="${pageContext.request.contextPath}/css/flexslider1.css" rel="stylesheet" />
 
-<link href="css/style2.css" rel="stylesheet" />
+<link href="${pageContext.request.contextPath}/css/style2.css" rel="stylesheet" />
   <style>
   .navbar .nav > li > a {
     color: #5A5A5A;
@@ -41,16 +41,16 @@ margin-left:40px;
   <div class="fixed-footer">
   <a href="#" class="scrollup"></a>
   </div>
-<script src="js/jquery1.js"></script>
-<script src="js/bootstrap1.min.js"></script>
-<script src="js/jquery1.fancybox.pack.js"></script>
-<script src="js/jquery1.fancybox-media.js"></script> 
-<script src="js/portfolio1/jquery.quicksand.js"></script>
-<script src="js/portfolio1/setting.js"></script>
-<script src="js/jquery1.flexslider.js"></script>
-<script src="js/animate1.js"></script>
-<script src="js/custom1.js"></script>
-<script src="js/owl-carousel/owl.carousel.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery1.js"></script>
+<script src="${pageContext.request.contextPath}/js/bootstrap1.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery1.fancybox.pack.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery1.fancybox-media.js"></script> 
+<script src="${pageContext.request.contextPath}/js/portfolio1/jquery.quicksand.js"></script>
+<script src="${pageContext.request.contextPath}/js/portfolio1/setting.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery1.flexslider.js"></script>
+<script src="${pageContext.request.contextPath}/js/animate1.js"></script>
+<script src="${pageContext.request.contextPath}/js/custom1.js"></script>
+<script src="${pageContext.request.contextPath}/js/owl-carousel/owl.carousel.js"></script>
 <div class="wrap-body">
 	
   <div id="wrapper" class="home-page">
@@ -114,7 +114,7 @@ margin-left:40px;
         <div id="main-slider" class="flexslider">
             <ul class="slides">
               <li>
-                <img src="img/slides/1.jpg" alt="" />
+                <img src="${pageContext.request.contextPath}/img/slides/1.jpg" alt="" />
                 <div class="flex-caption container">
                      <h3>品味时光醇香</h3> 
 					<p>回 味 唇 齿 留 香 的 美 好 瞬 间</p>  
@@ -122,7 +122,7 @@ margin-left:40px;
               </li>
               
               <li>
-                <img src="img/slides/2.jpg" alt="" />
+                <img src="${pageContext.request.contextPath}/img/slides/2.jpg" alt="" />
                 <div class="flex-caption container">
                    <h3>品味时光醇香</h3> 
 					<p>回 味 唇 齿 留 香 的 美 好 瞬 间</p> 				
@@ -130,7 +130,7 @@ margin-left:40px;
               </li>
               
                 <li>
-                <img src="img/slides/3.jpg" alt="" />
+                <img src="${pageContext.request.contextPath}/img/slides/3.jpg" alt="" />
                 <div class="flex-caption container">
                     <h3>品味时光醇香</h3> 
 					<p>回 味 唇 齿 留 香 的 美 好 瞬 间</p>   					
@@ -138,7 +138,7 @@ margin-left:40px;
               </li>
               
                 <li>
-                <img src="img/slides/4.jpg" alt="" />
+                <img src="${pageContext.request.contextPath}/img/slides/4.jpg" alt="" />
                 <div class="flex-caption container">
                    <h3>品味时光醇香</h3> 
 					<p>回 味 唇 齿 留 香 的 美 好 瞬 间</p>   					
@@ -146,28 +146,28 @@ margin-left:40px;
               </li>
               
                 <li>
-                <img src="img/slides/5.jpg" alt="" />
+                <img src="${pageContext.request.contextPath}/img/slides/5.jpg" alt="" />
                 <div class="flex-caption container">
                    <h3>品味时光醇香</h3> 
 					<p>回 味 唇 齿 留 香 的 美 好 瞬 间</p> 				
                 </div>
               </li>
               <li>
-                <img src="img/slides/6.jpg" alt="" />
+                <img src="${pageContext.request.contextPath}/img/slides/6.jpg" alt="" />
                 <div class="flex-caption container">
                     <h3>品味时光醇香</h3> 
 					<p>回 味 唇 齿 留 香 的 美 好 瞬 间</p> 			
                 </div>
               </li>
               <li>
-                <img src="img/slides/7.jpg" alt="" />
+                <img src="${pageContext.request.contextPath}/img/slides/7.jpg" alt="" />
                 <div class="flex-caption container">
                     <h3>品味时光醇香</h3> 
 					<p>回 味 唇 齿 留 香 的 美 好 瞬 间</p>    					
                 </div>
               </li>
               <li>
-                <img src="img/slides/8.jpg" alt="" />
+                <img src="${pageContext.request.contextPath}/img/slides/8.jpg" alt="" />
                 <div class="flex-caption container">
                    <h3>品味时光醇香</h3>  
 					<p>回 味 唇 齿 留 香 的 美 好 瞬 间</p>  					
@@ -175,7 +175,7 @@ margin-left:40px;
               </li>
               
               <li>
-                <img src="img/slides/9.jpg" alt="" />
+                <img src="${pageContext.request.contextPath}/img/slides/9.jpg" alt="" />
                 <div class="flex-caption container">
                    <h3>品味时光醇香</h3> 
 					<p>回 味 唇 齿 留 香 的 美 好 瞬 间</p> 			

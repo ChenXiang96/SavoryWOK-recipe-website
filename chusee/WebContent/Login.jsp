@@ -116,6 +116,9 @@ h3.heading-style-3 {
                 <div class="form-group footer-form">
                   <center><button class="btn btn-brand pill" type="submit">登录</button></center>
                 </div>
+                 <div class="form-group footer-form">
+                  <center><button class="btn btn-brand pill" type="submit">管理员登录</button></center>
+                </div>
                 <div class="form-group remember-me">
                   <div class="checkbox pull-left">
                    
