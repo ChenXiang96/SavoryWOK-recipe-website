@@ -44,7 +44,7 @@
         <div class="space_info clear">
 
             <div class="pic">
-                <a href="${ctx}/center/zhanghu" target="_blank"><img class="imgLoad" src="${ctx}/images/center/n2.jpg" data-src="${ctx}/https://i5.meishichina.com/data/avatar/010/91/22/91_avatar_big.jpg?x-oss-process=style/c200&amp;v=1527727125" width="150" height="150"></a>
+                <a href="${ctx}/center/zhanghu" target="_blank"><img class="imgLoad" src="${ctx}/images/${user.uimage}" data-src="${ctx}/images/${user.uimage}" width="150" height="150"></a>
             </div>
 
             <div class="w logo_wrap2">

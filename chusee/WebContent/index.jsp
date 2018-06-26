@@ -194,7 +194,7 @@ position: absolute;
 position: absolute;
 }
 #main-content .wrap-content {
-    width:1580px;
+    width:100%;
 }
 a.right3 {
     margin-left: 50px;
@@ -443,16 +443,102 @@ a.right {
                            </div>
                         </div>
 		<div class="wrap-content">
-				<div class="row">
+				<div class="row" style="margin-right:12px;">
 					<div class="col-1-4">
-						<div class="zoom-container">
-							<a href="#">
-								<span class="zoom-caption">
-									<span>黄金炸鸡排</span>
-								</span>
-								<img  src="images/JP.jpg" />
-							</a>
-						</div>
+					
+							<div class="zoom-container"  style="display:inline;float:left;">
+								<a href="#" >
+									<span class="zoom-caption" >
+										<span>黄金炸鸡排</span>
+									</span>
+									<img  src="images/JP.jpg" "/>
+								</a>
+							</div>
+							
+					</div>
+						<div class="col-1-4">
+					
+							<div class="zoom-container"  style="display:inline;float:left;">
+								<a href="#" >
+									<span class="zoom-caption" >
+										<span>黄金炸鸡排</span>
+									</span>
+									<img  src="images/JP.jpg" "/>
+								</a>
+							</div>
+							
+					</div>	
+					<div class="col-1-4">
+					
+							<div class="zoom-container"  style="display:inline;float:left;">
+								<a href="#" >
+									<span class="zoom-caption" >
+										<span>黄金炸鸡排</span>
+									</span>
+									<img  src="images/JP.jpg" "/>
+								</a>
+							</div>
+							
+					</div>
+					<div class="col-1-4">
+					
+							<div class="zoom-container"  style="display:inline;float:left;">
+								<a href="#" >
+									<span class="zoom-caption" >
+										<span>黄金炸鸡排</span>
+									</span>
+									<img  src="images/JP.jpg" "/>
+								</a>
+							</div>
+							
+					</div>
+					<div class="col-1-4">
+					
+							<div class="zoom-container"  style="display:inline;float:left;">
+								<a href="#" >
+									<span class="zoom-caption" >
+										<span>黄金炸鸡排</span>
+									</span>
+									<img  src="images/JP.jpg" "/>
+								</a>
+							</div>
+							
+					</div>
+						<div class="col-1-4">
+					
+							<div class="zoom-container"  style="display:inline;float:left;">
+								<a href="#" >
+									<span class="zoom-caption" >
+										<span>黄金炸鸡排</span>
+									</span>
+									<img  src="images/JP.jpg" "/>
+								</a>
+							</div>
+							
+					</div>
+						<div class="col-1-4">
+					
+							<div class="zoom-container"  style="display:inline;float:left;">
+								<a href="#" >
+									<span class="zoom-caption" >
+										<span>黄金炸鸡排</span>
+									</span>
+									<img  src="images/JP.jpg" "/>
+								</a>
+							</div>
+							
+					</div>
+						<div class="col-1-4">
+					
+							<div class="zoom-container"  style="display:inline;float:left;">
+								<a href="#" >
+									<span class="zoom-caption" >
+										<span>黄金炸鸡排</span>
+									</span>
+									<img  src="images/JP.jpg" "/>
+								</a>
+							</div>
+							
 					</div>
 				</div>
 				

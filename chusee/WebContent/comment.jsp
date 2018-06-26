@@ -101,7 +101,7 @@
 											<div class="pic">
 												<a title="点击进入 zhangshouhua 的主页" target="_blank"
 													href="https://home.meishichina.com/space-6213452.html"><img
-													src="${pageContext.request.contextPath}/images/comment/52_avatar_big.jpg"
+													src="${pageContext.request.contextPath}/images/${ct.uimg}"
 													class="imgLoad" style="display: block;" width="48"
 													height="48"></a>
 											</div>
@@ -114,7 +114,7 @@
 															data-time="1433395511" class="subtime">${ct.ctime }</span>
 													</div>
 													<div class="right">
-														1#<a class="reply" href="javascript:void(0);">回复</a>
+														<a class="reply" href="javascript:void(0);">回复</a>
 													</div>
 												</div>
 												<div class="content">${ct.cdes }</div>
