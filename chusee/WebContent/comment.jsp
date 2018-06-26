@@ -1,19 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>话题_厨色</title>
-<meta name="keywords" content="话题">
-<meta name="description" content="话题">
+<title>评论</title>
+<meta name="keywords" content="">
+<meta name="description" content="又来一波粗陶美具，口感不够，视觉来凑！祝大家和风四季，平安吉祥！">
 <meta name="renderer" content="webkit">
 <meta http-equiv="mobile-agent"
-	content="format=xhtml; url=https://m.meishichina.com/pai/">
+	content="format=xhtml; url=https://m.meishichina.com/pai/905517/">
+<link rel="alternate" media="only screen and (max-width: 640px)"
+	href="https://m.meishichina.com/pai/905517/">
 <link rel="shortcut icon"
 	href="https://static.meishichina.com/v6/img/lib/f.ico">
 <link rel="apple-touch-icon"
@@ -22,12 +24,26 @@
 	href="${pageContext.request.contextPath}/css/all.css">
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/css/pai2.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/css/comment.css">
+
+<script src="${pageContext.request.contextPath}/js/push.js"></script>
+<script src="${pageContext.request.contextPath}/js/hm.js"></script>
+<script src="${pageContext.request.contextPath}/js/share.js"></script>
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/share_style0_16.css">
 </head>
 <body>
-
 	<!-- logo+nav -->
 
-	<%@ include file="menu3.jsp"%>
+
+
+
+	<div class="w mt10 clear">
+		<iframe scrolling="no" src="//static.meishichina.com/v3/t1_1.html"
+			width="100%" height="90" frameborder="0"></iframe>
+	</div>
+
 	<div class="wrap">
 		<div class="w clear">
 			<div class="space_left">
@@ -35,87 +51,141 @@
 				<div class="ui_title">
 					<div class="ui_title_wrap clear ">
 						<h2 class="on">话题</h2>
-						<a class="right "
-							href="https://home.meishichina.com/pai-elite.html" rel="nofollow">精华</a>
+						<a title="精华"
+							href="https://home.meishichina.com/pai-zuimei-elite.html"
+							class="right" rel="nofollow">精华</a> <a title="热门"
+							href="https://home.meishichina.com/pai-zuimei-hot.html"
+							class="right" rel="nofollow">热门</a> <a title="最新"
+							href="https://home.meishichina.com/pai-zuimei-new.html"
+							class="right">最新</a> <a title="全部"
+							href="https://home.meishichina.com/pai-zuimei.html" class="right">全部</a>
+					</div>
+				</div>
 
-						<a class="right " href="https://home.meishichina.com/pai-hot.html"
-							rel="nofollow">热门</a> <a class="right "
-							href="https://home.meishichina.com/pai-new.html">最新</a> <a
-							class="right on" href="https://home.meishichina.com/pai.html">全部</a>
+				<div class="pai_box">
+
+					<a class="img" title="米拉Miira"
+						href="${pageContext.request.contextPath}/center/get"
+						target="_blank"><img
+						src="${pageContext.request.contextPath}/images/${t.uimg}"
+						class="imgLoad" style="display: block;" width="48" height="48"></a>
+
+					<p class="u">
+						<a target="_blank"
+							href="" class="t">${t.uname }</a>
+						${t.time }
+
+
+
+					</p>
+					<p class="c">
+						<span class="subject">${t.tcontent }</span>
+					</p>
+					<div class="pic">
+						<img src="${pageContext.request.contextPath}/images/${t.timg}"
+							class="imgLoad" style="display: block;">
 					</div>
 				</div>
 
 
+				<div id="comment">
+					<div class="comment-wrap clear" data-dom="wrap">
 
-				<div class="pin_list clear" id="J_list">
+						<div class="comment-list ">
+							<div data-dom="list">
+								<ul style="">
 
-					<ul>
-						<c:forEach items="${sessionScope.tlist}" begin="0" var="c">
-						
-							<li>
-								<div class="u">
-									<a href=""
-										target="_blank" title="${c.uid }"><img class="imgLoad"
-										src="%E8%AF%9D%E9%A2%98_%E7%BE%8E%E9%A3%9F%E5%A4%A9%E4%B8%8B_files/blank.gif"
-										data-src="images/${c.uimg }"
-										width="40" height="40"></a>
-									<div>
-										<a href="${ pageContext.request.contextPath }/commentshow?uid=${c.uid}&tid=${c.tid}"
-											class="t" target="_blank" title="${c.uname }">${c.uname }</a> <span>${c.time }</span>
+									<c:forEach items="${sessionScope.clist}" begin="0" var="ct">
+
+										<li data-id="${ct.ctid }">
+											<div class="pic">
+												<a title="点击进入 zhangshouhua 的主页" target="_blank"
+													href="https://home.meishichina.com/space-6213452.html"><img
+													src="${pageContext.request.contextPath}/images/comment/52_avatar_big.jpg"
+													class="imgLoad" style="display: block;" width="48"
+													height="48"></a>
+											</div>
+											<div class="detail">
+												<div class="tools">
+													<div class="left">
+														<a target="_blank"
+															href="https://home.meishichina.com/space-6213452.html"
+															title="点击进入 zhangshouhua 的主页">${ct.uname }</a><span
+															data-time="1433395511" class="subtime">${ct.ctime }</span>
+													</div>
+													<div class="right">
+														1#<a class="reply" href="javascript:void(0);">回复</a>
+													</div>
+												</div>
+												<div class="content">${ct.cdes }</div>
+											</div>
+
+										</li>
+									</c:forEach>
+								</ul>
+							</div>
+						</div>
+
+
+						<form
+							action="${pageContext.request.contextPath}/commentadd?uid=${user.uid}&tid=${t.tid}"
+							method="post">
+							<div class="comment-pai">
+								<img
+									src="${pageContext.request.contextPath}/images/${ user.uimage}"
+									data-src="${pageContext.request.contextPath}/images/${ user.uimage}"
+									class="imgLoad comment-pai-img" width="48" height="48">
+								<div data-dom="add" class="comment-post comment-add">
+									<p>${user.username }</p>
+									<div class="comment-post-text">
+										<div class="comment-post-text-inner">
+											<input type="textarea" title="Ctrl+Enter 也可提交哦"
+												class="text ui-webkit-scrollbar" id="cdes" name="cdes">
+
+										</div>
+									</div>
+									<div class="comment-post-tools clear">
+										<div class="left">
+											<a title="插入表情" data-type="smilies"
+												class="J_event comment-smilies-a" href="javascript:void(0);"></a><span
+												class="tips">Ctrl+Enter 也可提交哦</span>
+										</div>
+										<div class="right">
+											<input class="comment-btn add_submit" value="发布话题"
+												type="submit">
+										</div>
 									</div>
 								</div>
 
-								<div class="c clear">
-									<div class="pp">
-										<a href="${ pageContext.request.contextPath }/commentshow?uid=${c.uid}&tid=${c.tid}"
-											target="_blank"><strong>${c.ttitle }</strong><br>${c.tcontent }</a>
-									</div>
-									
-									<a class="clear"
-										href="https://home.meishichina.com/pai-900188.html"
-										target="_blank"> 
-										<c:set var="string1" value="${c.timg }" />
-							<c:set value="${ fn:split(string1, '@') }" var="str1" />
-							<c:forEach items="${ str1 }" var="s">
-										<img class="imgLoad"
-										src="%E8%AF%9D%E9%A2%98_%E7%BE%8E%E9%A3%9F%E5%A4%A9%E4%B8%8B_files/blank.gif"
-										data-src="${ pageContext.request.contextPath }/images/${s }">
-								</c:forEach>		
-									</a>
-									<div data-id="900188" class="f"></div>
-									<div class="num">
-										<span></span>
-									</div>
-								</div>
+							</div>
+						</form>
 
-							</li>
-
-
-						</c:forEach>
-					</ul>
-
-				</div>
-
-				<div class="ui-page mt20">
-					<div class="ui-page-inner">
-						<a class="now_page">1</a> <a
-							href="https://home.meishichina.com/pai-index-page-2.html">2</a> <a
-							href="https://home.meishichina.com/pai-index-page-3.html">3</a> <a
-							href="https://home.meishichina.com/pai-index-page-4.html">4</a> <a
-							href="https://home.meishichina.com/pai-index-page-5.html">5</a> <span>...</span>
-						<a href="https://home.meishichina.com/pai-index-page-2.html">下一页</a>
 					</div>
+
 				</div>
+
+
 			</div>
+
 
 			<div class="space_right">
-				<a class="r_pai-add" target="_blank" href="pinglun1.jsp?uid=${user.uid }">发布话题</a>
+				<a class="r_pai-add" target="_blank"
+					href="https://member.meishichina.com/center/pai-add/6/"
+					title="发布话题">发布话题</a>
 				<div class="mt20">
-					<a title="厨色客户端" href=""
-						target="_blank"> <img alt="" src="images/20180621092708.jpg"> </a>
+					<a title="美食天下客户端" href="https://www.meishichina.com/Mobile/"
+						target="_blank"> <script>
+							
+						</script><img src="${pageContext.request.contextPath}/images/20180621092708.jpg"
+						class="imgLoad" style="display: block;" width="300" height="600">
+					</a>
 				</div>
-			</div>
 
+							<div class="mt20" id="smnbk"></div>
+		
+
+
+			</div>
 
 
 		</div>
@@ -174,8 +244,7 @@
 	margin: 0 25px
 }
 </style>
-	<%@ include file="footer3.jsp"%>
-
+<%@include file="footer3.jsp" %>
 	<!-- 引用全站js -->
 	<script type="text/javascript"
 		src="${pageContext.request.contextPath}/js/all.js"></script>
@@ -197,126 +266,27 @@
 		});
 	</script>
 	<div class="fixed-footer"
-		style="left: 1179.5px; right: auto; bottom: 10px;">
+		style="left: 1179.5px; right: auto; bottom: 142.383px;">
 		<a href="javascript:;" title="点击返回页面顶部"
 			onclick="window.scrollTo(0,0);" class="fixed-footer-go"
-			style="display: none;"></a>
+			style="display: inline;"></a>
 		<div class="fixed-footer-weixin">
 			<div class="fixed-footer-weixin-inner">
-				<span>厨色手机客户端</span>
+				<span>美食天下手机客户端</span>
 			</div>
 		</div>
 	</div>
-	<script>
-		var inTimer, outTimer;
-		//绑定鼠标进入事件
-		$(".pin_list")
-				.on(
-						"mouseenter",
-						"div.c",
-						function(event) {
-							var that = $(this);
 
-							inTimer = setTimeout(
-									function() {
-										if (that.find("div.f").html() == '') {
-											var id = that.find("div.f").attr(
-													"data-id");
 
-											$
-													.ajax({
-														type : "GET",
-														url : "/ajax/ajax.php?ac=commondata&op=get_common_data_num",
-														data : {
-															id : id,
-															type : "pai"
-														},
-														dataType : "json",
-														success : function(d) {
-															if (d.error === 0) {
-																var islike = (d.data.islike == 1) ? " on"
-																		: "";
-																var isfav = (d.data.isfav == 1) ? " on"
-																		: "";
-																var islogin = (d.data.loginuid == 0) ? " nologin"
-																		: "";
-																that
-																		.find(
-																				"div.f")
-																		.html(
-																				'<a href="javascript:void(0);" class="f1'
-																						+ islike
-																						+ islogin
-																						+ '" title="喜欢"><i></i></a>')
-																		.fadeIn();
-																that
-																		.find(
-																				"div.num span")
-																		.html(
-																				'<b>'
-																						+ d.data.likenum
-																						+ '</b>个喜欢，'
-																						+ d.data.replynum
-																						+ '条评论')
-																		.fadeIn();
-															}
+	<script type="text/javascript"
+		src="${pageContext.request.contextPath}/js/msc-ui-smilies.js"></script>
+	<script type="text/javascript" id="bdshare_js"
+		data="type=tools&amp;uid=11097"></script>
+	<script type="text/javascript" id="bdshell_js"></script>
+	<script type="text/javascript"
+		src="${pageContext.request.contextPath}/js/pai.js"></script>
 
-														}
-													});
-										} else {
-											that.find("div.f").fadeIn();
-											that.find("div.num span").fadeIn();
-										}
 
-									}, 150);
-						});
-
-		//绑定鼠标离开事件
-		$(".pin_list").on("mouseleave", "div.c", function(event) {
-			var that = $(this);
-			clearTimeout(inTimer);
-
-			outTimer = setTimeout(function() {
-				that.find("div.f").fadeOut();
-				that.find("div.num span").fadeOut();
-			}, 100);
-
-		});
-
-		//列表喜欢
-		$(".pin_list").on(
-				"click",
-				".f1",
-				function() {
-					if ($(this).hasClass("on")) {
-						msc.ui.dialog.error("您已经喜欢过该话题!");
-						return false;
-					} else if ($(this).hasClass("nologin")) {
-						msc.user.login();
-						return false;
-					} else {
-						var that = $(this);
-						$.post('/ajax/ajax.php?ac=pai&op=add_pai', {
-							pid : that.parent().attr('data-id')
-						}, function(e) {
-							if (e.error === 0) {
-								msc.ui.dialog.success("添加喜欢成功");
-								that.parent().parent().find("div.num span b")
-										.html(
-												parseInt(that.parent().parent()
-														.find("div.num span b")
-														.html()) + 1);
-								that.addClass("on");
-							} else if (e.error === -1) {
-								msc.ui.dialog.error(e.data);
-							} else {
-								msc.ui.dialog.error('出现异常，请重试');
-							}
-
-						}, "json");
-					}
-				});
-	</script>
 	<script>
 		$("li.top_bar_more").hoverDelay(function() {
 			$("li.top_bar_more div").show()

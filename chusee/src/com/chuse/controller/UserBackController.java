@@ -22,6 +22,35 @@ import com.chuse.service.impl.UserBackServiceImpl;
 public class UserBackController {
 	@Resource
 	private UserBackServiceImpl userBackServiceImpl;
+	// 登录
+	@RequestMapping("/login")
+	public String login(@RequestParam("username") String username, @RequestParam("password") String password, Model model,
+			HttpSession session) {
+		User user = this.userBackServiceImpl.login(username, password);
+		
+		if (user != null) {
+			session.setAttribute("user", user);
+			return "adm/detail/left";
+		} else {
+			model.addAttribute("errorinfo", "您的账号密码不正确！");
+			return "Backstage";
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	//后台-----------------------------------------------------
 
 	@RequestMapping("/delete")

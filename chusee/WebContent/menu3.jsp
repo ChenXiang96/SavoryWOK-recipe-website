@@ -2,10 +2,9 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <link href="${ pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet" />
-
 <link href="${ pageContext.request.contextPath}/css/flexslider1.css" rel="stylesheet" />
-
 <link href="${ pageContext.request.contextPath}/css/style2.css" rel="stylesheet" />
+  
   <style>
   
   
@@ -79,14 +78,15 @@ margin-left:40px;
 						<li><a href="${ pageContext.request.contextPath}/location.jsp">周边</a></li>
                         <li><a href="${ pageContext.request.contextPath}/archive/list">甄选</a></li>
                         <li><a href="${ pageContext.request.contextPath}/myHealth">健康</a></li>
-                        <li><a href="${ pageContext.request.contextPath}/reservation.jsp">专题</a></li>
+                        <li><a href="${ pageContext.request.contextPath}/specialshow">专题</a></li>
                         <li><a href="${ pageContext.request.contextPath}/topicshow">社区</a></li>
-                        <li><a href="${ pageContext.request.contextPath}/gallery.jsp">话题</a></li>
+                        <li><a href="${ pageContext.request.contextPath}/topicshow">话题</a></li>
     
                     <c:if test="${sessionScope.user == null}">
 				       <li class="nav navbar-nav">
-				 	     <a href="${ pageContext.request.contextPath }/userLogin">登录 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a>
+				 	     <a href="${ pageContext.request.contextPath }/userLogin">登录 </a>
 				       </li>
+				       <li><a href="${ pageContext.request.contextPath }/Backstage.jsp">管理员 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
 				       <li class="nav navbar-nav"><a href="${ pageContext.request.contextPath }/userRegister">注册</a>
 				       </li>
 			        </c:if>

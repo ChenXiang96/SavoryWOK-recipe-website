@@ -16,6 +16,38 @@ import com.chuse.entity.User;
 public class UserBackServiceImpl {
 	@Resource
 	private UserBackDaoImpl userBackDaoImpl;
+	
+	public User login(String username, String password){
+		
+		User user=this.userBackDaoImpl.findByName(username);
+		if(user!=null){
+			if(user.getPassword().equals(password)){
+				return user;
+			}else{
+				return null;
+			}
+		}else{
+			return null;
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	//后--先按id查出来
 	public User findUser(Integer uid){
 		return this.userBackDaoImpl.findByIdBack(uid);

@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>不一样的大排档_专题_厨色</title>
+<title>不一样的大排档_专题_美食天下</title>
 <meta name="keywords" content="不一样的大排档,大排档,大排档小吃,大排档美食,烧烤,肉串,小龙虾" />
 <meta name="description" content="大排档,大排档小吃,大排档美食,烧烤,肉串,小龙虾" />
 <meta name="renderer" content="webkit">
@@ -58,7 +58,11 @@
 
 <div class="mo">
 <h2>
-<c:out value="${subject.pname }"/>
+<c:forEach items="${sessionScope.cList2}" var="c">
+   <a title="健康首页"   href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1"  target="_blank">
+        <c:out value="${c.caname}"></c:out>
+    </a>
+</c:forEach>
 
 </h2>
 </div>
@@ -67,71 +71,18 @@
 </p>
 <div class="msb_list clear">
 <ul>
+ <c:forEach var="p" items="${subjects}">
 <li>
 <div>
-<a title="羊肉串" href="https://home.meishichina.com/recipe-332523.html" target="_blank">
-<img data-src="https://i3.meishichina.com/attachment/recipe/2017/06/14/20170614149740367935813.jpg?x-oss-process=style/c320" src="//static.meishichina.com/v6/img/blank.gif" class="imgLoad" width=230 height=230 />
+<a target="_blank" href="${ pageContext.request.contextPath }/findByPid2/<c:out value="${p.pid}"/>">
+						<img width="180" height="180" src="${pageContext.request.contextPath}/<c:out value="${p.image}"/>" data-src="${pageContext.request.contextPath}/<c:out value="${p.image}"/>"  class="imgLoad">
 <span>羊肉串</span>
 </a>
 </div>
 </li>
+</c:forEach>
 
-<li>
-<div>
-<a title="炸里脊肉串" href="https://home.meishichina.com/recipe-348613.html" target="_blank">
-<img data-src="https://i3.meishichina.com/attachment/recipe/2017/09/26/20170926150642942643613.jpg?x-oss-process=style/c320" src="//static.meishichina.com/v6/img/blank.gif" class="imgLoad" width=230 height=230 />
-<span>炸里脊肉串</span>
-</a>
-</div>
-</li>
-<li>
-<div>
-<a title="叉烧鸡肉串" href="https://home.meishichina.com/recipe-341472.html" target="_blank">
-<img data-src="https://i3.meishichina.com/attachment/recipe/2017/10/10/20171010150760601077413.jpg?x-oss-process=style/c320" src="//static.meishichina.com/v6/img/blank.gif" class="imgLoad" width=230 height=230 />
-<span>叉烧鸡肉串</span>
-</a>
-</div>
-</li>
-<li>
-<div>
-<a title="藤椒味烤鸡翅" href="https://home.meishichina.com/recipe-348354.html" target="_blank">
-<img data-src="https://i3.meishichina.com/attachment/recipe/2017/09/14/20170914150539971859813.jpg?x-oss-process=style/c320" src="//static.meishichina.com/v6/img/blank.gif" class="imgLoad" width=230 height=230 />
-<span>藤椒味烤鸡翅</span>
-</a>
-</div>
-</li>
-<li>
-<div>
-<a title="彩椒鸡肉串" href="https://home.meishichina.com/recipe-366749.html" target="_blank">
-<img data-src="https://i3.meishichina.com/attachment/recipe/2017/12/22/20171222151394655623113.jpg?x-oss-process=style/c320" src="//static.meishichina.com/v6/img/blank.gif" class="imgLoad" width=230 height=230 />
-<span>彩椒鸡肉串</span>
-</a>
-</div>
-</li>
-<li>
-<div>
-<a title="烤羊肉串" href="https://home.meishichina.com/recipe-366530.html" target="_blank">
-<img data-src="https://i3.meishichina.com/attachment/recipe/2017/12/21/20171221151385988460013.jpg?x-oss-process=style/c320" src="//static.meishichina.com/v6/img/blank.gif" class="imgLoad" width=230 height=230 />
-<span>烤羊肉串</span>
-</a>
-</div>
-</li>
-<li>
-<div>
-<a title="牛肉串" href="https://home.meishichina.com/recipe-342088.html" target="_blank">
-<img data-src="https://i3.meishichina.com/attachment/recipe/2017/08/10/20170810150236806919813.jpg?x-oss-process=style/c320" src="//static.meishichina.com/v6/img/blank.gif" class="imgLoad" width=230 height=230 />
-<span>牛肉串</span>
-</a>
-</div>
-</li>
-<li>
-<div>
-<a title="烤牛肉串" href="https://home.meishichina.com/recipe-325278.html" target="_blank">
-<img data-src="https://i3.meishichina.com/attachment/recipe/2017/10/17/20171017150821143535313.jpg?x-oss-process=style/c320" src="//static.meishichina.com/v6/img/blank.gif" class="imgLoad" width=230 height=230 />
-<span>烤牛肉串</span>
-</a>
-</div>
-</li>
+
 </ul>
 </div>
 

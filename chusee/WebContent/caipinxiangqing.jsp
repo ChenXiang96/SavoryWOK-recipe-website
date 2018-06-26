@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>红糖咖啡坚果吐司的做法_菜谱_美食天下</title>    
+<title>菜品详情——厨色</title>    
 <meta name="keywords" content="红糖咖啡坚果吐司,红糖咖啡坚果吐司的做法,红糖咖啡坚果吐司的家常做法,红糖咖啡坚果吐司怎么做,红糖咖啡坚果吐司的做法步骤,红糖咖啡坚果吐司的最正宗做法,红糖咖啡坚果吐司怎么做好吃" />
 <meta name="description" content="美食天下通过图文并茂的方式，手把手教你红糖咖啡坚果吐司如何做才美味，并详细说明红糖咖啡坚果吐司烹制所用佐料时间和窍门，包括红糖咖啡坚果吐司营养价值和最适宜食用方法等揭秘。" />
 <meta name="renderer" content="webkit">

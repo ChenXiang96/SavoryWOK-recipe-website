@@ -7,10 +7,13 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.chuse.entity.Product;
 import com.chuse.entity.Subject;
 import com.chuse.service.ProductService;
 import com.chuse.service.SubjectService;
@@ -20,6 +23,27 @@ public class SubjectController {
 
 	@Resource
 	private SubjectService subjectService;
+	
+	@RequestMapping("/getHealthaa")
+	public String get(@RequestParam(value="pid", required = false) Integer pid,Model model){
+		Subject subject=this.subjectService.findSubject(pid);
+		model.addAttribute("subject", subject);
+		return "zhuantixiangqing";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	//首页上跳转至健康
 		@RequestMapping(value="/myHealth")
@@ -32,6 +56,25 @@ public class SubjectController {
 			
 			return "health"; 
 		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	//首页中点击专题一级分类查询商品
 			@RequestMapping(value="/findByCaid/{caid}/{page}")
 			public String findByCaid(@PathVariable("caid") Integer caid,@PathVariable("page") Integer page
@@ -47,7 +90,7 @@ public class SubjectController {
 				//总共有多少页
 				map.put("count",count);
 				map.put("caid", caid);
-				return "zhuantixiangqing";
+				return "zhuantixiangqing2";
 			}
 			//根据专题二级分类查询商品
 			@RequestMapping(value="findByCasid/{casid}/{page}")	
