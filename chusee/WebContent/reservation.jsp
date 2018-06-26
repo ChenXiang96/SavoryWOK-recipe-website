@@ -23,8 +23,8 @@
 <link href="http://www.xiachufang.com/favicon.ico" rel="shortcut icon"
 	type="image/x-icon">
 	<!-- footer -->
-<link href="css/bootstrap.min.css" rel="stylesheet" />
-<link href="css/style2.css" rel="stylesheet" />
+<link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet" />
+<link href="${pageContext.request.contextPath}/css/style2.css" rel="stylesheet" />
 
    
 
@@ -47,10 +47,10 @@
 <meta name="keywords" content="流行菜谱,流行食谱">
 <meta name="description" content="下厨房为您提供最近流行的菜谱，看看大家最近都在吃什么。">
 
-<link href="css/b98b18476b23b2e6dc0f.css" rel="stylesheet"
+<link href="${pageContext.request.contextPath}/css/b98b18476b23b2e6dc0f.css" rel="stylesheet"
 	type="text/css">
 
-<link href="css/2b7819a7de22ed2b0d8a.css" rel="stylesheet"
+<link href="${pageContext.request.contextPath}/css/2b7819a7de22ed2b0d8a.css" rel="stylesheet"
 	type="text/css">
 
 <!--[if IE 8]>
@@ -143,10 +143,10 @@
 
 <!-- CSS
   ================================================== -->
-<link rel="stylesheet" href="css/zerogrid.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/slide.css">
-<link rel="stylesheet" href="css/menu.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/zerogrid.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/slide.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/menu.css">
 <!-- Custom Fonts -->
 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"
 	type="text/css">

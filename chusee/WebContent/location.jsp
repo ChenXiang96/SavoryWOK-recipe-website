@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var="ctx" value="${pageContext.request.contextPath}" />
+    
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -20,10 +23,10 @@
     
     <!-- CSS
   ================================================== -->
-  	<link rel="stylesheet" href="css/zerogrid.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/slide.css">
-	<link rel="stylesheet" href="css/menu.css">
+  	<link rel="stylesheet" href="${ctx }/css/zerogrid.css">
+	<link rel="stylesheet" href="${ctx }/css/style.css">
+	<link rel="stylesheet" href="${ctx }/css/slide.css">
+	<link rel="stylesheet" href="${ctx }/css/menu.css">
 	<!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<!--[if lt IE 8]>
@@ -34,12 +37,12 @@
       </div>
     <![endif]-->
     <!--[if lt IE 9]>
-		<script src="js/html5.js"></script>
-		<script src="js/css3-mediaqueries.js"></script>
+		<script src="${ctx }/js/html5.js"></script>
+		<script src="${ctx }/js/css3-mediaqueries.js"></script>
 	<![endif]-->
 	<!-- footer -->
-<link href="css/bootstrap.min.css" rel="stylesheet" />
-<link href="css/style2.css" rel="stylesheet" />
+<link href="${ctx }/css/bootstrap.min.css" rel="stylesheet" />
+<link href="${ctx }/css/style2.css" rel="stylesheet" />
 
 </head>
 <body style="background: url(#FFFFFF)">
@@ -83,8 +86,8 @@
 	  <div class="fixed-footer">
   <a href="#" class="scrollup"></a>
   </div>
-	<script src="js/classie.js"></script>
-	<script src="js/demo.js"></script>
+	<script src="${ctx }/js/classie.js"></script>
+	<script src="${ctx }/js/demo.js"></script>
 	    <style>
     
     .scrollup {

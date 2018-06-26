@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"  isErrorPage="true"%>
+    <%response.setStatus(HttpServletResponse.SC_OK);%>
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -14,7 +17,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta name="keywords" content="Purple 404 Error page widget template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--//Custom Theme files -->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/error/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href='//fonts.googleapis.com/css?family=Rubik+Mono+One' rel='stylesheet' type='text/css'>
 </head>
 <body>
