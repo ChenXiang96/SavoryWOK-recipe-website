@@ -18,19 +18,19 @@ import com.chuse.entity.User;
 import com.chuse.service.impl.UserBackServiceImpl;
 
 @Controller
-@RequestMapping("/userback")
+
 public class UserBackController {
 	@Resource
 	private UserBackServiceImpl userBackServiceImpl;
 	// 登录
-	@RequestMapping("/login")
+	@RequestMapping("/adm/login")
 	public String login(@RequestParam("username") String username, @RequestParam("password") String password, Model model,
 			HttpSession session) {
 		User user = this.userBackServiceImpl.login(username, password);
 		
 		if (user != null) {
 			session.setAttribute("user", user);
-			return "adm/detail/left";
+			return "adm/index";
 		} else {
 			model.addAttribute("errorinfo", "您的账号密码不正确！");
 			return "Backstage";
@@ -53,7 +53,7 @@ public class UserBackController {
 	
 	//后台-----------------------------------------------------
 
-	@RequestMapping("/delete")
+	@RequestMapping("/userback/delete")
 	public String deletelist(HttpSession session,@RequestParam(value="uid", required = false) Integer uid){
 		User user=this.userBackServiceImpl.findUser(uid);
 		System.out.print("con快删啊");
@@ -76,7 +76,7 @@ public class UserBackController {
 	
 	
 	//后-查-
-	@RequestMapping("/get")
+	@RequestMapping("/userback/get")
 	public String listgoods(User user,HttpSession session,HttpServletRequest request){
 		String num = request.getParameter("pageNum");//获取用户要看的页码
 		int pageNumber = 1;

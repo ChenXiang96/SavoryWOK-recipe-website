@@ -90,7 +90,7 @@ body {
     <ul id="Menu">
 	    <li class="level1">
             <div onClick="menuClick(this);" class="level1Style">
-				<img src="${ctx }/style/images/func20001.gif" class="Icon" /> 
+				
 				系统菜单
 			</div>
             <ul class="MenuLevel2">
