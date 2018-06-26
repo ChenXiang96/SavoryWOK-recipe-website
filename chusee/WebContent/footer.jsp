@@ -51,7 +51,7 @@
                   </li>
                   
                   <li>
-                   <a href="gallery.jsp">话题</a>
+                   <a href="${ pageContext.request.contextPath}/specialshow">话题</a>
                    &nbsp;
                   </li>
                  
