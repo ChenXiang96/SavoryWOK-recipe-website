@@ -19,7 +19,7 @@
 <body>
 
 <div class="login">
-<form action="${ctx }/userback/login" method="post" id="form">
+<form action="${ctx }/adm/login" method="post" id="form">
 	<div class="logo"></div>
     <div class="login_form">
     	<div class="user">
