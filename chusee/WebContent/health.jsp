@@ -176,7 +176,7 @@ a {
 					<div class="row">
 			    	
 			    
-				    <c:forEach var="s" items="${hList}"> 		
+				    <c:forEach var="s" items="${hList}" begin="0" end="8"> 		
 			    	<div class="col-1-3">
 							<div class="wrap-col">
 								<div class="box-item">
