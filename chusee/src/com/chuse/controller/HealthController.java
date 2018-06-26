@@ -26,6 +26,11 @@ public class HealthController {
 	
 	@Resource
 	private HealthServiceImpl healthServiceImpl;
+	
+	
+	
+	
+	
 	//前------------------------------------------------------
 	@RequestMapping("/howdo")
 

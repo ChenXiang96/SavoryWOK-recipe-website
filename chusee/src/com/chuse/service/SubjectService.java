@@ -24,4 +24,6 @@ public interface SubjectService {
 		
 	//查找最新的专题10条
 	public List<Subject> findNew2();
+	
+	public Subject findSubject(Integer pid);
 }

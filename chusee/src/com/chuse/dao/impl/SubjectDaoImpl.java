@@ -5,7 +5,10 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.springframework.stereotype.Repository;
+import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import com.chuse.dao.ProductDao;
 import com.chuse.dao.SubjectDao;
@@ -15,6 +18,38 @@ import com.chuse.entity.Subject;
 @Repository("subjectDao")
 @SuppressWarnings("all")
 public class SubjectDaoImpl extends BaseDaoImpl<Subject> implements SubjectDao {
+	
+	@Resource
+	private SessionFactory sessionFactory;
+	
+	
+	public Subject findById(Integer pid){
+		Subject subject = (Subject)this.sessionFactory.getCurrentSession().
+				createQuery("from Subject where pid = ?").
+				setParameter(0, pid).uniqueResult();
+		return subject;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	
 	final String selecthql2 = "select s.pid,s.image,s.is_hot,"
