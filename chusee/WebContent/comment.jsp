@@ -32,17 +32,21 @@
 <script src="${pageContext.request.contextPath}/js/share.js"></script>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/share_style0_16.css">
+	<style>
+	.imgLoad1{
+	  width:48px;
+	  height:48px;
+	
+	}
+	
+	</style>
 </head>
 <body>
 	<!-- logo+nav -->
 
 
+<%@ include file="menu3.jsp" %>
 
-
-	<div class="w mt10 clear">
-		<iframe scrolling="no" src="//static.meishichina.com/v3/t1_1.html"
-			width="100%" height="90" frameborder="0"></iframe>
-	</div>
 
 	<div class="wrap">
 		<div class="w clear">
@@ -64,11 +68,13 @@
 
 				<div class="pai_box">
 
-					<a class="img" title="米拉Miira"
+					<a class="img" title="${t.uname }"
 						href="${pageContext.request.contextPath}/center/get"
-						target="_blank"><img
+						target="_blank">
+						
+						<img
 						src="${pageContext.request.contextPath}/images/${t.uimg}"
-						class="imgLoad" style="display: block;" width="48" height="48"></a>
+						class="imgLoad1" style="display: block;" width="48" height="48"></a>
 
 					<p class="u">
 						<a target="_blank"
@@ -134,7 +140,7 @@
 								<img
 									src="${pageContext.request.contextPath}/images/${ user.uimage}"
 									data-src="${pageContext.request.contextPath}/images/${ user.uimage}"
-									class="imgLoad comment-pai-img" width="48" height="48">
+									class="imgLoad1 comment-pai-img" width="48" height="48">
 								<div data-dom="add" class="comment-post comment-add">
 									<p>${user.username }</p>
 									<div class="comment-post-text">
