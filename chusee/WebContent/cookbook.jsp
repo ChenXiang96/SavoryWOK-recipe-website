@@ -99,7 +99,7 @@
 	  	  <c:forEach items="${ list}" var="p">
 		  		  <li>
 		  
-		  <a title="红豆薏仁豆浆" href="${ctx }/health/howdo" target="_blank">
+		  <a title="红豆薏仁豆浆" href="${ctx }/health/howdo?pid=${p.pid}" target="_blank">
 			  <i>
 				  <img alt="红豆薏仁豆浆" class="imgLoad" src="${ctx}/${p.image }" style="display: block;">
 			  </i>

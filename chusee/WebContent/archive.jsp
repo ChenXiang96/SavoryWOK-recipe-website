@@ -97,7 +97,7 @@
 <ul>
 	<c:forEach items="${ list}" var="p">
 	<li>
-<a title="和其正凉茶饮料" href="" target="_blank" class="pic">
+<a title="和其正凉茶饮料" href="${ctx }/archive/xiangqing?zid=${p.zid}" target="_blank" class="pic">
 <i>
 	<img src="${ctx }/${p.image }" class="imgLoad" >
 </i>

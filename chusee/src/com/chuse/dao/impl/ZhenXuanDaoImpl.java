@@ -19,6 +19,26 @@ public class ZhenXuanDaoImpl {
 	@Resource
 	private SessionFactory sessionFactory;
 	
+	public Zhenxuan findById(Integer zid){
+		Zhenxuan zhenxuan = (Zhenxuan)this.sessionFactory.getCurrentSession().
+				createQuery("from Zhenxuan where zid = ?").
+				setParameter(0, zid).uniqueResult();
+		return zhenxuan;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	public List<Zhenxuan> findAll(){	
 		//获得session  

@@ -11,23 +11,70 @@ import org.hibernate.Transaction;
 
 import org.springframework.stereotype.Repository;
 
+import com.chuse.entity.Howdo;
+import com.chuse.entity.Material;
 import com.chuse.entity.Product;
+import com.chuse.entity.Topic;
+import com.chuse.entity.User;
 
 @Repository
 public class HealthDaoImpl {
-
+	
 	@Resource
 	private SessionFactory sessionFactory;
 	
 	//前---------------------------------------------
 	//前台跳转到菜的做法页面-把菜名和菜的图片列出来
-	public Product findById(Integer pid){	
+	public Product findByIdP(Integer pid){	
 		Product product = (Product)this.sessionFactory.getCurrentSession().
 				createQuery("from Product where pid = ?").
 				setParameter(0, pid).uniqueResult();
+		//System.out.print("aaachulaichulaidao");
 		return product;
+		
+	}
+	//查用户
+	public User findByIdU(Integer uid){	
+		User user = (User)this.sessionFactory.getCurrentSession().
+				createQuery("from User where uid = ?").
+				setParameter(0, uid).uniqueResult();
+		//System.out.print("aaachulaichulaidao");
+		return user;
+		
+	}
+	//查材料
+	public Material findByIdM(Integer sid){	
+		Material material = (Material)this.sessionFactory.getCurrentSession().
+				createQuery("from Material where sid = ?").
+				setParameter(0, sid).uniqueResult();
+		//System.out.print("aaachulaichulaidao");
+		return material;
+		
+	}
+	//查步骤
+	public Howdo findByIdH(Integer hid){	
+		Howdo howdo = (Howdo)this.sessionFactory.getCurrentSession().
+				createQuery("from Material where hid = ?").
+				setParameter(0, hid).uniqueResult();
+		//System.out.print("aaachulaichulaidao");
+		return howdo;
+		
 	}
 	
+
+	
+//
+//	@SuppressWarnings("unchecked")
+//	public	Product findById(Integer pid) {
+//		String hql = "from Product p where p.pid = ?";
+//		//Query query=this.getCu
+//		Query<Product> query = this.getCurrentSession().createQuery(hql);
+//		query.setParameter(0, pid);
+//		return (Product)query.uniqueResult(); 
+////		Product product = (Product)this.sessionFactory.openSession().
+////				createQuery("from Product where pid = ?").setParameter(0, pid).uniqueResult();
+////		return product;
+//	}
 	
 	
 	
@@ -35,6 +82,17 @@ public class HealthDaoImpl {
 	
 	
 	
+	private Session getCurrentSession() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+
+
+
+
 	//前-查-把数据库里的菜放在首页里-商品列表
 	public List<Product> findAll(){	
 			//获得session  
@@ -74,7 +132,7 @@ public class HealthDaoImpl {
 	
 	//后台----后台----后台----后台----后台----后台-----------------
 	//后台-改-修改健康列表
-	public Product findByIdBack(Integer pid){	
+	public Product findByIdBack(Integer pid){//前台找菜的做法也用到了	
 		Product product = (Product)this.sessionFactory.getCurrentSession().
 				createQuery("from Product where pid = ?").
 				setParameter(0, pid).uniqueResult();

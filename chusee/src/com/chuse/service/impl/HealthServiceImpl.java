@@ -8,8 +8,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.chuse.dao.impl.HealthDaoImpl;
+import com.chuse.entity.Howdo;
+import com.chuse.entity.Material;
 import com.chuse.entity.Product;
 import com.chuse.entity.Topic;
+import com.chuse.entity.User;
 
 @Service
 @Transactional(readOnly=true)
@@ -20,8 +23,21 @@ public class HealthServiceImpl {
 	
 	//-----------------------------------------------------------------
 	//前台跳转到菜的做法页面-把菜名和菜的图片列出来
-	public Product findHowdo(Integer pid){
-		return this.healthDaoImpl.findById(pid);
+	public Product findHowdoP(Integer pid){
+		System.out.print("aaachulaichulaiser");
+		return this.healthDaoImpl.findByIdP(pid);
+	}
+	public User findHowdoU(Integer uid){
+		System.out.print("aaachulaichulaiser");
+		return this.healthDaoImpl.findByIdU(uid);
+	}
+	public Material findHowdoM(Integer mid){
+		System.out.print("aaachulaichulaiser");
+		return this.healthDaoImpl.findByIdM(mid);
+	}
+	public Howdo findHowdoH(Integer hid){
+		System.out.print("aaachulaichulaiser");
+		return this.healthDaoImpl.findByIdH(hid);
 	}
 	
 	
