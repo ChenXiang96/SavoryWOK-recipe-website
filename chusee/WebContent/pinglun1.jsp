@@ -33,6 +33,14 @@
 
 
 }
+.mod_right {
+    padding: 40px 20px 40px 130px;
+    margin-left: 80px;
+}
+#mod_location {
+    position: absolute; 
+    margin-left: 80px;
+}
 .footer-area {
     padding: 10px 0;
     margin-right: 130px;
@@ -43,7 +51,7 @@
 
 	<!-- 主框架 -->
 	<div class="w_main clear">
-
+<%@ include file="menu3.jsp" %>
 
 
 		<!-- 右侧 -->
