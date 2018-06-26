@@ -31,7 +31,14 @@ public class CommentController {
 
 		System.err.println(tid);
 
+		Topic t = new Topic();
+		t = this.commentserviceimpl.findOneById(tid2);
+
+		session.setAttribute("t", t);
+
+		
 		List<Comment> list = this.commentserviceimpl.findbytid(tid2);
+		
 		session.setAttribute("clist", list);
 
 //		System.out.println(list.get(0).getTid());
@@ -40,24 +47,24 @@ public class CommentController {
 	}
 	
 	@RequestMapping("commentadd")
-	public String addComment(@RequestParam("cdes") String cdes,@RequestParam("uid") String uid) throws ParseException{
+	public String addComment(@RequestParam("cdes") String cdes,@RequestParam("uid") String uid,@RequestParam("tid") String tid) throws ParseException{
 		
 		System.err.println(cdes);
 		System.err.println(uid);
 		int uid2 = Integer.parseInt(uid);
-
+		int tid2 = Integer.parseInt(tid);
 		User u = new User();
 		Comment ct =new Comment();
 		ct.setCdes(cdes);
 		ct.setUid(uid2);
-		
+		ct.setTid(tid2);
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	
 		Date date = df.parse(df.format(System.currentTimeMillis()));
 		ct.setCtime(date);
 		u = this.commentserviceimpl.addComment(ct);
 		System.out.println(ct.getUname());	
-		return "redirect:commentshow";
+		return "redirect:commentshow?tid="+tid2;
 		
 	}
 }

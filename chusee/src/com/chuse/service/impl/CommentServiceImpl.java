@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.chuse.dao.impl.CommentDaoImpl;
+import com.chuse.dao.impl.TopicDaoImpl;
 import com.chuse.dao.impl.UserDaoImpl;
 import com.chuse.entity.Comment;
 import com.chuse.entity.Topic;
@@ -23,6 +24,12 @@ public class CommentServiceImpl {
 
 	@Resource
 	private UserDaoImpl userdaoimpl;
+	
+	@Resource
+	private TopicDaoImpl topicdaoimpl;
+	public Topic findOneById(Integer id){
+		return this.topicdaoimpl.findOne(id);
+	}
 	
 	public List<Comment> findbytid(Integer tid){
 		
