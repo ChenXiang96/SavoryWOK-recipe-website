@@ -65,13 +65,13 @@
                   </li>
                  
                   <li>
-                    <a href="reservation.jsp">专题</a>
+                    <a href="${ pageContext.request.contextPath}/specialshow">专题</a>
                   </li>
                    <li>
                     <a href="${ pageContext.request.contextPath}/topicshow">社区</a>
                   </li>
                    <li>
-                    <a href="gallery.jsp">话题</a>
+                    <a href="${ pageContext.request.contextPath}/topicshow">话题</a>
                   </li>
                   
                   <li>

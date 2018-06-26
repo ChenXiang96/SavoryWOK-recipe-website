@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+	
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -186,43 +190,9 @@
 
 							<div class="normal-recipe-list">
 								<ul class="list">
-									<li>
 
-
-										<div
-											class="recipe recipe-215-horizontal pure-g image-link display-block">
-											<a href="http://www.xiachufang.com/recipe/102351002/"
-												data-click-tracking-url="" data-expose-tracking-url=""
-												target="_blank">
-												<div class="cover pure-u">
-													<img
-														src="images/reservation/65b001a97bfa40579e2c91ec01858ce9_1280w_1023h.jpg"
-														data-src="http://s1.cdn.xiachufang.com/65b001a97bfa40579e2c91ec01858ce9_1280w_1023h.jpg@2o_50sh_1pr_1l_215w_136h_1c_1e_90q_1wh"
-														alt="卡通早餐吐司" class="unveiled" width="215" height="136">
-												</div>
-											</a>
-											<div class="info pure-u">
-												<p class="name">
-													<a href="http://www.xiachufang.com/recipe/102351002/"
-														data-click-tracking-url="" data-expose-tracking-url=""
-														target="_blank"> 解暑吃什么，5种食物清热消暑</a> <i
-														class="exclusive-icon ml5"></i> <i class="step-icon ml5"></i>
-												</p>
-												<p class="ing">
-													<span>炎炎夏日，温度不断攀升，我们要及时做好防暑降温的工作，
-														尤其是每天在外面工作的人，清热解暑做不到位的话，很可能中暑。 那么，大家都知道清热消暑的食物有哪些呢？
-														下面小编就给大家推荐5种清热解暑的食物，大家可以回去做一些吃。</span>
-												</p>
-												<p class="stat green-font">2018年05月21日&nbsp;第10人做过</p>
-												<p class="author">
-													<a href="http://www.xiachufang.com/cook/111177961/"
-														class="gray-font" target="_blank">婷婷ELF</a>
-												</p>
-											</div>
-										</div>
-
-									</li>
-									<li>
+				<c:forEach items="${ slist }" var="s">								
+								<li>
 
 
 										<div
@@ -241,92 +211,23 @@
 												<p class="name">
 													<a href="http://www.xiachufang.com/recipe/102294729/"
 														data-click-tracking-url="" data-expose-tracking-url=""
-														target="_blank"> 肠胃不舒服，试试这五种开胃菜 </a> <i
+														target="_blank"> ${s.stitle } </a> <i
 														class="exclusive-icon ml5"></i> <i class="step-icon ml5"></i>
 												</p>
 												<p class="ing">
-													<span>夏天因为天气太热的原因，很多人喜欢吃一些凉的食物，甚至是喜欢点一些外卖懒得在家开火，可夏天外面的很多东西又不够干净，吃了经常拉肚子，严重的甚至引起肠胃病，所以即使在夏天这么热的天气里，我们更应该好好照顾我们的胃，然后要说的就是：夏季5款养胃菜谱在此，快来收走啊~
+													<span>${s.scontent }
 													</span>
 												</p>
-												<p class="stat green-font">2018年05月21日&nbsp;第10人做过</p>
+												<p class="stat green-font">${s.stime }&nbsp;</p>
 												<p class="author">
 													<a href="http://www.xiachufang.com/cook/113843326/"
-														class="gray-font" target="_blank">小彬爱下厨</a>
+														class="gray-font" target="_blank">${s.uname }</a>
 												</p>
 											</div>
 										</div>
 
 									</li>
-									<li>
-
-
-										<div
-											class="recipe recipe-215-horizontal pure-g image-link display-block">
-											<a href="http://www.xiachufang.com/recipe/102808073/"
-												data-click-tracking-url="" data-expose-tracking-url=""
-												target="_blank">
-												<div class="cover pure-u">
-													<img
-														src="images/reservation/2cb1b35b5d194a2a86c6d517b6a278ad_1920w_1788h.jpg"
-														data-src="http://s2.cdn.xiachufang.com/2cb1b35b5d194a2a86c6d517b6a278ad_1920w_1788h.jpg?imageView2/1/w/215/h/136/interlace/1/q/90"
-														alt="太动心—橙汁素排" class="unveiled" width="215" height="136">
-												</div>
-											</a>
-											<div class="info pure-u">
-												<p class="name">
-													<a href="http://www.xiachufang.com/recipe/102808073/"
-														data-click-tracking-url="" data-expose-tracking-url=""
-														target="_blank"> 食物美容，远离肌肤衰老 </a> <i
-														class="exclusive-icon ml5"></i> <i class="step-icon ml5"></i>
-												</p>
-												<p class="ing">
-													<span>岁月如刀，刀刀催人老，皮肤总是抵不过时间的消逝，到我们25岁的时候，皮肤就开始进入衰老期，皱纹、色斑、皮肤松弛等现象逐渐出现，这时，抗衰老工程也正式展开。日常生活中，我们要保持良好的作息习惯，饮食上也要多吃一些抗衰老的食物。
-													</span>
-												</p>
-												<p class="stat green-font">2018年05月21日&nbsp;第10人做过</p>
-												<p class="author">
-													<a href="http://www.xiachufang.com/cook/110722061/"
-														class="gray-font" target="_blank">真珠兰</a>
-												</p>
-											</div>
-										</div>
-
-									</li>
-									<li>
-
-
-										<div
-											class="recipe recipe-215-horizontal pure-g image-link display-block">
-											<a href="http://www.xiachufang.com/recipe/102808073/"
-												data-click-tracking-url="" data-expose-tracking-url=""
-												target="_blank">
-												<div class="cover pure-u">
-													<img
-														src="images/reservation/2cb1b35b5d194a2a86c6d517b6a278ad_1920w_1788h.jpg"
-														data-src="http://s2.cdn.xiachufang.com/2cb1b35b5d194a2a86c6d517b6a278ad_1920w_1788h.jpg?imageView2/1/w/215/h/136/interlace/1/q/90"
-														alt="太动心—橙汁素排" class="unveiled" width="215" height="136">
-												</div>
-											</a>
-											<div class="info pure-u">
-												<p class="name">
-													<a href="http://www.xiachufang.com/recipe/102808073/"
-														data-click-tracking-url="" data-expose-tracking-url=""
-														target="_blank"> 食物美容，远离肌肤衰老 </a> <i
-														class="exclusive-icon ml5"></i> <i class="step-icon ml5"></i>
-												</p>
-												<p class="ing">
-													<span>岁月如刀，刀刀催人老，皮肤总是抵不过时间的消逝，到我们25岁的时候，皮肤就开始进入衰老期，皱纹、色斑、皮肤松弛等现象逐渐出现，这时，抗衰老工程也正式展开。日常生活中，我们要保持良好的作息习惯，饮食上也要多吃一些抗衰老的食物。
-													</span>
-												</p>
-												<p class="stat green-font">2018年05月21日&nbsp;第10人做过</p>
-												<p class="author">
-													<a href="http://www.xiachufang.com/cook/110722061/"
-														class="gray-font" target="_blank">真珠兰</a>
-												</p>
-											</div>
-										</div>
-
-									</li>
+									</c:forEach>
 							</div>
 						</div>
 					</div>

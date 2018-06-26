@@ -47,7 +47,7 @@ public class SubjectController {
 				//总共有多少页
 				map.put("count",count);
 				map.put("caid", caid);
-				return "zhuantixiangqing";
+				return "zhuantixiangqing2";
 			}
 			//根据专题二级分类查询商品
 			@RequestMapping(value="findByCasid/{casid}/{page}")	
