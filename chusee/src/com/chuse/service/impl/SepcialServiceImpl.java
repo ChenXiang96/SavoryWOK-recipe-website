@@ -26,4 +26,8 @@ public class SepcialServiceImpl {
 		return specialdaoimpl.findAll(1);
 			
 	}
+	
+	public Special findOne(Integer sid){
+		return this.specialdaoimpl.findOne(sid);
+	}
 }
