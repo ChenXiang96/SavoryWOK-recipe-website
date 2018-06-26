@@ -90,7 +90,7 @@
 									</div>
 									<div class="content">
 																				${ct.cdes }
-																			</div>
+									</div>
 								</div>
 
 								</li>
@@ -100,20 +100,22 @@
 					</div>
 
 
-					<form action="">					
+					<form action="${pageContext.request.contextPath}/commentadd?uid=${user.uid}" method="post">					
 						<div class="comment-pai">
 								<img src="${pageContext.request.contextPath}/images/comment/n.jpg" data-src="https://i5.meishichina.com/data/avatar/010/66/68/43_avatar_big.jpg?x-oss-process=style/c80&amp;v=2018062315" class="imgLoad comment-pai-img" width="48" height="48">
 								<div data-dom="add" class="comment-post comment-add">
-							
-									<div class="comment-post-loading"></div>
+								<p>${user.uid }</p>
 										<div class="comment-post-text">
 											<div class="comment-post-text-inner">
-												<textarea title="Ctrl+Enter 也可提交哦" class="text ui-webkit-scrollbar"></textarea>
+												<input type="textarea" title="Ctrl+Enter 也可提交哦" class="text ui-webkit-scrollbar" id="cdes" name="cdes">
+												
 											</div>
 										</div>
 												<div class="comment-post-tools clear">
 													<div class="left"><a title="插入表情" data-type="smilies" class="J_event comment-smilies-a" href="javascript:void(0);"></a><span class="tips">Ctrl+Enter 也可提交哦</span></div>
-													<div class="right"><a class="comment-btn add_submit" href="${pageContext.request.contextPath}/commentadd/${ct.tid}" data-id="905517">发表评论</a></div>
+													<div class="right">					
+														<input class="comment-btn add_submit" value="发布话题" type="submit">
+													</div>
 												</div>
 						</div>
 				
