@@ -127,7 +127,7 @@ h3.heading-style-3 {
             
             </div>
            
-                  <center><a href="${ pageContext.request.contextPath }/Backstage.jsp">管理员登录</a></center>
+                 
                
           </div>
         </div>

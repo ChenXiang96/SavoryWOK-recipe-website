@@ -442,26 +442,22 @@ a.right {
                        
                            </div>
                         </div>
-			<div class="wrap-content">
+		<div class="wrap-content">
 				<div class="row">
-					<c:forEach items="${ list}" var="p">
 					<div class="col-1-4">
-					
 						<div class="zoom-container">
-						
 							<a href="#">
-								<span class="zoom-caption"  width="50px" height="50px">
-									<span>${p.pname }</span>
+								<span class="zoom-caption">
+									<span>黄金炸鸡排</span>
 								</span>
-								<img width="50px" height="50px" src="${ pageContext.request.contextPath }/${p.image}" />
+								<img  src="images/JP.jpg" />
 							</a>
 						</div>
-					 
 					</div>
-					</c:forEach>
 				</div>
 				
 			</div>
+
                	
 				
 					
