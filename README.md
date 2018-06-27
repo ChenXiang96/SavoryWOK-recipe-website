@@ -116,4 +116,4 @@
 + #### 推荐系统站内搜索页面：</br>
 <img src="https://github.com/liuyutaoLYT/-/blob/master/XGimg/SS1.jpg" width=900 height=500 /></br>
 + #### 推荐系统相近用户推荐页面：</br>
-<img src="https://github.com/liuyutaoLYT/-/blob/master/XGimg/TJ4.jpg" width=900 height=500 /></br>
+<img src="https://github.com/liuyutaoLYT/-/blob/master/XGimg/TJ10.jpg" width=900 height=500 /></br>
