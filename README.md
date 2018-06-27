@@ -39,22 +39,22 @@
 
 
 + ## 项目成员</br>
-+ ### 1.陈翔  </br>
++ ### 1.陈翔（项目组长，网站框架&功能设计，登录注册，首页，地图搜索展示，爬虫编写，美食推荐系统实现等） </br>
    * Email：<982787731@qq.com></br>
    * Github : [https://github.com/ChenXiang96](https://github.com/ChenXiang96)
-+ ### 2.孙婷婷</br>
++ ### 2.孙婷婷（后台数据库增删改查，前端个人中心页面以及菜谱页面的实现等）</br>
    * Email：<2564494977@qq.com></br>
    * Github : [https://github.com/suntingting123](https://github.com/suntingting123)
-+ ### 3.史雪瑶</br>
++ ### 3.史雪瑶（话题评论，专题，动态发布，后台管理页面的开发，话题专题社区页面开发等）</br>
    * Email：<88606171@qq.com></br>
    * Github : [https://github.com/sssxy12138](https://github.com/sssxy12138)
-+ ### 4.闫静俞</br>
++ ### 4.闫静俞（爬虫、推荐算法编写，数据导入，前端甄选详情页面以及健康页面的编写等）</br>
    * Email：<2460960649@qq.com></br>
    * Github : [https://github.com/yanjingyu](https://github.com/yanjingyu)
-+ ### 5.尹志强</br>
++ ### 5.尹志强（前端甄选页面以及秒杀页面的编写，后台管理页面的开发等）</br>
    * Email：<1170023105@qq.com></br>
    * Github : [https://github.com/yinzhiqiang1](https://github.com/yinzhiqiang1)
-+ ### 6.李少毅</br>
++ ### 6.李少毅（登录注册UI设计，页面BUG的检查，文档整理，ppt编写等）</br>
    * Email：<1093264203@qq.com></br>
    * Github : [https://github.com/Lishaoyi224](https://github.com/Lishaoyi224)</br>
 + ## 运行效果</br>
