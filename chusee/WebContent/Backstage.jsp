@@ -15,12 +15,22 @@
 <meta name="viewport" content="width=device-width">
 <link href="${ctx }/public/css/base.css" rel="stylesheet" type="text/css">
 <link href="${ctx }/public/css/login.css" rel="stylesheet" type="text/css">
-</head>
+<style>
+   .logo1 {
+    width: 600px;
+    margin-left: 170px;
+    margin-top: 60px;
+}
+
+</style>
 <body>
 
 <div class="login">
 <form action="${ctx }/adm/login" method="post" id="form">
-	<div class="logo"></div>
+	<div class="logo1">
+	   <img class="imgl" src="${pageContext.request.contextPath}/images/lo.png" alt="logo"/>
+	
+	</div>
     <div class="login_form">
     	<div class="user">
         	<input class="text_value" value="" name="username" type="text" id="username">
@@ -31,7 +41,7 @@
     <div align="center"><font color="white">${errorinfo}</font></div>
     
     <div id="tip"></div>
-    <div class="foot"> <a href="${pageContext.request.contextPath }/index" target="_blank" title="模板之家">厨色</a>
+    <div class="foot"> <a href="${pageContext.request.contextPath }/index" target="_blank" title="模板之家"></a>
     </div>
     </form>
 </div>
