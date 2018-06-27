@@ -109,10 +109,9 @@
 			</div>
 
 			<div class="space_right">
-				<a class="r_pai-add" target="_blank" href="pinglun1.jsp?uid=${user.uid }">发布话题</a>
 				<div class="mt20">
 					<a title="厨色客户端" href=""
-						target="_blank"> <img alt="" src="images/20180621092708.jpg"> </a>
+						target="_blank"> <img alt="" src="images/timg.jpg"> </a>
 				</div>
 			</div>
 

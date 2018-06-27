@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<c:set var="ctx" value="${pageContext.request.contextPath}" /> 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -41,10 +46,10 @@
 
 
 
-<link href="css/b98b18476b23b2e6dc0f.css" rel="stylesheet"
+<link href="${ctx }/css/b98b18476b23b2e6dc0f.css" rel="stylesheet"
 	type="text/css">
 
-<link href="css/2b7819a7de22ed2b0d8a.css" rel="stylesheet"
+<link href="${ctx }/css/2b7819a7de22ed2b0d8a.css" rel="stylesheet"
 	type="text/css">
 
 <!--[if IE 8]>
@@ -144,17 +149,17 @@
 
 <!-- CSS
   ================================================== -->
-<link rel="stylesheet" href="css/zerogrid.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/slide.css">
-<link rel="stylesheet" href="css/menu.css">
+<link rel="stylesheet" href="${ctx }/css/zerogrid.css">
+<link rel="stylesheet" href="${ctx }/css/style.css">
+<link rel="stylesheet" href="${ctx }/css/slide.css">
+<link rel="stylesheet" href="${ctx }/css/menu.css">
 
 
 <!-- footer -->
 
 
 <!-- Custom Fonts -->
-<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"
+<link href="${ctx }/font-awesome/css/font-awesome.min.css" rel="stylesheet"
 	type="text/css">
 <!--[if lt IE 8]>
        <div style=' clear: both; text-align:center; position: relative;'>
@@ -749,8 +754,8 @@
 
 
 	<!-- js -->
-	<script src="js/classie.js"></script>
-	<script src="js/demo.js"></script>
+	<script src="${ctx }/js/classie.js"></script>
+	<script src="${ctx }/js/demo.js"></script>
 
 	</div>
 </body>

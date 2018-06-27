@@ -74,7 +74,7 @@ margin-left:40px;
                         <li><a href="${ pageContext.request.contextPath}/archive/list">甄选</a></li>
                         <li><a href="${ pageContext.request.contextPath}/myHealth">健康</a></li>
                         <li><a href="${ pageContext.request.contextPath}/specialshow">专题</a></li>
-                        <li><a href="${ pageContext.request.contextPath}/topicshow">社区</a></li>
+                        <li><a href="${ pageContext.request.contextPath}/communityshow">社区</a></li>
                         <li><a href="${ pageContext.request.contextPath}/topicshow">话题</a></li>
                         
                     <c:if test="${sessionScope.user == null}">

@@ -68,7 +68,7 @@ h3.heading-style-3 {
         <section class="sub-header shop-layout-1">
         <img class="rellax bg-overlay" src="${pageContext.request.contextPath}/images/logo4.jpg" alt="">
         <div class="overlay-call-to-action"></div>
-        <h3><img  class="img0" src="images/lo.png"></h3>
+        <h3><img  class="img0" src="${pageContext.request.contextPath}/images/lo.png"></h3>
        
       </section>
       
@@ -142,24 +142,24 @@ h3.heading-style-3 {
    </div>
     
       <%@ include file="footer.jsp" %>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/function-check-viewport.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/select2.full.min.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/jquery.mmenu.all.min.js"></script>
-    <script src="js/rellax.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/bootstrap-notify.min.js"></script>
-    <script src="js/bootstrap-slider.js"></script>
-    <script src="js/in-view.min.js"></script>
-    <script src="js/countup.js"></script>
-    <script src="js/animsition.min.js"></script>
-    <script src="js/global.js"></script>
-    <script src="js/config-mm-menu.js"></script>
-    <script src="js/config-set-bg-blog-thumb.js"></script>
-    <script src="js/config-accrodion.js">
+    <script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/function-check-viewport.js"></script>
+    <script src="${pageContext.request.contextPath}/js/slick.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/select2.full.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/imagesloaded.pkgd.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/jquery.mmenu.all.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/rellax.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/isotope.pkgd.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/bootstrap-notify.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/bootstrap-slider.js"></script>
+    <script src="${pageContext.request.contextPath}/js/in-view.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/countup.js"></script>
+    <script src="${pageContext.request.contextPath}/js/animsition.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/global.js"></script>
+    <script src="${pageContext.request.contextPath}/js/config-mm-menu.js"></script>
+    <script src="${pageContext.request.contextPath}/js/config-set-bg-blog-thumb.js"></script>
+    <script src="${pageContext.request.contextPath}/js/config-accrodion.js">
     
 
     </script>

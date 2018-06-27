@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,10 +12,10 @@
 <meta name="description" content="抢到就是赚到，手慢无" />
 <meta name="renderer" content="webkit">
 <link rel="shortcut icon" href="https://static.meishichina.com/v6/img/lib/f.ico"/>
-<link rel="images/miaosha/wapico.png" />
-<link rel="stylesheet" type="text/css" href="css/miaosha/all.css?v1=9">
-<link rel="stylesheet" type="text/css" href="css//zhen2.css?v1=2018-01-241">
-<link rel="stylesheet" type="text/css" href="css/zhen_listing.css?v1=2016-12-26">
+<link rel="${pageContext.request.contextPath}/images/miaosha/wapico.png" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/miaosha/all.css?v1=9">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css//zhen2.css?v1=2018-01-241">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/zhen_listing.css?v1=2016-12-26">
 <meta http-equiv="mobile-agent" content="format=xhtml; url=https://m.meishichina.com/listing/4834215/">
 <link rel="alternate" media="only screen and (max-width: 640px)"  href="https://m.meishichina.com/listing/4834215/">
 <script type="text/javascript" src="//static.meishichina.com/v6/js/lib/dfp-list-5.js"></script>

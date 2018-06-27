@@ -68,7 +68,7 @@
                     <a href="${ pageContext.request.contextPath}/specialshow">专题</a>
                   </li>
                    <li>
-                    <a href="${ pageContext.request.contextPath}/topicshow">社区</a>
+                    <a href="${ pageContext.request.contextPath}/communityshow">社区</a>
                   </li>
                    <li>
                     <a href="${ pageContext.request.contextPath}/topicshow">话题</a>

@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<link rel="stylesheet" type="text/css" href="css/all.css?v1=9">
+    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<c:set var="ctx" value="${pageContext.request.contextPath}" /> 
+	<link rel="stylesheet" type="text/css" href="${ctx }/css/all.css?v1=9">
 	
 <style type="text/css">
 .footer-area{padding:10px 0}.footer-area .w{padding-top:10px;border-top:1px solid #e8e8e8}.footer-area a{color:#666}.footer-area a:hover{color:#ff6767}.ft1{clear:none;float:left;font-size:11px;color:#666;width:680px;padding-top:10px}.ft1 .c3b{color:#c90;font-size:14px;font-weight:700;margin-bottom:6px}.ft1 .c3b a{color:#f50}.ft1 .c3c{color:#aaa;font-size:12px;margin-bottom:6px}.ft2,.ft3,.ft4{clear:none;float:right;text-align:center}.ft3{margin:0 25px}
