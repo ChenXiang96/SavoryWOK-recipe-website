@@ -48,18 +48,23 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
 	public String getNewpass() {
 		return newpass;
 	}
 	public void setNewpass(String newpass) {
 		this.newpass = newpass;
 	}
+
+	
+
 	public String getEnsurepass() {
 		return ensurepass;
 	}
 	public void setEnsurepass(String ensurepass) {
 		this.ensurepass = ensurepass;
 	}
+
 	public String getName() {
 		return name;
 	}
@@ -96,12 +101,15 @@ public class User {
 	public void setCode(String code) {
 		this.code = code;
 	}
+	
 	public String getGexingqianming() {
 		return gexingqianming;
 	}
 	public void setGexingqianming(String gexingqianming) {
 		this.gexingqianming = gexingqianming;
 	}
+	
+	
 	public String getUimage() {
 		return uimage;
 	}

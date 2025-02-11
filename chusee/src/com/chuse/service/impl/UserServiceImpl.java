@@ -87,7 +87,7 @@ public class UserServiceImpl implements UserService{
 		user.setState(1);
 		String code = UUIDUtils.getUUID()+UUIDUtils.getUUID();
 		user.setCode(code);
-		user.setUimage("head.jpg");
+		//user.setUimage("head.jpg");
 		userDao.save(user);
 		//发送激活邮件
 		MailUitls.sendMail(user.getEmail(), code);

@@ -21,7 +21,7 @@ public class Topic {
 	
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Id
-	private Integer tid;
+   private Integer tid;
    private Integer uid;
    private String tcontent;
    private String ttitle;

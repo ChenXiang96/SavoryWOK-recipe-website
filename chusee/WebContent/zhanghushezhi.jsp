@@ -57,12 +57,12 @@
 <div class="mr_edit mr_edit_center clear">
 <ul>
 
+
 <li>
-<!-- label>头像</label><br-->
-<img class="imgLoad" src="${ctx}/js/n.jpg" data-src="${ctx}/https://i5.meishichina.com/data/avatar/010/91/22/91_avatar_big.jpg?x-oss-process=style/c120&amp;v=1527728841" width="120" height="120"><br><input name="avatarpic" class="inputS" type="file">
+<label>头像</label><br>
 
+<img class="imgLoad" src="${not empty user.uimage ? ctx.concat(user.uimage) : ctx.concat('/js/n.jpg')}" data-src="${ctx}/https://i5.meishichina.com/data/avatar/010/91/22/91_avatar_big.jpg?x-oss-process=style/c120&amp;v=1527728841" width="120" height="120"><br><input name="avatarpic" class="inputS" type="file">
 </li>
-
 
 
 
