@@ -11,7 +11,7 @@
  Target Server Version : 50648 (5.6.48-log)
  File Encoding         : 65001
 
- Date: 11/02/2025 19:58:49
+ Date: 15/02/2025 01:21:03
 */
 
 SET NAMES utf8mb4;
@@ -55,43 +55,69 @@ CREATE TABLE `category2`  (
 -- ----------------------------
 
 -- ----------------------------
+-- Table structure for category_categorysecond
+-- ----------------------------
+DROP TABLE IF EXISTS `category_categorysecond`;
+CREATE TABLE `category_categorysecond`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `cid` int(11) NOT NULL,
+  `csid` int(11) NOT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `fk_category_categorysecond_cid`(`cid`) USING BTREE,
+  INDEX `fk_category_categorysecond_csid`(`csid`) USING BTREE,
+  CONSTRAINT `fk_category_categorysecond_cid` FOREIGN KEY (`cid`) REFERENCES `category` (`cid`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fk_category_categorysecond_csid` FOREIGN KEY (`csid`) REFERENCES `categorysecond` (`csid`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of category_categorysecond
+-- ----------------------------
+INSERT INTO `category_categorysecond` VALUES (1, 4, 3);
+INSERT INTO `category_categorysecond` VALUES (2, 4, 4);
+INSERT INTO `category_categorysecond` VALUES (3, 4, 5);
+INSERT INTO `category_categorysecond` VALUES (4, 4, 8);
+INSERT INTO `category_categorysecond` VALUES (5, 4, 15);
+INSERT INTO `category_categorysecond` VALUES (6, 5, 3);
+INSERT INTO `category_categorysecond` VALUES (7, 5, 4);
+INSERT INTO `category_categorysecond` VALUES (8, 5, 5);
+INSERT INTO `category_categorysecond` VALUES (9, 5, 8);
+INSERT INTO `category_categorysecond` VALUES (10, 5, 15);
+
+-- ----------------------------
 -- Table structure for categorysecond
 -- ----------------------------
 DROP TABLE IF EXISTS `categorysecond`;
 CREATE TABLE `categorysecond`  (
   `csid` int(11) NOT NULL AUTO_INCREMENT,
   `csname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `cid` int(11) NULL DEFAULT NULL,
-  PRIMARY KEY (`csid`) USING BTREE,
-  INDEX `cid`(`cid`) USING BTREE,
-  CONSTRAINT `categorysecond_ibfk_1` FOREIGN KEY (`cid`) REFERENCES `category` (`cid`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 23 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+  PRIMARY KEY (`csid`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 23 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of categorysecond
 -- ----------------------------
-INSERT INTO `categorysecond` VALUES (1, '山西风味', 4);
-INSERT INTO `categorysecond` VALUES (2, '广东风味', 4);
-INSERT INTO `categorysecond` VALUES (3, '四川风味', 4);
-INSERT INTO `categorysecond` VALUES (4, '重庆小吃', 8);
-INSERT INTO `categorysecond` VALUES (5, '天津小吃', 8);
-INSERT INTO `categorysecond` VALUES (6, '重庆风味', 8);
-INSERT INTO `categorysecond` VALUES (7, '山东风味', 8);
-INSERT INTO `categorysecond` VALUES (8, '上海风味', 6);
-INSERT INTO `categorysecond` VALUES (9, '西北风味', 5);
-INSERT INTO `categorysecond` VALUES (10, '台湾风味', 5);
-INSERT INTO `categorysecond` VALUES (11, '北京风味', 4);
-INSERT INTO `categorysecond` VALUES (12, '河南风味', 4);
-INSERT INTO `categorysecond` VALUES (13, '河北风味', 4);
-INSERT INTO `categorysecond` VALUES (14, '福建风味', 4);
-INSERT INTO `categorysecond` VALUES (15, '健康推荐', 5);
-INSERT INTO `categorysecond` VALUES (16, '清热祛火', 6);
-INSERT INTO `categorysecond` VALUES (17, '驱寒暖身', 6);
-INSERT INTO `categorysecond` VALUES (18, '健脾健胃', 5);
-INSERT INTO `categorysecond` VALUES (19, '开胃优选', 4);
-INSERT INTO `categorysecond` VALUES (20, '下午茶点', 9);
-INSERT INTO `categorysecond` VALUES (21, '快手菜肴', 6);
-INSERT INTO `categorysecond` VALUES (22, '护肝明目', 6);
+INSERT INTO `categorysecond` VALUES (1, '山西风味');
+INSERT INTO `categorysecond` VALUES (2, '广东风味');
+INSERT INTO `categorysecond` VALUES (3, '四川风味');
+INSERT INTO `categorysecond` VALUES (4, '重庆小吃');
+INSERT INTO `categorysecond` VALUES (5, '天津小吃');
+INSERT INTO `categorysecond` VALUES (6, '重庆风味');
+INSERT INTO `categorysecond` VALUES (7, '山东风味');
+INSERT INTO `categorysecond` VALUES (8, '上海风味');
+INSERT INTO `categorysecond` VALUES (9, '西北风味');
+INSERT INTO `categorysecond` VALUES (10, '台湾风味');
+INSERT INTO `categorysecond` VALUES (11, '北京风味');
+INSERT INTO `categorysecond` VALUES (12, '河南风味');
+INSERT INTO `categorysecond` VALUES (13, '河北风味');
+INSERT INTO `categorysecond` VALUES (14, '福建风味');
+INSERT INTO `categorysecond` VALUES (15, '健康推荐');
+INSERT INTO `categorysecond` VALUES (16, '清热祛火');
+INSERT INTO `categorysecond` VALUES (17, '驱寒暖身');
+INSERT INTO `categorysecond` VALUES (18, '健脾健胃');
+INSERT INTO `categorysecond` VALUES (19, '开胃优选');
+INSERT INTO `categorysecond` VALUES (20, '下午茶点');
+INSERT INTO `categorysecond` VALUES (21, '快手菜肴');
+INSERT INTO `categorysecond` VALUES (22, '护肝明目');
 
 -- ----------------------------
 -- Table structure for categorysecond2
@@ -316,26 +342,45 @@ CREATE TABLE `product`  (
 -- ----------------------------
 -- Records of product
 -- ----------------------------
-INSERT INTO `product` VALUES ('匠心传承', 'cimg/1.jpg', '2018-05-02 00:00:00', '鱼香肉丝', 1, 2, '原料：猪里脊肉、川味泡姜泡辣椒、蒜米、白砂糖、保宁醋、鲜味酱油、大葱粒、红花椒、红薯粉、淀粉、鲜汤。', 1);
-INSERT INTO `product` VALUES ('冰火兼容', 'cimg/2.jpg', '2018-05-02 00:00:00', '芦笋烤冰鱼', 2, 2, '原料：南极冰鱼柳、红辣椒、芦笋、橄榄油、盐、生抽、生姜、鱼露、孜然粉。', 3);
-INSERT INTO `product` VALUES ('诗韵墨香', 'cimg/3.jpg', '2018-06-15 09:44:21', '红烧排骨', 3, 2, '原料：排骨、油、盐、老抽、料酒、蚝油、冰糖、姜、葱、茴香、橙皮、干椒、八角、开水、香叶。', 3);
-INSERT INTO `product` VALUES ('伊悠悠', 'cimg/4.jpg', '2018-06-21 09:44:17', '番茄四季豆', 4, 2, '原料：四季豆、番茄、大蒜子、蕃茄酱、盐。', 3);
-INSERT INTO `product` VALUES ('燊燊姐', 'cimg/l9.jpg', '2018-06-30 09:44:14', '剁椒三文鱼头', 5, 2, '原料：三文鱼头、剁椒酱、葱、姜、蒜、豆豉、盐、白胡椒粉、料酒、蒸鱼豉油。', 2);
-INSERT INTO `product` VALUES ('最初的最美❤', 'cimg/6.jpg', '2018-06-30 09:44:11', '花生猪手', 6, 2, '原料：猪蹄、花生、葱、姜、大料、生抽、老抽、盐、鸡精、大枣、枸杞。', 2);
-INSERT INTO `product` VALUES ('凤记美食', 'cimg/l6.jpg', '2018-06-21 09:44:07', '木耳炒长豆角', 7, 2, '原料：长豆角、干木耳、油、盐、葱。', 2);
-INSERT INTO `product` VALUES ('柳絮1982', 'cimg/8.jpg', '2018-05-30 09:44:03', '炸茄盒', 8, 2, '原料：紫茄子、猪肉馅、韭菜、鸡蛋、淀粉、面粉、油、蚝油、五香粉。', 2);
-INSERT INTO `product` VALUES ('迷糊阿山', 'cimg/1.jpg', '2018-06-15 09:44:00', '肥牛金针菇', 9, 2, '原料：肥牛、金针菇、白胡椒、孜然、盐、辣椒面。', 2);
-INSERT INTO `product` VALUES ('雨欣欣欣', 'cimg/9.jpg', '2018-06-13 09:43:55', '红烧肉', 10, 2, '原料：带皮五花肉、生姜、土豆、大葱、小葱、老抽、郫县豆瓣酱、生抽。', 1);
-INSERT INTO `product` VALUES ('有个小蜗牛叫安琪', 'cimg/2r1.jpg', '2018-06-07 10:16:04', '红烧鸡腿', 11, 2, '原料：鸡腿、啤酒、食用油、生姜、大蒜、酱油、料酒、八角、桂皮、香叶、生抽、糖、葱末。', 2);
-INSERT INTO `product` VALUES ('最初的最美❤', 'cimg/2r2.jpg', '2018-05-31 10:17:23', '辣炒鸡胗', 12, 2, '原料：鸡胗、葱、姜、干辣椒、八角、花椒、辣椒酱、生抽、老抽、水、盐、冰糖。', 4);
-INSERT INTO `product` VALUES ('最初的最美❤', 'cimg/2r3.jpg', '2018-06-15 10:18:25', '辣焖鱼子', 13, 2, '原料：鱼子、干辣椒、葱、姜、黄豆酱、郫县豆瓣、料酒、蚝油、生抽、鸡粉、白糖。', 11);
-INSERT INTO `product` VALUES ('柠柠', 'cimg/2r4.jpg', '2018-05-30 10:19:14', '紫菜蒸茄子', 14, 2, '原料：紫菜、茄子、郫县辣酱、豆豉、生抽、醋、糖。', 3);
-INSERT INTO `product` VALUES ('有个小蜗牛叫安琪', 'cimg/2r5.jpg', '2018-06-29 10:20:48', '韭菜苔炒虾皮', 15, 2, '原料：韭菜、虾皮、食用油、盐、生姜、小米椒。', 2);
-INSERT INTO `product` VALUES ('最爱小志', 'cimg/2r6.jpg', '2018-06-07 10:21:31', '大蒜炒牛肉', 16, 2, '原料：牛肉、大蒜、红辣椒、植物油、盐、生抽、老抽、孜然、淀粉。', 2);
-INSERT INTO `product` VALUES ('安琪', 'cimg/2r7.jpg', '2018-06-06 10:22:16', '木耳黄瓜炒肉片', 17, 2, '原料：猪瘦肉、黄瓜、木耳、盐、大蒜、生姜、红辣椒、生抽、鸡粉、地瓜粉、食用油。', 11);
+INSERT INTO `product` VALUES ('匠心传承', 'cimg/1.jpg', '2018-05-02 00:00:00', '鱼香肉丝', 1, 2, '原料：猪里脊肉、川味泡姜泡辣椒、蒜米、白砂糖、保宁醋、鲜味酱油、大葱粒、红花椒、红薯粉、淀粉、鲜汤。', 3);
+INSERT INTO `product` VALUES ('冰火兼容', 'cimg/2.jpg', '2018-05-02 00:00:00', '芦笋烤冰鱼', 2, 2, '原料：南极冰鱼柳、红辣椒、芦笋、橄榄油、盐、生抽、生姜、鱼露、孜然粉。', 15);
+INSERT INTO `product` VALUES ('诗韵墨香', 'cimg/3.jpg', '2018-06-15 09:44:21', '红烧排骨', 3, 2, '原料：排骨、油、盐、老抽、料酒、蚝油、冰糖、姜、葱、茴香、橙皮、干椒、八角、开水、香叶。', 8);
+INSERT INTO `product` VALUES ('伊悠悠', 'cimg/4.jpg', '2018-06-21 09:44:17', '番茄四季豆', 4, 2, '原料：四季豆、番茄、大蒜子、蕃茄酱、盐。', 15);
+INSERT INTO `product` VALUES ('燊燊姐', 'cimg/l9.jpg', '2018-06-30 09:44:14', '剁椒三文鱼头', 5, 2, '原料：三文鱼头、剁椒酱、葱、姜、蒜、豆豉、盐、白胡椒粉、料酒、蒸鱼豉油。', 3);
+INSERT INTO `product` VALUES ('最初的最美❤', 'cimg/6.jpg', '2018-06-30 09:44:11', '花生猪手', 6, 2, '原料：猪蹄、花生、葱、姜、大料、生抽、老抽、盐、鸡精、大枣、枸杞。', 4);
+INSERT INTO `product` VALUES ('凤记美食', 'cimg/l6.jpg', '2018-06-21 09:44:07', '木耳炒长豆角', 7, 2, '原料：长豆角、干木耳、油、盐、葱。', 15);
+INSERT INTO `product` VALUES ('柳絮1982', 'cimg/8.jpg', '2018-05-30 09:44:03', '炸茄盒', 8, 2, '原料：紫茄子、猪肉馅、韭菜、鸡蛋、淀粉、面粉、油、蚝油、五香粉。', 5);
+INSERT INTO `product` VALUES ('迷糊阿山', 'cimg/1.jpg', '2018-06-15 09:44:00', '肥牛金针菇', 9, 2, '原料：肥牛、金针菇、白胡椒、孜然、盐、辣椒面。', 3);
+INSERT INTO `product` VALUES ('雨欣欣欣', 'cimg/9.jpg', '2018-06-13 09:43:55', '红烧肉', 10, 2, '原料：带皮五花肉、生姜、土豆、大葱、小葱、老抽、郫县豆瓣酱、生抽。', 8);
+INSERT INTO `product` VALUES ('有个小蜗牛叫安琪', 'cimg/2r1.jpg', '2018-06-07 10:16:04', '红烧鸡腿', 11, 2, '原料：鸡腿、啤酒、食用油、生姜、大蒜、酱油、料酒、八角、桂皮、香叶、生抽、糖、葱末。', 8);
+INSERT INTO `product` VALUES ('最初的最美❤', 'cimg/2r2.jpg', '2018-05-31 10:17:23', '辣炒鸡胗', 12, 2, '原料：鸡胗、葱、姜、干辣椒、八角、花椒、辣椒酱、生抽、老抽、水、盐、冰糖。', 3);
+INSERT INTO `product` VALUES ('最初的最美❤', 'cimg/2r3.jpg', '2018-06-15 10:18:25', '辣焖鱼子', 13, 2, '原料：鱼子、干辣椒、葱、姜、黄豆酱、郫县豆瓣、料酒、蚝油、生抽、鸡粉、白糖。', 3);
+INSERT INTO `product` VALUES ('柠柠', 'cimg/2r4.jpg', '2018-05-30 10:19:14', '紫菜蒸茄子', 14, 2, '原料：紫菜、茄子、郫县辣酱、豆豉、生抽、醋、糖。', 15);
+INSERT INTO `product` VALUES ('有个小蜗牛叫安琪', 'cimg/2r5.jpg', '2018-06-29 10:20:48', '韭菜苔炒虾皮', 15, 2, '原料：韭菜、虾皮、食用油、盐、生姜、小米椒。', 15);
+INSERT INTO `product` VALUES ('最爱小志', 'cimg/2r6.jpg', '2018-06-07 10:21:31', '大蒜炒牛肉', 16, 2, '原料：牛肉、大蒜、红辣椒、植物油、盐、生抽、老抽、孜然、淀粉。', 5);
+INSERT INTO `product` VALUES ('安琪', 'cimg/2r7.jpg', '2018-06-06 10:22:16', '木耳黄瓜炒肉片', 17, 2, '原料：猪瘦肉、黄瓜、木耳、盐、大蒜、生姜、红辣椒、生抽、鸡粉、地瓜粉、食用油。', 3);
 INSERT INTO `product` VALUES ('斯佳丽WH', 'cimg/2r8.jpg', '2018-06-07 10:23:58', '苦瓜炒鸡蛋', 18, 2, '原料：苦瓜、鸡蛋、红椒、料酒、油盐。', 3);
 INSERT INTO `product` VALUES ('斯嘉丽', 'cimg/2r9.jpg', '2018-06-14 10:24:53', '蚝油草菇扒娃娃菜', 19, 2, '原料：草菇、娃娃菜、生抽、蚝油、水淀粉、油盐。', 2);
 INSERT INTO `product` VALUES ('斯嘉丽', 'cimg/2r10.jpg', '2018-06-20 10:26:08', '香菇豆腐泡烧排骨', 20, 2, '原料：排骨、香菇、豆腐泡、黑木耳、姜片、八角、桂皮、红辣椒、花椒、料酒、酱油、冰糖、油盐。', 3);
+
+-- ----------------------------
+-- Table structure for recipe_step
+-- ----------------------------
+DROP TABLE IF EXISTS `recipe_step`;
+CREATE TABLE `recipe_step`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pid` int(11) NOT NULL,
+  `step` int(11) NOT NULL,
+  `description` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `image` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `pid`(`pid`) USING BTREE,
+  CONSTRAINT `pid` FOREIGN KEY (`pid`) REFERENCES `product` (`pid`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of recipe_step
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for relationship_11
@@ -465,11 +510,5 @@ INSERT INTO `user` VALUES (14, 'user010', '123', 'user010', 'aaa@shop.com', '122
 INSERT INTO `user` VALUES (15, 'user011', '123', 'XIANG CHEN', 'aaa@shop.com', '7092192960', '30 Lady Anderson st', 1, '', NULL, NULL, NULL, NULL);
 INSERT INTO `user` VALUES (16, 'user012', '123', 'XIANG CHEN', 'aaa@shop.com', '7092192960', '30 Lady Anderson st', 1, '', NULL, 'I love Cooking!', NULL, NULL);
 INSERT INTO `user` VALUES (17, 'user016', '12345', 'charles', 'aaa@shop.com', '115413464', '30 Lady Anderson st', 1, '', '/uploads/eb6774b4-f963-46b7-af46-90cc0c2606eb_fm1.jpg', 'fm1', NULL, NULL);
-
--- ----------------------------
--- View structure for v_product
--- ----------------------------
-DROP VIEW IF EXISTS `v_product`;
-CREATE ALGORITHM = UNDEFINED SQL SECURITY DEFINER VIEW `v_product` AS select `product`.`pdesc` AS `pdesc`,`product`.`image` AS `image`,`product`.`pdate` AS `pdate`,`product`.`pname` AS `pname`,`product`.`pid` AS `pid`,`product`.`is_hot` AS `is_hot`,`product`.`pcontent` AS `pcontent`,`product`.`csid` AS `csid`,`category`.`cid` AS `cid` from ((`category` join `categorysecond`) join `product`) where ((`product`.`csid` = `categorysecond`.`csid`) and (`category`.`cid` = `categorysecond`.`cid`));
 
 SET FOREIGN_KEY_CHECKS = 1;

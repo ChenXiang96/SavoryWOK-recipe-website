@@ -67,9 +67,6 @@
 						 <div id="block_txt1"><span class="txt_tart">“</span>最近忙的天昏地暗，早上不想起床做早餐，之前配白土司吃的果酱都都吃完了，孩子要吃有果料的面包，那就来一个混合坚果吧，加了咖啡和红糖，好看更好吃。<span class="txt_end">” </span>
 						 </div>
 						 </blockquote>
-						 
-												
-
 
 
 <div class="mo mt20">
@@ -129,9 +126,6 @@
 
 </ul>
 </div>
-
-
-
 
 						
 <div class="mo mt20">

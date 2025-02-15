@@ -98,10 +98,6 @@
 							</p-->
 						</div>
 
-
-
-
-
 						<div class="mo mt20">
 							<h3>食材明细</h3>
 						</div>
@@ -131,12 +127,6 @@
 								</ul>
 							</div>
 						</fieldset>
-
-
-						
-
-
-
 
 						<div class="mo mt20">
 							<h3>${product.pname }的做法步骤</h3>
@@ -291,9 +281,6 @@
 
 
 						</div>
-
-			
-		
 
 
 

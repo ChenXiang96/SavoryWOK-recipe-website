@@ -22,7 +22,10 @@ public interface ProductDao extends BaseDao<Product>{
 
 	public List<Product> findByCategorySecondCategoryCid(Integer cid,Integer page);
 
-
+    
+	public Integer countByCategorySecondCategoryCid(Integer cid);
+	
+	public Integer countByCategorySecondCsid(Integer csid);
 
 	public Integer CountPageProductFromCategory(Integer cid);
 	

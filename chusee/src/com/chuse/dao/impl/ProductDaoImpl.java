@@ -1,145 +1,193 @@
-
 package com.chuse.dao.impl;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import org.hibernate.query.Query;
-import org.hibernate.hql.internal.ast.HqlASTFactory;
 import org.springframework.stereotype.Repository;
 
 import com.chuse.dao.ProductDao;
 import com.chuse.entity.Product;
 import com.chuse.entity.Subject;
 
-
-
 @Repository("productDao")
 @SuppressWarnings("all")
-public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao{
-	
-	final String selecthql = "select p.pid,p.image,p.is_hot,"
-	 + "p.pdate,p.pdesc,p.pname,p.pcontent ";
-	
+public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao {
 
-	
+    @Override
+    public List<Product> findByCategorySecondCategoryCid(Integer cid, Integer page) {
+        String hql = "select p from Product p " +
+                     "join p.categorySecond cs " +
+                     "join cs.categories c " +
+                     "where c.cid = :cid";
+        Query<Product> query = this.getCurrentSession().createQuery(hql, Product.class);
+        query.setParameter("cid", cid);
+        query.setFirstResult((page - 1) * 12); // 分页起始位置
+        query.setMaxResults(12); // 每页大小
+        return query.list();
+    }
 
-			
-	
-	public Integer CountPageProductFromCategory(Integer cid) {
-		String hql = "select count(*) from Product p, Category c, CategorySecond cs ";
-		hql += "where p.categorySecond.csid = cs.csid and cs.category.cid = c.cid and c.cid = ?";
-		return count(hql, cid);
-	}
-	
+    @Override
+    public Integer countByCategorySecondCategoryCid(Integer cid) {
+        String hql = "select count(p) from Product p " +
+                     "join p.categorySecond cs " +
+                     "join cs.categories c " +
+                     "where c.cid = :cid";
+        return ((Long) this.getCurrentSession().createQuery(hql)
+                          .setParameter("cid", cid)
+                          .uniqueResult()).intValue();
+    }
 
+    @Override
+    public List<Product> findByCategorySecondCsid(Integer csid, Integer page) {
+        String hql = "select p from Product p " +
+                     "join p.categorySecond cs " +
+                     "where cs.csid = :csid";
+        Query<Product> query = this.getCurrentSession().createQuery(hql, Product.class);
+        query.setParameter("csid", csid);
+        query.setFirstResult((page - 1) * 12); // 分页起始位置
+        query.setMaxResults(12); // 每页大小
+        return query.list();
+    }
 
-	public Integer CountPageProductFromCategorySecond(Integer csid) {
-		String hql = "select count(*) from Product p ,CategorySecond cs ";
-		hql += "where p.categorySecond.csid = cs.csid and cs.csid = ?";
-		return count(hql, csid);
-	}
-	
-	
-	public Integer CountProduct() {
-		String hql = "select count(*) from Product";
-		return count(hql);
-	}
-	
+    @Override
+    public Integer countByCategorySecondCsid(Integer csid) {
+        String hql = "select count(p) from Product p " +
+                     "join p.categorySecond cs " +
+                     "where cs.csid = :csid";
+        return ((Long) this.getCurrentSession().createQuery(hql)
+                          .setParameter("csid", csid)
+                          .uniqueResult()).intValue();
+    }
 
+    @Override
+    public Product findOne(Integer pid) {
+        return this.getCurrentSession().get(Product.class, pid);
+    }
 
-	public List<Product> findByCategorySecondCategoryCid(Integer cid,
-			Integer page) {
-		String hql = selecthql + "from Product p,Category c, CategorySecond cs ";
-		hql += "where p.categorySecond.csid = cs.csid and cs.category.cid = c.cid and c.cid = ?";
-		return Query(cid, page, hql);
-	}
-	
-	
-	
-	public List<Product> findByCategorySecondCsid(Integer csid, Integer page) {
-		String hql = selecthql + "from Product p ,CategorySecond cs ";
-		hql += "where p.categorySecond.csid = cs.csid and cs.csid = ?";
-		return Query(csid, page, hql);
-	}
-	
-    
+    @Override
+    public List<Product> findHot() {
+        String hql = "from Product where is_hot = 1 order by pdate desc";
+        Query<Product> query = this.getCurrentSession().createQuery(hql, Product.class);
+        query.setMaxResults(6); // 查询最热的6条商品
+        return query.list();
+    }
 
-	private List<Product> Query(Integer csid, Integer page,String hql){
-		int rows = 12;
-		Query query = this.getCurrentSession().createQuery(hql);
-		query.setParameter(0, csid);
-		List list= query.setFirstResult((page - 1) * rows).setMaxResults(rows).list();
-		
-		List<Product> products = new ArrayList<Product>();
-		Iterator iter = list.iterator();
-		while(iter.hasNext()){
-			Object[] obj = (Object[])iter.next();
-			Product product = new Product();
-			int pid = (Integer)obj[0];
-			product.setPid(pid);
-			product.setImage((String)obj[1]);
-			product.setIs_hot((Integer) obj[2]);
-			
-            product.setPdate((Date) obj[3]);
-			product.setPdesc((String) obj[4]);
-			product.setPname((String) obj[5]);
-			product.setPcontent((String) obj[6]);
+    @Override
+    public List<Product> findNew() {
+        String hql = "from Product order by pdate desc";
+        Query<Product> query = this.getCurrentSession().createQuery(hql, Product.class);
+        query.setMaxResults(10); // 查询最新的10条商品
+        return query.list();
+    }
 
-		
-			products.add(product);
-		}
-		return products;
-	}
-	
+    @Override
+    public List<Product> findAll(Integer page) {
+        String hql = "from Product";
+        Query<Product> query = this.getCurrentSession().createQuery(hql, Product.class);
+        query.setFirstResult((page - 1) * 12); // 分页起始位置
+        query.setMaxResults(12); // 每页大小
+        return query.list();
+    }
 
-	
+    // 其他方法保持空实现
+    @Override
+    public Serializable save(Product o) {
+        return null;
+    }
 
-	
-	
-	
-	public List<Product> findHot() {
-		String hql = "from Product p where p.is_hot = 1 ";
-		hql += "order by p.pdate desc";
-		int rows = 9;
-		return find(hql,1,rows);
-	}
-	
-	
-	
+    @Override
+    public void delete(Serializable id) {
+    }
 
+    @Override
+    public void delete(Product o) {
+    }
 
-	public Product findOne(Integer pid) {
-		String hql = "from Product p where p.pid = ?";
-		Query query = this.getCurrentSession().createQuery(hql);
-		query.setParameter(0, pid);
-		return (Product)query.uniqueResult(); 
-	}
-	
-	public List<Product> findNew() {
-		String hql = "from Product p ";
-		hql += "order by p.pdate desc";
-		int rows = 10;
-		return find(hql,1,rows);
-	}
-	
-	
-	
-	
+    @Override
+    public void update(Product o) {
+    }
 
-	public List<Product> findAll(Integer page) {
-		String hql = "from Product";
-		int rows = 12;
-		int page1 = page;
-		return find(hql,page1,rows);
-	}
+    @Override
+    public void saveOrUpdate(Product o) {
+    }
 
+    @Override
+    public Product get(Serializable id) {
+        return null;
+    }
 
+    @Override
+    public List<Product> find(String hql) {
+        return null;
+    }
 
-	
+    @Override
+    public List<Product> find(String hql, Map<String, Object> params) {
+        return null;
+    }
 
+    @Override
+    public List<Product> find(String hql, int page, int rows) {
+        return null;
+    }
 
+    @Override
+    public List<Subject> hfind2(String hql, int page, int rows) {
+        return null;
+    }
 
+    @Override
+    public List<Subject> hfind(String hql, int page, int rows) {
+        return null;
+    }
 
+    @Override
+    public List<Product> find(String hql, Map<String, Object> params, int page, int rows) {
+        return null;
+    }
+
+    @Override
+    public Integer count(String hql) {
+        return null;
+    }
+
+    @Override
+    public Integer count(String hql, Integer id) {
+        return null;
+    }
+
+    @Override
+    public Integer count(String hql, Map<String, Object> params) {
+        return null;
+    }
+
+    @Override
+    public int executeHql(String hql) {
+        return 0;
+    }
+
+    @Override
+    public int executeHql(String hql, Map<String, Object> params) {
+        return 0;
+    }
+
+    @Override
+    public Integer CountPageProductFromCategory(Integer cid) {
+        return null;
+    }
+
+    @Override
+    public Integer CountPageProductFromCategorySecond(Integer csid) {
+        return null;
+    }
+
+    @Override
+    public Integer CountProduct() {
+        return null;
+    }
 }
