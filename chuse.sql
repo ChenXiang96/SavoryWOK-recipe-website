@@ -11,7 +11,7 @@
  Target Server Version : 50648 (5.6.48-log)
  File Encoding         : 65001
 
- Date: 15/02/2025 01:21:03
+ Date: 16/02/2025 02:26:37
 */
 
 SET NAMES utf8mb4;
@@ -376,11 +376,18 @@ CREATE TABLE `recipe_step`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `pid`(`pid`) USING BTREE,
   CONSTRAINT `pid` FOREIGN KEY (`pid`) REFERENCES `product` (`pid`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of recipe_step
 -- ----------------------------
+INSERT INTO `recipe_step` VALUES (1, 3, 1, '排骨洗净再剁块；', 'steps_images/HSPG1.jpg');
+INSERT INTO `recipe_step` VALUES (2, 3, 2, '排骨凉水下锅，不盖锅盖煮开；', 'steps_images/HSPG2.jpg');
+INSERT INTO `recipe_step` VALUES (3, 3, 3, '捞出排骨用清水冲洗一下放置备用；', 'steps_images/HSPG3.jpg');
+INSERT INTO `recipe_step` VALUES (4, 1, 1, '食材:猪瘦肉、胡萝卜、青椒和泡发的黑木耳切丝。', 'steps_images/YXRS1.jpg');
+INSERT INTO `recipe_step` VALUES (5, 1, 2, '肉丝中放入盐。', 'steps_images/YXRS2.jpg');
+INSERT INTO `recipe_step` VALUES (6, 1, 3, '放入一个鸡蛋清。', 'steps_images/YXRS3.jpg');
+INSERT INTO `recipe_step` VALUES (7, 1, 4, '多拌一下，拌匀上浆。', 'steps_images/YXRS4.jpg');
 
 -- ----------------------------
 -- Table structure for relationship_11
