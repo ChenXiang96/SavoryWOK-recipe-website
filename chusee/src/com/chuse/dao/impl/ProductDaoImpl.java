@@ -7,7 +7,10 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.chuse.dao.ProductDao;
@@ -68,6 +71,24 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao {
     public Product findOne(Integer pid) {
         return this.getCurrentSession().get(Product.class, pid);
     }
+    
+    @Autowired
+    private SessionFactory sessionFactory;
+
+    protected Session getCurrentSession() {
+        return sessionFactory.getCurrentSession();
+    }
+    
+ // 修改后的查询方法（核心）
+    @Override
+    public Product findWithSteps(Integer pid) {
+        String hql = "SELECT p FROM Product p LEFT JOIN FETCH p.steps WHERE p.pid = :pid";
+        return getCurrentSession()
+                .createQuery(hql, Product.class)
+                .setParameter("pid", pid)
+                .uniqueResult();
+    }
+
 
     @Override
     public List<Product> findHot() {

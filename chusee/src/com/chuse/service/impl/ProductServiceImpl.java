@@ -37,11 +37,19 @@ public class ProductServiceImpl implements ProductService {
         return productDao.findByCategorySecondCsid(csid, page);
     }
 
-    @Override
+/**    @Override
     public Product findByPid(Integer pid) {
         return productDao.findOne(pid);
     }
+**/   
+ // 修改后的服务方法
+    @Override
+    public Product findByPid(Integer pid) {
+        return productDao.findWithSteps(pid);
+    }
 
+    
+    
     @Override
     public List<Product> findHot() {
         return productDao.findHot();

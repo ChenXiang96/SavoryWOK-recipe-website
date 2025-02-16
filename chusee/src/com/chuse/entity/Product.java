@@ -1,13 +1,19 @@
 package com.chuse.entity;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
 import com.chuse.entity.Category;
@@ -37,6 +43,13 @@ public class Product implements java.io.Serializable{
 	@JoinColumn(name="csid")
 	@ManyToOne
 	private CategorySecond categorySecond;
+	
+	
+	 // 新增：与 recipe_step 表的一对多关系
+	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+	@OrderBy("step ASC") // 保证步骤顺序
+    private List<RecipeStep> steps; // 存储该菜品对应的所有步骤
+    
 
 
 public Integer getPid() {
@@ -88,6 +101,14 @@ public void setCategorySecond(CategorySecond categorySecond) {
 	this.categorySecond = categorySecond;
 }
 
+// 新增：steps 的 Getter 和 Setter
+public List<RecipeStep> getSteps() {
+    return steps;
+}
+
+public void setSteps(List<RecipeStep> steps) {
+    this.steps = steps;
+}
 
 
    

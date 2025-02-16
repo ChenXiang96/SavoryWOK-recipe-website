@@ -37,6 +37,7 @@ public interface ProductDao extends BaseDao<Product>{
 	
 	public Product findOne(Integer pid);
 	
+	public Product findWithSteps(Integer pid);
 	
 	public List<Product> findAll(Integer page);
 

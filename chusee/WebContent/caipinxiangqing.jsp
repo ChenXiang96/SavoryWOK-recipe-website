@@ -136,105 +136,25 @@
 
 
            <div class="recipeStep">
-            <ul>
-				              <li>
-			  			  <div class="recipeStep_img">
-				  <img src="https://i8.meishichina.com/attachment/recipe/2018/06/12/20180612152878282354424210373406.jpg?x-oss-process=style/p320" alt="红糖咖啡坚果吐司的做法步骤：1">
-			                   </div>
-								<div class="recipeStep_word"><div class="recipeStep_num">1</div>准备好材料和份量。</div>
-				              </li>
-			                <li>
-			  			  <div class="recipeStep_img">
-				  <img src="https://i8.meishichina.com/attachment/recipe/2018/06/12/20180612152878284093789810373406.jpg?x-oss-process=style/p320" alt="红糖咖啡坚果吐司的做法步骤：2">
-			                   </div>
-								<div class="recipeStep_word"><div class="recipeStep_num">2</div>30克的咖啡加90克的热水调成浓一点的咖啡。</div>
-				              </li>
-			                <li>
-			  			  <div class="recipeStep_img">
-				  <img src="https://i8.meishichina.com/attachment/recipe/2018/06/12/20180612152878285670197110373406.jpg?x-oss-process=style/p320" alt="红糖咖啡坚果吐司的做法步骤：3">
-			                   </div>
-								<div class="recipeStep_word"><div class="recipeStep_num">3</div>除果料外所有的食材放入面包机，启动发面程序（和面28分钟加发酵20分钟）。</div>
-				              </li>
-			                <li>
-			  			  <div class="recipeStep_img">
-				  <img src="https://i8.meishichina.com/attachment/recipe/2018/06/12/20180612152878287191480010373406.jpg?x-oss-process=style/p320" alt="红糖咖啡坚果吐司的做法步骤：4">
-			                   </div>
-								<div class="recipeStep_word"><div class="recipeStep_num">4</div>和面24分钟后剪一小块面团，拉膜检查和面的状态，土司一定要出膜。</div>
-				              </li>
-			                <li>
-			  			  <div class="recipeStep_img">
-				  <img src="https://i8.meishichina.com/attachment/recipe/2018/06/12/20180612152878288730432710373406.jpg?x-oss-process=style/p320" alt="红糖咖啡坚果吐司的做法步骤：5">
-			                   </div>
-								<div class="recipeStep_word"><div class="recipeStep_num">5</div>把果料加到面团里，继续和面4分钟，把果料都揉进面团里。</div>
-				              </li>
-			                <li>
-			  			  <div class="recipeStep_img">
-				  <img src="https://i8.meishichina.com/attachment/recipe/2018/06/12/20180612152878290282639110373406.jpg?x-oss-process=style/p320" alt="红糖咖啡坚果吐司的做法步骤：6">
-			                   </div>
-								<div class="recipeStep_word"><div class="recipeStep_num">6</div>加果料的面团揉好后，发酵20分钟（发面程序自带发酵20分钟，不需要去调面包机的程序）。</div>
-				              </li>
-			                <li>
-			  			  <div class="recipeStep_img">
-				  <img src="https://i8.meishichina.com/attachment/recipe/2018/06/12/2018061215287829179251410373406.jpg?x-oss-process=style/p320" alt="红糖咖啡坚果吐司的做法步骤：7">
-			                   </div>
-								<div class="recipeStep_word"><div class="recipeStep_num">7</div>面团发酵结束。</div>
-				              </li>
-			                <li>
-			  			  <div class="recipeStep_img">
-				  <img src="https://i8.meishichina.com/attachment/recipe/2018/06/12/20180612152878293244532310373406.jpg?x-oss-process=style/p320" alt="红糖咖啡坚果吐司的做法步骤：8">
-			                   </div>
-								<div class="recipeStep_word"><div class="recipeStep_num">8</div>把面团平均分成3份，排气滚圆后盖上保鲜膜松弛20分钟。</div>
-				              </li>
-			                <li>
-			  			  <div class="recipeStep_img">
-				  <img src="https://i8.meishichina.com/attachment/recipe/2018/06/12/20180612152878294741512510373406.jpg?x-oss-process=style/p320" alt="红糖咖啡坚果吐司的做法步骤：9">
-			                   </div>
-								<div class="recipeStep_word"><div class="recipeStep_num">9</div>取一个面团擀成长方形。</div>
-				              </li>
-			                <li>
-			  			  <div class="recipeStep_img">
-				  <img src="https://i8.meishichina.com/attachment/recipe/2018/06/12/20180612152878295944060710373406.jpg?x-oss-process=style/p320" alt="红糖咖啡坚果吐司的做法步骤：10">
-			                   </div>
-								<div class="recipeStep_word"><div class="recipeStep_num">10</div>面团左右两边往中间折叠，今天偷懒，做的一次卷折法。</div>
-				              </li>
-			                <li>
-			  			  <div class="recipeStep_img">
-				  <img src="https://i8.meishichina.com/attachment/recipe/2018/06/12/20180612152878296715580810373406.jpg?x-oss-process=style/p320" alt="红糖咖啡坚果吐司的做法步骤：11">
-			                   </div>
-								<div class="recipeStep_word"><div class="recipeStep_num">11</div>面团从顶部往下卷起来，卷2.5圈长度是最好的，不要超过3圈。</div>
-				              </li>
-			                <li>
-			  			  <div class="recipeStep_img">
-				  <img src="https://i8.meishichina.com/attachment/recipe/2018/06/12/20180612152878298086332410373406.jpg?x-oss-process=style/p320" alt="红糖咖啡坚果吐司的做法步骤：12">
-			                   </div>
-								<div class="recipeStep_word"><div class="recipeStep_num">12</div>卷好的面团收口朝下，依次放入土司盒里。</div>
-				              </li>
-			                <li>
-			  			  <div class="recipeStep_img">
-				  <img src="https://i8.meishichina.com/attachment/recipe/2018/06/12/20180612152878299282757410373406.jpg?x-oss-process=style/p320" alt="红糖咖啡坚果吐司的做法步骤：13">
-			                   </div>
-								<div class="recipeStep_word"><div class="recipeStep_num">13</div>面团放入烤箱中发酵，放一碗温水保持烤箱内的湿度，设置温度37度，时间50分钟。</div>
-				              </li>
-			                <li>
-			  			  <div class="recipeStep_img">
-				  <img src="https://i8.meishichina.com/attachment/recipe/2018/06/12/20180612152878300254684710373406.jpg?x-oss-process=style/p320" alt="红糖咖啡坚果吐司的做法步骤：14">
-			                   </div>
-								<div class="recipeStep_word"><div class="recipeStep_num">14</div>面团发酵到8分满取出，预热烤箱。</div>
-				              </li>
-			                <li>
-			  			  <div class="recipeStep_img">
-				  <img src="https://i8.meishichina.com/attachment/recipe/2018/06/12/20180612152878301274464710373406.jpg?x-oss-process=style/p320" alt="红糖咖啡坚果吐司的做法步骤：15">
-			                   </div>
-								<div class="recipeStep_word"><div class="recipeStep_num">15</div>面团放入烤箱底层，设置温度上火135度，下火165度烤35分钟，上色后及时加盖锡纸。</div>
-				              </li>
-			                <li>
-			  			  <div class="recipeStep_img">
-				  <img src="https://i8.meishichina.com/attachment/recipe/2018/06/12/20180612152878356738331210373406.JPG?x-oss-process=style/p320" alt="红糖咖啡坚果吐司的做法步骤：16">
-			                   </div>
-								<div class="recipeStep_word"><div class="recipeStep_num">16</div>土司出炉后轻震2次模具，脱模取出，放凉后切片。</div>
-				              </li>
-			              </ul>
-          </div>
+           
+             <ul>
+               <c:forEach items="${product.steps}" var="step" varStatus="status">
+                 <li>
+                   <div class="recipeStep_img">
+                    <img src="${pageContext.request.contextPath}/${step.image}" alt="${product.pname}步骤${step.step}">
+                   </div>
+                   <div class="recipeStep_word">
+                      <div class="recipeStep_num">${step.step}</div>
+                      ${step.description}
+                   </div>
+                
+                 </li>
+            
+               </c:forEach>
+        
+             </ul>
+           
+           </div>
 		  		  
 
 
