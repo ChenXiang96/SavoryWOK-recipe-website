@@ -14,7 +14,7 @@
 <div class="w">
 <div class="ft1">
 <p class="c3b">
-<img class="img5" src="${pageContext.request.contextPath}/images/lo.png" alt="Logo Organic"/>
+<img class="img5" src="${pageContext.request.contextPath}/images/logo.png" alt="logo image"/>
 
 </p>
 <p class="c3c">

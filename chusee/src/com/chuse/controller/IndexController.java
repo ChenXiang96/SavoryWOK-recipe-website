@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.chuse.service.CategoryService;
 import com.chuse.service.CategoryService2;
-import com.chuse.service.ProductService;
+import com.chuse.service.DishesService;
 import com.chuse.service.SubjectService;
 
 @Controller	
@@ -24,7 +24,7 @@ public class IndexController {
 	
 
 	@Resource
-	private ProductService productService;
+	private DishesService DishesService;
 	
 
 	@Resource
@@ -39,10 +39,13 @@ public class IndexController {
 		session.setAttribute("cList", categoryService.getCategory());
 		//把所有的专题一级分类都存入到session中
 		session.setAttribute("cList2", categoryService2.getCategory2());
-		//把最热的10条商品添加到map集合中
-		map.put("hList", productService.findHot());
 		
-		map.put("nList", productService.findNew());
+		
+		
+		//把最热的10条商品添加到map集合中
+		map.put("hList", DishesService.findHot());
+		
+		map.put("nList", DishesService.findNew());
 		
 		//把3条专题存放到map集合中
 		map.put("nList2", subjectService.findNew2());

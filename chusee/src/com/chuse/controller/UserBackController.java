@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.chuse.entity.Page;
-import com.chuse.entity.Product;
+import com.chuse.entity.Dishes;
 import com.chuse.entity.User;
 import com.chuse.service.impl.UserBackServiceImpl;
 

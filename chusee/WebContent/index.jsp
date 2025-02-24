@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
    <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 
@@ -425,127 +426,110 @@ a.right {
 					<div class="w5">
 
                <div id="main-content">
-                        <div class="ui_title">
-                           <div class="ui_title_wrap">
-                         
-                         <!--   <h2 class="on"><a href="javascript:void(0);" class="right2">新秀菜谱</a></h2>
-                          <h2><a href="javascript:void(0);" class="right2">一周热门</a></h2>
-                          <h2><a href="javascript:void(0);" class="right2">最受欢迎的家常菜</a></h2>
-                          -->
-                          <c:forEach items="${sessionScope.cList}" var="c">
-                          <h3>
-                          <a title="健康首页" href="${ pageContext.request.contextPath }/findByCid/<c:out value="${c.cid}"/>/1" class="right3" target="_blank">
-                             <c:out value="${c.cname}"></c:out> 
-                          </a>
-                          </h3>
-                          </c:forEach>
-                       
-                           </div>
-                        </div>
-		<div class="wrap-content">
+                        
+	    <div class="wrap-content">
 				<div class="row" style="margin-right:12px;">
 					<div class="col-1-4">
 					
 							<div class="zoom-container"  style="display:inline;float:left;">
-								<a href="#" >
+								<a href="${pageContext.request.contextPath}/findByPid/1" >
 									<span class="zoom-caption" >
 										<span>鱼香肉丝</span>
 									</span>
 									<img  src="cimg/1.jpg"/>
 								</a>
-							</div>
-							
+							</div>	
 					</div>
-						<div class="col-1-4">
 					
-							<div class="zoom-container"  style="display:inline;float:left;">
-								<a href="#" >
-									<span class="zoom-caption" >
-										<span>芦笋烤冰鱼</span>
-									</span>
-									<img  src="cimg/2.jpg "/>
-								</a>
-							</div>
-							
-					</div>	
 					<div class="col-1-4">
 					
 							<div class="zoom-container"  style="display:inline;float:left;">
-								<a href="#" >
+								<a href="${pageContext.request.contextPath}/findByPid/1" >
 									<span class="zoom-caption" >
-										<span>红烧排骨</span>
+										<span>鱼香肉丝</span>
 									</span>
-									<img  src="cimg/3.jpg"/>
+									<img  src="cimg/1.jpg"/>
 								</a>
-							</div>
-							
+							</div>	
 					</div>
+					
 					<div class="col-1-4">
 					
 							<div class="zoom-container"  style="display:inline;float:left;">
-								<a href="#" >
+								<a href="${pageContext.request.contextPath}/findByPid/1" >
 									<span class="zoom-caption" >
-										<span>番茄四季豆</span>
+										<span>鱼香肉丝</span>
 									</span>
-									<img  src="cimg/4.jpg "/>
+									<img  src="cimg/1.jpg"/>
 								</a>
-							</div>
-							
+							</div>	
 					</div>
+					
 					<div class="col-1-4">
 					
 							<div class="zoom-container"  style="display:inline;float:left;">
-								<a href="#" >
+								<a href="${pageContext.request.contextPath}/findByPid/1" >
 									<span class="zoom-caption" >
-										<span>木耳炒长豆角</span>
+										<span>鱼香肉丝</span>
 									</span>
-									<img  src="cimg/5.jpg"/>
+									<img  src="cimg/1.jpg"/>
 								</a>
-							</div>
-							
+							</div>	
 					</div>
-						<div class="col-1-4">
+					
+					<div class="col-1-4">
 					
 							<div class="zoom-container"  style="display:inline;float:left;">
-								<a href="#" >
+								<a href="${pageContext.request.contextPath}/findByPid/1" >
 									<span class="zoom-caption" >
-										<span>炸茄盒</span>
+										<span>鱼香肉丝</span>
 									</span>
-									<img  src="cimg/6.jpg"/>
+									<img  src="cimg/1.jpg"/>
 								</a>
-							</div>
-							
+							</div>	
 					</div>
-						<div class="col-1-4">
+					
+					<div class="col-1-4">
 					
 							<div class="zoom-container"  style="display:inline;float:left;">
-								<a href="#" >
+								<a href="${pageContext.request.contextPath}/findByPid/1" >
 									<span class="zoom-caption" >
-										<span>红烧鸡腿</span>
+										<span>鱼香肉丝</span>
 									</span>
-									<img  src="cimg/2r1.jpg"/>
+									<img  src="cimg/1.jpg"/>
 								</a>
-							</div>
-							
+							</div>	
 					</div>
-						<div class="col-1-4">
+					
+					<div class="col-1-4">
 					
 							<div class="zoom-container"  style="display:inline;float:left;">
-								<a href="#" >
+								<a href="${pageContext.request.contextPath}/findByPid/1" >
 									<span class="zoom-caption" >
-										<span>辣炒鸡胗</span>
+										<span>鱼香肉丝</span>
 									</span>
-									<img  src="cimg/2r2.jpg "/>
+									<img  src="cimg/1.jpg"/>
 								</a>
-							</div>
-							
+							</div>	
 					</div>
+					
+					<div class="col-1-4">
+					
+							<div class="zoom-container"  style="display:inline;float:left;">
+								<a href="${pageContext.request.contextPath}/findByPid/1" >
+									<span class="zoom-caption" >
+										<span>鱼香肉丝</span>
+									</span>
+									<img  src="cimg/1.jpg"/>
+								</a>
+							</div>	
+					</div>
+					
+					
+					
 				</div>
 				
-			</div>
-
-               	
-				
+		 </div>			
 					
 				</div>
 			</div>

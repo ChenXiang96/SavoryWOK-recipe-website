@@ -26,6 +26,8 @@ public class Category implements Serializable {
     private Integer cid;
 
     private String cname;
+    
+    private String cimage;
 
     // 使用 @ManyToMany 注解，表示多对多关系
     @ManyToMany(fetch = FetchType.EAGER)
@@ -49,8 +51,16 @@ public class Category implements Serializable {
         return cname;
     }
 
-    public void setCname(String cname) {
+    public void setCimage(String cname) {
         this.cname = cname;
+    }
+    
+    public String getCimage() {
+        return cimage;
+    }
+
+    public void setCname(String cimage) {
+        this.cimage = cimage;
     }
 
     public Set<CategorySecond> getCategorySeconds() {

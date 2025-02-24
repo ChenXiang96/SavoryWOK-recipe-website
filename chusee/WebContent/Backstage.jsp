@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>网站后台内容管理系统登录登陆界面模板 - cssmoban</title>
+<title>Backend - Content management system login Page</title>
 <meta name="keywords" content="后台登陆页面模板,后台登录界面html,后台登录模板,后台登录页面html,后台管理系统后台登录模板">
 <meta name="description" content="cssmoban提供后台管理系统登录界面html模板学习和下载">
 <meta name="viewport" content="width=device-width">
@@ -36,12 +36,12 @@
         	<input class="text_value" value="" name="username" type="text" id="username">
             <input class="text_value" value="" name="password" type="password" id="password">
         </div>
-        <button class="button" id="submit" type="submit">登录</button>
+        <button class="button" id="submit" type="submit">Login</button>
     </div>
     <div align="center"><font color="white">${errorinfo}</font></div>
     
     <div id="tip"></div>
-    <div class="foot"> <a href="${pageContext.request.contextPath }/index" target="_blank" title="模板之家"></a>
+    <div class="foot"> <a href="${pageContext.request.contextPath }/index" target="_blank" title="Backend-login Page"></a>
     </div>
     </form>
 </div>

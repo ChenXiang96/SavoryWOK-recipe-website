@@ -192,14 +192,13 @@
 								<li>
 
 
-										<div
-											class="recipe recipe-215-horizontal pure-g image-link display-block">
+										<div class="recipe recipe-215-horizontal pure-g image-link display-block">
 											<a href="${pageContext.request.contextPath}/essayshow?se=${s.sid}&sessay=${s.sessay}"
 												data-click-tracking-url="" data-expose-tracking-url=""
 												target="_blank">
 												<div class="cover pure-u">
 													<img
-														src="${pageContext.request.contextPath}/images/${s.simg}"
+														src="${pageContext.request.contextPath}/${s.simg}"
 														data-src="http://s2.cdn.xiachufang.com/cf1cd37a3a9d11e7bc9d0242ac110002_2304w_1728h.jpg?imageView2/1/w/215/h/136/interlace/1/q/90"
 														alt="早点爱上早点幸福" class="unveiled" width="215" height="136">
 												</div>
@@ -233,12 +232,6 @@
 			</div>
 		</div>
 	</div>
-
-
-
-
-
-
 
 	</section>
 

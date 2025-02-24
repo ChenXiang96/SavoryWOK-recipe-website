@@ -2,7 +2,7 @@ package com.chuse.dao;
 
 import java.util.List;
 
-import com.chuse.entity.Product;
+import com.chuse.entity.Dishes;
 import com.chuse.entity.Subject;
 
 public interface SubjectDao extends BaseDao<Subject>{

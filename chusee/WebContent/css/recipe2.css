@@ -128,7 +128,8 @@ font-size:20px;line-height:20px;padding:20px 0 20px 25px;background:rgba(0,0,0,0
 .home_index_slider .controls{display:none}
 .recipe_index_n10{padding:0}
 .recipe_index_n10 a{float:left;width:99px;text-align:center;text-decoration:none;font-size:14px}
-.recipe_index_n10 a img{width:50px;height:50px;margin:0 auto 5px;background:#f2f2f2 url(//static.meishichina.com/v6/img/loading-16-16.gif) no-repeat scroll center center;border-radius:50%}
+
+.recipe_index_n10 a img{width:80px;height:50px;margin:0 auto 5px;background:#f2f2f2 url(//static.meishichina.com/v6/img/loading-16-16.gif) no-repeat scroll center center;border-radius:50%}
 #recipeindex_info{margin:30px 0 0 0}
 #recipeindex_info_wrap{background:#fff;padding:10px 0 5px;width:990px;overflow:hidden}
 #recipeindex_living ul{display:none}

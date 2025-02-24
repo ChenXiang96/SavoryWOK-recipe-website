@@ -33,8 +33,19 @@ top:-38px;
     /* background: #CF6A14; */
     background: url(//static.meishichina.com/v6/img/wap_a/gotop.png) no-repeat scroll center center/58px 58px;
 }
-.imgl{
-margin-left:40px;
+
+.site-logo {
+  display: block;       /* 消除图片底部间隙 */
+  max-width: 280px;     /* 最大宽度限制 */
+  height: auto;         /* 高度自动保持比例 */
+  width: 100%;          /* 在容器内响应式缩放 */
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .site-logo {
+    max-width: 150px;   /* 小屏幕缩小尺寸 */
+  }
 }
 
   </style>  
@@ -64,17 +75,18 @@ margin-left:40px;
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="" href="${ pageContext.request.contextPath}/index"><img class="imgl" src="${pageContext.request.contextPath}/images/lo.png" alt="logo"/></a>
+                    <a class="" href="${ pageContext.request.contextPath}/index"><img class="site-logo" src="${pageContext.request.contextPath}/images/logo.png" alt="logo image"/></a>
                 </div>
                 <div class="navbar-collapse collapse ">
+                    <%-- 获取当前请求路径 --%>
+                    <c:set var="currentPath" value="${requestScope['javax.servlet.forward.request_uri']}"/>
                     <ul class="nav navbar-nav">
-                        <li class="active"><a  href="${ pageContext.request.contextPath}/index">主页</a></li> 
+                        <%-- 首页菜单项 --%>
+                        <li><a href="${ pageContext.request.contextPath}/index">主页</a></li> 
 						<li><a href="${ pageContext.request.contextPath}/health/list">菜谱</a></li>
 						<li><a href="${ pageContext.request.contextPath}/location.jsp">周边</a></li>
-                        <li><a href="${ pageContext.request.contextPath}/archive/list">甄选</a></li>
                         <li><a href="${ pageContext.request.contextPath}/myHealth">健康</a></li>
                         <li><a href="${ pageContext.request.contextPath}/specialshow">专题</a></li>
-                        <li><a href="${ pageContext.request.contextPath}/communityshow">社区</a></li>
                         <li><a href="${ pageContext.request.contextPath}/topicshow">话题</a></li>
                         
                     <c:if test="${sessionScope.user == null}">

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.chuse.entity.Page;
-import com.chuse.entity.Product;
+import com.chuse.entity.Dishes;
 import com.chuse.entity.Subject;
 import com.chuse.service.impl.SubjectBackServiceImpl;
 
@@ -32,8 +32,6 @@ public class SubjectBackController {
 	//后-修改商品-先找到要改的商品
 	@RequestMapping("/edit")
 	public String edit(@RequestParam(value="pid", required = false) Integer pid,Model model){
-		//List<ProductType> listtype=this.productTypeServiceImpl.listProductType();
-		//model.addAttribute("listtype", listtype);
 		Subject subject=this.subjectBackServiceImpl.findSubject(pid);
 		model.addAttribute("subject", subject);
 		System.out.println("xiao"+subject.getPname());

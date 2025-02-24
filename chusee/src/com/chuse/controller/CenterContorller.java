@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.chuse.entity.Product;
+import com.chuse.entity.Dishes;
 import com.chuse.entity.User;
 import com.chuse.service.impl.CenterServiceImpl;
 /*

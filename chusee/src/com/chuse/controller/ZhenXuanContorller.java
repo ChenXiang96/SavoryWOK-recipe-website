@@ -10,7 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.chuse.entity.Product;
+import com.chuse.entity.Dishes;
 import com.chuse.entity.Zhenxuan;
 import com.chuse.service.impl.ZhenXuanServiceImpl;
 

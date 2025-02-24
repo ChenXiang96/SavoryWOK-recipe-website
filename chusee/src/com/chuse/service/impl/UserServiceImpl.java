@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.chuse.dao.UserDao;
 import com.chuse.dao.impl.UserDaoImpl;
-import com.chuse.entity.Product;
+import com.chuse.entity.Dishes;
 import com.chuse.entity.User;
 import com.chuse.service.UserService;
 

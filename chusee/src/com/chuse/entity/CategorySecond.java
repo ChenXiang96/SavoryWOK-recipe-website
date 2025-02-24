@@ -31,7 +31,7 @@ public class CategorySecond implements Serializable {
 
     // 配置商品集合
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "categorySecond")
-    private Set<Product> products = new HashSet<Product>();
+    private Set<Dishes> products = new HashSet<Dishes>();
 
     public Integer getCsid() {
         return csid;
@@ -57,11 +57,11 @@ public class CategorySecond implements Serializable {
         this.categories = categories;
     }
 
-    public Set<Product> getProducts() {
+    public Set<Dishes> getProducts() {
         return products;
     }
 
-    public void setProducts(Set<Product> products) {
+    public void setProducts(Set<Dishes> products) {
         this.products = products;
     }
 }

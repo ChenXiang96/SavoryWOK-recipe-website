@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.chuse.entity.Product;
+import com.chuse.entity.Dishes;
 import com.chuse.entity.Subject;
-import com.chuse.service.ProductService;
+import com.chuse.service.DishesService;
 import com.chuse.service.SubjectService;
 
 @Controller
@@ -52,7 +52,7 @@ public class SubjectController {
 
 			//把最热的10条商品添加到map集合中
 			map.put("hList", subjectService.findHHot());
-			
+			session.setAttribute("activeMenu", "health");
 			
 			return "health"; 
 		}

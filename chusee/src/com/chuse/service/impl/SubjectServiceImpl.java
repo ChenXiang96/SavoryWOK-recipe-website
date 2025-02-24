@@ -7,11 +7,11 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.chuse.dao.ProductDao;
+import com.chuse.dao.DishesDao;
 import com.chuse.dao.SubjectDao;
-import com.chuse.entity.Product;
+import com.chuse.entity.Dishes;
 import com.chuse.entity.Subject;
-import com.chuse.service.ProductService;
+import com.chuse.service.DishesService;
 import com.chuse.service.SubjectService;
 
 @Transactional

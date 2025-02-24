@@ -10,9 +10,9 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Repository;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
-import com.chuse.dao.ProductDao;
+import com.chuse.dao.DishesDao;
 import com.chuse.dao.SubjectDao;
-import com.chuse.entity.Product;
+import com.chuse.entity.Dishes;
 import com.chuse.entity.Subject;
 
 @Repository("subjectDao")
@@ -30,26 +30,7 @@ public class SubjectDaoImpl extends BaseDaoImpl<Subject> implements SubjectDao {
 		return subject;
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 
 	
 	final String selecthql2 = "select s.pid,s.image,s.is_hot,"

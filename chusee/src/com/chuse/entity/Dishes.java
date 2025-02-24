@@ -21,14 +21,13 @@ import com.chuse.entity.CategorySecond;
 
 /**
  * 
- * Product代表显示的菜品
  * @author lenovo
  *
  */
 //这是一行注释
-@Table(name="product")
+@Table(name="Dishes")
 @Entity
-public class Product implements java.io.Serializable{
+public class Dishes implements java.io.Serializable{
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Id
    private Integer pid;
@@ -46,7 +45,7 @@ public class Product implements java.io.Serializable{
 	
 	
 	 // 新增：与 recipe_step 表的一对多关系
-	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "Dishes", cascade = CascadeType.ALL)
 	@OrderBy("step ASC") // 保证步骤顺序
     private List<RecipeStep> steps; // 存储该菜品对应的所有步骤
     

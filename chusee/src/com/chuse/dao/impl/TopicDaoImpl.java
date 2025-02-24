@@ -23,7 +23,7 @@ import org.hibernate.query.Query;
 import org.hibernate.SQLQuery;
 import com.chuse.dao.TopicDao;
 import com.chuse.entity.Food;
-import com.chuse.entity.Product;
+import com.chuse.entity.Dishes;
 import com.chuse.entity.Topic;
 
 

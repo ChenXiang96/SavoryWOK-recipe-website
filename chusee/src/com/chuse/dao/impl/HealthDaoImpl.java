@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 
 import com.chuse.entity.Howdo;
 import com.chuse.entity.Material;
-import com.chuse.entity.Product;
+import com.chuse.entity.Dishes;
 import com.chuse.entity.Topic;
 import com.chuse.entity.User;
 
@@ -25,12 +25,12 @@ public class HealthDaoImpl {
 	
 	//前---------------------------------------------
 	//前台跳转到菜的做法页面-把菜名和菜的图片列出来
-	public Product findByIdP(Integer pid){	
-		Product product = (Product)this.sessionFactory.getCurrentSession().
-				createQuery("from Product where pid = ?").
+	public Dishes findByIdP(Integer pid){	
+		Dishes Dishes = (Dishes)this.sessionFactory.getCurrentSession().
+				createQuery("from Dishes where pid = ?").
 				setParameter(0, pid).uniqueResult();
 		//System.out.print("aaachulaichulaidao");
-		return product;
+		return Dishes;
 		
 	}
 	//查用户
@@ -63,24 +63,6 @@ public class HealthDaoImpl {
 	
 
 	
-//
-//	@SuppressWarnings("unchecked")
-//	public	Product findById(Integer pid) {
-//		String hql = "from Product p where p.pid = ?";
-//		//Query query=this.getCu
-//		Query<Product> query = this.getCurrentSession().createQuery(hql);
-//		query.setParameter(0, pid);
-//		return (Product)query.uniqueResult(); 
-////		Product product = (Product)this.sessionFactory.openSession().
-////				createQuery("from Product where pid = ?").setParameter(0, pid).uniqueResult();
-////		return product;
-//	}
-	
-	
-	
-	
-	
-	
 	
 	private Session getCurrentSession() {
 		// TODO Auto-generated method stub
@@ -94,16 +76,16 @@ public class HealthDaoImpl {
 
 
 	//前-查-把数据库里的菜放在首页里-商品列表
-	public List<Product> findAll(){	
+	public List<Dishes> findAll(){	
 			//获得session  
 			Session session = sessionFactory.openSession();  
 			//打开事务  
 			Transaction ts = session.beginTransaction();
 			//原生的Sql查询  
-			SQLQuery query = session.createSQLQuery("select * from product");  
+			SQLQuery query = session.createSQLQuery("select * from Dishes");  
 			// addEntity 将查询结果封装到指定对象中  
-			query.addEntity(Product.class);  	          
-			List<Product> list = query.list();
+			query.addEntity(Dishes.class);  	          
+			List<Dishes> list = query.list();
 			System.out.println(list);            
 			//提交事务  
 			ts.commit();        
@@ -132,20 +114,20 @@ public class HealthDaoImpl {
 	
 	//后台----后台----后台----后台----后台----后台-----------------
 	//后台-改-修改健康列表
-	public Product findByIdBack(Integer pid){//前台找菜的做法也用到了	
-		Product product = (Product)this.sessionFactory.getCurrentSession().
-				createQuery("from Product where pid = ?").
+	public Dishes findByIdBack(Integer pid){//前台找菜的做法也用到了	
+		Dishes Dishes = (Dishes)this.sessionFactory.getCurrentSession().
+				createQuery("from Dishes where pid = ?").
 				setParameter(0, pid).uniqueResult();
-		return product;
+		return Dishes;
 	}
 	//后-改-submit的那个提交 ---调用修改
-	public Product updateBack(Product product){
+	public Dishes updateBack(Dishes Dishes){
 		Session session=sessionFactory.openSession();  
 	    Transaction tx=null;  
 	    try{  
 	        tx=session.beginTransaction(); 
 	        System.out.print("aaaaa");
-	        session.update(product);  
+	        session.update(Dishes);  
 	        tx.commit();  
 	    } catch (Exception e) {  
 	        tx.rollback();  
@@ -153,14 +135,14 @@ public class HealthDaoImpl {
 	     } finally{  
 	         session.close();  
 	     }
-		return product;		
+		return Dishes;		
 	}
 	//后-删除健康-已经查出来了，点击删除删除商品
-	public void deleteByIdBack(Product product,Integer pid){
+	public void deleteByIdBack(Dishes Dishes,Integer pid){
 		Session session=sessionFactory.openSession();
 		System.out.print("dao快删啊");
 		Transaction tran = session.beginTransaction() ;     
-	        String hql = "Delete FROM Product Where pid=?" ;     
+	        String hql = "Delete FROM Dishes Where pid=?" ;     
 	        Query q = session.createQuery(hql) ;     
 	        q.setInteger(0, pid) ;     
 	        q.executeUpdate() ;     
@@ -173,20 +155,15 @@ public class HealthDaoImpl {
 	
 	
 	//后-增-添加商品
-	public Product saveProduct(Product product){
-//		System.out.print("dao999");
-//		this.sessionFactory.getCurrentSession().save(product);
-//		System.out.print("dao"+product.getPname());
-//		return product;
+	public Dishes saveDishes(Dishes Dishes){
 		
 		Session session=sessionFactory.openSession();
 		Transaction transtion=session.beginTransaction();
-		session.save(product);	
-		System.out.print("dao"+product.getPname());
+		session.save(Dishes);	
+		System.out.print("dao"+Dishes.getPname());
 		transtion.commit();
 		session.close();
-		//this.sessionFactory.getCurrentSession().save(product);
-		return product;
+		return Dishes;
 		
 	}
 	
@@ -200,10 +177,10 @@ public class HealthDaoImpl {
 	
 	//后-查-健康列表
 	//分页查询数据	
-	public List<Product> findByPage(int pageNum, int pageSize){
+	public List<Dishes> findByPage(int pageNum, int pageSize){
 		try{
-			Query query=this.sessionFactory.getCurrentSession().createQuery("from "+Product.class.getSimpleName());
-			//查询product表里的所有数据--list
+			Query query=this.sessionFactory.getCurrentSession().createQuery("from "+Dishes.class.getSimpleName());
+			//查询Dishes表里的所有数据--list
 			query.setFirstResult((pageNum-1)*pageSize);
 			query.setMaxResults(pageSize);
 			return query.list();
@@ -216,7 +193,7 @@ public class HealthDaoImpl {
 	//统计数据个数 
 	public int findCountByPage(){
 		try{
-			Query query=this.sessionFactory.getCurrentSession().createQuery("select count("+"*"+") from "+Product.class.getSimpleName());
+			Query query=this.sessionFactory.getCurrentSession().createQuery("select count("+"*"+") from "+Dishes.class.getSimpleName());
 			return new Long((long)query.uniqueResult()).intValue();
 		}catch(Exception e){
 			e.printStackTrace();

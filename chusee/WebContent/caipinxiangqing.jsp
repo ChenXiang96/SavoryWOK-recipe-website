@@ -10,9 +10,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>菜品详情——厨色</title>    
-<meta name="keywords" content="红糖咖啡坚果吐司,红糖咖啡坚果吐司的做法,红糖咖啡坚果吐司的家常做法,红糖咖啡坚果吐司怎么做,红糖咖啡坚果吐司的做法步骤,红糖咖啡坚果吐司的最正宗做法,红糖咖啡坚果吐司怎么做好吃" />
-<meta name="description" content="美食天下通过图文并茂的方式，手把手教你红糖咖啡坚果吐司如何做才美味，并详细说明红糖咖啡坚果吐司烹制所用佐料时间和窍门，包括红糖咖啡坚果吐司营养价值和最适宜食用方法等揭秘。" />
+<title>Recipe-Detail</title>    
+
 <meta name="renderer" content="webkit">
 <meta http-equiv="mobile-agent" content="format=xhtml; url=https://m.meishichina.com/recipe/402563/">
 <link rel="alternate" media="only screen and (max-width: 640px)"  href="https://m.meishichina.com/recipe/402563/">
@@ -25,7 +24,7 @@
 </head>
 <body>
 
-  <%@ include file="menu3.jsp" %>
+  <%@ include file="menu.jsp" %>
 
 	<div class="wrap">
 
@@ -34,13 +33,13 @@
 
 <div class="userTop clear">
 <h1 class="recipe_De_title">
-<a href="https://home.meishichina.com/recipe-402563.html" id="recipe_title" title="红糖咖啡坚果吐司">
-<c:out value="${product.pname }"/>
+<a href="https://home.meishichina.com/recipe-402563.html" id="recipe_title" title="recipe_title">
+<c:out value="${Dishes.pname }"/>
 </a>
 </h1>
-<a title="龙宝宝陈诺" href="https://home.meishichina.com/space-10373406.html" target="_blank" class="uright">
+<a title="vecipe_title" href="https://home.meishichina.com/space-10373406.html" target="_blank" class="uright">
 <img src="https://i5.meishichina.com/data/avatar/010/37/34/06_avatar_big.jpg?x-oss-process=style/c80&v=20180612" />
-<span class="userName" id="recipe_username"> <c:out value="${product.pdesc }"/></span>
+<span class="userName" id="recipe_username"> <c:out value="${Dishes.pdesc}"/></span>
 </a>
 </div>
 
@@ -51,37 +50,33 @@
 						
 						<input type="hidden" id="recipe_id" value="402563">
 						<input type="hidden" id="recipe_uid" value="10373406">
-						<input type="hidden" id="recipe_title" value="红糖咖啡坚果吐司">
+						<input type="hidden" id="recipe_title" value="recipe detail">
 						<div class="recipe_De_imgBox" id="recipe_De_imgBox">
-							<a class="J_photo" title="红糖咖啡坚果吐司的做法"><span></span>
+							<a class="J_photo" title="recipe detail"><span></span>
 							<img  
-							 src="${ pageContext.request.contextPath }/<c:out value="${product.image }"/>"
-							alt="红糖咖啡坚果吐司的做法"> </a>
+							 src="${ pageContext.request.contextPath }/<c:out value="${Dishes.image}"/>"
+							alt="recipe detail"> </a>
 							<p class="J_photo">
 							<span class="De_bg">&nbsp;</span>
-							<span class="De_photo">3张图片</span>
+							<span class="De_photo">3 images</span>
 							</p>
 						</div>
 						 
-												<blockquote class="block_txt" id="block_txt">
-						 <div id="block_txt1"><span class="txt_tart">“</span>最近忙的天昏地暗，早上不想起床做早餐，之前配白土司吃的果酱都都吃完了，孩子要吃有果料的面包，那就来一个混合坚果吧，加了咖啡和红糖，好看更好吃。<span class="txt_end">” </span>
-						 </div>
-						 </blockquote>
 
 
 <div class="mo mt20">
-<h3>食材明细</h3>
+<h3>Ingredients list</h3>
 </div>
  
  
  <fieldset class="particulars">
-	<legend>用料</legend>
+	
 
 <div class="recipeCategory_sub_R clear">
 <ul>
 				  				  <li>
 					<span class="category_s1">
-				<a target="_blank" href="https://www.meishichina.com/YuanLiao/MianBaoFen/" title="面包粉的做法"  ><b> <c:out value="${product.pcontent }"/></b></a>
+				<a target="_blank" href="https://www.meishichina.com/YuanLiao/MianBaoFen/" title="面包粉的做法"  ><b> <c:out value="${Dishes.pcontent}"/></b></a>
 												</span>
 				  					<span class="category_s2">260克</span>
 				  				  </li>
@@ -129,7 +124,7 @@
 
 						
 <div class="mo mt20">
-<h3><c:out value="${product.pname }"/>的做法步骤</h3>
+<h3><c:out value="${Dishes.pname}"/>Cooking Steps</h3>
 </div>
 				
 						
@@ -138,10 +133,10 @@
            <div class="recipeStep">
            
              <ul>
-               <c:forEach items="${product.steps}" var="step" varStatus="status">
+               <c:forEach items="${Dishes.steps}" var="step" varStatus="status">
                  <li>
                    <div class="recipeStep_img">
-                    <img src="${pageContext.request.contextPath}/${step.image}" alt="${product.pname}步骤${step.step}">
+                    <img src="${pageContext.request.contextPath}/${step.image}" alt="${Dishes.pname}步骤${step.step}">
                    </div>
                    <div class="recipeStep_word">
                       <div class="recipeStep_num">${step.step}</div>
@@ -168,17 +163,6 @@
 
 
 
-<div class="ui_title mt20">
-	<div class="ui_title_wrap cleat">
-		<h3 class="on">最新推荐</h3>
-		<a title="菜谱大全" class="right" href="https://home.meishichina.com/recipe.html" target="_blank">更多</a>
-
-								<a title="烘焙" class="right" href="https://home.meishichina.com/recipe/hongbei/" target="_blank">烘焙</a>
-											<a title="早餐" class="right" href="https://home.meishichina.com/recipe/zaocan/" target="_blank">早餐</a>
-										
-
-	</div>
-</div>
 
 <div class="timeline clear">
 <ul id="getRecommendNewRecipe">
@@ -207,7 +191,7 @@ var J_photo = [{"src":"https://i8.meishichina.com/attachment/recipe/2018/06/12/2
 
 </script>
 
-<div class="recipeComment mt30" id="comment"> </div>
+
 	</div>
 	<!--recipDetail-->
 </div>

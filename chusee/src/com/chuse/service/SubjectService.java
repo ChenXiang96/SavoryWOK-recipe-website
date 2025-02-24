@@ -1,7 +1,7 @@
 package com.chuse.service;
 import java.util.List;
 
-import com.chuse.entity.Product;
+import com.chuse.entity.Dishes;
 import com.chuse.entity.Subject;
 
 

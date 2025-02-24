@@ -121,12 +121,7 @@ a.right3 {
 					 <c:out value="${i}" /></a>
 				  </c:if>
               </c:forEach>
- <!--  <a href="https://home.meishichina.com/recipe/recai/page/2/">2</a>
-  <a href="https://home.meishichina.com/recipe/recai/page/3/">3</a>
-  <a href="https://home.meishichina.com/recipe/recai/page/4/">4</a>
-  <a href="https://home.meishichina.com/recipe/recai/page/5/">5</a>
-   <span>...</span>
- -->
+
               <c:if test="${page !=count }">
                  <a class="nextPage" href="${pageContext.request.contextPath}/findByCid/${cid}/<c:out value="${page+1}"/>">下一页</a>
               </c:if>
@@ -173,30 +168,7 @@ a.right3 {
            </c:forEach>
           </c:forEach>
 
-<!--
-<div class="ui_title mt20">
-	<div class="ui_title_wrap cleat">
-		<h3 class="on">热门菜单</h3>
-	</div>
-</div>
--->
 
-
-<!-- 厨色菜谱频道右侧二300x250 
-<div id='div-gpt-ad-1415071902366-3' style='width:300px; height:250px;margin-top:20px;' class="smnbk">
-<script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-3'); });
-</script>
-</div>
--->
-
-<!-- 厨色菜谱频道右侧(悬浮)300x250 
-<div id='div-gpt-ad-1415071902366-4' style='width:300px; height:250px;margin-top:20px;' class="keyshow">
-<script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-4'); });
-</script>
-</div>
--->
 </div><!-- 右侧end -->
 				
 		</div>

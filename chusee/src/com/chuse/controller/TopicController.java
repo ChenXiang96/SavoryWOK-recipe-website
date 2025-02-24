@@ -55,6 +55,7 @@ public class TopicController {
 	public String list(HttpSession session) {
 		List<Topic> list = this.topicServiceImpl.listTopics();
 		session.setAttribute("tlist", list);
+		session.setAttribute("activeMenu", "topicshow");
 
 		System.out.println(list.get(0).getTimg());
 		return "topic";

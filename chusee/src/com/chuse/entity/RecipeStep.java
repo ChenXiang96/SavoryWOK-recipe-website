@@ -21,7 +21,7 @@ public class RecipeStep {
     
     @ManyToOne
     @JoinColumn(name = "pid") // 对应数据库外键字段
-    private Product product; // 关联的菜品
+    private Dishes Dishes; // 关联的菜品
     
     // getters & setters
     public Integer getId() {
@@ -57,11 +57,11 @@ public class RecipeStep {
         this.image = image;
     }
 
-    public Product getProduct() {
-        return product;
+    public Dishes getDishes() {
+        return Dishes;
     }
 
-    public void setProduct(Product product) {
-        this.product = product;
+    public void setDishes(Dishes Dishes) {
+        this.Dishes = Dishes;
     }
 }
