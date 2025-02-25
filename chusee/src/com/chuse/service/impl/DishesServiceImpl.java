@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import com.chuse.dao.DishesDao;
 import com.chuse.entity.Dishes;
+import com.chuse.entity.IngredientsDetail;
 import com.chuse.service.DishesService;
 
 @Transactional
@@ -39,10 +40,9 @@ public class DishesServiceImpl implements DishesService {
 
     @Override
     public Dishes findByPid(Integer pid) {
-        return DishesDao.findWithSteps(pid);
+        return DishesDao.findWithStepsAndIngredients(pid);
     }
 
-    
     
     @Override
     public List<Dishes> findHot() {
@@ -53,4 +53,23 @@ public class DishesServiceImpl implements DishesService {
     public List<Dishes> findNew() {
         return DishesDao.findNew();
     }
+    
+/**    @Override
+    public Dishes getDishWithIngredients(Integer pid) {
+        return DishesDao.findByIdWithIngredients(pid);
+    }
+    
+    @Override
+    public void addIngredient(Integer pid, String item, String qty) {
+        Dishes dish = DishesDao.get(pid);
+        
+        IngredientsDetail detail = new IngredientsDetail();
+        detail.setItem(item);
+        detail.setQty(qty);
+        
+        dish.getIngredients().add(detail);
+        DishesDao.update(dish);
+    }
+ **/
+    
 }

@@ -80,15 +80,33 @@ public class DishesDaoImpl extends BaseDaoImpl<Dishes> implements DishesDao {
     }
     
  // 修改后的查询方法（核心）
-    @Override
-    public Dishes findWithSteps(Integer pid) {
+/**    @Override
+   public Dishes findWithSteps(Integer pid) {
         String hql = "SELECT p FROM Dishes p LEFT JOIN FETCH p.steps WHERE p.pid = :pid";
         return getCurrentSession()
                 .createQuery(hql, Dishes.class)
                 .setParameter("pid", pid)
                 .uniqueResult();
     }
+**/  
+  @Override
+    public Dishes findWithStepsAndIngredients(Integer pid) {
+        // 使用 DISTINCT 避免重复数据
+        String hql = "SELECT DISTINCT p FROM Dishes p " +
+                     "LEFT JOIN FETCH p.steps " +
+                     "LEFT JOIN FETCH p.ingredients " +
+                     "WHERE p.pid = :pid";
+        
+        return getCurrentSession()
+                .createQuery(hql, Dishes.class)
+                .setParameter("pid", pid)
+                .uniqueResult();
+    }
 
+    
+
+    
+    
 
     @Override
     public List<Dishes> findHot() {
@@ -114,6 +132,9 @@ public class DishesDaoImpl extends BaseDaoImpl<Dishes> implements DishesDao {
         query.setMaxResults(12); // 每页大小
         return query.list();
     }
+    
+
+
     
 
     @Override

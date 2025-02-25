@@ -70,6 +70,7 @@ public class DishesController {
 		map.put("Dishes", DishesService.findByPid(pid));
 		return "caipinxiangqing";
 	}
+	
 
 	
 }

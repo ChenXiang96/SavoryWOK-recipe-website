@@ -21,6 +21,15 @@
 <link rel="stylesheet" type="text/css" href="https://static.meishichina.com/v6/css/app/newrecipe/recipe_one.css?v1=2018-06-10">
 <link rel="stylesheet" type="text/css" href="https://static.meishichina.com/v6/css/lib/comment.css?v1=2015-07-16">
 <script type="text/javascript" src="//static.meishichina.com/v6/js/lib/dfp-content-5.js"></script>
+<style>
+/* 添加在页面<style>中 */
+.recipeCategory_sub_R li {
+    vertical-align: top;  /* 顶部对齐 */
+    padding: 5px 10px;    /* 内间距 */
+}
+
+</style>
+
 </head>
 <body>
 
@@ -67,60 +76,81 @@
 <div class="mo mt20">
 <h3>Ingredients list</h3>
 </div>
- 
- 
- <fieldset class="particulars">
-	
 
-<div class="recipeCategory_sub_R clear">
-<ul>
-				  				  <li>
-					<span class="category_s1">
-				<a target="_blank" href="https://www.meishichina.com/YuanLiao/MianBaoFen/" title="面包粉的做法"  ><b> <c:out value="${Dishes.pcontent}"/></b></a>
-												</span>
-				  					<span class="category_s2">260克</span>
-				  				  </li>
-				  				  
-				  </ul>
-</div>
-</fieldset>
+<!-- 
 
- 
+<div class="recipeCategory_sub_R mt30 clear" style="width: 600px; margin: 0 auto; border: 1px solid #ccc;"> 
+<ul style="
+    padding: 0;
+    margin: 0;
+    display: flex;          /* 启用弹性布局 */
+    flex-wrap: wrap;        /* 允许换行 */
+    justify-content: center;/* 主轴向居中 */
+    width: 100%;            /* 继承父级宽度 */
+    list-style: none;       /* 清除列表符号 */
+">
+    
+    <li style="width: 45%; margin: 10px; box-sizing: border-box;">
+        <span class="category_s1">
+            甜味
+        </span>
+        <span class="category_s2">口味</span>
+    </li>
 
-<div class="recipeCategory_sub_R mt30 clear">
-<ul>
-
-<li>
-<span class="category_s1">
-		<a title="甜味" href="https://home.meishichina.com/recipe-type-do-cuisine-view-10.html" target="_blank">甜味</a>
-	</span>
-<span class="category_s2">口味</span>
-</li>
-
-<li>
-<span class="category_s1">
-							<a title="烘焙" href="https://home.meishichina.com/recipe-type-do-technics-view-23.html" target="_blank">烘焙</a>
-						</span>
-<span class="category_s2">工艺</span>
-</li>
-
-<li>
-<span class="category_s1">
-							<a title="数小时" href="https://home.meishichina.com/recipe-type-do-during-view-6.html" target="_blank">数小时</a>
-						</span>
-<span class="category_s2">耗时</span>
-</li>
-
-<li>
-<span class="category_s1">
-							<a title="简单" href="https://home.meishichina.com/recipe-type-do-level-view-1.html" target="_blank">简单</a>
-						</span>
-<span class="category_s2">难度</span>
-</li>
+    <li style="width: 45%; margin: 10px; box-sizing: border-box;">
+        <span class="category_s1">
+            烘焙
+        </span>
+        <span class="category_s2">工艺</span>
+    </li>
 
 
+    <li style="width: 45%; margin: 10px; box-sizing: border-box;">
+        <span class="category_s1">
+            耗时
+        </span>
+        <span class="category_s2">数小时</span>
+    </li>
+
+    <li style="width: 45%; margin: 10px; box-sizing: border-box;">
+        <span class="category_s1">
+            难度
+        </span>
+        <span class="category_s2">简单</span>
+    </li>
 </ul>
 </div>
+-->
+
+
+<div class="recipeCategory_sub_R mt30 clear" style="width: 600px; margin: 0 auto;">
+<ul style="
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+    list-style: none;
+">
+    <%-- 循环配料数据 --%>
+    <c:forEach items="${Dishes.ingredients}" var="ingredient" varStatus="status">
+        <li style="width: 45%; margin: 10px; box-sizing: border-box;">
+            <span class="category_s1">
+                ${ingredient.item}
+            </span>
+            <span class="category_s2">
+                ${ingredient.qty}
+            </span>
+        </li>
+    </c:forEach>
+</ul>
+</div>
+
+
+
+
+
 
 						
 <div class="mo mt20">

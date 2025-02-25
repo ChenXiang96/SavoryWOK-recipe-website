@@ -2,7 +2,9 @@ package com.chuse.entity;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -18,6 +20,7 @@ import javax.persistence.Table;
 
 import com.chuse.entity.Category;
 import com.chuse.entity.CategorySecond;
+import com.chuse.entity.IngredientsDetail;
 
 /**
  * 
@@ -45,9 +48,19 @@ public class Dishes implements java.io.Serializable{
 	
 	
 	 // 新增：与 recipe_step 表的一对多关系
-	@OneToMany(mappedBy = "Dishes", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "dishes", cascade = CascadeType.ALL)
 	@OrderBy("step ASC") // 保证步骤顺序
-    private List<RecipeStep> steps; // 存储该菜品对应的所有步骤
+    //private List<RecipeStep> steps; // 存储该菜品对应的所有步骤
+	private Set<RecipeStep> steps = new HashSet<>(); // 改为Set
+	
+	 // 新增：与 Ingredient_Detail 表的一对多关系
+//	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+//    @JoinColumn(name = "dish_id") // 外键字段名
+//    private List<IngredientsDetail> ingredients = new ArrayList<>();
+	
+	@OneToMany(mappedBy = "dish", cascade = CascadeType.ALL)
+    //private List<IngredientsDetail> ingredients = new ArrayList<>();
+	private Set<IngredientsDetail> ingredients = new HashSet<>(); // 改为Set
     
 
 
@@ -101,15 +114,20 @@ public void setCategorySecond(CategorySecond categorySecond) {
 }
 
 // 新增：steps 的 Getter 和 Setter
-public List<RecipeStep> getSteps() {
+public Set<RecipeStep> getSteps() {
     return steps;
 }
 
-public void setSteps(List<RecipeStep> steps) {
+public void setSteps(Set<RecipeStep> steps) {
     this.steps = steps;
 }
 
-
+public Set<IngredientsDetail> getIngredients() {
+    return ingredients;
+}
    
+public void setIngredients(Set<IngredientsDetail> ingredients) {
+    this.ingredients = ingredients;
+}
    
 }

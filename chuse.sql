@@ -11,7 +11,7 @@
  Target Server Version : 50648 (5.6.48-log)
  File Encoding         : 65001
 
- Date: 24/02/2025 11:51:42
+ Date: 25/02/2025 00:40:05
 */
 
 SET NAMES utf8mb4;
@@ -302,7 +302,7 @@ CREATE TABLE `dishes`  (
   PRIMARY KEY (`pid`) USING BTREE,
   INDEX `csid`(`csid`) USING BTREE,
   CONSTRAINT `dishes_ibfk_1` FOREIGN KEY (`csid`) REFERENCES `categorysecond` (`csid`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 21 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 22 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of dishes
@@ -327,6 +327,7 @@ INSERT INTO `dishes` VALUES ('安琪', 'cimg/2r7.jpg', '2018-06-06 10:22:16', '�
 INSERT INTO `dishes` VALUES ('斯佳丽WH', 'cimg/2r8.jpg', '2018-06-07 10:23:58', '苦瓜炒鸡蛋', 18, 2, '原料：苦瓜、鸡蛋、红椒、料酒、油盐。', 3);
 INSERT INTO `dishes` VALUES ('斯嘉丽', 'cimg/2r9.jpg', '2018-06-14 10:24:53', '蚝油草菇扒娃娃菜', 19, 2, '原料：草菇、娃娃菜、生抽、蚝油、水淀粉、油盐。', 2);
 INSERT INTO `dishes` VALUES ('斯嘉丽', 'cimg/2r10.jpg', '2018-06-20 10:26:08', '香菇豆腐泡烧排骨', 20, 2, '原料：排骨、香菇、豆腐泡、黑木耳、姜片、八角、桂皮、红辣椒、花椒、料酒、酱油、冰糖、油盐。', 3);
+INSERT INTO `dishes` VALUES ('球娃娃', 'cimg/gzpg.png', '2025-02-24 13:08:58', '干蒸排骨', 21, 2, '描述', 3);
 
 -- ----------------------------
 -- Table structure for howdo
@@ -344,6 +345,27 @@ CREATE TABLE `howdo`  (
 -- ----------------------------
 -- Records of howdo
 -- ----------------------------
+
+-- ----------------------------
+-- Table structure for ingredients_details
+-- ----------------------------
+DROP TABLE IF EXISTS `ingredients_details`;
+CREATE TABLE `ingredients_details`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `dish_id` int(11) NOT NULL,
+  `item` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `qty` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `dish_id`(`dish_id`) USING BTREE,
+  CONSTRAINT `dish_id` FOREIGN KEY (`dish_id`) REFERENCES `dishes` (`pid`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of ingredients_details
+-- ----------------------------
+INSERT INTO `ingredients_details` VALUES (1, 21, '老抽', '少许');
+INSERT INTO `ingredients_details` VALUES (2, 21, '生抽', '少许');
+INSERT INTO `ingredients_details` VALUES (3, 21, '食盐', '少许');
 
 -- ----------------------------
 -- Table structure for material
@@ -376,7 +398,7 @@ CREATE TABLE `recipe_step`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `pid`(`pid`) USING BTREE,
   CONSTRAINT `pid` FOREIGN KEY (`pid`) REFERENCES `dishes` (`pid`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of recipe_step
@@ -388,6 +410,12 @@ INSERT INTO `recipe_step` VALUES (4, 1, 1, '食材:猪瘦肉、胡萝卜、青�
 INSERT INTO `recipe_step` VALUES (5, 1, 2, '肉丝中放入盐。', 'steps_images/YXRS2.jpg');
 INSERT INTO `recipe_step` VALUES (6, 1, 3, '放入一个鸡蛋清。', 'steps_images/YXRS3.jpg');
 INSERT INTO `recipe_step` VALUES (7, 1, 4, '多拌一下，拌匀上浆。', 'steps_images/YXRS4.jpg');
+INSERT INTO `recipe_step` VALUES (8, 21, 1, '准备食材：将排骨用面粉和盐揉搓一下用水洗净，再用厨房纸擦干水分，排骨晾干。', 'steps_images/GZPG1.png');
+INSERT INTO `recipe_step` VALUES (9, 21, 2, '用姜片、蒜末，老抽，生抽，豆豉，白糖，蚝油和生粉混合搅拌均匀，最后倒入一点食用油锁住水分，腌制35分钟。', 'steps_images/GZPG2.png');
+INSERT INTO `recipe_step` VALUES (10, 21, 3, '锅内放个蒸垫架子，岛一碗清水，把空盘子放入煮个几分钟，待盘子热得冒气，再放入腌好的排骨。', 'steps_images/GZPG3.png');
+INSERT INTO `recipe_step` VALUES (11, 21, 4, '排骨放入后，再蒸18分钟即可。', 'steps_images/GZPG4.png');
+INSERT INTO `recipe_step` VALUES (12, 21, 5, '这时锅里的水都已蒸发完，排骨也蒸熟了，拿出来。', 'steps_images/GZPG5.png');
+INSERT INTO `recipe_step` VALUES (13, 21, 6, '好吃简单的干蒸排骨就做好了。', 'steps_images/GZPG6.png');
 
 -- ----------------------------
 -- Table structure for relationship_11

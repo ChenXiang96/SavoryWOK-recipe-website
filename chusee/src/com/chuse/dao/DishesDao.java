@@ -37,8 +37,11 @@ public interface DishesDao extends BaseDao<Dishes>{
 	
 	public Dishes findOne(Integer pid);
 	
-	public Dishes findWithSteps(Integer pid);
+	//public Dishes findWithSteps(Integer pid);
+	public Dishes findWithStepsAndIngredients(Integer pid);
 	
 	public List<Dishes> findAll(Integer page);
+       
+	
 
 }
