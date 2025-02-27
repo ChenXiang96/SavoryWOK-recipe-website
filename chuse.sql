@@ -11,7 +11,7 @@
  Target Server Version : 50648 (5.6.48-log)
  File Encoding         : 65001
 
- Date: 25/02/2025 00:40:05
+ Date: 27/02/2025 01:44:28
 */
 
 SET NAMES utf8mb4;
@@ -26,19 +26,20 @@ CREATE TABLE `category`  (
   `cid` int(11) NOT NULL AUTO_INCREMENT,
   `cimage` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`cid`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of category
 -- ----------------------------
-INSERT INTO `category` VALUES ('Dim Sum', 1, 'images/cookbook/Dim Sum.png');
-INSERT INTO `category` VALUES ('Hot Dishes', 2, 'images/cookbook/hot dishes.png');
-INSERT INTO `category` VALUES ('Cold Dishes', 3, 'images/cookbook/Cold Dishes.png');
-INSERT INTO `category` VALUES ('Soup', 4, 'images/cookbook/soup.png');
-INSERT INTO `category` VALUES ('Rice', 5, 'images/cookbook/Rice.png');
-INSERT INTO `category` VALUES ('Noodels', 6, 'images/cookbook/Noodles.png');
-INSERT INTO `category` VALUES ('Bakery', 7, 'images/cookbook/Bakery.png');
-INSERT INTO `category` VALUES ('International', 8, 'images/cookbook/International.png');
+INSERT INTO `category` VALUES ('Appetizers', 1, 'images/cookbook/Appetizers.png');
+INSERT INTO `category` VALUES ('Main Dishes', 2, 'images/cookbook/Main Dishes.png');
+INSERT INTO `category` VALUES ('Noodels', 3, 'images/cookbook/Noodles.png');
+INSERT INTO `category` VALUES ('Rice', 4, 'images/cookbook/Rice.png');
+INSERT INTO `category` VALUES ('Soup', 5, 'images/cookbook/soup.png');
+INSERT INTO `category` VALUES ('Dim Sum', 6, 'images/cookbook/Dim Sum.png');
+INSERT INTO `category` VALUES ('Coffee', 7, 'images/cookbook/coffee.png');
+INSERT INTO `category` VALUES ('Bakery', 8, 'images/cookbook/Bakery.png');
+INSERT INTO `category` VALUES ('International', 9, 'images/cookbook/International.png');
 
 -- ----------------------------
 -- Table structure for category2
@@ -72,16 +73,12 @@ CREATE TABLE `category_categorysecond`  (
 -- ----------------------------
 -- Records of category_categorysecond
 -- ----------------------------
-INSERT INTO `category_categorysecond` VALUES (1, 4, 3);
-INSERT INTO `category_categorysecond` VALUES (2, 4, 4);
-INSERT INTO `category_categorysecond` VALUES (3, 4, 5);
-INSERT INTO `category_categorysecond` VALUES (4, 4, 8);
-INSERT INTO `category_categorysecond` VALUES (5, 4, 15);
-INSERT INTO `category_categorysecond` VALUES (6, 5, 3);
-INSERT INTO `category_categorysecond` VALUES (7, 5, 4);
-INSERT INTO `category_categorysecond` VALUES (8, 5, 5);
-INSERT INTO `category_categorysecond` VALUES (9, 5, 8);
-INSERT INTO `category_categorysecond` VALUES (10, 5, 15);
+INSERT INTO `category_categorysecond` VALUES (1, 2, 1);
+INSERT INTO `category_categorysecond` VALUES (2, 2, 2);
+INSERT INTO `category_categorysecond` VALUES (3, 2, 3);
+INSERT INTO `category_categorysecond` VALUES (6, 2, 4);
+INSERT INTO `category_categorysecond` VALUES (7, 2, 5);
+INSERT INTO `category_categorysecond` VALUES (8, 2, 6);
 
 -- ----------------------------
 -- Table structure for categorysecond
@@ -96,28 +93,13 @@ CREATE TABLE `categorysecond`  (
 -- ----------------------------
 -- Records of categorysecond
 -- ----------------------------
-INSERT INTO `categorysecond` VALUES (1, '山西风味');
-INSERT INTO `categorysecond` VALUES (2, '广东风味');
-INSERT INTO `categorysecond` VALUES (3, '四川风味');
-INSERT INTO `categorysecond` VALUES (4, '重庆小吃');
-INSERT INTO `categorysecond` VALUES (5, '天津小吃');
-INSERT INTO `categorysecond` VALUES (6, '重庆风味');
-INSERT INTO `categorysecond` VALUES (7, '山东风味');
-INSERT INTO `categorysecond` VALUES (8, '上海风味');
-INSERT INTO `categorysecond` VALUES (9, '西北风味');
-INSERT INTO `categorysecond` VALUES (10, '台湾风味');
-INSERT INTO `categorysecond` VALUES (11, '北京风味');
-INSERT INTO `categorysecond` VALUES (12, '河南风味');
-INSERT INTO `categorysecond` VALUES (13, '河北风味');
-INSERT INTO `categorysecond` VALUES (14, '福建风味');
-INSERT INTO `categorysecond` VALUES (15, '健康推荐');
-INSERT INTO `categorysecond` VALUES (16, '清热祛火');
-INSERT INTO `categorysecond` VALUES (17, '驱寒暖身');
-INSERT INTO `categorysecond` VALUES (18, '健脾健胃');
-INSERT INTO `categorysecond` VALUES (19, '开胃优选');
-INSERT INTO `categorysecond` VALUES (20, '下午茶点');
-INSERT INTO `categorysecond` VALUES (21, '快手菜肴');
-INSERT INTO `categorysecond` VALUES (22, '护肝明目');
+INSERT INTO `categorysecond` VALUES (1, 'Beef');
+INSERT INTO `categorysecond` VALUES (2, 'Pork');
+INSERT INTO `categorysecond` VALUES (3, 'Lamb');
+INSERT INTO `categorysecond` VALUES (4, 'Seafood');
+INSERT INTO `categorysecond` VALUES (5, 'Poultry');
+INSERT INTO `categorysecond` VALUES (6, 'Vegetarian');
+INSERT INTO `categorysecond` VALUES (7, 'Street Food');
 
 -- ----------------------------
 -- Table structure for categorysecond2
@@ -302,32 +284,34 @@ CREATE TABLE `dishes`  (
   PRIMARY KEY (`pid`) USING BTREE,
   INDEX `csid`(`csid`) USING BTREE,
   CONSTRAINT `dishes_ibfk_1` FOREIGN KEY (`csid`) REFERENCES `categorysecond` (`csid`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 22 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 30 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of dishes
 -- ----------------------------
-INSERT INTO `dishes` VALUES ('青梅果果儿', 'cimg/1.jpg', '2020-05-02 00:00:00', '麻婆豆腐', 1, 2, '原料：鸡肉、蔬菜、葱、姜、蒜、草果、砂仁。', 3);
-INSERT INTO `dishes` VALUES ('冰火兼容', 'cimg/2.jpg', '2018-05-02 00:00:00', '芦笋烤冰鱼', 2, 2, '原料：南极冰鱼柳、红辣椒、芦笋、橄榄油、盐、生抽、生姜、鱼露、孜然粉。', 15);
-INSERT INTO `dishes` VALUES ('诗韵墨香', 'cimg/3.jpg', '2018-06-15 09:44:21', '红烧排骨', 3, 2, '原料：排骨、油、盐、老抽、料酒、蚝油、冰糖、姜、葱、茴香、橙皮、干椒、八角、开水、香叶。', 8);
-INSERT INTO `dishes` VALUES ('伊悠悠', 'cimg/4.jpg', '2018-06-21 09:44:17', '番茄四季豆', 4, 2, '原料：四季豆、番茄、大蒜子、蕃茄酱、盐。', 15);
-INSERT INTO `dishes` VALUES ('燊燊姐', 'cimg/l9.jpg', '2018-06-30 09:44:14', '剁椒三文鱼头', 5, 2, '原料：三文鱼头、剁椒酱、葱、姜、蒜、豆豉、盐、白胡椒粉、料酒、蒸鱼豉油。', 3);
-INSERT INTO `dishes` VALUES ('最初的最美❤', 'cimg/6.jpg', '2018-06-30 09:44:11', '花生猪手', 6, 2, '原料：猪蹄、花生、葱、姜、大料、生抽、老抽、盐、鸡精、大枣、枸杞。', 4);
-INSERT INTO `dishes` VALUES ('凤记美食', 'cimg/l6.jpg', '2018-06-21 09:44:07', '木耳炒长豆角', 7, 2, '原料：长豆角、干木耳、油、盐、葱。', 15);
-INSERT INTO `dishes` VALUES ('柳絮1982', 'cimg/8.jpg', '2018-05-30 09:44:03', '炸茄盒', 8, 2, '原料：紫茄子、猪肉馅、韭菜、鸡蛋、淀粉、面粉、油、蚝油、五香粉。', 5);
-INSERT INTO `dishes` VALUES ('迷糊阿山', 'cimg/1.jpg', '2018-06-15 09:44:00', '肥牛金针菇', 9, 2, '原料：肥牛、金针菇、白胡椒、孜然、盐、辣椒面。', 3);
-INSERT INTO `dishes` VALUES ('雨欣欣欣', 'cimg/9.jpg', '2018-06-13 09:43:55', '红烧肉', 10, 2, '原料：带皮五花肉、生姜、土豆、大葱、小葱、老抽、郫县豆瓣酱、生抽。', 8);
-INSERT INTO `dishes` VALUES ('有个小蜗牛叫安琪', 'cimg/2r1.jpg', '2018-06-07 10:16:04', '红烧鸡腿', 11, 2, '原料：鸡腿、啤酒、食用油、生姜、大蒜、酱油、料酒、八角、桂皮、香叶、生抽、糖、葱末。', 8);
-INSERT INTO `dishes` VALUES ('最初的最美❤', 'cimg/2r2.jpg', '2018-05-31 10:17:23', '辣炒鸡胗', 12, 2, '原料：鸡胗、葱、姜、干辣椒、八角、花椒、辣椒酱、生抽、老抽、水、盐、冰糖。', 3);
-INSERT INTO `dishes` VALUES ('最初的最美❤', 'cimg/2r3.jpg', '2018-06-15 10:18:25', '辣焖鱼子', 13, 2, '原料：鱼子、干辣椒、葱、姜、黄豆酱、郫县豆瓣、料酒、蚝油、生抽、鸡粉、白糖。', 3);
-INSERT INTO `dishes` VALUES ('柠柠', 'cimg/2r4.jpg', '2018-05-30 10:19:14', '紫菜蒸茄子', 14, 2, '原料：紫菜、茄子、郫县辣酱、豆豉、生抽、醋、糖。', 15);
-INSERT INTO `dishes` VALUES ('有个小蜗牛叫安琪', 'cimg/2r5.jpg', '2018-06-29 10:20:48', '韭菜苔炒虾皮', 15, 2, '原料：韭菜、虾皮、食用油、盐、生姜、小米椒。', 15);
-INSERT INTO `dishes` VALUES ('最爱小志', 'cimg/2r6.jpg', '2018-06-07 10:21:31', '大蒜炒牛肉', 16, 2, '原料：牛肉、大蒜、红辣椒、植物油、盐、生抽、老抽、孜然、淀粉。', 5);
-INSERT INTO `dishes` VALUES ('安琪', 'cimg/2r7.jpg', '2018-06-06 10:22:16', '木耳黄瓜炒肉片', 17, 2, '原料：猪瘦肉、黄瓜、木耳、盐、大蒜、生姜、红辣椒、生抽、鸡粉、地瓜粉、食用油。', 3);
-INSERT INTO `dishes` VALUES ('斯佳丽WH', 'cimg/2r8.jpg', '2018-06-07 10:23:58', '苦瓜炒鸡蛋', 18, 2, '原料：苦瓜、鸡蛋、红椒、料酒、油盐。', 3);
-INSERT INTO `dishes` VALUES ('斯嘉丽', 'cimg/2r9.jpg', '2018-06-14 10:24:53', '蚝油草菇扒娃娃菜', 19, 2, '原料：草菇、娃娃菜、生抽、蚝油、水淀粉、油盐。', 2);
-INSERT INTO `dishes` VALUES ('斯嘉丽', 'cimg/2r10.jpg', '2018-06-20 10:26:08', '香菇豆腐泡烧排骨', 20, 2, '原料：排骨、香菇、豆腐泡、黑木耳、姜片、八角、桂皮、红辣椒、花椒、料酒、酱油、冰糖、油盐。', 3);
-INSERT INTO `dishes` VALUES ('球娃娃', 'cimg/gzpg.png', '2025-02-24 13:08:58', '干蒸排骨', 21, 2, '描述', 3);
+INSERT INTO `dishes` VALUES ('', 'Dishes images/Main Dishes/1.jpg', '2025-02-02 00:00:00', 'Home-Style Stir-Fried Beef', 1, 2, 'Beef tenderloin, baking soda, dark soy sauce, light soy sauce', 1);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/2.jpg', '2025-02-26 21:40:11', 'Braised Beef with Potatoes', 2, 2, 'Beef, potatoes, bean paste, star anise, garlic', 1);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/3.jpg', '2025-02-05 21:43:35', 'Wok-Fried Lamb with Scallions', 3, 2, 'Lamb slices, scallions, salt, light soy sauce, dark soy sauce', 3);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/4.png', '2025-02-06 21:59:20', 'Home-Style braised pork', 4, 2, 'Belly pork', 2);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/5.jpg', '2025-02-06 22:02:38', 'Garlic Mushroom Beef Cubes', 5, 2, 'Beef, mushrooms, garlic, butter, black pepper', 1);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/6.jpg', '2025-02-12 22:04:04', 'Braised Lamb', 6, 2, 'Lamb and carrots', 3);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/7.jpg', '2025-02-06 22:06:00', 'Stir-Fried Beef with Chili Peppers', 7, 2, 'Beef, green pepper, ginger, garlic, starch, cooking wine', 1);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/8.jpg', '2025-02-05 22:10:10', 'Spicy Diced Chicken', 8, 2, 'Chicken drumsticks, dried chili peppers, egg whites, cornstarch, green onions', 5);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/9.jpg', '2025-02-05 23:29:04', 'Braised Duck with Lotus Root', 9, 2, 'Duck, lotus root, ginger, onion, star anise, cinnamon', 5);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/10.jpg', '2025-02-06 00:30:30', 'Sour Plum Duck', 10, 2, 'Duck, sour plum, sour plum sauce, rock sugar, dark soy sauce, light soy sauce', 5);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/11.jpg', '2025-02-13 00:49:57', 'Pan-Seared Pork Belly', 11, 2, 'Pork belly, light soy sauce, dark soy sauce, white sesame seeds, barbecue seasoning', 2);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/12.jpg', '2025-02-20 00:54:44', 'Salt & Pepper Fried Pork Loin Strips', 12, 2, 'Pork Loin, egg, pepper, salt, ginger, onion', 2);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/13.jpg', '2025-01-08 00:57:20', 'Hand-Shredded Chicken', 13, 2, 'Chicken drumsticks, ginger slices, scallions, salt, sugar, soy sauce', 5);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/14.jpg', '2025-02-06 01:00:34', 'Stir-fried Chicken Breast with Mushrooms', 14, 2, 'Chicken breast, mushrooms, garlic, green onions', 5);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/15.jpg', '2025-01-30 01:04:42', 'Kung Pao Chicken', 15, 2, 'Chicken breast, cucumber, carrot, peanuts, fermented chili Bean sauce', 5);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/16.jpg', '2025-02-05 01:06:49', 'Lamb Rib Soup', 16, 2, 'Lamb chops, white radish, carrots, peppercorns', 3);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/17.jpg', '2025-02-04 01:08:01', 'Cumin Grilled Lamb Chops', 17, 2, 'Lamb chops, cumin seeds, peppercorns, chili powder, salt', 3);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/18.jpg', '2025-02-05 01:11:58', 'Sichuan Boiled Beef', 18, 2, 'Beef, bean sprouts, celery, chicken essence, baking soda', 1);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/19.jpg', '2025-02-06 01:25:48', 'Soy Sauce Braised Carp', 19, 2, 'Carp, Sichuan pepper, light soy sauce, dark soy sauce, cooking wine, garlic', 4);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/20.jpg', '2025-02-13 01:28:09', 'Braised large shrimp', 20, 2, 'Shrimp, onion, ginger, garlic, light soy sauce, cooking wine, dark soy sauce', 4);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/21.jpg', '2025-02-05 01:32:30', 'Fried Egg with Shredded Potatoes', 21, 2, 'Eggs, potatoes, carrots, black pepper, starch', 5);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/22.jpg', '2025-02-21 01:38:19', 'Tofu & Perch Hotpot', 22, 2, 'Perch, tofu, onion, chili pepper', 4);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/23.jpg', '2024-10-03 01:41:22', 'Steamed Crab', 23, 2, 'Crab, soy sauce, vinegar, minced ginger, minced garlic, sesame oil', 4);
 
 -- ----------------------------
 -- Table structure for howdo
@@ -358,14 +342,11 @@ CREATE TABLE `ingredients_details`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `dish_id`(`dish_id`) USING BTREE,
   CONSTRAINT `dish_id` FOREIGN KEY (`dish_id`) REFERENCES `dishes` (`pid`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of ingredients_details
 -- ----------------------------
-INSERT INTO `ingredients_details` VALUES (1, 21, '老抽', '少许');
-INSERT INTO `ingredients_details` VALUES (2, 21, '生抽', '少许');
-INSERT INTO `ingredients_details` VALUES (3, 21, '食盐', '少许');
 
 -- ----------------------------
 -- Table structure for material
@@ -403,19 +384,10 @@ CREATE TABLE `recipe_step`  (
 -- ----------------------------
 -- Records of recipe_step
 -- ----------------------------
-INSERT INTO `recipe_step` VALUES (1, 3, 1, '排骨洗净再剁块；', 'https://i3r.meishichina.com/atta/step/2020/11/16/20201116160550286209135710737312.jpg?x-oss-process=style/p320');
-INSERT INTO `recipe_step` VALUES (2, 3, 2, '排骨凉水下锅，不盖锅盖煮开；', 'steps_images/HSPG2.jpg');
-INSERT INTO `recipe_step` VALUES (3, 3, 3, '捞出排骨用清水冲洗一下放置备用；', 'steps_images/HSPG3.jpg');
 INSERT INTO `recipe_step` VALUES (4, 1, 1, '食材:猪瘦肉、胡萝卜、青椒和泡发的黑木耳切丝。', 'steps_images/YXRS1.jpg');
 INSERT INTO `recipe_step` VALUES (5, 1, 2, '肉丝中放入盐。', 'steps_images/YXRS2.jpg');
 INSERT INTO `recipe_step` VALUES (6, 1, 3, '放入一个鸡蛋清。', 'steps_images/YXRS3.jpg');
 INSERT INTO `recipe_step` VALUES (7, 1, 4, '多拌一下，拌匀上浆。', 'steps_images/YXRS4.jpg');
-INSERT INTO `recipe_step` VALUES (8, 21, 1, '准备食材：将排骨用面粉和盐揉搓一下用水洗净，再用厨房纸擦干水分，排骨晾干。', 'steps_images/GZPG1.png');
-INSERT INTO `recipe_step` VALUES (9, 21, 2, '用姜片、蒜末，老抽，生抽，豆豉，白糖，蚝油和生粉混合搅拌均匀，最后倒入一点食用油锁住水分，腌制35分钟。', 'steps_images/GZPG2.png');
-INSERT INTO `recipe_step` VALUES (10, 21, 3, '锅内放个蒸垫架子，岛一碗清水，把空盘子放入煮个几分钟，待盘子热得冒气，再放入腌好的排骨。', 'steps_images/GZPG3.png');
-INSERT INTO `recipe_step` VALUES (11, 21, 4, '排骨放入后，再蒸18分钟即可。', 'steps_images/GZPG4.png');
-INSERT INTO `recipe_step` VALUES (12, 21, 5, '这时锅里的水都已蒸发完，排骨也蒸熟了，拿出来。', 'steps_images/GZPG5.png');
-INSERT INTO `recipe_step` VALUES (13, 21, 6, '好吃简单的干蒸排骨就做好了。', 'steps_images/GZPG6.png');
 
 -- ----------------------------
 -- Table structure for relationship_11

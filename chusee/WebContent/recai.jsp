@@ -50,34 +50,37 @@ a.right3 {
 <!-- 主框架 -->
 	<div class="wrap">
 		<div class="w clear">
-		 <div id="recipeindex_info">
-   </div>
+		 <div class="recipe_index_n10 mt20 clear jtl"
+				style="display: flex !important; justify-content: center !important; flex-wrap: wrap !important; gap: 5px; overflow: visible !important;">
+
+				<c:forEach items="${sessionScope.cList}" var="c">
+					<a
+						href="${ pageContext.request.contextPath }/findByCid/<c:out value="${c.cid}"/>/1"
+						target="_blank" title="category"
+						style="float: none !important;   <!-- 强制清除浮动 -->
+                 display: block !important; <!-- 覆盖原有布局 -->
+                 margin: 10px;">
+						<img class="imgLoad"
+						src="${pageContext.request.contextPath}/<c:out value="${c.cimage}"/>"
+						style="display: block; width: 75px; height: 75px; margin: 0 auto;">
+
+						<span
+						style="font-size: 1.1em;   <!-- 相对单位放大 -->
+              display: block;       <!-- 独占一行 -->
+              margin-top: 8px;      <!-- 文字与图片间距 -->
+              font-weight: 500;">
+							<!-- 适当加粗 --> <c:out value="${c.cname}"></c:out>
+					</span>
+					</a>
+				</c:forEach>
+
+			</div>
 			
 		<div class="space_left">
 
-           <div class="ui_title2">
-			  <div class="ui_title_wrap clear">
-
-          <!--  <h1 class="on" ><a title="热菜" href="https://home.meishichina.com/recipe/recai/" >热菜</a></h1> -->
-                 <c:forEach items="${sessionScope.cList}" begin="3" var="c">
-                          <h3>
-                      
-                          <a title="健康首页"   href="${ pageContext.request.contextPath }/findByCid/<c:out value="${c.cid}"/>/1" class="right3" target="_blank">
-                             <c:out value="${c.cname}"></c:out>
-                          </a>
-                          </h3>
-                          
-                 </c:forEach>
-                 
-                 
-
-              </div>
-           </div>
-
-
         <div class="ui_newlist_1 get_num" id="J_list">
 	       <ul>
-	         <c:forEach var="p" items="${products}">
+	         <c:forEach var="p" items="${Dishes}">
                 <li data-id="400952">
 					<div class="pic">
 						<a target="_blank" href="${ pageContext.request.contextPath }/findByPid/<c:out value="${p.pid}"/>">

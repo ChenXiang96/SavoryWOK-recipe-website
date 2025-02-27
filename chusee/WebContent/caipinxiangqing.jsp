@@ -33,7 +33,7 @@
 </head>
 <body>
 
-  <%@ include file="menu.jsp" %>
+  <%@ include file="menu3.jsp" %>
 
 	<div class="wrap">
 
@@ -46,10 +46,7 @@
 <c:out value="${Dishes.pname }"/>
 </a>
 </h1>
-<a title="vecipe_title" href="https://home.meishichina.com/space-10373406.html" target="_blank" class="uright">
-<img src="https://i5.meishichina.com/data/avatar/010/37/34/06_avatar_big.jpg?x-oss-process=style/c80&v=20180612" />
-<span class="userName" id="recipe_username"> <c:out value="${Dishes.pdesc}"/></span>
-</a>
+
 </div>
 
 				 
@@ -77,50 +74,6 @@
 <h3>Ingredients list</h3>
 </div>
 
-<!-- 
-
-<div class="recipeCategory_sub_R mt30 clear" style="width: 600px; margin: 0 auto; border: 1px solid #ccc;"> 
-<ul style="
-    padding: 0;
-    margin: 0;
-    display: flex;          /* 启用弹性布局 */
-    flex-wrap: wrap;        /* 允许换行 */
-    justify-content: center;/* 主轴向居中 */
-    width: 100%;            /* 继承父级宽度 */
-    list-style: none;       /* 清除列表符号 */
-">
-    
-    <li style="width: 45%; margin: 10px; box-sizing: border-box;">
-        <span class="category_s1">
-            甜味
-        </span>
-        <span class="category_s2">口味</span>
-    </li>
-
-    <li style="width: 45%; margin: 10px; box-sizing: border-box;">
-        <span class="category_s1">
-            烘焙
-        </span>
-        <span class="category_s2">工艺</span>
-    </li>
-
-
-    <li style="width: 45%; margin: 10px; box-sizing: border-box;">
-        <span class="category_s1">
-            耗时
-        </span>
-        <span class="category_s2">数小时</span>
-    </li>
-
-    <li style="width: 45%; margin: 10px; box-sizing: border-box;">
-        <span class="category_s1">
-            难度
-        </span>
-        <span class="category_s2">简单</span>
-    </li>
-</ul>
-</div>
--->
 
 
 <div class="recipeCategory_sub_R mt30 clear" style="width: 600px; margin: 0 auto;">

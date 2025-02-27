@@ -39,6 +39,7 @@ top:-38px;
   max-width: 280px;     /* 最大宽度限制 */
   height: auto;         /* 高度自动保持比例 */
   width: 100%;          /* 在容器内响应式缩放 */
+  margin-left: 50%;
 }
 
 /* 移动端适配 */
@@ -67,7 +68,8 @@ top:-38px;
   <div id="wrapper" class="home-page">
 	<!-- start header -->
 	<header>
-        <div class="navbar navbar-default navbar-static-top">
+        <div class="navbar navbar-default navbar-static-top" style="transform: translateX(-55px);
+            width: calc(100% + 55px)">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-Bistro=".navbar-collapse">
@@ -77,7 +79,7 @@ top:-38px;
                     </button>
                     <a class="" href="${ pageContext.request.contextPath}/index"><img class="site-logo" src="${pageContext.request.contextPath}/images/logo.png" alt="logo image"/></a>
                 </div>
-                <div class="navbar-collapse collapse ">
+                <div class="navbar-collapse collapse">
                     <%-- 获取当前请求路径 --%>
                     <c:set var="currentPath" value="${requestScope['javax.servlet.forward.request_uri']}"/>
                     <ul class="nav navbar-nav">
@@ -85,10 +87,8 @@ top:-38px;
                         <li><a href="${ pageContext.request.contextPath}/index">主页</a></li> 
 						<li class="${sessionScope.activeMenu eq 'recipe' ? 'active' : ''}"><a href="${ pageContext.request.contextPath}/health/list">菜谱</a></li>
 						<li><a href="${ pageContext.request.contextPath}/location.jsp">周边</a></li>
-                        <li><a href="${ pageContext.request.contextPath}/archive/list">甄选</a></li>
                         <li><a href="${ pageContext.request.contextPath}/myHealth">健康</a></li>
                         <li><a href="${ pageContext.request.contextPath}/specialshow">专题</a></li>
-                        <li><a href="${ pageContext.request.contextPath}/communityshow">社区</a></li>
                         <li><a href="${ pageContext.request.contextPath}/topicshow">话题</a></li>
                         
                     <c:if test="${sessionScope.user == null}">

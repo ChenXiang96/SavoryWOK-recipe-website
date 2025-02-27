@@ -7,6 +7,7 @@
 
 <link href="${pageContext.request.contextPath}/css/style2.css" rel="stylesheet" />
   <style>
+ 
   .navbar .nav > li > a {
     color: #5A5A5A;
     text-shadow: none;
@@ -35,13 +36,14 @@ top:-38px;
 }
 
 .site-logo {
-  display: block;       /* 消除图片底部间隙 */
-  max-width: 280px;     /* 最大宽度限制 */
-  height: auto;         /* 高度自动保持比例 */
-  width: 100%;          /* 在容器内响应式缩放 */
+  display: block;       
+  max-width: 280px;    
+  height: auto;         
+  width: 100%;          
+  margin-left: 50%;
 }
 
-/* 移动端适配 */
+
 @media (max-width: 768px) {
   .site-logo {
     max-width: 150px;   /* 小屏幕缩小尺寸 */
@@ -49,9 +51,7 @@ top:-38px;
 }
 
   </style>  
-  <div class="fixed-footer">
-  <a href="#" class="scrollup"></a>
-  </div>
+
 <script src="${pageContext.request.contextPath}/js/jquery1.js"></script>
 <script src="${pageContext.request.contextPath}/js/bootstrap1.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/jquery1.fancybox.pack.js"></script>
@@ -202,5 +202,6 @@ top:-38px;
 	
 	
 	
+</div>
 </div>
 	

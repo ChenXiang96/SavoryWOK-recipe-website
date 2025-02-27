@@ -399,8 +399,9 @@ a.button.bt2 {}
 	letter-spacing: -1px;
 	text-transform: uppercase;
 	color: #fff;
-	margin: 23% 0 0;
+	margin: 23% 0 0;	
 	padding: 10px 0;
+
 	border-top: 5px solid rgba(255, 255, 255, .15);
 	border-bottom: 5px solid rgba(255, 255, 255, .15);
 }
