@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
@@ -29,15 +30,11 @@ public class Category implements Serializable {
     
     private String cimage;
 
-    // 使用 @ManyToMany 注解，表示多对多关系
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(
-        name = "category_categorysecond", // 关联表名称
-        joinColumns = @JoinColumn(name = "cid"), // 当前表的外键
-        inverseJoinColumns = @JoinColumn(name = "csid") // 对方表的外键
-    )
-    @OrderBy(value = "csid") // 按照 csid 排序
+    // 替换原有@ManyToMany注解
+    @OneToMany(mappedBy = "category", fetch = FetchType.EAGER)
     private Set<CategorySecond> categorySeconds = new HashSet<CategorySecond>();
+
+   
 
     public Integer getCid() {
         return cid;

@@ -9,7 +9,9 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -32,6 +34,13 @@ public class CategorySecond implements Serializable {
     // 配置商品集合
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "categorySecond")
     private Set<Dishes> products = new HashSet<Dishes>();
+    
+    
+    
+    @JoinColumn(name = "cid")  // 对应新增的数据库字段
+    @ManyToOne
+    private Category category;
+    
 
     public Integer getCsid() {
         return csid;
@@ -63,5 +72,12 @@ public class CategorySecond implements Serializable {
 
     public void setProducts(Set<Dishes> products) {
         this.products = products;
+    }
+    
+    public Category getCategory() { 
+    	return category; 
+    }
+    public void setCategory(Category category) { 
+    	this.category = category; 
     }
 }

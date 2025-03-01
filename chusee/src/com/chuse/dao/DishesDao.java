@@ -31,6 +31,12 @@ public interface DishesDao extends BaseDao<Dishes>{
 	
 	
 	public Integer CountPageDishesFromCategorySecond(Integer csid);
+	
+	
+	
+	public List<Dishes> findByCsids(List<Integer> csids, Integer page);
+	public Integer countByCsids(List<Integer> csids);
+    
 		
 	public Integer CountDishes();
 

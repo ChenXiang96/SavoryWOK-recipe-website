@@ -27,14 +27,15 @@ public interface DishesService {
 	public Integer CountPageDishesFromCategory(Integer cid);
 
 	
-	//查找最热的商品6条
-	public List<Dishes> findHot();
+	public List<Dishes> findByCsname(String csname, Integer page);
+	public Integer countPageByCsname(String csname);
 
+
+	public List<Dishes> findHot();
 	public Integer CountPageDishesFromCategorySecond(Integer csid);
 
-
-	
 	//查找最新的商品10条
 	public List<Dishes> findNew();
+
 
 }

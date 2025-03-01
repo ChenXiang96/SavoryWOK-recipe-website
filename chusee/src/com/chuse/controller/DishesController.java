@@ -33,7 +33,8 @@ public class DishesController {
 		if(page > count){
 			page = 1;
 		}
-		map.put("Dishes", Dishes);
+		//map.put("Dishes", Dishes);
+		map.put("dishesList", Dishes);
 		//把当前的页数存放到map中
 		map.put("page", page);
 		//总共有多少页
@@ -53,7 +54,8 @@ public class DishesController {
 				page = 1;
 			}
 			List<Dishes> Dishes = DishesService.findByCsid(csid, page);
-			map.put("Dishes", Dishes);
+			//map.put("Dishes", Dishes);
+			 map.put("dishesList", Dishes);
 			//把当前的页数存放到map中
 			map.put("page", page);
 			//总共有多少页
@@ -71,6 +73,33 @@ public class DishesController {
 		return "caipinxiangqing";
 	}
 	
+	
+	@RequestMapping(value="/findByCsname/{csname:.+}/{page}")
+	public String findByCsname(@PathVariable("csname") String csname,
+	                          @PathVariable("page") Integer page,
+	                          Map<String, Object> map) {
+		// 增加调试输出
+	    System.out.println("接收到的csname参数：" + csname);
+	    
+	    // 调用服务层
+	    List<Dishes> dishesList = DishesService.findByCsname(csname, page);
+	    Integer totalPage = DishesService.countPageByCsname(csname);
+	    
+	    // 分页验证（可选）
+	    if(page > totalPage){
+	        page = 1;
+	    }
+	    
+	    // 参数注入map
+	    //map.put("dList", dishesList);  
+	    map.put("dishesList", dishesList); // 与jsp页面中的遍历名称保持一致
+	    map.put("page", page);
+	    map.put("count", totalPage);
+	    map.put("csname", csname);     // 传递当前分类名
+	    
+	    return "recai";
+	}
+
 
 	
 }

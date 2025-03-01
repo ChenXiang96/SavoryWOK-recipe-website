@@ -39,19 +39,13 @@
 					<a
 						href="${ pageContext.request.contextPath }/findByCid/<c:out value="${c.cid}"/>/1"
 						target="_blank" title="category"
-						style="float: none !important;   <!-- 强制清除浮动 -->
-                 display: block !important; <!-- 覆盖原有布局 -->
-                 margin: 10px;">
+						style="float: none !important; display: block !important; margin: 10px;">
 						<img class="imgLoad"
 						src="${pageContext.request.contextPath}/<c:out value="${c.cimage}"/>"
 						style="display: block; width: 75px; height: 75px; margin: 0 auto;">
 
-						<span
-						style="font-size: 1.1em;   <!-- 相对单位放大 -->
-              display: block;       <!-- 独占一行 -->
-              margin-top: 8px;      <!-- 文字与图片间距 -->
-              font-weight: 500;">
-							<!-- 适当加粗 --> <c:out value="${c.cname}"></c:out>
+						<span style="font-size: 1.1em; display: block; margin-top: 8px; font-weight: 500;">
+							<c:out value="${c.cname}"></c:out>
 					</span>
 					</a>
 				</c:forEach>

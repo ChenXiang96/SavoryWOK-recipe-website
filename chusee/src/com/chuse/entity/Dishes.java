@@ -53,11 +53,6 @@ public class Dishes implements java.io.Serializable{
     //private List<RecipeStep> steps; // 存储该菜品对应的所有步骤
 	private Set<RecipeStep> steps = new HashSet<>(); // 改为Set
 	
-	 // 新增：与 Ingredient_Detail 表的一对多关系
-//	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-//    @JoinColumn(name = "dish_id") // 外键字段名
-//    private List<IngredientsDetail> ingredients = new ArrayList<>();
-	
 	@OneToMany(mappedBy = "dish", cascade = CascadeType.ALL)
     //private List<IngredientsDetail> ingredients = new ArrayList<>();
 	private Set<IngredientsDetail> ingredients = new HashSet<>(); // 改为Set

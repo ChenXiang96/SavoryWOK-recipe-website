@@ -11,7 +11,7 @@
  Target Server Version : 50648 (5.6.48-log)
  File Encoding         : 65001
 
- Date: 27/02/2025 01:44:28
+ Date: 01/03/2025 03:00:48
 */
 
 SET NAMES utf8mb4;
@@ -56,50 +56,33 @@ CREATE TABLE `category2`  (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for category_categorysecond
--- ----------------------------
-DROP TABLE IF EXISTS `category_categorysecond`;
-CREATE TABLE `category_categorysecond`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `cid` int(11) NOT NULL,
-  `csid` int(11) NOT NULL,
-  PRIMARY KEY (`id`) USING BTREE,
-  INDEX `fk_category_categorysecond_cid`(`cid`) USING BTREE,
-  INDEX `fk_category_categorysecond_csid`(`csid`) USING BTREE,
-  CONSTRAINT `fk_category_categorysecond_cid` FOREIGN KEY (`cid`) REFERENCES `category` (`cid`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `fk_category_categorysecond_csid` FOREIGN KEY (`csid`) REFERENCES `categorysecond` (`csid`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
-
--- ----------------------------
--- Records of category_categorysecond
--- ----------------------------
-INSERT INTO `category_categorysecond` VALUES (1, 2, 1);
-INSERT INTO `category_categorysecond` VALUES (2, 2, 2);
-INSERT INTO `category_categorysecond` VALUES (3, 2, 3);
-INSERT INTO `category_categorysecond` VALUES (6, 2, 4);
-INSERT INTO `category_categorysecond` VALUES (7, 2, 5);
-INSERT INTO `category_categorysecond` VALUES (8, 2, 6);
-
--- ----------------------------
 -- Table structure for categorysecond
 -- ----------------------------
 DROP TABLE IF EXISTS `categorysecond`;
 CREATE TABLE `categorysecond`  (
   `csid` int(11) NOT NULL AUTO_INCREMENT,
   `csname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`csid`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 23 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
+  `cid` int(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`csid`) USING BTREE,
+  INDEX `fk_cid`(`cid`) USING BTREE,
+  CONSTRAINT `cid` FOREIGN KEY (`cid`) REFERENCES `category` (`cid`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of categorysecond
 -- ----------------------------
-INSERT INTO `categorysecond` VALUES (1, 'Beef');
-INSERT INTO `categorysecond` VALUES (2, 'Pork');
-INSERT INTO `categorysecond` VALUES (3, 'Lamb');
-INSERT INTO `categorysecond` VALUES (4, 'Seafood');
-INSERT INTO `categorysecond` VALUES (5, 'Poultry');
-INSERT INTO `categorysecond` VALUES (6, 'Vegetarian');
-INSERT INTO `categorysecond` VALUES (7, 'Street Food');
+INSERT INTO `categorysecond` VALUES (1, 'Beef', 1);
+INSERT INTO `categorysecond` VALUES (2, 'Pork', 1);
+INSERT INTO `categorysecond` VALUES (3, 'Lamb', 1);
+INSERT INTO `categorysecond` VALUES (4, 'Seafood', 1);
+INSERT INTO `categorysecond` VALUES (5, 'Poultry', 1);
+INSERT INTO `categorysecond` VALUES (6, 'Vegetarian', 1);
+INSERT INTO `categorysecond` VALUES (7, 'Street Food', 1);
+INSERT INTO `categorysecond` VALUES (8, 'Beef', 2);
+INSERT INTO `categorysecond` VALUES (9, 'Pork', 2);
+INSERT INTO `categorysecond` VALUES (10, 'Lamb', 2);
+INSERT INTO `categorysecond` VALUES (11, 'Seafood', 2);
+INSERT INTO `categorysecond` VALUES (12, 'Poultry', 2);
 
 -- ----------------------------
 -- Table structure for categorysecond2
@@ -284,34 +267,36 @@ CREATE TABLE `dishes`  (
   PRIMARY KEY (`pid`) USING BTREE,
   INDEX `csid`(`csid`) USING BTREE,
   CONSTRAINT `dishes_ibfk_1` FOREIGN KEY (`csid`) REFERENCES `categorysecond` (`csid`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 30 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 26 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of dishes
 -- ----------------------------
-INSERT INTO `dishes` VALUES ('', 'Dishes images/Main Dishes/1.jpg', '2025-02-02 00:00:00', 'Home-Style Stir-Fried Beef', 1, 2, 'Beef tenderloin, baking soda, dark soy sauce, light soy sauce', 1);
-INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/2.jpg', '2025-02-26 21:40:11', 'Braised Beef with Potatoes', 2, 2, 'Beef, potatoes, bean paste, star anise, garlic', 1);
-INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/3.jpg', '2025-02-05 21:43:35', 'Wok-Fried Lamb with Scallions', 3, 2, 'Lamb slices, scallions, salt, light soy sauce, dark soy sauce', 3);
-INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/4.png', '2025-02-06 21:59:20', 'Home-Style braised pork', 4, 2, 'Belly pork', 2);
-INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/5.jpg', '2025-02-06 22:02:38', 'Garlic Mushroom Beef Cubes', 5, 2, 'Beef, mushrooms, garlic, butter, black pepper', 1);
-INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/6.jpg', '2025-02-12 22:04:04', 'Braised Lamb', 6, 2, 'Lamb and carrots', 3);
-INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/7.jpg', '2025-02-06 22:06:00', 'Stir-Fried Beef with Chili Peppers', 7, 2, 'Beef, green pepper, ginger, garlic, starch, cooking wine', 1);
-INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/8.jpg', '2025-02-05 22:10:10', 'Spicy Diced Chicken', 8, 2, 'Chicken drumsticks, dried chili peppers, egg whites, cornstarch, green onions', 5);
-INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/9.jpg', '2025-02-05 23:29:04', 'Braised Duck with Lotus Root', 9, 2, 'Duck, lotus root, ginger, onion, star anise, cinnamon', 5);
-INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/10.jpg', '2025-02-06 00:30:30', 'Sour Plum Duck', 10, 2, 'Duck, sour plum, sour plum sauce, rock sugar, dark soy sauce, light soy sauce', 5);
-INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/11.jpg', '2025-02-13 00:49:57', 'Pan-Seared Pork Belly', 11, 2, 'Pork belly, light soy sauce, dark soy sauce, white sesame seeds, barbecue seasoning', 2);
-INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/12.jpg', '2025-02-20 00:54:44', 'Salt & Pepper Fried Pork Loin Strips', 12, 2, 'Pork Loin, egg, pepper, salt, ginger, onion', 2);
+INSERT INTO `dishes` VALUES ('', 'Dishes images/Main Dishes/1.jpg', '2025-02-02 00:00:00', 'Home-Style Stir-Fried Beef', 1, 2, 'Beef tenderloin, baking soda, dark soy sauce, light soy sauce', 8);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/2.jpg', '2025-02-26 21:40:11', 'Braised Beef with Potatoes', 2, 2, 'Beef, potatoes, bean paste, star anise, garlic', 8);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/3.jpg', '2025-02-05 21:43:35', 'Wok-Fried Lamb with Scallions', 3, 2, 'Lamb slices, scallions, salt, light soy sauce, dark soy sauce', 10);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/4.png', '2025-02-06 21:59:20', 'Home-Style braised pork', 4, 2, 'Belly pork', 9);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/5.jpg', '2025-02-06 22:02:38', 'Garlic Mushroom Beef Cubes', 5, 2, 'Beef, mushrooms, garlic, butter, black pepper', 8);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/6.jpg', '2025-02-12 22:04:04', 'Braised Lamb', 6, 2, 'Lamb and carrots', 10);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/7.jpg', '2025-02-06 22:06:00', 'Stir-Fried Beef with Chili Peppers', 7, 2, 'Beef, green pepper, ginger, garlic, starch, cooking wine', 8);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/8.jpg', '2025-02-05 22:10:10', 'Spicy Diced Chicken', 8, 2, 'Chicken drumsticks, dried chili peppers, egg whites, cornstarch, green onions', 12);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/9.jpg', '2025-02-05 23:29:04', 'Braised Duck with Lotus Root', 9, 2, 'Duck, lotus root, ginger, onion, star anise, cinnamon', 12);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/10.jpg', '2025-02-06 00:30:30', 'Sour Plum Duck', 10, 2, 'Duck, sour plum, sour plum sauce, rock sugar, dark soy sauce, light soy sauce', 12);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/11.jpg', '2025-02-13 00:49:57', 'Pan-Seared Pork Belly', 11, 2, 'Pork belly, light soy sauce, dark soy sauce, white sesame seeds, barbecue seasoning', 9);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/12.jpg', '2025-02-20 00:54:44', 'Salt & Pepper Fried Pork Loin Strips', 12, 2, 'Pork Loin, egg, pepper, salt, ginger, onion', 9);
 INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/13.jpg', '2025-01-08 00:57:20', 'Hand-Shredded Chicken', 13, 2, 'Chicken drumsticks, ginger slices, scallions, salt, sugar, soy sauce', 5);
-INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/14.jpg', '2025-02-06 01:00:34', 'Stir-fried Chicken Breast with Mushrooms', 14, 2, 'Chicken breast, mushrooms, garlic, green onions', 5);
-INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/15.jpg', '2025-01-30 01:04:42', 'Kung Pao Chicken', 15, 2, 'Chicken breast, cucumber, carrot, peanuts, fermented chili Bean sauce', 5);
-INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/16.jpg', '2025-02-05 01:06:49', 'Lamb Rib Soup', 16, 2, 'Lamb chops, white radish, carrots, peppercorns', 3);
-INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/17.jpg', '2025-02-04 01:08:01', 'Cumin Grilled Lamb Chops', 17, 2, 'Lamb chops, cumin seeds, peppercorns, chili powder, salt', 3);
-INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/18.jpg', '2025-02-05 01:11:58', 'Sichuan Boiled Beef', 18, 2, 'Beef, bean sprouts, celery, chicken essence, baking soda', 1);
-INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/19.jpg', '2025-02-06 01:25:48', 'Soy Sauce Braised Carp', 19, 2, 'Carp, Sichuan pepper, light soy sauce, dark soy sauce, cooking wine, garlic', 4);
-INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/20.jpg', '2025-02-13 01:28:09', 'Braised large shrimp', 20, 2, 'Shrimp, onion, ginger, garlic, light soy sauce, cooking wine, dark soy sauce', 4);
-INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/21.jpg', '2025-02-05 01:32:30', 'Fried Egg with Shredded Potatoes', 21, 2, 'Eggs, potatoes, carrots, black pepper, starch', 5);
-INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/22.jpg', '2025-02-21 01:38:19', 'Tofu & Perch Hotpot', 22, 2, 'Perch, tofu, onion, chili pepper', 4);
-INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/23.jpg', '2024-10-03 01:41:22', 'Steamed Crab', 23, 2, 'Crab, soy sauce, vinegar, minced ginger, minced garlic, sesame oil', 4);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/14.jpg', '2025-02-06 01:00:34', 'Stir-fried Chicken Breast with Mushrooms', 14, 2, 'Chicken breast, mushrooms, garlic, green onions', 12);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/15.jpg', '2025-01-30 01:04:42', 'Kung Pao Chicken', 15, 2, 'Chicken breast, cucumber, carrot, peanuts, fermented chili Bean sauce', 12);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/16.jpg', '2025-02-05 01:06:49', 'Lamb Rib Soup', 16, 2, 'Lamb chops, white radish, carrots, peppercorns', 10);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/17.jpg', '2025-02-04 01:08:01', 'Cumin Grilled Lamb Chops', 17, 2, 'Lamb chops, cumin seeds, peppercorns, chili powder, salt', 12);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/18.jpg', '2025-02-05 01:11:58', 'Sichuan Boiled Beef', 18, 2, 'Beef, bean sprouts, celery, chicken essence, baking soda', 8);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/19.jpg', '2025-02-06 01:25:48', 'Soy Sauce Braised Carp', 19, 2, 'Carp, Sichuan pepper, light soy sauce, dark soy sauce, cooking wine, garlic', 11);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/20.jpg', '2025-02-13 01:28:09', 'Braised large shrimp', 20, 2, 'Shrimp, onion, ginger, garlic, light soy sauce, cooking wine, dark soy sauce', 11);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/21.jpg', '2025-02-05 01:32:30', 'Fried Egg with Shredded Potatoes', 21, 2, 'Eggs, potatoes, carrots, black pepper, starch', 12);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/22.jpg', '2025-02-21 01:38:19', 'Tofu & Perch Hotpot', 22, 2, 'Perch, tofu, onion, chili pepper', 11);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/23.jpg', '2024-10-03 01:41:22', 'Steamed Crab', 23, 2, 'Crab, soy sauce, vinegar, minced ginger, minced garlic, sesame oil', 11);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Appertizers/1.jpg', '2025-02-20 17:14:18', 'Chilled Cucumber and Wood Ear', 24, 2, 'Wood Ear, cucumber, salt, garlic, chili pepper,', 6);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Appertizers/2.jpg', '2025-02-20 17:27:54', 'Chilled Shredded Chicken Breast with Dressing', 25, 2, 'Chicken breast, coriander, cucumber, chili pepper, ginger', 5);
 
 -- ----------------------------
 -- Table structure for howdo
@@ -342,7 +327,7 @@ CREATE TABLE `ingredients_details`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `dish_id`(`dish_id`) USING BTREE,
   CONSTRAINT `dish_id` FOREIGN KEY (`dish_id`) REFERENCES `dishes` (`pid`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of ingredients_details
@@ -379,7 +364,7 @@ CREATE TABLE `recipe_step`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `pid`(`pid`) USING BTREE,
   CONSTRAINT `pid` FOREIGN KEY (`pid`) REFERENCES `dishes` (`pid`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of recipe_step
@@ -541,5 +526,11 @@ INSERT INTO `user` VALUES (14, 'user010', '123', 'user010', 'aaa@shop.com', '122
 INSERT INTO `user` VALUES (15, 'user011', '123', 'XIANG CHEN', 'aaa@shop.com', '7092192960', '30 Lady Anderson st', 1, '', NULL, NULL, NULL, NULL);
 INSERT INTO `user` VALUES (16, 'user012', '123', 'XIANG CHEN', 'aaa@shop.com', '7092192960', '30 Lady Anderson st', 1, '', NULL, 'I love Cooking!', NULL, NULL);
 INSERT INTO `user` VALUES (17, 'user016', '12345', 'charles', 'aaa@shop.com', '115413464', '30 Lady Anderson st', 1, '', '/uploads/3e86ae71-e660-4141-8215-fbf50a246ad7_屏幕截图 2025-02-11 222019.png', 'fm1', NULL, NULL);
+
+-- ----------------------------
+-- View structure for v_categorysecond_group
+-- ----------------------------
+DROP VIEW IF EXISTS `v_categorysecond_group`;
+CREATE ALGORITHM = UNDEFINED SQL SECURITY DEFINER VIEW `v_categorysecond_group` AS select `categorysecond`.`csname` AS `csname`,group_concat(`categorysecond`.`csid` order by `categorysecond`.`csid` ASC separator ',') AS `csids` from `categorysecond` group by `categorysecond`.`csname`;
 
 SET FOREIGN_KEY_CHECKS = 1;

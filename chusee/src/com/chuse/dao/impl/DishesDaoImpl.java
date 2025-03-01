@@ -23,10 +23,8 @@ public class DishesDaoImpl extends BaseDaoImpl<Dishes> implements DishesDao {
 
     @Override
     public List<Dishes> findByCategorySecondCategoryCid(Integer cid, Integer page) {
-        String hql = "select p from Dishes p " +
-                     "join p.categorySecond cs " +
-                     "join cs.categories c " +
-                     "where c.cid = :cid";
+    	String hql = "SELECT p FROM Dishes p " +
+                "WHERE p.categorySecond.category.cid = :cid"; // 直接通过层级关联查询
         Query<Dishes> query = this.getCurrentSession().createQuery(hql, Dishes.class);
         query.setParameter("cid", cid);
         query.setFirstResult((page - 1) * 12); // 分页起始位置
@@ -36,10 +34,8 @@ public class DishesDaoImpl extends BaseDaoImpl<Dishes> implements DishesDao {
 
     @Override
     public Integer countByCategorySecondCategoryCid(Integer cid) {
-        String hql = "select count(p) from Dishes p " +
-                     "join p.categorySecond cs " +
-                     "join cs.categories c " +
-                     "where c.cid = :cid";
+    	String hql = "SELECT COUNT(p) FROM Dishes p " +
+                "WHERE p.categorySecond.category.cid = :cid";
         return ((Long) this.getCurrentSession().createQuery(hql)
                           .setParameter("cid", cid)
                           .uniqueResult()).intValue();
@@ -80,15 +76,6 @@ public class DishesDaoImpl extends BaseDaoImpl<Dishes> implements DishesDao {
     }
     
  // 修改后的查询方法（核心）
-/**    @Override
-   public Dishes findWithSteps(Integer pid) {
-        String hql = "SELECT p FROM Dishes p LEFT JOIN FETCH p.steps WHERE p.pid = :pid";
-        return getCurrentSession()
-                .createQuery(hql, Dishes.class)
-                .setParameter("pid", pid)
-                .uniqueResult();
-    }
-**/  
   @Override
     public Dishes findWithStepsAndIngredients(Integer pid) {
         // 使用 DISTINCT 避免重复数据
@@ -102,11 +89,28 @@ public class DishesDaoImpl extends BaseDaoImpl<Dishes> implements DishesDao {
                 .setParameter("pid", pid)
                 .uniqueResult();
     }
+  
+  
+  @Override
+  public List<Dishes> findByCsids(List<Integer> csids, Integer page) {
+      String hql = "FROM Dishes d WHERE d.categorySecond.csid IN (:csids)";
+      return getCurrentSession()
+          .createQuery(hql, Dishes.class)
+          .setParameterList("csids", csids)
+          .setFirstResult((page-1)*12)
+          .setMaxResults(12)
+          .list();
+  }
 
-    
+  @Override
+  public Integer countByCsids(List<Integer> csids) {
+      String hql = "SELECT COUNT(d) FROM Dishes d WHERE d.categorySecond.csid IN (:csids)";
+      return ((Long) getCurrentSession()
+              .createQuery(hql)
+              .setParameterList("csids", csids)
+              .uniqueResult()).intValue();
+  }
 
-    
-    
 
     @Override
     public List<Dishes> findHot() {
@@ -132,10 +136,7 @@ public class DishesDaoImpl extends BaseDaoImpl<Dishes> implements DishesDao {
         query.setMaxResults(12); // 每页大小
         return query.list();
     }
-    
 
-
-    
 
     @Override
     public Serializable save(Dishes o) {
