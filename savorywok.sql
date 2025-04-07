@@ -11,7 +11,7 @@
  Target Server Version : 50648 (5.6.48-log)
  File Encoding         : 65001
 
- Date: 04/04/2025 22:55:36
+ Date: 06/04/2025 23:37:49
 */
 
 SET NAMES utf8mb4;
@@ -49,7 +49,7 @@ CREATE TABLE `category2`  (
   `caname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `caid` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`caid`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of category2
@@ -57,6 +57,12 @@ CREATE TABLE `category2`  (
 INSERT INTO `category2` VALUES ('Tastes of the Seasons', 1);
 INSERT INTO `category2` VALUES ('Tradition on a Plate', 2);
 INSERT INTO `category2` VALUES ('Ready in 30 mins', 3);
+INSERT INTO `category2` VALUES ('Soothe Your Lungs', 4);
+INSERT INTO `category2` VALUES ('Liver & Eye Refresh', 5);
+INSERT INTO `category2` VALUES ('Eat for Healthy Hair', 6);
+INSERT INTO `category2` VALUES ('Nourish Your Skin', 7);
+INSERT INTO `category2` VALUES ('Boost Your Immunity', 8);
+INSERT INTO `category2` VALUES ('Smart Bites', 9);
 
 -- ----------------------------
 -- Table structure for categorysecond
@@ -3583,20 +3589,20 @@ CREATE TABLE `subject`  (
   PRIMARY KEY (`pid`) USING BTREE,
   INDEX `casid`(`casid`) USING BTREE,
   CONSTRAINT `subject_ibfk_1` FOREIGN KEY (`casid`) REFERENCES `categorysecond2` (`casid`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
+) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of subject
 -- ----------------------------
-INSERT INTO `subject` VALUES ('早餐这么吃，减肥瘦得快', 'images/h2.jpg', '2018-05-02 00:00:00', '早餐吃什么减肥', 1, 1, '不吃早餐可是有很多危害的哦，那不仅早餐要吃，还有人会注重早餐吃什么可以减肥呢？', NULL);
-INSERT INTO `subject` VALUES ('春天养胃，5种食物健脾开胃', 'images/h3.jpg', '2018-05-02 00:00:00', '春笋养胃', 2, 1, '春季是养脾胃的一个好季节，在中医看来，应该吃一些比较升发与易消化的食物，也可以适当地“吃香喝辣”以健胃，吃点酸味以助食欲', NULL);
-INSERT INTO `subject` VALUES ('吃什么改善健忘症？', 'images/h4.jpg', '2018-05-06 00:00:00', '葵花子的功效', 3, 1, '丰富的铁、锌、钾、镁等微量元素以及维生素E，使葵花子有一定的补脑健脑作用。实践证明：喜食葵花子的人，不仅皮肤红润、细嫩，而且大脑思维敏捷、记忆力强、言谈有条不紊。', NULL);
-INSERT INTO `subject` VALUES ('上班族减肥便当，快来拿！', 'images/h8.jpg', '2018-05-07 00:00:00', '健康的减肥午餐', 4, 1, '一份肉类：鱼肉为首选，其次是虾肉、鸡肉，另外是牛肉、羊肉、猪肉等红肉.....', NULL);
-INSERT INTO `subject` VALUES ('这些网红饮料也不能多喝！', 'images/h6.jpg', '2018-05-08 00:00:00', '喝碳酸饮料的危害', 5, 1, '碳酸饮料一般含有约10%左右的糖分，一小瓶热量就达到一二百千卡，经常喝容易使人发胖。', NULL);
-INSERT INTO `subject` VALUES ('赶走你的上班疲劳', 'images/h10.jpg', '2018-05-09 00:00:00', '上班族缓解疲劳', 6, 1, '呼出健康好身体。深呼吸，可以促进人的肺部排出浊气，增加肺活量和血液中的含氧量，加快血液循环。', NULL);
-INSERT INTO `subject` VALUES ('精神不振调理之道', 'images/h17.jpg', '2018-05-07 00:00:00', '打起精神来！', 7, 1, '属于热性的羊肉冬天吃是再合适不过的，除了喝羊肉汤，红焖羊肉的香味足以诱惑你多吃2碗饭', NULL);
-INSERT INTO `subject` VALUES ('春天吃什么降火？', 'images/h18.jpg', '2018-05-07 00:00:00', '降火蔬菜看这里~', 8, 1, '春季天干气躁，肝火旺盛，很容易让人上火，春天该如何养肝降火呢？其实我们可以多吃一些降火的蔬菜，例如像菠菜这样的食物，让我们吃出健康身体', NULL);
-INSERT INTO `subject` VALUES ('买芦笋要注意“三鲜”', 'images/h19.jpg', '2018-05-09 00:00:00', '炒煮也要新鲜', 9, 1, '新鲜芦笋的鲜度降低很快，所以买回来后应该趁鲜及时食用，不适宜久藏。存放时间最好不要超过三天，且应低温避光保存。', NULL);
+INSERT INTO `subject` VALUES ('Tastes of the Seasons', 'Index-images/Tastes of the Seasons.jpeg', '2018-05-07 00:00:00', 'Tastes of the Seasons', 1, 1, '不吃早餐可是有很多危害的哦，那不仅早餐要吃，还有人会注重早餐吃什么可以减肥呢？', NULL);
+INSERT INTO `subject` VALUES ('Tradition on a Plate', 'Index-images/Tradition on a Plate.jpg', '2018-05-08 00:00:00', 'Tradition on a Plate', 2, 1, '春季是养脾胃的一个好季节，在中医看来，应该吃一些比较升发与易消化的食物，也可以适当地“吃香喝辣”以健胃，吃点酸味以助食欲', NULL);
+INSERT INTO `subject` VALUES ('Ready in 30 mins', 'Index-images/Ready in 30 mins.jpg', '2018-05-09 00:00:00', 'Ready in 30 mins', 3, 1, '丰富的铁、锌、钾、镁等微量元素以及维生素E，使葵花子有一定的补脑健脑作用。实践证明：喜食葵花子的人，不仅皮肤红润、细嫩，而且大脑思维敏捷、记忆力强、言谈有条不紊。', NULL);
+INSERT INTO `subject` VALUES ('Soothe Your Lungs', 'Healthy-images/Soothe Your Lungs.jpg', '2018-05-07 00:00:00', 'Soothe Your Lungs', 4, 1, 'Discover dishes that help moisten your lungs and relieve dry coughs—healing comfort in every bite.', NULL);
+INSERT INTO `subject` VALUES ('Liver & Eye Refresh', 'Healthy-images/Refresh Your Liver & Eyes.jpeg', '2018-05-07 00:00:00', 'Liver & Eye Refresh', 5, 1, 'Inspired by traditional wisdom, these dishes help clear the liver and brighten the eyes—restoring balance from within.', NULL);
+INSERT INTO `subject` VALUES ('Eat for Healthy Hair', 'Healthy-images/Eat for Healthy Hair.jpg', '2018-05-09 00:00:00', 'Eat for Healthy Hair', 6, 1, 'Tired of dull or thinning hair? These tasty dishes are packed with hair-loving nutrients to help you glow from root to tip.', NULL);
+INSERT INTO `subject` VALUES ('Nourish Your Skin', 'Healthy-images/Nourish Your Skin.jpg', '2024-09-09 22:51:08', 'Nourish Your Skin', 7, 1, 'Loaded with vitamins, antioxidants, and healthy fats, these dishes are designed to support your skin’s health and elasticity.', NULL);
+INSERT INTO `subject` VALUES ('Boost Your Immunity', 'Healthy-images/Boost Your Immunity.jpg', '2024-09-19 22:59:28', 'Boost Your Immunity', 8, 1, 'Stay strong and fight the cold with simple, healthy dishes that boost your body’s natural defenses.', NULL);
+INSERT INTO `subject` VALUES ('Smart Bites', 'Healthy-images/Think Sharp.jpg', '2024-11-15 23:11:49', 'Smart Bites', 10, 1, 'Fuel your mind with meals that nourish your brain and enhance memory retention and cognitive abilities.', NULL);
 
 -- ----------------------------
 -- Table structure for topic

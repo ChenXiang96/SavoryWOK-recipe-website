@@ -44,7 +44,7 @@ public class IndexController {
 		session.setAttribute("cList", categoryService.getCategory());
 		//把所有的专题一级分类都存入到session中
 		session.setAttribute("cList2", categoryService2.getCategory2());
-		 session.setAttribute("activeMenu", "home");
+		session.setAttribute("activeMenu", "home");
 		// 新增：加载分类视图数据
 	    List<CategorySecondGroup> groups = categorySecondGroupDao.findAll();
 	    session.setAttribute("categorySecondGroups", groups);

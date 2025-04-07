@@ -7,7 +7,7 @@ import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
-
+import com.SavoryWok.service.CategoryService2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,13 +16,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.SavoryWok.dao.CategorySecondGroupDao;
 import com.SavoryWok.entity.Category2;
 import com.SavoryWok.entity.CategorySecond;
 import com.SavoryWok.entity.CategorySecond2;
 import com.SavoryWok.entity.Dishes;
 import com.SavoryWok.entity.Subject;
 import com.SavoryWok.service.CategorySecond2Service;
-import com.SavoryWok.service.CategoryService2;
+import com.SavoryWok.service.CategoryService;
+
 import com.SavoryWok.service.DishesService;
 import com.SavoryWok.service.SubjectService;
 
@@ -32,6 +34,18 @@ public class SubjectController {
 	@Resource
 	private SubjectService subjectService;
 	
+	@Resource
+	private CategoryService categoryService;
+
+	@Resource
+	private DishesService DishesService;
+	
+
+	
+	@Resource // 添加DAO注入
+	private CategorySecondGroupDao categorySecondGroupDao;
+	
+	
 	@RequestMapping("/getHealthaa")
 	public String get(@RequestParam(value="pid", required = false) Integer pid,Model model){
 		Subject subject=this.subjectService.findSubject(pid);
@@ -39,19 +53,7 @@ public class SubjectController {
 		return "zhuantixiangqing";
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	//首页上跳转至健康
 		@RequestMapping(value="/myHealth")
@@ -62,25 +64,13 @@ public class SubjectController {
 			map.put("hList", subjectService.findHHot());
 			session.setAttribute("activeMenu", "health");
 			
+			session.setAttribute("cList2", categoryService2.getCategory2());
+			map.put("nList2", subjectService.findNew2());
+			
 			return "health"; 
 		}
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 		
 		
 	//首页中点击专题一级分类查询商品

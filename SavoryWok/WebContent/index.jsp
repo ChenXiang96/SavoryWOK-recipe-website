@@ -367,6 +367,16 @@ a.right {
   
 }
 
+.box-item img {
+    width: 100%;          /* 宽度占满容器 */
+    max-width: 440px;     /* 最大显示宽度 */
+    height: 300px;        /* 固定高度 */
+    object-fit: cover;    /* 关键属性：保持比例填充容器 */
+    object-position: center; /* 聚焦图片中央区域 */
+    display: block;       /* 消除底部间隙 */
+    margin: 0 auto 15px; /* 垂直间距控制 */
+}
+
 </style>
 
 </head>
@@ -570,11 +580,14 @@ a.right {
 									<div class="wrap-col">
 										<div class="box-item">
 											
-											<span class="ribbon" style="display:inline-block !important; min-width:220px"> <a title="健康首页"
+											<span class="ribbon" style="display:inline-block !important; min-width:220px"> 
+											   <a title="健康首页"
 												href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1"
-												style="color: #FFFFFF" target="_blank"> <c:out
-														value="${c.caname}"></c:out>
-											</a> <b></b></span>
+												style="color: #FFFFFF" target="_blank"> 
+												 <c:out value="${c.caname}"></c:out>
+											   </a> 
+											   <b></b>
+										    </span>
 
 
 											<c:forEach items="${nList2}" var="s" begin="0" end="0">

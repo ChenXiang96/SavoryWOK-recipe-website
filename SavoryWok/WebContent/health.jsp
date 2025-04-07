@@ -45,6 +45,9 @@
 <link href="${ctx }/css/bootstrap.min.css" rel="stylesheet" />
 
 <link href="${ctx }/css/style2.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Satisfy:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
    
 <style>
 .content-box.box-1 .box-item {
@@ -56,13 +59,12 @@
 </style>
 <style>
 .zerogrid .col-1-3, .zerogrid .col-1-3-fixed {
-    /* width: 33.33%; */
-    width: 33%;
-    float: right;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
-    /* margin-left: 10px; */
-    /* margin: 0 auto; */
+    width: 33.333% !important; /* 精确3列 */
+    float: none !important;    /* 关键：移除浮动 */
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 0 15px !important; /* 列间距 */
 }
 .zerogrid .row {
     margin-right: 30px;
@@ -70,20 +72,70 @@
 .content-box .header {
 
     margin-bottom: 35px;
+    margin-top: -25px !important; /* 负值向上移动 */
+    padding-bottom: 15px !important;
 }
 .zerogrid {
-    width: 1550px;
-    position: relative;
-    margin: 0 auto;
-    padding: 0px;
-    margin-left: 10px;
+    max-width: 100% !important; /* 添加 */
+    display: block !important;
+    margin: 0 auto !important; /* 双auto实现居中 */
+    width: 90% !important;
+    padding: 0 20px;
+   
+}
+
+.content-box .header {
+    text-align: center !important; /* 文字居中 */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 800px; /* 控制标题区域最大宽度 */
+}
+
+.row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    margin-right: -15px !important; /* 抵消padding */
+    margin-left: -15px !important;
+    justify-content: center !important;
 }
 
 a {
     color: #654E2D;
     
 }
-    
+
+.box-1 .row.box-item {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    max-width: 1280px !important; /* 控制最大显示宽度 */
+    margin: 20px auto 40px !important;
+}
+
+.content-box box-1{
+   padding-bottom:5px;
+}
+.box-1 img {
+    border-radius: 12px; /* 可选圆角 */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* 添加立体感 */
+}
+
+
+section.content-box .header h2.font-effect-shadow-multiple {
+    color: #32CD32 !important;  
+    font-family: 'Satisfy', cursive !important;
+    font-size: 3.5rem !important;
+}
+
+.box-item img {
+    width: 100%;          /* 宽度占满容器 */
+    max-width: 400px;     /* 最大显示宽度 */
+    height: 230px;        /* 固定高度 */
+    object-fit: cover;    /* 关键属性：保持比例填充容器 */
+    object-position: center; /* 聚焦图片中央区域 */
+    display: block;       /* 消除底部间隙 */
+    margin: 0 auto 15px; /* 垂直间距控制 */
+}
 </style>
 
 </head>
@@ -95,60 +147,7 @@ a {
 	
 
 
-	<!-- 
-	<div class="zerogrid">
-		<div class="callbacks_container">
-			<ul class="rslides" id="slider4">
-				<li>
-					<img src="images/SMZ.jpg" alt="">
-					<div class="caption">
-						<h2>早餐·百变三明治</h2></br>
-						<p>用三明治当早餐即营养又健康，不管你是用来当早餐，还是去郊外郊游，带起来都很方便，做法更是简单. </p>
-					</div>
-				</li>
-				<li>
-					<img src="images/JZD.jpg" alt="">
-					<div class="caption">
-						<h2>鸡蛋仔？华夫饼？—给华夫饼锅子再找个用途</h2></br>
-						<p>刚刚出炉鸡蛋仔最是香气四溢，金黄的色泽让人一看就知道香脆无比，浓浓的蛋香更是让人闻之心醉。咬上一口这酥脆的外壳，你会惊喜的发现里面竟然另有玄机.</p>
-					</div>
-				</li>
-				<li>
-					<img src="images/LB.jpg" alt="">
-					<div class="caption">
-						<h2>爱上素食·健康的苏帮菜.</h2></br>
-						<p>今天一大早起来，
-						没菜伴粥吃，
-						看到昨天买的一根胖萝卜，
-						立即决定，凉拌它!</p>
-					</div>
-				</li>
-				<li>
-					<img src="images/Z.jpg" alt="">
-					<div class="caption">
-						<h2>滋补养生粥，丰富你的中式早餐</h2></br>
-						<p>一粥一饭当思来之不易，一饮一啄饱蘸苦辣酸甜.</p>
-					</div>
-				</li>
-								<li>
-					<img src="images/LP.jpg" alt="">
-					<div class="caption">
-						<h2>一碗裤袋宽的凉皮让你轻松过苦夏</h2></br>
-						<p>炎热的夏天没胃口？来份凉皮吧~鲜嫩、滑爽的面皮拌上香喷喷的辣椒油和调料汁.</p>
-					</div>
-				</li>
-				
-				
-				
-				
-			</ul>
-			
-			
-			
-			
-		</div>
-	</div>
-	 -->
+
 	
 <!--////////////////////////////////////Container-->
 <section id="container" class="index-page">
@@ -157,7 +156,9 @@ a {
 		<section class="content-box box-1">
 			<div class="zerogrid">
 				<div class="row box-item"><!--Start Box-->
-					<h2>“我们有最健康的食谱”</h2>
+					<img src="${ctx}/Banner-images/Healthy-Banner.jpg" 
+                 alt="Healthy-Banner" 
+                 style="width:90%; height: auto; max-width: 1920px; display: block; margin: 0 auto">
 				</div>
 			</div>
 		</section>
@@ -167,29 +168,199 @@ a {
 				<div class="row wrap-box"><!--Start Box-->
 		
 					<div class="header">
-						<h2>欢迎</h2>
-			      
-						<span>这是为您推荐的健康营养菜单</span>
+						<h2 class="font-effect-shadow-multiple">"Rooted in Tradition, Backed by Wellness"</h2>
+						
 					</div>
 					
 					
 					<div class="row">
 			    	
 			    
-				    <c:forEach var="s" items="${hList}" begin="0" end="8"> 		
+				    <c:forEach items="${sessionScope.cList2}" var="c" begin="3" end="3"> 		
 			    	<div class="col-1-3">
 							<div class="wrap-col">
 								<div class="box-item">
-								<div><a href="#" style="font-size:24px"><c:out value="${s.pdesc}"/></a></div>
-									<span class="ribbon"><c:out value="${s.pname }"/><b></b></span>
-									 <img src="${pageContext.request.contextPath}/<c:out value="${s.image}"/>"style="display: block;" />
-									<p><c:out value="${s.pcontent}"/></p>
-									<a href="${pageContext.request.contextPath}/getHealthaa?pid=${s.pid}" class="button button-1">详情</a>
+								
+									<span class="ribbon">
+									  <a title="健康首页"
+												href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1"
+												style="color: #FFFFFF" target="_blank"> 
+									    <c:out value="${c.caname}"></c:out>
+									  </a>
+									  <b></b>
+									</span>
+									
+									
+									 <c:forEach items="${nList2}" var="s" begin="3" end="3">
+												<a
+													href="${pageContext.request.contextPath }/findByPid2/<c:out value="${s.pid}"/>">
+													<img src="${pageContext.request.contextPath}/<c:out value="${s.image}"/>" />
+												</a>
+												<p><c:out value="${s.pcontent}"/></p>
+												<a href="${pageContext.request.contextPath}/getHealthaa?pid=${s.pid}" class="button button-1">详情</a>
+									 </c:forEach>
+									
+								</div>
+							</div>
+				    </div>
+				    </c:forEach>
+				    
+				    <c:forEach items="${sessionScope.cList2}" var="c" begin="4"
+								end="4"> 		
+			    	<div class="col-1-3">
+							<div class="wrap-col">
+								<div class="box-item">
+								
+									<span class="ribbon">
+									  <a title="健康首页"
+												href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1"
+												style="color: #FFFFFF" target="_blank"> 
+									    <c:out value="${c.caname}"></c:out>
+									  </a>
+									  <b></b>
+									</span>
+									
+									
+									 <c:forEach items="${nList2}" var="s" begin="4" end="4">
+												<a
+													href="${pageContext.request.contextPath }/findByPid2/<c:out value="${s.pid}"/>">
+													<img
+													src="${pageContext.request.contextPath}/<c:out value="${s.image}"/>" />
+												</a>
+												<p><c:out value="${s.pcontent}"/></p>
+												<a href="${pageContext.request.contextPath}/getHealthaa?pid=${s.pid}" class="button button-1">详情</a>
+									 </c:forEach>
+									
+								</div>
+							</div>
+				    </div>
+				    </c:forEach>
+				    
+				    
+				    <c:forEach items="${sessionScope.cList2}" var="c" begin="5"
+								end="5"> 		
+			    	<div class="col-1-3">
+							<div class="wrap-col">
+								<div class="box-item">
+								
+									<span class="ribbon">
+									  <a title="健康首页"
+												href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1"
+												style="color: #FFFFFF" target="_blank"> 
+									    <c:out value="${c.caname}"></c:out>
+									  </a>
+									  <b></b>
+									</span>
+									
+									
+									 <c:forEach items="${nList2}" var="s" begin="5" end="5">
+												<a
+													href="${pageContext.request.contextPath }/findByPid2/<c:out value="${s.pid}"/>">
+													<img
+													src="${pageContext.request.contextPath}/<c:out value="${s.image}"/>" />
+												</a>
+												<p><c:out value="${s.pcontent}"/></p>
+												<a href="${pageContext.request.contextPath}/getHealthaa?pid=${s.pid}" class="button button-1">详情</a>
+									 </c:forEach>
+									
+								</div>
+							</div>
+				    </div>
+				    </c:forEach>
+				    
+				    <c:forEach items="${sessionScope.cList2}" var="c" begin="6"
+								end="6"> 		
+			    	<div class="col-1-3">
+							<div class="wrap-col">
+								<div class="box-item">
+								
+									<span class="ribbon">
+									  <a title="健康首页"
+												href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1"
+												style="color: #FFFFFF" target="_blank"> 
+									    <c:out value="${c.caname}"></c:out>
+									  </a>
+									  <b></b>
+									</span>
+									
+									
+									 <c:forEach items="${nList2}" var="s" begin="6" end="6">
+												<a
+													href="${pageContext.request.contextPath }/findByPid2/<c:out value="${s.pid}"/>">
+													<img
+													src="${pageContext.request.contextPath}/<c:out value="${s.image}"/>" />
+												</a>
+												<p><c:out value="${s.pcontent}"/></p>
+												<a href="${pageContext.request.contextPath}/getHealthaa?pid=${s.pid}" class="button button-1">详情</a>
+									 </c:forEach>
+									
 								</div>
 							</div>
 				    </div>
 				    </c:forEach>
 				   
+				   <c:forEach items="${sessionScope.cList2}" var="c" begin="7"
+								end="7"> 		
+			    	<div class="col-1-3">
+							<div class="wrap-col">
+								<div class="box-item">
+								
+									<span class="ribbon">
+									  <a title="健康首页"
+												href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1"
+												style="color: #FFFFFF" target="_blank"> 
+									    <c:out value="${c.caname}"></c:out>
+									  </a>
+									  <b></b>
+									</span>
+									
+									
+									 <c:forEach items="${nList2}" var="s" begin="7" end="7">
+												<a
+													href="${pageContext.request.contextPath }/findByPid2/<c:out value="${s.pid}"/>">
+													<img
+													src="${pageContext.request.contextPath}/<c:out value="${s.image}"/>" />
+												</a>
+												<p><c:out value="${s.pcontent}"/></p>
+												<a href="${pageContext.request.contextPath}/getHealthaa?pid=${s.pid}" class="button button-1">详情</a>
+									 </c:forEach>
+									
+								</div>
+							</div>
+				    </div>
+				    </c:forEach>
+				    
+				    
+				    <c:forEach items="${sessionScope.cList2}" var="c" begin="8"
+								end="8"> 		
+			    	<div class="col-1-3">
+							<div class="wrap-col">
+								<div class="box-item">
+								
+									<span class="ribbon">
+									  <a title="健康首页"
+												href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1"
+												style="color: #FFFFFF" target="_blank"> 
+									    <c:out value="${c.caname}"></c:out>
+									  </a>
+									  <b></b>
+									</span>
+									
+									
+									 <c:forEach items="${nList2}" var="s" begin="8" end="8">
+												<a
+													href="${pageContext.request.contextPath }/findByPid2/<c:out value="${s.pid}"/>">
+													<img
+													src="${pageContext.request.contextPath}/<c:out value="${s.image}"/>" />
+												</a>
+												<p><c:out value="${s.pcontent}"/></p>
+												<a href="${pageContext.request.contextPath}/getHealthaa?pid=${s.pid}" class="button button-1">详情</a>
+									 </c:forEach>
+									
+								</div>
+							</div>
+				    </div>
+				    </c:forEach>
 			    	
 					</div>
 					

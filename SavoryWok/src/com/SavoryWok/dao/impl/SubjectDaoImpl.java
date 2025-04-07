@@ -108,8 +108,8 @@ public class SubjectDaoImpl extends BaseDaoImpl<Subject> implements SubjectDao {
 	}
 	public List<Subject> findNew2() {
 		String hql = "from Subject s ";
-		hql += "order by s.pdate";
-		int rows = 3;
+		hql += "order by s.pid";
+		int rows = 10;
 		return hfind2(hql,1,rows);
 	}
 	
