@@ -21,7 +21,7 @@ if (jQuery().quicksand) {
 			duration: 600,
 			adjustHeight: 'auto'
 		}	
-		$(this).addClass("active"); 			
+		,$(this).addClass("active")); 			
 		return false;
 	});
 	

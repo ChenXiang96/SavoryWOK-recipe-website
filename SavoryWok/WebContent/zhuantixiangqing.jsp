@@ -28,6 +28,30 @@
     margin-top: 0px;
 }
 
+h3 {
+    
+    font-weight: 600 !important; /* 加粗 */
+    margin: 1.2em 0 !important; /* 上下边距 */
+    color: #333 !important; /* 颜色 */
+}
+
+h3.caname-title {
+    font-family: 'Montserrat', serif !important;
+    font-size: 36px !important;
+    letter-spacing: 0.5px;
+}
+
+h4.title-description {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 400;
+    line-height: 1.6;
+} 
+
+h4.title-description {
+    margin-bottom: 80px !important; /* 新增 */
+}
+
 
 
 </style>
@@ -43,9 +67,17 @@
   <%@ include file="menu3.jsp" %>
 
 <div class="sliderh">
-<div id="sliderh" style="width:100%">
+<div id="sliderh" style="width:100%; height:700px;">
 <ul>
-<li class="show1" style="width:100%;background:url(https://i3.meishichina.com/attachment/mofang/2018/06/13/2018061315288542096898197577.jpg) no-repeat center"><h1><a href="https://www.meishichina.com/mofang/dapaidang/" title="不一样的大排档" id="mof_h1">不一样的大排档</a></h1></li>
+
+<li class="show1" 
+    style="width:100%;
+           min-height:480px;
+           margin-top:30px;
+           background:url(${ctx}/<c:out value="${title_banner_img}"/>) no-repeat center bottom; background-size: cover; transform: scale(1);">
+    <h1><a href="https://www.meishichina.com/mofang/dapaidang/" title="不一样的大排档" id="mof_h1">不一样的大排档</a></h1>
+</li>
+
 </ul>
 </div>
 </div>

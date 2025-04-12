@@ -83,10 +83,15 @@ public class SubjectController {
 		 	    // 1. 获取主分类信息
 		 	    Category2 category = categoryService2.getCategory2ById(caid);
 		 	    map.put("caname", category.getCaname());
+		 	    map.put("title_description", category.getTitle_description());
+	            
+		 	    map.put("title_banner_img", category.getTitle_banner_img());
 			    
 			    // 2. 获取该分类下的所有子分类
 			    List<CategorySecond2> subCategories = categorySecond2Service.findByCaid(caid);
+			    
 			    map.put("subCategories", subCategories);
+			    
 			    
 			    // 3. 获取所有子分类的菜品（合并）
 			    List<Dishes> allDishes = new ArrayList<>();
@@ -140,6 +145,8 @@ public class SubjectController {
 			    map.put("dishesList", dishesList);
 				map.put("subjects", subjects);
 				map.put("casname", cs.getCasname()); 
+				
+				map.put("title_banner_img", cs.getTitle_banner_img());
 				//把当前的页数存放到map中
 				map.put("page", page);
 				//总共有多少页

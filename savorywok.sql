@@ -11,7 +11,7 @@
  Target Server Version : 50648 (5.6.48-log)
  File Encoding         : 65001
 
- Date: 06/04/2025 23:37:49
+ Date: 11/04/2025 23:53:34
 */
 
 SET NAMES utf8mb4;
@@ -48,21 +48,23 @@ DROP TABLE IF EXISTS `category2`;
 CREATE TABLE `category2`  (
   `caname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `caid` int(11) NOT NULL AUTO_INCREMENT,
+  `title_description` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
+  `title_banner_img` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`caid`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of category2
 -- ----------------------------
-INSERT INTO `category2` VALUES ('Tastes of the Seasons', 1);
-INSERT INTO `category2` VALUES ('Tradition on a Plate', 2);
-INSERT INTO `category2` VALUES ('Ready in 30 mins', 3);
-INSERT INTO `category2` VALUES ('Soothe Your Lungs', 4);
-INSERT INTO `category2` VALUES ('Liver & Eye Refresh', 5);
-INSERT INTO `category2` VALUES ('Eat for Healthy Hair', 6);
-INSERT INTO `category2` VALUES ('Nourish Your Skin', 7);
-INSERT INTO `category2` VALUES ('Boost Your Immunity', 8);
-INSERT INTO `category2` VALUES ('Smart Bites', 9);
+INSERT INTO `category2` VALUES ('Tastes of the Seasons', 1, 'Seasonal cuisine brings the best of nature’s flavors to your table all year round. In spring, enjoy light, vibrant dishes; in summer, dive into fresh, cool treats; in fall, savor rich, comforting meals; and in winter, warm up with hearty dishes. Each season offers a new opportunity to enjoy fresh ingredients and flavors, creating a dining experience that celebrates the year’s natural rhythm. Let these seasonal recipes inspire your cooking all year long.', 'Banner-images/Tastes-Seasons.jpg');
+INSERT INTO `category2` VALUES ('Tradition on a Plate', 2, 'Discover the rich heritage of traditional Chinese cuisine through time-honored flavors and regional specialties. From the elegance of Peking-style dishes to the delicate sweetness of Shanghai and the bold spices of Xi\'an, each dish tells a unique story. This collection celebrates the diversity and depth of Chinese cooking, where history meets taste. Whether you\'re craving a comforting bowl of noodles or fiery stir-fried bites, there\'s something here for every palate. Dive into centuries of culinary wisdom and enjoy the authentic taste of China in every bite!', 'Banner-images/Tradition-on-a-Plate.jpg');
+INSERT INTO `category2` VALUES ('Ready in 30 mins', 3, 'Looking for delicious meals without spending hours in the kitchen? This collection is packed with quick and tasty dishes that can be ready in 30 minutes or less. Whether you’re cooking with a microwave, rice cooker, or just a single pan, these recipes are perfect for busy weekdays or relaxed weekends. Fast doesn’t mean flavorless—each meal is designed to be simple, satisfying, and flavorful. From lazy day microwave fixes to effortless party plates, enjoy food that fits your schedule and cravings.', 'Banner-images/Ready-in-30-mins.jpg');
+INSERT INTO `category2` VALUES ('Soothe Your Lungs', 4, 'These soothing dishes are made with kumquat, pear, and white radish—known for their mild and moistening properties that may help calm the throat and ease coughing. Whether served warm or cold, each recipe is simple, nourishing, and full of natural goodness. They’re perfect for dry weather or when you need something comforting for the lungs. Light in taste but rich in benefits, these meals combine nature’s simple ingredients to support your well-being.', 'Banner-images/Soothe-Your-Lungs.jpg');
+INSERT INTO `category2` VALUES ('Liver & Eye Refresh', 5, 'This selection of dishes offers a light and refreshing way to care for the liver and eyes, featuring wolfberry, broccoli, and chrysanthemum. These ingredients are known for their soothing effects and nutrient content, helping you feel recharged from the inside out. Whether you’re dealing with screen fatigue or want a break from heavy meals, these recipes gently boost your daily routine. Simple, wholesome, and easy to enjoy!', 'Banner-images/Liver-Eye-Refresh.jpg');
+INSERT INTO `category2` VALUES ('Eat for Healthy Hair', 6, 'Eating for healthy hair starts with the proper nutrients. Iron supports healthy blood flow, helping to deliver oxygen to hair follicles and encouraging growth. Meanwhile, plant-based proteins provide essential building blocks for strong and resilient hair strands. Including iron and plant protein in your meals can help reduce breakage and dullness over time. Whether preventing hair loss or simply looking to boost shine and strength, nourishing your body from within plays a key role.', 'Banner-images/Healthy-Hair.jpg');
+INSERT INTO `category2` VALUES ('Nourish Your Skin', 7, 'Healthy skin isn’t just about what you apply—it also comes from what you eat. This skin-focused theme explores meals that nourish the body from within. Salmon provides essential fatty acids that can help reduce dryness and protect the skin barrier. Kelp is a mineral-rich sea vegetable that supports detoxification and improves skin tone. These ingredients work together to promote a natural glow, offering a simple way to support skin health through your daily meals.', 'Banner-images/skin.jpg');
+INSERT INTO `category2` VALUES ('Boost Your Immunity', 8, 'Want to keep your immune system strong and stay ahead of seasonal colds? Sweet potatoes and bitter melon might help. Sweet potatoes are packed with antioxidants and vitamin A, allowing your body to remain healthy and ready to fight off illness. Bitter melon is loaded with beneficial compounds that support immune balance and energy. Adding these ingredients to your meals is an easy way to give your body extra support when it needs it most.', 'Banner-images/Immunity.jpg');
+INSERT INTO `category2` VALUES ('Smart Bites', 9, 'Want to keep your brain in top shape? Start with your plate. Beans give your brain steady fuel, walnuts help with memory and focus, and eggs offer key nutrients like choline to support thinking and learning. These recipes combine tasty and nourishing ingredients that boost brain power in your daily meals—perfect whether you\'re studying, working, or just keeping your mind sharp.', 'Banner-images/Brain.jpg');
 
 -- ----------------------------
 -- Table structure for categorysecond
@@ -145,26 +147,43 @@ CREATE TABLE `categorysecond2`  (
   `casid` int(11) NOT NULL AUTO_INCREMENT,
   `casname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `caid` int(11) NULL DEFAULT NULL,
+  `subtitle_description` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
+  `title_banner_img` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`casid`) USING BTREE,
   INDEX `caid`(`caid`) USING BTREE,
   CONSTRAINT `categorysecond2_ibfk_1` FOREIGN KEY (`caid`) REFERENCES `category2` (`caid`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
+) ENGINE = InnoDB AUTO_INCREMENT = 28 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of categorysecond2
 -- ----------------------------
-INSERT INTO `categorysecond2` VALUES (1, 'Spring Awakening Bites', 1);
-INSERT INTO `categorysecond2` VALUES (2, 'Savor the Summer', 1);
-INSERT INTO `categorysecond2` VALUES (3, 'Autumn  Harvest Feasts', 1);
-INSERT INTO `categorysecond2` VALUES (4, 'Heartwarming Winter Meals', 1);
-INSERT INTO `categorysecond2` VALUES (5, 'Microwave Meals for Lazy Days', 3);
-INSERT INTO `categorysecond2` VALUES (6, 'Easy Rice Cooker Recipes', 3);
-INSERT INTO `categorysecond2` VALUES (7, 'Workday Wonders Meals', 3);
-INSERT INTO `categorysecond2` VALUES (8, 'Effortless Party Recipes', 3);
-INSERT INTO `categorysecond2` VALUES (9, 'Peking Heritage Cuisine', 2);
-INSERT INTO `categorysecond2` VALUES (10, 'Taste of Shanghai', 2);
-INSERT INTO `categorysecond2` VALUES (11, 'Flavors of Xi\'an', 2);
-INSERT INTO `categorysecond2` VALUES (12, 'Sizzling & Spicy', 2);
+INSERT INTO `categorysecond2` VALUES (1, 'Spring Awakening Bites', 1, NULL, 'Banner-images/Spring-Awakening-Bites.jpg');
+INSERT INTO `categorysecond2` VALUES (2, 'Savor the Summer', 1, NULL, 'Banner-images/Savor-the-Summer.jpg');
+INSERT INTO `categorysecond2` VALUES (3, 'Autumn  Harvest Feasts', 1, NULL, 'Banner-images/Autumn-Harvest-Feasts.jpg');
+INSERT INTO `categorysecond2` VALUES (4, 'Heartwarming Winter Meals', 1, NULL, 'Banner-images/Heartwarming-Winter-Meals.jpg');
+INSERT INTO `categorysecond2` VALUES (5, 'Microwave Meals for Lazy Days', 3, NULL, 'Banner-images/Microwave-Meals.png');
+INSERT INTO `categorysecond2` VALUES (6, 'Easy Rice Cooker Recipes', 3, NULL, 'Banner-images/Rice-Cooker.jpg');
+INSERT INTO `categorysecond2` VALUES (7, 'Workday Wonders Meals', 3, NULL, 'Banner-images/Workday.jpg');
+INSERT INTO `categorysecond2` VALUES (8, 'Effortless Party Recipes', 3, NULL, 'Banner-images/party.jpg');
+INSERT INTO `categorysecond2` VALUES (9, 'Peking Heritage Cuisine', 2, NULL, 'Banner-images/Peking-Heritage-Cuisine.jpg');
+INSERT INTO `categorysecond2` VALUES (10, 'Taste of Shanghai', 2, NULL, 'Banner-images/Taste-of-Shanghai.png');
+INSERT INTO `categorysecond2` VALUES (11, 'Flavors of Xi\'an', 2, NULL, 'Banner-images/Flavors-of-Xi-an.jpeg');
+INSERT INTO `categorysecond2` VALUES (12, 'Sizzling & Spicy', 2, NULL, 'Banner-images/Sizzling-Spicy.png');
+INSERT INTO `categorysecond2` VALUES (13, 'Kumquat', 4, 'Kumquat is known for its natural ability to moisten the lungs and ease coughs. This citrus fruit is rich in vitamin C and is widely used in traditional remedies. In this collection, you\'ll find nourishing teas, soups, and other recipes combining kumquat with honey and rock sugar to soothe the throat and support immunity.', NULL);
+INSERT INTO `categorysecond2` VALUES (14, 'Pear', 4, 'This recipe collection highlights delicious ways to use pears in daily meals—from sweet soups to warm porridges; every dish is crafted to support your respiratory system gently. With their hydrating and anti-inflammatory properties, pears make a tasty, natural remedy for dryness and seasonal discomfort. Enjoy these healing recipes as part of your daily wellness routine.', NULL);
+INSERT INTO `categorysecond2` VALUES (15, 'White radish', 4, 'White radish, also known as daikon, is prized in traditional diets for its ability to clear internal heat and relieve coughs. Naturally mild and slightly sweet, it pairs well with ginger, rock sugar, and lean meats to create light, soothing dishes. This collection features a variety of soups, stews, and warm drinks designed to help regulate the body, ease throat discomfort, and promote lung comfort. Whether enjoyed during dry weather or cold seasons, these recipes are a gentle addition to your daily care routine.', NULL);
+INSERT INTO `categorysecond2` VALUES (16, 'Wolfberry ', 5, 'Wolfberries (goji berries) are well-known in traditional Chinese medicine for their liver-cleansing and vision-boosting properties. Whether you\'re looking to support eye health, balance your body, or enjoy a comforting bowl of soup, these recipes offer a natural, gentle way to care for your well-being.', NULL);
+INSERT INTO `categorysecond2` VALUES (17, 'Broccoli', 5, 'Explore the goodness of broccoli with this collection of nourishing recipes designed to support liver health and brighten your eyes. Packed with vitamins A, C, and K, as well as antioxidants and fiber, broccoli is a powerhouse vegetable known for its cleansing and protective benefits. From light soups to stir-fries and steamed dishes, these recipes are simple, healthy, and delicious—perfect for your daily wellness routine.', NULL);
+INSERT INTO `categorysecond2` VALUES (18, 'Chrysanthemum', 5, 'Rich in antioxidants and traditionally used to reduce internal heat, chrysanthemum is more than just a flower—it’s a healing ingredient. This collection includes a variety of drinks that combine chrysanthemums with ingredients like goji berries and pears to support immune health and promote balance. It is a perfect addition to your healthy lifestyle.', NULL);
+INSERT INTO `categorysecond2` VALUES (19, 'Power Up with Iron', 6, 'Iron for better hair — Low iron levels commonly cause hair thinning and hair loss. This curated recipe set focuses on iron-rich ingredients like seafood, liver, and leafy greens. Each dish helps improve iron absorption and support scalp health. Perfect for anyone looking to care for their hair through balanced nutrition.', NULL);
+INSERT INTO `categorysecond2` VALUES (20, 'Enhance with Plant Protein', 6, 'Our Plant-Based Protein Recipes Collection has delicious dishes featuring plant-powered ingredients like kelp, tofu, and black sesame. These recipes are designed to provide a natural source of protein, essential for maintaining healthy hair. By including plant-based proteins in your diet, you can nourish your scalp, strengthen your hair strands, and support overall hair vitality. Explore these recipes to give your hair the nourishment it needs while enjoying tasty, wholesome meals.', NULL);
+INSERT INTO `categorysecond2` VALUES (21, 'Salmon', 7, 'Salmon is rich in omega-3 fatty acids, which help to keep your skin hydrated and reduce inflammation. This collection of salmon-based recipes focuses on promoting healthy, glowing skin by incorporating the benefits of this nutrient-dense fish.', NULL);
+INSERT INTO `categorysecond2` VALUES (22, 'Kelp', 7, 'Kelp is a powerhouse ingredient for skincare, packed with vitamins, minerals, and antioxidants that rejuvenate and hydrate the skin. Our Kelp recipe collection showcases how this superfood helps reduce inflammation, promote collagen production, and improve skin elasticity. Whether you\'re looking to soothe, detoxify, or nourish, these recipes bring the beauty benefits of Kelp straight to your skincare routine.', NULL);
+INSERT INTO `categorysecond2` VALUES (23, 'Sweet potato', 8, 'Sweet potatoes are a powerhouse of immune-boosting nutrients. Their high levels of vitamin A and antioxidants help strengthen the immune system and protect against harmful pathogens. This recipe collection showcases creative ways to incorporate sweet potatoes into your meals, offering a delicious and nutritious way to support your body\'s defense mechanisms and promote overall health.', NULL);
+INSERT INTO `categorysecond2` VALUES (24, 'Bitter melon', 8, 'Boost your immune system naturally with bitter melon, a vegetable celebrated for its medicinal properties. Bitter melon is packed with nutrients that help fight infections and inflammation, making it an excellent choice for maintaining strong immunity. ', NULL);
+INSERT INTO `categorysecond2` VALUES (25, 'Beans', 9, 'Beans play an essential role in improving brain function and memory. This collection includes recipes featuring tofu, mung beans, and Fava Beans, all known for their nutritional benefits. These beans contain essential nutrients such as proteins, fiber, and antioxidants that support brain health, improve focus, and enhance memory retention. Incorporating these ingredients into your diet can help sharpen cognitive abilities and promote mental clarity. Try these delicious recipes to fuel your brain and boost your memory power naturally.', NULL);
+INSERT INTO `categorysecond2` VALUES (26, 'Walnut', 9, 'Walnuts are a superfood known for their ability to support brain health and improve memory. With their high omega-3 fatty acids, antioxidants, and vitamins, walnuts help maintain cognitive function and enhance mental clarity.', NULL);
+INSERT INTO `categorysecond2` VALUES (27, 'Eggs', 9, 'Eggs are rich in essential nutrients that promote brain health and memory. Known for their high choline content, they are a key ingredient for maintaining cognitive function and improving memory. Choline supports the production of acetylcholine, a neurotransmitter that aids in memory and learning. This collection features egg-based dishes to nourish your brain and improve mental performance. ', NULL);
 
 -- ----------------------------
 -- Table structure for categorysecond2_dishes
@@ -196,14 +215,20 @@ INSERT INTO `categorysecond2_dishes` VALUES (10, 22);
 INSERT INTO `categorysecond2_dishes` VALUES (8, 23);
 INSERT INTO `categorysecond2_dishes` VALUES (10, 23);
 INSERT INTO `categorysecond2_dishes` VALUES (1, 26);
+INSERT INTO `categorysecond2_dishes` VALUES (15, 26);
 INSERT INTO `categorysecond2_dishes` VALUES (2, 29);
+INSERT INTO `categorysecond2_dishes` VALUES (20, 30);
+INSERT INTO `categorysecond2_dishes` VALUES (22, 30);
 INSERT INTO `categorysecond2_dishes` VALUES (12, 31);
 INSERT INTO `categorysecond2_dishes` VALUES (11, 33);
 INSERT INTO `categorysecond2_dishes` VALUES (9, 34);
 INSERT INTO `categorysecond2_dishes` VALUES (4, 36);
+INSERT INTO `categorysecond2_dishes` VALUES (27, 39);
 INSERT INTO `categorysecond2_dishes` VALUES (8, 46);
 INSERT INTO `categorysecond2_dishes` VALUES (3, 51);
 INSERT INTO `categorysecond2_dishes` VALUES (3, 55);
+INSERT INTO `categorysecond2_dishes` VALUES (27, 55);
+INSERT INTO `categorysecond2_dishes` VALUES (25, 58);
 INSERT INTO `categorysecond2_dishes` VALUES (3, 59);
 INSERT INTO `categorysecond2_dishes` VALUES (8, 85);
 INSERT INTO `categorysecond2_dishes` VALUES (11, 87);
@@ -214,6 +239,7 @@ INSERT INTO `categorysecond2_dishes` VALUES (10, 93);
 INSERT INTO `categorysecond2_dishes` VALUES (4, 95);
 INSERT INTO `categorysecond2_dishes` VALUES (1, 97);
 INSERT INTO `categorysecond2_dishes` VALUES (1, 98);
+INSERT INTO `categorysecond2_dishes` VALUES (25, 98);
 INSERT INTO `categorysecond2_dishes` VALUES (1, 99);
 INSERT INTO `categorysecond2_dishes` VALUES (4, 99);
 INSERT INTO `categorysecond2_dishes` VALUES (1, 100);
@@ -222,16 +248,20 @@ INSERT INTO `categorysecond2_dishes` VALUES (1, 102);
 INSERT INTO `categorysecond2_dishes` VALUES (1, 103);
 INSERT INTO `categorysecond2_dishes` VALUES (2, 104);
 INSERT INTO `categorysecond2_dishes` VALUES (2, 105);
+INSERT INTO `categorysecond2_dishes` VALUES (25, 105);
 INSERT INTO `categorysecond2_dishes` VALUES (2, 106);
 INSERT INTO `categorysecond2_dishes` VALUES (2, 107);
+INSERT INTO `categorysecond2_dishes` VALUES (24, 107);
 INSERT INTO `categorysecond2_dishes` VALUES (2, 108);
 INSERT INTO `categorysecond2_dishes` VALUES (2, 109);
 INSERT INTO `categorysecond2_dishes` VALUES (2, 110);
+INSERT INTO `categorysecond2_dishes` VALUES (27, 110);
 INSERT INTO `categorysecond2_dishes` VALUES (3, 111);
 INSERT INTO `categorysecond2_dishes` VALUES (3, 112);
 INSERT INTO `categorysecond2_dishes` VALUES (3, 113);
 INSERT INTO `categorysecond2_dishes` VALUES (3, 115);
 INSERT INTO `categorysecond2_dishes` VALUES (4, 116);
+INSERT INTO `categorysecond2_dishes` VALUES (25, 116);
 INSERT INTO `categorysecond2_dishes` VALUES (4, 117);
 INSERT INTO `categorysecond2_dishes` VALUES (4, 118);
 INSERT INTO `categorysecond2_dishes` VALUES (4, 119);
@@ -258,10 +288,71 @@ INSERT INTO `categorysecond2_dishes` VALUES (6, 139);
 INSERT INTO `categorysecond2_dishes` VALUES (6, 140);
 INSERT INTO `categorysecond2_dishes` VALUES (6, 141);
 INSERT INTO `categorysecond2_dishes` VALUES (7, 142);
+INSERT INTO `categorysecond2_dishes` VALUES (27, 142);
 INSERT INTO `categorysecond2_dishes` VALUES (7, 143);
 INSERT INTO `categorysecond2_dishes` VALUES (7, 144);
 INSERT INTO `categorysecond2_dishes` VALUES (7, 145);
 INSERT INTO `categorysecond2_dishes` VALUES (8, 146);
+INSERT INTO `categorysecond2_dishes` VALUES (13, 166);
+INSERT INTO `categorysecond2_dishes` VALUES (13, 167);
+INSERT INTO `categorysecond2_dishes` VALUES (13, 168);
+INSERT INTO `categorysecond2_dishes` VALUES (13, 169);
+INSERT INTO `categorysecond2_dishes` VALUES (13, 170);
+INSERT INTO `categorysecond2_dishes` VALUES (13, 171);
+INSERT INTO `categorysecond2_dishes` VALUES (13, 172);
+INSERT INTO `categorysecond2_dishes` VALUES (13, 173);
+INSERT INTO `categorysecond2_dishes` VALUES (14, 174);
+INSERT INTO `categorysecond2_dishes` VALUES (14, 175);
+INSERT INTO `categorysecond2_dishes` VALUES (14, 176);
+INSERT INTO `categorysecond2_dishes` VALUES (14, 177);
+INSERT INTO `categorysecond2_dishes` VALUES (14, 178);
+INSERT INTO `categorysecond2_dishes` VALUES (14, 179);
+INSERT INTO `categorysecond2_dishes` VALUES (14, 180);
+INSERT INTO `categorysecond2_dishes` VALUES (14, 181);
+INSERT INTO `categorysecond2_dishes` VALUES (15, 182);
+INSERT INTO `categorysecond2_dishes` VALUES (15, 183);
+INSERT INTO `categorysecond2_dishes` VALUES (15, 184);
+INSERT INTO `categorysecond2_dishes` VALUES (15, 185);
+INSERT INTO `categorysecond2_dishes` VALUES (15, 186);
+INSERT INTO `categorysecond2_dishes` VALUES (15, 187);
+INSERT INTO `categorysecond2_dishes` VALUES (15, 188);
+INSERT INTO `categorysecond2_dishes` VALUES (16, 189);
+INSERT INTO `categorysecond2_dishes` VALUES (16, 190);
+INSERT INTO `categorysecond2_dishes` VALUES (16, 191);
+INSERT INTO `categorysecond2_dishes` VALUES (16, 192);
+INSERT INTO `categorysecond2_dishes` VALUES (17, 193);
+INSERT INTO `categorysecond2_dishes` VALUES (17, 194);
+INSERT INTO `categorysecond2_dishes` VALUES (17, 195);
+INSERT INTO `categorysecond2_dishes` VALUES (17, 196);
+INSERT INTO `categorysecond2_dishes` VALUES (18, 197);
+INSERT INTO `categorysecond2_dishes` VALUES (18, 198);
+INSERT INTO `categorysecond2_dishes` VALUES (18, 199);
+INSERT INTO `categorysecond2_dishes` VALUES (18, 200);
+INSERT INTO `categorysecond2_dishes` VALUES (19, 201);
+INSERT INTO `categorysecond2_dishes` VALUES (19, 202);
+INSERT INTO `categorysecond2_dishes` VALUES (19, 203);
+INSERT INTO `categorysecond2_dishes` VALUES (20, 204);
+INSERT INTO `categorysecond2_dishes` VALUES (20, 205);
+INSERT INTO `categorysecond2_dishes` VALUES (19, 206);
+INSERT INTO `categorysecond2_dishes` VALUES (20, 207);
+INSERT INTO `categorysecond2_dishes` VALUES (21, 208);
+INSERT INTO `categorysecond2_dishes` VALUES (21, 209);
+INSERT INTO `categorysecond2_dishes` VALUES (21, 210);
+INSERT INTO `categorysecond2_dishes` VALUES (21, 211);
+INSERT INTO `categorysecond2_dishes` VALUES (22, 212);
+INSERT INTO `categorysecond2_dishes` VALUES (22, 213);
+INSERT INTO `categorysecond2_dishes` VALUES (22, 214);
+INSERT INTO `categorysecond2_dishes` VALUES (23, 215);
+INSERT INTO `categorysecond2_dishes` VALUES (23, 216);
+INSERT INTO `categorysecond2_dishes` VALUES (23, 217);
+INSERT INTO `categorysecond2_dishes` VALUES (23, 218);
+INSERT INTO `categorysecond2_dishes` VALUES (24, 219);
+INSERT INTO `categorysecond2_dishes` VALUES (24, 220);
+INSERT INTO `categorysecond2_dishes` VALUES (24, 221);
+INSERT INTO `categorysecond2_dishes` VALUES (26, 222);
+INSERT INTO `categorysecond2_dishes` VALUES (26, 223);
+INSERT INTO `categorysecond2_dishes` VALUES (26, 224);
+INSERT INTO `categorysecond2_dishes` VALUES (26, 225);
 
 -- ----------------------------
 -- Table structure for comment
@@ -432,7 +523,7 @@ CREATE TABLE `dishes`  (
   PRIMARY KEY (`pid`) USING BTREE,
   INDEX `csid`(`csid`) USING BTREE,
   CONSTRAINT `dishes_ibfk_1` FOREIGN KEY (`csid`) REFERENCES `categorysecond` (`csid`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 166 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
+) ENGINE = InnoDB AUTO_INCREMENT = 226 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of dishes
@@ -601,6 +692,66 @@ INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/67.jpg', '2025-01-
 INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/68.jpg', '2025-02-07 23:15:40', 'Crispy Bacon Radish Pancake', 163, 2, 'Bacon, white radish, flour, spring onion', 9);
 INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/69.jpg', '2024-12-26 23:17:51', 'Stir-Fried Okra with Bacon', 164, 2, 'Okra, bacon, bell pepper, garlic, soy sauce', 9);
 INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Noodles/15.jpg', '2025-01-31 23:30:19', 'Kimchi Bacon Stir-Fried Noodles', 165, 2, 'Bacon, kimchi, carrots, noodles, onions, mushrooms', 16);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Drinks/6.jpg', '2024-09-26 18:08:20', 'Kumquat Honey Tea', 166, 2, 'Kumquat, honey, water', 43);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Soup/16.jpg', '2024-11-26 18:12:12', 'Kumquat and White Fungus Soup', 167, 2, 'Soaked Tremella, Kumquat, Rock Sugar', 34);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Soup/17.jpg', '2024-11-29 18:19:19', 'Snow Pear Kumquat Tea', 168, 2, 'Sydney, kumquat, rock sugar, red dates', 34);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Drinks/7.jpg', '2024-09-12 18:22:44', 'Sparkling Passionfruit Kumquat', 169, 2, 'Sprite, passion fruit, kumquat', 43);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Drinks/8.jpg', '2024-12-25 18:26:00', 'Candied Kumquat Jam', 170, 2, 'Rock sugar, lemon juice, kumquat', 43);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Appetizers/29.jpg', '2025-01-30 18:28:56', 'Candied Kumquats', 171, 2, 'Sugar, honey, kumquat', 6);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Appetizers/30.jpg', '2024-12-05 18:34:19', 'Kumquat Osmanthus Jam', 172, 2, 'White sugar, rock sugar, osmanthus, kumquat', 6);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Appetizers/31.jpg', '2025-01-29 18:40:41', 'Kumquat Lemon Jam', 173, 2, 'Lemon, rock sugar, kumquat', 6);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Appetizers/32.jpg', '2025-02-12 18:42:47', 'Rock Sugar Steamed Pear', 174, 2, 'Rock sugar, pear, wolfberry', 6);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Drinks/9.jpg', '2025-01-22 18:44:16', 'Honey Pear Juice', 175, 2, 'Honey, Pear', 43);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Soup/18.jpg', '2024-11-22 18:46:55', 'Peach Gum Pear Soup', 176, 2, 'Peach gum, pear, white fungus', 34);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Soup/19.jpg', '2025-02-19 18:47:55', 'Tremella and Pear Soup', 177, 2, 'Pear, Tremella', 34);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Soup/20.jpg', '2025-02-19 18:50:00', 'Goji Berry and Pear Soup', 178, 2, 'Pear, Tremella, Goji berry', 34);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Soup/21.jpg', '2025-02-26 18:53:56', 'Pear & Lily Bulb Soup', 179, 2, 'Loquat, pear, white fungus, lily, rock sugar', 34);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Soup/22.jpg', '2024-12-03 22:31:21', 'Pumpkin-Pear Soup', 180, 2, 'Pumpkin, water chestnut, pear, corn', 34);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Soup/23.jpg', '2024-12-25 22:33:48', 'Cordyceps & Pear Porridge', 181, 2, 'Cordyceps flower, rice, pear, wolfberry', 34);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/70.jpg', '2024-11-28 22:37:48', 'Radish Chicken Roll', 182, 2, 'White radish, chicken breast, carrot, black fungus', 12);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/71.jpg', '2025-01-30 22:39:00', 'Steamed Radish Slices', 183, 2, 'White radish, red pepper, starch, pepper powder', 13);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/72.jpg', '2024-12-18 22:40:36', 'Sweet and Sour Radish Slices', 184, 2, 'White radish, white vinegar, white sugar', 13);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Soup/24.jpg', '2024-06-27 22:43:21', 'Cured Pork and Radish Soup', 185, 2, 'White radish, Chinese Cured Pork skin, wolfberry', 30);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Soup/25.jpg', '2024-11-20 22:46:03', 'Radish Pork Soup', 186, 2, 'White radish, ginger, salt', 30);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/73.jpg', '2024-10-10 22:48:13', 'Stuffed Radish with Meat', 187, 2, 'White radish, pork mince，broccoli', 9);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Soup/26.jpg', '2024-10-24 22:55:24', 'Rock Sugar Radish Drink', 188, 2, 'White radish, rock sugar', 34);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Soup/27.jpg', '2024-10-01 14:29:37', 'Red Date and Tremella Soup', 189, 2, 'Tremella, rock sugar, wolfberry, red dates', 34);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Soup/28.jpg', '2024-09-19 14:33:16', 'Durian and Goji Berry Chicken Soup', 190, 2, 'Durian, wolfberry, chicken, ginger', 33);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Soup/29.jpg', '2024-08-29 14:36:03', 'Wolfberry and Longan Soup', 191, 2, 'Red beans, lotus seeds, longan, rock sugar', 34);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Soup/30.jpg', '2025-02-19 14:38:14', 'Goji and Ginseng Congee', 192, 2, 'Wolfberry, ginseng, millet, rice', 34);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/74.jpg', '2024-11-01 14:41:45', 'Broccoli and Egg Pancake', 193, 2, 'Broccoli, eggs, flour', 13);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/75.jpg', '2024-10-29 14:43:44', 'Cheese-Baked Eggs with Broccoli', 194, 2, 'Broccoli, eggs, cheese', 12);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/76.jpg', '2024-12-05 14:45:40', 'Oyster Sauce Stir-fried Mushrooms and Broccoli', 195, 2, 'Broccoli, oyster sauce, mushrooms', 13);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Soup/31.jpg', '2024-10-24 14:49:38', 'Creamy Broccoli and Ham Soup', 196, 2, 'Broccoli, eggs, Century eggs, ham', 30);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Drinks/10.jpg', '2024-10-31 14:51:36', 'Chrysanthemum Rose Tea', 197, 2, 'Chrysanthemum, Rose, Wolfberry', 43);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Drinks/11.jpg', '2024-11-28 14:53:06', 'Chrysanthemum and Snow Pear Tea', 198, 2, 'Chrysanthemum, Snow pear', 43);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Drinks/12.jpg', '2024-11-28 14:54:13', 'Chrysanthemum Lemon Tea', 199, 2, 'Chrysanthemum, lemon, wolfberry', 43);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Drinks/13.jpg', '2024-10-08 14:55:18', 'Chrysanthemum Hawthorn Herbal Tea', 200, 2, 'Chrysanthemum, hawthorn, wolfberry', 43);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/77.jpg', '2024-10-23 14:58:38', 'Crispy Pan-Seared Hairtail', 201, 2, 'Hairtail, green onion, ginger, pepper, white sesame', 11);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/78.jpg', '2024-11-07 15:00:18', 'Sweet and Sour Pineapple Shrimp', 202, 2, 'Fresh shrimp, pineapple, tomato sauce, white vinegar', 11);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Soup/32.jpg', '2024-11-12 15:01:57', 'Dandelion and Pork Liver Soup', 203, 2, 'Dandelion, pork liver, ginger, wolfberry', 30);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Soup/33.jpg', '2024-12-26 15:03:23', 'Black Sesame Paste', 204, 2, 'Black sesame, glutinous rice, rock sugar', 34);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/79.jpg', '2024-11-05 15:06:58', 'Steamed Egg With Soft Tofu and Pork ', 205, 2, 'Minced pork, soft tofu, spring onion, egg', 9);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/80.jpg', '2024-11-01 15:10:55', 'Spinach and Egg Pancake', 206, 2, 'Spinach, eggs, flour', 13);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Soup/34.jpg', '2024-11-21 15:12:46', 'Carrot, Corn, and Pork Bone Soup', 207, 2, 'Carrots, corn, pork bones', 30);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Soup/35.jpg', '2024-10-31 15:16:17', 'Salmon Rice Porridge', 208, 2, 'salmon, rice', 32);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/81.jpg', '2025-02-19 15:17:46', 'Salmon Fried Rice', 209, 2, 'salmon, rice', 11);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Soup/36.jpg', '2024-12-19 15:19:25', 'Salmon and Tofu Soup', 210, 2, 'Salmon, rice, soft tofu', 32);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/82.jpg', '2024-11-14 15:21:22', 'Pan-Seared Salmon with Mashed Potatoes', 211, 2, 'salmon, potatoes, rosemary', 53);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/83.jpg', '2025-01-16 15:23:27', 'Stir-Fried Pork with Kelp', 212, 2, 'Kelp, pork, green pepper', 9);
+INSERT INTO `dishes` VALUES ('', 'Dishes images/Soup/37.jpg', '2024-09-18 15:27:12', 'Kelp and Pork Bone Soup', 213, 2, 'Kelp, pork bones', 30);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/84.jpg', '2024-11-21 15:28:53', 'Braised Potatoes with Kelp', 214, 2, 'Kelp, potatoes, carrots', 13);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Dim Sum/9.jpg', '2024-09-26 15:31:42', 'Crunchy Fried Sweet Potato Fritters', 215, 2, 'Sweet potatoes, flour', 13);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Soup/38.jpg', '2024-11-21 15:33:25', 'Red Date and Sweet Potato Porridge', 216, 2, 'Sweet potatoes, red dates, rice, wolfberries', 41);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Dim Sum/10.jpg', '2024-11-14 15:35:56', 'Sweet Potato Red Bean Biscuit', 217, 2, 'Sweet potato, red bean paste, white sesame, glutinous rice flour', 41);
+INSERT INTO `dishes` VALUES ('', 'Dishes images/Dim Sum/11.jpg', '2024-11-19 15:38:46', 'Sweet Potato Egg Tart', 218, 2, 'Sweet potatoes, milk, eggs', 41);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/85.jpg', '2024-08-16 15:41:53', 'Stir-Fried Bitter Melon with Beef', 219, 2, 'Bitter melon, beef tenderloin, garlic, red pepper', 8);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/86.jpg', '2024-11-20 17:08:37', 'Stir-Fried Pork Strips with Bitter Melon', 220, 2, 'Bitter melon, pork, green onion, ginger', 9);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/87.jpg', '2024-10-25 17:10:34', 'Stewed Pork Ribs with Bitter Melon', 221, 2, 'Bitter melon, pork chop, ginger', 9);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Bakery/10.jpg', '2024-11-27 17:31:20', 'Caramelized Walnut Pie', 222, 2, 'Walnuts, brown sugar, low-gluten flour, butter, white sugar', 48);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/88.jpg', '2024-10-30 17:34:51', 'Stir-Fried Walnut and Celery', 223, 2, 'Walnuts, celery, carrots, soy sauce', 13);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Main Dishes/89.jpg', '2024-10-24 17:36:39', 'Kung Pao Chicken with Walnuts', 224, 2, 'Walnuts, chicken breast, peanuts, cucumber', 12);
+INSERT INTO `dishes` VALUES (NULL, 'Dishes images/Soup/39.jpg', '2024-12-17 17:38:55', 'Creamy Walnut and Chestnut Congee', 225, 2, 'Walnut, chestnut, lotus seed, peanut', 34);
 
 -- ----------------------------
 -- Table structure for howdo

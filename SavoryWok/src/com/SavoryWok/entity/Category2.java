@@ -22,6 +22,9 @@ public class Category2 implements Serializable{
 	@Id
 	private Integer caid;
 	private String caname;
+	private String title_description;
+	private String title_banner_img;
+	
 	@OrderBy(value="casid")
 	@OneToMany(fetch=FetchType.EAGER,mappedBy="category2")
 	private Set<CategorySecond2> categorySeconds = new HashSet<CategorySecond2>();
@@ -37,6 +40,21 @@ public class Category2 implements Serializable{
 	public void setCaname(String caname) {
 		this.caname = caname;
 	}
+	
+	public String getTitle_description() {
+		return title_description;
+	}
+	public void setTitle_description(String title_description) {
+		this.title_description = title_description;
+	}
+	
+	public String getTitle_banner_img() {
+		return title_banner_img;
+	}
+	public void setTitle_banner_img(String title_banner_img) {
+		this.title_banner_img = title_banner_img;
+	}
+	
 	public Set<CategorySecond2> getCategorySeconds() {
 		return categorySeconds;
 	}

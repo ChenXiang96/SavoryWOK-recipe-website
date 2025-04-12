@@ -16,6 +16,10 @@
 <link rel="apple-touch-icon" href="https://static.meishichina.com/v6/img/lib/wapico.png" />
 <link rel="stylesheet" type="text/css" href="https://static.meishichina.com/v6/css/lib/all.css?v1=9">
 <link rel="stylesheet" type="text/css" href="https://static.meishichina.com/v6/css/app/mofang/mofang3.css?v1=2017-08-17">
+
+<link href="https://fonts.googleapis.com/css2?family=Satisfy:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400&display=swap" rel="stylesheet">
 <style>
 .sliderh {
     width: 100%;
@@ -25,6 +29,49 @@
     overflow: hidden;
     margin-top: 0px;
 }
+
+h3 {
+    
+    font-weight: 600 !important; /* 加粗 */
+    margin: 1.2em 0 !important; /* 上下边距 */
+    color: #333 !important; /* 颜色 */
+}
+
+h3.caname-title {
+    font-family: 'Montserrat', serif !important;
+    font-size: 36px !important;
+    letter-spacing: 0.5px;
+}
+
+h4.title-description {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 400;
+    line-height: 1.6;
+} 
+
+h4.title-description {
+    margin-bottom: 80px !important; /* 新增 */
+}
+
+
+h5.subtitle-description {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 400;
+    line-height: 1.6;
+} 
+
+h5.subtitle-description {
+    margin-bottom: 40px !important;
+    
+}
+
+.mo {
+    margin-top: 40px !important;
+    
+}
+
 
 </style>
 </head>
@@ -38,45 +85,44 @@
 
   <%@ include file="menu3.jsp" %>
 
-<div class="sliderh">
+<div class="sliderh" >
 <div id="sliderh" style="width:100%">
 <ul>
-<li class="show1" style="width:100%;background:url(https://i3.meishichina.com/attachment/mofang/2018/06/13/2018061315288542096898197577.jpg) no-repeat center"><h1><a href="https://www.meishichina.com/mofang/dapaidang/" title="不一样的大排档" id="mof_h1">不一样的大排档</a></h1></li>
+<li class="show1" 
+    style="width:100%;
+           min-height:520px;
+           margin-top:30px;
+           background:url(${ctx}/<c:out value="${title_banner_img}"/>) no-repeat center bottom; background-size: cover; transform: scale(1);">
+    <h1><a href="https://www.meishichina.com/mofang/dapaidang/" title="不一样的大排档" id="mof_h1">不一样的大排档</a></h1>
+</li>
 </ul>
 </div>
 </div>
 <div class="msb">
 <input type="hidden" id="mof_fcover" value="https://i3.meishichina.com/attachment/mofang/2018/06/11/2018061115287010517948197577.jpg">
 <input type="hidden" id="mof_domain" value="dapaidang">
-<div class="recipeArction clear">
-<p id="mof_desc">
-<c:out value="${subject.pdesc }"/>
-</p>
-<div class="bdsharebuttonbox" id="bdshare">
-<a title="分享到新浪微博" href="#" class="bds_tsina" id="bds_tsina" data-cmd="tsina"></a><a title="分享到QQ空间" href="#" class="bds_qzone" id="bds_qzone" data-cmd="qzone"></a><a title="分享到QQ好友" href="#" class="bds_sqq" id="bds_sqq" data-cmd="sqq"></a><a data-cmd="weixin" id="bds_weixin" class="bds_weixin" href="#"></a>
-</div>
-</div>
 
-<!--  
-<div class="mo">
-<h2>
-<c:out value="${caname}"/>
 
-</h2>
-</div>-->
+
+
+<h3 class="caname-title"><c:out value="${caname}"/></h3>
+
+<h4 class="title-description"> <c:out value="${title_description}"/></h4>
+
 
 <c:forEach items="${subCategories}" var="sub">
     <div class="sub-category">
         <div class="mo"><h2><c:out value="${sub.casname}"/></h2></div>
+        <h5 class="subtitle-description"> <c:out value="${sub.subtitle_description}"/></h5>
         <div class="msb_list clear">
             <ul>
                 <c:forEach items="${categoryDishesMap[sub.casid]}" var="dish">
                     <li>
-                        <div>
+                        <div class="pic">
                             <a href="${ctx}/findByPid/${dish.pid}" target="_blank">
                                 <img data-src="${ctx}/${dish.image}" 
                                      src="//static.meishichina.com/v6/img/blank.gif" 
-                                     class="imgLoad" width="230" height="230"/>
+                                     class="imgLoad" style="width: 100%; height: 200px; object-fit: cover; object-position: center; border-radius: 10px"/>
                                 <span><c:out value="${dish.pname}"/></span>
                             </a>
                         </div>

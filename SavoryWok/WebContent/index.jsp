@@ -39,6 +39,8 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Satisfy:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
 
 <!-- Custom Fonts -->
@@ -153,6 +155,8 @@ a.right2 {
 .wrap-content {
 	padding: 0 12px !important; /* 与row的margin-right对齐 */
 	border-right: none !important;
+	margin-top:80px;
+	margin-bottom:80px;
 }
 
 .flex-row {
@@ -349,6 +353,10 @@ a.right {
     background: url(//static.meishichina.com/v6/img/wap_a/gotop.png) no-repeat scroll center center/58px 58px;
 }
 
+.box-item h2{
+
+  font-family: "Protest Riot", sans-serif;
+}
 .header h2 {
   font-family: 'Satisfy';
   font-weight: 700;
@@ -363,7 +371,7 @@ a.right {
   font-weight: bold;
   letter-spacing: 1px;
   color: #E67E22;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   
 }
 
@@ -408,7 +416,7 @@ a.right {
 					<div class="row box-item">
 						<!--Start Box-->
 						<center>
-							<h2>开启属于我的美食之旅</h2>
+							<h2>Let your tasty journey begin!</h2>
 						</center>
 					</div>
 				</div>
@@ -569,7 +577,7 @@ a.right {
 						<div class="header">
 							<h2 class="font-effect-shadow-multiple">"Fuel your day with flavors you love"</h2>
 							<hr class="line">
-							<span>Curated Delights</span>
+							<span>Curated Recipe Collections</span>
 						</div>
 						<div class="row">
 
@@ -592,7 +600,7 @@ a.right {
 
 											<c:forEach items="${nList2}" var="s" begin="0" end="0">
 												<a
-													href="${pageContext.request.contextPath }/findByPid2/<c:out value="${s.pid}"/>">
+													href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1">
 													<img
 													src="${pageContext.request.contextPath}/<c:out value="${s.image}"/>" />
 												</a>
@@ -612,7 +620,7 @@ a.right {
 
 												</c:forEach>
 											</p>
-											<a href="#" class="button button-1">更多</a>
+											<a href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1" class="button button-1">More</a>
 
 
 										</div>
@@ -643,7 +651,7 @@ a.right {
 
 											<c:forEach items="${nList2}" var="s" begin="1" end="1">
 												<a
-													href="${pageContext.request.contextPath }/findByPid2/<c:out value="${s.pid}"/>">
+													href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1">
 													<img
 													src="${pageContext.request.contextPath}/<c:out value="${s.image}"/>" />
 												</a>
@@ -663,7 +671,7 @@ a.right {
 
 												</c:forEach>
 											</p>
-											<a href="#" class="button button-1">更多</a>
+											<a href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1" class="button button-1">More</a>
 
 
 										</div>
@@ -687,7 +695,7 @@ a.right {
 
 											<c:forEach items="${nList2}" var="s" begin="2" end="2">
 												<a
-													href="${pageContext.request.contextPath }/findByPid2/<c:out value="${s.pid}"/>">
+													href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1">
 													<img
 													src="${pageContext.request.contextPath}/<c:out value="${s.image}"/>" />
 												</a>
@@ -704,7 +712,7 @@ a.right {
 
 												</c:forEach>
 											</p>
-											<a href="#" class="button button-1">更多</a>
+											<a href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1" class="button button-1">More</a>
 
 
 										</div>

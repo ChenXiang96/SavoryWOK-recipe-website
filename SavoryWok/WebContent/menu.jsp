@@ -9,7 +9,20 @@
 
 <link href="${pageContext.request.contextPath}/css/style2.css"
 	rel="stylesheet" />
+	
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&family=Protest+Riot&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&family=Italianno&family=Protest+Riot&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&family=Italianno&family=Oleo+Script:wght@400;700&family=Protest+Riot&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+
 <style>
+
+
 .navbar .nav>li>a {
 	color: #5A5A5A;
 	text-shadow: none;
@@ -53,6 +66,18 @@ a {
 	transform: none !important;
 }
 
+.flex-caption h3{
+  font-family: "Oleo Script", system-ui;
+  font-weight: 200;
+}
+
+.flex-caption p {
+  font-family: "Italianno", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 38px; /* 新增字体大小 */
+}
+
 .navbar-header {
 	display: flex !important;
 	align-items: center !important;
@@ -60,10 +85,78 @@ a {
 	width: auto !important;
 }
 
+#main-slider{
+    padding-top:30px;
+
+}
+
+#main-slider .slides li {
+    position: relative;
+    height: 600px; /* 控制轮播容器高度 */
+    overflow: hidden; /* 裁剪超出部分 */
+}
+
+#main-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 关键属性：保持比例填充容器 */
+    object-position: 60%;
+    transform: scale(1);
+}
+
 @media ( max-width : 768px) {
 	.site-logo {
 		max-width: 150px; /* 小屏幕缩小尺寸 */
 	}
+}
+@media (max-width: 768px) {
+    #main-slider .slides li {
+        height: 400px; /* 移动端高度调整 */
+    }
+}
+
+.flex-control-nav {
+    position: absolute !important;
+    bottom: 10px !important;  /* 调整到合适高度 */
+    left: 50% !important;
+    transform: translateX(-50%);
+    z-index: 100;
+    display: flex !important;
+    gap: 12px;
+    justify-content: center;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;  /* 关键修复 */
+}
+
+.flex-control-paging li {
+    margin: 0 !important; /* 移除默认间距 */
+}
+
+.flex-control-paging li a {
+    width: 40px !important;   /* 横线长度 */
+    height: 3px !important;   /* 横线粗细 */
+    background: rgba(255,255,255,0.5) !important;
+    border-radius: 0 !important; /* 直角 */
+    text-indent: -9999px; /* 隐藏原有点数字 */
+    transition: all 0.3s;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.flex-control-paging li a.flex-active {
+    background: rgba(255,255,255,1) !important;
+    height: 4px !important; /* 激活状态加粗 */
+}
+
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .flex-control-nav {
+        left: 50% !important; /* 保持居中 */
+        transform: translateX(-50%);
+        bottom: 10px !important;
+    }
 }
 </style>
 
@@ -83,6 +176,18 @@ a {
 <script src="${pageContext.request.contextPath}/js/custom1.js"></script>
 <script
 	src="${pageContext.request.contextPath}/js/owl-carousel/owl.carousel.js"></script>
+
+<script>
+$('#main-slider').flexslider({
+    animation: "slide",
+    controlNav: true,    // 保留控制点
+    directionNav: false, // 关闭方向导航
+    prevText: "",  
+    nextText: ""
+    // 删除start回调函数
+});
+</script>
+
 <div class="wrap-body">
 
 	<div id="wrapper" class="home-page">
@@ -156,63 +261,63 @@ a {
 			<div id="main-slider" class="flexslider">
 				<ul class="slides">
 					<li><img
-						src="${pageContext.request.contextPath}/img/slides/1.jpg" alt="" />
+						src="${pageContext.request.contextPath}/Banner-images/Index-banner-1.jpg" alt="" />
 						<div class="flex-caption container">
-							<h3>品味时光醇香</h3>
-							<p>回 味 唇 齿 留 香 的 美 好 瞬 间</p>
+							<h3>Cook with Passion</h3>
+							<p>Savor the joy of every bite</p>
 						</div></li>
 
 					<li><img
-						src="${pageContext.request.contextPath}/img/slides/2.jpg" alt="" />
+						src="${pageContext.request.contextPath}/Banner-images/Index-banner-2.jpg" alt="" />
 						<div class="flex-caption container">
-							<h3>品味时光醇香</h3>
-							<p>回 味 唇 齿 留 香 的 美 好 瞬 间</p>
+							<h3>Cook with Passion</h3>
+							<p>Savor the joy of every bite</p>
 						</div></li>
 
 					<li><img
-						src="${pageContext.request.contextPath}/img/slides/3.jpg" alt="" />
+						src="${pageContext.request.contextPath}/Banner-images/Index-banner-3.jpg" alt="" />
 						<div class="flex-caption container">
-							<h3>品味时光醇香</h3>
-							<p>回 味 唇 齿 留 香 的 美 好 瞬 间</p>
+							<h3>Cook with Passion</h3>
+							<p>Savor the joy of every bite</p>
 						</div></li>
 
 					<li><img
-						src="${pageContext.request.contextPath}/img/slides/4.jpg" alt="" />
+						src="${pageContext.request.contextPath}/Banner-images/Index-banner-4.jpg" alt="" />
 						<div class="flex-caption container">
-							<h3>品味时光醇香</h3>
-							<p>回 味 唇 齿 留 香 的 美 好 瞬 间</p>
+							<h3>Cook with Passion</h3>
+							<p>Savor the joy of every bite</p>
 						</div></li>
 
 					<li><img
-						src="${pageContext.request.contextPath}/img/slides/5.jpg" alt="" />
+						src="${pageContext.request.contextPath}/Banner-images/Index-banner-5.jpg" alt="" />
 						<div class="flex-caption container">
-							<h3>品味时光醇香</h3>
-							<p>回 味 唇 齿 留 香 的 美 好 瞬 间</p>
+							<h3>Cook with Passion</h3>
+							<p>Savor the joy of every bite</p>
 						</div></li>
 					<li><img
-						src="${pageContext.request.contextPath}/img/slides/6.jpg" alt="" />
+						src="${pageContext.request.contextPath}/Banner-images/Index-banner-6.jpg" alt="" />
 						<div class="flex-caption container">
-							<h3>品味时光醇香</h3>
-							<p>回 味 唇 齿 留 香 的 美 好 瞬 间</p>
+							<h3>Cook with Passion</h3>
+							<p>Savor the joy of every bite</p>
 						</div></li>
 					<li><img
-						src="${pageContext.request.contextPath}/img/slides/7.jpg" alt="" />
+						src="${pageContext.request.contextPath}/Banner-images/Index-banner-7.jpg" alt="" />
 						<div class="flex-caption container">
-							<h3>品味时光醇香</h3>
-							<p>回 味 唇 齿 留 香 的 美 好 瞬 间</p>
+							<h3>Cook with Passion</h3>
+							<p>Savor the joy of every bite</p>
 						</div></li>
 					<li><img
-						src="${pageContext.request.contextPath}/img/slides/8.jpg" alt="" />
+						src="${pageContext.request.contextPath}/Banner-images/Index-banner-8.jpg" alt="" />
 						<div class="flex-caption container">
-							<h3>品味时光醇香</h3>
-							<p>回 味 唇 齿 留 香 的 美 好 瞬 间</p>
+							<h3>Cook with Passion</h3>
+							<p>Savor the joy of every bite</p>
 						</div></li>
 
 					<li><img
-						src="${pageContext.request.contextPath}/img/slides/9.jpg" alt="" />
+						src="${pageContext.request.contextPath}/Banner-images/Index-banner-9.jpg" alt="" />
 						<div class="flex-caption container">
-							<h3>品味时光醇香</h3>
-							<p>回 味 唇 齿 留 香 的 美 好 瞬 间</p>
+							<h3>Cook with Passion</h3>
+							<p>Savor the joy of every bite</p>
 						</div></li>
 
 				</ul>

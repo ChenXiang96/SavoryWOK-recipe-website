@@ -24,6 +24,8 @@ private static final long serialVersionUID = 1L;
 	@Id
 	private Integer casid;
 	private String casname;
+	private String title_banner_img;
+	private String subtitle_description;
 	// 所属一级分类.存的是一级分类的对象.
 	@JoinColumn(name="caid")
 	@ManyToOne
@@ -42,12 +44,28 @@ private static final long serialVersionUID = 1L;
 	public void setCasname(String casname) {
 		this.casname = casname;
 	}
+	
+	public String getSubtitle_description() {
+		return subtitle_description;
+	}
+	public void setSubtitle_description(String subtitle_description) {
+		this.subtitle_description = subtitle_description;
+	}
+	
 	public Category2 getCategory2() {
 		return category2;
 	}
 	public void setCategory2(Category2 category2) {
 		this.category2 = category2;
 	}
+	
+	public String getTitle_banner_img() {
+		return title_banner_img;
+	}
+	public void setTitle_banner_img(String title_banner_img) {
+		this.title_banner_img = title_banner_img;
+	}
+	
 	public Set<Subject> getSubjects() {
 		return subjects;
 	}

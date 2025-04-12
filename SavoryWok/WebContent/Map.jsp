@@ -1,19 +1,157 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/main.css" />
-    <style type="text/css">
-        body, html { width: 100%; height: 100%; margin:0; font-family:"微软雅黑"; }
-        #map { width:100%; height:500px; }
-        .infowindow-content { max-width:250px; padding:8px; line-height:1.5; color: #333; 
-        background: white;
-        font-size:14px;}
-    </style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/css/main.css" />
+<style type="text/css">
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	font-family: "微软雅黑";
+}
 
-    <!-- 地图初始化脚本 -->
-    <script>
+#map {
+	width: 100%;
+	height: 500px;
+}
+
+.infowindow-content {
+	max-width: 250px;
+	padding: 8px;
+	line-height: 1.5;
+	color: #333;
+	background: white;
+	font-size: 14px;
+}
+
+#r-result {
+	display: flex;
+	justify-content: center; 
+	margin-top:8px; 
+}
+
+.f1 {
+	display: flex;
+	gap: 10px; /* 表单元素间距 */
+	align-items: center; /* 垂直居中 */
+}
+
+.f1 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.search-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-location {
+    background: #AFEEEE;
+    border: 1px solid #dadce0;
+    color: #4285f4;
+    padding: 10px 15px;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+    font-size: 16px;
+}
+
+.btn-location::before {
+    content: '📍';
+    font-size: 2em;  /* 单独放大图标 */
+    margin-right: 6px;
+}
+
+.btn-location:hover {
+    background: #f1f3f4;
+    box-shadow: 0 1px 2px rgba(60,64,67,0.3);
+}
+
+.input-wrapper {
+    position: relative;
+    flex-grow: 1;
+    width:280px;
+}
+
+.btn-search {
+    /* 新增尺寸控制 */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* 修改padding */
+    padding: 0 !important; /* 移除原有padding */
+
+    /* 保持原有其他属性 */
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #e8f0fe !important;
+    border: none;
+    font-size: 20px;
+    color: #4285f4;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.btn-search:active {
+    transform: translateY(-50%) scale(0.95); /* 点击动效 */
+}
+.btn-search:hover {
+    background: #d2e3fc !important; /* 悬停颜色 */
+    
+    box-shadow: 0 2px 6px rgba(66,133,244,0.2);
+}
+
+#Name {
+    width: 100%;
+    padding: 12px 45px 12px 20px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    font-size: 16px;
+    transition: all 0.3s;
+    background: #fff;
+}
+
+#Name:focus {
+    border-color: #4285f4;
+    box-shadow: 0 1px 6px rgba(66,133,244,0.3);
+    outline: none;
+}
+
+.btn-search {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    padding: 0;
+    font-size: 20px;
+    color: #70757a;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.btn-search:hover {
+    color: #4285f4;
+}
+</style>
+
+<!-- 地图初始化脚本 -->
+<script>
         let currentLocation = { 
     	    lat: 43.6532,  // 默认多伦多
     	    lng: -79.3832 
@@ -30,22 +168,32 @@
             infowindow = new google.maps.InfoWindow();
         };
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD265wFZtTr2apP3qyfn_QLIDfw5rgMRyc&callback=initMap&language=en" async defer></script>
+<script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD265wFZtTr2apP3qyfn_QLIDfw5rgMRyc&callback=initMap&language=en"
+	async defer></script>
 </head>
 <body>
-    <div id="map"></div>
-    <br/><br/>
-    <div id="r-result">
-        <form class="f1">
-            <input id="Name" type="text" style="width:150px; margin-right:10px;" />
-            <input type="button" value="查询" onclick="initSearch()" class="btn btn-brand pill"/>
-            <input type="button" value="📍 当前位置" onclick="locateUser()" class="btn btn-brand pill" 
-               style="margin-left:10px; background:#4285f4; color:white;"/>
-        </form>
-    </div>
+	<div id="map"></div>
+	<br />
+	<br />
 
-    <!-- 全部前端逻辑 -->
-    <script type="text/javascript">
+
+	<div id="r-result">
+		<form class="f1">
+			<div class="search-container">
+				<input type="button" value="📍 My Location" onclick="locateUser()"
+					class="btn-location" />
+				<div class="input-wrapper">
+					<input id="Name" type="text" placeholder="Enter a food keyword..." />
+					<button type="button" onclick="initSearch()" class="btn-search">
+						🔍</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<!-- 全部前端逻辑 -->
+	<script type="text/javascript">
         // 核心搜索功能
         async function initSearch() {
             const query = document.getElementById('Name').value.trim();

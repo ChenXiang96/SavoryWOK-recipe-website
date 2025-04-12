@@ -6,6 +6,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <c:set var="ctx" value="${pageContext.request.contextPath}" />
 <link rel="stylesheet" type="text/css" href="${ctx }/css/all.css?v1=9">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style type="text/css">
 .footer-area {
@@ -31,7 +33,8 @@
 	font-size: 11px;
 	color: #666;
 	width: 600px;
-	padding-top: 10px
+	padding-top: 10px;
+	margin-left: -30px;
 }
 
 .ft1 .c3b {
@@ -51,7 +54,7 @@
 	margin-bottom: 6px
 }
 
-.ft2, .ft3, .ft4 {
+.ft2, .ft3 {
 	clear: none;
 	float: right;
 	text-align: center
@@ -60,13 +63,41 @@
 .ft3 {
 	margin: 0 25px
 }
+
+.ft4 {
+	text-align: right; /* 整体右侧对齐 */
+	margin-top: 15px;
+	padding-left: 20px;
+}
+
+.footer-menu-columns {
+	display: inline-flex; /* 保持右侧对齐 */
+	gap: 40px; /* 列间距 */
+	text-align: left; /* 文字左对齐 */
+}
+
+.footer-menu-col {
+	display: flex;
+	flex-direction: column;
+	gap: 12px; /* 行间距 */
+}
+
+.footer-menu-col a {
+	color: #654e2d; /* 与顶部菜单颜色一致 */
+	text-decoration: none;
+	font-size: 14px;
+	white-space: nowrap; /* 防止文字换行 */
+	transition: opacity 0.3s;
+}
+
+.footer-menu-col a:hover {
+	opacity: 0.8;
+	text-decoration: underline;
+}
 </style>
 <div class="footer-area clear1">
-	<div class="w" style="
-    display: flex;              /* 弹性容器 */
-    justify-content: center;    /* 主轴居中 */
-    gap: 30px;                 /* 元素间距 */
-">
+	<div class="w"
+		style="display: flex; /* 弹性容器 */ justify-content: center; /* 主轴居中 */ gap: 30px;">
 		<div class="ft1">
 			<p class="c3b">
 				<img class="img5"
@@ -76,26 +107,34 @@
 			</p>
 			<p class="c3c">
 				<a class="ac" target="_blank"
-					href="https://www.meishichina.com/minisite/red/" title="关于我们">关于我们</a>
-				· <a class="ac" target="_blank"
+					href="https://www.meishichina.com/minisite/red/" title="关于我们">About
+					Us</a> | <a class="ac" target="_blank"
 					href="https://www.meishichina.com/minisite/red/contact/"
-					title="联系我们">联系我们</a> · <a class="ac" target="_blank"
+					title="联系我们">Privacy Policy</a> | <a class="ac" target="_blank"
 					href="https://www.meishichina.com/minisite/red/joinus/"
-					title="加入我们">加入我们</a> · <a class="ac" target="_blank"
+					title="加入我们">Terms of Use</a> | <a class="ac" target="_blank"
 					href="https://www.meishichina.com/minisite/red/copyright/"
-					title="服务声明">服务声明</a> · <a class="ac" target="_blank"
-					href="https://www.meishichina.com/minisite/red/links/" title="友情链接">友情链接</a>
-				· <a class="ac" target="_blank"
+					title="服务声明">Terms of Service</a> | <a class="ac" target="_blank"
+					href="https://www.meishichina.com/minisite/red/links/" title="友情链接">Copyright</a>
+				| <a class="ac" target="_blank"
 					href="https://www.meishichina.com/minisite/red/sitemap/"
-					title="网站地图">网站地图</a> · <a class="ac" target="_blank" title="移动应用"
-					href="https://www.meishichina.com/Mobile/">移动应用</a>
+					title="网站地图">Advertise</a> | <a class="ac" target="_blank"
+					title="移动应用" href="https://www.meishichina.com/Mobile/">Contact</a>
 			</p>
 		</div>
 		<div class="ft4">
-			<img width="82" title="微信公众号" class="wx"
-				src="//static.meishichina.com/v6/img/model/weixin_727.png"> <img
-				width="82" title="手机客户端" class="sj"
-				src="//static.meishichina.com/v6/img/model/msc_app.png">
+			<div class="footer-menu-columns">
+				<div class="footer-menu-col">
+					<a href="${ pageContext.request.contextPath}/health/list">Recipes</a>
+					<a href="${ pageContext.request.contextPath}/specialshow">Themes</a>
+					<a href="${ pageContext.request.contextPath}/myHealth">Healthy</a>
+				</div>
+				<div class="footer-menu-col">
+					<a href="${ pageContext.request.contextPath}/topicshow">Moments</a>
+					<a href="${ pageContext.request.contextPath}/location.jsp">Explore</a>
+					<a href="${ pageContext.request.contextPath}/userLogin">Sign in</a>
+				</div>
+			</div>
 		</div>
 
 	</div>
@@ -104,27 +143,23 @@
 	<div class="w">
 		<p class="pp" align="center">
 
-			版权所有 &copy; 2004-2018 <a class="af" target="_blank"
-				href="https://www.meishichina.com/" title="厨色 -让吃更美好！">厨色</a> 保留所有权利
-			- <img class="img4" height="14"
-				src="//static.meishichina.com/v6/img/beian.png"> <a class="af"
-				rel="nofollow" target="_blank"
-				href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502031041">京公网安备
-				11010502031041号</a> / 京ICP证090244号 <a class="af" rel="nofollow"
-				href="http://www.cyberpolice.cn" target="_blank"><img
-				class="img1" src="//i3.meishichina.com/static/lib/cyberpolice.gif"
-				height="30"></a> &nbsp;&nbsp; <a class="af" rel="nofollow"
-				key="5506c2abc274e750d6d26924" logo_size="124x47"
-				logo_type="realname"
-				href="http://v.pinpaibao.com.cn/authenticate/cert/?site=www.meishichina.com&amp;at=realname"
-				target="_blank"> <img class="img2"
-				src="//static.anquan.org/static/outer/image/sm_124x47.png?id=home.meishichina.com"
-				alt="安全联盟认证" height="23"></a> &nbsp;&nbsp; <a class="af"
-				rel="nofollow"
-				href="http://ss.knet.cn/verifyseal.dll?sn=2010110200100002761&amp;ct=df&amp;a=1&amp;pa=0.1362082236943738"
-				target="_blank"><img class="img3" width="64" height="23"
-				src="//static.meishichina.com/v6/img/temp/cnnic.png"></a>
+			Created by <a class="af" target="_blank" href="https://github.com/ChenXiang96/">Xiang Chen</a>. Copyright &copy; 2025 <a class="af"
+				target="_blank" href="https://github.com/ChenXiang96/"
+				title="Xiang Chen-github">Xiang Chen. All rights reserved.</a>
+
+			<!-- 新增社交媒体图标 -->
+		<span class="social-icons">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-tiktok"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-flipboard"></i></a>
+    <a href="#"><i class="fab fa-pinterest"></i></a>
+    
+    
+</span>
 		</p>
+		
 
 	</div>
 </div>
@@ -157,7 +192,7 @@
 
 .img5 {
 	width: 230px;
-	margin-left: 90px;
+	margin-left: 150px;
 }
 
 .footer-area {
@@ -197,6 +232,7 @@ p {
 	padding-top: 10px;
 	border-top: 1px solid #e8e8e8;
 	width: 1200px;
+	gap: 50px;
 }
 
 .af {
@@ -212,5 +248,28 @@ p {
 	float: right;
 	text-align: center;
 	margin-right: 80px;
+}
+
+.social-icons {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.social-icons a {
+    color: #666;
+    font-size: 16px;
+    line-height: 1;
+    transition: color 0.3s;
+}
+
+.pp {
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
 }
 </style>
