@@ -4,10 +4,6 @@
 # 🍳 Savory Wok
 
 **Savory Wok** is a full-stack recipe web application centered on Chinese-style cuisine. It blends culinary inspiration with social sharing. Built on the Spring + Spring MVC + Hibernate (SSH) stack, it provides a dynamic and responsive platform for users to explore, share, and discover delicious dishes easily.
-#### Homepage Screenshot
-<div style="overflow:auto; max-height: 500px; text-align: center;">
-    <img src="https://github.com/ChenXiang96/savory-wok-recipe-website/blob/master/Readme-Images/HomePage.png?raw=true" alt="Homepage Screenshot" style="max-width: 100%; height: auto;">
-</div>
 
 ## 🛠️ Tech Stack
 
@@ -41,3 +37,8 @@ Users receive a secure activation link via EyouMailServer and can verify their a
 
 ### 📊 6. Admin Dashboard
 Admin users can manage all front-end content with full CRUD functionality through an efficient backend interface.
+
+#### Homepage:
+<div style="overflow:auto; max-height: 500px; text-align: center;">
+    <img src="https://github.com/ChenXiang96/savory-wok-recipe-website/blob/master/Readme-Images/HomePage.png?raw=true" alt="Homepage Screenshot" style="max-width: 100%; height: auto;">
+</div>
