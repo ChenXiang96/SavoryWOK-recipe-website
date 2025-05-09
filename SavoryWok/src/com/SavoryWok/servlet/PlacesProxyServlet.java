@@ -26,7 +26,7 @@ public class PlacesProxyServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //handleRequest("details", request, response);
+ 
     	String action = request.getParameter("action");
         if ("photo".equals(action)) {
             handlePhotoRequest(request, response);
@@ -45,7 +45,7 @@ public class PlacesProxyServlet extends HttpServlet {
             HttpURLConnection conn = buildConnection(action, req);
             processResponse(conn, resp);
         } catch (Exception e) {
-            sendError(resp, 500, "代理服务异常: " + (e.getMessage() != null ? e.getMessage() : e.toString()));
+            sendError(resp, 500, "Proxy service exception: " + (e.getMessage() != null ? e.getMessage() : e.toString()));
         }
     }
     
@@ -57,27 +57,27 @@ public class PlacesProxyServlet extends HttpServlet {
         }
 
         try {
-            // 关键修复：URL解码并验证
+           
             String decodedName = URLDecoder.decode(photoName, StandardCharsets.UTF_8.name());
-            System.out.println("[DEBUG] 解码后的照片名称: " + decodedName); // 必须包含完整路径
+            System.out.println("[DEBUG] Decoded photo name: " + decodedName); 
             
             String apiUrl = "https://places.googleapis.com/v1/" + decodedName + "/media?key=" + API_KEY + "&maxWidthPx=400";
-            System.out.println("[DEBUG] Google API请求地址: " + apiUrl); // 输出应为合法URL
+            System.out.println("[DEBUG] Google API request address: " + apiUrl);
             
             HttpURLConnection conn = (HttpURLConnection) new URL(apiUrl).openConnection();
             conn.setInstanceFollowRedirects(false);
             
-            // 处理所有3XX重定向状态码
+           
             int status = conn.getResponseCode();
             if (status >= 300 && status < 400) {
                 String location = conn.getHeaderField("Location");
-                System.out.println("[DEBUG] 图片重定向地址: " + location); // 必须为有效图片URL
+                System.out.println("[DEBUG] Image redirection address: " + location); 
                 resp.sendRedirect(location);
             } else {
-                sendError(resp, status, "Google API错误: " + conn.getResponseMessage());
+                sendError(resp, status, "Google API Incorrect: " + conn.getResponseMessage());
             }
         } catch (Exception e) {
-            sendError(resp, 500, "服务器内部错误: " + e.getMessage());
+            sendError(resp, 500, "Internal server error: " + e.getMessage());
         }
     }
 
@@ -88,29 +88,29 @@ public class PlacesProxyServlet extends HttpServlet {
         HttpURLConnection conn = (HttpURLConnection) apiUrl.openConnection();
         conn.setRequestMethod(action.equals("search") ? "POST" : "GET");
         if ("details".equals(action)) {
-        	//conn.setRequestProperty("X-Goog-FieldMask", "displayName.text,formattedAddress,rating,userRatingCount");
+        
         	conn.setRequestProperty("X-Goog-FieldMask", "displayName.text,formattedAddress,rating,userRatingCount,photos");
         } else {
-        	//conn.setRequestProperty("X-Goog-FieldMask", "places.id,places.displayName,places.formattedAddress,places.location");
+        	
         	conn.setRequestProperty("X-Goog-FieldMask", "places.id,places.displayName,places.formattedAddress,places.location,places.photos");
         	
         }
         
-        // 关键头信息配置
+    
         conn.setRequestProperty("Accept-Language", "en-US,en;q=0.9");
-        conn.setRequestProperty("X-Goog-Language", "en"); // Google专用语言头
+        conn.setRequestProperty("X-Goog-Language", "en"); 
         conn.setRequestProperty("X-Goog-Api-Key", API_KEY);
        
         conn.setRequestProperty("Content-Type", "application/json; charset=utf-8");
-        conn.setRequestProperty("Accept-Language", "en-US"); // 新增必要头
+        conn.setRequestProperty("Accept-Language", "en-US"); 
         conn.setRequestProperty("Referer", "http://localhost:8080");
         conn.setRequestProperty("Origin", "http://localhost:8080");
-        conn.setRequestProperty("Content-Type", "application/json"); // 确保格式正确
+        conn.setRequestProperty("Content-Type", "application/json");
 
         if (action.equals("search")) {
             conn.setDoOutput(true);
             try (OutputStream os = conn.getOutputStream()) {
-                os.write(IOUtils.toByteArray(req.getInputStream())); // 保持原始请求体
+                os.write(IOUtils.toByteArray(req.getInputStream()));
             }
         }
         return conn;
@@ -118,14 +118,14 @@ public class PlacesProxyServlet extends HttpServlet {
 
     private String buildApiUrl(String action, HttpServletRequest req) throws Exception {
         if (action.equals("details")) {
-            // 直接使用原始参数（前端已正确编码）
+         
             String placeId = req.getParameter("placeId");
-            System.out.println("[DEBUG] 原始placeId参数值: " + placeId);
+            System.out.println("[DEBUG] Original placeId parameter value: " + placeId);
             
             if (placeId == null || placeId.isEmpty()) {
                 throw new IllegalArgumentException("Missing placeId parameter");
             }
-            return BASE_URL + placeId; // 无需解码
+            return BASE_URL + placeId; 
         }
         return BASE_URL + ":searchText";
     }

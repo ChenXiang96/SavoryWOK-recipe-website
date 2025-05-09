@@ -24,7 +24,6 @@ public class DishesController {
 	private DishesService DishesService;
 	
 
-	//首页中点击一级分类查询商品
 	@RequestMapping(value="/findByCid/{cid}/{page}")
 	public String findByCid(@PathVariable("cid") Integer cid,@PathVariable("page") Integer page
 			,Map<String,Object> map){
@@ -33,19 +32,16 @@ public class DishesController {
 		if(page > count){
 			page = 1;
 		}
-		//map.put("Dishes", Dishes);
+		
 		map.put("dishesList", Dishes);
-		//把当前的页数存放到map中
 		map.put("page", page);
-		//总共有多少页
 		map.put("count",count);
 		map.put("cid", cid);
-		return "recai";
+		return "SubCategory";
 	}
 	
 	
-		
-     //根据二级分类查询商品
+
 		@RequestMapping(value="findByCsid/{csid}/{page}")	
 		public String findByCsid(@PathVariable("csid") Integer csid,@PathVariable("page") Integer page
 				,Map<String,Object> map){
@@ -54,23 +50,17 @@ public class DishesController {
 				page = 1;
 			}
 			List<Dishes> Dishes = DishesService.findByCsid(csid, page);
-			//map.put("Dishes", Dishes);
-			 map.put("dishesList", Dishes);
-			//把当前的页数存放到map中
+			map.put("dishesList", Dishes);
 			map.put("page", page);
-			//总共有多少页
 			map.put("count",count);
 			map.put("csid", csid);
-			return "recai";
+			return "SubCategory";
 		}
-		
-		
-		
-	//根据菜品pid查询菜品
-	@RequestMapping(value="findByPid/{pid}",method=RequestMethod.GET)
-	public String findByPid(@PathVariable("pid") Integer pid,Map<String,Dishes> map){
-		map.put("Dishes", DishesService.findByPid(pid));
-		return "caipinxiangqing";
+
+	@RequestMapping(value="getDishById/{id}",method=RequestMethod.GET)
+	public String getDishById(@PathVariable("id") Integer id,Map<String,Dishes> map){
+		map.put("Dishes", DishesService.getDishById(id));
+		return "RecipeDetails";
 	}
 	
 	
@@ -78,26 +68,25 @@ public class DishesController {
 	public String findByCsname(@PathVariable("csname") String csname,
 	                          @PathVariable("page") Integer page,
 	                          Map<String, Object> map) {
-		// 增加调试输出
-	    System.out.println("接收到的csname参数：" + csname);
+
+	    System.out.println("The received csname parameter：" + csname);
 	    
-	    // 调用服务层
+
 	    List<Dishes> dishesList = DishesService.findByCsname(csname, page);
 	    Integer totalPage = DishesService.countPageByCsname(csname);
 	    
-	    // 分页验证（可选）
+
 	    if(page > totalPage){
 	        page = 1;
 	    }
 	    
-	    // 参数注入map
-	    //map.put("dList", dishesList);  
-	    map.put("dishesList", dishesList); // 与jsp页面中的遍历名称保持一致
+
+	    map.put("dishesList", dishesList); 
 	    map.put("page", page);
 	    map.put("count", totalPage);
-	    map.put("csname", csname);     // 传递当前分类名
+	    map.put("csname", csname);  
 	    
-	    return "recai";
+	    return "SubCategory";
 	}
 
 

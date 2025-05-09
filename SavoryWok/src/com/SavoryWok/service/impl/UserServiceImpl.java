@@ -23,31 +23,12 @@ public class UserServiceImpl implements UserService{
 	
 	@Resource
 	private UserDao userDao;
-	//前台，往用户中心跳转--------------------------------------------
-	//顺便获取用户信息
+
 	public User findUser(Integer uid){
 		return this.userDao.findById(uid);
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	//后台--------------------------------------
-	//后--分页查询数据
+
 	public List<User> findByPage(int num, int i) {
 		return userDao.findByPage(num, i);
 	}
@@ -55,21 +36,7 @@ public class UserServiceImpl implements UserService{
 		return userDao.findCountByPage();
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	public User active(String code) {
 		return userDao.findByCode(code);
 	}
@@ -86,9 +53,9 @@ public class UserServiceImpl implements UserService{
 		user.setState(1);
 		String code = UUIDUtils.getUUID()+UUIDUtils.getUUID();
 		user.setCode(code);
-		//user.setUimage("head.jpg");
+
 		userDao.save(user);
-		//发送激活邮件
+
 		MailUitls.sendMail(user.getEmail(), code);
 	}
 

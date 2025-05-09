@@ -19,33 +19,33 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
 		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.0.xsd">
 	
-	<description>Spring公共配置 </description>
+	<description>Spring common configuration </description>
 
-	<!-- 配置Spring上下文的注解 -->
+	
 	<context:annotation-config />
-	<!-- 使用annotation 自动注册bean, 并保证@Required、@Autowired的属性被注入 -->
+	<!-- Automatically register the bean using annotations and ensure that all properties annotated with @Required and @Autowired are properly injected. -->
 	<context:component-scan base-package="com.SavoryWok">
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
 
 	
 	</context:component-scan>
 
-	<!-- 属性文件位置 -->
+	<!-- Properties file location -->
 	<context:property-placeholder location="classpath:*.properties" />
-	<!-- 修改后（正确） -->
+	<!-- After modification (correct) -->
         <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
               <property name="driverClassName" value="${jdbc.driver}"/>
               <property name="url" value="${jdbc.url}"/>
               <property name="username" value="${jdbc.username}"/>
               <property name="password" value="${jdbc.password}"/>
-              <!-- 连接池参数（仅BasicDataSource支持） -->
+              <!-- Connection Pool Settings (BasicDataSource Only) -->
               <property name="initialSize" value="5"/>
               <property name="maxTotal" value="20"/>
               <property name="maxIdle" value="10"/>
               <property name="minIdle" value="5"/>
         </bean>
 
-        <!-- 新增：JdbcTemplate配置 -->
+        
         <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
                 <property name="dataSource" ref="dataSource"/>
         </bean>
@@ -68,7 +68,7 @@
 
 	</bean>
 
-<!-- 配置事务管理器 -->
+
 	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
 		<property name="sessionFactory">

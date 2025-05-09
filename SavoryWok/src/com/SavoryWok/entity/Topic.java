@@ -11,8 +11,8 @@ import javax.persistence.Table;
 
 /**
  * 
- * Topic 话题发布显示
- * @author dell
+ * 
+ * @author xiang_chen
  *
  */
 @Entity

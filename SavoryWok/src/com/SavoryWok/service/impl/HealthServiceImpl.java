@@ -20,12 +20,10 @@ public class HealthServiceImpl {
 
 	@Resource
 	private HealthDaoImpl healthDaoImpl;
-	
-	//-----------------------------------------------------------------
-	//前台跳转到菜的做法页面-把菜名和菜的图片列出来
-	public Dishes findHowdoP(Integer pid){
+
+	public Dishes findHowdoP(Integer id){
 		System.out.print("aaachulaichulaiser");
-		return this.healthDaoImpl.findByIdP(pid);
+		return this.healthDaoImpl.findByIdP(id);
 	}
 	public User findHowdoU(Integer uid){
 		System.out.print("aaachulaichulaiser");
@@ -41,49 +39,43 @@ public class HealthServiceImpl {
 	}
 	
 	
-	
-	
-	
-	
-	
-	//查-前-商品列表
+	public List<Dishes> listDishesByPage(Integer page, Integer pageSize) {
+	    int offset = (page - 1) * pageSize;  
+	    return healthDaoImpl.findByPage(offset, pageSize);
+	}
+
+	public Integer countAllDishes() {
+	    return healthDaoImpl.findCountByPage(); 
+	}
+
 	public List<Dishes> listDishes(){
 		return healthDaoImpl.findAll();
 	}
 
 	
-	//------------------------------------------------------------
 
-	//后-修改商品-先按id查出来
-	public Dishes findDishes(Integer pid){
-		return this.healthDaoImpl.findByIdBack(pid);
+	public Dishes findDishes(Integer id){
+		return this.healthDaoImpl.findByIdBack(id);
 	}
 	public Dishes updateDishes(Dishes Dishes) {				
 		return this.healthDaoImpl.updateBack(Dishes);
 		
 	}
-	//后台-删除商品
-	public void deleteDishes(Dishes Dishes, Integer pid) {
-		System.out.print("ser快删啊");
-		this.healthDaoImpl.deleteByIdBack(Dishes,pid);
+	
+	public void deleteDishes(Dishes Dishes, Integer id) {
+		
+		this.healthDaoImpl.deleteByIdBack(Dishes,id);
 	}
 
 	
-	
-	
-	
-	//后-添加商品
+
 		
 	public Dishes addDishesBack(Dishes Dishes){
 		return this.healthDaoImpl.saveDishes(Dishes);
 				
 	}
 	
-	
-	
-	
-	
-	//后-健康-分页查询数据
+
 	public List<Dishes> findByPage(int num, int i) {
 		return healthDaoImpl.findByPage(num, i);
 	}

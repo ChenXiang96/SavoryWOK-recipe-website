@@ -1,20 +1,18 @@
 package com.SavoryWok.entity;
 
 public class SpecialDishes {
-    private Integer sid;  // 对应数据库中的 sid 字段（外键关联 special 表）
-    private Integer pid;  // 对应数据库中的 pid 字段（外键关联 dishes 表）
+    private Integer sid; 
+    private Integer did; 
 
-    // 无参构造函数（必须）
     public SpecialDishes() {
     }
 
-    // 带参构造函数（可选）
-    public SpecialDishes(Integer sid, Integer pid) {
+
+    public SpecialDishes(Integer sid, Integer did) {
         this.sid = sid;
-        this.pid = pid;
+        this.did = did;
     }
 
-    // Getter & Setter
     public Integer getSid() {
         return sid;
     }
@@ -23,11 +21,11 @@ public class SpecialDishes {
         this.sid = sid;
     }
 
-    public Integer getPid() {
-        return pid;
+    public Integer getDid() {
+        return did;
     }
 
-    public void setPid(Integer pid) {
-        this.pid = pid;
+    public void setDid(Integer did) {
+        this.did = did;
     }
 }

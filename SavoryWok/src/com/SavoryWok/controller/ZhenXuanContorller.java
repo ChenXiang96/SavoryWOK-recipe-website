@@ -19,9 +19,7 @@ import com.SavoryWok.service.impl.ZhenXuanServiceImpl;
 public class ZhenXuanContorller {
 	@Resource
 	private ZhenXuanServiceImpl zhenxuanServiceImpl;
-	//前------------------------------------------------------
-	
-	//前-查-在商品页面显示珍选列表
+
 	@RequestMapping("/list")
 	public String list(HttpSession session){
 			List<Zhenxuan> list=this.zhenxuanServiceImpl.listZhenxuans();

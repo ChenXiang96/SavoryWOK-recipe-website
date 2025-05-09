@@ -15,15 +15,15 @@ public class RecipeStep {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     
-    private Integer step; // 步骤序号
-    private String description; // 步骤描述
-    private String image; // 步骤图片
+    private Integer step;
+    private String description;
+    private String image;
     
     @ManyToOne
-    @JoinColumn(name = "pid") // 对应数据库外键字段
-    private Dishes dishes; // 关联的菜品
+    @JoinColumn(name = "pid")
+    private Dishes dishes; 
     
-    // getters & setters
+ 
     public Integer getId() {
         return id;
     }
@@ -48,7 +48,7 @@ public class RecipeStep {
         this.description = description;
     }
 
-    // 关键修复：添加image字段的访问方法
+
     public String getImage() {
         return image;
     }

@@ -14,11 +14,11 @@ import javax.persistence.Table;
 
 /**
  * 
- * Special代表显示的专题
- * @author dell
+ * 
+ * @author xiang_chen
  *
  */
-//这是一行注释
+
 
 @Entity
 @Table(name="special")

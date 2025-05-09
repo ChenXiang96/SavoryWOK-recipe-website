@@ -25,22 +25,21 @@ public class SubjectBackController {
 	@Resource
 	private SubjectBackServiceImpl subjectBackServiceImpl;
 
-
-	
-	//后台-----------------------------------------------------
-	//后-修改商品-修改商品------------
-	//后-修改商品-先找到要改的商品
 	@RequestMapping("/edit")
 	public String edit(@RequestParam(value="pid", required = false) Integer pid,Model model){
 		Subject subject=this.subjectBackServiceImpl.findSubject(pid);
+		if (subject == null) {
+			return "redirect:/error/notFound"; 
+		}
 		model.addAttribute("subject", subject);
-		System.out.println("xiao"+subject.getPname());
+		
+		System.out.println("xiao" + subject.getPname()); 
 		System.out.println("xiaomi"+subject.getPdesc());
-		return "/adm/detail/updateSubject";
+		return "adm/detail/updateSubject";
 	}
-	//后-修改商品-调用那个提交修改商品
+
 	@RequestMapping(value="update", method=RequestMethod.POST)
-	public String updateBack(@RequestParam(value="pid", required = false) Integer pid,Subject subject,
+	public String updateBack(@RequestParam("pid") Integer pid,Subject subject,
 			@RequestParam("pname") String pname,
 			@RequestParam("pdesc") String pdesc) {
 		subject=this.subjectBackServiceImpl.findSubject(pid);
@@ -50,11 +49,10 @@ public class SubjectBackController {
 		System.out.print("aaaaa"+subject.getPname());
 		return "redirect:get";
 	}
-	//后-删除健康
+
 	@RequestMapping("/delete")
 	public String deletelist(HttpSession session,@RequestParam(value="pid", required = false) Integer pid){
 		Subject subject=this.subjectBackServiceImpl.findSubject(pid);
-		System.out.print("con快删啊");
 		this.subjectBackServiceImpl.deletesubject(subject,pid);
 		return "forward:/subject/get";
 	}
@@ -62,15 +60,14 @@ public class SubjectBackController {
 	
 	
 	
-	//后-添加-添加商品
+
 	@RequestMapping(value="/add", method=RequestMethod.GET)
 	public String toAdd(Model model){
-		//List<subjectType> listtype=this.subjectTypeServiceImpl.listsubjectType();
-		//model.addAttribute("listtype", listtype);
+		
 		System.out.println("contype");  
 		return "/adm/detail/saveSubject";
 	}
-	//后-添加-添加商品---上传图片
+
 	@RequestMapping(value="add", method=RequestMethod.POST)
 	public String addBack(Subject subject,
 			@RequestParam("pname") String pname,
@@ -80,16 +77,10 @@ public class SubjectBackController {
 		return "redirect:get";
 	}
 
-		
-	
-	
-	
-	
-	
-	//后-查-商品列表
+
 	@RequestMapping("/get")
 	public String listgoods(Subject subject,HttpSession session,HttpServletRequest request){
-		String num = request.getParameter("pageNum");//获取用户要看的页码
+		String num = request.getParameter("pageNum");
 		int pageNumber = 1;
 		if(num!=null){
 			pageNumber = Integer.parseInt(num);
@@ -100,7 +91,6 @@ public class SubjectBackController {
 		page.setTotalCount(this.subjectBackServiceImpl.findByCount());
 		session.setAttribute("list", list);
 		session.setAttribute("page", page);
-		//System.out.println(subject.getDescription());
 		return "adm/detail/subjectList";
 	}
 	

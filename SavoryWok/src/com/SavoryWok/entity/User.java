@@ -18,11 +18,11 @@ public class User {
 	private int uid;
 	private String username;
 	private String password;
-	//private String oldpass;不要了
+
 	private String newpass;
 	private String ensurepass;
 	private String name;
-	@Email(message="邮箱格式错误")
+	@Email(message="Email format incorrect")
     private String email;
     private String phone;
     private String addr;

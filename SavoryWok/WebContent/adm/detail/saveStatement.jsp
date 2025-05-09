@@ -4,9 +4,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-   <!-- 包含公共的JSP代码片段 -->
-	
-<title>厨色</title>
+<title>Admin Panel</title>
 
 
 
@@ -18,7 +16,7 @@
 </head>
 <body>
 
-<!-- 页面标题 -->
+
 <div id="TitleArea">
 	<div id="TitleArea_Head"></div>
 	<div id="TitleArea_Title">
@@ -26,7 +24,7 @@
 			
 				
 				
-					<img border="0" width="13" height="13" src="style/images/title_arrow.gif"/> 添加新评论
+					<img border="0" width="13" height="13" src="style/images/title_arrow.gif"/> Add New Comment
 				
 			
 		</div>
@@ -34,33 +32,33 @@
 	<div id="TitleArea_End"></div>
 </div>
 
-<!-- 主内容区域（数据列表或表单显示） -->
+
 <div id="MainArea">
-	<!-- 表单内容 -->
+
 	<form action="#" method="post" enctype="multipart/form-data">
-		<!-- 本段标题（分段标题） -->
+	
 		<div class="ItemBlock_Title">
-        	<img width="4" height="7" border="0" src="style/images/item_point.gif"> 评论信息&nbsp;
+        	<img width="4" height="7" border="0" src="style/images/item_point.gif"> Comment Info&nbsp;
         </div>
-		<!-- 本段表单字段 -->
+		
         <div class="ItemBlockBorder">
             <div class="ItemBlock">
 				<div class="ItemBlock2">
 					<table cellpadding="0" cellspacing="0" class="mainForm">
 						<tr>
-							<td width="80px">评论编号</td>
+							<td width="80px">Comment No.</td>
 							<td><input type="text" name="foodName" class="InputStyle" value=""/> *</td>
 						</tr>
 						<tr>
-							<td>用户编号</td>
+							<td>User Id</td>
 							<td><input type="text" name="price" class="InputStyle" value=""/> *</td>
 						</tr>
                         <tr>
-							<td>评论内容</td>
+							<td>Comment Content</td>
 							<td><input type="text" name="mprice" class="InputStyle" value=""/> *</td>
 						</tr>
 						<tr>
-							<td>评论时间</td>
+							<td>Comment Time</td>
 							<td><input type="text" name="mprice" class="InputStyle" value=""/> *</td>
 						</tr>
 						
@@ -69,17 +67,15 @@
             </div>
         </div>
 		
-		
-		<!-- 表单操作 -->
 		<div id="InputDetailBar">
             
 				
 				
-					 <input type="submit" value="添加" class="FunctionButtonInput">
+					 <input type="submit" value="Add" class="FunctionButtonInput">
 				
 			
             
-            <a href="javascript:history.go(-1);" class="FunctionButton">返回</a>
+            <a href="javascript:history.go(-1);" class="FunctionButton">Go back</a>
         </div>
 	</form>
 </div>

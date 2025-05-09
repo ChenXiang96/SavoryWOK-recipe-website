@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.SavoryWok.dao.CategorySecondGroupDao;
 import com.SavoryWok.dao.DishesDao;
-import com.SavoryWok.entity.CategorySecondGroup;
+import com.SavoryWok.entity.IngredientCategoryGroup;
 import com.SavoryWok.entity.Dishes;
 import com.SavoryWok.entity.IngredientsDetail;
 import com.SavoryWok.service.DishesService;
@@ -28,13 +28,13 @@ public class DishesServiceImpl implements DishesService {
     @Override
     public Integer CountPageDishesFromCategory(Integer cid) {
         Integer count = DishesDao.countByCategorySecondCategoryCid(cid);
-        return (count % 12 == 0 ? (count / 12) : (count / 12 + 1));
+        return (count % 6 == 0 ? (count / 6) : (count / 6 + 1));
     }
 
     @Override
     public Integer CountPageDishesFromCategorySecond(Integer csid) {
         Integer count = DishesDao.countByCategorySecondCsid(csid);
-        return (count % 12 == 0 ? (count / 12) : (count / 12 + 1));
+        return (count % 6 == 0 ? (count / 6) : (count / 6 + 1));
     }
 
     @Override
@@ -55,30 +55,30 @@ public class DishesServiceImpl implements DishesService {
     }
 
     @Override
-    public Dishes findByPid(Integer pid) {
-        return DishesDao.findWithStepsAndIngredients(pid);
+    public Dishes getDishById(Integer id) {
+        return DishesDao.findWithStepsAndIngredients(id);
     }
     
     
     @Autowired
-    private CategorySecondGroupDao categorySecondGroupDao; // 需要新建该DAO
+    private CategorySecondGroupDao categorySecondGroupDao;
 
     @Override
     public List<Dishes> findByCsname(String csname, Integer page) {
-        System.out.println("===== 开始查询分类：" + csname + " =====");
-        CategorySecondGroup group = categorySecondGroupDao.findByCsname(csname);
-        System.out.println("查询到的group数据：" + (group != null ? group.getCsids() : "null"));
+        System.out.println("===== Start querying categories:" + csname + " =====");
+        IngredientCategoryGroup group = categorySecondGroupDao.findByCsname(csname);
+        System.out.println("Queried Group Data：" + (group != null ? group.getCsids() : "null"));
         
-        // 增加csids空值校验
+   
         if(group == null || group.getCsids() == null) {
             return Collections.emptyList();
         }
         
         List<Integer> csids = Arrays.stream(group.getCsids().split(","))
-                                  .map(String::trim) // 处理可能的空格
+                                  .map(String::trim)
                                   .map(Integer::parseInt)
                                   .collect(Collectors.toList());
-        System.out.println("转换后的csids列表：" + csids);
+        System.out.println("Converted CSIDs List：" + csids);
         
         return DishesDao.findByCsids(csids, page);
     }
@@ -86,7 +86,7 @@ public class DishesServiceImpl implements DishesService {
 
     @Override
     public Integer countPageByCsname(String csname) {
-        CategorySecondGroup group = categorySecondGroupDao.findByCsname(csname);
+    	IngredientCategoryGroup group = categorySecondGroupDao.findByCsname(csname);
         List<Integer> csids = Arrays.stream(group.getCsids().split(","))
                                   .map(Integer::parseInt)
                                   .collect(Collectors.toList());

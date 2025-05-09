@@ -21,7 +21,7 @@ public class SpecialController {
 
 	@Resource
 	private SpecialServiceImpl specialserviceimpl;
-	// 显示全部话题
+
 	@RequestMapping("/specialshow")
 	public String list(HttpSession session) {
 		List<Special> slist = this.specialserviceimpl.listSpecials();
@@ -29,11 +29,11 @@ public class SpecialController {
 		session.setAttribute("activeMenu", "Themes");
 
 		System.out.println(slist.get(0).getSid());
-		return "reservation";
+		return "Themes";
 	}
 	
 	
-	@Autowired  // 新增注入
+	@Autowired 
     private SpecialDishesService specialDishesService;
 	@RequestMapping("/essayshow")
 	public String detail(HttpSession session,@RequestParam("se") String se){
@@ -47,7 +47,7 @@ public class SpecialController {
 		List<Dishes> dishesList = specialDishesService.getDishesBySpecialId(sid);
 	    session.setAttribute("dishesList", dishesList);
 		
-		return "specialdetail";
+		return "ThemeDetails";
 	}
 
 	

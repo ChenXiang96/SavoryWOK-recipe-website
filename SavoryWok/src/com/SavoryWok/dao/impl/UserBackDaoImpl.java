@@ -19,8 +19,7 @@ public class UserBackDaoImpl {
 
 	@Resource
 	private SessionFactory sessionFactory;
-	
-	//后台登录
+
 	public List<User> findById(){	 
         Session session = sessionFactory.openSession();  
         Transaction ts = session.beginTransaction();

@@ -108,30 +108,30 @@ margin-left: 10px;
 
 <body>
  	
-	<!-- 上部 -->
+
 	<div id="Head_1">
-		<!-- 标题 -->
+	
 		<div id="Head_1_Logo">
-			<b style="font-family: '黑体'">广州酒家信息管理平台</b> <!-- <img border="0" src="style/images/logo.png" /> -->
+			<b style="font-family: '黑体'">Admin Panel</b> <!-- <img border="0" src="style/images/logo.png" /> -->
         </div>
-		<!-- 欢迎用户的文字 -->
+	
 		<div id="Head_1_UserWelcome">
 			<img border="0" width="13" height="14" src="style/images/user.gif" /> 
-			您好，<b>管理员</b>
+			Hello，<b>Admin</b>
 		</div>
-		<!-- 一些链接按钮 -->
+	
 		<div id="Head_1_FunctionButton">
 			<a target="right" href="javascript:void(0)">
 				<img width="78" height="20" src="style/images/help2.gif" />
 			</a>
 			<a target="_parent" href="javascript:void(0)">
-				<img width="78" height="20" alt="退出系统" src="style/images/logout.gif" />
+				<img width="78" height="20" alt="Exit" src="style/images/logout.gif" />
 			</a>
 		</div>
 	</div>
-	<!-- 下部 -->
+	
     <div id="Head_2">
-		<!-- 任务提醒 -->
+		
         <div id="Head2_Awoke">
 			<ul id="AwokeNum">
 				
@@ -141,27 +141,23 @@ margin-left: 10px;
 		<div class="Head2_FunctionList" style="float:left">
 			<a href="javascript: window.parent.right.history.back();">
 				<img src="style/images/Header_back.gif" width="24" height="24" style="margin-top: -8px;"/>
-				<b>后退</b>
+				<b>Back</b>
 			</a>
 			<a href="javascript: window.parent.right.history.forward();">
 				<img src="style/images/Header_forward.gif" width="24" height="24" style="margin-top: -8px;"/>
-				<b>前进</b>		
+				<b>Move</b>		
 			</a>
         </div>
         
 		<div id="Head2_FunctionList">
-			<!-- 
-				如果使用 window.parent.right.location.reload(true); 则IE与FF都可以使用，Chrome不可以。
-				在Chrome中 alert(window.parent.right.document); 显示的值是 undefined！为什么？
-				使用 window.parent.right.history.go(0) 实现刷新，在IE、Chrome中都可以运行，但在FF中不可以！（但没有测试什么时候会使用缓存）。
-			 -->
+			
 			<a href="javascript: window.parent.right.history.go(0);">
 				<img src="style/images/Header_refresh.gif" width="24" height="24" style="margin-top: -8px;"/>
-				<b>刷新(IE、Chrome)</b>		
+				<b>Refresh (IE、Chrome)</b>		
 			</a>
 			<a href="javascript: window.parent.right.location.reload(true);">
 				<img src="style/images/Header_refresh.gif" width="24" height="24" style="margin-top: -8px;"/>
-				<b>刷新(Firefox)</b>		
+				<b>Refresh (Firefox)</b>		
 			</a>
 		</div>
 	</div>

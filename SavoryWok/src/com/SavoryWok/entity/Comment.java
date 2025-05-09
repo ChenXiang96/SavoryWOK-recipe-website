@@ -12,7 +12,7 @@ import javax.persistence.Table;
 
 /**
  * 
- * Comment 评论发布显示
+ * Comment
  * @author dell
  *
  */

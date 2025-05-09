@@ -22,7 +22,7 @@ import com.SavoryWok.service.impl.UserBackServiceImpl;
 public class UserBackController {
 	@Resource
 	private UserBackServiceImpl userBackServiceImpl;
-	// 登录
+
 	@RequestMapping("/adm/login")
 	public String login(@RequestParam("username") String username, @RequestParam("password") String password, Model model,
 			HttpSession session) {
@@ -32,53 +32,25 @@ public class UserBackController {
 			session.setAttribute("user", user);
 			return "adm/index";
 		} else {
-			model.addAttribute("errorinfo", "您的账号密码不正确！");
-			return "Backstage";
+			model.addAttribute("errorinfo", "Incorrect username or password!");
+			return "AdminHome";
 		}
 	}
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	//后台-----------------------------------------------------
 
 	@RequestMapping("/userback/delete")
 	public String deletelist(HttpSession session,@RequestParam(value="uid", required = false) Integer uid){
 		User user=this.userBackServiceImpl.findUser(uid);
-		System.out.print("con快删啊");
 		this.userBackServiceImpl.deleteUser(user,uid);
 		return "forward:/userback/get";
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	//后-查-
+
 	@RequestMapping("/userback/get")
 	public String listgoods(User user,HttpSession session,HttpServletRequest request){
-		String num = request.getParameter("pageNum");//获取用户要看的页码
+		String num = request.getParameter("pageNum");
 		int pageNumber = 1;
 		if(num!=null){
 			pageNumber = Integer.parseInt(num);

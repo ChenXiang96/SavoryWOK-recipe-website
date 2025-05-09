@@ -2,13 +2,13 @@ package com.SavoryWok.dao;
 
 import java.util.List;
 
-import com.SavoryWok.entity.CategorySecond2;
+import com.SavoryWok.entity.Subthemes;
 
 public interface CategorySecond2Dao {
-    CategorySecond2 getCategorySecond2ById(Integer casid); // 取消静态方法
+	Subthemes getSubthemesById(Integer casid);
     
     
-    List<CategorySecond2> findByCaid(Integer caid); // 新增
+    List<Subthemes> findByCaid(Integer caid);
     
     
     

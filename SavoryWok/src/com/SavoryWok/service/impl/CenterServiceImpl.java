@@ -19,7 +19,7 @@ import com.SavoryWok.entity.User;
 public class CenterServiceImpl {
 	@Resource
 	private CenterDaoImpl centerDaoImpl;
-	//往center页面跳转
+
 	public User findCenter(Integer uid){
 		return this.centerDaoImpl.findById(uid);
 	}	
@@ -28,29 +28,16 @@ public class CenterServiceImpl {
 		
 	}
 	
-//	//修改密码
-//	public User xiugaiPassword(Integer uid,String newpass, String ensurepass){
-//		User user=this.centerDaoImpl.findByIdPass(uid,ensurepass,newpass);
-//		if(newpass==ensurepass){			
-//			return this.centerDaoImpl.findByIdPass(uid, ensurepass, newpass);
-//		}else{
-//			return null;
-//		}
-//				
-//	}
 
-	
-	// CenterServiceImpl.java 新增方法
 	public List<Topic> findTopicsByUid(Integer uid) {
 	    return this.centerDaoImpl.findTopicsByUid(uid);
 	}
 	
 	
 	public List<Topic> findCommentedTopicsByUid(Integer uid) {
-	    // 1. 获取用户评论过的所有唯一tid
+	  
 	    List<Integer> tids = centerDaoImpl.findCommentedTidsByUid(uid);
-	    
-	    // 2. 根据tid列表查询动态
+
 	    return tids.isEmpty() ? 
 	        Collections.emptyList() : 
 	        centerDaoImpl.findTopicsByTids(tids);

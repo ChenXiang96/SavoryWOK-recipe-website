@@ -18,15 +18,13 @@ public class SubjectBackDaoImpl {
 	@Resource
 	private SessionFactory sessionFactory;
 
-	//后台----后台----后台----后台----后台----后台-----------------
-	//后台-改-修改健康列表
 	public Subject findByIdBack(Integer pid){	
 		Subject subject = (Subject)this.sessionFactory.getCurrentSession().
 				createQuery("from Subject where pid = ?").
 				setParameter(0, pid).uniqueResult();
 		return subject;
 	}
-	//后-改-submit的那个提交 ---调用修改
+
 	public Subject updateBack(Subject subject){
 		Session session=sessionFactory.openSession();  
 	    Transaction tx=null;  
@@ -43,10 +41,9 @@ public class SubjectBackDaoImpl {
 	     }
 		return subject;		
 	}
-	//后-删除健康-已经查出来了，点击删除删除商品
+
 	public void deleteByIdBack(Subject subject,Integer pid){
 		Session session=sessionFactory.openSession();
-		System.out.print("dao快删啊");
 		Transaction tran = session.beginTransaction() ;     
 	        String hql = "Delete FROM Subject Where pid=?" ;     
 	        Query q = session.createQuery(hql) ;     
@@ -55,12 +52,7 @@ public class SubjectBackDaoImpl {
 	        tran.commit() ; 			
 		
 	}
-	
-	
-	
-	
-	
-	//后-增-添加商品
+
 	public Subject savesubject(Subject subject){
 		Session session=sessionFactory.openSession();
 		Transaction transtion=session.beginTransaction();
@@ -68,25 +60,16 @@ public class SubjectBackDaoImpl {
 		System.out.print("dao"+subject.getPname());
 		transtion.commit();
 		session.close();
-		//this.sessionFactory.getCurrentSession().save(subject);
 		return subject;
 		
 	}
 	
 	
-	
-	
 
-	
-	
-	
-	
-	//后-查-健康列表
-	//分页查询数据	
 	public List<Subject> findByPage(int pageNum, int pageSize){
 		try{
 			Query query=this.sessionFactory.getCurrentSession().createQuery("from "+Subject.class.getSimpleName());
-			//查询subject表里的所有数据--list
+		
 			query.setFirstResult((pageNum-1)*pageSize);
 			query.setMaxResults(pageSize);
 			return query.list();
@@ -96,7 +79,7 @@ public class SubjectBackDaoImpl {
 			return null;
 		}
 	}
-	//统计数据个数 
+
 	public int findCountByPage(){
 		try{
 			Query query=this.sessionFactory.getCurrentSession().createQuery("select count("+"*"+") from "+Subject.class.getSimpleName());

@@ -43,7 +43,7 @@ public class CommentController {
 
 //		System.out.println(list.get(0).getTid());
 
-		return "comment";
+		return "MomentDetails";
 	}
 	
 	@RequestMapping("commentadd")

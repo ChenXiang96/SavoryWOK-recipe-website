@@ -2,16 +2,16 @@ package com.SavoryWok.dao;
 
 import java.util.List;
 
-import com.SavoryWok.entity.CategorySecond2;
+import com.SavoryWok.entity.Subthemes;
 
-public interface CategorySecondDao2 extends BaseDao<CategorySecond2>{
+public interface CategorySecondDao2 extends BaseDao<Subthemes>{
 
 	
 	public Integer countCategorySecond2();
 
-	public List<CategorySecond2> findAll2(Integer page);
+	public List<Subthemes> findAll2(Integer page);
 	
-	public List<CategorySecond2> findAll2();
+	public List<Subthemes> findAll2();
 	
-	public CategorySecond2 findTwo(Integer caid);
+	public Subthemes findTwo(Integer caid);
 }

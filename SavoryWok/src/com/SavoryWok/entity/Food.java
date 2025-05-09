@@ -18,7 +18,7 @@ public class Food {
 	private String name;
 	private String image;
 	private String description;
-	//private String title;
+
 
 	private Set<Material> materialSet = new HashSet<Material>();
 	@Id
@@ -53,12 +53,6 @@ public class Food {
 		this.description = description;
 	}
 
-//	public String getTitle() {
-//		return title;
-//	}
-//	public void setTitle(String title) {
-//		this.title = title;
-//	}
 	
 	
 

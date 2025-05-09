@@ -25,12 +25,11 @@ public class TopicBackServiceImpl {
 	}
 	
 	
-	//后-
 	public Topic findTopic(Integer tid){
 		return this.topicBackDaoImpl.findByIdBack(tid);
 	}
 	public void deleteTopic(Topic topic, Integer tid) {
-		System.out.print("ser快删啊");
+		
 		this.topicBackDaoImpl.deleteByIdBack(topic,tid);
 	}
 }

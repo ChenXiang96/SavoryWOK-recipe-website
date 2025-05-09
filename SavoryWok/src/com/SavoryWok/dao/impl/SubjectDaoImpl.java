@@ -40,14 +40,14 @@ public class SubjectDaoImpl extends BaseDaoImpl<Subject> implements SubjectDao {
    
 	
 	public Integer CountPageSubjectFromCategory2(Integer caid) {
-		String hql= "select count(*) from Subject s,Category2 c,CategorySecond2 cs";
-		hql+=" where s.categorySecond2.casid = cs.casid and cs.category2.caid = c.caid and c.caid = ?";
+		String hql= "select count(*) from Subject s,Themes c,Subthemes cs";
+		hql+=" where s.subthemes.casid = cs.casid and cs.themes.caid = c.caid and c.caid = ?";
 		return count(hql, caid);
 		
 	}
 	public Integer CountPageSubjectFromCategorySecond2(Integer casid){
-		String hql = "select count(*) from Subject s ,CategorySecond2 cs ";
-		hql += "where s.categorySecond2.casid = cs.casid and cs.casid = ?";
+		String hql = "select count(*) from Subject s ,Subthemes cs ";
+		hql += "where s.subthemes.casid = cs.casid and cs.casid = ?";
 		return count(hql, casid);
 	}
 	
@@ -58,13 +58,13 @@ public class SubjectDaoImpl extends BaseDaoImpl<Subject> implements SubjectDao {
 			
 	public List<Subject> findByCategorySecondCategoryCid2(Integer caid,
 			Integer page) {
-		String hql = selecthql2 + "from Subject s,Category2 c, CategorySecond2 cs ";
-		hql += "where s.categorySecond2.casid = cs.casid and cs.category2.caid = c.caid and c.caid = ?";
+		String hql = selecthql2 + "from Subject s,Themes c, Subthemes cs ";
+		hql += "where s.subthemes.casid = cs.casid and cs.themes.caid = c.caid and c.caid = ?";
 		return Query2(caid, page, hql);
 	}
 	public List<Subject> findByCategorySecondCsid2(Integer casid, Integer page) {
-		String hql = selecthql2 + "from Subject s ,CategorySecond2 cs ";
-		hql += "where s.categorySecond2.casid = cs.casid and cs.casid = ?";
+		String hql = selecthql2 + "from Subject s ,Subthemes cs ";
+		hql += "where s.subthemes.casid = cs.casid and cs.casid = ?";
 		return Query2(casid, page, hql);
 	}
 	

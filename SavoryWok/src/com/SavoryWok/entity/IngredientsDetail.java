@@ -21,9 +21,9 @@ public class IngredientsDetail{
     
     @ManyToOne
     @JoinColumn(name = "dish_id")
-    private Dishes dish; // 反向关联
+    private Dishes dish; 
     
-    // getters & setters
+
     public Integer getId() {
         return id;
     }

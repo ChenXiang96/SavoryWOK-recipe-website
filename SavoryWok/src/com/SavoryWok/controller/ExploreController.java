@@ -10,7 +10,7 @@ public class ExploreController {
     
     @GetMapping("/location")
     public String showLocationPage(HttpServletRequest request) {
-        request.getSession().setAttribute("activeMenu", "Explore"); // 关键设置
-        return "location"; // 对应视图名称（根据实际调整）
+        request.getSession().setAttribute("activeMenu", "Explore");
+        return "Explore";
     }
 }

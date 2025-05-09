@@ -26,11 +26,11 @@ public class DishesDaoImpl extends BaseDaoImpl<Dishes> implements DishesDao {
     @Override
     public List<Dishes> findByCategorySecondCategoryCid(Integer cid, Integer page) {
     	String hql = "SELECT p FROM Dishes p " +
-                "WHERE p.categorySecond.category.cid = :cid"; // 直接通过层级关联查询
+                "WHERE p.categorySecond.category.cid = :cid";
         Query<Dishes> query = this.getCurrentSession().createQuery(hql, Dishes.class);
         query.setParameter("cid", cid);
-        query.setFirstResult((page - 1) * 12); // 分页起始位置
-        query.setMaxResults(12); // 每页大小
+        query.setFirstResult((page - 1) * 6);
+        query.setMaxResults(6);
         return query.list();
     }
 
@@ -50,8 +50,8 @@ public class DishesDaoImpl extends BaseDaoImpl<Dishes> implements DishesDao {
                      "where cs.csid = :csid";
         Query<Dishes> query = this.getCurrentSession().createQuery(hql, Dishes.class);
         query.setParameter("csid", csid);
-        query.setFirstResult((page - 1) * 12); // 分页起始位置
-        query.setMaxResults(12); // 每页大小
+        query.setFirstResult((page - 1) * 6);
+        query.setMaxResults(6);
         return query.list();
     }
 
@@ -66,8 +66,8 @@ public class DishesDaoImpl extends BaseDaoImpl<Dishes> implements DishesDao {
     }
 
     @Override
-    public Dishes findOne(Integer pid) {
-        return this.getCurrentSession().get(Dishes.class, pid);
+    public Dishes findOne(Integer id) {
+        return this.getCurrentSession().get(Dishes.class, id);
     }
     
     @Autowired
@@ -76,26 +76,25 @@ public class DishesDaoImpl extends BaseDaoImpl<Dishes> implements DishesDao {
     protected Session getCurrentSession() {
         return sessionFactory.getCurrentSession();
     }
-    
- // 修改后的查询方法（核心）
+
   @Override
-    public Dishes findWithStepsAndIngredients(Integer pid) {
-        // 使用 DISTINCT 避免重复数据
+    public Dishes findWithStepsAndIngredients(Integer id) {
+
         String hql = "SELECT DISTINCT p FROM Dishes p " +
                      "LEFT JOIN FETCH p.steps " +
                      "LEFT JOIN FETCH p.ingredients " +
-                     "WHERE p.pid = :pid";
+                     "WHERE p.id = :id";
         
         return getCurrentSession()
                 .createQuery(hql, Dishes.class)
-                .setParameter("pid", pid)
+                .setParameter("id", id)
                 .uniqueResult();
     }
   
   @Override
   public List<Dishes> findDishesByCasid(Integer casid) {
 	    String hql = "SELECT d FROM Dishes d " +
-	                 "JOIN CategorySecond2Dishes cd ON d.pid = cd.pid " + // 使用正确的实体名
+	                 "JOIN CategorySecond2Dishes cd ON d.id = cd.id " + 
 	                 "WHERE cd.casid = :casid";
 	    return getCurrentSession()
 	        .createQuery(hql, Dishes.class)
@@ -108,8 +107,8 @@ public class DishesDaoImpl extends BaseDaoImpl<Dishes> implements DishesDao {
       return getCurrentSession()
           .createQuery(hql, Dishes.class)
           .setParameterList("csids", csids)
-          .setFirstResult((page-1)*12)
-          .setMaxResults(12)
+          .setFirstResult((page-1)*6)
+          .setMaxResults(6)
           .list();
   }
 
@@ -125,17 +124,17 @@ public class DishesDaoImpl extends BaseDaoImpl<Dishes> implements DishesDao {
 
     @Override
     public List<Dishes> findHot() {
-        String hql = "from Dishes where is_hot = 1 order by pdate desc";
+        String hql = "from Dishes where is_hot = 1 order by date desc";
         Query<Dishes> query = this.getCurrentSession().createQuery(hql, Dishes.class);
-        query.setMaxResults(6); // 查询最热的6条商品
+        query.setMaxResults(6); 
         return query.list();
     }
 
     @Override
     public List<Dishes> findNew() {
-        String hql = "from Dishes order by pdate desc";
+        String hql = "from Dishes order by date desc";
         Query<Dishes> query = this.getCurrentSession().createQuery(hql, Dishes.class);
-        query.setMaxResults(10); // 查询最新的10条商品
+        query.setMaxResults(10);
         return query.list();
     }
 
@@ -143,8 +142,8 @@ public class DishesDaoImpl extends BaseDaoImpl<Dishes> implements DishesDao {
     public List<Dishes> findAll(Integer page) {
         String hql = "from Dishes";
         Query<Dishes> query = this.getCurrentSession().createQuery(hql, Dishes.class);
-        query.setFirstResult((page - 1) * 12); // 分页起始位置
-        query.setMaxResults(12); // 每页大小
+        query.setFirstResult((page - 1) * 6);
+        query.setMaxResults(6);
         return query.list();
     }
     

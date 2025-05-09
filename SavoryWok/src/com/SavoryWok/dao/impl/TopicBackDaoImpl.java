@@ -16,8 +16,7 @@ import com.SavoryWok.entity.Topic;
 public class TopicBackDaoImpl {
 	@Resource
 	private SessionFactory sessionFactory;
-	//--------------------------------后台
-	//查
+
 	public List<Topic> findByPage(int pageNum, int pageSize){
 		try{
 			int a;
@@ -31,7 +30,7 @@ public class TopicBackDaoImpl {
 			return null;
 		}
 	}
-	//统计数据个数 
+
 	public int findCountByPage(){
 		try{
 			Query query=this.sessionFactory.getCurrentSession().createQuery("select count("+"*"+") from "+Topic.class.getSimpleName());
@@ -43,12 +42,7 @@ public class TopicBackDaoImpl {
 	}
 	
 	
-	
-	
-	
-	
-	
-	//后台----后台----后台----后台----后台----后台-----------------
+
 		public Topic findByIdBack(Integer tid){	
 			Topic  topic = (Topic)this.sessionFactory.getCurrentSession().
 					createQuery("from Topic where tid = ?").
@@ -57,7 +51,7 @@ public class TopicBackDaoImpl {
 		}
 		public void deleteByIdBack(Topic topic,Integer tid){
 			Session session=sessionFactory.openSession();
-			System.out.print("dao快删啊");
+
 			Transaction tran = session.beginTransaction() ;     
 		        String hql = "Delete FROM Topic Where tid=?" ;     
 		        Query q = session.createQuery(hql) ;     

@@ -49,20 +49,7 @@
 
 <body> 
 
-<div id="StatusBar">
-	<!-- 链接 -->
-    <div id="StatusBar_Links">
-		<a href="http://gz.itcast.cn" target="_blank">广州传智博客</a>，最专业的Java培训！
-    </div>
-	<!-- 右侧功能按钮 -->
-    <div id="StatusBar_Right">
-		<!-- 版本 -->
-		<a href="javascript:void(0)">
-			<img border="0" width="11" height="11" src="style/images/info.gif" /> 
-			<img border="0" width="40" height="11" src="style/images/version.gif" />
-		</a>
-    </div>
-</div>
+
 
 </body>
 </html>

@@ -6,33 +6,33 @@ import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 
 import com.SavoryWok.dao.CategoryDao2;
-import com.SavoryWok.entity.Category;
-import com.SavoryWok.entity.Category2;
+import com.SavoryWok.entity.Dish_Category;
+import com.SavoryWok.entity.Themes;
 
 @Repository("categoryDao2")
 @SuppressWarnings("all")
-public class CategoryDaoImpl2 extends BaseDaoImpl<Category2> implements CategoryDao2{
+public class CategoryDaoImpl2 extends BaseDaoImpl<Themes> implements CategoryDao2{
      
 
 	public Integer countCategory2() {
-		String hql = "select count(*) from Category2";
+		String hql = "select count(*) from Themes";
 		return count(hql);
 	}
 
-	public List<Category2> findAll2() {
-		String hql = "from Category2";
+	public List<Themes> findAll2() {
+		String hql = "from Themes";
 		return find(hql);
 	}
-	public Category2 findTwo(Integer caid) {
-		String hql = "from Category2 c where c.caid = ?";
+	public Themes findTwo(Integer caid) {
+		String hql = "from Themes c where c.caid = ?";
 		Query query = this.getCurrentSession().createQuery(hql);
 		query.setParameter(0, caid);
-		return (Category2)query.uniqueResult(); 
+		return (Themes)query.uniqueResult(); 
 	}
 
 
-	public List<Category2> findAll2 (Integer page) {
-		String hql = "from Category2";
+	public List<Themes> findAll2 (Integer page) {
+		String hql = "from Themes";
 		int rows = 10;
 		int page1 = page;
 		return find(hql, page1, rows);
@@ -41,10 +41,10 @@ public class CategoryDaoImpl2 extends BaseDaoImpl<Category2> implements Category
 	
 	
 	 @Override
-	    public Category2 getCategory2ById(Integer caid) {
-	        String hql = "FROM Category2 WHERE caid = :caid";
+	    public Themes getCategory2ById(Integer caid) {
+	        String hql = "FROM Themes WHERE caid = :caid";
 	        return getCurrentSession()
-	            .createQuery(hql, Category2.class)
+	            .createQuery(hql, Themes.class)
 	            .setParameter("caid", caid)
 	            .uniqueResult();
 	    }

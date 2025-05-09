@@ -1,6 +1,6 @@
 eclipse.preferences.version=1
+encoding//WebContent/Explore.jsp=UTF-8
+encoding//WebContent/Healthy.jsp=UTF-8
+encoding//WebContent/RecipeDetails.jsp=UTF-8
 encoding//WebContent/adm/detail/updateUser.jsp=UTF-8
-encoding//WebContent/caipinxiangqing.jsp=UTF-8
-encoding//WebContent/health.jsp=UTF-8
-encoding//WebContent/location.jsp=UTF-8
 encoding//src/com/SavoryWok/controller/UserController.java=UTF-8

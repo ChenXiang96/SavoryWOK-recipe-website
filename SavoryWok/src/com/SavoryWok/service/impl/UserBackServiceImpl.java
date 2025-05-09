@@ -33,34 +33,17 @@ public class UserBackServiceImpl {
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	//后--先按id查出来
+
 	public User findUser(Integer uid){
 		return this.userBackDaoImpl.findByIdBack(uid);
 	}
-	//后台-删除用户
+
 	public void deleteUser(User user, Integer uid) {
-		System.out.print("ser快删啊");
+		
 		this.userBackDaoImpl.deleteByIdBack(user,uid);
 	}
 	
-	
-	//后台--------------------------------------
-	//后--分页查询数据
+
 	public List<User> findByPage(int num, int i) {
 		return userBackDaoImpl.findByPage(num, i);
 	}

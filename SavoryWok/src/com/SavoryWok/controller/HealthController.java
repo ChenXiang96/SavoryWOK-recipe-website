@@ -1,6 +1,7 @@
 package com.SavoryWok.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -8,6 +9,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -26,123 +28,97 @@ public class HealthController {
 	
 	@Resource
 	private HealthServiceImpl healthServiceImpl;
-	
-	
-	
-	
-	
-	//前------------------------------------------------------
+
 	@RequestMapping("/howdo")
 
-	public String findHowdo(@RequestParam(value="pid", required = false) Integer pid,Model model, @RequestParam(value="uid", required = false) Integer uid
+	public String findHowdo(@RequestParam(value="id", required = false) Integer id,Model model, @RequestParam(value="uid", required = false) Integer uid
 			){
-		Dishes Dishes=this.healthServiceImpl.findHowdoP(pid);
-//		User user=this.healthServiceImpl.findHowdoU(uid);
-//		Material material=this.healthServiceImpl.findHowdoM(mid);
-//		Howdo howdo=this.healthServiceImpl.findHowdoH(hid);
+		Dishes Dishes=this.healthServiceImpl.findHowdoP(id);
+
 		model.addAttribute("Dishes", Dishes);
-//		model.addAttribute("user", user);
-//		model.addAttribute("material", material);
-//		model.addAttribute("howdo", howdo);
+
 		return "foodlist";
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	//前-查-在商品页面显示商品列表
-	@RequestMapping("/list")
-	public String list(HttpSession session){
-			List<Dishes> list=this.healthServiceImpl.listDishes();
-			session.setAttribute("list", list);
-			session.setAttribute("activeMenu", "recipe");
-			return "cookbook";
+
+	@RequestMapping("/list/{page}")
+	public String listByPage(
+	    @PathVariable("page") Integer page,
+	    HttpSession session,
+	    Map<String,Object> map
+	){
+	    int pageSize = 24;
+	    Integer totalCount = this.healthServiceImpl.countAllDishes();
+	    Integer totalPages = totalCount == 0 ? 1 : (int) Math.ceil((double)totalCount / pageSize);
+	    page = Math.max(1, Math.min(page, totalPages));
+	    List<Dishes> list = this.healthServiceImpl.listDishesByPage(page, pageSize);
+	    map.put("dishesList", list);
+	    map.put("currentPage", page);
+	    map.put("totalPages", totalPages);
+
+	    session.setAttribute("activeMenu", "recipe");
+	    return "RecipeList";
 	}
-	
+
+
 	@RequestMapping("/list1")
 	public String list1(HttpSession session){
 			List<Dishes> list=this.healthServiceImpl.listDishes();
 			session.setAttribute("list", list);
 			return "index";
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	//后台-----------------------------------------------------
-	//后-修改商品-修改商品------------
-	//后-修改商品-先找到要改的商品
+
+
 	@RequestMapping("/edit")
-	public String edit(@RequestParam(value="pid", required = false) Integer pid,Model model){
-		Dishes Dishes=this.healthServiceImpl.findDishes(pid);
-		model.addAttribute("Dishes", Dishes);
-		System.out.println("xiao"+Dishes.getPname());
-		System.out.println("xiaomi"+Dishes.getPdesc());
-		return "/adm/detail/updateHealth";
+	public String edit(@RequestParam(value="id", required = false) Integer id,Model model){
+		Dishes dishes=this.healthServiceImpl.findDishes(id);
+		if (dishes == null) {
+			return "redirect:/error/notFound"; 
+		}
+		model.addAttribute("dishes", dishes);
+		System.out.println("xiao"+dishes.getName());
+		System.out.println("xiaomi"+dishes.getPdesc());
+		return "adm/detail/updateHealth";
 	}
-	//后-修改商品-调用那个提交修改商品
+
 	@RequestMapping(value="update", method=RequestMethod.POST)
-	public String updateBack(@RequestParam(value="pid", required = false) Integer pid,Dishes Dishes,
-			@RequestParam("pname") String pname,
+	public String updateBack(@RequestParam(value="id", required = false) Integer id,Dishes Dishes,
+			@RequestParam("name") String name,
 			@RequestParam("pdesc") String pdesc) {
-		Dishes=this.healthServiceImpl.findDishes(pid);
-		Dishes.setPname(pname);
+		Dishes=this.healthServiceImpl.findDishes(id);
+		Dishes.setName(name);
 		Dishes.setPdesc(pdesc);
 		this.healthServiceImpl.updateDishes(Dishes);
-		System.out.print("aaaaa"+Dishes.getPname());
-		return "redirect:get";//重新跳转到健康列表页面
+		return "redirect:get";
 	}
-	//后-删除健康
+
 	@RequestMapping("/delete")
-	public String deletelist(HttpSession session,@RequestParam(value="pid", required = false) Integer pid){
-		Dishes Dishes=this.healthServiceImpl.findDishes(pid);
-		System.out.print("con快删啊");
-		this.healthServiceImpl.deleteDishes(Dishes,pid);
+	public String deletelist(HttpSession session,@RequestParam(value="id", required = false) Integer id){
+		Dishes Dishes=this.healthServiceImpl.findDishes(id);
+		this.healthServiceImpl.deleteDishes(Dishes,id);
 		return "forward:/health/get";
 	}
 	
-	
-	
-	
-	//后-添加-添加商品
+
 	@RequestMapping(value="/add", method=RequestMethod.GET)
 	public String toAdd(Model model){
 		System.out.println("contype");  
 		return "/adm/detail/saveHealth";
 	}
-	//后-添加-添加商品---上传图片
+
 	@RequestMapping(value="add", method=RequestMethod.POST)
 	public String addBack(Dishes Dishes,
-			@RequestParam("pname") String pname,
+			@RequestParam("name") String name,
 			@RequestParam("pdesc") String pdesc
 		) {
 		Dishes=this.healthServiceImpl.addDishesBack(Dishes);		
 		return "redirect:get";
 	}
 
-		
-	
-	
-	
-	
-	
-	//后-查-商品列表
+
 	@RequestMapping("/get")
 	public String listgoods(Dishes Dishes,HttpSession session,HttpServletRequest request){
-		String num = request.getParameter("pageNum");//获取用户要看的页码
+		String num = request.getParameter("pageNum");
 		int pageNumber = 1;
 		if(num!=null){
 			pageNumber = Integer.parseInt(num);

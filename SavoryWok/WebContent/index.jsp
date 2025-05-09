@@ -15,7 +15,7 @@
 <!-- Basic Page Needs
   ================================================== -->
 <meta charset="utf-8">
-<title>ChinaZ</title>
+<title>Savory Wok</title>
 <meta name="description" content="">
 <meta name="author" content="">
 
@@ -37,11 +37,18 @@
 
 
 
-<link href="https://fonts.googleapis.com/css2?family=Satisfy:wght@400;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Satisfy:wght@400;700&display=swap"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+	rel="stylesheet">
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
 
 <!-- Custom Fonts -->
 <link
@@ -77,8 +84,6 @@
 .bp-hs img {
 	max-width: 100%;
 	margin-top: 30px;
-	/* margin-left: 100px; */
-	/* margin: 0 auto; */
 	margin-left: 154px;
 	width: 1200px;
 	position: center;
@@ -103,7 +108,6 @@
 
 .ui_title_wrap h1, .ui_title_wrap h2, .ui_title_wrap h3 {
 	float: left;
-	/* font-weight: 400; */
 	display: inline-block;
 	font-size: 20px;
 	margin-right: 40px;
@@ -146,17 +150,17 @@ a.right2 {
 }
 
 .unified-image {
-	width: 340px !important; /* 继承父容器宽度 */
-	height: 340px !important; /* 固定高度 */
+	width: 340px !important;
+	height: 340px !important;
 	object-fit: cover !important;
 	display: block !important;
 }
 
 .wrap-content {
-	padding: 0 12px !important; /* 与row的margin-right对齐 */
+	padding: 0 12px !important;
 	border-right: none !important;
-	margin-top:80px;
-	margin-bottom:80px;
+	margin-top: 80px;
+	margin-bottom: 80px;
 }
 
 .flex-row {
@@ -164,11 +168,11 @@ a.right2 {
 	flex-wrap: wrap !important;
 	gap: 12px;
 	justify-content: center !important;
-	width: 100%; /* 关键补充 */
+	width: 100%;
 }
 
 .col-1-4 {
-	float: none !important; /* 关键！清除原有浮动 */
+	float: none !important;
 	flex: 0 0 calc(25% - 9px) !important;
 	box-sizing: border-box !important;
 }
@@ -177,7 +181,7 @@ a.right2 {
 	clear: both !important;
 	margin-bottom: 30px !important;
 	min-height: 100px;
-	overflow: visible !important; /* 确保内容可视 */
+	overflow: visible !important;
 }
 
 .wrap-content {
@@ -185,10 +189,10 @@ a.right2 {
 	z-index: 1;
 }
 
-/* 强制h3保持行内块特性 */
+
 .ui_title_wrap h3 {
 	display: inline-block !important;
-	margin: 0 15px !important; /* 调整间距 */
+	margin: 0 15px !important;
 	vertical-align: middle;
 }
 
@@ -196,21 +200,21 @@ a.right2 {
 	display: flex !important;
 	flex-wrap: nowrap !important;
 	justify-content: center !important;
-	gap: 45px !important; /* 图片间距 */
-	overflow-x: auto; /* 允许横向滚动 */
+	gap: 45px !important;
+	overflow-x: auto;
 }
 
 .ui_title_wrap h3 {
-	margin: 0 !important; /* 清除默认边距 */
-	flex-shrink: 0; /* 禁止缩小 */
+	margin: 0 !important;
+	flex-shrink: 0;
 }
 
 .category-image {
-	width: 90px !important; /* 统一宽度 */
-	height: 90px !important; /* 统一高度 */
-	object-fit: contain !important; /* 关键：裁剪适配 */
-	display: block !important; /* 消除行内元素间隙 */
-	border-radius: 8px; /* 可选圆角 */
+	width: 90px !important;
+	height: 90px !important;
+	object-fit: contain !important;
+	display: block !important;
+	border-radius: 8px;
 	background: none !important;
 	border: none !important;
 	box-shadow: none !important;
@@ -228,7 +232,8 @@ header {
 	height: 90px;
 }
 
-.r2 {<!--为您推荐样式-- > position:absolute;
+.r2 {
+	position: absolute;
 	top: 50px;
 	position: relative;
 	display: inline-block;
@@ -313,78 +318,79 @@ a.right3 {
 a.right {
 	margin-left: 170px;
 }
+
 .zoom-container {
-    position: relative !important;  /* 关键定位基准 */
+	position: relative !important;
 }
+
 .zoom-caption {
-    display: flex !important;       /* 关键属性 */
-    align-items: center !important; /* 垂直居中 */
-    height: 100% !important;        /* 继承父级高度 */
-    width: 100% !important;         /* 继承容器宽度 */
-    left: 0 !important;
-    background: rgba(0, 0, 0, 0.4) !important;
+	display: flex !important;
+	align-items: center !important;
+	height: 100% !important;
+	width: 100% !important;
+	left: 0 !important;
+	background: rgba(0, 0, 0, 0.4) !important;
 }
 
-.zoom-caption span { /* 修改内层span */
-	height: 110px !important; /* 固定高度 */
-	display: flex !important; /* 启用弹性容器 */
-	align-items: center; /* 垂直居中 */
-	justify-content: center; /* 水平居中 */
-	flex-direction: column; /* 允许多行居中 */
-	padding: 8px !important; /* 内边距保护 */
-	top: 0px !important; /* 移除原定位偏移 */
-	line-height: 1.3 !important; /* 优化行间距 */
-	white-space: normal !important; /* 允许换行 */
-	overflow: hidden; /* 隐藏溢出内容 */
-	position: static !important;    /* 移除绝对定位 */
-    transform: none !important;     /* 清除旧定位 */
-    margin-top: -5px !important;
-    width: 100% !important;         /* 强制撑满宽度 */
-    box-sizing: border-box !important;
+.zoom-caption span {
+	height: 110px !important;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 8px !important;
+	top: 0px !important;
+	line-height: 1.3 !important;
+	white-space: normal !important;
+	overflow: hidden;
+	position: static !important;
+	transform: none !important;
+	margin-top: -5px !important;
+	width: 100% !important;
+	box-sizing: border-box !important;
 }
+
 .scrollup {
-    position: fixed;
-    width: 82px;
-    height: 82px;
-    bottom: 0px;
-    right: 20px;
-    z-index: 102410;
-    /* background: #CF6A14; */
-    background: url(//static.meishichina.com/v6/img/wap_a/gotop.png) no-repeat scroll center center/58px 58px;
+	position: fixed;
+	width: 82px;
+	height: 82px;
+	bottom: 0px;
+	right: 20px;
+	z-index: 102410;
+	background:
+		url("${pageContext.request.contextPath}/images/back-to-top.png")
+		no-repeat scroll center center/58px 58px;
 }
 
-.box-item h2{
-
-  font-family: "Protest Riot", sans-serif;
+.box-item h2 {
+	font-family: "Protest Riot", sans-serif;
 }
+
 .header h2 {
-  font-family: 'Satisfy';
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #D35400;
-  
+	font-family: 'Satisfy';
+	font-weight: 700;
+	letter-spacing: 1px;
+	color: #D35400;
 }
 
 .header span {
-  font-family: 'Montserrat';
-  font-weight: 300;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: #E67E22;
-  font-size: 2.5rem;
-  
+	font-family: 'Montserrat';
+	font-weight: 300;
+	font-weight: bold;
+	letter-spacing: 1px;
+	color: #E67E22;
+	font-size: 2.5rem;
 }
 
 .box-item img {
-    width: 100%;          /* 宽度占满容器 */
-    max-width: 440px;     /* 最大显示宽度 */
-    height: 300px;        /* 固定高度 */
-    object-fit: cover;    /* 关键属性：保持比例填充容器 */
-    object-position: center; /* 聚焦图片中央区域 */
-    display: block;       /* 消除底部间隙 */
-    margin: 0 auto 15px; /* 垂直间距控制 */
+	width: 100%;
+	max-width: 440px;
+	height: 300px;
+	object-fit: cover;
+	object-position: center;
+	display: block;
+	margin: 0 auto 15px;
 }
-
 </style>
 
 </head>
@@ -397,17 +403,8 @@ a.right {
 	<script src="${pageContext.request.contextPath}/js/bpHS.min.js"></script>
 	<script src="${pageContext.request.contextPath}/js/custom.js"></script>
 
-
-
-
-
-
-	<%@ include file="menu.jsp"%>
-	<!-- 18/4/4 -->
-
-
-
-	<!--////////////////////////////////////Container-->
+	<%@ include file="IndexMenu.jsp"%>
+	<!--Container-->
 	<section id="container" class="index-page">
 		<div class="wrap-container zerogrid">
 			<!-----------------content-box-1-------------------->
@@ -433,7 +430,7 @@ a.right {
 									<div class="ui_title_wrap">
 										<c:forEach items="${sessionScope.cList}" var="c">
 											<h3>
-												<a title="健康首页"
+												<a title="Dish_Categories"
 													href="${ pageContext.request.contextPath }/findByCid/<c:out value="${c.cid}"/>/1"
 													class="right3" target="_blank"> <img
 													src="${pageContext.request.contextPath}/${c.cimage}"
@@ -455,9 +452,9 @@ a.right {
 
 											<div class="zoom-container"
 												style="display: inline; float: left;">
-												<a href="${pageContext.request.contextPath}/findByPid/8">
+												<a href="${pageContext.request.contextPath}/getDishById/8">
 													<span class="zoom-caption"> <span
-														style="height: 110px !important; display: flex !important; align-items: center; justify-content: center; line-height: 1.3; padding: 8px; white-space: normal  ">
+														style="height: 110px !important; display: flex !important; align-items: center; justify-content: center; line-height: 1.3; padding: 8px; white-space: normal">
 															Hot and Spicy Diced Chicken </span>
 												</span> <img src="Dishes images/Main Dishes/8.jpg"
 													class="unified-image" />
@@ -469,7 +466,7 @@ a.right {
 
 											<div class="zoom-container"
 												style="display: inline; float: left;">
-												<a href="${pageContext.request.contextPath}/findByPid/9">
+												<a href="${pageContext.request.contextPath}/getDishById/9">
 													<span class="zoom-caption"> <span
 														style="height: 110px !important; display: flex !important; align-items: center; justify-content: center; line-height: 1.3; padding: 8px; white-space: normal">Braised
 															Duck with Lotus Root</span>
@@ -483,7 +480,7 @@ a.right {
 
 											<div class="zoom-container"
 												style="display: inline; float: left;">
-												<a href="${pageContext.request.contextPath}/findByPid/36">
+												<a href="${pageContext.request.contextPath}/getDishById/36">
 													<span class="zoom-caption"> <span
 														style="height: 110px !important; display: flex !important; align-items: center; justify-content: center; line-height: 1.3; padding: 8px; white-space: normal">Braised
 															Beef Noodles</span>
@@ -498,22 +495,23 @@ a.right {
 
 											<div class="zoom-container"
 												style="display: inline; float: left;">
-												<a href="${pageContext.request.contextPath}/findByPid/23">
+												<a href="${pageContext.request.contextPath}/getDishById/23">
 													<span class="zoom-caption"> <span
-														style="height: 110px !important; display: flex !important; align-items: center; justify-content: center; line-height: 1.3; padding: 8px; white-space: normal">Steamed Crab</span>
+														style="height: 110px !important; display: flex !important; align-items: center; justify-content: center; line-height: 1.3; padding: 8px; white-space: normal">Steamed
+															Crab</span>
 												</span> </span> <img src="Dishes images/Main Dishes/23.jpg"
 													class="unified-image" />
 												</a>
 											</div>
 										</div>
-										
-										
+
+
 
 										<div class="col-1-4">
 
 											<div class="zoom-container"
 												style="display: inline; float: left;">
-												<a href="${pageContext.request.contextPath}/findByPid/22">
+												<a href="${pageContext.request.contextPath}/getDishById/22">
 													<span class="zoom-caption"> <span
 														style="height: 110px !important; display: flex !important; align-items: center; justify-content: center; line-height: 1.3; padding: 8px; white-space: normal">Tofu
 															& Perch Hotpot</span>
@@ -527,7 +525,7 @@ a.right {
 
 											<div class="zoom-container"
 												style="display: inline; float: left;">
-												<a href="${pageContext.request.contextPath}/findByPid/96">
+												<a href="${pageContext.request.contextPath}/getDishById/96">
 													<span class="zoom-caption"> <span
 														style="height: 110px !important; display: flex !important; align-items: center; justify-content: center; line-height: 1.3; padding: 8px; white-space: normal">Braised
 															Minced Pork with Green Peppers</span>
@@ -541,7 +539,7 @@ a.right {
 
 											<div class="zoom-container"
 												style="display: inline; float: left;">
-												<a href="${pageContext.request.contextPath}/findByPid/87">
+												<a href="${pageContext.request.contextPath}/getDishById/87">
 													<span class="zoom-caption"> <span
 														style="height: 110px !important; display: flex !important; align-items: center; justify-content: center; line-height: 1.3; padding: 8px; white-space: normal">Grilled
 															Lamb Skewers</span>
@@ -555,7 +553,7 @@ a.right {
 
 											<div class="zoom-container"
 												style="display: inline; float: left;">
-												<a href="${pageContext.request.contextPath}/findByPid/29">
+												<a href="${pageContext.request.contextPath}/getDishById/29">
 													<span class="zoom-caption"> <span
 														style="height: 110px !important; display: flex !important; align-items: center; justify-content: center; line-height: 1.3; padding: 8px; white-space: normal">Chilled
 															Silken Tofu Salad</span>
@@ -575,7 +573,8 @@ a.right {
 						</div>
 						<!--Start Box-->
 						<div class="header">
-							<h2 class="font-effect-shadow-multiple">"Fuel your day with flavors you love"</h2>
+							<h2 class="font-effect-shadow-multiple">"Fuel your day with
+								flavors you love"</h2>
 							<hr class="line">
 							<span>Curated Recipe Collections</span>
 						</div>
@@ -587,15 +586,15 @@ a.right {
 								<div class="col-1-3">
 									<div class="wrap-col">
 										<div class="box-item">
-											
-											<span class="ribbon" style="display:inline-block !important; min-width:220px"> 
-											   <a title="健康首页"
+
+											<span class="ribbon"
+												style="display: inline-block !important; min-width: 220px">
+												<a title="Curated_Collections"
 												href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1"
-												style="color: #FFFFFF" target="_blank"> 
-												 <c:out value="${c.caname}"></c:out>
-											   </a> 
-											   <b></b>
-										    </span>
+												style="color: #FFFFFF" target="_blank"> <c:out
+														value="${c.caname}"></c:out>
+											</a> <b></b>
+											</span>
 
 
 											<c:forEach items="${nList2}" var="s" begin="0" end="0">
@@ -620,7 +619,9 @@ a.right {
 
 												</c:forEach>
 											</p>
-											<a href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1" class="button button-1">More</a>
+											<a
+												href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1"
+												class="button button-1">More</a>
 
 
 										</div>
@@ -635,19 +636,16 @@ a.right {
 								<div class="col-1-3">
 									<div class="wrap-col">
 										<div class="box-item">
-										
 
-											<span class="ribbon" style="display:inline-block !important; min-width:220px"> <a title="健康首页"
+
+											<span class="ribbon"
+												style="display: inline-block !important; min-width: 220px">
+												<a title="Curated_Collections"
 												href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1"
 												style="color: #FFFFFF" target="_blank"> <c:out
 														value="${c.caname}"></c:out>
-											</a> <b></b></span>
-											<!--<c:forEach var="s" items="${subject}" begin="8" end="9">
-									<a href="${ pageContext.request.contextPath }/findBySid/<c:out value="${p.pid}"/>">
-						             <img src="${pageContext.request.contextPath}/<c:out value="${p.image}"/>" >
-						            </a>
-									</c:forEach>
-									-->
+											</a> <b></b>
+											</span>
 
 											<c:forEach items="${nList2}" var="s" begin="1" end="1">
 												<a
@@ -671,7 +669,9 @@ a.right {
 
 												</c:forEach>
 											</p>
-											<a href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1" class="button button-1">More</a>
+											<a
+												href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1"
+												class="button button-1">More</a>
 
 
 										</div>
@@ -684,13 +684,15 @@ a.right {
 								<div class="col-1-3">
 									<div class="wrap-col">
 										<div class="box-item">
-											
 
-											<span class="ribbon" style="display:inline-block !important; min-width:220px"> 
-											    <a title="健康首页"  href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1" 
-											       style="color: #FFFFFF; target="_blank"> 
-											       <c:out value="${c.caname}"></c:out>
-											    </a><b></b>
+
+											<span class="ribbon"
+												style="display: inline-block !important; min-width: 220px">
+												<a title="Curated_Collections"
+												href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1"
+												style="color: #FFFFFF;"_blank"> <c:out
+														value="${c.caname}"></c:out>
+											</a><b></b>
 											</span>
 
 											<c:forEach items="${nList2}" var="s" begin="2" end="2">
@@ -712,7 +714,9 @@ a.right {
 
 												</c:forEach>
 											</p>
-											<a href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1" class="button button-1">More</a>
+											<a
+												href="${ pageContext.request.contextPath }/findByCaid/<c:out value="${c.caid}"/>/1"
+												class="button button-1">More</a>
 
 
 										</div>
@@ -722,20 +726,20 @@ a.right {
 
 						</div>
 
-						
+
 					</div>
 				</div>
 			</section>
 		</div>
 	</section>
 
-	<!--////////////////////////////////////Footer-->
+	<!--Footer-->
 
 
-	<%@ include file="footer3.jsp"%>
-	 <div class="fixed-footer">
-  <a href="#" class="scrollup"></a>
-  </div>
+	<%@ include file="MainFooter.jsp"%>
+	<div class="fixed-footer">
+		<a href="#" class="scrollup"></a>
+	</div>
 	<!-- js -->
 	<script src="${pageContext.request.contextPath}/js/classie.js"></script>
 	<script src="${pageContext.request.contextPath}/js/demo.js"></script>
@@ -746,7 +750,7 @@ a.right {
 		src="${pageContext.request.contextPath}/js/responsiveslides.min.js"></script>
 	<script>
 	$(function () {
-	  // Slideshow 4
+	
 	  $("#slider4").responsiveSlides({
 		auto: true,
 		pager: false,
@@ -762,7 +766,7 @@ a.right {
 	  });
 	});
 	</script>
-	</div>
+	
 </body>
 
 </html>

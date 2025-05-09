@@ -25,19 +25,7 @@ public class SubjectServiceImpl implements SubjectService {
 		return this.subjectDao.findById(pid);
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	public Integer CountPageSubjectFromCategory2(Integer caid) {
 		Integer count = subjectDao.CountPageSubjectFromCategory2(caid);

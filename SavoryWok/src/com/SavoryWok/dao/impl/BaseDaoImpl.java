@@ -39,7 +39,7 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 	
 	private Class<T> getClz() {
 		if(clz==null) {
-			//获取泛型的Class对象
+			
 			clz = ((Class<T>)
 					(((ParameterizedType)(this.getClass().getGenericSuperclass())).getActualTypeArguments()[0]));
 		}

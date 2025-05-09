@@ -26,34 +26,22 @@ public class ZhenXuanDaoImpl {
 		return zhenxuan;
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	public List<Zhenxuan> findAll(){	
-		//获得session  
+		
 		Session session = sessionFactory.openSession();  
-		//打开事务  
+		
 		Transaction ts = session.beginTransaction();
-		//原生的Sql查询  
+		
 		SQLQuery query = session.createSQLQuery("select * from zhenxuan");  
-		// addEntity 将查询结果封装到指定对象中  
+		
 		query.addEntity(Zhenxuan.class);  	          
 		List<Zhenxuan> list = query.list();
 		System.out.println(list);            
-		//提交事务  
+
 		ts.commit();        
-		//关闭资源  
+
 		session.close(); 
 		System.out.print("dao");
 		return list;

@@ -34,7 +34,7 @@ public class SpecialDaoImpl extends BaseDaoImpl<Special> implements SpecialDao{
 	
 	@Override
     public Optional<Special> findById(Integer sid) {
-        // Hibernate实现示例
+
         Special special = getCurrentSession().get(Special.class, sid);
         return Optional.ofNullable(special);
     }

@@ -25,8 +25,7 @@ public class FoodController {
 		
 		return "cai.jsp";
 	}
-	
-	//前-查-在商品页面显示商品列表
+
 	@RequestMapping("/list")
 	public String list(HttpSession session){
 		List<Food> list=this.foodServiceImpl.listFoods();

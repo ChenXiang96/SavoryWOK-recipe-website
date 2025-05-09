@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.SavoryWok.dao.CategoryDao;
-import com.SavoryWok.entity.Category;
+import com.SavoryWok.entity.Dish_Category;
 import com.SavoryWok.service.CategoryService;
 
 @Transactional
@@ -18,7 +18,7 @@ public class CategoryServiceImpl implements CategoryService{
 	@Resource
 	private CategoryDao categoryDao;
 	
-	public List<Category> getCategory() {
+	public List<Dish_Category> getCategory() {
 		return categoryDao.findAll();
 	}
 

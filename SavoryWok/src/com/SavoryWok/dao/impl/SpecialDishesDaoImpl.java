@@ -16,17 +16,16 @@ public class SpecialDishesDaoImpl implements SpecialDishesDao {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    // 菜品字段映射处理器（复用）
     private static final RowMapper<Dishes> DISH_ROW_MAPPER = (rs, rowNum) -> {
         Dishes dish = new Dishes();
-        dish.setPid(rs.getInt("pid"));
+        dish.setId(rs.getInt("id"));
         dish.setIs_hot(rs.getInt("is_hot"));
-        dish.setPname(rs.getString("pname"));
+        dish.setName(rs.getString("name"));
         dish.setImage(rs.getString("image"));
         dish.setPdesc(rs.getString("pdesc"));
-        dish.setPdate(rs.getDate("pdate"));
-        dish.setPcontent(rs.getString("pcontent"));
-        dish.setSid(rs.getInt("sid")); // 接收联表查询的专题ID
+        dish.setDate(rs.getDate("date"));
+        dish.setContent(rs.getString("content"));
+        dish.setSid(rs.getInt("sid"));
         return dish;
     };
 
@@ -35,7 +34,7 @@ public class SpecialDishesDaoImpl implements SpecialDishesDao {
         String sql = 
             "SELECT d.*, sd.sid " +
             "FROM dishes d " +
-            "INNER JOIN special_dishes sd ON d.pid = sd.pid " +
+            "INNER JOIN special_dishes sd ON d.id = sd.did " +
             "WHERE sd.sid = ?";
         
         return jdbcTemplate.query(sql, new Object[]{sid}, DISH_ROW_MAPPER);

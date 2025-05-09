@@ -4,7 +4,7 @@ import java.util.List;
 
 
 public class Page<T> {
-	private List<T> list;//放真正数据
+	private List<T> list;
 	private int currentPageNum;
 	private int pageSize;
 	private int prePageNum;
@@ -52,7 +52,7 @@ public class Page<T> {
 	public int getTotalCount() {
 		return totalCount;
 	}
-	public void setTotalCount(int totalCount) {//当前页、下一页、前一页、总页数取出来了
+	public void setTotalCount(int totalCount) {
 		this.totalCount = totalCount;
 		if(totalCount%pageSize==0)
 			totalPageNum=totalCount/pageSize;

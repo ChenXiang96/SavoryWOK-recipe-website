@@ -24,17 +24,13 @@ public class TopicServiceImpl {
 	
 	@Resource
 	private UserDaoImpl userdaoimpl;
-	
-	//-------------------------------后
-	//查
+
 	public List<Topic> findByPage(int num, int i) {
 		return topicdaoimpl.findByPage(num, i);
 	}
 	public int findByCount() {
 		return topicdaoimpl.findCountByPage();
 	}
-	
-
 
 	public User addTopic(Topic t){
 		System.out.println("service");

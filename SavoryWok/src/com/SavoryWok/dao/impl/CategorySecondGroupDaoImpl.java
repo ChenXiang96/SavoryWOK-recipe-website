@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.SavoryWok.dao.CategorySecondGroupDao;
-import com.SavoryWok.entity.CategorySecondGroup;
+import com.SavoryWok.entity.IngredientCategoryGroup;
 
 @Repository
 public class CategorySecondGroupDaoImpl implements CategorySecondGroupDao {
@@ -15,19 +15,19 @@ public class CategorySecondGroupDaoImpl implements CategorySecondGroupDao {
     private SessionFactory sessionFactory;
 
     @Override
-    public CategorySecondGroup findByCsname(String csname) {
-        // 改为精确匹配（移除LOWER转换）
+    public IngredientCategoryGroup findByCsname(String csname) {
+
         return sessionFactory.getCurrentSession()
-            .createQuery("FROM CategorySecondGroup WHERE csname = :csname", 
-                        CategorySecondGroup.class)
-            .setParameter("csname", csname) // 确保参数与数据库存储完全一致
+            .createQuery("FROM IngredientCategoryGroup WHERE csname = :csname", 
+            		IngredientCategoryGroup.class)
+            .setParameter("csname", csname) 
             .uniqueResult();
     }
     
     @Override
-    public List<CategorySecondGroup> findAll() {
+    public List<IngredientCategoryGroup> findAll() {
         return sessionFactory.getCurrentSession()
-            .createQuery("FROM CategorySecondGroup", CategorySecondGroup.class)
+            .createQuery("FROM IngredientCategoryGroup", IngredientCategoryGroup.class)
             .list();
     }
 

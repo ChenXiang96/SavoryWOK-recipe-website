@@ -36,9 +36,7 @@ public class TopicDaoImpl extends BaseDaoImpl<Topic>implements TopicDao {
 	
 	@Resource
 	private SessionFactory sessionFactory;
-	
-	//--------------------------------后台
-	//查
+
 	public List<Topic> findByPage(int pageNum, int pageSize){
 		try{
 			int a;
@@ -52,7 +50,7 @@ public class TopicDaoImpl extends BaseDaoImpl<Topic>implements TopicDao {
 			return null;
 		}
 	}
-	//统计数据个数 
+
 	public int findCountByPage(){
 		try{
 			Query query=this.sessionFactory.getCurrentSession().createQuery("select count("+"*"+") from "+Topic.class.getSimpleName());

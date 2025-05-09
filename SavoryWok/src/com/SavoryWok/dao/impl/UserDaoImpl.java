@@ -19,8 +19,6 @@ public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao{
 	@Resource
 	private SessionFactory sessionFactory;
 	
-	//前台，往用户中心跳转--------------------------------------------
-	//顺便获取用户信息
 	public User findById(Integer uid){	
 		User user = (User)this.sessionFactory.getCurrentSession().
 				createQuery("from User where uid = ?").
@@ -29,25 +27,7 @@ public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao{
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	//后台-------------------------------------------------------
-	//后-查-用户列表
-	//分页查询数据	
+
 	public List<User> findByPage(int pageNum, int pageSize){
 		try{
 			Query query=this.sessionFactory.getCurrentSession().createQuery("from "+User.class.getSimpleName());
@@ -61,7 +41,7 @@ public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao{
 			return null;
 		}
 	}
-	//统计数据个数 
+
 	public int findCountByPage(){
 		try{
 			Query query=this.sessionFactory.getCurrentSession().createQuery("select count("+"*"+") from "+User.class.getSimpleName());
@@ -71,45 +51,7 @@ public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao{
 			return 0;
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-//-------------------------------------------------------------------------
+
 	public Integer countUser() {
 		String hql = "select count(*) from User";
 		return count(hql);

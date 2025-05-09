@@ -26,21 +26,21 @@ public class FoodDaoImpl {
 		return food;
 	}
 	
-	//前-查-把数据库里的商品放在products.jsp里-商品列表
+
 		public List<Food> findAll(){	
-			//获得session  
+			 
 			Session session = sessionFactory.openSession();  
-			//打开事务  
+			
 			Transaction ts = session.beginTransaction();
-			//原生的Sql查询  
+			
 			SQLQuery query = session.createSQLQuery("select * from cs_foodinfo");  
-			// addEntity 将查询结果封装到指定对象中  
+			
 			query.addEntity(Food.class);  	          
 			List<Food> list = query.list();
 			System.out.println(list);            
-			//提交事务  
+			
 			ts.commit();        
-			//关闭资源  
+			
 			session.close(); 
 			return list;
 		}

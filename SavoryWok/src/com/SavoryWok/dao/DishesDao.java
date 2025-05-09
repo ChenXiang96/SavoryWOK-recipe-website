@@ -36,7 +36,7 @@ public interface DishesDao extends BaseDao<Dishes>{
 	
 	public List<Dishes> findByCsids(List<Integer> csids, Integer page);
 	
-	public List<Dishes> findDishesByCasid(Integer casid); // 新增
+	public List<Dishes> findDishesByCasid(Integer casid);
 	 
 	public Integer countByCsids(List<Integer> csids);
     
@@ -44,10 +44,10 @@ public interface DishesDao extends BaseDao<Dishes>{
 	public Integer CountDishes();
 
 	
-	public Dishes findOne(Integer pid);
+	public Dishes findOne(Integer id);
 	
-	//public Dishes findWithSteps(Integer pid);
-	public Dishes findWithStepsAndIngredients(Integer pid);
+
+	public Dishes findWithStepsAndIngredients(Integer id);
 	
 	public List<Dishes> findAll(Integer page);
 	

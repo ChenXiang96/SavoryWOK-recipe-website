@@ -11,179 +11,11 @@
  Target Server Version : 50648 (5.6.48-log)
  File Encoding         : 65001
 
- Date: 11/04/2025 23:53:34
+ Date: 09/05/2025 00:09:32
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
-
--- ----------------------------
--- Table structure for category
--- ----------------------------
-DROP TABLE IF EXISTS `category`;
-CREATE TABLE `category`  (
-  `cname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `cid` int(11) NOT NULL AUTO_INCREMENT,
-  `cimage` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`cid`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
-
--- ----------------------------
--- Records of category
--- ----------------------------
-INSERT INTO `category` VALUES ('Appetizers', 1, 'images/cookbook/Appetizers.png');
-INSERT INTO `category` VALUES ('Main Dishes', 2, 'images/cookbook/Main Dishes.png');
-INSERT INTO `category` VALUES ('Noodels', 3, 'images/cookbook/Noodles.png');
-INSERT INTO `category` VALUES ('Rice', 4, 'images/cookbook/Rice.png');
-INSERT INTO `category` VALUES ('Soup', 5, 'images/cookbook/soup.png');
-INSERT INTO `category` VALUES ('Dim Sum', 6, 'images/cookbook/Dim Sum.png');
-INSERT INTO `category` VALUES ('Drinks', 7, 'images/cookbook/coffee.png');
-INSERT INTO `category` VALUES ('Bakery', 8, 'images/cookbook/Bakery.png');
-INSERT INTO `category` VALUES ('International', 9, 'images/cookbook/International.png');
-
--- ----------------------------
--- Table structure for category2
--- ----------------------------
-DROP TABLE IF EXISTS `category2`;
-CREATE TABLE `category2`  (
-  `caname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `caid` int(11) NOT NULL AUTO_INCREMENT,
-  `title_description` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
-  `title_banner_img` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`caid`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
-
--- ----------------------------
--- Records of category2
--- ----------------------------
-INSERT INTO `category2` VALUES ('Tastes of the Seasons', 1, 'Seasonal cuisine brings the best of nature’s flavors to your table all year round. In spring, enjoy light, vibrant dishes; in summer, dive into fresh, cool treats; in fall, savor rich, comforting meals; and in winter, warm up with hearty dishes. Each season offers a new opportunity to enjoy fresh ingredients and flavors, creating a dining experience that celebrates the year’s natural rhythm. Let these seasonal recipes inspire your cooking all year long.', 'Banner-images/Tastes-Seasons.jpg');
-INSERT INTO `category2` VALUES ('Tradition on a Plate', 2, 'Discover the rich heritage of traditional Chinese cuisine through time-honored flavors and regional specialties. From the elegance of Peking-style dishes to the delicate sweetness of Shanghai and the bold spices of Xi\'an, each dish tells a unique story. This collection celebrates the diversity and depth of Chinese cooking, where history meets taste. Whether you\'re craving a comforting bowl of noodles or fiery stir-fried bites, there\'s something here for every palate. Dive into centuries of culinary wisdom and enjoy the authentic taste of China in every bite!', 'Banner-images/Tradition-on-a-Plate.jpg');
-INSERT INTO `category2` VALUES ('Ready in 30 mins', 3, 'Looking for delicious meals without spending hours in the kitchen? This collection is packed with quick and tasty dishes that can be ready in 30 minutes or less. Whether you’re cooking with a microwave, rice cooker, or just a single pan, these recipes are perfect for busy weekdays or relaxed weekends. Fast doesn’t mean flavorless—each meal is designed to be simple, satisfying, and flavorful. From lazy day microwave fixes to effortless party plates, enjoy food that fits your schedule and cravings.', 'Banner-images/Ready-in-30-mins.jpg');
-INSERT INTO `category2` VALUES ('Soothe Your Lungs', 4, 'These soothing dishes are made with kumquat, pear, and white radish—known for their mild and moistening properties that may help calm the throat and ease coughing. Whether served warm or cold, each recipe is simple, nourishing, and full of natural goodness. They’re perfect for dry weather or when you need something comforting for the lungs. Light in taste but rich in benefits, these meals combine nature’s simple ingredients to support your well-being.', 'Banner-images/Soothe-Your-Lungs.jpg');
-INSERT INTO `category2` VALUES ('Liver & Eye Refresh', 5, 'This selection of dishes offers a light and refreshing way to care for the liver and eyes, featuring wolfberry, broccoli, and chrysanthemum. These ingredients are known for their soothing effects and nutrient content, helping you feel recharged from the inside out. Whether you’re dealing with screen fatigue or want a break from heavy meals, these recipes gently boost your daily routine. Simple, wholesome, and easy to enjoy!', 'Banner-images/Liver-Eye-Refresh.jpg');
-INSERT INTO `category2` VALUES ('Eat for Healthy Hair', 6, 'Eating for healthy hair starts with the proper nutrients. Iron supports healthy blood flow, helping to deliver oxygen to hair follicles and encouraging growth. Meanwhile, plant-based proteins provide essential building blocks for strong and resilient hair strands. Including iron and plant protein in your meals can help reduce breakage and dullness over time. Whether preventing hair loss or simply looking to boost shine and strength, nourishing your body from within plays a key role.', 'Banner-images/Healthy-Hair.jpg');
-INSERT INTO `category2` VALUES ('Nourish Your Skin', 7, 'Healthy skin isn’t just about what you apply—it also comes from what you eat. This skin-focused theme explores meals that nourish the body from within. Salmon provides essential fatty acids that can help reduce dryness and protect the skin barrier. Kelp is a mineral-rich sea vegetable that supports detoxification and improves skin tone. These ingredients work together to promote a natural glow, offering a simple way to support skin health through your daily meals.', 'Banner-images/skin.jpg');
-INSERT INTO `category2` VALUES ('Boost Your Immunity', 8, 'Want to keep your immune system strong and stay ahead of seasonal colds? Sweet potatoes and bitter melon might help. Sweet potatoes are packed with antioxidants and vitamin A, allowing your body to remain healthy and ready to fight off illness. Bitter melon is loaded with beneficial compounds that support immune balance and energy. Adding these ingredients to your meals is an easy way to give your body extra support when it needs it most.', 'Banner-images/Immunity.jpg');
-INSERT INTO `category2` VALUES ('Smart Bites', 9, 'Want to keep your brain in top shape? Start with your plate. Beans give your brain steady fuel, walnuts help with memory and focus, and eggs offer key nutrients like choline to support thinking and learning. These recipes combine tasty and nourishing ingredients that boost brain power in your daily meals—perfect whether you\'re studying, working, or just keeping your mind sharp.', 'Banner-images/Brain.jpg');
-
--- ----------------------------
--- Table structure for categorysecond
--- ----------------------------
-DROP TABLE IF EXISTS `categorysecond`;
-CREATE TABLE `categorysecond`  (
-  `csid` int(11) NOT NULL AUTO_INCREMENT,
-  `csname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `cid` int(11) NULL DEFAULT NULL,
-  PRIMARY KEY (`csid`) USING BTREE,
-  INDEX `fk_cid`(`cid`) USING BTREE,
-  CONSTRAINT `cid` FOREIGN KEY (`cid`) REFERENCES `category` (`cid`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 57 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
-
--- ----------------------------
--- Records of categorysecond
--- ----------------------------
-INSERT INTO `categorysecond` VALUES (1, 'Beef', 1);
-INSERT INTO `categorysecond` VALUES (2, 'Pork', 1);
-INSERT INTO `categorysecond` VALUES (3, 'Lamb', 1);
-INSERT INTO `categorysecond` VALUES (4, 'Seafood', 1);
-INSERT INTO `categorysecond` VALUES (5, 'Poultry', 1);
-INSERT INTO `categorysecond` VALUES (6, 'Vegetarian', 1);
-INSERT INTO `categorysecond` VALUES (7, 'Street Food', 1);
-INSERT INTO `categorysecond` VALUES (8, 'Beef', 2);
-INSERT INTO `categorysecond` VALUES (9, 'Pork', 2);
-INSERT INTO `categorysecond` VALUES (10, 'Lamb', 2);
-INSERT INTO `categorysecond` VALUES (11, 'Seafood', 2);
-INSERT INTO `categorysecond` VALUES (12, 'Poultry', 2);
-INSERT INTO `categorysecond` VALUES (13, 'Vegetarian', 2);
-INSERT INTO `categorysecond` VALUES (14, 'Street Food', 2);
-INSERT INTO `categorysecond` VALUES (15, 'Beef', 3);
-INSERT INTO `categorysecond` VALUES (16, 'Pork', 3);
-INSERT INTO `categorysecond` VALUES (17, 'Lamb', 3);
-INSERT INTO `categorysecond` VALUES (18, 'Seafood', 3);
-INSERT INTO `categorysecond` VALUES (19, 'Poultry', 3);
-INSERT INTO `categorysecond` VALUES (20, 'Vegetarian', 3);
-INSERT INTO `categorysecond` VALUES (21, 'Street Food', 3);
-INSERT INTO `categorysecond` VALUES (22, 'Beef', 4);
-INSERT INTO `categorysecond` VALUES (23, 'Pork', 4);
-INSERT INTO `categorysecond` VALUES (24, 'Lamb', 4);
-INSERT INTO `categorysecond` VALUES (25, 'Seafood', 4);
-INSERT INTO `categorysecond` VALUES (26, 'Poultry', 4);
-INSERT INTO `categorysecond` VALUES (27, 'Vegetarian', 4);
-INSERT INTO `categorysecond` VALUES (28, 'Street Food', 4);
-INSERT INTO `categorysecond` VALUES (29, 'Beef', 5);
-INSERT INTO `categorysecond` VALUES (30, 'Pork', 5);
-INSERT INTO `categorysecond` VALUES (31, 'Lamb', 5);
-INSERT INTO `categorysecond` VALUES (32, 'Seafood', 5);
-INSERT INTO `categorysecond` VALUES (33, 'Poultry', 5);
-INSERT INTO `categorysecond` VALUES (34, 'Vegetarian', 5);
-INSERT INTO `categorysecond` VALUES (35, 'Street Food', 5);
-INSERT INTO `categorysecond` VALUES (36, 'Beef', 6);
-INSERT INTO `categorysecond` VALUES (37, 'Pork', 6);
-INSERT INTO `categorysecond` VALUES (38, 'Lamb', 6);
-INSERT INTO `categorysecond` VALUES (39, 'Seafood', 6);
-INSERT INTO `categorysecond` VALUES (40, 'Poultry', 6);
-INSERT INTO `categorysecond` VALUES (41, 'Vegetarian', 6);
-INSERT INTO `categorysecond` VALUES (42, 'Street Food', 6);
-INSERT INTO `categorysecond` VALUES (43, 'Vegetarian', 7);
-INSERT INTO `categorysecond` VALUES (44, 'Pork', 8);
-INSERT INTO `categorysecond` VALUES (45, 'Lamb', 8);
-INSERT INTO `categorysecond` VALUES (46, 'Seafood', 8);
-INSERT INTO `categorysecond` VALUES (47, 'Poultry', 8);
-INSERT INTO `categorysecond` VALUES (48, 'Vegetarian', 8);
-INSERT INTO `categorysecond` VALUES (49, 'Street Food', 8);
-INSERT INTO `categorysecond` VALUES (50, 'Beef', 9);
-INSERT INTO `categorysecond` VALUES (51, 'Pork', 9);
-INSERT INTO `categorysecond` VALUES (52, 'Lamb', 9);
-INSERT INTO `categorysecond` VALUES (53, 'Seafood', 9);
-INSERT INTO `categorysecond` VALUES (54, 'Poultry', 9);
-INSERT INTO `categorysecond` VALUES (55, 'Vegetarian', 9);
-INSERT INTO `categorysecond` VALUES (56, 'Street Food', 9);
-
--- ----------------------------
--- Table structure for categorysecond2
--- ----------------------------
-DROP TABLE IF EXISTS `categorysecond2`;
-CREATE TABLE `categorysecond2`  (
-  `casid` int(11) NOT NULL AUTO_INCREMENT,
-  `casname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `caid` int(11) NULL DEFAULT NULL,
-  `subtitle_description` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
-  `title_banner_img` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`casid`) USING BTREE,
-  INDEX `caid`(`caid`) USING BTREE,
-  CONSTRAINT `categorysecond2_ibfk_1` FOREIGN KEY (`caid`) REFERENCES `category2` (`caid`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 28 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
-
--- ----------------------------
--- Records of categorysecond2
--- ----------------------------
-INSERT INTO `categorysecond2` VALUES (1, 'Spring Awakening Bites', 1, NULL, 'Banner-images/Spring-Awakening-Bites.jpg');
-INSERT INTO `categorysecond2` VALUES (2, 'Savor the Summer', 1, NULL, 'Banner-images/Savor-the-Summer.jpg');
-INSERT INTO `categorysecond2` VALUES (3, 'Autumn  Harvest Feasts', 1, NULL, 'Banner-images/Autumn-Harvest-Feasts.jpg');
-INSERT INTO `categorysecond2` VALUES (4, 'Heartwarming Winter Meals', 1, NULL, 'Banner-images/Heartwarming-Winter-Meals.jpg');
-INSERT INTO `categorysecond2` VALUES (5, 'Microwave Meals for Lazy Days', 3, NULL, 'Banner-images/Microwave-Meals.png');
-INSERT INTO `categorysecond2` VALUES (6, 'Easy Rice Cooker Recipes', 3, NULL, 'Banner-images/Rice-Cooker.jpg');
-INSERT INTO `categorysecond2` VALUES (7, 'Workday Wonders Meals', 3, NULL, 'Banner-images/Workday.jpg');
-INSERT INTO `categorysecond2` VALUES (8, 'Effortless Party Recipes', 3, NULL, 'Banner-images/party.jpg');
-INSERT INTO `categorysecond2` VALUES (9, 'Peking Heritage Cuisine', 2, NULL, 'Banner-images/Peking-Heritage-Cuisine.jpg');
-INSERT INTO `categorysecond2` VALUES (10, 'Taste of Shanghai', 2, NULL, 'Banner-images/Taste-of-Shanghai.png');
-INSERT INTO `categorysecond2` VALUES (11, 'Flavors of Xi\'an', 2, NULL, 'Banner-images/Flavors-of-Xi-an.jpeg');
-INSERT INTO `categorysecond2` VALUES (12, 'Sizzling & Spicy', 2, NULL, 'Banner-images/Sizzling-Spicy.png');
-INSERT INTO `categorysecond2` VALUES (13, 'Kumquat', 4, 'Kumquat is known for its natural ability to moisten the lungs and ease coughs. This citrus fruit is rich in vitamin C and is widely used in traditional remedies. In this collection, you\'ll find nourishing teas, soups, and other recipes combining kumquat with honey and rock sugar to soothe the throat and support immunity.', NULL);
-INSERT INTO `categorysecond2` VALUES (14, 'Pear', 4, 'This recipe collection highlights delicious ways to use pears in daily meals—from sweet soups to warm porridges; every dish is crafted to support your respiratory system gently. With their hydrating and anti-inflammatory properties, pears make a tasty, natural remedy for dryness and seasonal discomfort. Enjoy these healing recipes as part of your daily wellness routine.', NULL);
-INSERT INTO `categorysecond2` VALUES (15, 'White radish', 4, 'White radish, also known as daikon, is prized in traditional diets for its ability to clear internal heat and relieve coughs. Naturally mild and slightly sweet, it pairs well with ginger, rock sugar, and lean meats to create light, soothing dishes. This collection features a variety of soups, stews, and warm drinks designed to help regulate the body, ease throat discomfort, and promote lung comfort. Whether enjoyed during dry weather or cold seasons, these recipes are a gentle addition to your daily care routine.', NULL);
-INSERT INTO `categorysecond2` VALUES (16, 'Wolfberry ', 5, 'Wolfberries (goji berries) are well-known in traditional Chinese medicine for their liver-cleansing and vision-boosting properties. Whether you\'re looking to support eye health, balance your body, or enjoy a comforting bowl of soup, these recipes offer a natural, gentle way to care for your well-being.', NULL);
-INSERT INTO `categorysecond2` VALUES (17, 'Broccoli', 5, 'Explore the goodness of broccoli with this collection of nourishing recipes designed to support liver health and brighten your eyes. Packed with vitamins A, C, and K, as well as antioxidants and fiber, broccoli is a powerhouse vegetable known for its cleansing and protective benefits. From light soups to stir-fries and steamed dishes, these recipes are simple, healthy, and delicious—perfect for your daily wellness routine.', NULL);
-INSERT INTO `categorysecond2` VALUES (18, 'Chrysanthemum', 5, 'Rich in antioxidants and traditionally used to reduce internal heat, chrysanthemum is more than just a flower—it’s a healing ingredient. This collection includes a variety of drinks that combine chrysanthemums with ingredients like goji berries and pears to support immune health and promote balance. It is a perfect addition to your healthy lifestyle.', NULL);
-INSERT INTO `categorysecond2` VALUES (19, 'Power Up with Iron', 6, 'Iron for better hair — Low iron levels commonly cause hair thinning and hair loss. This curated recipe set focuses on iron-rich ingredients like seafood, liver, and leafy greens. Each dish helps improve iron absorption and support scalp health. Perfect for anyone looking to care for their hair through balanced nutrition.', NULL);
-INSERT INTO `categorysecond2` VALUES (20, 'Enhance with Plant Protein', 6, 'Our Plant-Based Protein Recipes Collection has delicious dishes featuring plant-powered ingredients like kelp, tofu, and black sesame. These recipes are designed to provide a natural source of protein, essential for maintaining healthy hair. By including plant-based proteins in your diet, you can nourish your scalp, strengthen your hair strands, and support overall hair vitality. Explore these recipes to give your hair the nourishment it needs while enjoying tasty, wholesome meals.', NULL);
-INSERT INTO `categorysecond2` VALUES (21, 'Salmon', 7, 'Salmon is rich in omega-3 fatty acids, which help to keep your skin hydrated and reduce inflammation. This collection of salmon-based recipes focuses on promoting healthy, glowing skin by incorporating the benefits of this nutrient-dense fish.', NULL);
-INSERT INTO `categorysecond2` VALUES (22, 'Kelp', 7, 'Kelp is a powerhouse ingredient for skincare, packed with vitamins, minerals, and antioxidants that rejuvenate and hydrate the skin. Our Kelp recipe collection showcases how this superfood helps reduce inflammation, promote collagen production, and improve skin elasticity. Whether you\'re looking to soothe, detoxify, or nourish, these recipes bring the beauty benefits of Kelp straight to your skincare routine.', NULL);
-INSERT INTO `categorysecond2` VALUES (23, 'Sweet potato', 8, 'Sweet potatoes are a powerhouse of immune-boosting nutrients. Their high levels of vitamin A and antioxidants help strengthen the immune system and protect against harmful pathogens. This recipe collection showcases creative ways to incorporate sweet potatoes into your meals, offering a delicious and nutritious way to support your body\'s defense mechanisms and promote overall health.', NULL);
-INSERT INTO `categorysecond2` VALUES (24, 'Bitter melon', 8, 'Boost your immune system naturally with bitter melon, a vegetable celebrated for its medicinal properties. Bitter melon is packed with nutrients that help fight infections and inflammation, making it an excellent choice for maintaining strong immunity. ', NULL);
-INSERT INTO `categorysecond2` VALUES (25, 'Beans', 9, 'Beans play an essential role in improving brain function and memory. This collection includes recipes featuring tofu, mung beans, and Fava Beans, all known for their nutritional benefits. These beans contain essential nutrients such as proteins, fiber, and antioxidants that support brain health, improve focus, and enhance memory retention. Incorporating these ingredients into your diet can help sharpen cognitive abilities and promote mental clarity. Try these delicious recipes to fuel your brain and boost your memory power naturally.', NULL);
-INSERT INTO `categorysecond2` VALUES (26, 'Walnut', 9, 'Walnuts are a superfood known for their ability to support brain health and improve memory. With their high omega-3 fatty acids, antioxidants, and vitamins, walnuts help maintain cognitive function and enhance mental clarity.', NULL);
-INSERT INTO `categorysecond2` VALUES (27, 'Eggs', 9, 'Eggs are rich in essential nutrients that promote brain health and memory. Known for their high choline content, they are a key ingredient for maintaining cognitive function and improving memory. Choline supports the production of acetylcholine, a neurotransmitter that aids in memory and learning. This collection features egg-based dishes to nourish your brain and improve mental performance. ', NULL);
 
 -- ----------------------------
 -- Table structure for categorysecond2_dishes
@@ -191,11 +23,11 @@ INSERT INTO `categorysecond2` VALUES (27, 'Eggs', 9, 'Eggs are rich in essential
 DROP TABLE IF EXISTS `categorysecond2_dishes`;
 CREATE TABLE `categorysecond2_dishes`  (
   `casid` int(11) NOT NULL DEFAULT 0,
-  `pid` int(11) NOT NULL DEFAULT 0,
-  PRIMARY KEY (`casid`, `pid`) USING BTREE,
-  INDEX `fk_pid`(`pid`) USING BTREE,
-  CONSTRAINT `fk_casid` FOREIGN KEY (`casid`) REFERENCES `categorysecond2` (`casid`) ON DELETE CASCADE ON UPDATE RESTRICT,
-  CONSTRAINT `fk_pid` FOREIGN KEY (`pid`) REFERENCES `dishes` (`pid`) ON DELETE CASCADE ON UPDATE RESTRICT
+  `id` int(11) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`casid`, `id`) USING BTREE,
+  INDEX `fk_pid`(`id`) USING BTREE,
+  CONSTRAINT `fk_casid` FOREIGN KEY (`casid`) REFERENCES `subthemes` (`casid`) ON DELETE CASCADE ON UPDATE RESTRICT,
+  CONSTRAINT `fk_id` FOREIGN KEY (`id`) REFERENCES `dishes` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
@@ -508,21 +340,45 @@ CREATE TABLE `cs_topic`  (
 -- ----------------------------
 
 -- ----------------------------
+-- Table structure for dish_category
+-- ----------------------------
+DROP TABLE IF EXISTS `dish_category`;
+CREATE TABLE `dish_category`  (
+  `cname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `cid` int(11) NOT NULL AUTO_INCREMENT,
+  `cimage` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`cid`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
+
+-- ----------------------------
+-- Records of dish_category
+-- ----------------------------
+INSERT INTO `dish_category` VALUES ('Appetizers', 1, 'images/cookbook/Appetizers.png');
+INSERT INTO `dish_category` VALUES ('Main Dishes', 2, 'images/cookbook/Main Dishes.png');
+INSERT INTO `dish_category` VALUES ('Noodels', 3, 'images/cookbook/Noodles.png');
+INSERT INTO `dish_category` VALUES ('Rice', 4, 'images/cookbook/Rice.png');
+INSERT INTO `dish_category` VALUES ('Soup', 5, 'images/cookbook/soup.png');
+INSERT INTO `dish_category` VALUES ('Dim Sum', 6, 'images/cookbook/Dim Sum.png');
+INSERT INTO `dish_category` VALUES ('Drinks', 7, 'images/cookbook/coffee.png');
+INSERT INTO `dish_category` VALUES ('Baking', 8, 'images/cookbook/Bakery.png');
+INSERT INTO `dish_category` VALUES ('Global', 9, 'images/cookbook/International.png');
+
+-- ----------------------------
 -- Table structure for dishes
 -- ----------------------------
 DROP TABLE IF EXISTS `dishes`;
 CREATE TABLE `dishes`  (
   `pdesc` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `image` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `pdate` datetime NULL DEFAULT NULL,
-  `pname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `pid` int(11) NOT NULL AUTO_INCREMENT,
+  `date` datetime NULL DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `is_hot` int(11) NULL DEFAULT NULL,
-  `pcontent` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `content` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `csid` int(11) NULL DEFAULT NULL,
-  PRIMARY KEY (`pid`) USING BTREE,
+  PRIMARY KEY (`id`) USING BTREE,
   INDEX `csid`(`csid`) USING BTREE,
-  CONSTRAINT `dishes_ibfk_1` FOREIGN KEY (`csid`) REFERENCES `categorysecond` (`csid`) ON DELETE RESTRICT ON UPDATE RESTRICT
+  CONSTRAINT `dishes_ibfk_1` FOREIGN KEY (`csid`) REFERENCES `ingredient_category` (`csid`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB AUTO_INCREMENT = 226 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
@@ -771,6 +627,79 @@ CREATE TABLE `howdo`  (
 -- ----------------------------
 
 -- ----------------------------
+-- Table structure for ingredient_category
+-- ----------------------------
+DROP TABLE IF EXISTS `ingredient_category`;
+CREATE TABLE `ingredient_category`  (
+  `csid` int(11) NOT NULL AUTO_INCREMENT,
+  `csname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `cid` int(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`csid`) USING BTREE,
+  INDEX `fk_cid`(`cid`) USING BTREE,
+  CONSTRAINT `cid` FOREIGN KEY (`cid`) REFERENCES `dish_category` (`cid`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE = InnoDB AUTO_INCREMENT = 57 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
+
+-- ----------------------------
+-- Records of ingredient_category
+-- ----------------------------
+INSERT INTO `ingredient_category` VALUES (1, 'Beef', 1);
+INSERT INTO `ingredient_category` VALUES (2, 'Pork', 1);
+INSERT INTO `ingredient_category` VALUES (3, 'Lamb', 1);
+INSERT INTO `ingredient_category` VALUES (4, 'Seafood', 1);
+INSERT INTO `ingredient_category` VALUES (5, 'Poultry', 1);
+INSERT INTO `ingredient_category` VALUES (6, 'Vegetarian', 1);
+INSERT INTO `ingredient_category` VALUES (7, 'Street Food', 1);
+INSERT INTO `ingredient_category` VALUES (8, 'Beef', 2);
+INSERT INTO `ingredient_category` VALUES (9, 'Pork', 2);
+INSERT INTO `ingredient_category` VALUES (10, 'Lamb', 2);
+INSERT INTO `ingredient_category` VALUES (11, 'Seafood', 2);
+INSERT INTO `ingredient_category` VALUES (12, 'Poultry', 2);
+INSERT INTO `ingredient_category` VALUES (13, 'Vegetarian', 2);
+INSERT INTO `ingredient_category` VALUES (14, 'Street Food', 2);
+INSERT INTO `ingredient_category` VALUES (15, 'Beef', 3);
+INSERT INTO `ingredient_category` VALUES (16, 'Pork', 3);
+INSERT INTO `ingredient_category` VALUES (17, 'Lamb', 3);
+INSERT INTO `ingredient_category` VALUES (18, 'Seafood', 3);
+INSERT INTO `ingredient_category` VALUES (19, 'Poultry', 3);
+INSERT INTO `ingredient_category` VALUES (20, 'Vegetarian', 3);
+INSERT INTO `ingredient_category` VALUES (21, 'Street Food', 3);
+INSERT INTO `ingredient_category` VALUES (22, 'Beef', 4);
+INSERT INTO `ingredient_category` VALUES (23, 'Pork', 4);
+INSERT INTO `ingredient_category` VALUES (24, 'Lamb', 4);
+INSERT INTO `ingredient_category` VALUES (25, 'Seafood', 4);
+INSERT INTO `ingredient_category` VALUES (26, 'Poultry', 4);
+INSERT INTO `ingredient_category` VALUES (27, 'Vegetarian', 4);
+INSERT INTO `ingredient_category` VALUES (28, 'Street Food', 4);
+INSERT INTO `ingredient_category` VALUES (29, 'Beef', 5);
+INSERT INTO `ingredient_category` VALUES (30, 'Pork', 5);
+INSERT INTO `ingredient_category` VALUES (31, 'Lamb', 5);
+INSERT INTO `ingredient_category` VALUES (32, 'Seafood', 5);
+INSERT INTO `ingredient_category` VALUES (33, 'Poultry', 5);
+INSERT INTO `ingredient_category` VALUES (34, 'Vegetarian', 5);
+INSERT INTO `ingredient_category` VALUES (35, 'Street Food', 5);
+INSERT INTO `ingredient_category` VALUES (36, 'Beef', 6);
+INSERT INTO `ingredient_category` VALUES (37, 'Pork', 6);
+INSERT INTO `ingredient_category` VALUES (38, 'Lamb', 6);
+INSERT INTO `ingredient_category` VALUES (39, 'Seafood', 6);
+INSERT INTO `ingredient_category` VALUES (40, 'Poultry', 6);
+INSERT INTO `ingredient_category` VALUES (41, 'Vegetarian', 6);
+INSERT INTO `ingredient_category` VALUES (42, 'Street Food', 6);
+INSERT INTO `ingredient_category` VALUES (43, 'Vegetarian', 7);
+INSERT INTO `ingredient_category` VALUES (44, 'Pork', 8);
+INSERT INTO `ingredient_category` VALUES (45, 'Lamb', 8);
+INSERT INTO `ingredient_category` VALUES (46, 'Seafood', 8);
+INSERT INTO `ingredient_category` VALUES (47, 'Poultry', 8);
+INSERT INTO `ingredient_category` VALUES (48, 'Vegetarian', 8);
+INSERT INTO `ingredient_category` VALUES (49, 'Street Food', 8);
+INSERT INTO `ingredient_category` VALUES (50, 'Beef', 9);
+INSERT INTO `ingredient_category` VALUES (51, 'Pork', 9);
+INSERT INTO `ingredient_category` VALUES (52, 'Lamb', 9);
+INSERT INTO `ingredient_category` VALUES (53, 'Seafood', 9);
+INSERT INTO `ingredient_category` VALUES (54, 'Poultry', 9);
+INSERT INTO `ingredient_category` VALUES (55, 'Vegetarian', 9);
+INSERT INTO `ingredient_category` VALUES (56, 'Street Food', 9);
+
+-- ----------------------------
 -- Table structure for ingredients_details
 -- ----------------------------
 DROP TABLE IF EXISTS `ingredients_details`;
@@ -781,7 +710,7 @@ CREATE TABLE `ingredients_details`  (
   `qty` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `dish_id`(`dish_id`) USING BTREE,
-  CONSTRAINT `dish_id` FOREIGN KEY (`dish_id`) REFERENCES `dishes` (`pid`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `dish_id` FOREIGN KEY (`dish_id`) REFERENCES `dishes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1249 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
@@ -2062,7 +1991,7 @@ CREATE TABLE `recipe_step`  (
   `image` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `pid`(`pid`) USING BTREE,
-  CONSTRAINT `pid` FOREIGN KEY (`pid`) REFERENCES `dishes` (`pid`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `pid` FOREIGN KEY (`pid`) REFERENCES `dishes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1541 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
@@ -3681,12 +3610,12 @@ INSERT INTO `special` VALUES (4, 17, 'Crispy, savory, and irresistible in every 
 DROP TABLE IF EXISTS `special_dishes`;
 CREATE TABLE `special_dishes`  (
   `sid` int(11) NOT NULL,
-  `pid` int(11) NOT NULL,
-  PRIMARY KEY (`sid`, `pid`) USING BTREE,
-  INDEX `fk_pid2`(`pid`) USING BTREE,
-  CONSTRAINT `fk_pid2` FOREIGN KEY (`pid`) REFERENCES `dishes` (`pid`) ON DELETE CASCADE ON UPDATE RESTRICT,
+  `did` int(11) NOT NULL,
+  PRIMARY KEY (`sid`, `did`) USING BTREE,
+  INDEX `fk_pid2`(`did`) USING BTREE,
+  CONSTRAINT `fk_did` FOREIGN KEY (`did`) REFERENCES `dishes` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT,
   CONSTRAINT `fk_sid` FOREIGN KEY (`sid`) REFERENCES `special` (`sid`) ON DELETE CASCADE ON UPDATE RESTRICT
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of special_dishes
@@ -3739,21 +3668,92 @@ CREATE TABLE `subject`  (
   `casid` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`pid`) USING BTREE,
   INDEX `casid`(`casid`) USING BTREE,
-  CONSTRAINT `subject_ibfk_1` FOREIGN KEY (`casid`) REFERENCES `categorysecond2` (`casid`) ON DELETE RESTRICT ON UPDATE RESTRICT
+  CONSTRAINT `subject_ibfk_1` FOREIGN KEY (`casid`) REFERENCES `subthemes` (`casid`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of subject
 -- ----------------------------
-INSERT INTO `subject` VALUES ('Tastes of the Seasons', 'Index-images/Tastes of the Seasons.jpeg', '2018-05-07 00:00:00', 'Tastes of the Seasons', 1, 1, '不吃早餐可是有很多危害的哦，那不仅早餐要吃，还有人会注重早餐吃什么可以减肥呢？', NULL);
-INSERT INTO `subject` VALUES ('Tradition on a Plate', 'Index-images/Tradition on a Plate.jpg', '2018-05-08 00:00:00', 'Tradition on a Plate', 2, 1, '春季是养脾胃的一个好季节，在中医看来，应该吃一些比较升发与易消化的食物，也可以适当地“吃香喝辣”以健胃，吃点酸味以助食欲', NULL);
-INSERT INTO `subject` VALUES ('Ready in 30 mins', 'Index-images/Ready in 30 mins.jpg', '2018-05-09 00:00:00', 'Ready in 30 mins', 3, 1, '丰富的铁、锌、钾、镁等微量元素以及维生素E，使葵花子有一定的补脑健脑作用。实践证明：喜食葵花子的人，不仅皮肤红润、细嫩，而且大脑思维敏捷、记忆力强、言谈有条不紊。', NULL);
+INSERT INTO `subject` VALUES ('Tastes of the Seasons', 'Index-images/Tastes of the Seasons.jpeg', '2018-05-07 00:00:00', 'Tastes of the Seasons', 1, 1, 'Tastes of the Seasons', NULL);
+INSERT INTO `subject` VALUES ('Tradition on a Plate', 'Index-images/Tradition on a Plate.jpg', '2018-05-08 00:00:00', 'Tradition on a Plate', 2, 1, 'Tradition on a Plate', NULL);
+INSERT INTO `subject` VALUES ('Ready in 30 mins', 'Index-images/Ready in 30 mins.jpg', '2018-05-09 00:00:00', 'Ready in 30 mins', 3, 1, 'Ready in 30 mins', NULL);
 INSERT INTO `subject` VALUES ('Soothe Your Lungs', 'Healthy-images/Soothe Your Lungs.jpg', '2018-05-07 00:00:00', 'Soothe Your Lungs', 4, 1, 'Discover dishes that help moisten your lungs and relieve dry coughs—healing comfort in every bite.', NULL);
 INSERT INTO `subject` VALUES ('Liver & Eye Refresh', 'Healthy-images/Refresh Your Liver & Eyes.jpeg', '2018-05-07 00:00:00', 'Liver & Eye Refresh', 5, 1, 'Inspired by traditional wisdom, these dishes help clear the liver and brighten the eyes—restoring balance from within.', NULL);
 INSERT INTO `subject` VALUES ('Eat for Healthy Hair', 'Healthy-images/Eat for Healthy Hair.jpg', '2018-05-09 00:00:00', 'Eat for Healthy Hair', 6, 1, 'Tired of dull or thinning hair? These tasty dishes are packed with hair-loving nutrients to help you glow from root to tip.', NULL);
 INSERT INTO `subject` VALUES ('Nourish Your Skin', 'Healthy-images/Nourish Your Skin.jpg', '2024-09-09 22:51:08', 'Nourish Your Skin', 7, 1, 'Loaded with vitamins, antioxidants, and healthy fats, these dishes are designed to support your skin’s health and elasticity.', NULL);
 INSERT INTO `subject` VALUES ('Boost Your Immunity', 'Healthy-images/Boost Your Immunity.jpg', '2024-09-19 22:59:28', 'Boost Your Immunity', 8, 1, 'Stay strong and fight the cold with simple, healthy dishes that boost your body’s natural defenses.', NULL);
 INSERT INTO `subject` VALUES ('Smart Bites', 'Healthy-images/Think Sharp.jpg', '2024-11-15 23:11:49', 'Smart Bites', 10, 1, 'Fuel your mind with meals that nourish your brain and enhance memory retention and cognitive abilities.', NULL);
+
+-- ----------------------------
+-- Table structure for subthemes
+-- ----------------------------
+DROP TABLE IF EXISTS `subthemes`;
+CREATE TABLE `subthemes`  (
+  `casid` int(11) NOT NULL AUTO_INCREMENT,
+  `casname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `caid` int(11) NULL DEFAULT NULL,
+  `subtitle_description` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
+  `title_banner_img` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`casid`) USING BTREE,
+  INDEX `caid`(`caid`) USING BTREE,
+  CONSTRAINT `subthemes_ibfk_1` FOREIGN KEY (`caid`) REFERENCES `themes` (`caid`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB AUTO_INCREMENT = 28 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
+
+-- ----------------------------
+-- Records of subthemes
+-- ----------------------------
+INSERT INTO `subthemes` VALUES (1, 'Spring Awakening Bites', 1, NULL, 'Banner-images/Spring-Awakening-Bites.jpg');
+INSERT INTO `subthemes` VALUES (2, 'Savor the Summer', 1, NULL, 'Banner-images/Savor-the-Summer.jpg');
+INSERT INTO `subthemes` VALUES (3, 'Autumn  Harvest Feasts', 1, NULL, 'Banner-images/Autumn-Harvest-Feasts.jpg');
+INSERT INTO `subthemes` VALUES (4, 'Heartwarming Winter Meals', 1, NULL, 'Banner-images/Heartwarming-Winter-Meals.jpg');
+INSERT INTO `subthemes` VALUES (5, 'Microwave Meals for Lazy Days', 3, NULL, 'Banner-images/Microwave-Meals.png');
+INSERT INTO `subthemes` VALUES (6, 'Easy Rice Cooker Recipes', 3, NULL, 'Banner-images/Rice-Cooker.jpg');
+INSERT INTO `subthemes` VALUES (7, 'Workday Wonders Meals', 3, NULL, 'Banner-images/Workday.jpg');
+INSERT INTO `subthemes` VALUES (8, 'Effortless Party Recipes', 3, NULL, 'Banner-images/party.jpg');
+INSERT INTO `subthemes` VALUES (9, 'Peking Heritage Cuisine', 2, NULL, 'Banner-images/Peking-Heritage-Cuisine.jpg');
+INSERT INTO `subthemes` VALUES (10, 'Taste of Shanghai', 2, NULL, 'Banner-images/Taste-of-Shanghai.png');
+INSERT INTO `subthemes` VALUES (11, 'Flavors of Xi\'an', 2, NULL, 'Banner-images/Flavors-of-Xi-an.jpeg');
+INSERT INTO `subthemes` VALUES (12, 'Sizzling & Spicy', 2, NULL, 'Banner-images/Sizzling-Spicy.png');
+INSERT INTO `subthemes` VALUES (13, 'Kumquat', 4, 'Kumquat is known for its natural ability to moisten the lungs and ease coughs. This citrus fruit is rich in vitamin C and is widely used in traditional remedies. In this collection, you\'ll find nourishing teas, soups, and other recipes combining kumquat with honey and rock sugar to soothe the throat and support immunity.', NULL);
+INSERT INTO `subthemes` VALUES (14, 'Pear', 4, 'This recipe collection highlights delicious ways to use pears in daily meals—from sweet soups to warm porridges; every dish is crafted to support your respiratory system gently. With their hydrating and anti-inflammatory properties, pears make a tasty, natural remedy for dryness and seasonal discomfort. Enjoy these healing recipes as part of your daily wellness routine.', NULL);
+INSERT INTO `subthemes` VALUES (15, 'White radish', 4, 'White radish, also known as daikon, is prized in traditional diets for its ability to clear internal heat and relieve coughs. Naturally mild and slightly sweet, it pairs well with ginger, rock sugar, and lean meats to create light, soothing dishes. This collection features a variety of soups, stews, and warm drinks designed to help regulate the body, ease throat discomfort, and promote lung comfort. Whether enjoyed during dry weather or cold seasons, these recipes are a gentle addition to your daily care routine.', NULL);
+INSERT INTO `subthemes` VALUES (16, 'Wolfberry ', 5, 'Wolfberries (goji berries) are well-known in traditional Chinese medicine for their liver-cleansing and vision-boosting properties. Whether you\'re looking to support eye health, balance your body, or enjoy a comforting bowl of soup, these recipes offer a natural, gentle way to care for your well-being.', NULL);
+INSERT INTO `subthemes` VALUES (17, 'Broccoli', 5, 'Explore the goodness of broccoli with this collection of nourishing recipes designed to support liver health and brighten your eyes. Packed with vitamins A, C, and K, as well as antioxidants and fiber, broccoli is a powerhouse vegetable known for its cleansing and protective benefits. From light soups to stir-fries and steamed dishes, these recipes are simple, healthy, and delicious—perfect for your daily wellness routine.', NULL);
+INSERT INTO `subthemes` VALUES (18, 'Chrysanthemum', 5, 'Rich in antioxidants and traditionally used to reduce internal heat, chrysanthemum is more than just a flower—it’s a healing ingredient. This collection includes a variety of drinks that combine chrysanthemums with ingredients like goji berries and pears to support immune health and promote balance. It is a perfect addition to your healthy lifestyle.', NULL);
+INSERT INTO `subthemes` VALUES (19, 'Power Up with Iron', 6, 'Iron for better hair — Low iron levels commonly cause hair thinning and hair loss. This curated recipe set focuses on iron-rich ingredients like seafood, liver, and leafy greens. Each dish helps improve iron absorption and support scalp health. Perfect for anyone looking to care for their hair through balanced nutrition.', NULL);
+INSERT INTO `subthemes` VALUES (20, 'Enhance with Plant Protein', 6, 'Our Plant-Based Protein Recipes Collection has delicious dishes featuring plant-powered ingredients like kelp, tofu, and black sesame. These recipes are designed to provide a natural source of protein, essential for maintaining healthy hair. By including plant-based proteins in your diet, you can nourish your scalp, strengthen your hair strands, and support overall hair vitality. Explore these recipes to give your hair the nourishment it needs while enjoying tasty, wholesome meals.', NULL);
+INSERT INTO `subthemes` VALUES (21, 'Salmon', 7, 'Salmon is rich in omega-3 fatty acids, which help to keep your skin hydrated and reduce inflammation. This collection of salmon-based recipes focuses on promoting healthy, glowing skin by incorporating the benefits of this nutrient-dense fish.', NULL);
+INSERT INTO `subthemes` VALUES (22, 'Kelp', 7, 'Kelp is a powerhouse ingredient for skincare, packed with vitamins, minerals, and antioxidants that rejuvenate and hydrate the skin. Our Kelp recipe collection showcases how this superfood helps reduce inflammation, promote collagen production, and improve skin elasticity. Whether you\'re looking to soothe, detoxify, or nourish, these recipes bring the beauty benefits of Kelp straight to your skincare routine.', NULL);
+INSERT INTO `subthemes` VALUES (23, 'Sweet potato', 8, 'Sweet potatoes are a powerhouse of immune-boosting nutrients. Their high levels of vitamin A and antioxidants help strengthen the immune system and protect against harmful pathogens. This recipe collection showcases creative ways to incorporate sweet potatoes into your meals, offering a delicious and nutritious way to support your body\'s defense mechanisms and promote overall health.', NULL);
+INSERT INTO `subthemes` VALUES (24, 'Bitter melon', 8, 'Boost your immune system naturally with bitter melon, a vegetable celebrated for its medicinal properties. Bitter melon is packed with nutrients that help fight infections and inflammation, making it an excellent choice for maintaining strong immunity. ', NULL);
+INSERT INTO `subthemes` VALUES (25, 'Beans', 9, 'Beans play an essential role in improving brain function and memory. This collection includes recipes featuring tofu, mung beans, and Fava Beans, all known for their nutritional benefits. These beans contain essential nutrients such as proteins, fiber, and antioxidants that support brain health, improve focus, and enhance memory retention. Incorporating these ingredients into your diet can help sharpen cognitive abilities and promote mental clarity. Try these delicious recipes to fuel your brain and boost your memory power naturally.', NULL);
+INSERT INTO `subthemes` VALUES (26, 'Walnut', 9, 'Walnuts are a superfood known for their ability to support brain health and improve memory. With their high omega-3 fatty acids, antioxidants, and vitamins, walnuts help maintain cognitive function and enhance mental clarity.', NULL);
+INSERT INTO `subthemes` VALUES (27, 'Eggs', 9, 'Eggs are rich in essential nutrients that promote brain health and memory. Known for their high choline content, they are a key ingredient for maintaining cognitive function and improving memory. Choline supports the production of acetylcholine, a neurotransmitter that aids in memory and learning. This collection features egg-based dishes to nourish your brain and improve mental performance. ', NULL);
+
+-- ----------------------------
+-- Table structure for themes
+-- ----------------------------
+DROP TABLE IF EXISTS `themes`;
+CREATE TABLE `themes`  (
+  `caname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `caid` int(11) NOT NULL AUTO_INCREMENT,
+  `title_description` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
+  `title_banner_img` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`caid`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
+
+-- ----------------------------
+-- Records of themes
+-- ----------------------------
+INSERT INTO `themes` VALUES ('Tastes of the Seasons', 1, 'Seasonal cuisine brings the best of nature’s flavors to your table all year round. In spring, enjoy light, vibrant dishes; in summer, dive into fresh, cool treats; in fall, savor rich, comforting meals; and in winter, warm up with hearty dishes. Each season offers a new opportunity to enjoy fresh ingredients and flavors, creating a dining experience that celebrates the year’s natural rhythm. Let these seasonal recipes inspire your cooking all year long.', 'Banner-images/Tastes-Seasons.jpg');
+INSERT INTO `themes` VALUES ('Tradition on a Plate', 2, 'Discover the rich heritage of traditional Chinese cuisine through time-honored flavors and regional specialties. From the elegance of Peking-style dishes to the delicate sweetness of Shanghai and the bold spices of Xi\'an, each dish tells a unique story. This collection celebrates the diversity and depth of Chinese cooking, where history meets taste. Whether you\'re craving a comforting bowl of noodles or fiery stir-fried bites, there\'s something here for every palate. Dive into centuries of culinary wisdom and enjoy the authentic taste of China in every bite!', 'Banner-images/Tradition-on-a-Plate.jpg');
+INSERT INTO `themes` VALUES ('Ready in 30 mins', 3, 'Looking for delicious meals without spending hours in the kitchen? This collection is packed with quick and tasty dishes that can be ready in 30 minutes or less. Whether you’re cooking with a microwave, rice cooker, or just a single pan, these recipes are perfect for busy weekdays or relaxed weekends. Fast doesn’t mean flavorless—each meal is designed to be simple, satisfying, and flavorful. From lazy day microwave fixes to effortless party plates, enjoy food that fits your schedule and cravings.', 'Banner-images/Ready-in-30-mins.jpg');
+INSERT INTO `themes` VALUES ('Soothe Your Lungs', 4, 'These soothing dishes are made with kumquat, pear, and white radish—known for their mild and moistening properties that may help calm the throat and ease coughing. Whether served warm or cold, each recipe is simple, nourishing, and full of natural goodness. They’re perfect for dry weather or when you need something comforting for the lungs. Light in taste but rich in benefits, these meals combine nature’s simple ingredients to support your well-being.', 'Banner-images/Soothe-Your-Lungs.jpg');
+INSERT INTO `themes` VALUES ('Liver & Eye Refresh', 5, 'This selection of dishes offers a light and refreshing way to care for the liver and eyes, featuring wolfberry, broccoli, and chrysanthemum. These ingredients are known for their soothing effects and nutrient content, helping you feel recharged from the inside out. Whether you’re dealing with screen fatigue or want a break from heavy meals, these recipes gently boost your daily routine. Simple, wholesome, and easy to enjoy!', 'Banner-images/Liver-Eye-Refresh.jpg');
+INSERT INTO `themes` VALUES ('Eat for Healthy Hair', 6, 'Eating for healthy hair starts with the proper nutrients. Iron supports healthy blood flow, helping to deliver oxygen to hair follicles and encouraging growth. Meanwhile, plant-based proteins provide essential building blocks for strong and resilient hair strands. Including iron and plant protein in your meals can help reduce breakage and dullness over time. Whether preventing hair loss or simply looking to boost shine and strength, nourishing your body from within plays a key role.', 'Banner-images/Healthy-Hair.jpg');
+INSERT INTO `themes` VALUES ('Nourish Your Skin', 7, 'Healthy skin isn’t just about what you apply—it also comes from what you eat. This skin-focused theme explores meals that nourish the body from within. Salmon provides essential fatty acids that can help reduce dryness and protect the skin barrier. Kelp is a mineral-rich sea vegetable that supports detoxification and improves skin tone. These ingredients work together to promote a natural glow, offering a simple way to support skin health through your daily meals.', 'Banner-images/skin.jpg');
+INSERT INTO `themes` VALUES ('Boost Your Immunity', 8, 'Want to keep your immune system strong and stay ahead of seasonal colds? Sweet potatoes and bitter melon might help. Sweet potatoes are packed with antioxidants and vitamin A, allowing your body to remain healthy and ready to fight off illness. Bitter melon is loaded with beneficial compounds that support immune balance and energy. Adding these ingredients to your meals is an easy way to give your body extra support when it needs it most.', 'Banner-images/Immunity.jpg');
+INSERT INTO `themes` VALUES ('Smart Bites', 9, 'Want to keep your brain in top shape? Start with your plate. Beans give your brain steady fuel, walnuts help with memory and focus, and eggs offer key nutrients like choline to support thinking and learning. These recipes combine tasty and nourishing ingredients that boost brain power in your daily meals—perfect whether you\'re studying, working, or just keeping your mind sharp.', 'Banner-images/Brain.jpg');
 
 -- ----------------------------
 -- Table structure for topic
@@ -3797,7 +3797,7 @@ CREATE TABLE `user`  (
   `Ensurepass` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`uid`) USING BTREE,
   INDEX `username`(`username`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 18 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
+) ENGINE = InnoDB AUTO_INCREMENT = 19 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of user
@@ -3807,14 +3807,13 @@ INSERT INTO `user` VALUES (9, '333', '333', '111', 'aaa@shop.com', '111', '111',
 INSERT INTO `user` VALUES (10, '3333', '3333', 'cc', 'aaa@shop.com', '111', '111', 1, 'ed8d60e2974f47f59942f211fe9d0752a17708f7bac142588c9e5ed928e8fae7', NULL, NULL, NULL, NULL);
 INSERT INTO `user` VALUES (11, '555', '555', '111', 'aaa@shop.com', '111', '111', 1, '9c52fd719a8848de9769fce61b37a77d0819733584d8431fb0ae6f3f696c30ad', NULL, NULL, NULL, NULL);
 INSERT INTO `user` VALUES (14, 'user010', '123', 'user010', 'aaa@shop.com', '1221510221', '151 youngman st', 1, '', NULL, NULL, NULL, NULL);
-INSERT INTO `user` VALUES (15, 'user011', '123', 'XIANG CHEN', 'aaa@shop.com', '7092192960', '30 Lady Anderson st', 1, '', NULL, NULL, NULL, NULL);
-INSERT INTO `user` VALUES (16, 'user012', '123', 'XIANG CHEN', 'aaa@shop.com', '7092192960', '30 Lady Anderson st', 1, '', NULL, 'I love Cooking!', NULL, NULL);
-INSERT INTO `user` VALUES (17, 'user016', '12345', 'charles', 'aaa@shop.com', '115413464', '30 Lady Anderson st', 1, '', '/uploads/4bd47f88-9e71-4b26-9021-bec8cea88d43_profile1.jpg', 'Savor the flavors! Cherish the moments!', NULL, NULL);
+INSERT INTO `user` VALUES (17, 'user016', '12345', 'charles', 'aaa@shop.com', '115413464', '30 England st', 1, '', '/uploads/4bd47f88-9e71-4b26-9021-bec8cea88d43_profile1.jpg', 'Savor the flavors! Cherish the moments!', NULL, NULL);
+INSERT INTO `user` VALUES (18, 'JohnDoe', '12345', 'John Doe', 'aaa@shop.com', '15616165156', 'XXX str', 1, '', NULL, NULL, NULL, NULL);
 
 -- ----------------------------
--- View structure for v_categorysecond_group
+-- View structure for v_ingredient_category_group
 -- ----------------------------
-DROP VIEW IF EXISTS `v_categorysecond_group`;
-CREATE ALGORITHM = UNDEFINED SQL SECURITY DEFINER VIEW `v_categorysecond_group` AS select `categorysecond`.`csname` AS `csname`,group_concat(`categorysecond`.`csid` order by `categorysecond`.`csid` ASC separator ',') AS `csids` from `categorysecond` group by `categorysecond`.`csname`;
+DROP VIEW IF EXISTS `v_ingredient_category_group`;
+CREATE ALGORITHM = UNDEFINED SQL SECURITY DEFINER VIEW `v_ingredient_category_group` AS select `ingredient_category`.`csname` AS `csname`,group_concat(`ingredient_category`.`csid` order by `ingredient_category`.`csid` ASC separator ',') AS `csids` from `ingredient_category` group by `ingredient_category`.`csname`;
 
 SET FOREIGN_KEY_CHECKS = 1;

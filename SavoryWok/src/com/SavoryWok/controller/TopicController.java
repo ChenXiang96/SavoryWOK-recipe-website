@@ -31,11 +31,9 @@ public class TopicController {
 	@Resource
 	private TopicServiceImpl topicServiceImpl;
 
-	// ------------------------------
-	// 查
 	@RequestMapping("/topicget")
 	public String listTopic(Topic topic, HttpSession session, HttpServletRequest request) {
-		String num = request.getParameter("pageNum");// 获取用户要看的页码
+		String num = request.getParameter("pageNum");
 		int pageNumber = 1;
 		if (num != null) {
 			pageNumber = Integer.parseInt(num);
@@ -46,11 +44,10 @@ public class TopicController {
 		page.setTotalCount(this.topicServiceImpl.findByCount());
 		session.setAttribute("list", list);
 		session.setAttribute("page", page);
-		// System.out.println(topic.getDescription());
 		return "adm/detail/topicList";
 	}
 
-	// 显示全部话题
+
 	@RequestMapping("/topicshow")
 	public String list(HttpSession session) {
 		List<Topic> list = this.topicServiceImpl.listTopics();
@@ -58,10 +55,10 @@ public class TopicController {
 		session.setAttribute("activeMenu", "Moments");
 
 		System.out.println(list.get(0).getTimg());
-		return "topic";
+		return "Moments";
 	}
 
-	//显示全部社区
+
 	@RequestMapping("/communityshow")
 	public String clist(HttpSession session) {
 		List<Topic> list = this.topicServiceImpl.listTopics();
@@ -82,7 +79,6 @@ public class TopicController {
 			@RequestParam("message") String message) throws Exception {
 
 		Topic t = new Topic();
-		/* (Topic) session.getAttribute("t"); */
 		String url = request.getRealPath("/images");
 		User u = new User();
 

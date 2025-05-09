@@ -2,17 +2,17 @@ package com.SavoryWok.dao;
 
 import java.util.List;
 
-import com.SavoryWok.entity.CategorySecond;
+import com.SavoryWok.entity.IngredientCategory;
 
-public interface CategorySecondDao extends BaseDao<CategorySecond>{
+public interface CategorySecondDao extends BaseDao<IngredientCategory>{
 	
 
 	public Integer countCategorySecond();
 
-	public List<CategorySecond> findAll(Integer page);
+	public List<IngredientCategory> findAll(Integer page);
 	
-	public List<CategorySecond> findAll();
+	public List<IngredientCategory> findAll();
 	
-	public CategorySecond findOne(Integer cid);
+	public IngredientCategory findOne(Integer cid);
 	
 }

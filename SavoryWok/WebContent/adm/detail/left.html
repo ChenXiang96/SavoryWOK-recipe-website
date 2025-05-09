@@ -10,21 +10,21 @@
 	<script type="text/javascript" src="style/js/page_common.js"></script>
     <link href="style/css/common_style_blue.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript">
-		// 显示或隐藏二级菜单 
+	
 		function menuClick( menuDiv ){
 			$(".MenuLevel2").not( $(menuDiv).next() ).hide();
 			$(menuDiv).next().toggle();
 		}
 		
 		$(function(){
-			// 默认只显示第1个二级菜单
+			
 			$(".MenuLevel2").hide();
 			$(".MenuLevel2:first").show();
 		});
 	</script>
-	<!-- 内容总宽度为 3px边框 * 2 + 155px内容 = 161px; -->
+	
 	<style type="text/css">
-<!--
+
 html{
 height: 100%;
 }
@@ -79,7 +79,7 @@ body {
 	background-repeat: no-repeat;
 	background-position: 29px center;
 }
--->
+
 	</style>
 </head>
 <body>
@@ -88,28 +88,28 @@ body {
 	    <li class="level1">
             <div onClick="menuClick(this);" class="level1Style">
 				<img src="style/images/func20001.gif" class="Icon" /> 
-				系统菜单
+				System menu
 			</div>
             <ul class="MenuLevel2">
             	<li class="level2 level2Style">
-                    <a target="right" href="boardList.html">食材管理</a>
+                    <a target="right" href="boardList.html">Ingredients management</a>
 				</li>
 				
                 <li class="level2 level2Style">
-                	<a target="right" href="foodList.html">菜谱管理</a>
+                	<a target="right" href="foodList.html">Recipe management</a>
 				</li>
                 <li class="level2 level2Style">
-                	<a target="right" href="cuisineList.html">菜系管理</a>
+                	<a target="right" href="cuisineList.html">Cuisine management</a>
 				</li>
                 <li class="level2 level2Style">
-                	<a target="right" href="userList.html">用户信息</a>
+                	<a target="right" href="userList.html">User information</a>
 				</li>
 				
                 <li class="level2 level2Style">
-                	<a target="right" href="topicList.html">话题管理</a>
+                	<a target="right" href="topicList.html">Topic management</a>
 				</li>
                 <li class="level2 level2Style">
-                	<a target="right" href="statementList.html">评论管理</a>
+                	<a target="right" href="statementList.html">Comment management</a>
 				</li>
             </ul>
         </li>

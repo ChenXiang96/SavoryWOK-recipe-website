@@ -13,9 +13,60 @@
     <link href="style/css/common_style_blue.css" rel="stylesheet" type="text/css" />
 	
 	<style type="text/css">
-<!--
+
 body {
 margin: 0;
+}
+#Head_1_FunctionButton {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    right: 30px;
+    top: 18px;
+}
+
+
+.func-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 90px;
+    height: 26px;
+    padding: 0 15px;
+    border-radius: 16px;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+}
+
+
+.help-btn {
+    background: rgba(52, 152, 219, 0.8);
+    color: #3498db;
+    border: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+.help-btn:hover {
+    background: #3498db;
+    color: white;
+    box-shadow: 0 3px 6px rgba(52, 152, 219, 0.2);
+}
+
+
+.logout-btn {
+    background: rgba(231, 76, 60, 0.8);
+    color: #e74c3c;
+    border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+.logout-btn:hover {
+    background: #e74c3c;
+    color: white;
+    box-shadow: 0 3px 6px rgba(231, 76, 60, 0.2);
 }
 #Head_1 {
     background: url("style/images/img/top_head1_bg.gif") repeat-x scroll 0 0 transparent;
@@ -27,7 +78,7 @@ margin: 0;
 	float: left;
     left: 20px;
     position: absolute;
-    top: 12px;
+    top: 3px;
 	color: #F1F9FE;
     font-family: Arial Black,Arial;
     font-size: 28px;
@@ -39,7 +90,7 @@ margin: 0;
     font-size: 12px;
     height: 25px;
 	padding-top: 11px;
-	margin-right: 20px;
+	margin-right: 100px;
 }
 #Head_1 #Head_1_FunctionButton {
     float: left;
@@ -56,7 +107,7 @@ margin-left: 10px;
     border-bottom: 1px solid #FFFFFF;
     border-top: 1px solid #A0C6E1;
     height: 36px;
-    margin: 0;
+
     width: 100%;
 }
 #Head_2 #Head2_Awoke {
@@ -65,6 +116,7 @@ margin-left: 10px;
     padding-left: 19px;
     padding-top: 2px;
 }
+
 #Head_2 #Head2_Awoke #AwokeNum {
 	position: absolute;
 	left: 20px;
@@ -104,66 +156,61 @@ margin-left: 10px;
     padding-right: 26px;
     padding-top: 10px;
 }
--->
+
+
+
 	</style>
 </head>
 
 <body>
  	
-	<!-- 上部 -->
+
 	<div id="Head_1">
-		<!-- 标题 -->
-		<div id="Head_1_Logo">
-			<b style="font-family: '黑体'">"厨色"美食分享平台</b> <!-- <img border="0" src="style/images/logo.png" /> -->
-        </div>
-		<!-- 欢迎用户的文字 -->
+		
+		
 		<div id="Head_1_UserWelcome">
 			<img border="0" width="13" height="14" src="style/images/user.gif" /> 
-			您好，<b>管理员</b>
+			Welcome，<b>Admin</b>
 		</div>
-		<!-- 一些链接按钮 -->
+		
 		<div id="Head_1_FunctionButton">
-			<a target="right" href="javascript:void(0)">
-				<img width="78" height="20" src="style/images/help2.gif" />
-			</a>
-			<a target="_parent" href="javascript:void(0)">
-				<img width="78" height="20" alt="退出系统" src="style/images/logout.gif" />
-			</a>
-		</div>
+    <a class="func-btn help-btn" target="right" href="javascript:void(0)">
+        Help Center
+    </a>
+    <a class="func-btn logout-btn" target="_parent" href="javascript:void(0)">
+        Sign Out
+    </a>
+</div>
 	</div>
-	<!-- 下部 -->
+	
     <div id="Head_2">
-		<!-- 任务提醒 -->
+		
         <div id="Head2_Awoke">
 			<ul id="AwokeNum">
 				
             </ul>
 		</div>
 		
-		<div class="Head2_FunctionList" style="float:left">
+		<div class="Head2_FunctionList" style="float:left; margin-left:10px;" >
 			<a href="javascript: window.parent.right.history.back();">
 				<img src="style/images/Header_back.gif" width="24" height="24" style="margin-top: -8px;"/>
-				<b>后退</b>
+				<b style="font-size:15px;">Back</b>
 			</a>
 			<a href="javascript: window.parent.right.history.forward();">
 				<img src="style/images/Header_forward.gif" width="24" height="24" style="margin-top: -8px;"/>
-				<b>前进</b>		
+				<b style="font-size:15px;">Next</b>		
 			</a>
         </div>
         
 		<div id="Head2_FunctionList">
-			<!-- 
-				如果使用 window.parent.right.location.reload(true); 则IE与FF都可以使用，Chrome不可以。
-				在Chrome中 alert(window.parent.right.document); 显示的值是 undefined！为什么？
-				使用 window.parent.right.history.go(0) 实现刷新，在IE、Chrome中都可以运行，但在FF中不可以！（但没有测试什么时候会使用缓存）。
-			 -->
+			
 			<a href="javascript: window.parent.right.history.go(0);">
 				<img src="style/images/Header_refresh.gif" width="24" height="24" style="margin-top: -8px;"/>
-				<b>刷新(IE、Chrome)</b>		
+				<b>Refresh(IE、Chrome)</b>		
 			</a>
 			<a href="javascript: window.parent.right.location.reload(true);">
 				<img src="style/images/Header_refresh.gif" width="24" height="24" style="margin-top: -8px;"/>
-				<b>刷新(Firefox)</b>		
+				<b>Refresh(Firefox)</b>		
 			</a>
 		</div>
 	</div>
