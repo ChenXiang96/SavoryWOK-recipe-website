@@ -262,6 +262,15 @@
 	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 	z-index: 2;
 }
+
+.space_left {
+    width: 68% !important;
+    float: left;
+ 
+}
+
+
+
 </style>
 	<%@ include file="MainFooter.jsp"%>
 

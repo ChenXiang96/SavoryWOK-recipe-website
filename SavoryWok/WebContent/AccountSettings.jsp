@@ -143,7 +143,7 @@
 						</li>
 
 						<li><label>Say Something About You</label><br> <input
-							name="personal_tagline" class="inputL" id="personal_tagline"
+							name="gexingqianming" class="inputL" id="personal_tagline"
 							type="text" value="${user.gexingqianming}"> <input
 							name="dob" class="" value="5574963549" type="hidden"> <input
 							name="uid" id="uid" class="" value="${user.uid}" type="hidden">
@@ -173,7 +173,7 @@
 	
 
 		<div class="account_center_right_banner">
-			<a title="厨色客户端" href="" target="_blank"> <img alt=""
+			<a title="SavoryWok" href="" target="_blank"> <img alt=""
 				src="${pageContext.request.contextPath}/Banner-images/Account_setting_banner.jpg"
 				height=500
 				style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);">

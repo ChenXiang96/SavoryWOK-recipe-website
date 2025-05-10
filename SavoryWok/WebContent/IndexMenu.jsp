@@ -240,7 +240,7 @@ $('#main-slider').flexslider({
 								href="${ pageContext.request.contextPath}/topicshow">Moments</a></li>
 							<li
 								class="${sessionScope.activeMenu eq 'Explore' ? 'active' : ''}"><a
-								href="${ pageContext.request.contextPath}/location.jsp">Explore</a></li>
+								href="${ pageContext.request.contextPath}/location">Explore</a></li>
 
 							<c:if test="${sessionScope.user == null}">
 								<li class="nav navbar-nav"><a

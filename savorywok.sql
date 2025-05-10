@@ -11,7 +11,7 @@
  Target Server Version : 50648 (5.6.48-log)
  File Encoding         : 65001
 
- Date: 09/05/2025 00:09:32
+ Date: 10/05/2025 01:03:46
 */
 
 SET NAMES utf8mb4;
@@ -199,15 +199,12 @@ CREATE TABLE `comment`  (
   `uname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `uimg` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`ctid`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
+) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of comment
 -- ----------------------------
-INSERT INTO `comment` VALUES (1, 'Cool!!!', '2025-02-10 21:59:40', 3, 16, 'user012', NULL);
-INSERT INTO `comment` VALUES (2, '[em:ag:]', '2025-03-19 18:16:45', 3, 17, 'user016', '/uploads/4bd47f88-9e71-4b26-9021-bec8cea88d43_profile1.jpg');
-INSERT INTO `comment` VALUES (3, 'Thanks!', '2025-03-19 18:17:03', 3, 17, 'user016', '/uploads/4bd47f88-9e71-4b26-9021-bec8cea88d43_profile1.jpg');
-INSERT INTO `comment` VALUES (4, 'Awesome!', '2025-03-20 22:49:26', 4, 17, 'user016', '/uploads/4bd47f88-9e71-4b26-9021-bec8cea88d43_profile1.jpg');
+INSERT INTO `comment` VALUES (5, 'That looks so good!', '2025-05-10 00:33:39', 5, 20, 'Grace', '/uploads/e40c8fa8-ca74-441f-bee8-2425ba272ffd_profile2.jpg');
 
 -- ----------------------------
 -- Table structure for cs_collect
@@ -1786,9 +1783,9 @@ INSERT INTO `ingredients_details` VALUES (1071, 123, 'Lamb Spine', '500g');
 INSERT INTO `ingredients_details` VALUES (1072, 123, 'Star Anise', '2 pcs');
 INSERT INTO `ingredients_details` VALUES (1073, 123, 'Bay Leaves', '3 pcs');
 INSERT INTO `ingredients_details` VALUES (1074, 123, 'Sichuan Peppercorns', '10 pcs');
-INSERT INTO `ingredients_details` VALUES (1075, 123, 'Xiaomi Chili', '2 pcs');
-INSERT INTO `ingredients_details` VALUES (1076, 123, 'Green Onion', 'A little');
-INSERT INTO `ingredients_details` VALUES (1077, 123, 'Ginger', 'A little');
+INSERT INTO `ingredients_details` VALUES (1075, 123, 'Bird Eye\'s Chili', '5-6 pcs');
+INSERT INTO `ingredients_details` VALUES (1076, 123, 'Green Onion', '3-4 stalks');
+INSERT INTO `ingredients_details` VALUES (1077, 123, 'Ginger', '3 pcs');
 INSERT INTO `ingredients_details` VALUES (1078, 123, 'Salt ', '1 tsp');
 INSERT INTO `ingredients_details` VALUES (1079, 123, 'Sugar', '1 tsp');
 INSERT INTO `ingredients_details` VALUES (1080, 123, 'Light Soy Sauce', '2 tsp');
@@ -3153,7 +3150,7 @@ INSERT INTO `recipe_step` VALUES (1154, 123, 4, 'Add the lamb spine and stir-fry
 INSERT INTO `recipe_step` VALUES (1155, 123, 5, 'Pour in light soy sauce and dark soy sauce at a ratio of about 2:1. Stir well to evenly coat the lamb.', 'steps_images/MD_40_5.jpg');
 INSERT INTO `recipe_step` VALUES (1156, 123, 6, 'Add a spoonful of white sugar, then pour in enough water. Bring to a boil over high heat, then reduce to medium-low heat and simmer for 45-60 minutes.', 'steps_images/MD_40_6.jpg');
 INSERT INTO `recipe_step` VALUES (1157, 123, 7, 'Before serving, add salt to taste and increase the heat to reduce the sauce.', 'steps_images/MD_40_7.jpg');
-INSERT INTO `recipe_step` VALUES (1158, 123, 8, 'Once the lamb is tender and soft, turn off the heat and serve.', 'steps_images/MD_40_8.jpg');
+INSERT INTO `recipe_step` VALUES (1158, 123, 8, 'Once the lamb is tender and soft, turn off the heat and enjoy!', 'steps_images/MD_40_8.jpg');
 INSERT INTO `recipe_step` VALUES (1159, 124, 1, 'Choose fresh Yellow Croaker, preferably 500g-1kg.', 'steps_images/MD_41_1.jpg');
 INSERT INTO `recipe_step` VALUES (1160, 124, 2, 'Scale, gut, and clean the Yellow Croaker, removing any surface mucus.', 'steps_images/MD_41_2.jpg');
 INSERT INTO `recipe_step` VALUES (1161, 124, 3, 'Prepare 40ml of seasoned soy sauce.', 'steps_images/MD_41_3.jpg');
@@ -3769,13 +3766,13 @@ CREATE TABLE `topic`  (
   `uname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `uimg` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`tid`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of topic
 -- ----------------------------
-INSERT INTO `topic` VALUES (3, 17, 'Tender and juicy, warm and flavorful~', 'Braised Beef with Tomatoes & Potato', '2025-03-19 18:00:18', 'Tomato Potato Beef Braise.jpg', 'user016', '/uploads/4bd47f88-9e71-4b26-9021-bec8cea88d43_profile1.jpg');
-INSERT INTO `topic` VALUES (4, 17, 'Made with Love, Enjoyed with Flavor!', 'Tonight’s Dinner Share~', '2025-03-19 22:40:30', 'Dinner Share.jpg', 'user016', '/uploads/4bd47f88-9e71-4b26-9021-bec8cea88d43_profile1.jpg');
+INSERT INTO `topic` VALUES (5, 19, 'Plain noodle soup and a golden egg pancake \r\n— Perfect start to a warm and cozy morning~', 'Morning Light & Warm Bites', '2025-05-10 00:13:59', 'breakfast.jpg', 'Charles', '/uploads/6208ef34-5e07-48ea-8a62-0e1566e731d0_profile1.jpg');
+INSERT INTO `topic` VALUES (6, 20, 'Had the spiciest hotpot tonight, Lips numb, heart happy!', 'Hotpot Happiness', '2025-05-10 00:43:01', 'hotpot.jpg', 'Grace', '/uploads/e40c8fa8-ca74-441f-bee8-2425ba272ffd_profile2.jpg');
 
 -- ----------------------------
 -- Table structure for user
@@ -3797,7 +3794,7 @@ CREATE TABLE `user`  (
   `Ensurepass` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`uid`) USING BTREE,
   INDEX `username`(`username`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 19 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
+) ENGINE = InnoDB AUTO_INCREMENT = 22 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of user
@@ -3809,6 +3806,9 @@ INSERT INTO `user` VALUES (11, '555', '555', '111', 'aaa@shop.com', '111', '111'
 INSERT INTO `user` VALUES (14, 'user010', '123', 'user010', 'aaa@shop.com', '1221510221', '151 youngman st', 1, '', NULL, NULL, NULL, NULL);
 INSERT INTO `user` VALUES (17, 'user016', '12345', 'charles', 'aaa@shop.com', '115413464', '30 England st', 1, '', '/uploads/4bd47f88-9e71-4b26-9021-bec8cea88d43_profile1.jpg', 'Savor the flavors! Cherish the moments!', NULL, NULL);
 INSERT INTO `user` VALUES (18, 'JohnDoe', '12345', 'John Doe', 'aaa@shop.com', '15616165156', 'XXX str', 1, '', NULL, NULL, NULL, NULL);
+INSERT INTO `user` VALUES (19, 'Charles', '789456123', 'Charles', 'aaa@shop.com', '709526545', '123 Maple Street', 1, '', '/uploads/6208ef34-5e07-48ea-8a62-0e1566e731d0_profile1.jpg', 'Cooking is my love language!', NULL, NULL);
+INSERT INTO `user` VALUES (20, 'Grace', '789456123', 'Grace', 'aaa@shop.com', '561541651', '12 Queen Street', 1, '', '/uploads/e40c8fa8-ca74-441f-bee8-2425ba272ffd_profile2.jpg', 'Good food, good mood!', NULL, NULL);
+INSERT INTO `user` VALUES (21, 'John', '789456123', 'John', 'aaa@shop.com', '1466131154', '66 Canada Dr', 1, '', '/uploads/731bd4b5-40dc-4275-87e5-6357781f262d_profile3.jpg', 'Made with love, shared with joy!', NULL, NULL);
 
 -- ----------------------------
 -- View structure for v_ingredient_category_group

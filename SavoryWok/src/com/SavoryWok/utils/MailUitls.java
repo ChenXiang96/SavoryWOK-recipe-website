@@ -42,9 +42,9 @@ public class MailUitls {
 			
 			message.addRecipient(RecipientType.TO, new InternetAddress(to));
 			
-			message.setSubject("Official activation email from ‘Savory Wok’");
+			message.setSubject("An email from ‘Savory Wok’");
 			
-			message.setContent("<h1>Official activation email from ‘Savory Wok’! Click the link below to complete the activation process!</h1>"
+			message.setContent("<h1>Welcome to ‘Savory Wok’! Please click the link below to complete your account activation.</h1>"
 				    + "<h3>"
 				    + "<a href='http://localhost:8080/SavoryWok/active/"+code+"'>http://localhost:8080/SavoryWok/active/"+code+"</a>"
 				    + "</h3>", "text/html;charset=UTF-8");

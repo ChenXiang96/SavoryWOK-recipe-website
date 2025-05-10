@@ -231,10 +231,9 @@ a:hover .cname_class {
 
 
 						<c:if test="${csname != null}">
-							<div class="ui-page mt10">
-								<div class="ui-page-inner">
-									<a class='now_page'
-										href="${pageContext.request.contextPath}/findByCsname/${csname}/1"></a>
+							
+								
+									
 									<c:if test="${page != 1}">
 										<a
 											href="${pageContext.request.contextPath}/findByCsname/${csname}/<c:out value="${page-1}"/>">Prev</a>
@@ -254,8 +253,8 @@ a:hover .cname_class {
 										<a class="nextPage"
 											href="${pageContext.request.contextPath}/findByCsname/${csname}/<c:out value="${page+1}"/>">Next</a>
 									</c:if>
-								</div>
-							</div>
+							
+						
 						</c:if>
 
 
