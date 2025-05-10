@@ -46,15 +46,66 @@ Admin users can manage all front-end content with full CRUD functionality throug
 
 ### 🥘 All Recipes:
 <div style="overflow:auto; max-height: 500px; text-align: center;">
-    <img src="https://github.com/ChenXiang96/savory-wok-recipe-website/blob/master/Readme-Images/All_Recipes.png?raw=true" alt="Homepage Screenshot" style="max-width: 100%; height: auto;">
+    <img src="https://github.com/ChenXiang96/savory-wok-recipe-website/blob/master/Readme-Images/All_Recipes.png?raw=true" alt="All Recipes" style="max-width: 100%; height: auto;">
 </div>
 
 ### 📚 Categorized Recipes:
 <div style="overflow:auto; max-height: 500px; text-align: center;">
-    <img src="https://github.com/ChenXiang96/savory-wok-recipe-website/blob/master/Readme-Images/Categorized_Recipes.jpg?raw=true" alt="Homepage Screenshot" style="max-width: 100%; height: auto;">
+    <img src="https://github.com/ChenXiang96/savory-wok-recipe-website/blob/master/Readme-Images/Categorized_Recipes.jpg?raw=true" alt="Categorized Recipes" style="max-width: 100%; height: auto;">
+</div>
+
+### 🍲 Recipe Details:
+<div style="overflow:auto; max-height: 500px; text-align: center;">
+    <img src="https://github.com/ChenXiang96/savory-wok-recipe-website/blob/master/Readme-Images/Recipe_Details.png?raw=true" alt="Recipe Details" style="max-width: 100%; height: auto;">
+</div>
+
+### 🧺 Curated Themes:
+<div style="overflow:auto; max-height: 500px; text-align: center;">
+    <img src="https://github.com/ChenXiang96/savory-wok-recipe-website/blob/master/Readme-Images/Themes.png?raw=true" alt="Curated Themes" style="max-width: 100%; height: auto;">
+</div>
+
+### 🥑 Healthy Recipes:
+<div style="overflow:auto; max-height: 500px; text-align: center;">
+    <img src="https://github.com/ChenXiang96/savory-wok-recipe-website/blob/master/Readme-Images/Healthy.png?raw=true" alt="Healthy Recipes" style="max-width: 100%; height: auto;">
+    <img src="https://github.com/ChenXiang96/savory-wok-recipe-website/blob/master/Readme-Images/Healthy_Details.png?raw=true" alt="Healthy Details" style="max-width: 100%; height: auto;">
 </div>
 
 ### 📝 Sign Up:
+![Sign Up](https://github.com/ChenXiang96/savory-wok-recipe-website/blob/master/Readme-Images/SignUp.png?raw=true)
+
+### ✅ Activate Account:
+![Activate Account](https://github.com/ChenXiang96/savory-wok-recipe-website/blob/master/Readme-Images/Account_Activation.jpg?raw=true)
+
+### 💻 Sign In:
 <div style="overflow:auto; max-height: 500px; text-align: center;">
-    <img src="https://github.com/ChenXiang96/savory-wok-recipe-website/blob/master/Readme-Images/SignUp.png?raw=true" alt="Homepage Screenshot" style="max-width: 100%; height: auto;">
+    <img src="https://github.com/ChenXiang96/savory-wok-recipe-website/blob/master/Readme-Images/SignIn.png?raw=true" alt="Sign In" style="max-width: 100%; height: auto;">
 </div>
+
+### 📱 Activity Feed:
+<div style="overflow:auto; max-height: 500px; text-align: center;">
+    <img src="https://github.com/ChenXiang96/savory-wok-recipe-website/blob/master/Readme-Images/Moments.png?raw=true" alt="Activity Feed" style="max-width: 100%; height: auto;">
+</div>
+
+### ✍️ Edit Post:
+<div style="overflow:auto; max-height: 500px; text-align: center;">
+    <img src="https://github.com/ChenXiang96/savory-wok-recipe-website/blob/master/Readme-Images/Edit_Post.png?raw=true" alt="Edit Post" style="max-width: 100%; height: auto;">
+</div>
+
+### 📑 Post Details:
+<div style="overflow:auto; max-height: 500px; text-align: center;">
+    <img src="https://github.com/ChenXiang96/savory-wok-recipe-website/blob/master/Readme-Images/Moment_Details.png?raw=true" alt="Post Details" style="max-width: 100%; height: auto;">
+</div>
+
+### 🧑‍💼 User Profile:
+<div style="overflow:auto; max-height: 500px; text-align: center;">
+    <img src="https://github.com/ChenXiang96/savory-wok-recipe-website/blob/master/Readme-Images/Personal_Profile.png?raw=true" alt="User Profile" style="max-width: 100%; height: auto;">
+</div>
+
+### 📍 Explore Nearby:
+![Explore Nearby](https://github.com/ChenXiang96/savory-wok-recipe-website/blob/master/Readme-Images/Explore.png?raw=true)
+
+### 📊 Admin Dashboard:
+![Admin Welcome](https://github.com/ChenXiang96/savory-wok-recipe-website/blob/master/Readme-Images/Admin_Welcome.png?raw=true)
+![Admin Dashboard](https://github.com/ChenXiang96/savory-wok-recipe-website/blob/master/Readme-Images/Admin_Panel.png?raw=true)
+![Themes Management](https://github.com/ChenXiang96/savory-wok-recipe-website/blob/master/Readme-Images/Admin_Topic.png?raw=true)
+![Edit_Details](https://github.com/ChenXiang96/savory-wok-recipe-website/blob/master/Readme-Images/Admin_Edit.png?raw=true)
