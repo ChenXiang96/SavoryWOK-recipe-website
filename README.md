@@ -53,3 +53,8 @@ Admin users can manage all front-end content with full CRUD functionality throug
 <div style="overflow:auto; max-height: 500px; text-align: center;">
     <img src="https://github.com/ChenXiang96/savory-wok-recipe-website/blob/master/Readme-Images/Categorized_Recipes.jpg?raw=true" alt="Homepage Screenshot" style="max-width: 100%; height: auto;">
 </div>
+
+### 📝 Sign Up:
+<div style="overflow:auto; max-height: 500px; text-align: center;">
+    <img src="https://github.com/ChenXiang96/savory-wok-recipe-website/blob/master/Readme-Images/SignUp.png?raw=true" alt="Homepage Screenshot" style="max-width: 100%; height: auto;">
+</div>
